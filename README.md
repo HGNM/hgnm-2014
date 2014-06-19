@@ -26,3 +26,9 @@ Repository for WordPress theme development for new HGNM website.
 - Elliot Condon’s [Advanced Custom Fields {v5}](https://github.com/AdvancedCustomFields/acf5-beta)
 Used to manage complex custom back-end input fields, which will be displayed within the theme.
 - [Custom URL field](https://github.com/delucis/acf-url-field) plug-in for ACF5
+
+## Testing
+
+Pull this repository to the themes directory of a vanilla [WordPress](http://wordpress.org) install.
+
+Pull [ACF5](https://github.com/AdvancedCustomFields/acf5-beta) and [acf-url-field](https://github.com/delucis/acf-url-field) to the plugins directory.

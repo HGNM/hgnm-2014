@@ -16,7 +16,7 @@ Repository for WordPress theme development for new HGNM website.
 - [ ] header.php
 	- [ ] responsive HGNM title
 	- [ ] responsive menu
-- [ ] content.php
+- [ ] content types
 - [ ] footer.php
 
 ## Dependencies

@@ -19,7 +19,7 @@
         <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="screen" />
         <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="<?php _e (get_stylesheet_directory_uri() . '/js/vendor/modernizr-2.6.2.min.js'); ?>"></script>
         <?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>

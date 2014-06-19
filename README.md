@@ -10,9 +10,9 @@ Repository for WordPress theme development for new HGNM website.
 		- [ ] screen styling
 		- [ ] print styling
 	- [ ] index.php
-		- [ ] call header
+		- [X] call header
 		- [ ] call content
-		- [ ] call footer
+		- [X] call footer
 - [ ] header.php
 	- [ ] responsive HGNM title
 	- [ ] responsive menu

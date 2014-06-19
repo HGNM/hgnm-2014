@@ -29,6 +29,6 @@ Used to manage complex custom back-end input fields, which will be displayed wit
 
 ## Testing
 
-Pull this repository to the themes directory of a vanilla [WordPress](http://wordpress.org) install.
+Clone this repository to the themes directory of a vanilla [WordPress](http://wordpress.org) install.
 
-Pull [ACF5](https://github.com/AdvancedCustomFields/acf5-beta) and [acf-url-field](https://github.com/delucis/acf-url-field) to the plugins directory.
+Clone [ACF5](https://github.com/AdvancedCustomFields/acf5-beta) and [acf-url-field](https://github.com/delucis/acf-url-field) to the plugins directory.

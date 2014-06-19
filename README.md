@@ -14,10 +14,12 @@ Repository for WordPress theme development for new HGNM website.
 		- [ ] call content
 		- [X] call footer
 - [ ] header.php
+	- [X] <head>
 	- [ ] responsive HGNM title
 	- [ ] responsive menu
 - [ ] content types
 - [ ] footer.php
+- [ ] functions.php
 
 ## Dependencies
 

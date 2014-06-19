@@ -6,7 +6,7 @@ Repository for WordPress theme development for new HGNM website.
 
 - [ ] WordPress core
 	- [ ] style.css
-		- [ ] Theme Header
+		- [X] Theme Header
 		- [ ] screen styling
  	- [ ] print styling
 	- [ ] index.php

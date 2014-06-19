@@ -18,3 +18,10 @@ Repository for WordPress theme development for new HGNM website.
 	- [ ] responsive menu
 - [ ] content.php
 - [ ] footer.php
+
+## Dependencies
+
+[These are provisional and may change.]
+
+- Elliot Condon’s Advanced Custom Fields (v5)
+Used to manage complex custom back-end input fields, which will be displayed within the theme.

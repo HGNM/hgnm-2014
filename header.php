@@ -29,7 +29,7 @@
         
         <header id="masthead" class="site-header" role="banner">
         	<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-        	<nav role="navigation">
-	        	<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+        	<nav id="menu" class="menu js-menu" role="navigation">
+	        	<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => 'false' ) ); ?>
         	</nav>
         </header>

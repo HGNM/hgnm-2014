@@ -10,4 +10,7 @@ function baw_hack_wp_title_for_home( $title )
   return $title;
 }
 
+// Register custom menu
+register_nav_menu( 'primary', 'Primary Menu' );
+
 ?>

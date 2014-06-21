@@ -29,7 +29,9 @@
         
         <header id="masthead" class="site-header js-header" role="banner">
         	<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-        	<nav id="menu" class="menu js-menu" role="navigation">
-	        	<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => 'false' ) ); ?>
-        	</nav>
+			<nav id="menu" class="menu js-menu" role="navigation">
+				<ul>
+		        	<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => 'false', 'items_wrap' => '%3$s' ) ); ?>
+				</ul>
+			</nav>
         </header>

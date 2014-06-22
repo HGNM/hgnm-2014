@@ -1,0 +1,611 @@
+/*
+Theme Name: HGNM 2014
+Theme URI: https://github.com/delucis/hgnm-2014
+Author: Chris Swithinbank
+Author URI: http://www.chrisswithinbank.net/
+Description: Custom theme for the Harvard Group for New Music website.
+Version: 0.0.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: responsive-layout
+Text Domain: hgnm-2014
+
+This theme is probably useless for any general purpose, but if it proves useful, make use of it in any way permitted under the GNU license.
+*/
+/* normalize.css v1.1.3 | MIT License | git.io/normalize */
+/* line 16, scss/style.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block;
+}
+
+/* line 16, scss/style.scss */
+audio, canvas, video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+/* line 16, scss/style.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* line 16, scss/style.scss */
+[hidden] {
+  display: none;
+}
+
+/* line 16, scss/style.scss */
+html {
+  font-size: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* line 16, scss/style.scss */
+html, button, input, select, textarea {
+  font-family: serif;
+}
+
+/* line 16, scss/style.scss */
+body {
+  margin: 0;
+}
+
+/* line 16, scss/style.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/* line 16, scss/style.scss */
+a:active, a:hover {
+  outline: 0;
+}
+
+/* line 16, scss/style.scss */
+h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+/* line 16, scss/style.scss */
+h2 {
+  font-size: 1.5em;
+  margin: .83em 0;
+}
+
+/* line 16, scss/style.scss */
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+
+/* line 16, scss/style.scss */
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+
+/* line 16, scss/style.scss */
+h5 {
+  font-size: .83em;
+  margin: 1.67em 0;
+}
+
+/* line 16, scss/style.scss */
+h6 {
+  font-size: .67em;
+  margin: 2.33em 0;
+}
+
+/* line 16, scss/style.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/* line 16, scss/style.scss */
+b, strong {
+  font-weight: bold;
+}
+
+/* line 16, scss/style.scss */
+blockquote {
+  margin: 1em 40px;
+}
+
+/* line 16, scss/style.scss */
+dfn {
+  font-style: italic;
+}
+
+/* line 16, scss/style.scss */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/* line 16, scss/style.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/* line 16, scss/style.scss */
+p, pre {
+  margin: 1em 0;
+}
+
+/* line 16, scss/style.scss */
+code, kbd, pre, samp {
+  font-family: monospace,serif;
+  _font-family: 'courier new',monospace;
+  font-size: 1em;
+}
+
+/* line 16, scss/style.scss */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* line 16, scss/style.scss */
+q {
+  quotes: none;
+}
+
+/* line 16, scss/style.scss */
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 16, scss/style.scss */
+small {
+  font-size: 80%;
+}
+
+/* line 16, scss/style.scss */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 16, scss/style.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 16, scss/style.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 16, scss/style.scss */
+dl, menu, ol, ul {
+  margin: 1em 0;
+}
+
+/* line 16, scss/style.scss */
+dd {
+  margin: 0 0 0 40px;
+}
+
+/* line 16, scss/style.scss */
+menu, ol, ul {
+  padding: 0 0 0 40px;
+}
+
+/* line 16, scss/style.scss */
+nav ul, nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+
+/* line 16, scss/style.scss */
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+
+/* line 16, scss/style.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 16, scss/style.scss */
+figure {
+  margin: 0;
+}
+
+/* line 16, scss/style.scss */
+form {
+  margin: 0;
+}
+
+/* line 16, scss/style.scss */
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em;
+}
+
+/* line 16, scss/style.scss */
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal;
+  *margin-left: -7px;
+}
+
+/* line 16, scss/style.scss */
+button, input, select, textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+
+/* line 16, scss/style.scss */
+button, input {
+  line-height: normal;
+}
+
+/* line 16, scss/style.scss */
+button, select {
+  text-transform: none;
+}
+
+/* line 16, scss/style.scss */
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+  *overflow: visible;
+}
+
+/* line 16, scss/style.scss */
+button[disabled], html input[disabled] {
+  cursor: default;
+}
+
+/* line 16, scss/style.scss */
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+  *height: 13px;
+  *width: 13px;
+}
+
+/* line 16, scss/style.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* line 16, scss/style.scss */
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 16, scss/style.scss */
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 16, scss/style.scss */
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+/* line 16, scss/style.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Base Styling (initial styles from HTML5 Boilerplate v4.3.0) */
+/* line 27, scss/style.scss */
+html,
+button,
+input,
+select,
+textarea {
+  color: #222222;
+  font-family: Alegreya, Georgia, serif;
+}
+
+/* line 32, scss/style.scss */
+html {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+/* line 37, scss/style.scss */
+*, *:after, *:before {
+  -moz-font-feature-settings: "kern" 1, "liga" 1;
+  -ms-font-feature-settings: "kern" 1, "liga" 1;
+  -o-font-feature-settings: "kern" 1, "liga" 1;
+  -webkit-font-feature-settings: "kern" 1, "liga" 1;
+  font-feature-settings: "kern" 1, "liga" 1;
+}
+
+/* line 45, scss/style.scss */
+::-moz-selection {
+  color: #fff;
+  background: #30FF8A;
+  text-shadow: none;
+}
+
+/* line 51, scss/style.scss */
+::selection {
+  color: #fff;
+  background: #30FF8A;
+  text-shadow: none;
+}
+
+/* line 57, scss/style.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/* line 69, scss/style.scss */
+audio,
+canvas,
+img,
+video {
+  vertical-align: middle;
+}
+
+/* line 73, scss/style.scss */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 79, scss/style.scss */
+textarea {
+  resize: vertical;
+}
+
+/* Formats browser update alert for old IE */
+/* line 84, scss/style.scss */
+.browsehappy {
+  margin: 0.2em 0;
+  background: #fd8;
+  color: #000;
+  padding: 0.7em 0.7em;
+  font-family: 'Alegreya Sans',sans-serif;
+  font-size: 1.2em;
+}
+
+/* ==========================================================================
+   Header Styles
+   ========================================================================== */
+/* line 100, scss/style.scss */
+.header {
+  color: #666;
+  position: relative;
+}
+
+/* line 105, scss/style.scss */
+.header a {
+  color: #666;
+}
+
+/* line 109, scss/style.scss */
+.menu {
+  display: none;
+}
+
+/* line 113, scss/style.scss */
+.menu.active {
+  display: block;
+}
+
+/* line 117, scss/style.scss */
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 123, scss/style.scss */
+.menu li:nth-child(odd) {
+  background-color: #eee;
+}
+
+/* line 127, scss/style.scss */
+.menu li:nth-child(even) {
+  background-color: #ddd;
+}
+
+/* line 131, scss/style.scss */
+.menu a {
+  display: block;
+  padding: .5em;
+}
+
+/* line 136, scss/style.scss */
+.no-js .menu {
+  display: block;
+}
+
+/* line 140, scss/style.scss */
+.menu-button {
+  background-color: transparent;
+  border: none;
+  font-size: 2em;
+  line-height: 1;
+  position: absolute;
+  right: .3em;
+  top: .2em;
+}
+
+/* line 150, scss/style.scss */
+.main {
+  padding: .5em 1em;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/* line 173, scss/style.scss */
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  *text-indent: -9999px;
+}
+
+/* line 180, scss/style.scss */
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
+}
+
+/* line 187, scss/style.scss */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+/* line 192, scss/style.scss */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* line 204, scss/style.scss */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/* line 213, scss/style.scss */
+.invisible {
+  visibility: hidden;
+}
+
+/* line 218, scss/style.scss */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+/* line 223, scss/style.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 227, scss/style.scss */
+.clearfix {
+  *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+@media print {
+  /* line 236, scss/style.scss */
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* line 244, scss/style.scss */
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  /* line 248, scss/style.scss */
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  /* line 252, scss/style.scss */
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /* line 258, scss/style.scss */
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  /* line 263, scss/style.scss */
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /* line 268, scss/style.scss */
+  thead {
+    display: table-header-group;
+  }
+
+  /* line 273, scss/style.scss */
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  /* line 277, scss/style.scss */
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+}
+
+  /* line 287, scss/style.scss */
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* line 293, scss/style.scss */
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}

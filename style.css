@@ -405,51 +405,52 @@ header h1 {
   padding-left: .3em;
   font-family: "Dala Floda", serif;
   margin: 0;
+  letter-spacing: 0.2em;
 }
-/* line 109, scss/style.scss */
+/* line 110, scss/style.scss */
 header h1 .lowercase {
   display: none;
 }
-/* line 113, scss/style.scss */
+/* line 114, scss/style.scss */
 header a {
   text-decoration: none;
   color: white;
 }
-/* line 120, scss/style.scss */
+/* line 121, scss/style.scss */
 header .menu {
   font-family: "Alegreya Sans", sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   display: none;
 }
-/* line 125, scss/style.scss */
+/* line 126, scss/style.scss */
 header .menu ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-/* line 130, scss/style.scss */
+/* line 131, scss/style.scss */
 header .menu li:nth-child(odd) {
   background-color: #111;
 }
-/* line 133, scss/style.scss */
+/* line 134, scss/style.scss */
 header .menu li:nth-child(even) {
   background-color: #333;
 }
-/* line 136, scss/style.scss */
+/* line 137, scss/style.scss */
 header .menu a {
   display: block;
   padding: .5em;
 }
-/* line 142, scss/style.scss */
+/* line 143, scss/style.scss */
 header .menu.active {
   display: block;
 }
-/* line 146, scss/style.scss */
+/* line 147, scss/style.scss */
 header .no-js .menu {
   display: block;
 }
-/* line 150, scss/style.scss */
+/* line 151, scss/style.scss */
 header .menu-button {
   color: white;
   background-color: transparent;
@@ -467,7 +468,7 @@ header .menu-button {
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-/* line 182, scss/style.scss */
+/* line 183, scss/style.scss */
 .ir {
   background-color: transparent;
   border: 0;
@@ -475,7 +476,7 @@ header .menu-button {
   *text-indent: -9999px;
 }
 
-/* line 189, scss/style.scss */
+/* line 190, scss/style.scss */
 .ir:before {
   content: "";
   display: block;
@@ -483,13 +484,13 @@ header .menu-button {
   height: 150%;
 }
 
-/* line 196, scss/style.scss */
+/* line 197, scss/style.scss */
 .hidden {
   display: none !important;
   visibility: hidden;
 }
 
-/* line 201, scss/style.scss */
+/* line 202, scss/style.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -501,7 +502,7 @@ header .menu-button {
   width: 1px;
 }
 
-/* line 213, scss/style.scss */
+/* line 214, scss/style.scss */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   clip: auto;
@@ -512,24 +513,24 @@ header .menu-button {
   width: auto;
 }
 
-/* line 222, scss/style.scss */
+/* line 223, scss/style.scss */
 .invisible {
   visibility: hidden;
 }
 
-/* line 227, scss/style.scss */
+/* line 228, scss/style.scss */
 .clearfix:before,
 .clearfix:after {
   content: " ";
   display: table;
 }
 
-/* line 232, scss/style.scss */
+/* line 233, scss/style.scss */
 .clearfix:after {
   clear: both;
 }
 
-/* line 236, scss/style.scss */
+/* line 237, scss/style.scss */
 .clearfix {
   *zoom: 1;
 }
@@ -538,7 +539,7 @@ header .menu-button {
    Print styles
    ========================================================================== */
 @media print {
-  /* line 245, scss/style.scss */
+  /* line 246, scss/style.scss */
   * {
     background: transparent !important;
     color: #000 !important;
@@ -546,48 +547,48 @@ header .menu-button {
     text-shadow: none !important;
   }
 
-  /* line 253, scss/style.scss */
+  /* line 254, scss/style.scss */
   a,
   a:visited {
     text-decoration: underline;
   }
 
-  /* line 257, scss/style.scss */
+  /* line 258, scss/style.scss */
   a[href]:after {
     content: " (" attr(href) ")";
   }
 
-  /* line 261, scss/style.scss */
+  /* line 262, scss/style.scss */
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
 
-  /* line 267, scss/style.scss */
+  /* line 268, scss/style.scss */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: "";
   }
 
-  /* line 272, scss/style.scss */
+  /* line 273, scss/style.scss */
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
-  /* line 277, scss/style.scss */
+  /* line 278, scss/style.scss */
   thead {
     display: table-header-group;
   }
 
-  /* line 282, scss/style.scss */
+  /* line 283, scss/style.scss */
   tr,
   img {
     page-break-inside: avoid;
   }
 
-  /* line 286, scss/style.scss */
+  /* line 287, scss/style.scss */
   img {
     max-width: 100% !important;
   }
@@ -596,7 +597,7 @@ header .menu-button {
     margin: 0.5cm;
 }
 
-  /* line 296, scss/style.scss */
+  /* line 297, scss/style.scss */
   p,
   h2,
   h3 {
@@ -604,7 +605,7 @@ header .menu-button {
     widows: 3;
   }
 
-  /* line 302, scss/style.scss */
+  /* line 303, scss/style.scss */
   h2,
   h3 {
     page-break-after: avoid;

@@ -35,18 +35,21 @@
 					$i = 0;
 					while ($i < strlen($title)) {
 						if (ctype_upper($title[$i])) {
-							echo $title[$i] . '<span class="lowercase">';
+							echo $title[$i];
 							$j = $i + 1;
-							while ($j < strlen($title)) {
-								if (ctype_upper($title[$j])) {
-									break 1;
+							if (!ctype_upper($title[$j])) {
+								echo '<span class="lowercase">';
+								while ($j < strlen($title)) {
+									if (ctype_upper($title[$j])) {
+										break 1;
+									}
+									else {
+										echo $title[$j];
+									}
+									$j++;
 								}
-								else {
-									echo $title[$j];
-								}
-								$j++;
+								echo '</span>';
 							}
-							echo '</span>';
 						}
 						elseif ($i == 0 && !ctype_upper($title[$i])) { // Fix exception where initial char is not uppercase
 							echo '<span class="lowercase">' . $title[$i];

@@ -15,7 +15,6 @@ This theme is probably useless for any general purpose, but if it proves useful,
 
 // == Accessible Mobile Menu Styling == //
 .header {
-  background-color: #222;
   color: #666;
   position: relative;
 }
@@ -39,11 +38,11 @@ This theme is probably useless for any general purpose, but if it proves useful,
 }
 
 .menu li:nth-child(odd) {
-  background-color: #333;
+  background-color: #eee;
 }
   
 .menu li:nth-child(even) {
-  background-color: #444;
+  background-color: #ddd;
 }
   
 .menu a {

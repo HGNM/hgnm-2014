@@ -17,67 +17,67 @@ This theme is probably useless for any general purpose, but if it proves useful,
 
 // == Accessible Mobile Menu Styling == //
 .header {
-  color: #666;
-  position: relative;
+	color: #666;
+	position: relative;
 }
 
 .header a {
-  color: #666;
+	color: #666;
 }
 
 .menu {
-  display: none;
+	display: none;
 }
 
 .menu.active {
-  display: block;
+	display: block;
 }
 
 .menu ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
 }
 
 .menu li:nth-child(odd) {
-  background-color: #eee;
+	background-color: #eee;
 }
-  
+
 .menu li:nth-child(even) {
-  background-color: #ddd;
+	background-color: #ddd;
 }
-  
+
 .menu a {
-  display: block;
-  padding: .5em;
+	display: block;
+	padding: .5em;
 }
 
 .no-js .menu {
-  display: block;
+	display: block;
 }
 
 .menu-button {
-  background-color: transparent;
-  border: none;  
-  font-size: 2em;  
-  line-height: 1;
-  position: absolute;
-  right: .3em;
-  top: .2em;
+	background-color: transparent;
+	border: none;  
+	font-size: 2em;  
+	line-height: 1;
+	position: absolute;
+	right: .3em;
+	top: .2em;
 }
 
 .main {
-  padding: .5em 1em;
+	padding: .5em 1em;
 }
 
 // h5bp.com/v
 .visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
 }

@@ -142,8 +142,7 @@ textarea {
 	padding: .5em 1em;
 }
 
-// h5bp.com/v
-.visuallyhidden {
+.visuallyhidden { // h5bp.com/v
 	border: 0;
 	clip: rect(0 0 0 0);
 	height: 1px;

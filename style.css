@@ -25,7 +25,8 @@ textarea {
     font-family:Alegreya;
 }
 
-.browsehappy { // Formats browser update alert for old IE
+/*! Formats browser update alert for old IE */
+.browsehappy {
     margin: 0.2em 0;
     background: #fd8;
     color: #000;

@@ -312,7 +312,7 @@ table {
 }
 
 /* Base Styling (initial styles from HTML5 Boilerplate v4.3.0) */
-/* line 30, scss/style.scss */
+/* line 32, scss/style.scss */
 html,
 button,
 input,
@@ -322,13 +322,13 @@ textarea {
   font-family: Alegreya, Georgia, serif;
 }
 
-/* line 35, scss/style.scss */
+/* line 37, scss/style.scss */
 html {
   font-size: 1em;
   line-height: 1.5;
 }
 
-/* line 40, scss/style.scss */
+/* line 42, scss/style.scss */
 *, *:after, *:before {
   -moz-font-feature-settings: "kern" 1, "liga" 1;
   -ms-font-feature-settings: "kern" 1, "liga" 1;
@@ -337,21 +337,21 @@ html {
   font-feature-settings: "kern" 1, "liga" 1;
 }
 
-/* line 48, scss/style.scss */
+/* line 50, scss/style.scss */
 ::-moz-selection {
   color: #fff;
   background: #30ff8a;
   text-shadow: none;
 }
 
-/* line 54, scss/style.scss */
+/* line 56, scss/style.scss */
 ::selection {
   color: #fff;
   background: #30ff8a;
   text-shadow: none;
 }
 
-/* line 60, scss/style.scss */
+/* line 62, scss/style.scss */
 hr {
   display: block;
   height: 1px;
@@ -361,7 +361,7 @@ hr {
   padding: 0;
 }
 
-/* line 72, scss/style.scss */
+/* line 74, scss/style.scss */
 audio,
 canvas,
 img,
@@ -369,20 +369,20 @@ video {
   vertical-align: middle;
 }
 
-/* line 76, scss/style.scss */
+/* line 78, scss/style.scss */
 fieldset {
   border: 0;
   margin: 0;
   padding: 0;
 }
 
-/* line 82, scss/style.scss */
+/* line 84, scss/style.scss */
 textarea {
   resize: vertical;
 }
 
 /* Formats browser update alert for old IE */
-/* line 87, scss/style.scss */
+/* line 89, scss/style.scss */
 .browsehappy {
   margin: 0.2em 0;
   background: #fd8;
@@ -395,73 +395,70 @@ textarea {
 /* ==========================================================================
    Header Styles
    ========================================================================== */
-/* line 100, scss/style.scss */
-header {
-  color: #222222;
-}
 /* line 102, scss/style.scss */
+header {
+  color: white;
+  background: #222222;
+}
+/* line 105, scss/style.scss */
 header h1 {
+  padding-left: .3em;
   font-family: "Dala Floda", serif;
   margin: 0;
 }
-/* line 105, scss/style.scss */
+/* line 109, scss/style.scss */
 header h1 .lowercase {
   display: none;
 }
-/* line 109, scss/style.scss */
+/* line 113, scss/style.scss */
 header a {
   text-decoration: none;
-  color: #222222;
-}
-
-/* line 118, scss/style.scss */
-.menu {
-  display: none;
+  color: white;
 }
 /* line 120, scss/style.scss */
-.menu ul {
+header .menu {
+  font-family: "Alegreya Sans", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: none;
+}
+/* line 125, scss/style.scss */
+header .menu ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-/* line 125, scss/style.scss */
-.menu li:nth-child(odd) {
-  background-color: #eee;
+/* line 130, scss/style.scss */
+header .menu li:nth-child(odd) {
+  background-color: #111;
 }
-/* line 128, scss/style.scss */
-.menu li:nth-child(even) {
-  background-color: #ddd;
+/* line 133, scss/style.scss */
+header .menu li:nth-child(even) {
+  background-color: #333;
 }
-/* line 131, scss/style.scss */
-.menu a {
+/* line 136, scss/style.scss */
+header .menu a {
   display: block;
   padding: .5em;
 }
-
-/* line 137, scss/style.scss */
-.menu.active {
+/* line 142, scss/style.scss */
+header .menu.active {
   display: block;
 }
-
-/* line 141, scss/style.scss */
-.no-js .menu {
+/* line 146, scss/style.scss */
+header .no-js .menu {
   display: block;
 }
-
-/* line 145, scss/style.scss */
-.menu-button {
+/* line 150, scss/style.scss */
+header .menu-button {
+  color: white;
   background-color: transparent;
   border: none;
-  font-size: 2em;
+  font-size: 3.5em;
   line-height: 1;
   position: absolute;
-  right: .3em;
-  top: .2em;
-}
-
-/* line 155, scss/style.scss */
-.main {
-  padding: .5em 1em;
+  right: 0;
+  top: -0.225em;
 }
 
 /* ==========================================================================
@@ -470,7 +467,7 @@ header a {
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-/* line 178, scss/style.scss */
+/* line 182, scss/style.scss */
 .ir {
   background-color: transparent;
   border: 0;
@@ -478,7 +475,7 @@ header a {
   *text-indent: -9999px;
 }
 
-/* line 185, scss/style.scss */
+/* line 189, scss/style.scss */
 .ir:before {
   content: "";
   display: block;
@@ -486,13 +483,13 @@ header a {
   height: 150%;
 }
 
-/* line 192, scss/style.scss */
+/* line 196, scss/style.scss */
 .hidden {
   display: none !important;
   visibility: hidden;
 }
 
-/* line 197, scss/style.scss */
+/* line 201, scss/style.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -504,7 +501,7 @@ header a {
   width: 1px;
 }
 
-/* line 209, scss/style.scss */
+/* line 213, scss/style.scss */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   clip: auto;
@@ -515,24 +512,24 @@ header a {
   width: auto;
 }
 
-/* line 218, scss/style.scss */
+/* line 222, scss/style.scss */
 .invisible {
   visibility: hidden;
 }
 
-/* line 223, scss/style.scss */
+/* line 227, scss/style.scss */
 .clearfix:before,
 .clearfix:after {
   content: " ";
   display: table;
 }
 
-/* line 228, scss/style.scss */
+/* line 232, scss/style.scss */
 .clearfix:after {
   clear: both;
 }
 
-/* line 232, scss/style.scss */
+/* line 236, scss/style.scss */
 .clearfix {
   *zoom: 1;
 }
@@ -541,7 +538,7 @@ header a {
    Print styles
    ========================================================================== */
 @media print {
-  /* line 241, scss/style.scss */
+  /* line 245, scss/style.scss */
   * {
     background: transparent !important;
     color: #000 !important;
@@ -549,48 +546,48 @@ header a {
     text-shadow: none !important;
   }
 
-  /* line 249, scss/style.scss */
+  /* line 253, scss/style.scss */
   a,
   a:visited {
     text-decoration: underline;
   }
 
-  /* line 253, scss/style.scss */
+  /* line 257, scss/style.scss */
   a[href]:after {
     content: " (" attr(href) ")";
   }
 
-  /* line 257, scss/style.scss */
+  /* line 261, scss/style.scss */
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
 
-  /* line 263, scss/style.scss */
+  /* line 267, scss/style.scss */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: "";
   }
 
-  /* line 268, scss/style.scss */
+  /* line 272, scss/style.scss */
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
-  /* line 273, scss/style.scss */
+  /* line 277, scss/style.scss */
   thead {
     display: table-header-group;
   }
 
-  /* line 278, scss/style.scss */
+  /* line 282, scss/style.scss */
   tr,
   img {
     page-break-inside: avoid;
   }
 
-  /* line 282, scss/style.scss */
+  /* line 286, scss/style.scss */
   img {
     max-width: 100% !important;
   }
@@ -599,7 +596,7 @@ header a {
     margin: 0.5cm;
 }
 
-  /* line 292, scss/style.scss */
+  /* line 296, scss/style.scss */
   p,
   h2,
   h3 {
@@ -607,7 +604,7 @@ header a {
     widows: 3;
   }
 
-  /* line 298, scss/style.scss */
+  /* line 302, scss/style.scss */
   h2,
   h3 {
     page-break-after: avoid;

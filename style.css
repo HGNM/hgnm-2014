@@ -25,6 +25,18 @@ textarea {
     font-family:Alegreya;
 }
 
+::-moz-selection {
+	color:#fff;
+    background: #30FF8A;
+    text-shadow: none;
+}
+
+::selection {
+	color:#fff;
+    background: #30FF8A;
+    text-shadow: none;
+}
+
 /*! Formats browser update alert for old IE */
 .browsehappy {
     margin: 0.2em 0;

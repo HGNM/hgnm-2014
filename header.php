@@ -29,7 +29,7 @@
         
 		<header id="masthead" class="site-header js-header" role="banner">
 		
-        	<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 				<?php // Finds characters that are not uppercase and wraps them in a span of class 'lowercase'
 					$title = get_bloginfo('name');
 					$i = 0;
@@ -54,8 +54,8 @@
 						$i++;
 					}
 				?>
-				</a></h1>
-				
+			</a></h1>
+
 			<nav id="menu" class="menu js-menu" role="navigation">
 		        	<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => 'false', 'menu_class' => '' ) ); ?>
 			</nav>

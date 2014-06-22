@@ -30,18 +30,28 @@
 		<header id="masthead" class="site-header js-header" role="banner">
 		
         	<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-        		<?php // Finds uppercase characters and wraps them in the class 'capitals'
+				<?php // Finds lowercase characters and wraps them in a span of class 'lowercase'
 					$title = get_bloginfo( 'name');
 					$i = 0;
 					while ($i < strlen($title)) {
 						if (ctype_upper($title[$i])) {
-							echo '<span class="capitals">' . $title[$i] . '</span>';
-						} else {
-							echo $title[$i];
+							echo $title[$i] . '<span class="lowercase">';
+							$j = $i + 1;
+							while ($j < strlen($title)) {
+								if (ctype_upper($title[$j])) {
+									break 1;
+								}
+								else {
+									echo $title[$j];
+								}
+								$j++;
+							}
+							echo '</span>';
 						}
 						$i++;
 					}
-				?></a></h1>
+				?>
+				</a></h1>
 				
 			<nav id="menu" class="menu js-menu" role="navigation">
 		        	<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => 'false', 'menu_class' => '' ) ); ?>

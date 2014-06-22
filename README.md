@@ -9,7 +9,7 @@ Repository for WordPress theme development for new HGNM website.
 		- [X] Theme Header
 		- [ ] screen styling
 			- [ ] small screens (mobile first)
-				- [ ] site title
+				- [X] site title
 				- [ ] menu
 			- [ ] larger screens
 				- [ ] site title

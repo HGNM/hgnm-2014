@@ -151,13 +151,15 @@ header {
 
 .menu-button {
 	color: $reverse-text;
-	background-color: transparent;
+	background-color: $menu-highlight;
 	border: none;  
 	font-size: 3.5em;  
 	line-height: 1;
 	position: absolute;
 	right: 0;
 	top: -.225em;
+	padding-left: 0.18em;
+	padding-right: 0.16em;
 }
 
 }

@@ -30,8 +30,7 @@
 		<header id="masthead" class="site-header js-header" role="banner">
         	<h1 class="site-title">
         		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-        			<!-- Finds uppercase characters and wraps them in the class 'capitals' -->
-					<?php
+					<?php // Finds uppercase characters and wraps them in the class 'capitals'
 						$title = get_bloginfo( 'name');
 						$i = 0;
 						while ($i < strlen($title)) {

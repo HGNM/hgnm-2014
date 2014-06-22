@@ -100,8 +100,10 @@ textarea {
    ========================================================================== */
 
 header {
-	color: $text-color;
+	color: $reverse-text;
+	background: $dark-bg;
 	h1 {
+		padding-left: .3em;
 		font-family: $display-stack;
 		margin: 0;
 		.lowercase {
@@ -110,14 +112,15 @@ header {
 	}
 	a {
 		text-decoration: none;
-		color: $text-color;
+		color: $reverse-text;
 	}
-}
-   
 
 // == Accessible Mobile Menu Styling == //
 
 .menu {
+	font-family: $sans-stack;
+	text-transform: uppercase;
+	font-weight: 700;
 	display: none;
 	ul {
 		list-style-type: none;
@@ -125,10 +128,10 @@ header {
 		padding: 0;
 	}
 	li:nth-child(odd) {
-		background-color: #eee;
+		background-color: #111;
 	}
 	li:nth-child(even) {
-		background-color: #ddd;
+		background-color: #333;
 	}
 	a {
 		display: block;
@@ -145,17 +148,16 @@ header {
 }
 
 .menu-button {
+	color: $reverse-text;
 	background-color: transparent;
 	border: none;  
-	font-size: 2em;  
+	font-size: 3.5em;  
 	line-height: 1;
 	position: absolute;
-	right: .3em;
-	top: .2em;
+	right: 0;
+	top: -.225em;
 }
 
-.main {
-	padding: .5em 1em;
 }
 
 /* ==========================================================================

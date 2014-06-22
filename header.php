@@ -31,7 +31,7 @@
 		
         	<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 				<?php // Finds characters that are not uppercase and wraps them in a span of class 'lowercase'
-					$title = 'aHArva Hgds HHbcd';
+					$title = get_bloginfo('name');
 					$i = 0;
 					while ($i < strlen($title)) {
 						if (ctype_upper($title[$i])) {

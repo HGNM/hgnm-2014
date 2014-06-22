@@ -8,8 +8,12 @@ Repository for WordPress theme development for new HGNM website.
 	- [ ] style.css
 		- [X] Theme Header
 		- [ ] screen styling
-			- [ ] responsive site title
-			- [ ] responsive menu
+			- [ ] small screens (mobile first)
+				- [ ] site title
+				- [ ] menu
+			- [ ] larger screens
+				- [ ] site title
+				- [ ] menu
 		- [ ] print styling
 	- [ ] index.php
 		- [X] call header

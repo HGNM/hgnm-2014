@@ -99,9 +99,12 @@ textarea {
 
 header {
 	color: $text-color;
-	position: relative;
 	h1 {
 		font-family: $display-stack;
+		margin: 0;
+		.lowercase {
+			display: none;
+		}
 	}
 	a {
 		text-decoration: none;

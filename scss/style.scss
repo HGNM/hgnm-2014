@@ -47,13 +47,13 @@ html {
 
 ::-moz-selection {
 	color:#fff;
-    background: #30FF8A;
+    background: $selection-bg;
     text-shadow: none;
 }
 
 ::selection {
 	color:#fff;
-    background: #30FF8A;
+    background: $selection-bg;
     text-shadow: none;
 }
 

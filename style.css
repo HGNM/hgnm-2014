@@ -27,7 +27,7 @@ textarea {
 
 .browsehappy { // Formats browser update alert for old IE
     margin: 0.2em 0;
-    background: #fcc;
+    background: #fd8;
     color: #000;
     padding: 0.7em 0.7em;
     font-family:'Alegreya Sans',sans-serif;

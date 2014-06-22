@@ -96,18 +96,21 @@ textarea {
 /* ==========================================================================
    Header Styles
    ========================================================================== */
-   
+
+header {
+	color: $text-color;
+	position: relative;
+	h1 {
+		font-family: $display-stack;
+	}
+	a {
+		text-decoration: none;
+		color: $text-color;
+	}
+}
    
 
 // == Accessible Mobile Menu Styling == //
-.header {
-	color: #666;
-	position: relative;
-}
-
-.header a {
-	color: #666;
-}
 
 .menu {
 	display: none;

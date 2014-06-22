@@ -30,8 +30,8 @@
 		<header id="masthead" class="site-header js-header" role="banner">
 		
         	<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-				<?php // Finds lowercase characters and wraps them in a span of class 'lowercase'
-					$title = get_bloginfo( 'name');
+				<?php // Finds characters that are not uppercase and wraps them in a span of class 'lowercase'
+					$title = 'aHArva Hgds HHbcd';
 					$i = 0;
 					while ($i < strlen($title)) {
 						if (ctype_upper($title[$i])) {
@@ -45,6 +45,20 @@
 									echo $title[$j];
 								}
 								$j++;
+							}
+							echo '</span>';
+						}
+						elseif ($i == 0 && !ctype_upper($title[$i])) { // Fix exception where initial char is not uppercase
+							echo '<span class="lowercase">' . $title[$i];
+							$k = $i + 1;
+							while ($k < strlen($title)) {
+								if (ctype_upper($title[$k])) {
+									break 1;
+								}
+								else {
+									echo $title[$k];
+								}
+								$k++;
 							}
 							echo '</span>';
 						}

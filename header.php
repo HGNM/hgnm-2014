@@ -30,11 +30,18 @@
 		<header id="masthead" class="site-header js-header" role="banner">
         	<h1 class="site-title">
         		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+        			<!-- Finds uppercase characters and wraps them in the class 'capitals' -->
 					<?php
-						$search = array('H', 'G', 'N', 'M');
-						$replace = array('<span class="capitals">H</span>', '<span class="capitals">G</span>', '<span class="capitals">N</span>', '<span class="capitals">M</span>');
-						$title = get_bloginfo( 'name' );
-						echo str_replace($search, $replace, $title);
+						$title = get_bloginfo( 'name');
+						$i = 0;
+						while ($i < strlen($title)) {
+							if (ctype_upper($title[$i])) {
+								echo '<span class="capitals">' . $title[$i] . '</span>';
+							} else {
+								echo $title[$i];
+							}
+							$i++;
+						}
 					?>
         		</a>
         	</h1>

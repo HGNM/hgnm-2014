@@ -114,29 +114,25 @@ header {
 
 .menu {
 	display: none;
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+	li:nth-child(odd) {
+		background-color: #eee;
+	}
+	li:nth-child(even) {
+		background-color: #ddd;
+	}
+	a {
+		display: block;
+		padding: .5em;
+	}
 }
 
 .menu.active {
 	display: block;
-}
-
-.menu ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-}
-
-.menu li:nth-child(odd) {
-	background-color: #eee;
-}
-
-.menu li:nth-child(even) {
-	background-color: #ddd;
-}
-
-.menu a {
-	display: block;
-	padding: .5em;
 }
 
 .no-js .menu {

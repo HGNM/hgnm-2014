@@ -28,23 +28,23 @@
 		<![endif]-->
         
 		<header id="masthead" class="site-header js-header" role="banner">
-        	<h1 class="site-title">
-        		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-					<?php // Finds uppercase characters and wraps them in the class 'capitals'
-						$title = get_bloginfo( 'name');
-						$i = 0;
-						while ($i < strlen($title)) {
-							if (ctype_upper($title[$i])) {
-								echo '<span class="capitals">' . $title[$i] . '</span>';
-							} else {
-								echo $title[$i];
-							}
-							$i++;
+		
+        	<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+        		<?php // Finds uppercase characters and wraps them in the class 'capitals'
+					$title = get_bloginfo( 'name');
+					$i = 0;
+					while ($i < strlen($title)) {
+						if (ctype_upper($title[$i])) {
+							echo '<span class="capitals">' . $title[$i] . '</span>';
+						} else {
+							echo $title[$i];
 						}
-					?>
-        		</a>
-        	</h1>
+						$i++;
+					}
+				?></a></h1>
+				
 			<nav id="menu" class="menu js-menu" role="navigation">
 		        	<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => 'false', 'menu_class' => '' ) ); ?>
 			</nav>
+			
 		</header>

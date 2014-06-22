@@ -25,6 +25,11 @@ textarea {
     font-family:Alegreya;
 }
 
+html {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
 *, *:after, *:before {
 	-moz-font-feature-settings:"kern" 1, "liga" 1; 
 	-moz-font-feature-settings:kern=1, liga=1"; 

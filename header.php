@@ -34,36 +34,22 @@
 					$title = get_bloginfo('name');
 					$i = 0;
 					while ($i < strlen($title)) {
-						if (ctype_upper($title[$i])) {
-							echo $title[$i];
-							$j = $i + 1;
-							if (!ctype_upper($title[$j])) {
-								echo '<span class="lowercase">';
-								while ($j < strlen($title)) {
-									if (ctype_upper($title[$j])) {
-										break 1;
-									}
-									else {
-										echo $title[$j];
-									}
-									$j++;
-								}
-								echo '</span>';
+						if (!ctype_upper($title[$i])) {
+							$startpos = $i;
+							while ($i < strlen($title) && !ctype_upper($title[$i+1])) {
+								$i++;
 							}
-						}
-						elseif ($i == 0 && !ctype_upper($title[$i])) { // Wraps initial lowercase segment where initial char not uppercase
-							echo '<span class="lowercase">' . $title[$i];
-							$k = $i + 1;
-							while ($k < strlen($title)) {
-								if (ctype_upper($title[$k])) {
-									break 1;
-								}
-								else {
-									echo $title[$k];
-								}
-								$k++;
+							$endpos = $i+1;
+							$j = $startpos;
+							echo '<span class="lowercase">';
+							while ($j >= $startpos && $j < $endpos) {
+								echo $title[$j];
+								$j++;
 							}
 							echo '</span>';
+						}
+						else {
+							echo $title[$i];
 						}
 						$i++;
 					}

@@ -51,7 +51,7 @@
 								echo '</span>';
 							}
 						}
-						elseif ($i == 0 && !ctype_upper($title[$i])) { // Fix exception where initial char is not uppercase
+						elseif ($i == 0 && !ctype_upper($title[$i])) { // Wraps initial lowercase segment where initial char not uppercase
 							echo '<span class="lowercase">' . $title[$i];
 							$k = $i + 1;
 							while ($k < strlen($title)) {

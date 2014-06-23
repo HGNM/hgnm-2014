@@ -15,7 +15,9 @@ This theme is probably useless for any general purpose, but if it proves useful,
 
 $text-color: #222;
 $reverse-text: #fff;
-$dark-bg: #222;
+$dark-bg: $text-color;
+$menu-stripe-odd: $dark-bg;
+$menu-stripe-even: #000;
 $bright-green: #30FF8A;
 $selection-bg: $bright-green;
 $menu-highlight: $bright-green;

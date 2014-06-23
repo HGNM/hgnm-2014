@@ -132,10 +132,10 @@ header {
 		padding: 0;
 	}
 	li:nth-child(odd) {
-		background-color: #111;
+		background-color: $menu-stripe-odd;
 	}
 	li:nth-child(even) {
-		background-color: #333;
+		background-color: $menu-stripe-even;
 	}
 	a {
 		color: $reverse-text;
@@ -165,6 +165,8 @@ header {
 	padding-right: 0.16em;
 }
 
+.menu-button.active {
+	background-color: $text-color;
 }
 
 /* ==========================================================================

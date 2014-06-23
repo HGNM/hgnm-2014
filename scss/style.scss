@@ -101,8 +101,7 @@ textarea {
    ========================================================================== */
 
 header {
-	color: $reverse-text;
-	background: $dark-bg;
+	color: $text-color;
 	h1 {
 		padding-left: .3em;
 		font-family: $display-stack;
@@ -114,7 +113,7 @@ header {
 	}
 	a {
 		text-decoration: none;
-		color: $reverse-text;
+		color: $text-color;
 	}
 
 // == Accessible Mobile Menu Styling == //
@@ -136,6 +135,7 @@ header {
 		background-color: #333;
 	}
 	a {
+		color: $reverse-text;
 		display: block;
 		padding: .5em;
 	}

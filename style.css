@@ -397,48 +397,48 @@ textarea {
    ========================================================================== */
 /* line 103, scss/style.scss */
 header {
-  color: white;
-  background: #222222;
+  color: #222222;
 }
-/* line 106, scss/style.scss */
+/* line 105, scss/style.scss */
 header h1 {
   padding-left: .3em;
   font-family: "Dala Floda", serif;
   margin: 0;
   letter-spacing: 0.2em;
 }
-/* line 111, scss/style.scss */
+/* line 110, scss/style.scss */
 header h1 .lowercase {
   display: none;
 }
-/* line 115, scss/style.scss */
+/* line 114, scss/style.scss */
 header a {
   text-decoration: none;
-  color: white;
+  color: #222222;
 }
-/* line 122, scss/style.scss */
+/* line 121, scss/style.scss */
 header .menu {
   font-family: "Alegreya Sans", sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   display: none;
 }
-/* line 127, scss/style.scss */
+/* line 126, scss/style.scss */
 header .menu ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-/* line 132, scss/style.scss */
+/* line 131, scss/style.scss */
 header .menu li:nth-child(odd) {
   background-color: #111;
 }
-/* line 135, scss/style.scss */
+/* line 134, scss/style.scss */
 header .menu li:nth-child(even) {
   background-color: #333;
 }
-/* line 138, scss/style.scss */
+/* line 137, scss/style.scss */
 header .menu a {
+  color: white;
   display: block;
   padding: .5em;
 }

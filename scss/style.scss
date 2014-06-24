@@ -175,7 +175,14 @@ header {
    ========================================================================== */
 
 @media only screen and (min-width: 35em) {
-
+	header {
+		h1 {
+			letter-spacing: 0;
+			.lowercase {
+				display: inline;
+			}
+		}
+	}
 }
 
 @media print,

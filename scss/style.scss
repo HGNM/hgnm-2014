@@ -182,6 +182,31 @@ header {
 				display: inline;
 			}
 		}
+		
+		.menu {
+			display: block;
+			ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+			}
+			li {
+				display: inline-block;
+			}
+			li:nth-child(odd) {
+				background-color: transparent;
+			}
+			li:nth-child(even) {
+				background-color: transparent;
+			}
+			a {
+				color: $text-color;
+			}
+		}
+		
+		.menu-button {
+			display:none;
+		}
 	}
 }
 

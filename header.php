@@ -26,38 +26,39 @@
 		<!--[if lt IE 7]>
 			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
-        
-		<header id="masthead" class="site-header js-header" role="banner">
-		
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-				<?php // Finds characters that are not uppercase and wraps them in a span of class 'lowercase'
-					$title = get_bloginfo('name');
-					$i = 0;
-					while ($i < strlen($title)) {
-						if (!ctype_upper($title[$i])) {
-							$startpos = $i;
-							while ($i < strlen($title) && !ctype_upper($title[$i+1])) {
-								$i++;
-							}
-							$endpos = $i+1;
-							$j = $startpos;
-							echo '<span class="lowercase">';
-							while ($j >= $startpos && $j < $endpos) {
-								echo $title[$j];
-								$j++;
-							}
-							echo '</span>';
-						}
-						else {
-							echo $title[$i];
-						}
-						$i++;
-					}
-				?>
-			</a></h1>
+		<div id="page" class="hfeed site">
 
-			<nav id="menu" class="menu js-menu" role="navigation">
-		        	<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => 'false', 'menu_class' => '' ) ); ?>
-			</nav>
+			<header id="masthead" class="site-header js-header" role="banner">
 			
-		</header>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+					<?php // Finds characters that are not uppercase and wraps them in a span of class 'lowercase'
+						$title = get_bloginfo('name');
+						$i = 0;
+						while ($i < strlen($title)) {
+							if (!ctype_upper($title[$i])) {
+								$startpos = $i;
+								while ($i < strlen($title) && !ctype_upper($title[$i+1])) {
+									$i++;
+								}
+								$endpos = $i+1;
+								$j = $startpos;
+								echo '<span class="lowercase">';
+								while ($j >= $startpos && $j < $endpos) {
+									echo $title[$j];
+									$j++;
+								}
+								echo '</span>';
+							}
+							else {
+								echo $title[$i];
+							}
+							$i++;
+						}
+					?>
+				</a></h1>
+	
+				<nav id="menu" class="menu js-menu" role="navigation">
+			        	<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => 'false', 'menu_class' => '' ) ); ?>
+				</nav>
+				
+			</header>

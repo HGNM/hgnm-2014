@@ -405,62 +405,62 @@ header h1 {
   font-family: "Dala Floda", serif;
   margin: 0;
   letter-spacing: 0.2em;
+  float: left;
 }
-/* line 112, scss/style.scss */
+/* line 113, scss/style.scss */
 header h1 .lowercase {
   display: none;
 }
-/* line 116, scss/style.scss */
+/* line 117, scss/style.scss */
 header a {
   text-decoration: none;
   color: #222222;
 }
-/* line 123, scss/style.scss */
+/* line 124, scss/style.scss */
 header .menu {
   font-family: "Alegreya Sans", sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-weight: 700;
   display: none;
+  clear: both;
 }
-/* line 129, scss/style.scss */
+/* line 131, scss/style.scss */
 header .menu ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-/* line 134, scss/style.scss */
+/* line 136, scss/style.scss */
 header .menu li:nth-child(odd) {
   background-color: #222222;
 }
-/* line 137, scss/style.scss */
+/* line 139, scss/style.scss */
 header .menu li:nth-child(even) {
   background-color: black;
 }
-/* line 140, scss/style.scss */
+/* line 142, scss/style.scss */
 header .menu a {
   color: white;
   display: block;
   padding: .5em;
 }
-/* line 147, scss/style.scss */
+/* line 149, scss/style.scss */
 header .menu.active {
   display: block;
 }
-/* line 151, scss/style.scss */
+/* line 153, scss/style.scss */
 header .no-js .menu {
   display: block;
 }
-/* line 155, scss/style.scss */
+/* line 157, scss/style.scss */
 header .menu-button {
   color: white;
   background-color: #30ff8a;
   border: none;
   font-size: 3.5em;
   line-height: 1;
-  position: absolute;
-  right: 0;
-  top: -0.225em;
+  float: right;
   padding-left: 0.18em;
   padding-right: 0.16em;
 }

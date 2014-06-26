@@ -459,12 +459,14 @@ header .menu-button {
   background-color: #30ff8a;
   border: none;
   font-size: 3.5em;
-  line-height: 1;
+  font-weight: 700;
+  font-family: Times, Times New Roman;
+  line-height: 0;
   float: right;
-  padding-left: 0.18em;
-  padding-right: 0.16em;
+  width: 50px;
+  height: 50px;
 }
-/* line 168, scss/style.scss */
+/* line 170, scss/style.scss */
 header .menu-button.active {
   background-color: #222222;
 }
@@ -473,41 +475,41 @@ header .menu-button.active {
    Media Queries
    ========================================================================== */
 @media only screen and (min-width: 35em) {
-  /* line 179, scss/style.scss */
+  /* line 181, scss/style.scss */
   header h1 {
     letter-spacing: 0;
   }
-  /* line 181, scss/style.scss */
+  /* line 183, scss/style.scss */
   header h1 .lowercase {
     display: inline;
   }
-  /* line 186, scss/style.scss */
+  /* line 188, scss/style.scss */
   header .menu {
     display: block;
   }
-  /* line 188, scss/style.scss */
+  /* line 190, scss/style.scss */
   header .menu ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
   }
-  /* line 193, scss/style.scss */
+  /* line 195, scss/style.scss */
   header .menu li {
     display: inline-block;
   }
-  /* line 196, scss/style.scss */
+  /* line 198, scss/style.scss */
   header .menu li:nth-child(odd) {
     background-color: transparent;
   }
-  /* line 199, scss/style.scss */
+  /* line 201, scss/style.scss */
   header .menu li:nth-child(even) {
     background-color: transparent;
   }
-  /* line 202, scss/style.scss */
+  /* line 204, scss/style.scss */
   header .menu a {
     color: #222222;
   }
-  /* line 207, scss/style.scss */
+  /* line 209, scss/style.scss */
   header .menu-button {
     display: none;
   }
@@ -515,7 +517,7 @@ header .menu-button.active {
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-/* line 224, scss/style.scss */
+/* line 226, scss/style.scss */
 .ir {
   background-color: transparent;
   border: 0;
@@ -523,7 +525,7 @@ header .menu-button.active {
   *text-indent: -9999px;
 }
 
-/* line 231, scss/style.scss */
+/* line 233, scss/style.scss */
 .ir:before {
   content: "";
   display: block;
@@ -531,13 +533,13 @@ header .menu-button.active {
   height: 150%;
 }
 
-/* line 238, scss/style.scss */
+/* line 240, scss/style.scss */
 .hidden {
   display: none !important;
   visibility: hidden;
 }
 
-/* line 243, scss/style.scss */
+/* line 245, scss/style.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -549,7 +551,7 @@ header .menu-button.active {
   width: 1px;
 }
 
-/* line 255, scss/style.scss */
+/* line 257, scss/style.scss */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   clip: auto;
@@ -560,24 +562,24 @@ header .menu-button.active {
   width: auto;
 }
 
-/* line 264, scss/style.scss */
+/* line 266, scss/style.scss */
 .invisible {
   visibility: hidden;
 }
 
-/* line 269, scss/style.scss */
+/* line 271, scss/style.scss */
 .clearfix:before,
 .clearfix:after {
   content: " ";
   display: table;
 }
 
-/* line 274, scss/style.scss */
+/* line 276, scss/style.scss */
 .clearfix:after {
   clear: both;
 }
 
-/* line 278, scss/style.scss */
+/* line 280, scss/style.scss */
 .clearfix {
   *zoom: 1;
 }
@@ -586,7 +588,7 @@ header .menu-button.active {
    Print styles
    ========================================================================== */
 @media print {
-  /* line 287, scss/style.scss */
+  /* line 289, scss/style.scss */
   * {
     background: transparent !important;
     color: #000 !important;
@@ -594,48 +596,48 @@ header .menu-button.active {
     text-shadow: none !important;
   }
 
-  /* line 295, scss/style.scss */
+  /* line 297, scss/style.scss */
   a,
   a:visited {
     text-decoration: underline;
   }
 
-  /* line 299, scss/style.scss */
+  /* line 301, scss/style.scss */
   a[href]:after {
     content: " (" attr(href) ")";
   }
 
-  /* line 303, scss/style.scss */
+  /* line 305, scss/style.scss */
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
 
-  /* line 309, scss/style.scss */
+  /* line 311, scss/style.scss */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: "";
   }
 
-  /* line 314, scss/style.scss */
+  /* line 316, scss/style.scss */
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
-  /* line 319, scss/style.scss */
+  /* line 321, scss/style.scss */
   thead {
     display: table-header-group;
   }
 
-  /* line 324, scss/style.scss */
+  /* line 326, scss/style.scss */
   tr,
   img {
     page-break-inside: avoid;
   }
 
-  /* line 328, scss/style.scss */
+  /* line 330, scss/style.scss */
   img {
     max-width: 100% !important;
   }
@@ -644,7 +646,7 @@ header .menu-button.active {
     margin: 0.5cm;
 }
 
-  /* line 338, scss/style.scss */
+  /* line 340, scss/style.scss */
   p,
   h2,
   h3 {
@@ -652,7 +654,7 @@ header .menu-button.active {
     widows: 3;
   }
 
-  /* line 344, scss/style.scss */
+  /* line 346, scss/style.scss */
   h2,
   h3 {
     page-break-after: avoid;

@@ -158,11 +158,13 @@ header {
 	color: $reverse-text;
 	background-color: $menu-highlight;
 	border: none;  
-	font-size: 3.5em;  
-	line-height: 1;
+	font-size: 3.5em;
+	font-weight:700;
+	font-family: Times, Times New Roman;
+	line-height: 0;
 	float:right;
-	padding-left: 0.18em;
-	padding-right: 0.16em;
+	width: 50px;
+	height: 50px;
 }
 
 .menu-button.active {

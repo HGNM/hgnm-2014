@@ -1,4 +1,6 @@
-			<footer></footer>
+			<footer id="colophon" class="site-footer" role="contentinfo">
+				
+			</footer>
 		</div><!-- #page -->
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

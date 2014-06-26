@@ -109,6 +109,7 @@ header {
 		font-family: $display-stack;
 		margin: 0;
 		letter-spacing: 0.2em;
+		float:left;
 		.lowercase {
 			display: none;
 		}
@@ -126,6 +127,7 @@ header {
 	letter-spacing: 0.1em;
 	font-weight: 700;
 	display: none;
+	clear:both;
 	ul {
 		list-style-type: none;
 		margin: 0;
@@ -158,9 +160,7 @@ header {
 	border: none;  
 	font-size: 3.5em;  
 	line-height: 1;
-	position: absolute;
-	right: 0;
-	top: -.225em;
+	float:right;
 	padding-left: 0.18em;
 	padding-right: 0.16em;
 }

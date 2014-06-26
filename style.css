@@ -473,44 +473,53 @@ header .menu-button.active {
 }
 
 /* ==========================================================================
+   Footer Styles
+   ========================================================================== */
+/* line 180, scss/style.scss */
+footer {
+  color: #777;
+  text-align: center;
+}
+
+/* ==========================================================================
    Media Queries
    ========================================================================== */
 @media only screen and (min-width: 35em) {
-  /* line 182, scss/style.scss */
+  /* line 191, scss/style.scss */
   header h1 {
     letter-spacing: 0;
   }
-  /* line 184, scss/style.scss */
+  /* line 193, scss/style.scss */
   header h1 .lowercase {
     display: inline;
   }
-  /* line 189, scss/style.scss */
+  /* line 198, scss/style.scss */
   header .menu {
     display: block;
   }
-  /* line 191, scss/style.scss */
+  /* line 200, scss/style.scss */
   header .menu ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
   }
-  /* line 196, scss/style.scss */
+  /* line 205, scss/style.scss */
   header .menu li {
     display: inline-block;
   }
-  /* line 199, scss/style.scss */
+  /* line 208, scss/style.scss */
   header .menu li:nth-child(odd) {
     background-color: transparent;
   }
-  /* line 202, scss/style.scss */
+  /* line 211, scss/style.scss */
   header .menu li:nth-child(even) {
     background-color: transparent;
   }
-  /* line 205, scss/style.scss */
+  /* line 214, scss/style.scss */
   header .menu a {
     color: #222222;
   }
-  /* line 210, scss/style.scss */
+  /* line 219, scss/style.scss */
   header .menu-button {
     display: none;
   }
@@ -518,7 +527,7 @@ header .menu-button.active {
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-/* line 227, scss/style.scss */
+/* line 236, scss/style.scss */
 .ir {
   background-color: transparent;
   border: 0;
@@ -526,7 +535,7 @@ header .menu-button.active {
   *text-indent: -9999px;
 }
 
-/* line 234, scss/style.scss */
+/* line 243, scss/style.scss */
 .ir:before {
   content: "";
   display: block;
@@ -534,13 +543,13 @@ header .menu-button.active {
   height: 150%;
 }
 
-/* line 241, scss/style.scss */
+/* line 250, scss/style.scss */
 .hidden {
   display: none !important;
   visibility: hidden;
 }
 
-/* line 246, scss/style.scss */
+/* line 255, scss/style.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -552,7 +561,7 @@ header .menu-button.active {
   width: 1px;
 }
 
-/* line 258, scss/style.scss */
+/* line 267, scss/style.scss */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   clip: auto;
@@ -563,24 +572,24 @@ header .menu-button.active {
   width: auto;
 }
 
-/* line 267, scss/style.scss */
+/* line 276, scss/style.scss */
 .invisible {
   visibility: hidden;
 }
 
-/* line 272, scss/style.scss */
+/* line 281, scss/style.scss */
 .clearfix:before,
 .clearfix:after {
   content: " ";
   display: table;
 }
 
-/* line 277, scss/style.scss */
+/* line 286, scss/style.scss */
 .clearfix:after {
   clear: both;
 }
 
-/* line 281, scss/style.scss */
+/* line 290, scss/style.scss */
 .clearfix {
   *zoom: 1;
 }
@@ -589,7 +598,7 @@ header .menu-button.active {
    Print styles
    ========================================================================== */
 @media print {
-  /* line 290, scss/style.scss */
+  /* line 299, scss/style.scss */
   * {
     background: transparent !important;
     color: #000 !important;
@@ -597,48 +606,48 @@ header .menu-button.active {
     text-shadow: none !important;
   }
 
-  /* line 298, scss/style.scss */
+  /* line 307, scss/style.scss */
   a,
   a:visited {
     text-decoration: underline;
   }
 
-  /* line 302, scss/style.scss */
+  /* line 311, scss/style.scss */
   a[href]:after {
     content: " (" attr(href) ")";
   }
 
-  /* line 306, scss/style.scss */
+  /* line 315, scss/style.scss */
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
 
-  /* line 312, scss/style.scss */
+  /* line 321, scss/style.scss */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: "";
   }
 
-  /* line 317, scss/style.scss */
+  /* line 326, scss/style.scss */
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
-  /* line 322, scss/style.scss */
+  /* line 331, scss/style.scss */
   thead {
     display: table-header-group;
   }
 
-  /* line 327, scss/style.scss */
+  /* line 336, scss/style.scss */
   tr,
   img {
     page-break-inside: avoid;
   }
 
-  /* line 331, scss/style.scss */
+  /* line 340, scss/style.scss */
   img {
     max-width: 100% !important;
   }
@@ -647,7 +656,7 @@ header .menu-button.active {
     margin: 0.5cm;
 }
 
-  /* line 341, scss/style.scss */
+  /* line 350, scss/style.scss */
   p,
   h2,
   h3 {
@@ -655,7 +664,7 @@ header .menu-button.active {
     widows: 3;
   }
 
-  /* line 347, scss/style.scss */
+  /* line 356, scss/style.scss */
   h2,
   h3 {
     page-break-after: avoid;

@@ -5,7 +5,7 @@ Repository for WordPress theme development for new HGNM website.
 ## Roadmap
 
 - [ ] WordPress core
-	- [ ] style.css
+	- [ ] [style.css](/style.css)
 		- [X] Theme Header
 		- [ ] screen styling
 			- [ ] small screens (mobile first)
@@ -14,24 +14,24 @@ Repository for WordPress theme development for new HGNM website.
 				- [X] site title
 				- [ ] menu
 		- [ ] print styling
-	- [ ] index.php
+	- [ ] [index.php](/index.php)
 		- [X] call header
 		- [ ] call content
 		- [X] call footer
-- [ ] header.php
+- [ ] [header.php](/header.php)
 	- [X] `<head>`
 	- [X] responsive site title
 	- [X] responsive menu
 - [ ] content single post templates
-	- [ ] HGNM Member (single-member.php)
-	- [ ] Concert Post (single-concert.php)
-	- [ ] Colloquium Post (single-colloquium.php)
+	- [ ] HGNM Member ([single-member.php](/single-member.php))
+	- [ ] Concert Post ([single-concert.php](/single-concert.php))
+	- [ ] Colloquium Post ([single-colloquium.php](/single-colloquium.php))
 - [ ] content archive templates
-	- [ ] Members (archive-member.php)
-	- [ ] Concerts (archive-concert.php)
-	- [ ] Colloquia (archive-colloquium.php)
-- [ ] footer.php
-- [ ] functions.php
+	- [ ] Members ([archive-member.php](/archive-member.php))
+	- [ ] Concerts ([archive-concert.php](/archive-concert.php))
+	- [ ] Colloquia ([archive-colloquium.php](/archive-colloquium.php))
+- [ ] [footer.php](/footer.php)
+- [ ] [functions.php](/functions.php)
 
 ## Dependencies
 

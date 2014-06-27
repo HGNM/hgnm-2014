@@ -216,6 +216,8 @@ footer {
 			
 			.menu {
 				display: block;
+				font-size:1.125em;
+				line-height:2.6666666666em;
 				ul {
 					list-style-type: none;
 					margin: 0;
@@ -223,6 +225,7 @@ footer {
 				}
 				li {
 					display: inline-block;
+					margin-right: 1em;
 				}
 				li:nth-child(odd) {
 					background-color: transparent;
@@ -231,8 +234,12 @@ footer {
 					background-color: transparent;
 				}
 				a {
+					border-radius: 2em;
 					color: $text-color;
-					padding: 0 1em 0 0;
+					padding: 0 .5em;
+				}
+				a:hover {
+					background: $bright-green;
 				}
 			}
 			

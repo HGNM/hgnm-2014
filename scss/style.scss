@@ -102,78 +102,80 @@ textarea {
 /* ==========================================================================
    Header Styles
    ========================================================================== */
-
-header {
-	color: $text-color;
-	h1 {
-		padding-left: .3em;
-		font-family: $display-stack;
-		margin: 0;
-		letter-spacing: 0.2em;
-		float:left;
-		.lowercase {
-			display: none;
-		}
-	}
-	a {
-		text-decoration: none;
+#page {
+	max-width: 60em;
+	margin: 0 auto;
+	header {
 		color: $text-color;
-	}
-
-// == Accessible Mobile Menu Styling == //
-
-.menu {
-	font-family: $sans-stack;
-	text-transform: uppercase;
-	letter-spacing: 0.15em;
-	font-weight: 700;
-	line-height: 2;
-	display: none;
-	clear:both;
-	ul {
-		list-style-type: none;
-		margin: 0;
-		padding: 0;
-	}
-	li:nth-child(odd) {
-		background-color: $menu-stripe-odd;
-	}
-	li:nth-child(even) {
-		background-color: $menu-stripe-even;
-	}
-	a {
-		color: $reverse-text;
-		display: block;
-		padding: .5em;
-	}
-}
-
-.menu.active {
-	display: block;
-}
-
-.no-js .menu {
-	display: block;
-}
-
-.menu-button {
-	color: $reverse-text;
-	background-color: $menu-highlight;
-	border: none;  
-	font-size: 3.5em;
-	font-weight:700;
-	font-family: Times, Times New Roman;
-	line-height: 0;
-	float:right;
-	width: 55px;
-	height: 48px;
-	padding:0;
-}
-
-.menu-button.active {
-	background-color: $text-color;
-}
-} // </header>
+		h1 {
+			font-family: $display-stack;
+			margin: 0;
+			letter-spacing: 0.2em;
+			float:left;
+			.lowercase {
+				display: none;
+			}
+		}
+		a {
+			text-decoration: none;
+			color: $text-color;
+		}
+	
+	// == Accessible Mobile Menu Styling == //
+	
+		.menu {
+			font-family: $sans-stack;
+			text-transform: uppercase;
+			letter-spacing: 0.15em;
+			font-weight: 700;
+			line-height: 2;
+			display: none;
+			clear:both;
+			ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+			}
+			li:nth-child(odd) {
+				background-color: $menu-stripe-odd;
+			}
+			li:nth-child(even) {
+				background-color: $menu-stripe-even;
+			}
+			a {
+				color: $reverse-text;
+				display: block;
+				padding: .5em;
+			}
+		}
+		
+		.menu.active {
+			display: block;
+		}
+		
+		.no-js .menu {
+			display: block;
+		}
+		
+		.menu-button {
+			color: $reverse-text;
+			background-color: $menu-highlight;
+			border: none;  
+			font-size: 3.5em;
+			font-weight:700;
+			font-family: Times, Times New Roman;
+			line-height: 0;
+			float:right;
+			width: 55px;
+			height: 48px;
+			padding:0;
+		}
+		
+		.menu-button.active {
+			background-color: $text-color;
+		}
+	} // </header>
+} // </#page>
 
 /* ==========================================================================
    Footer Styles
@@ -191,37 +193,40 @@ footer {
    ========================================================================== */
 
 @media only screen and (min-width: 35em) {
-	header {
-		h1 {
-			letter-spacing: 0;
-			.lowercase {
-				display: inline;
+	#page {
+		header {
+			h1 {
+				letter-spacing: 0;
+				.lowercase {
+					display: inline;
+				}
 			}
-		}
-		
-		.menu {
-			display: block;
-			ul {
-				list-style-type: none;
-				margin: 0;
-				padding: 0;
+			
+			.menu {
+				display: block;
+				ul {
+					list-style-type: none;
+					margin: 0;
+					padding: 0;
+				}
+				li {
+					display: inline-block;
+				}
+				li:nth-child(odd) {
+					background-color: transparent;
+				}
+				li:nth-child(even) {
+					background-color: transparent;
+				}
+				a {
+					color: $text-color;
+					padding: 0 1em 0 0;
+				}
 			}
-			li {
-				display: inline-block;
+			
+			.menu-button {
+				display:none;
 			}
-			li:nth-child(odd) {
-				background-color: transparent;
-			}
-			li:nth-child(even) {
-				background-color: transparent;
-			}
-			a {
-				color: $text-color;
-			}
-		}
-		
-		.menu-button {
-			display:none;
 		}
 	}
 }

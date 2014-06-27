@@ -11,7 +11,9 @@ get_header();
 					<a href="<?php the_field('url'); ?>">Personal Website</a>
 				<?php endif; ?>
 
-		<?php endwhile; echo '</div>'; else: ?>
+			<?php endwhile; ?>
+			</div><!-- #posts -->
+		<?php else: ?>
 		<?php endif;
 
 get_footer();

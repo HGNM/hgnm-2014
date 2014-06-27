@@ -112,6 +112,7 @@ textarea {
 			margin: 0;
 			letter-spacing: 0.2em;
 			float:left;
+			padding-left:5%;
 			.lowercase {
 				display: none;
 			}
@@ -177,6 +178,7 @@ textarea {
 	} // </header>
 	#torso {
 		clear:both;
+		padding: 0 5%;
 	}
 } // </#page>
 
@@ -189,6 +191,7 @@ footer {
 	color: $light-text;
 	text-align:center;
 	font-family: $sans-stack;
+	padding: 0 5%;
 }
 
 /* ==========================================================================
@@ -201,6 +204,7 @@ footer {
 			margin-top:-0.55em;
 			text-align: center;
 			h1 {
+				padding-left:0;
 				font-size: 4.5em;
 				line-height: 1;
 				width: 100%;

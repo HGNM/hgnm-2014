@@ -13,161 +13,161 @@ Text Domain: hgnm-2014
 This theme is probably useless for any general purpose, but if it proves useful, make use of it in any way permitted under the GNU license.
 */
 /* normalize.css v1.1.3 | MIT License | git.io/normalize */
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
   display: block;
 }
 
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 audio, canvas, video {
   display: inline-block;
   *display: inline;
   *zoom: 1;
 }
 
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 audio:not([controls]) {
   display: none;
   height: 0;
 }
 
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 [hidden] {
   display: none;
 }
 
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 html {
   font-size: 100%;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 html, button, input, select, textarea {
   font-family: serif;
 }
 
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 body {
   margin: 0;
 }
 
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 a:focus {
   outline: thin dotted #30ff8a;
 }
 
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 a:active, a:hover {
   outline: 0;
 }
 
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 h1 {
   font-size: 2em;
   margin: .67em 0;
 }
 
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 h2 {
   font-size: 1.5em;
   margin: .83em 0;
 }
 
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 h3 {
   font-size: 1.17em;
   margin: 1em 0;
 }
 
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 h4 {
   font-size: 1em;
   margin: 1.33em 0;
 }
 
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 h5 {
   font-size: .83em;
   margin: 1.67em 0;
 }
 
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 h6 {
   font-size: .67em;
   margin: 2.33em 0;
 }
 
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 abbr[title] {
   border-bottom: 1px dotted;
 }
 
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 b, strong {
   font-weight: bold;
 }
 
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 blockquote {
   margin: 1em 40px;
 }
 
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 dfn {
   font-style: italic;
 }
 
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 hr {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
 
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 mark {
   background: #ff0;
   color: #000;
 }
 
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 p, pre {
   margin: 1em 0;
 }
 
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 code, kbd, pre, samp {
   font-family: monospace,serif;
   _font-family: 'courier new',monospace;
   font-size: 1em;
 }
 
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 pre {
   white-space: pre;
   white-space: pre-wrap;
   word-wrap: break-word;
 }
 
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 q {
   quotes: none;
 }
 
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 q:before, q:after {
   content: '';
   content: none;
 }
 
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 small {
   font-size: 80%;
 }
 
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 sub, sup {
   font-size: 75%;
   line-height: 0;
@@ -175,66 +175,66 @@ sub, sup {
   vertical-align: baseline;
 }
 
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 sup {
   top: -0.5em;
 }
 
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 sub {
   bottom: -0.25em;
 }
 
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 dl, menu, ol, ul {
   margin: 1em 0;
 }
 
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 dd {
   margin: 0 0 0 40px;
 }
 
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 menu, ol, ul {
   padding: 0 0 0 40px;
 }
 
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 nav ul, nav ol {
   list-style: none;
   list-style-image: none;
 }
 
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 img {
   border: 0;
   -ms-interpolation-mode: bicubic;
 }
 
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 svg:not(:root) {
   overflow: hidden;
 }
 
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 figure {
   margin: 0;
 }
 
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 form {
   margin: 0;
 }
 
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 fieldset {
   border: 1px solid silver;
   margin: 0 2px;
   padding: .35em .625em .75em;
 }
 
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 legend {
   border: 0;
   padding: 0;
@@ -242,7 +242,7 @@ legend {
   *margin-left: -7px;
 }
 
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 button, input, select, textarea {
   font-size: 100%;
   margin: 0;
@@ -250,29 +250,29 @@ button, input, select, textarea {
   *vertical-align: middle;
 }
 
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 button, input {
   line-height: normal;
 }
 
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 button, select {
   text-transform: none;
 }
 
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 button, html input[type="button"], input[type="reset"], input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer;
   *overflow: visible;
 }
 
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 button[disabled], html input[disabled] {
   cursor: default;
 }
 
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 input[type="checkbox"], input[type="radio"] {
   box-sizing: border-box;
   padding: 0;
@@ -280,7 +280,7 @@ input[type="checkbox"], input[type="radio"] {
   *width: 13px;
 }
 
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   -moz-box-sizing: content-box;
@@ -288,31 +288,31 @@ input[type="search"] {
   box-sizing: content-box;
 }
 
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 button::-moz-focus-inner, input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 textarea {
   overflow: auto;
   vertical-align: top;
 }
 
-/* line 28, scss/style.scss */
+/* line 29, scss/style.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
 /* Base Styling (initial styles from HTML5 Boilerplate v4.3.0) */
-/* line 35, scss/style.scss */
+/* line 36, scss/style.scss */
 html,
 button,
 input,
@@ -322,13 +322,13 @@ textarea {
   font-family: Alegreya, Georgia, serif;
 }
 
-/* line 40, scss/style.scss */
+/* line 41, scss/style.scss */
 html {
   font-size: 1em;
   line-height: 1.5;
 }
 
-/* line 45, scss/style.scss */
+/* line 46, scss/style.scss */
 *, *:after, *:before {
   -moz-font-feature-settings: "kern" 1, "liga" 1;
   -ms-font-feature-settings: "kern" 1, "liga" 1;
@@ -337,21 +337,21 @@ html {
   font-feature-settings: "kern" 1, "liga" 1;
 }
 
-/* line 53, scss/style.scss */
+/* line 54, scss/style.scss */
 ::-moz-selection {
   color: #fff;
   background: #30ff8a;
   text-shadow: none;
 }
 
-/* line 59, scss/style.scss */
+/* line 60, scss/style.scss */
 ::selection {
   color: #fff;
   background: #30ff8a;
   text-shadow: none;
 }
 
-/* line 65, scss/style.scss */
+/* line 66, scss/style.scss */
 hr {
   display: block;
   height: 1px;
@@ -361,7 +361,7 @@ hr {
   padding: 0;
 }
 
-/* line 77, scss/style.scss */
+/* line 78, scss/style.scss */
 audio,
 canvas,
 img,
@@ -369,20 +369,20 @@ video {
   vertical-align: middle;
 }
 
-/* line 81, scss/style.scss */
+/* line 82, scss/style.scss */
 fieldset {
   border: 0;
   margin: 0;
   padding: 0;
 }
 
-/* line 87, scss/style.scss */
+/* line 88, scss/style.scss */
 textarea {
   resize: vertical;
 }
 
 /* Formats browser update alert for old IE */
-/* line 92, scss/style.scss */
+/* line 93, scss/style.scss */
 .browsehappy {
   margin: 0.2em 0;
   background: #fd8;
@@ -396,65 +396,70 @@ textarea {
    Header Styles
    ========================================================================== */
 /* line 105, scss/style.scss */
-header {
+#page {
+  max-width: 60em;
+  margin: 0 auto;
+}
+/* line 108, scss/style.scss */
+#page header {
   color: #222222;
 }
-/* line 107, scss/style.scss */
-header h1 {
-  padding-left: .3em;
+/* line 110, scss/style.scss */
+#page header h1 {
   font-family: "Dala Floda", serif;
   margin: 0;
   letter-spacing: 0.2em;
   float: left;
 }
-/* line 113, scss/style.scss */
-header h1 .lowercase {
+/* line 115, scss/style.scss */
+#page header h1 .lowercase {
   display: none;
 }
-/* line 117, scss/style.scss */
-header a {
+/* line 119, scss/style.scss */
+#page header a {
   text-decoration: none;
   color: #222222;
 }
-/* line 124, scss/style.scss */
-header .menu {
+/* line 126, scss/style.scss */
+#page header .menu {
   font-family: "Alegreya Sans", sans-serif;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.15em;
   font-weight: 700;
+  line-height: 2;
   display: none;
   clear: both;
 }
-/* line 131, scss/style.scss */
-header .menu ul {
+/* line 134, scss/style.scss */
+#page header .menu ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-/* line 136, scss/style.scss */
-header .menu li:nth-child(odd) {
+/* line 139, scss/style.scss */
+#page header .menu li:nth-child(odd) {
   background-color: #222222;
 }
-/* line 139, scss/style.scss */
-header .menu li:nth-child(even) {
+/* line 142, scss/style.scss */
+#page header .menu li:nth-child(even) {
   background-color: black;
 }
-/* line 142, scss/style.scss */
-header .menu a {
+/* line 145, scss/style.scss */
+#page header .menu a {
   color: white;
   display: block;
   padding: .5em;
 }
-/* line 149, scss/style.scss */
-header .menu.active {
+/* line 152, scss/style.scss */
+#page header .menu.active {
   display: block;
 }
-/* line 153, scss/style.scss */
-header .no-js .menu {
+/* line 156, scss/style.scss */
+#page header .no-js .menu {
   display: block;
 }
-/* line 157, scss/style.scss */
-header .menu-button {
+/* line 160, scss/style.scss */
+#page header .menu-button {
   color: white;
   background-color: #30ff8a;
   border: none;
@@ -464,70 +469,81 @@ header .menu-button {
   line-height: 0;
   float: right;
   width: 55px;
-  height: 50px;
+  height: 48px;
   padding: 0;
 }
-/* line 171, scss/style.scss */
-header .menu-button.active {
+/* line 174, scss/style.scss */
+#page header .menu-button.active {
   background-color: #222222;
 }
 
 /* ==========================================================================
    Footer Styles
    ========================================================================== */
-/* line 180, scss/style.scss */
+/* line 184, scss/style.scss */
 footer {
-  color: #777;
+  clear: both;
+  color: #888888;
   text-align: center;
+  font-family: "Alegreya Sans", sans-serif;
 }
 
 /* ==========================================================================
    Media Queries
    ========================================================================== */
-@media only screen and (min-width: 35em) {
-  /* line 191, scss/style.scss */
-  header h1 {
-    letter-spacing: 0;
-  }
-  /* line 193, scss/style.scss */
-  header h1 .lowercase {
-    display: inline;
-  }
-  /* line 198, scss/style.scss */
-  header .menu {
-    display: block;
+@media only screen and (min-width: 40em) {
+  /* line 197, scss/style.scss */
+  #page header {
+    margin-top: -0.55em;
+    text-align: center;
   }
   /* line 200, scss/style.scss */
-  header .menu ul {
+  #page header h1 {
+    font-size: 4.5em;
+    line-height: 1;
+    width: 100%;
+    letter-spacing: 0;
+  }
+  /* line 205, scss/style.scss */
+  #page header h1 .lowercase {
+    display: inline;
+  }
+  /* line 210, scss/style.scss */
+  #page header .menu {
+    display: block;
+  }
+  /* line 212, scss/style.scss */
+  #page header .menu ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
   }
-  /* line 205, scss/style.scss */
-  header .menu li {
+  /* line 217, scss/style.scss */
+  #page header .menu li {
     display: inline-block;
   }
-  /* line 208, scss/style.scss */
-  header .menu li:nth-child(odd) {
+  /* line 220, scss/style.scss */
+  #page header .menu li:nth-child(odd) {
     background-color: transparent;
   }
-  /* line 211, scss/style.scss */
-  header .menu li:nth-child(even) {
+  /* line 223, scss/style.scss */
+  #page header .menu li:nth-child(even) {
     background-color: transparent;
   }
-  /* line 214, scss/style.scss */
-  header .menu a {
+  /* line 226, scss/style.scss */
+  #page header .menu a {
     color: #222222;
+    padding: 0 1em 0 0;
   }
-  /* line 219, scss/style.scss */
-  header .menu-button {
+  /* line 232, scss/style.scss */
+  #page header .menu-button {
     display: none;
   }
 }
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-/* line 236, scss/style.scss */
+/* line 250, scss/style.scss */
 .ir {
   background-color: transparent;
   border: 0;
@@ -535,7 +551,7 @@ footer {
   *text-indent: -9999px;
 }
 
-/* line 243, scss/style.scss */
+/* line 257, scss/style.scss */
 .ir:before {
   content: "";
   display: block;
@@ -543,13 +559,13 @@ footer {
   height: 150%;
 }
 
-/* line 250, scss/style.scss */
+/* line 264, scss/style.scss */
 .hidden {
   display: none !important;
   visibility: hidden;
 }
 
-/* line 255, scss/style.scss */
+/* line 269, scss/style.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -561,7 +577,7 @@ footer {
   width: 1px;
 }
 
-/* line 267, scss/style.scss */
+/* line 281, scss/style.scss */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   clip: auto;
@@ -572,24 +588,24 @@ footer {
   width: auto;
 }
 
-/* line 276, scss/style.scss */
+/* line 290, scss/style.scss */
 .invisible {
   visibility: hidden;
 }
 
-/* line 281, scss/style.scss */
+/* line 295, scss/style.scss */
 .clearfix:before,
 .clearfix:after {
   content: " ";
   display: table;
 }
 
-/* line 286, scss/style.scss */
+/* line 300, scss/style.scss */
 .clearfix:after {
   clear: both;
 }
 
-/* line 290, scss/style.scss */
+/* line 304, scss/style.scss */
 .clearfix {
   *zoom: 1;
 }
@@ -598,7 +614,7 @@ footer {
    Print styles
    ========================================================================== */
 @media print {
-  /* line 299, scss/style.scss */
+  /* line 313, scss/style.scss */
   * {
     background: transparent !important;
     color: #000 !important;
@@ -606,48 +622,48 @@ footer {
     text-shadow: none !important;
   }
 
-  /* line 307, scss/style.scss */
+  /* line 321, scss/style.scss */
   a,
   a:visited {
     text-decoration: underline;
   }
 
-  /* line 311, scss/style.scss */
+  /* line 325, scss/style.scss */
   a[href]:after {
     content: " (" attr(href) ")";
   }
 
-  /* line 315, scss/style.scss */
+  /* line 329, scss/style.scss */
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
 
-  /* line 321, scss/style.scss */
+  /* line 335, scss/style.scss */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: "";
   }
 
-  /* line 326, scss/style.scss */
+  /* line 340, scss/style.scss */
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
-  /* line 331, scss/style.scss */
+  /* line 345, scss/style.scss */
   thead {
     display: table-header-group;
   }
 
-  /* line 336, scss/style.scss */
+  /* line 350, scss/style.scss */
   tr,
   img {
     page-break-inside: avoid;
   }
 
-  /* line 340, scss/style.scss */
+  /* line 354, scss/style.scss */
   img {
     max-width: 100% !important;
   }
@@ -656,7 +672,7 @@ footer {
     margin: 0.5cm;
 }
 
-  /* line 350, scss/style.scss */
+  /* line 364, scss/style.scss */
   p,
   h2,
   h3 {
@@ -664,7 +680,7 @@ footer {
     widows: 3;
   }
 
-  /* line 356, scss/style.scss */
+  /* line 370, scss/style.scss */
   h2,
   h3 {
     page-break-after: avoid;

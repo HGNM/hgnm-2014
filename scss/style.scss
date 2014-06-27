@@ -232,9 +232,9 @@ footer {
 			.menu-button {
 				display:none;
 			}
-		}
-	}
-}
+		} // </header>
+	} // </#page>
+} // end media-query
 
 @media print,
        (-o-min-device-pixel-ratio: 5/4),

@@ -195,7 +195,12 @@ footer {
 @media only screen and (min-width: 35em) {
 	#page {
 		header {
+			margin-top:-0.55em;
+			text-align: center;
 			h1 {
+				font-size: 4.5em;
+				line-height: 1;
+				width: 100%;
 				letter-spacing: 0;
 				.lowercase {
 					display: inline;

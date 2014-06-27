@@ -9,10 +9,9 @@ Repository for WordPress theme development for new HGNM website.
 		- [X] Theme Header
 		- [ ] screen styling
 			- [ ] small screens (mobile first)
-				- [X] site title
-				- [ ] menu
+				- [X] site title & menu
 			- [ ] larger screens
-				- [ ] site title
+				- [X] site title
 				- [ ] menu
 		- [ ] print styling
 	- [ ] index.php
@@ -23,7 +22,14 @@ Repository for WordPress theme development for new HGNM website.
 	- [X] `<head>`
 	- [X] responsive site title
 	- [X] responsive menu
-- [ ] content types
+- [ ] content single post templates
+	- [ ] HGNM Member (single-member.php)
+	- [ ] Concert Post (single-concert.php)
+	- [ ] Colloquium Post (single-colloquium.php)
+- [ ] content archive templates
+	- [ ] Members (archive-member.php)
+	- [ ] Concerts (archive-concert.php)
+	- [ ] Colloquia (archive-colloquium.php)
 - [ ] footer.php
 - [ ] functions.php
 

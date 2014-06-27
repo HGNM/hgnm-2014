@@ -2,24 +2,17 @@
 
 get_header();
 
-		if ( have_posts() ) {
-			echo '<div id="posts">';
-
-			/* Start the Loop */
-			while ( have_posts() ) {
-				the_post();
-
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to overload this in a child theme then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-				echo 'Concert';
-
-			}
-			
-			echo '</div>';
-		}
-
+		if ( have_posts() ) : ?>
+			<?php while ( have_posts() ) : the_post(); ?>
+			<article id="posts" <?php body_class(); ?>>
+				<h2 class="post-title"><?php the_title(); ?></h2>
+				<div class="entry"><?php if( get_field('summary') ): ?>
+					<?php the_field('summary'); ?>
+				<?php endif; ?></div>
+			</article><!-- #posts -->
+			<?php endwhile; ?>
+		<?php else: ?>
+		<?php endif;
 
 get_footer();
 

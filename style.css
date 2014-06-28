@@ -509,14 +509,13 @@ p {
 }
 /* line 206, scss/style.scss */
 #page #torso {
-  clear: both;
   padding: 0 5%;
 }
 
 /* ==========================================================================
    Footer Styles
    ========================================================================== */
-/* line 216, scss/style.scss */
+/* line 215, scss/style.scss */
 footer {
   clear: both;
   color: #999999;
@@ -529,9 +528,10 @@ footer {
    Media Queries
    ========================================================================== */
 @media only screen and (min-width: 40em) {
-  /* line 230, scss/style.scss */
+  /* line 229, scss/style.scss */
   #page header {
     margin-top: -0.55em;
+    margin-bottom: 3em;
     text-align: center;
     height: auto;
     background: transparent;

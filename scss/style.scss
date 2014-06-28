@@ -164,6 +164,9 @@ p {
 			li:nth-child(even) {
 				background-color: $menu-stripe-even;
 			}
+			.current-menu-item a:before {
+				content: '— ';
+			}
 			a {
 				color: $reverse-text;
 				display: block;
@@ -262,6 +265,9 @@ footer {
 				}
 				li:nth-child(even) {
 					background-color: transparent;
+				}
+				.current-menu-item a:before {
+					content: '';
 				}
 				a {
 					border-radius: 2em;

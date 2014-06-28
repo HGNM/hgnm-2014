@@ -29,12 +29,14 @@
     // If active...
     if (menu.classList.contains('active')) {
       // Hide
+      header.classList.remove('active');
       menu.classList.remove('active');
       menu.setAttribute('aria-hidden', 'true');
       menuButton.setAttribute('aria-expanded', 'false');
       menuButton.classList.remove('active');
     } else {
       // Show
+      header.classList.add('active');
       menu.classList.add('active');
       menu.setAttribute('aria-hidden', 'false');
       menuButton.setAttribute('aria-expanded', 'true');

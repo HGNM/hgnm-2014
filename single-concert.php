@@ -4,7 +4,7 @@ get_header();
 
 		if ( have_posts() ) : ?>
 			<?php while ( have_posts() ) : the_post(); ?>
-			<article id="posts" <?php body_class(); ?>>
+			<article id="posts" <?php post_class(); ?>>
 				<h2 class="post-title"><?php the_title(); ?></h2>
 				<div class="entry"><?php if( get_field('summary') ): ?>
 					<?php the_field('summary'); ?>

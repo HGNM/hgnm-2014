@@ -32,7 +32,7 @@ Repository for WordPress theme development for new HGNM website.
 	- [ ] Colloquia ([archive-colloquium.php](/archive-colloquium.php))
 - [ ] [footer.php](/footer.php)
 - [ ] [functions.php](/functions.php)
-	- [ ] Enable featured image for custom post types
+	- [X] Enable featured image for custom post types
 
 ## Dependencies
 

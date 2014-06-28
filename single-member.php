@@ -2,17 +2,16 @@
 
 get_header();
 
-		if ( have_posts() ) : echo '<div id="posts">'; while ( have_posts() ) : the_post(); ?>
-
-				<h2 class="post-title"><?php the_title(); ?></h2>
-				<div class="entry"><?php the_content(); ?></div>
-				
-				<?php if( get_field('url') ): ?>
-					<a href="<?php the_field('url'); ?>">Personal Website</a>
-				<?php endif; ?>
-
+		if ( have_posts() ) : ?>
+			<?php while ( have_posts() ) : the_post(); ?>
+				<article id="post" <?php post_class(); ?>>
+					<h2 class="post-title"><?php the_title(); ?></h2>
+					<div class="entry"><?php the_content(); ?></div>
+					<?php if( get_field('url') ): ?>
+						<a href="<?php the_field('url'); ?>">Personal Website</a>
+					<?php endif; ?>
+				</article><!-- #post -->
 			<?php endwhile; ?>
-			</div><!-- #posts -->
 		<?php else: ?>
 		<?php endif;
 

@@ -34,7 +34,7 @@
 		<![endif]-->
 		<div id="page" class="hfeed site">
 
-			<header id="masthead" class="site-header js-header" role="banner">
+			<header id="masthead" class="site-header js-header clearfix" role="banner">
 			
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 					<?php // Finds characters that are not uppercase and wraps them in a span of class 'lowercase'

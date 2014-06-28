@@ -47,4 +47,7 @@ $output = $copyright;
 return $output;
 }
 
+// Enable Featured Image for Member Custom Post Type
+add_theme_support( 'post-thumbnails', array( 'member' ) );
+
 ?>

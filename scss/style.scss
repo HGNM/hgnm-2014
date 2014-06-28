@@ -123,7 +123,9 @@ p {
 	max-width: 60em;
 	margin: 0 auto;
 	header {
-		color: $text-color;
+		height: 3em;
+		color: $reverse-text;
+		background: $black;
 		h1 {
 			font-size: 2.5em;
 			line-height: 1;
@@ -138,7 +140,7 @@ p {
 		}
 		a {
 			text-decoration: none;
-			color: $text-color;
+			color: $reverse-text;
 		}
 	
 	// == Accessible Mobile Menu Styling == //
@@ -192,9 +194,12 @@ p {
 		}
 		
 		.menu-button.active {
-			background-color: $text-color;
+			background-color: $menu-stripe-odd;
 		}
 	} // </header>
+	header.active {
+		height:auto;
+	}
 	#torso {
 		clear:both;
 		padding: 0 5%;

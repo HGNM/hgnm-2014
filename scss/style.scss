@@ -227,6 +227,8 @@ footer {
 		header {
 			margin-top:-0.55em;
 			text-align: center;
+			height: auto;
+			background: transparent;
 			h1 {
 				margin:0;
 				padding-left:0;
@@ -237,6 +239,9 @@ footer {
 				.lowercase {
 					display: inline;
 				}
+			}
+			a {
+				color: $black;
 			}
 			
 			.menu {

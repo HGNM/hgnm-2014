@@ -17,6 +17,10 @@ Repository for WordPress theme development for new HGNM website.
 	- [ ] [index.php](/index.php)
 		- [X] call header
 		- [ ] call content
+			- [X] Blurb
+			- [ ] Upcoming Events
+			- [ ] Current Members
+				- [ ] order randomly or alphabetically
 		- [X] call footer
 - [ ] [header.php](/header.php)
 	- [X] `<head>`

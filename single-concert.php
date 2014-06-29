@@ -7,9 +7,9 @@ get_header();
 			<article id="posts" <?php post_class(); ?>>
 				<h2 class="post-title"><?php the_title(); ?></h2>
 				<?php $dtstart = DateTime::createFromFormat('d/m/Y', get_field('dtstart')); ?>
-				<time class="value" datetime="<?php echo $dtstart->format('Y-m-d'); ?>">
+				<p><time class="value" datetime="<?php echo $dtstart->format('Y-m-d'); ?>">
 					<?php echo $dtstart->format('j F Y, ga'); ?>
-				</time>
+				</time><br />
 				<?php the_field('location') ?></p>
 				<div class="entry"><?php if( get_field('summary') ): ?>
 					<?php the_field('summary'); ?>

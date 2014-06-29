@@ -7,6 +7,7 @@ get_header();
 				<article id="post" <?php post_class(); ?>>
 					<h2 class="post-title"><?php the_title(); ?></h2>
 					<div class="entry"><?php the_content(); ?></div>
+					<section class="secondary">
 					<?php if( has_post_thumbnail() ): ?>
 						<div class="featured-img">
 							<?php echo get_the_post_thumbnail($post->ID, 'medium'); ?>
@@ -15,6 +16,7 @@ get_header();
 					<?php if( get_field('url') ): ?>
 						<a href="<?php the_field('url'); ?>">Personal Website</a>
 					<?php endif; ?>
+					</section>
 				</article><!-- #post -->
 			<?php endwhile; ?>
 		<?php else: ?>

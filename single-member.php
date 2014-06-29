@@ -14,7 +14,9 @@ get_header();
 						</div>
 					<?php endif; ?>
 					<?php if( get_field('url') ): ?>
-						<a href="<?php the_field('url'); ?>">Personal Website</a>
+						<div class="url">
+							<a href="<?php the_field('url'); ?>">Personal Website</a>
+						</div>
 					<?php endif; ?>
 					</section>
 				</article><!-- #post -->

@@ -4,7 +4,7 @@ get_header();
 
 		if ( have_posts() ) : ?>
 			<?php while ( have_posts() ) : the_post(); ?>
-				<article id="post" <?php post_class(); ?>>
+				<article id="fp-blurb" <?php post_class('fp-section'); ?>>
 					<h2 class="post-title"><?php the_title(); ?></h2>
 					<div class="entry"><?php the_content(); ?></div>
 				</article><!-- #post -->
@@ -21,14 +21,14 @@ get_header();
 		 
 		if($posts)
 		{
-			echo '<h2>Composers</h2><ul>';
+			echo '<section id="fp-composers" class="fp-section"><h2>Composers</h2><ul>';
 		 
 			foreach($posts as $post)
 			{
 				echo '<li><a href="' . get_permalink($post->ID) . '">' . get_the_post_thumbnail($post->ID, 'thumbnail') . '<span>' . get_the_title($post->ID) . '</span>' . '</a></li>';
 			}
 		 
-			echo '</ul>';
+			echo '</ul></section>';
 		}
 
 get_footer();

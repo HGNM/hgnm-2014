@@ -20,16 +20,13 @@ get_header();
 			'meta_key' => 'dtend',
 			'meta_value' => ''
 		));
-		 
 		if($posts)
 		{
 			echo '<section id="fp-composers" class="fp-section"><h2>Composers</h2><ul>';
-		 
 			foreach($posts as $post)
 			{
 				echo '<li><a href="' . get_permalink($post->ID) . '">' . get_the_post_thumbnail($post->ID, 'thumbnail') . '<span>' . get_the_title($post->ID) . '</span>' . '</a></li>';
 			}
-		 
 			echo '</ul></section>';
 		}
 

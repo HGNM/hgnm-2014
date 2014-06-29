@@ -10,6 +10,7 @@ get_header();
 				<time class="value" datetime="<?php echo $dtstart->format('Y-m-d'); ?>">
 					<?php echo $dtstart->format('j F Y, ga'); ?>
 				</time>
+				<?php the_field('location') ?></p>
 				<div class="entry"><?php if( get_field('summary') ): ?>
 					<?php the_field('summary'); ?>
 				<?php endif; ?></div>

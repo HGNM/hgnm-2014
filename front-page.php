@@ -2,6 +2,7 @@
 
 get_header();
 
+		// Get home page blurb
 		if ( have_posts() ) : ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 				<article id="fp-blurb" <?php post_class('fp-section'); ?>>
@@ -12,6 +13,7 @@ get_header();
 		<?php else: ?>
 		<?php endif;
 		
+		// Get composers names, photos and permalinks
 		$posts = get_posts(array(
 			'numberposts' => -1,
 			'post_type' => 'member',

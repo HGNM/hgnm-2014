@@ -22,16 +22,16 @@ get_header();
 								<?php if (get_sub_field('composer') && get_sub_field('work_title')) : ?>
 									<li>
 										<?php $composerid = get_sub_field('composer'); ?>
-										<span class="composer"><a href="<?php echo esc_url( home_url( '/' . $composerid->post_type . '/' . $composerid->post_name . '/' ) ); ?>"><?php echo $composerid->post_title; ?></a> — </span>
-										<span class="work_title"><?php the_sub_field('work_title'); ?></span>
+										<strong class="composer"><a href="<?php echo esc_url( get_permalink($composerid->ID) ); ?>"><?php echo get_the_title($composerid->ID); ?></a><br /></strong>
+										<em class="work_title"><?php the_sub_field('work_title'); ?></em>
 									</li>
 								<?php endif; ?>
 							<?php endwhile; ?>
 							<?php while( have_rows('programme_plus') ): the_row(); ?>
 								<?php if (get_sub_field('composer') && get_sub_field('work_title')) : ?>
 									<li>
-										<span class="composer"><?php the_sub_field('composer'); ?> — </span>
-										<span class="work_title"><?php the_sub_field('work_title'); ?></span>
+										<strong class="composer"><?php the_sub_field('composer'); ?><br /></strong>
+										<em class="work_title"><?php the_sub_field('work_title'); ?></em>
 									</li>
 								<?php endif; ?>
 							<?php endwhile; ?>

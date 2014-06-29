@@ -5,8 +5,10 @@ get_header();
 		if ( have_posts() ) : ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 				<article id="post" <?php post_class(); ?>>
-					<h2 class="post-title"><?php the_title(); ?></h2>
-					<div class="entry"><?php the_content(); ?></div>
+					<h2 class="post-title fname"><?php the_title(); ?></h2>
+					<section class="primary entry">
+						<?php the_content(); ?>
+					</section>
 					<section class="secondary">
 						<?php if( has_post_thumbnail() ): ?>
 							<div class="featured-img">

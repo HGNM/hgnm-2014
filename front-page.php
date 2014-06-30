@@ -46,6 +46,25 @@ get_header();
 			)
 		);
 		
+		// Display upcoming events
+		if($concerts || $colloquia) : ?>
+			<section id="fp-events" class="fp-section">
+				<h2>Next Events</h2>
+				<?php if($concerts) : ?>
+					<h3>Next Concert</h3>
+					<?php foreach($concerts as $concert): ?>
+					<?php echo get_the_title($concert->ID); ?>
+					<?php endforeach; ?>
+				<?php endif; ?>
+				<?php if($colloquia) : ?>
+					<h3>Upcoming Colloquia</h3>
+					<?php foreach($concerts as $concert): ?>
+					<?php echo get_the_title($concert->ID); ?>
+					<?php endforeach; ?>
+				<?php endif; ?>
+			</section>
+		<?php endif;
+		
 		// Get composers names, photos and permalinks
 		$posts = get_posts(array(
 			'numberposts' => -1,

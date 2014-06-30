@@ -53,14 +53,28 @@ get_header();
 				<?php if($concerts) : ?>
 					<h3>Next Concert</h3>
 					<?php foreach($concerts as $concert): ?>
-					<?php echo get_the_title($concert->ID); ?>
+						<?php echo '<h4>' . get_the_title($concert->ID) . '</h4>'; ?>
+						<?php $dtstart = DateTime::createFromFormat('d/m/Y', get_field('dtstart', $concert->ID)); ?>
+						<p><time class="value" datetime="<?php echo $dtstart->format('Y-m-d'); ?>">
+							<?php echo $dtstart->format('j F Y, ga'); ?>
+						</time></p>
+						<p><?php the_field('location', $concert->ID); ?></p>
 					<?php endforeach; ?>
 				<?php endif; ?>
 				<?php if($colloquia) : ?>
 					<h3>Upcoming Colloquia</h3>
-					<?php foreach($concerts as $concert): ?>
-					<?php echo get_the_title($concert->ID); ?>
+					<ul>
+					<?php foreach($colloquia as $colloquium): ?>
+						<li>
+						<?php $dtstart = DateTime::createFromFormat('d/m/Y', get_field('dtstart', $colloquium->ID)); ?>
+						<?php echo '<h4>' . get_the_title($colloquium->ID) . '</h4> '; ?>
+						<time class="value" datetime="<?php echo $dtstart->format('Y-m-d'); ?>">
+							<?php echo $dtstart->format('m/j'); ?>
+						</time>
+						</li>
 					<?php endforeach; ?>
+					</ul>
+					<p>All colloquia are at 12pm in the Davison Room, <a href="http://www.map.harvard.edu/?ctrx=759617&ctry=2962591&level=10&layers=Campus%20Base%20and%20Buildings,Bike%20Facilities,Map%20Text" target="_blank">Harvard University Music Building</a></p>
 				<?php endif; ?>
 			</section>
 		<?php endif;

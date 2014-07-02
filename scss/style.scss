@@ -28,6 +28,7 @@ $link-highlight:$bright-green;
 $serif-stack: Alegreya, Georgia, serif;
 $sans-stack: 'Alegreya Sans', sans-serif;
 $display-stack: 'Dala Floda', serif;
+$body-padding: 0 5%;
 
 @mixin transition($args) {
 	-webkit-transition: $args;
@@ -136,6 +137,7 @@ p {
    Header Styles
    ========================================================================== */
 #page {
+	overflow:hidden;
 	max-width: 60em;
 	margin: 0 auto;
 	header {
@@ -220,7 +222,6 @@ p {
 		height:auto;
 	}
 	#torso {
-		padding: 0 5%;
 		a,
 		a:visited {
 			color: $link-text;
@@ -236,6 +237,7 @@ p {
 		   ========================================================================== */
 		
 		.fp-section {
+			padding:$body-padding;
 			ul {
 				list-style: none;
 				padding: 0;
@@ -310,7 +312,7 @@ footer {
 	color: $light-text;
 	text-align:center;
 	font-family: $sans-stack;
-	padding: 0 5%;
+	padding: $body-padding;
 }
 
 /* ==========================================================================

@@ -50,32 +50,40 @@ get_header();
 		if($concerts || $colloquia) : ?>
 			<section id="fp-events" class="fp-section">
 				<h2>Next Events</h2>
-				<?php if($concerts) : ?>
-					<h3>Next Concert</h3>
-					<?php foreach($concerts as $concert): ?>
-						<?php echo '<h4>' . get_the_title($concert->ID) . '</h4>'; ?>
-						<?php $dtstart = DateTime::createFromFormat('d/m/Y', get_field('dtstart', $concert->ID)); ?>
-						<p><time class="value" datetime="<?php echo $dtstart->format('Y-m-d'); ?>">
-							<?php echo $dtstart->format('j F Y, ga'); ?>
-						</time></p>
-						<p><?php the_field('location', $concert->ID); ?></p>
-					<?php endforeach; ?>
-				<?php endif; ?>
-				<?php if($colloquia) : ?>
-					<h3>Upcoming Colloquia</h3>
-					<ul>
-					<?php foreach($colloquia as $colloquium): ?>
+				<ul>
+					<?php if($concerts) : ?>
 						<li>
-						<?php $dtstart = DateTime::createFromFormat('d/m/Y', get_field('dtstart', $colloquium->ID)); ?>
-						<?php echo '<h4>' . get_the_title($colloquium->ID) . '</h4> '; ?>
-						<time class="value" datetime="<?php echo $dtstart->format('Y-m-d'); ?>">
-							<?php echo $dtstart->format('m/j'); ?>
-						</time>
+							<h3>Next Concert</h3>
+							<?php foreach($concerts as $concert): ?>
+								<div class="vevent">
+									<?php $dtstart = DateTime::createFromFormat('d/m/Y', get_field('dtstart', $concert->ID)); ?>
+									<h4 class="dtstart"><time class="value" datetime="<?php echo $dtstart->format('Y-m-d'); ?>">
+										<?php echo '<span class="month">' . $dtstart->format('M') . '</span> <span class="day">' . $dtstart->format('j'); ?>
+									</time></h4>
+									<?php echo '<p>' . get_the_title($concert->ID) . '</p>'; ?>
+									<p><?php the_field('location', $concert->ID); ?></p>
+								</div>
+							<?php endforeach; ?>
 						</li>
-					<?php endforeach; ?>
-					</ul>
-					<p>All colloquia are at 12pm in the Davison Room, <a href="http://www.map.harvard.edu/?ctrx=759617&ctry=2962591&level=10&layers=Campus%20Base%20and%20Buildings,Bike%20Facilities,Map%20Text" target="_blank">Harvard University Music Building</a></p>
-				<?php endif; ?>
+					<?php endif; ?>
+					<?php if($colloquia) : ?>
+						<li>
+						<h3>Upcoming Colloquia</h3>
+						<ul>
+						<?php foreach($colloquia as $colloquium): ?>
+							<li>
+							<?php $dtstart = DateTime::createFromFormat('d/m/Y', get_field('dtstart', $colloquium->ID)); ?>
+							<h4><time class="value" datetime="<?php echo $dtstart->format('Y-m-d'); ?>">
+								<?php echo $dtstart->format('m/j'); ?>
+							</time></h4>
+							<?php echo get_the_title($colloquium->ID); ?>
+							</li>
+						<?php endforeach; ?>
+						</ul>
+						<p>All colloquia are at 12pm in the Davison Room, <a href="http://www.map.harvard.edu/?ctrx=759617&ctry=2962591&level=10&layers=Campus%20Base%20and%20Buildings,Bike%20Facilities,Map%20Text" target="_blank">Harvard University Music Building</a></p>
+						</li>
+					<?php endif; ?>
+				</ul>
 			</section>
 		<?php endif;
 		
@@ -84,7 +92,9 @@ get_header();
 			'numberposts' => -1,
 			'post_type' => 'member',
 			'meta_key' => 'dtend',
-			'meta_value' => ''
+			'meta_value' => '',
+			'orderby' => 'title',
+			'order' => 'ASC'
 		));
 		if($posts)
 		{

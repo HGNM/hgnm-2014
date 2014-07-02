@@ -230,7 +230,7 @@ p {
 #fp-composers {
 	li {
 			margin-bottom:1em;
-			transition: all 0.2s ease-out;
+			@include transition(all 0.2s ease-out);
 		a {
 			width: 100%;
 			height:5em;
@@ -245,12 +245,14 @@ p {
 			letter-spacing:0.15em;
 			display: inline-block;
 			border-radius:2.5em 0 0 2.5em;
+			@include transition(all 0.1s ease-out);
 			img {
 				float:left;
 				width: 5em;
 				-webkit-filter:grayscale(1) contrast(125%) brightness(125%);
 				filter:grayscale(1) contrast(125%) brightness(125%);
 				border-radius:2.5em;
+				@include transition(all 0.1s ease-out);
 			}
 			span {
 				font-size:0.85em;
@@ -267,17 +269,17 @@ p {
 			background: $dark-bg;
 			color: $bright-green;
 			font-weight:400;
-			transition: all 0.2s ease-in;
+			@include transition( all 0.1s ease-in);
 			img {
 				-webkit-filter:grayscale(0) saturate(125%);
 				filter:grayscale(0) saturate(125%);
-				transition: all 0.2s ease-in;
+				@include transition(all 0.1s ease-in);
 			}
 		}
 	}
 	li:hover {
 		padding-left: 2em;
-		transition: all 0.2s ease-in;
+		@include transition( all 0.2s ease-in);
 	}
 }
 

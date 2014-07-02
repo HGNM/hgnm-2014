@@ -29,6 +29,8 @@ $serif-stack: Alegreya, Georgia, serif;
 $sans-stack: 'Alegreya Sans', sans-serif;
 $display-stack: 'Dala Floda', serif;
 $body-padding: 0 5%;
+$more-padding: 0 12.5%;
+$max-width: 60em;
 
 @mixin transition($args) {
 	-webkit-transition: $args;
@@ -138,7 +140,6 @@ p {
    ========================================================================== */
 #page {
 	overflow:hidden;
-	max-width: 60em;
 	margin: 0 auto;
 	header {
 		height: 3em;
@@ -386,6 +387,9 @@ footer {
 			}
 		} // </header>
 		#torso {
+			.fp-section {
+				padding: $more-padding;
+			}
 			#fp-composers {
 				li {
 					float: left;
@@ -407,7 +411,7 @@ footer {
 							vertical-align:middle;
 							line-height:1.1em;
 							max-width:100%;
-							width:12em;
+							width:24em;
 							height:3.52941176em;
 							padding: 0 5%;
 							white-space: normal;

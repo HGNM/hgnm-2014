@@ -88,13 +88,25 @@ get_header();
 		<?php endif;
 		
 		// Get composers names, photos and permalinks
+		$today = date('Ymd', strtotime('-1 day'));
 		$posts = get_posts(array(
 			'numberposts' => -1,
 			'post_type' => 'member',
-			'meta_key' => 'dtend',
-			'meta_value' => '',
 			'orderby' => 'title',
-			'order' => 'ASC'
+			'order' => 'ASC',
+			'meta_query' => array(
+				'relation' => 'OR',
+				array(
+					'key' => 'dtend',
+					'value' => null
+				),
+				array(
+					'key' => 'dtend',
+					'value' => $today,
+					'type' => 'numeric',
+					'compare' => '>'
+				)
+			)
 		));
 		if($posts)
 		{

@@ -402,6 +402,23 @@ footer {
 } // end media-query
 
 @media only screen and (max-width: 15em) {
+	#fp-composers {
+		li {
+			a {
+				border-radius:0;
+				img {
+					display:none;
+				}
+				span {
+					max-width:90%;
+					padding:0 5%;
+				}
+			}
+		}
+		li:hover {
+			padding-left:0;
+		}
+	}
 }
 
 @media print,

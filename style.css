@@ -513,9 +513,67 @@ p {
 }
 
 /* ==========================================================================
+   Front Page Styles
+   ========================================================================== */
+/* line 216, scss/style.scss */
+.fp-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* line 223, scss/style.scss */
+#fp-composers li {
+  height: 4em;
+  margin-bottom: 2em;
+}
+/* line 226, scss/style.scss */
+#fp-composers li a {
+  width: 100%;
+  height: 4em;
+  overflow: display;
+  background: #30ff8a;
+  color: #222222;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  display: inline-block;
+}
+/* line 239, scss/style.scss */
+#fp-composers li a img {
+  float: left;
+  margin: -1em 0 0 0.5em;
+  width: 6em;
+  height: 6em;
+  border: solid 0.2em #30ff8a;
+}
+/* line 246, scss/style.scss */
+#fp-composers li a span {
+  font-size: 0.85em;
+  display: inline-block;
+  line-height: 4.70588235em;
+}
+/* line 252, scss/style.scss */
+#fp-composers li a:hover {
+  background: #333333;
+  color: #30ff8a;
+}
+/* line 255, scss/style.scss */
+#fp-composers li a:hover img {
+  border-color: #333333;
+}
+/* line 260, scss/style.scss */
+#fp-composers li:nth-child(odd) img {
+  float: right;
+  margin: -1em 0.5em 0 0;
+}
+
+/* ==========================================================================
    Footer Styles
    ========================================================================== */
-/* line 215, scss/style.scss */
+/* line 270, scss/style.scss */
 footer {
   clear: both;
   color: #999999;
@@ -528,7 +586,7 @@ footer {
    Media Queries
    ========================================================================== */
 @media only screen and (min-width: 40em) {
-  /* line 229, scss/style.scss */
+  /* line 284, scss/style.scss */
   #page header {
     margin-top: -0.55em;
     margin-bottom: 3em;
@@ -536,7 +594,7 @@ footer {
     height: auto;
     background: transparent;
   }
-  /* line 235, scss/style.scss */
+  /* line 290, scss/style.scss */
   #page header h1 {
     margin: 0;
     padding-left: 0;
@@ -545,54 +603,54 @@ footer {
     width: 100%;
     letter-spacing: 0;
   }
-  /* line 242, scss/style.scss */
+  /* line 297, scss/style.scss */
   #page header h1 .lowercase {
     display: inline;
   }
-  /* line 246, scss/style.scss */
+  /* line 301, scss/style.scss */
   #page header a {
     color: black;
   }
-  /* line 250, scss/style.scss */
+  /* line 305, scss/style.scss */
   #page header .menu {
     display: block;
     font-size: 1.125em;
     line-height: 2.6666666666em;
   }
-  /* line 254, scss/style.scss */
+  /* line 309, scss/style.scss */
   #page header .menu ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
   }
-  /* line 259, scss/style.scss */
+  /* line 314, scss/style.scss */
   #page header .menu li {
     display: inline-block;
     margin-right: .5em;
   }
-  /* line 263, scss/style.scss */
+  /* line 318, scss/style.scss */
   #page header .menu li:nth-child(odd) {
     background-color: transparent;
   }
-  /* line 266, scss/style.scss */
+  /* line 321, scss/style.scss */
   #page header .menu li:nth-child(even) {
     background-color: transparent;
   }
-  /* line 269, scss/style.scss */
+  /* line 324, scss/style.scss */
   #page header .menu .current-menu-item a:before {
     content: '';
   }
-  /* line 272, scss/style.scss */
+  /* line 327, scss/style.scss */
   #page header .menu a {
     border-radius: 2em;
     color: #222222;
     padding: 0 .5em;
   }
-  /* line 277, scss/style.scss */
+  /* line 332, scss/style.scss */
   #page header .menu a:hover {
     background: #30ff8a;
   }
-  /* line 282, scss/style.scss */
+  /* line 337, scss/style.scss */
   #page header .menu-button {
     display: none;
   }
@@ -600,7 +658,7 @@ footer {
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-/* line 300, scss/style.scss */
+/* line 355, scss/style.scss */
 .ir {
   background-color: transparent;
   border: 0;
@@ -608,7 +666,7 @@ footer {
   *text-indent: -9999px;
 }
 
-/* line 307, scss/style.scss */
+/* line 362, scss/style.scss */
 .ir:before {
   content: "";
   display: block;
@@ -616,13 +674,13 @@ footer {
   height: 150%;
 }
 
-/* line 314, scss/style.scss */
+/* line 369, scss/style.scss */
 .hidden {
   display: none !important;
   visibility: hidden;
 }
 
-/* line 319, scss/style.scss */
+/* line 374, scss/style.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -634,7 +692,7 @@ footer {
   width: 1px;
 }
 
-/* line 331, scss/style.scss */
+/* line 386, scss/style.scss */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   clip: auto;
@@ -645,24 +703,24 @@ footer {
   width: auto;
 }
 
-/* line 340, scss/style.scss */
+/* line 395, scss/style.scss */
 .invisible {
   visibility: hidden;
 }
 
-/* line 345, scss/style.scss */
+/* line 400, scss/style.scss */
 .clearfix:before,
 .clearfix:after {
   content: " ";
   display: table;
 }
 
-/* line 350, scss/style.scss */
+/* line 405, scss/style.scss */
 .clearfix:after {
   clear: both;
 }
 
-/* line 354, scss/style.scss */
+/* line 409, scss/style.scss */
 .clearfix {
   *zoom: 1;
 }
@@ -671,7 +729,7 @@ footer {
    Print styles
    ========================================================================== */
 @media print {
-  /* line 363, scss/style.scss */
+  /* line 418, scss/style.scss */
   * {
     background: transparent !important;
     color: #000 !important;
@@ -679,48 +737,48 @@ footer {
     text-shadow: none !important;
   }
 
-  /* line 371, scss/style.scss */
+  /* line 426, scss/style.scss */
   a,
   a:visited {
     text-decoration: underline;
   }
 
-  /* line 375, scss/style.scss */
+  /* line 430, scss/style.scss */
   a[href]:after {
     content: " (" attr(href) ")";
   }
 
-  /* line 379, scss/style.scss */
+  /* line 434, scss/style.scss */
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
 
-  /* line 385, scss/style.scss */
+  /* line 440, scss/style.scss */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: "";
   }
 
-  /* line 390, scss/style.scss */
+  /* line 445, scss/style.scss */
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
-  /* line 395, scss/style.scss */
+  /* line 450, scss/style.scss */
   thead {
     display: table-header-group;
   }
 
-  /* line 400, scss/style.scss */
+  /* line 455, scss/style.scss */
   tr,
   img {
     page-break-inside: avoid;
   }
 
-  /* line 404, scss/style.scss */
+  /* line 459, scss/style.scss */
   img {
     max-width: 100% !important;
   }
@@ -729,7 +787,7 @@ footer {
     margin: 0.5cm;
 }
 
-  /* line 414, scss/style.scss */
+  /* line 469, scss/style.scss */
   p,
   h2,
   h3 {
@@ -737,7 +795,7 @@ footer {
     widows: 3;
   }
 
-  /* line 420, scss/style.scss */
+  /* line 475, scss/style.scss */
   h2,
   h3 {
     page-break-after: avoid;

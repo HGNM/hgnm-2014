@@ -227,10 +227,12 @@ p {
 			color: $link-text;
 			text-decoration: none;
 			border-bottom: 2px solid $link-highlight;
+			@include transition(all 0.2s ease-out);
 		}
 		
 		a:hover {
 			background: $link-highlight;
+			@include transition(all 0.2s ease-in);
 		}
 		/* ==========================================================================
 		   Front Page Styles

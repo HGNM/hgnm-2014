@@ -390,7 +390,8 @@ footer {
 			}
 		} // </header>
 		#torso {
-			.fp-section {
+			.fp-section,
+			.p-section {
 				padding: $more-padding;
 				padding-top:1.5em;
 				padding-bottom:1.5em;

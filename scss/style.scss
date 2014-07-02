@@ -248,7 +248,8 @@ p {
 			@include transition(all 0.1s ease-out);
 			img {
 				float:left;
-				width: 5em;
+				max-width: 5em;
+				width: 31%;
 				-webkit-filter:grayscale(1) contrast(125%) brightness(125%);
 				filter:grayscale(1) contrast(125%) brightness(125%);
 				border-radius:2.5em;

@@ -242,7 +242,8 @@ p {
 		
 		.fp-section {
 			padding:$body-padding;
-			margin-bottom:3em;
+			padding-top:1.5em;
+			padding-bottom:1.5em;
 			ul {
 				list-style: none;
 				padding: 0;
@@ -389,6 +390,8 @@ footer {
 		#torso {
 			.fp-section {
 				padding: $more-padding;
+				padding-top:1.5em;
+				padding-bottom:1.5em;
 			}
 			#fp-composers {
 				li {

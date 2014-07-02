@@ -159,6 +159,7 @@ p {
 		a {
 			text-decoration: none;
 			color: $reverse-text;
+			@include transition(all 0.2s ease-out);
 		}
 	
 	// == Accessible Mobile Menu Styling == //

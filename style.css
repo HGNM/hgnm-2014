@@ -13,161 +13,161 @@ Text Domain: hgnm-2014
 This theme is probably useless for any general purpose, but if it proves useful, make use of it in any way permitted under the GNU license.
 */
 /* normalize.css v1.1.3 | MIT License | git.io/normalize */
-/* line 44, scss/style.scss */
+/* line 47, scss/style.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
   display: block;
 }
 
-/* line 44, scss/style.scss */
+/* line 47, scss/style.scss */
 audio, canvas, video {
   display: inline-block;
   *display: inline;
   *zoom: 1;
 }
 
-/* line 44, scss/style.scss */
+/* line 47, scss/style.scss */
 audio:not([controls]) {
   display: none;
   height: 0;
 }
 
-/* line 44, scss/style.scss */
+/* line 47, scss/style.scss */
 [hidden] {
   display: none;
 }
 
-/* line 44, scss/style.scss */
+/* line 47, scss/style.scss */
 html {
   font-size: 100%;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 
-/* line 44, scss/style.scss */
+/* line 47, scss/style.scss */
 html, button, input, select, textarea {
   font-family: serif;
 }
 
-/* line 44, scss/style.scss */
+/* line 47, scss/style.scss */
 body {
   margin: 0;
 }
 
-/* line 44, scss/style.scss */
+/* line 47, scss/style.scss */
 a:focus {
   outline: thin dotted #30ff8a;
 }
 
-/* line 44, scss/style.scss */
+/* line 47, scss/style.scss */
 a:active, a:hover {
   outline: 0;
 }
 
-/* line 44, scss/style.scss */
+/* line 47, scss/style.scss */
 h1 {
   font-size: 2em;
   margin: .67em 0;
 }
 
-/* line 44, scss/style.scss */
+/* line 47, scss/style.scss */
 h2 {
   font-size: 1.5em;
   margin: .83em 0;
 }
 
-/* line 44, scss/style.scss */
+/* line 47, scss/style.scss */
 h3 {
   font-size: 1.17em;
   margin: 1em 0;
 }
 
-/* line 44, scss/style.scss */
+/* line 47, scss/style.scss */
 h4 {
   font-size: 1em;
   margin: 1.33em 0;
 }
 
-/* line 44, scss/style.scss */
+/* line 47, scss/style.scss */
 h5 {
   font-size: .83em;
   margin: 1.67em 0;
 }
 
-/* line 44, scss/style.scss */
+/* line 47, scss/style.scss */
 h6 {
   font-size: .67em;
   margin: 2.33em 0;
 }
 
-/* line 44, scss/style.scss */
+/* line 47, scss/style.scss */
 abbr[title] {
   border-bottom: 1px dotted;
 }
 
-/* line 44, scss/style.scss */
+/* line 47, scss/style.scss */
 b, strong {
   font-weight: bold;
 }
 
-/* line 44, scss/style.scss */
+/* line 47, scss/style.scss */
 blockquote {
   margin: 1em 40px;
 }
 
-/* line 44, scss/style.scss */
+/* line 47, scss/style.scss */
 dfn {
   font-style: italic;
 }
 
-/* line 44, scss/style.scss */
+/* line 47, scss/style.scss */
 hr {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
 
-/* line 44, scss/style.scss */
+/* line 47, scss/style.scss */
 mark {
   background: #ff0;
   color: #000;
 }
 
-/* line 44, scss/style.scss */
+/* line 47, scss/style.scss */
 p, pre {
   margin: 1em 0;
 }
 
-/* line 44, scss/style.scss */
+/* line 47, scss/style.scss */
 code, kbd, pre, samp {
   font-family: monospace,serif;
   _font-family: 'courier new',monospace;
   font-size: 1em;
 }
 
-/* line 44, scss/style.scss */
+/* line 47, scss/style.scss */
 pre {
   white-space: pre;
   white-space: pre-wrap;
   word-wrap: break-word;
 }
 
-/* line 44, scss/style.scss */
+/* line 47, scss/style.scss */
 q {
   quotes: none;
 }
 
-/* line 44, scss/style.scss */
+/* line 47, scss/style.scss */
 q:before, q:after {
   content: '';
   content: none;
 }
 
-/* line 44, scss/style.scss */
+/* line 47, scss/style.scss */
 small {
   font-size: 80%;
 }
 
-/* line 44, scss/style.scss */
+/* line 47, scss/style.scss */
 sub, sup {
   font-size: 75%;
   line-height: 0;
@@ -175,66 +175,66 @@ sub, sup {
   vertical-align: baseline;
 }
 
-/* line 44, scss/style.scss */
+/* line 47, scss/style.scss */
 sup {
   top: -0.5em;
 }
 
-/* line 44, scss/style.scss */
+/* line 47, scss/style.scss */
 sub {
   bottom: -0.25em;
 }
 
-/* line 44, scss/style.scss */
+/* line 47, scss/style.scss */
 dl, menu, ol, ul {
   margin: 1em 0;
 }
 
-/* line 44, scss/style.scss */
+/* line 47, scss/style.scss */
 dd {
   margin: 0 0 0 40px;
 }
 
-/* line 44, scss/style.scss */
+/* line 47, scss/style.scss */
 menu, ol, ul {
   padding: 0 0 0 40px;
 }
 
-/* line 44, scss/style.scss */
+/* line 47, scss/style.scss */
 nav ul, nav ol {
   list-style: none;
   list-style-image: none;
 }
 
-/* line 44, scss/style.scss */
+/* line 47, scss/style.scss */
 img {
   border: 0;
   -ms-interpolation-mode: bicubic;
 }
 
-/* line 44, scss/style.scss */
+/* line 47, scss/style.scss */
 svg:not(:root) {
   overflow: hidden;
 }
 
-/* line 44, scss/style.scss */
+/* line 47, scss/style.scss */
 figure {
   margin: 0;
 }
 
-/* line 44, scss/style.scss */
+/* line 47, scss/style.scss */
 form {
   margin: 0;
 }
 
-/* line 44, scss/style.scss */
+/* line 47, scss/style.scss */
 fieldset {
   border: 1px solid silver;
   margin: 0 2px;
   padding: .35em .625em .75em;
 }
 
-/* line 44, scss/style.scss */
+/* line 47, scss/style.scss */
 legend {
   border: 0;
   padding: 0;
@@ -242,7 +242,7 @@ legend {
   *margin-left: -7px;
 }
 
-/* line 44, scss/style.scss */
+/* line 47, scss/style.scss */
 button, input, select, textarea {
   font-size: 100%;
   margin: 0;
@@ -250,29 +250,29 @@ button, input, select, textarea {
   *vertical-align: middle;
 }
 
-/* line 44, scss/style.scss */
+/* line 47, scss/style.scss */
 button, input {
   line-height: normal;
 }
 
-/* line 44, scss/style.scss */
+/* line 47, scss/style.scss */
 button, select {
   text-transform: none;
 }
 
-/* line 44, scss/style.scss */
+/* line 47, scss/style.scss */
 button, html input[type="button"], input[type="reset"], input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer;
   *overflow: visible;
 }
 
-/* line 44, scss/style.scss */
+/* line 47, scss/style.scss */
 button[disabled], html input[disabled] {
   cursor: default;
 }
 
-/* line 44, scss/style.scss */
+/* line 47, scss/style.scss */
 input[type="checkbox"], input[type="radio"] {
   box-sizing: border-box;
   padding: 0;
@@ -280,7 +280,7 @@ input[type="checkbox"], input[type="radio"] {
   *width: 13px;
 }
 
-/* line 44, scss/style.scss */
+/* line 47, scss/style.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   -moz-box-sizing: content-box;
@@ -288,31 +288,31 @@ input[type="search"] {
   box-sizing: content-box;
 }
 
-/* line 44, scss/style.scss */
+/* line 47, scss/style.scss */
 input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-/* line 44, scss/style.scss */
+/* line 47, scss/style.scss */
 button::-moz-focus-inner, input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
-/* line 44, scss/style.scss */
+/* line 47, scss/style.scss */
 textarea {
   overflow: auto;
   vertical-align: top;
 }
 
-/* line 44, scss/style.scss */
+/* line 47, scss/style.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
 /* Base Styling (initial styles from HTML5 Boilerplate v4.3.0) */
-/* line 51, scss/style.scss */
+/* line 54, scss/style.scss */
 html,
 button,
 input,
@@ -322,13 +322,13 @@ textarea {
   font-family: Alegreya, Georgia, serif;
 }
 
-/* line 56, scss/style.scss */
+/* line 59, scss/style.scss */
 html {
   font-size: 1em;
   line-height: 1.5;
 }
 
-/* line 61, scss/style.scss */
+/* line 64, scss/style.scss */
 *, *:after, *:before {
   -moz-font-feature-settings: "kern" 1, "liga" 1;
   -ms-font-feature-settings: "kern" 1, "liga" 1;
@@ -337,21 +337,21 @@ html {
   font-feature-settings: "kern" 1, "liga" 1;
 }
 
-/* line 69, scss/style.scss */
+/* line 72, scss/style.scss */
 ::-moz-selection {
   color: #fff;
   background: #30ff8a;
   text-shadow: none;
 }
 
-/* line 75, scss/style.scss */
+/* line 78, scss/style.scss */
 ::selection {
   color: #fff;
   background: #30ff8a;
   text-shadow: none;
 }
 
-/* line 81, scss/style.scss */
+/* line 84, scss/style.scss */
 hr {
   display: block;
   height: 1px;
@@ -361,7 +361,7 @@ hr {
   padding: 0;
 }
 
-/* line 93, scss/style.scss */
+/* line 96, scss/style.scss */
 audio,
 canvas,
 img,
@@ -369,20 +369,20 @@ video {
   vertical-align: middle;
 }
 
-/* line 97, scss/style.scss */
+/* line 100, scss/style.scss */
 fieldset {
   border: 0;
   margin: 0;
   padding: 0;
 }
 
-/* line 103, scss/style.scss */
+/* line 106, scss/style.scss */
 textarea {
   resize: vertical;
 }
 
 /* Formats browser update alert for old IE */
-/* line 108, scss/style.scss */
+/* line 111, scss/style.scss */
 .browsehappy {
   margin: 0.2em 0;
   background: #fd8;
@@ -395,7 +395,7 @@ textarea {
 /* ==========================================================================
    General Styles
    ========================================================================== */
-/* line 120, scss/style.scss */
+/* line 123, scss/style.scss */
 h2 {
   font-size: 2.5em;
   font-family: "Dala Floda", serif;
@@ -405,7 +405,7 @@ h2 {
   margin: 0;
 }
 
-/* line 129, scss/style.scss */
+/* line 132, scss/style.scss */
 p {
   margin: 0 0 1.5em;
 }
@@ -413,18 +413,19 @@ p {
 /* ==========================================================================
    Header Styles
    ========================================================================== */
-/* line 136, scss/style.scss */
+/* line 139, scss/style.scss */
 #page {
+  overflow: hidden;
   max-width: 60em;
   margin: 0 auto;
 }
-/* line 139, scss/style.scss */
+/* line 143, scss/style.scss */
 #page header {
   height: 3em;
   color: white;
   background: black;
 }
-/* line 143, scss/style.scss */
+/* line 147, scss/style.scss */
 #page header h1 {
   font-size: 2.5em;
   line-height: 1;
@@ -434,16 +435,16 @@ p {
   float: left;
   padding-left: 5%;
 }
-/* line 151, scss/style.scss */
+/* line 155, scss/style.scss */
 #page header h1 .lowercase {
   display: none;
 }
-/* line 155, scss/style.scss */
+/* line 159, scss/style.scss */
 #page header a {
   text-decoration: none;
   color: white;
 }
-/* line 162, scss/style.scss */
+/* line 166, scss/style.scss */
 #page header .menu {
   font-family: "Alegreya Sans", sans-serif;
   text-transform: uppercase;
@@ -453,39 +454,39 @@ p {
   display: none;
   clear: both;
 }
-/* line 170, scss/style.scss */
+/* line 174, scss/style.scss */
 #page header .menu ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-/* line 175, scss/style.scss */
+/* line 179, scss/style.scss */
 #page header .menu li:nth-child(odd) {
   background-color: #333333;
 }
-/* line 178, scss/style.scss */
+/* line 182, scss/style.scss */
 #page header .menu li:nth-child(even) {
   background-color: black;
 }
-/* line 181, scss/style.scss */
+/* line 185, scss/style.scss */
 #page header .menu .current-menu-item a:before {
   content: '— ';
 }
-/* line 184, scss/style.scss */
+/* line 188, scss/style.scss */
 #page header .menu a {
   color: white;
   display: block;
   padding: .5em 5%;
 }
-/* line 191, scss/style.scss */
+/* line 195, scss/style.scss */
 #page header .menu.active {
   display: block;
 }
-/* line 195, scss/style.scss */
+/* line 199, scss/style.scss */
 #page header .no-js .menu {
   display: block;
 }
-/* line 199, scss/style.scss */
+/* line 203, scss/style.scss */
 #page header .menu-button {
   color: white;
   background-color: #30ff8a;
@@ -496,33 +497,45 @@ p {
   line-height: 0;
   float: right;
   width: 55px;
-  height: 48px;
+  height: 0.85em;
   padding: 0;
 }
-/* line 213, scss/style.scss */
+/* line 217, scss/style.scss */
 #page header .menu-button.active {
   background-color: #333333;
 }
-/* line 217, scss/style.scss */
+/* line 221, scss/style.scss */
 #page header.active {
   height: auto;
 }
-/* line 220, scss/style.scss */
+/* line 224, scss/style.scss */
 #page #torso {
+  /* ==========================================================================
+     Front Page Styles
+     ========================================================================== */
+}
+/* line 226, scss/style.scss */
+#page #torso a,
+#page #torso a:visited {
+  color: #222222;
+  text-decoration: none;
+  border-bottom: 2px solid #30ff8a;
+}
+/* line 232, scss/style.scss */
+#page #torso a:hover {
+  background: #30ff8a;
+}
+/* line 239, scss/style.scss */
+#page #torso .fp-section {
   padding: 0 5%;
 }
-
-/* ==========================================================================
-   Front Page Styles
-   ========================================================================== */
-/* line 230, scss/style.scss */
-.fp-section ul {
+/* line 241, scss/style.scss */
+#page #torso .fp-section ul {
   list-style: none;
   padding: 0;
 }
-
-/* line 237, scss/style.scss */
-#fp-composers li {
+/* line 248, scss/style.scss */
+#page #torso #fp-composers li {
   margin-bottom: 1em;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
@@ -530,8 +543,8 @@ p {
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-/* line 240, scss/style.scss */
-#fp-composers li a {
+/* line 251, scss/style.scss */
+#page #torso #fp-composers li a {
   width: 100%;
   height: 5em;
   overflow: hidden;
@@ -544,6 +557,7 @@ p {
   font-weight: 700;
   letter-spacing: 0.15em;
   display: inline-block;
+  border: none;
   border-radius: 2.5em 0 0 2.5em;
   -webkit-transition: all 0.1s ease-out;
   -moz-transition: all 0.1s ease-out;
@@ -551,8 +565,8 @@ p {
   -o-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
 }
-/* line 255, scss/style.scss */
-#fp-composers li a img {
+/* line 267, scss/style.scss */
+#page #torso #fp-composers li a img {
   float: left;
   max-width: 5em;
   width: 35%;
@@ -566,8 +580,8 @@ p {
   -o-transition: all 0.4s ease-out;
   transition: all 0.4s ease-out;
 }
-/* line 263, scss/style.scss */
-#fp-composers li a span {
+/* line 275, scss/style.scss */
+#page #torso #fp-composers li a span {
   font-size: 0.85em;
   display: inline-block;
   line-height: 5.88235294em;
@@ -577,8 +591,8 @@ p {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 274, scss/style.scss */
-#fp-composers li a:hover {
+/* line 286, scss/style.scss */
+#page #torso #fp-composers li a:hover {
   background: #333333;
   color: #30ff8a;
   font-weight: 400;
@@ -588,8 +602,8 @@ p {
   -o-transition: all 0.1s ease-in;
   transition: all 0.1s ease-in;
 }
-/* line 279, scss/style.scss */
-#fp-composers li a:hover img {
+/* line 291, scss/style.scss */
+#page #torso #fp-composers li a:hover img {
   -webkit-filter: grayscale(0) contrast(100%) brightness(100%) saturate(150%);
   -moz-filter: grayscale(0) contrast(100%) brightness(100%) saturate(150%);
   filter: grayscale(0) contrast(100%) brightness(100%) saturate(150%);
@@ -599,8 +613,8 @@ p {
   -o-transition: all 0.4s ease-in;
   transition: all 0.4s ease-in;
 }
-/* line 285, scss/style.scss */
-#fp-composers li:hover {
+/* line 297, scss/style.scss */
+#page #torso #fp-composers li:hover {
   padding-left: 2em;
   -webkit-transition: all 0.2s ease-in;
   -moz-transition: all 0.2s ease-in;
@@ -612,7 +626,7 @@ p {
 /* ==========================================================================
    Footer Styles
    ========================================================================== */
-/* line 295, scss/style.scss */
+/* line 310, scss/style.scss */
 footer {
   clear: both;
   color: #999999;
@@ -625,7 +639,7 @@ footer {
    Media Queries
    ========================================================================== */
 @media only screen and (min-width: 45em) {
-  /* line 309, scss/style.scss */
+  /* line 324, scss/style.scss */
   #page header {
     margin-top: -0.55em;
     margin-bottom: 3em;
@@ -633,7 +647,7 @@ footer {
     height: auto;
     background: transparent;
   }
-  /* line 315, scss/style.scss */
+  /* line 330, scss/style.scss */
   #page header h1 {
     margin: 0;
     padding-left: 0;
@@ -642,80 +656,79 @@ footer {
     width: 100%;
     letter-spacing: 0;
   }
-  /* line 322, scss/style.scss */
+  /* line 337, scss/style.scss */
   #page header h1 .lowercase {
     display: inline;
   }
-  /* line 326, scss/style.scss */
+  /* line 341, scss/style.scss */
   #page header a {
     color: black;
   }
-  /* line 330, scss/style.scss */
+  /* line 345, scss/style.scss */
   #page header .menu {
     display: block;
     font-size: 1.125em;
     line-height: 2.6666666666em;
   }
-  /* line 334, scss/style.scss */
+  /* line 349, scss/style.scss */
   #page header .menu ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
   }
-  /* line 339, scss/style.scss */
+  /* line 354, scss/style.scss */
   #page header .menu li {
     display: inline-block;
     margin-right: .5em;
   }
-  /* line 343, scss/style.scss */
+  /* line 358, scss/style.scss */
   #page header .menu li:nth-child(odd) {
     background-color: transparent;
   }
-  /* line 346, scss/style.scss */
+  /* line 361, scss/style.scss */
   #page header .menu li:nth-child(even) {
     background-color: transparent;
   }
-  /* line 349, scss/style.scss */
+  /* line 364, scss/style.scss */
   #page header .menu .current-menu-item a:before {
     content: '';
   }
-  /* line 352, scss/style.scss */
+  /* line 367, scss/style.scss */
   #page header .menu a {
     border-radius: 2em;
     color: #222222;
     padding: 0 .5em;
   }
-  /* line 357, scss/style.scss */
+  /* line 372, scss/style.scss */
   #page header .menu a:hover {
     background: #30ff8a;
   }
-  /* line 362, scss/style.scss */
+  /* line 377, scss/style.scss */
   #page header .menu-button {
     display: none;
   }
-
-  /* line 368, scss/style.scss */
-  #fp-composers li {
+  /* line 383, scss/style.scss */
+  #page #torso #fp-composers li {
     float: left;
     margin-bottom: 0.4166666em;
     width: 19%;
     margin-right: 1.2%;
   }
-  /* line 373, scss/style.scss */
-  #fp-composers li a {
+  /* line 388, scss/style.scss */
+  #page #torso #fp-composers li a {
     height: auto;
     overflow: hidden;
     border-radius: 0;
   }
-  /* line 377, scss/style.scss */
-  #fp-composers li a img {
+  /* line 392, scss/style.scss */
+  #page #torso #fp-composers li a img {
     float: none;
     width: 100%;
     max-width: none;
     border-radius: 0;
   }
-  /* line 383, scss/style.scss */
-  #fp-composers li a span {
+  /* line 398, scss/style.scss */
+  #page #torso #fp-composers li a span {
     display: table-cell;
     vertical-align: middle;
     line-height: 1.1em;
@@ -725,38 +738,42 @@ footer {
     padding: 0 5%;
     white-space: normal;
   }
-  /* line 395, scss/style.scss */
-  #fp-composers li:hover {
+  /* line 410, scss/style.scss */
+  #page #torso #fp-composers li:hover {
     padding-left: 0;
   }
-  /* line 398, scss/style.scss */
-  #fp-composers li:nth-child(5n) {
+  /* line 413, scss/style.scss */
+  #page #torso #fp-composers li:nth-child(5n) {
     margin-right: 0;
   }
 }
 @media only screen and (max-width: 15em) {
-  /* line 407, scss/style.scss */
-  #fp-composers li a {
+  /* line 422, scss/style.scss */
+  html {
+    font-size: 0.8em;
+  }
+  /* line 428, scss/style.scss */
+  html #page #torso #fp-composers li a {
     border-radius: 0;
   }
-  /* line 409, scss/style.scss */
-  #fp-composers li a img {
+  /* line 430, scss/style.scss */
+  html #page #torso #fp-composers li a img {
     display: none;
   }
-  /* line 412, scss/style.scss */
-  #fp-composers li a span {
+  /* line 433, scss/style.scss */
+  html #page #torso #fp-composers li a span {
     max-width: 90%;
     padding: 0 5%;
   }
-  /* line 418, scss/style.scss */
-  #fp-composers li:hover {
+  /* line 439, scss/style.scss */
+  html #page #torso #fp-composers li:hover {
     padding-left: 0;
   }
 }
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-/* line 435, scss/style.scss */
+/* line 459, scss/style.scss */
 .ir {
   background-color: transparent;
   border: 0;
@@ -764,7 +781,7 @@ footer {
   *text-indent: -9999px;
 }
 
-/* line 442, scss/style.scss */
+/* line 466, scss/style.scss */
 .ir:before {
   content: "";
   display: block;
@@ -772,13 +789,13 @@ footer {
   height: 150%;
 }
 
-/* line 449, scss/style.scss */
+/* line 473, scss/style.scss */
 .hidden {
   display: none !important;
   visibility: hidden;
 }
 
-/* line 454, scss/style.scss */
+/* line 478, scss/style.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -790,7 +807,7 @@ footer {
   width: 1px;
 }
 
-/* line 466, scss/style.scss */
+/* line 490, scss/style.scss */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   clip: auto;
@@ -801,24 +818,24 @@ footer {
   width: auto;
 }
 
-/* line 475, scss/style.scss */
+/* line 499, scss/style.scss */
 .invisible {
   visibility: hidden;
 }
 
-/* line 480, scss/style.scss */
+/* line 504, scss/style.scss */
 .clearfix:before,
 .clearfix:after {
   content: " ";
   display: table;
 }
 
-/* line 485, scss/style.scss */
+/* line 509, scss/style.scss */
 .clearfix:after {
   clear: both;
 }
 
-/* line 489, scss/style.scss */
+/* line 513, scss/style.scss */
 .clearfix {
   *zoom: 1;
 }
@@ -827,7 +844,7 @@ footer {
    Print styles
    ========================================================================== */
 @media print {
-  /* line 498, scss/style.scss */
+  /* line 522, scss/style.scss */
   * {
     background: transparent !important;
     color: #000 !important;
@@ -835,48 +852,48 @@ footer {
     text-shadow: none !important;
   }
 
-  /* line 506, scss/style.scss */
+  /* line 530, scss/style.scss */
   a,
   a:visited {
     text-decoration: underline;
   }
 
-  /* line 510, scss/style.scss */
+  /* line 534, scss/style.scss */
   a[href]:after {
     content: " (" attr(href) ")";
   }
 
-  /* line 514, scss/style.scss */
+  /* line 538, scss/style.scss */
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
 
-  /* line 520, scss/style.scss */
+  /* line 544, scss/style.scss */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: "";
   }
 
-  /* line 525, scss/style.scss */
+  /* line 549, scss/style.scss */
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
-  /* line 530, scss/style.scss */
+  /* line 554, scss/style.scss */
   thead {
     display: table-header-group;
   }
 
-  /* line 535, scss/style.scss */
+  /* line 559, scss/style.scss */
   tr,
   img {
     page-break-inside: avoid;
   }
 
-  /* line 539, scss/style.scss */
+  /* line 563, scss/style.scss */
   img {
     max-width: 100% !important;
   }
@@ -885,7 +902,7 @@ footer {
     margin: 0.5cm;
 }
 
-  /* line 549, scss/style.scss */
+  /* line 573, scss/style.scss */
   p,
   h2,
   h3 {
@@ -893,7 +910,7 @@ footer {
     widows: 3;
   }
 
-  /* line 555, scss/style.scss */
+  /* line 579, scss/style.scss */
   h2,
   h3 {
     page-break-after: avoid;

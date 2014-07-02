@@ -101,7 +101,12 @@ get_header();
 			echo '<section id="fp-composers" class="fp-section"><h2>Composers</h2><ul>';
 			foreach($posts as $post)
 			{
-				echo '<li><a href="' . get_permalink($post->ID) . '">' . get_the_post_thumbnail($post->ID, 'thumbnail') . '<span>' . get_the_title($post->ID) . '</span>' . '</a></li>';
+				$imgsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbnail');
+				echo '<li><a href="' . get_permalink($post->ID) . '">';
+				if(has_post_thumbnail()) {
+					echo '<img src="' . $imgsrc[0] . '" alt="' . get_the_title($post->ID) . '">';
+				}
+				echo '<span>' . get_the_title($post->ID) . '</span>' . '</a></li>';
 			}
 			echo '</ul></section>';
 		}

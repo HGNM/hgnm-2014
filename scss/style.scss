@@ -290,7 +290,7 @@ p {
 					}
 				} // </a>
 				a:hover {
-					background: $dark-bg;
+					background: $black;
 					color: $bright-green;
 					font-weight:400;
 					@include transition( all 0.1s ease-in);

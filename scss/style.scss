@@ -221,11 +221,10 @@ p {
 
 #fp-composers {
 	li {
-			height:4em;
-			margin-bottom:2em;
+			margin-bottom:1em;
 		a {
 			width: 100%;
-			height:4em;
+			height:5em;
 			overflow: display;
 			background: $bright-green;
 			color: $text-color;
@@ -236,17 +235,23 @@ p {
 			font-weight:700;
 			letter-spacing:0.15em;
 			display: inline-block;
+			border-radius:2.5em 0 0 2.5em;
 			img {
 				float:left;
-				margin: -1.2em 0 0 2%;
-				width:6em;
-				height:6em;
-				border: solid .2em $bright-green;
+				width: 5em;
+				-webkit-filter:grayscale(1) contrast(125%) brightness(125%);
+				filter:grayscale(1) contrast(125%) brightness(125%);
+				border-radius:2.5em;
 			}
 			span {
 				font-size:0.85em;
 				display: inline-block;
-				line-height:4.70588235em;
+				line-height:5.88235294em;
+				max-width:75%;
+				padding: 0 2%;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
 			}
 		}
 		a:hover {
@@ -254,13 +259,10 @@ p {
 			color: $bright-green;
 			font-weight:400;
 			img {
-				border-color: $dark-bg;
+				-webkit-filter:grayscale(0) saturate(125%);
+				filter:grayscale(0) saturate(125%);
 			}
 		}
-	}
-	li:nth-child(odd) img {
-		float:right;
-		margin: -1.2em 2% 0 0;
 	}
 }
 

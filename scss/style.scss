@@ -238,7 +238,7 @@ p {
 			display: inline-block;
 			img {
 				float:left;
-				margin: -1em 0 0 0.5em;
+				margin: -1.2em 0 0 2%;
 				width:6em;
 				height:6em;
 				border: solid .2em $bright-green;
@@ -252,6 +252,7 @@ p {
 		a:hover {
 			background: $dark-bg;
 			color: $bright-green;
+			font-weight:400;
 			img {
 				border-color: $dark-bg;
 			}
@@ -259,7 +260,7 @@ p {
 	}
 	li:nth-child(odd) img {
 		float:right;
-		margin: -1em 0.5em 0 0;
+		margin: -1.2em 2% 0 0;
 	}
 }
 

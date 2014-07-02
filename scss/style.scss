@@ -222,10 +222,11 @@ p {
 #fp-composers {
 	li {
 			margin-bottom:1em;
+			transition: all 0.2s ease-out;
 		a {
 			width: 100%;
 			height:5em;
-			overflow: display;
+			overflow: hidden;
 			background: $bright-green;
 			color: $text-color;
 			text-decoration: none;
@@ -247,7 +248,7 @@ p {
 				font-size:0.85em;
 				display: inline-block;
 				line-height:5.88235294em;
-				max-width:75%;
+				max-width:65%;
 				padding: 0 2%;
 				white-space: nowrap;
 				overflow: hidden;
@@ -258,11 +259,17 @@ p {
 			background: $dark-bg;
 			color: $bright-green;
 			font-weight:400;
+			transition: all 0.2s ease-in;
 			img {
 				-webkit-filter:grayscale(0) saturate(125%);
 				filter:grayscale(0) saturate(125%);
+				transition: all 0.2s ease-in;
 			}
 		}
+	}
+	li:hover {
+		padding-left: 2em;
+		transition: all 0.2s ease-in;
 	}
 }
 

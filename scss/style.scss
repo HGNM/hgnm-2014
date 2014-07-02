@@ -209,6 +209,61 @@ p {
 } // </#page>
 
 /* ==========================================================================
+   Front Page Styles
+   ========================================================================== */
+
+.fp-section {
+	ul {
+		list-style: none;
+		padding: 0;
+	}
+}
+
+#fp-composers {
+	li {
+			height:4em;
+			margin-bottom:2em;
+		a {
+			width: 100%;
+			height:4em;
+			overflow: display;
+			background: $bright-green;
+			color: $text-color;
+			text-decoration: none;
+			text-align: center;
+			text-transform: uppercase;
+			font-family: $sans-stack;
+			font-weight:700;
+			letter-spacing:0.15em;
+			display: inline-block;
+			img {
+				float:left;
+				margin: -1em 0 0 0.5em;
+				width:6em;
+				height:6em;
+				border: solid .2em $bright-green;
+			}
+			span {
+				font-size:0.85em;
+				display: inline-block;
+				line-height:4.70588235em;
+			}
+		}
+		a:hover {
+			background: $dark-bg;
+			color: $bright-green;
+			img {
+				border-color: $dark-bg;
+			}
+		}
+	}
+	li:nth-child(odd) img {
+		float:right;
+		margin: -1em 0.5em 0 0;
+	}
+}
+
+/* ==========================================================================
    Footer Styles
    ========================================================================== */
    

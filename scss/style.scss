@@ -221,6 +221,16 @@ p {
 	}
 	#torso {
 		padding: 0 5%;
+		a,
+		a:visited {
+			color: $link-text;
+			text-decoration: none;
+			border-bottom: 2px solid $link-highlight;
+		}
+		
+		a:hover {
+			background: $link-highlight;
+		}
 	} //</#torso>
 } // </#page>
 
@@ -252,6 +262,7 @@ p {
 			font-weight:700;
 			letter-spacing:0.15em;
 			display: inline-block;
+			border:none;
 			border-radius:2.5em 0 0 2.5em;
 			@include transition(all 0.1s ease-out);
 			img {

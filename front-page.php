@@ -56,12 +56,14 @@ get_header();
 							<h3>Next Concert</h3>
 							<?php foreach($concerts as $concert): ?>
 								<div class="vevent">
+									<a href="<?php echo get_permalink($concert->ID) ?>" class="url">
 									<?php $dtstart = DateTime::createFromFormat('d/m/Y', get_field('dtstart', $concert->ID)); ?>
 									<h4 class="dtstart"><time class="value" datetime="<?php echo $dtstart->format('Y-m-d'); ?>">
 										<?php echo '<span class="month">' . $dtstart->format('M') . '</span> <span class="day">' . $dtstart->format('j'); ?>
 									</time></h4>
 									<?php echo '<p>' . get_the_title($concert->ID) . '</p>'; ?>
 									<p><?php the_field('location', $concert->ID); ?></p>
+									</a>
 								</div>
 							<?php endforeach; ?>
 						</li>

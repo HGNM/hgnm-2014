@@ -61,7 +61,7 @@ get_header();
 									<h4 class="dtstart"><time class="value-title" datetime="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>" title="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>">
 										<?php echo '<span class="month">' . $dtstart->format('M') . '</span> <span class="day">' . $dtstart->format('j'); ?>
 									</time></h4>
-									<?php echo '<p>' . get_the_title($concert->ID) . '</p>'; ?>
+									<?php echo '<p class="summary">' . get_the_title($concert->ID) . '</p>'; ?>
 									<p class="location vcard"><?php the_field('location', $concert->ID); ?>
 										<span class="fn org">
 											<span class="value-title" title="Paine Hall, Harvard University Department of Music">
@@ -99,24 +99,26 @@ get_header();
 						<h3>Upcoming Colloquia</h3>
 						<ul>
 						<?php foreach($colloquia as $colloquium): ?>
-							<li>
-							<?php $type = get_field('colloquium_type', $colloquium->ID);
-							if($type == 'HGNM Member') {
-								$composerid = get_field('fname', $colloquium->ID);
-								echo '<a href="' . esc_url( get_permalink($composerid->ID) ) . '" class="url">' . get_the_title($colloquium->ID) . '</a>';
-							}
-							elseif($type == 'Guest Speaker') {
-								if(get_field('url', $colloquium->ID)) {
-									echo '<a href="' . esc_url( get_field('url', $colloquium->ID) ) . '" class="url exit" target="_blank">' . get_the_title($colloquium->ID) . '</a>';
-								}
-								else {
-									echo get_the_title($colloquium->ID);
-								}
-							} ?>
+							<li class="vevent">
 								<?php $dtstart = DateTime::createFromFormat('d/m/Y', get_field('dtstart', $colloquium->ID)); ?>
 								<h4 class="dtstart"><time class="value-title" datetime="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>" title="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>">
 									<?php echo $dtstart->format('m/j'); ?>
 								</time></h4>
+								<span class="summary">
+									<?php $type = get_field('colloquium_type', $colloquium->ID);
+									if($type == 'HGNM Member') {
+										$composerid = get_field('fname', $colloquium->ID);
+										echo '<a href="' . esc_url( get_permalink($composerid->ID) ) . '" class="url">' . get_the_title($colloquium->ID) . '</a>';
+									}
+									elseif($type == 'Guest Speaker') {
+										if(get_field('url', $colloquium->ID)) {
+											echo '<a href="' . esc_url( get_field('url', $colloquium->ID) ) . '" class="url exit" target="_blank">' . get_the_title($colloquium->ID) . '</a>';
+										}
+										else {
+											echo get_the_title($colloquium->ID);
+										}
+									} ?>
+								</span>
 								<span class="location vcard">
 									<span class="fn org">
 										<span class="value-title" title="Harvard University Department of Music">

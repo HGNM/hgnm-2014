@@ -12,17 +12,17 @@ Repository for WordPress theme development for new HGNM website.
 				- [X] site title & menu
 			- [ ] larger screens
 				- [X] site title
-				- [ ] menu
+				- [X] menu
 		- [ ] print styling
 	- [ ] [index.php](/index.php)
 		- [X] call header
 		- [ ] call content
 			- [X] Blurb
 			- [ ] Upcoming Events
-			- [ ] Current Members
-				- [ ] order randomly or alphabetically
+			- [X] Current Members
+				- [X] ordered alphabetically
 		- [X] call footer
-- [ ] [header.php](/header.php)
+- [X] [header.php](/header.php)
 	- [X] `<head>`
 	- [X] responsive site title
 	- [X] responsive menu
@@ -31,10 +31,10 @@ Repository for WordPress theme development for new HGNM website.
 	- [ ] Concert Post ([single-concert.php](/single-concert.php))
 	- [ ] Colloquium Post ([single-colloquium.php](/single-colloquium.php))
 - [ ] content archive templates
-	- [ ] Members ([archive-member.php](/archive-member.php))
+	- [X] Members ([archive-member.php](/archive-member.php))
 	- [ ] Concerts ([archive-concert.php](/archive-concert.php))
 	- [ ] Colloquia ([archive-colloquium.php](/archive-colloquium.php))
-- [ ] [footer.php](/footer.php)
+- [X] [footer.php](/footer.php)
 - [ ] [functions.php](/functions.php)
 	- [X] Enable featured image for custom post types
 

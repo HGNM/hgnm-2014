@@ -102,7 +102,7 @@ get_header();
 						<h3>Upcoming Colloquia</h3>
 						<ul>
 						<?php foreach($colloquia as $colloquium): ?>
-							<li class="vevent">
+							<li class="vevent clearfix">
 								<?php $dtstart = DateTime::createFromFormat('d/m/Y', get_field('dtstart', $colloquium->ID)); ?>
 								<h4 class="dtstart"><time class="value-title" datetime="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>" title="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>">
 									<?php echo $dtstart->format('m/j'); ?>

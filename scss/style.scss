@@ -64,6 +64,10 @@ html {
     line-height: 1.5;
 }
 
+body {
+	background: $off-white;
+}
+
 *, *:after, *:before {
 	-moz-font-feature-settings:"kern" 1, "liga" 1;
 	-ms-font-feature-settings:"kern" 1, "liga" 1; 

@@ -58,7 +58,7 @@ get_header();
 								<div class="vevent">
 									<a href="<?php echo get_permalink($concert->ID) ?>" class="url">
 									<?php $dtstart = DateTime::createFromFormat('d/m/Y', get_field('dtstart', $concert->ID)); ?>
-									<h4 class="dtstart"><time class="value" datetime="<?php echo $dtstart->format('Y-m-d'); ?>">
+									<h4 class="dtstart"><time class="value-title" datetime="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>" title="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>">
 										<?php echo '<span class="month">' . $dtstart->format('M') . '</span> <span class="day">' . $dtstart->format('j'); ?>
 									</time></h4>
 									<?php echo '<p>' . get_the_title($concert->ID) . '</p>'; ?>
@@ -74,10 +74,6 @@ get_header();
 						<ul>
 						<?php foreach($colloquia as $colloquium): ?>
 							<li>
-							<?php $dtstart = DateTime::createFromFormat('d/m/Y', get_field('dtstart', $colloquium->ID)); ?>
-							<h4><time class="value" datetime="<?php echo $dtstart->format('Y-m-d'); ?>">
-								<?php echo $dtstart->format('m/j'); ?>
-							</time></h4>
 							<?php $type = get_field('colloquium_type', $colloquium->ID);
 							if($type == 'HGNM Member') {
 								$composerid = get_field('fname', $colloquium->ID);
@@ -91,6 +87,10 @@ get_header();
 									echo get_the_title($colloquium->ID);
 								}
 							} ?>
+								<?php $dtstart = DateTime::createFromFormat('d/m/Y', get_field('dtstart', $colloquium->ID)); ?>
+								<h4 class="dtstart"><time class="value-title" datetime="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>" title="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>">
+									<?php echo $dtstart->format('m/j'); ?>
+								</time></h4>
 							</li>
 						<?php endforeach; ?>
 						</ul>

@@ -270,14 +270,12 @@ p {
 					letter-spacing:0.15em;
 					display: inline-block;
 					border:none;
-					border-radius:2.5em 0 0 2.5em;
 					@include transition(all 0.1s ease-out);
 					img {
 						float:left;
 						max-width: 5em;
 						width: 35%;
 						@include filter(grayscale(1) contrast(125%) brightness(125%) saturate(100%));
-						border-radius:2.5em;
 						@include transition(all 0.4s ease-out);
 					}
 					span {
@@ -376,7 +374,6 @@ footer {
 					content: '';
 				}
 				a {
-					border-radius: 2em;
 					color: $text-color;
 					padding: 0 .5em;
 				}
@@ -405,12 +402,10 @@ footer {
 					a {
 						height:auto;
 						overflow: hidden;
-						border-radius:0;
 						img {
 							float:none;
 							width: 100%;
 							max-width:none;
-							border-radius:0;
 						}
 						span {
 							display: table-cell;
@@ -443,7 +438,6 @@ footer {
 				#fp-composers {
 					li {
 						a {
-							border-radius:0;
 							img {
 								display:none;
 							}

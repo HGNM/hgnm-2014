@@ -52,7 +52,7 @@ get_header();
 				<h2>Events</h2>
 				<ul>
 					<?php if($concerts) : ?>
-						<li>
+						<li class="concerts">
 							<h3>Next Concert</h3>
 							<?php foreach($concerts as $concert): ?>
 								<div class="vevent">
@@ -98,7 +98,7 @@ get_header();
 						</li>
 					<?php endif; ?>
 					<?php if($colloquia) : ?>
-						<li>
+						<li class="colloquia">
 						<h3>Upcoming Colloquia</h3>
 						<ul>
 						<?php foreach($colloquia as $colloquium): ?>

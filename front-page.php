@@ -90,6 +90,9 @@ get_header();
 										</span>
 									</p>
 									</a>
+									<span class="category">
+										<span class="value-title" title="Concert"></span>
+									</span>
 								</div>
 							<?php endforeach; ?>
 						</li>
@@ -145,6 +148,9 @@ get_header();
 									      <span class="value-title" title="-71.117042"></span>
 									   </span>
 									</span>
+								</span>
+								<span class="category">
+									<span class="value-title" title="Colloquium"></span>
 								</span>
 							</li>
 						<?php endforeach; ?>

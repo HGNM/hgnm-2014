@@ -49,7 +49,7 @@ get_header();
 		// Display upcoming events
 		if($concerts || $colloquia) : ?>
 			<section id="fp-events" class="fp-section">
-				<h2>Next Events</h2>
+				<h2>Events</h2>
 				<ul>
 					<?php if($concerts) : ?>
 						<li>

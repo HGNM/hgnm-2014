@@ -78,7 +78,19 @@ get_header();
 							<h4><time class="value" datetime="<?php echo $dtstart->format('Y-m-d'); ?>">
 								<?php echo $dtstart->format('m/j'); ?>
 							</time></h4>
-							<?php echo get_the_title($colloquium->ID); ?>
+							<?php $type = get_field('colloquium_type', $colloquium->ID);
+							if($type == 'HGNM Member') {
+								$composerid = get_field('fname', $colloquium->ID);
+								echo '<a href="' . esc_url( get_permalink($composerid->ID) ) . '" class="url">' . get_the_title($colloquium->ID) . '</a>';
+							}
+							elseif($type == 'Guest Speaker') {
+								if(get_field('url', $colloquium->ID)) {
+									echo '<a href="' . esc_url( get_field('url', $colloquium->ID) ) . '" class="url exit" target="_blank">' . get_the_title($colloquium->ID) . '</a>';
+								}
+								else {
+									echo get_the_title($colloquium->ID);
+								}
+							} ?>
 							</li>
 						<?php endforeach; ?>
 						</ul>

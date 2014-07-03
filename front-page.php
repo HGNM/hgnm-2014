@@ -57,39 +57,39 @@ get_header();
 							<?php foreach($concerts as $concert): ?>
 								<div class="vevent">
 									<a href="<?php echo get_permalink($concert->ID) ?>" class="url">
-									<?php $dtstart = DateTime::createFromFormat('d/m/Y', get_field('dtstart', $concert->ID)); ?>
-									<h4 class="dtstart"><time class="value-title" datetime="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>" title="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>">
-										<?php echo '<span class="month">' . $dtstart->format('M') . '</span> <span class="day">' . $dtstart->format('j'); ?>
-									</time></h4>
-									<?php echo '<p class="summary">' . get_the_title($concert->ID) . '</p>'; ?>
-									<p class="location vcard"><?php the_field('location', $concert->ID); ?>
-										<span class="fn org">
-											<span class="value-title" title="Paine Hall, Harvard University Department of Music">
-										</span>
-										<span class="adr">
-											<span class="street-address">
-												<span class="value-title" title="North Yard, Harvard University">
-											</span>
-											<span class="locality">
-												<span class="value-title" title="Cambridge">
-											</span>
-											<span class="region">
-												<span class="value-title" title="MA">
-											</span>
-											<span class="postal-code">
-												<span class="value-title" title="02138">
-											</span>
-										</span>
-										<span class="geo">
-										   <span class="latitude">
-										      <span class="value-title" title="42.377009" ></span>
-										   </span>
-										   <span class="longitude">
-										      <span class="value-title" title="-71.117042"></span>
-										   </span>
-										</span>
-									</p>
+										<?php $dtstart = DateTime::createFromFormat('d/m/Y', get_field('dtstart', $concert->ID)); ?>
+										<h4 class="dtstart"><time class="value-title" datetime="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>" title="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>">
+											<?php echo '<span class="month">' . $dtstart->format('M') . '</span> <span class="day">' . $dtstart->format('j'); ?>
+										</time></h4>
+										<?php echo '<p class="summary">' . get_the_title($concert->ID) . '</p>'; ?>
 										<div class="details">
+											<p class="location vcard"><?php the_field('location', $concert->ID); ?>
+												<span class="fn org">
+													<span class="value-title" title="Paine Hall, Harvard University Department of Music">
+												</span>
+												<span class="adr">
+													<span class="street-address">
+														<span class="value-title" title="North Yard, Harvard University">
+													</span>
+													<span class="locality">
+														<span class="value-title" title="Cambridge">
+													</span>
+													<span class="region">
+														<span class="value-title" title="MA">
+													</span>
+													<span class="postal-code">
+														<span class="value-title" title="02138">
+													</span>
+												</span>
+												<span class="geo">
+												   <span class="latitude">
+												      <span class="value-title" title="42.377009" ></span>
+												   </span>
+												   <span class="longitude">
+												      <span class="value-title" title="-71.117042"></span>
+												   </span>
+												</span>
+											</p>
 										</div>
 									</a>
 									<span class="category">

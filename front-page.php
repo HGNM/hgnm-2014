@@ -61,8 +61,8 @@ get_header();
 										<h4 class="dtstart"><time class="value-title" datetime="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>" title="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>">
 											<?php echo '<span class="month">' . $dtstart->format('M') . '</span> <span class="day">' . $dtstart->format('j'); ?>
 										</time></h4>
-										<?php echo '<p class="summary">' . get_the_title($concert->ID) . '</p>'; ?>
 										<div class="details">
+											<?php echo '<p class="summary">' . get_the_title($concert->ID) . '</p>'; ?>
 											<p class="location vcard"><?php the_field('location', $concert->ID); ?>
 												<span class="fn org">
 													<span class="value-title" title="Paine Hall, Harvard University Department of Music">

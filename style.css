@@ -13,161 +13,161 @@ Text Domain: hgnm-2014
 This theme is probably useless for any general purpose, but if it proves useful, make use of it in any way permitted under the GNU license.
 */
 /* normalize.css v1.1.3 | MIT License | git.io/normalize */
-/* line 49, scss/style.scss */
+/* line 50, scss/style.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
   display: block;
 }
 
-/* line 49, scss/style.scss */
+/* line 50, scss/style.scss */
 audio, canvas, video {
   display: inline-block;
   *display: inline;
   *zoom: 1;
 }
 
-/* line 49, scss/style.scss */
+/* line 50, scss/style.scss */
 audio:not([controls]) {
   display: none;
   height: 0;
 }
 
-/* line 49, scss/style.scss */
+/* line 50, scss/style.scss */
 [hidden] {
   display: none;
 }
 
-/* line 49, scss/style.scss */
+/* line 50, scss/style.scss */
 html {
   font-size: 100%;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 
-/* line 49, scss/style.scss */
+/* line 50, scss/style.scss */
 html, button, input, select, textarea {
   font-family: serif;
 }
 
-/* line 49, scss/style.scss */
+/* line 50, scss/style.scss */
 body {
   margin: 0;
 }
 
-/* line 49, scss/style.scss */
+/* line 50, scss/style.scss */
 a:focus {
   outline: thin dotted #30ff8a;
 }
 
-/* line 49, scss/style.scss */
+/* line 50, scss/style.scss */
 a:active, a:hover {
   outline: 0;
 }
 
-/* line 49, scss/style.scss */
+/* line 50, scss/style.scss */
 h1 {
   font-size: 2em;
   margin: .67em 0;
 }
 
-/* line 49, scss/style.scss */
+/* line 50, scss/style.scss */
 h2 {
   font-size: 1.5em;
   margin: .83em 0;
 }
 
-/* line 49, scss/style.scss */
+/* line 50, scss/style.scss */
 h3 {
   font-size: 1.17em;
   margin: 1em 0;
 }
 
-/* line 49, scss/style.scss */
+/* line 50, scss/style.scss */
 h4 {
   font-size: 1em;
   margin: 1.33em 0;
 }
 
-/* line 49, scss/style.scss */
+/* line 50, scss/style.scss */
 h5 {
   font-size: .83em;
   margin: 1.67em 0;
 }
 
-/* line 49, scss/style.scss */
+/* line 50, scss/style.scss */
 h6 {
   font-size: .67em;
   margin: 2.33em 0;
 }
 
-/* line 49, scss/style.scss */
+/* line 50, scss/style.scss */
 abbr[title] {
   border-bottom: 1px dotted;
 }
 
-/* line 49, scss/style.scss */
+/* line 50, scss/style.scss */
 b, strong {
   font-weight: bold;
 }
 
-/* line 49, scss/style.scss */
+/* line 50, scss/style.scss */
 blockquote {
   margin: 1em 40px;
 }
 
-/* line 49, scss/style.scss */
+/* line 50, scss/style.scss */
 dfn {
   font-style: italic;
 }
 
-/* line 49, scss/style.scss */
+/* line 50, scss/style.scss */
 hr {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
 
-/* line 49, scss/style.scss */
+/* line 50, scss/style.scss */
 mark {
   background: #ff0;
   color: #000;
 }
 
-/* line 49, scss/style.scss */
+/* line 50, scss/style.scss */
 p, pre {
   margin: 1em 0;
 }
 
-/* line 49, scss/style.scss */
+/* line 50, scss/style.scss */
 code, kbd, pre, samp {
   font-family: monospace,serif;
   _font-family: 'courier new',monospace;
   font-size: 1em;
 }
 
-/* line 49, scss/style.scss */
+/* line 50, scss/style.scss */
 pre {
   white-space: pre;
   white-space: pre-wrap;
   word-wrap: break-word;
 }
 
-/* line 49, scss/style.scss */
+/* line 50, scss/style.scss */
 q {
   quotes: none;
 }
 
-/* line 49, scss/style.scss */
+/* line 50, scss/style.scss */
 q:before, q:after {
   content: '';
   content: none;
 }
 
-/* line 49, scss/style.scss */
+/* line 50, scss/style.scss */
 small {
   font-size: 80%;
 }
 
-/* line 49, scss/style.scss */
+/* line 50, scss/style.scss */
 sub, sup {
   font-size: 75%;
   line-height: 0;
@@ -175,66 +175,66 @@ sub, sup {
   vertical-align: baseline;
 }
 
-/* line 49, scss/style.scss */
+/* line 50, scss/style.scss */
 sup {
   top: -0.5em;
 }
 
-/* line 49, scss/style.scss */
+/* line 50, scss/style.scss */
 sub {
   bottom: -0.25em;
 }
 
-/* line 49, scss/style.scss */
+/* line 50, scss/style.scss */
 dl, menu, ol, ul {
   margin: 1em 0;
 }
 
-/* line 49, scss/style.scss */
+/* line 50, scss/style.scss */
 dd {
   margin: 0 0 0 40px;
 }
 
-/* line 49, scss/style.scss */
+/* line 50, scss/style.scss */
 menu, ol, ul {
   padding: 0 0 0 40px;
 }
 
-/* line 49, scss/style.scss */
+/* line 50, scss/style.scss */
 nav ul, nav ol {
   list-style: none;
   list-style-image: none;
 }
 
-/* line 49, scss/style.scss */
+/* line 50, scss/style.scss */
 img {
   border: 0;
   -ms-interpolation-mode: bicubic;
 }
 
-/* line 49, scss/style.scss */
+/* line 50, scss/style.scss */
 svg:not(:root) {
   overflow: hidden;
 }
 
-/* line 49, scss/style.scss */
+/* line 50, scss/style.scss */
 figure {
   margin: 0;
 }
 
-/* line 49, scss/style.scss */
+/* line 50, scss/style.scss */
 form {
   margin: 0;
 }
 
-/* line 49, scss/style.scss */
+/* line 50, scss/style.scss */
 fieldset {
   border: 1px solid silver;
   margin: 0 2px;
   padding: .35em .625em .75em;
 }
 
-/* line 49, scss/style.scss */
+/* line 50, scss/style.scss */
 legend {
   border: 0;
   padding: 0;
@@ -242,7 +242,7 @@ legend {
   *margin-left: -7px;
 }
 
-/* line 49, scss/style.scss */
+/* line 50, scss/style.scss */
 button, input, select, textarea {
   font-size: 100%;
   margin: 0;
@@ -250,29 +250,29 @@ button, input, select, textarea {
   *vertical-align: middle;
 }
 
-/* line 49, scss/style.scss */
+/* line 50, scss/style.scss */
 button, input {
   line-height: normal;
 }
 
-/* line 49, scss/style.scss */
+/* line 50, scss/style.scss */
 button, select {
   text-transform: none;
 }
 
-/* line 49, scss/style.scss */
+/* line 50, scss/style.scss */
 button, html input[type="button"], input[type="reset"], input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer;
   *overflow: visible;
 }
 
-/* line 49, scss/style.scss */
+/* line 50, scss/style.scss */
 button[disabled], html input[disabled] {
   cursor: default;
 }
 
-/* line 49, scss/style.scss */
+/* line 50, scss/style.scss */
 input[type="checkbox"], input[type="radio"] {
   box-sizing: border-box;
   padding: 0;
@@ -280,7 +280,7 @@ input[type="checkbox"], input[type="radio"] {
   *width: 13px;
 }
 
-/* line 49, scss/style.scss */
+/* line 50, scss/style.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   -moz-box-sizing: content-box;
@@ -288,31 +288,31 @@ input[type="search"] {
   box-sizing: content-box;
 }
 
-/* line 49, scss/style.scss */
+/* line 50, scss/style.scss */
 input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-/* line 49, scss/style.scss */
+/* line 50, scss/style.scss */
 button::-moz-focus-inner, input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
-/* line 49, scss/style.scss */
+/* line 50, scss/style.scss */
 textarea {
   overflow: auto;
   vertical-align: top;
 }
 
-/* line 49, scss/style.scss */
+/* line 50, scss/style.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
 /* Base Styling (initial styles from HTML5 Boilerplate v4.3.0) */
-/* line 56, scss/style.scss */
+/* line 57, scss/style.scss */
 html,
 button,
 input,
@@ -322,13 +322,18 @@ textarea {
   font-family: Alegreya, Georgia, serif;
 }
 
-/* line 61, scss/style.scss */
+/* line 62, scss/style.scss */
 html {
   font-size: 1em;
   line-height: 1.5;
 }
 
-/* line 66, scss/style.scss */
+/* line 67, scss/style.scss */
+body {
+  background: #fdfff7;
+}
+
+/* line 71, scss/style.scss */
 *, *:after, *:before {
   -moz-font-feature-settings: "kern" 1, "liga" 1;
   -ms-font-feature-settings: "kern" 1, "liga" 1;
@@ -337,21 +342,21 @@ html {
   font-feature-settings: "kern" 1, "liga" 1;
 }
 
-/* line 74, scss/style.scss */
+/* line 79, scss/style.scss */
 ::-moz-selection {
   color: #fff;
   background: #30ff8a;
   text-shadow: none;
 }
 
-/* line 80, scss/style.scss */
+/* line 85, scss/style.scss */
 ::selection {
   color: #fff;
   background: #30ff8a;
   text-shadow: none;
 }
 
-/* line 86, scss/style.scss */
+/* line 91, scss/style.scss */
 hr {
   display: block;
   height: 1px;
@@ -361,7 +366,7 @@ hr {
   padding: 0;
 }
 
-/* line 98, scss/style.scss */
+/* line 103, scss/style.scss */
 audio,
 canvas,
 img,
@@ -369,20 +374,20 @@ video {
   vertical-align: middle;
 }
 
-/* line 102, scss/style.scss */
+/* line 107, scss/style.scss */
 fieldset {
   border: 0;
   margin: 0;
   padding: 0;
 }
 
-/* line 108, scss/style.scss */
+/* line 113, scss/style.scss */
 textarea {
   resize: vertical;
 }
 
 /* Formats browser update alert for old IE */
-/* line 113, scss/style.scss */
+/* line 118, scss/style.scss */
 .browsehappy {
   margin: 0.2em 0;
   background: #fd8;
@@ -395,7 +400,7 @@ textarea {
 /* ==========================================================================
    General Styles
    ========================================================================== */
-/* line 125, scss/style.scss */
+/* line 130, scss/style.scss */
 h2 {
   font-size: 2.5em;
   font-family: "Dala Floda", serif;
@@ -407,7 +412,7 @@ h2 {
   color: black;
 }
 
-/* line 136, scss/style.scss */
+/* line 141, scss/style.scss */
 p {
   margin: 0 0 1.5em;
 }
@@ -415,18 +420,18 @@ p {
 /* ==========================================================================
    Header Styles
    ========================================================================== */
-/* line 143, scss/style.scss */
+/* line 148, scss/style.scss */
 #page {
   overflow: hidden;
   margin: 0 auto;
 }
-/* line 146, scss/style.scss */
+/* line 151, scss/style.scss */
 #page header {
   height: 3em;
-  color: white;
+  color: #fdfff7;
   background: black;
 }
-/* line 150, scss/style.scss */
+/* line 155, scss/style.scss */
 #page header h1 {
   font-size: 2.5em;
   line-height: 1;
@@ -436,21 +441,21 @@ p {
   float: left;
   padding-left: 5%;
 }
-/* line 158, scss/style.scss */
+/* line 163, scss/style.scss */
 #page header h1 .lowercase {
   display: none;
 }
-/* line 162, scss/style.scss */
+/* line 167, scss/style.scss */
 #page header a {
   text-decoration: none;
-  color: white;
+  color: #fdfff7;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   -ms-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-/* line 170, scss/style.scss */
+/* line 175, scss/style.scss */
 #page header .menu {
   font-family: "Alegreya Sans", sans-serif;
   text-transform: uppercase;
@@ -460,41 +465,41 @@ p {
   display: none;
   clear: both;
 }
-/* line 178, scss/style.scss */
+/* line 183, scss/style.scss */
 #page header .menu ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-/* line 183, scss/style.scss */
+/* line 188, scss/style.scss */
 #page header .menu li:nth-child(odd) {
   background-color: #333333;
 }
-/* line 186, scss/style.scss */
+/* line 191, scss/style.scss */
 #page header .menu li:nth-child(even) {
   background-color: black;
 }
-/* line 189, scss/style.scss */
+/* line 194, scss/style.scss */
 #page header .menu .current-menu-item a:before {
   content: '▶ ';
 }
-/* line 192, scss/style.scss */
+/* line 197, scss/style.scss */
 #page header .menu a {
-  color: white;
+  color: #fdfff7;
   display: block;
   padding: .5em 5%;
 }
-/* line 199, scss/style.scss */
+/* line 204, scss/style.scss */
 #page header .menu.active {
   display: block;
 }
-/* line 203, scss/style.scss */
+/* line 208, scss/style.scss */
 #page header .no-js .menu {
   display: block;
 }
-/* line 207, scss/style.scss */
+/* line 212, scss/style.scss */
 #page header .menu-button {
-  color: white;
+  color: #fdfff7;
   background-color: #30ff8a;
   border: none;
   font-size: 3.5em;
@@ -506,21 +511,21 @@ p {
   height: 0.85em;
   padding: 0;
 }
-/* line 221, scss/style.scss */
+/* line 226, scss/style.scss */
 #page header .menu-button.active {
   background-color: #333333;
 }
-/* line 225, scss/style.scss */
+/* line 230, scss/style.scss */
 #page header.active {
   height: auto;
 }
-/* line 228, scss/style.scss */
+/* line 233, scss/style.scss */
 #page #torso {
   /* ==========================================================================
      Front Page Styles
      ========================================================================== */
 }
-/* line 230, scss/style.scss */
+/* line 235, scss/style.scss */
 #page #torso a,
 #page #torso a:visited {
   color: #222222;
@@ -532,7 +537,7 @@ p {
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-/* line 237, scss/style.scss */
+/* line 242, scss/style.scss */
 #page #torso a:hover {
   background: #30ff8a;
   -webkit-transition: all 0.2s ease-in;
@@ -541,25 +546,25 @@ p {
   -o-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
-/* line 246, scss/style.scss */
+/* line 251, scss/style.scss */
 #page #torso .fp-section,
 #page #torso .p-section {
   padding: 0 5%;
   padding-top: 1.5em;
   padding-bottom: 1.5em;
 }
-/* line 250, scss/style.scss */
+/* line 255, scss/style.scss */
 #page #torso .fp-section ul,
 #page #torso .p-section ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-/* line 257, scss/style.scss */
+/* line 262, scss/style.scss */
 #page #torso #fp-events {
   font-family: "Alegreya Sans", sans-serif;
 }
-/* line 259, scss/style.scss */
+/* line 264, scss/style.scss */
 #page #torso #fp-events h3 {
   text-align: center;
   font-size: 0.75em;
@@ -569,11 +574,11 @@ p {
   font-weight: 700;
   margin: 0 0 1em;
 }
-/* line 268, scss/style.scss */
+/* line 273, scss/style.scss */
 #page #torso #fp-events .concerts {
   margin-bottom: 3em;
 }
-/* line 270, scss/style.scss */
+/* line 275, scss/style.scss */
 #page #torso #fp-events .concerts .vevent {
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
@@ -581,7 +586,7 @@ p {
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-/* line 272, scss/style.scss */
+/* line 277, scss/style.scss */
 #page #torso #fp-events .concerts .vevent .dtstart {
   text-align: center;
   display: block;
@@ -591,7 +596,7 @@ p {
   background: #30ff8a;
   padding: 0 5%;
 }
-/* line 280, scss/style.scss */
+/* line 285, scss/style.scss */
 #page #torso #fp-events .concerts .vevent .dtstart .month {
   display: block;
   text-transform: uppercase;
@@ -600,14 +605,14 @@ p {
   line-height: 1.4;
   padding-top: 0.4em;
 }
-/* line 288, scss/style.scss */
+/* line 293, scss/style.scss */
 #page #torso #fp-events .concerts .vevent .dtstart .day {
   display: block;
   font-size: 5em;
   line-height: 0.6;
   padding-bottom: 0.3em;
 }
-/* line 295, scss/style.scss */
+/* line 300, scss/style.scss */
 #page #torso #fp-events .concerts .vevent .details {
   display: block;
   float: left;
@@ -615,15 +620,15 @@ p {
   font-size: 1.25em;
   line-height: 1.8;
 }
-/* line 301, scss/style.scss */
+/* line 306, scss/style.scss */
 #page #torso #fp-events .concerts .vevent .details p {
   margin: 0;
 }
-/* line 304, scss/style.scss */
+/* line 309, scss/style.scss */
 #page #torso #fp-events .concerts .vevent .details .summary {
   font-weight: 700;
 }
-/* line 309, scss/style.scss */
+/* line 314, scss/style.scss */
 #page #torso #fp-events .concerts .vevent:hover {
   -webkit-transition: all 0.2s ease-in;
   -moz-transition: all 0.2s ease-in;
@@ -633,22 +638,22 @@ p {
   margin: 0 5%;
   background: #30ff8a;
 }
-/* line 313, scss/style.scss */
+/* line 318, scss/style.scss */
 #page #torso #fp-events .concerts .vevent:hover .dtstart {
   background: black;
   color: #30ff8a;
 }
-/* line 319, scss/style.scss */
+/* line 324, scss/style.scss */
 #page #torso #fp-events .colloquia {
   text-align: center;
 }
-/* line 321, scss/style.scss */
+/* line 326, scss/style.scss */
 #page #torso #fp-events .colloquia ul {
   font-size: 1.25em;
   line-height: 1.8;
   margin-bottom: 1.2em;
 }
-/* line 325, scss/style.scss */
+/* line 330, scss/style.scss */
 #page #torso #fp-events .colloquia ul .dtstart {
   display: block;
   float: left;
@@ -657,14 +662,14 @@ p {
   padding: 0 5%;
   letter-spacing: 0.06em;
 }
-/* line 333, scss/style.scss */
+/* line 338, scss/style.scss */
 #page #torso #fp-events .colloquia ul .summary {
   display: block;
   float: left;
   width: 60%;
   text-align: left;
 }
-/* line 344, scss/style.scss */
+/* line 349, scss/style.scss */
 #page #torso #fp-composers li {
   margin-bottom: 1em;
   -webkit-transition: all 0.2s ease-out;
@@ -673,7 +678,7 @@ p {
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-/* line 347, scss/style.scss */
+/* line 352, scss/style.scss */
 #page #torso #fp-composers li a {
   width: 100%;
   height: 5em;
@@ -694,7 +699,7 @@ p {
   -o-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
 }
-/* line 362, scss/style.scss */
+/* line 367, scss/style.scss */
 #page #torso #fp-composers li a img {
   float: left;
   max-width: 5em;
@@ -708,7 +713,7 @@ p {
   -o-transition: all 0.4s ease-out;
   transition: all 0.4s ease-out;
 }
-/* line 369, scss/style.scss */
+/* line 374, scss/style.scss */
 #page #torso #fp-composers li a span {
   font-size: 0.85em;
   display: inline-block;
@@ -719,7 +724,7 @@ p {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 380, scss/style.scss */
+/* line 385, scss/style.scss */
 #page #torso #fp-composers li a:hover {
   background: black;
   color: #30ff8a;
@@ -730,7 +735,7 @@ p {
   -o-transition: all 0.1s ease-in;
   transition: all 0.1s ease-in;
 }
-/* line 385, scss/style.scss */
+/* line 390, scss/style.scss */
 #page #torso #fp-composers li a:hover img {
   -webkit-filter: grayscale(0) contrast(100%) brightness(100%) saturate(150%);
   -moz-filter: grayscale(0) contrast(100%) brightness(100%) saturate(150%);
@@ -741,7 +746,7 @@ p {
   -o-transition: all 0.4s ease-in;
   transition: all 0.4s ease-in;
 }
-/* line 391, scss/style.scss */
+/* line 396, scss/style.scss */
 #page #torso #fp-composers li:hover {
   padding: 0 5%;
   -webkit-transition: all 0.2s ease-in;
@@ -754,7 +759,7 @@ p {
 /* ==========================================================================
    Footer Styles
    ========================================================================== */
-/* line 404, scss/style.scss */
+/* line 409, scss/style.scss */
 footer {
   clear: both;
   color: #999999;
@@ -770,7 +775,7 @@ footer {
    Media Queries
    ========================================================================== */
 @media only screen and (min-width: 45em) {
-  /* line 421, scss/style.scss */
+  /* line 426, scss/style.scss */
   #page header {
     margin-top: -0.55em;
     margin-bottom: 1.5em;
@@ -778,7 +783,7 @@ footer {
     height: auto;
     background: transparent;
   }
-  /* line 427, scss/style.scss */
+  /* line 432, scss/style.scss */
   #page header h1 {
     margin: 0;
     padding-left: 0;
@@ -787,100 +792,100 @@ footer {
     width: 100%;
     letter-spacing: 0;
   }
-  /* line 434, scss/style.scss */
+  /* line 439, scss/style.scss */
   #page header h1 .lowercase {
     display: inline;
   }
-  /* line 438, scss/style.scss */
+  /* line 443, scss/style.scss */
   #page header a {
     color: black;
   }
-  /* line 442, scss/style.scss */
+  /* line 447, scss/style.scss */
   #page header .menu {
     display: block;
     font-size: 1.125em;
     line-height: 2.6666666666em;
   }
-  /* line 446, scss/style.scss */
+  /* line 451, scss/style.scss */
   #page header .menu ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
   }
-  /* line 451, scss/style.scss */
+  /* line 456, scss/style.scss */
   #page header .menu li {
     display: inline-block;
     margin-right: .5em;
   }
-  /* line 455, scss/style.scss */
+  /* line 460, scss/style.scss */
   #page header .menu li:nth-child(odd) {
     background-color: transparent;
   }
-  /* line 458, scss/style.scss */
+  /* line 463, scss/style.scss */
   #page header .menu li:nth-child(even) {
     background-color: transparent;
   }
-  /* line 461, scss/style.scss */
+  /* line 466, scss/style.scss */
   #page header .menu .current-menu-item a:before {
     content: '';
   }
-  /* line 464, scss/style.scss */
+  /* line 469, scss/style.scss */
   #page header .menu a {
     border-radius: 2em;
     color: #222222;
     padding: 0 .5em;
   }
-  /* line 469, scss/style.scss */
+  /* line 474, scss/style.scss */
   #page header .menu a:hover {
     background: #30ff8a;
   }
-  /* line 474, scss/style.scss */
+  /* line 479, scss/style.scss */
   #page header .menu-button {
     display: none;
   }
-  /* line 480, scss/style.scss */
+  /* line 485, scss/style.scss */
   #page #torso .fp-section,
   #page #torso .p-section {
     padding: 0 12.5%;
     padding-top: 1.5em;
     padding-bottom: 1.5em;
   }
-  /* line 485, scss/style.scss */
-  #page #torso #fp-blurb {
-    font-size: 1.25em;
-    line-height: 1.8;
-  }
   /* line 490, scss/style.scss */
+  #page #torso #fp-blurb {
+    font-size: 1.5em;
+    line-height: 1.5;
+  }
+  /* line 495, scss/style.scss */
   #page #torso #fp-events .concerts {
     width: 50%;
     display: block;
     float: left;
   }
-  /* line 495, scss/style.scss */
+  /* line 500, scss/style.scss */
   #page #torso #fp-events .colloquia {
     width: 50%;
     display: block;
     float: left;
   }
-  /* line 502, scss/style.scss */
+  /* line 507, scss/style.scss */
   #page #torso #fp-composers li {
     float: left;
     margin-bottom: 0.4166666em;
     width: 19%;
     margin-right: 1.2%;
   }
-  /* line 507, scss/style.scss */
+  /* line 512, scss/style.scss */
   #page #torso #fp-composers li a {
     height: auto;
     overflow: hidden;
   }
-  /* line 510, scss/style.scss */
+  /* line 515, scss/style.scss */
   #page #torso #fp-composers li a img {
     float: none;
     width: 100%;
     max-width: none;
   }
-  /* line 515, scss/style.scss */
+  /* line 520, scss/style.scss */
   #page #torso #fp-composers li a span {
     display: table-cell;
     vertical-align: middle;
@@ -891,30 +896,30 @@ footer {
     padding: 0 5%;
     white-space: normal;
   }
-  /* line 527, scss/style.scss */
+  /* line 532, scss/style.scss */
   #page #torso #fp-composers li:hover {
     padding: 0;
   }
-  /* line 530, scss/style.scss */
+  /* line 535, scss/style.scss */
   #page #torso #fp-composers li:nth-child(5n) {
     margin-right: 0;
   }
 }
 @media only screen and (max-width: 15em) {
-  /* line 539, scss/style.scss */
+  /* line 544, scss/style.scss */
   html {
     font-size: 0.8em;
   }
-  /* line 546, scss/style.scss */
+  /* line 551, scss/style.scss */
   html #page #torso #fp-composers li a img {
     display: none;
   }
-  /* line 549, scss/style.scss */
+  /* line 554, scss/style.scss */
   html #page #torso #fp-composers li a span {
     max-width: 90%;
     padding: 0 5%;
   }
-  /* line 555, scss/style.scss */
+  /* line 560, scss/style.scss */
   html #page #torso #fp-composers li:hover {
     padding: 0;
   }
@@ -922,7 +927,7 @@ footer {
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-/* line 575, scss/style.scss */
+/* line 580, scss/style.scss */
 .ir {
   background-color: transparent;
   border: 0;
@@ -930,7 +935,7 @@ footer {
   *text-indent: -9999px;
 }
 
-/* line 582, scss/style.scss */
+/* line 587, scss/style.scss */
 .ir:before {
   content: "";
   display: block;
@@ -938,13 +943,13 @@ footer {
   height: 150%;
 }
 
-/* line 589, scss/style.scss */
+/* line 594, scss/style.scss */
 .hidden {
   display: none !important;
   visibility: hidden;
 }
 
-/* line 594, scss/style.scss */
+/* line 599, scss/style.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -956,7 +961,7 @@ footer {
   width: 1px;
 }
 
-/* line 606, scss/style.scss */
+/* line 611, scss/style.scss */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   clip: auto;
@@ -967,24 +972,24 @@ footer {
   width: auto;
 }
 
-/* line 615, scss/style.scss */
+/* line 620, scss/style.scss */
 .invisible {
   visibility: hidden;
 }
 
-/* line 620, scss/style.scss */
+/* line 625, scss/style.scss */
 .clearfix:before,
 .clearfix:after {
   content: " ";
   display: table;
 }
 
-/* line 625, scss/style.scss */
+/* line 630, scss/style.scss */
 .clearfix:after {
   clear: both;
 }
 
-/* line 629, scss/style.scss */
+/* line 634, scss/style.scss */
 .clearfix {
   *zoom: 1;
 }
@@ -993,7 +998,7 @@ footer {
    Print styles
    ========================================================================== */
 @media print {
-  /* line 638, scss/style.scss */
+  /* line 643, scss/style.scss */
   * {
     background: transparent !important;
     color: #000 !important;
@@ -1001,48 +1006,48 @@ footer {
     text-shadow: none !important;
   }
 
-  /* line 646, scss/style.scss */
+  /* line 651, scss/style.scss */
   a,
   a:visited {
     text-decoration: underline;
   }
 
-  /* line 650, scss/style.scss */
+  /* line 655, scss/style.scss */
   a[href]:after {
     content: " (" attr(href) ")";
   }
 
-  /* line 654, scss/style.scss */
+  /* line 659, scss/style.scss */
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
 
-  /* line 660, scss/style.scss */
+  /* line 665, scss/style.scss */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: "";
   }
 
-  /* line 665, scss/style.scss */
+  /* line 670, scss/style.scss */
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
-  /* line 670, scss/style.scss */
+  /* line 675, scss/style.scss */
   thead {
     display: table-header-group;
   }
 
-  /* line 675, scss/style.scss */
+  /* line 680, scss/style.scss */
   tr,
   img {
     page-break-inside: avoid;
   }
 
-  /* line 679, scss/style.scss */
+  /* line 684, scss/style.scss */
   img {
     max-width: 100% !important;
   }
@@ -1051,7 +1056,7 @@ footer {
     margin: 0.5cm;
 }
 
-  /* line 689, scss/style.scss */
+  /* line 694, scss/style.scss */
   p,
   h2,
   h3 {
@@ -1059,7 +1064,7 @@ footer {
     widows: 3;
   }
 
-  /* line 695, scss/style.scss */
+  /* line 700, scss/style.scss */
   h2,
   h3 {
     page-break-after: avoid;

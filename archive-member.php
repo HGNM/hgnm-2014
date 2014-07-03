@@ -39,13 +39,14 @@ get_header();
 		}
 		
 		
-		// Get composers names, photos and permalinks
+		// Get graduated composers names, photos and permalinks
 		$today = date('Ymd', strtotime('-1 day'));
 		$posts = get_posts(array(
 			'numberposts' => -1,
 			'post_type' => 'member',
-			'orderby' => 'title',
-			'order' => 'ASC',
+			'meta_key' => 'dtend',
+			'orderby' => 'meta_value_num',
+			'order' => 'DESC',
 			'meta_query' => array(
 				'relation' => 'AND',
 				array(

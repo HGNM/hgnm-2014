@@ -122,7 +122,16 @@ get_header();
 			}
 			echo '</ul></section>';
 		}
+		
+		// Display archive link
+		?>
+		<section id="fp-archive-link" class="fp-section">
+			<a href="#">
+				<h2>Archive</h2>
+				<p>Dive into an archive of HGNM’s past events, members, audio and video.</p>
+			</a>
+		</section>
 
-get_footer();
+<?php get_footer();
 
 ?>

@@ -52,10 +52,10 @@ get_header();
 				<h2>Events</h2>
 				<ul>
 					<?php if($concerts) : ?>
-						<li class="concerts clearfix">
+						<li class="concerts">
 							<h3>Next Concert</h3>
 							<?php foreach($concerts as $concert): ?>
-								<div class="vevent">
+								<div class="vevent clearfix">
 									<a href="<?php echo get_permalink($concert->ID) ?>" class="url">
 										<?php $dtstart = DateTime::createFromFormat('d/m/Y', get_field('dtstart', $concert->ID)); ?>
 										<h4 class="dtstart"><time class="value-title" datetime="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>" title="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>">

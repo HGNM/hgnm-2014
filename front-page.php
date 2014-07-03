@@ -89,6 +89,8 @@ get_header();
 										   </span>
 										</span>
 									</p>
+										<div class="details">
+										</div>
 									</a>
 									<span class="category">
 										<span class="value-title" title="Concert"></span>

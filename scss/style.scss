@@ -482,6 +482,18 @@ footer {
 				padding-top:1.5em;
 				padding-bottom:1.5em;
 			}
+			#fp-events {
+				.concerts {
+					width: 50%;
+					display:block;
+					float:left;
+				}
+				.colloquia {
+					width: 50%;
+					display:block;
+					float:left;
+				}
+			}
 			#fp-composers {
 				li {
 					float: left;

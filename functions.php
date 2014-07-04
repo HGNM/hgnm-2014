@@ -58,13 +58,13 @@ function add_query_vars_filter( $vars ){
 add_filter( 'query_vars', 'add_query_vars_filter' );
 
 // Create rewrite rules for pretty permalinks on archive pages
-function add_rewrite_rules($Rules) {
-$NewRules = array('^archives/([^/]+)/?$' => 'index.php?pagename=archives&y=$matches[1]');
-$Rules = $NewRules + $Rules;
-return $Rules;
+function archive_add_rewrite_rules() {
+	add_rewrite_rule(
+		'^archives/([0-9]{4})/?$',
+		'index.php?y=$matches[1]&post_type=concert',
+		'top'
+	);
 }
- 
-// hook add_rewrite_rules function into rewrite_rules_array
-add_filter('rewrite_rules_array', 'add_rewrite_rules');
+add_action('init', 'archive_add_rewrite_rules');
 
 ?>

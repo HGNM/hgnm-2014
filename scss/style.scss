@@ -210,20 +210,23 @@ p {
 		}
 		
 		.menu-button {
-			color: $reverse-text;
+			color: $text-color;
 			background-color: $menu-highlight;
 			border: none;  
-			font-size: 3.5em;
+			font-size: 1.5em;
 			font-weight:700;
-			font-family: Times, Times New Roman;
-			line-height: 0;
+			text-transform:uppercase;
+			font-family: $sans-stack;
+			letter-spacing: 0.1em;
+			line-height: 2;
 			float:right;
-			width: 1em;
-			height: 0.85em;
-			padding:0;
+			width: auto;
+			height: 2em;
+			padding:0 0.5em;
 		}
 		
 		.menu-button.active {
+			color: $reverse-text;
 			background-color: $menu-stripe-odd;
 		}
 	} // </header>

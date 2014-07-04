@@ -401,7 +401,28 @@ p {
 				@include transition( all 0.2s ease-in);
 			}
 		} // </#fp-composers>
-
+		#fp-archive-link {
+			a {
+				padding: 1.5em 5%;
+				display: block;
+				border-bottom: none;
+				text-align: center;
+				background: $link-highlight;
+				p {
+					font-size: 1.25em;
+					line-height: 1.2;
+					margin-bottom:0;
+				}
+			}
+			a:hover {
+				margin: 0 5%;
+				background: $black;
+				color: $link-highlight;
+				h2 {
+					color: $link-highlight;
+				}
+			}
+		}
 	} // </#torso>
 } // </#page>
 

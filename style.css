@@ -499,33 +499,36 @@ p {
 }
 /* line 212, scss/style.scss */
 #page header .menu-button {
-  color: #fdfff7;
+  color: #222222;
   background-color: #30ff8a;
   border: none;
-  font-size: 3.5em;
+  font-size: 1.5em;
   font-weight: 700;
-  font-family: Times, Times New Roman;
-  line-height: 0;
+  text-transform: uppercase;
+  font-family: "Alegreya Sans", sans-serif;
+  letter-spacing: 0.1em;
+  line-height: 2;
   float: right;
-  width: 55px;
-  height: 0.85em;
-  padding: 0;
+  width: auto;
+  height: 2em;
+  padding: 0 0.5em;
 }
-/* line 226, scss/style.scss */
+/* line 228, scss/style.scss */
 #page header .menu-button.active {
+  color: #fdfff7;
   background-color: #333333;
 }
-/* line 230, scss/style.scss */
+/* line 233, scss/style.scss */
 #page header.active {
   height: auto;
 }
-/* line 233, scss/style.scss */
+/* line 236, scss/style.scss */
 #page #torso {
   /* ==========================================================================
      Front Page Styles
      ========================================================================== */
 }
-/* line 235, scss/style.scss */
+/* line 238, scss/style.scss */
 #page #torso a,
 #page #torso a:visited {
   color: #222222;
@@ -537,7 +540,7 @@ p {
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-/* line 242, scss/style.scss */
+/* line 245, scss/style.scss */
 #page #torso a:hover {
   background: #30ff8a;
   -webkit-transition: all 0.2s ease-in;
@@ -546,25 +549,25 @@ p {
   -o-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
-/* line 251, scss/style.scss */
+/* line 254, scss/style.scss */
 #page #torso .fp-section,
 #page #torso .p-section {
   padding: 0 5%;
   padding-top: 1.5em;
   padding-bottom: 1.5em;
 }
-/* line 255, scss/style.scss */
+/* line 258, scss/style.scss */
 #page #torso .fp-section ul,
 #page #torso .p-section ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-/* line 262, scss/style.scss */
+/* line 265, scss/style.scss */
 #page #torso #fp-events {
   font-family: "Alegreya Sans", sans-serif;
 }
-/* line 264, scss/style.scss */
+/* line 267, scss/style.scss */
 #page #torso #fp-events h3 {
   text-align: center;
   font-size: 0.75em;
@@ -574,11 +577,11 @@ p {
   font-weight: 700;
   margin: 0 0 1em;
 }
-/* line 273, scss/style.scss */
+/* line 276, scss/style.scss */
 #page #torso #fp-events .concerts {
   margin-bottom: 3em;
 }
-/* line 275, scss/style.scss */
+/* line 278, scss/style.scss */
 #page #torso #fp-events .concerts .vevent {
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
@@ -586,7 +589,7 @@ p {
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-/* line 277, scss/style.scss */
+/* line 280, scss/style.scss */
 #page #torso #fp-events .concerts .vevent .dtstart {
   text-align: center;
   display: block;
@@ -596,7 +599,7 @@ p {
   background: #30ff8a;
   padding: 0 5%;
 }
-/* line 285, scss/style.scss */
+/* line 288, scss/style.scss */
 #page #torso #fp-events .concerts .vevent .dtstart .month {
   display: block;
   text-transform: uppercase;
@@ -605,14 +608,14 @@ p {
   line-height: 1.4;
   padding-top: 0.4em;
 }
-/* line 293, scss/style.scss */
+/* line 296, scss/style.scss */
 #page #torso #fp-events .concerts .vevent .dtstart .day {
   display: block;
   font-size: 5em;
   line-height: 0.6;
   padding-bottom: 0.3em;
 }
-/* line 300, scss/style.scss */
+/* line 303, scss/style.scss */
 #page #torso #fp-events .concerts .vevent .details {
   display: block;
   float: left;
@@ -620,15 +623,15 @@ p {
   font-size: 1.25em;
   line-height: 1.8;
 }
-/* line 306, scss/style.scss */
+/* line 309, scss/style.scss */
 #page #torso #fp-events .concerts .vevent .details p {
   margin: 0;
 }
-/* line 309, scss/style.scss */
+/* line 312, scss/style.scss */
 #page #torso #fp-events .concerts .vevent .details .summary {
   font-weight: 700;
 }
-/* line 314, scss/style.scss */
+/* line 317, scss/style.scss */
 #page #torso #fp-events .concerts .vevent:hover {
   -webkit-transition: all 0.2s ease-in;
   -moz-transition: all 0.2s ease-in;
@@ -638,22 +641,22 @@ p {
   margin: 0 5%;
   background: #30ff8a;
 }
-/* line 318, scss/style.scss */
+/* line 321, scss/style.scss */
 #page #torso #fp-events .concerts .vevent:hover .dtstart {
   background: black;
   color: #30ff8a;
 }
-/* line 324, scss/style.scss */
+/* line 327, scss/style.scss */
 #page #torso #fp-events .colloquia {
   text-align: center;
 }
-/* line 326, scss/style.scss */
+/* line 329, scss/style.scss */
 #page #torso #fp-events .colloquia ul {
   font-size: 1.25em;
   line-height: 1.8;
   margin-bottom: 1.2em;
 }
-/* line 330, scss/style.scss */
+/* line 333, scss/style.scss */
 #page #torso #fp-events .colloquia ul .dtstart {
   display: block;
   float: left;
@@ -662,14 +665,14 @@ p {
   padding: 0 5%;
   letter-spacing: 0.06em;
 }
-/* line 338, scss/style.scss */
+/* line 341, scss/style.scss */
 #page #torso #fp-events .colloquia ul .summary {
   display: block;
   float: left;
   width: 60%;
   text-align: left;
 }
-/* line 349, scss/style.scss */
+/* line 352, scss/style.scss */
 #page #torso #fp-composers li {
   margin-bottom: 1em;
   -webkit-transition: all 0.2s ease-out;
@@ -678,7 +681,7 @@ p {
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-/* line 352, scss/style.scss */
+/* line 355, scss/style.scss */
 #page #torso #fp-composers li a {
   width: 100%;
   height: 5em;
@@ -699,7 +702,7 @@ p {
   -o-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
 }
-/* line 367, scss/style.scss */
+/* line 370, scss/style.scss */
 #page #torso #fp-composers li a img {
   float: left;
   max-width: 5em;
@@ -713,7 +716,7 @@ p {
   -o-transition: all 0.4s ease-out;
   transition: all 0.4s ease-out;
 }
-/* line 374, scss/style.scss */
+/* line 377, scss/style.scss */
 #page #torso #fp-composers li a span {
   font-size: 0.85em;
   display: inline-block;
@@ -724,7 +727,7 @@ p {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 385, scss/style.scss */
+/* line 388, scss/style.scss */
 #page #torso #fp-composers li a:hover {
   background: black;
   color: #30ff8a;
@@ -735,7 +738,7 @@ p {
   -o-transition: all 0.1s ease-in;
   transition: all 0.1s ease-in;
 }
-/* line 390, scss/style.scss */
+/* line 393, scss/style.scss */
 #page #torso #fp-composers li a:hover img {
   -webkit-filter: grayscale(0) contrast(100%) brightness(100%) saturate(150%);
   -moz-filter: grayscale(0) contrast(100%) brightness(100%) saturate(150%);
@@ -746,7 +749,7 @@ p {
   -o-transition: all 0.4s ease-in;
   transition: all 0.4s ease-in;
 }
-/* line 396, scss/style.scss */
+/* line 399, scss/style.scss */
 #page #torso #fp-composers li:hover {
   padding: 0 5%;
   -webkit-transition: all 0.2s ease-in;
@@ -759,7 +762,7 @@ p {
 /* ==========================================================================
    Footer Styles
    ========================================================================== */
-/* line 409, scss/style.scss */
+/* line 412, scss/style.scss */
 footer {
   clear: both;
   color: #999999;
@@ -775,7 +778,7 @@ footer {
    Media Queries
    ========================================================================== */
 @media only screen and (min-width: 45em) {
-  /* line 426, scss/style.scss */
+  /* line 429, scss/style.scss */
   #page header {
     margin-top: -0.55em;
     margin-bottom: 1.5em;
@@ -783,7 +786,7 @@ footer {
     height: auto;
     background: transparent;
   }
-  /* line 432, scss/style.scss */
+  /* line 435, scss/style.scss */
   #page header h1 {
     margin: 0;
     padding-left: 0;
@@ -792,100 +795,100 @@ footer {
     width: 100%;
     letter-spacing: 0;
   }
-  /* line 439, scss/style.scss */
+  /* line 442, scss/style.scss */
   #page header h1 .lowercase {
     display: inline;
   }
-  /* line 443, scss/style.scss */
+  /* line 446, scss/style.scss */
   #page header a {
     color: black;
   }
-  /* line 447, scss/style.scss */
+  /* line 450, scss/style.scss */
   #page header .menu {
     display: block;
     font-size: 1.125em;
     line-height: 2.6666666666em;
   }
-  /* line 451, scss/style.scss */
+  /* line 454, scss/style.scss */
   #page header .menu ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
   }
-  /* line 456, scss/style.scss */
+  /* line 459, scss/style.scss */
   #page header .menu li {
     display: inline-block;
     margin-right: .5em;
   }
-  /* line 460, scss/style.scss */
+  /* line 463, scss/style.scss */
   #page header .menu li:nth-child(odd) {
     background-color: transparent;
   }
-  /* line 463, scss/style.scss */
+  /* line 466, scss/style.scss */
   #page header .menu li:nth-child(even) {
     background-color: transparent;
   }
-  /* line 466, scss/style.scss */
+  /* line 469, scss/style.scss */
   #page header .menu .current-menu-item a:before {
     content: '';
   }
-  /* line 469, scss/style.scss */
+  /* line 472, scss/style.scss */
   #page header .menu a {
     border-radius: 2em;
     color: #222222;
     padding: 0 .5em;
   }
-  /* line 474, scss/style.scss */
+  /* line 477, scss/style.scss */
   #page header .menu a:hover {
     background: #30ff8a;
   }
-  /* line 479, scss/style.scss */
+  /* line 482, scss/style.scss */
   #page header .menu-button {
     display: none;
   }
-  /* line 485, scss/style.scss */
+  /* line 488, scss/style.scss */
   #page #torso .fp-section,
   #page #torso .p-section {
     padding: 0 12.5%;
     padding-top: 1.5em;
     padding-bottom: 1.5em;
   }
-  /* line 490, scss/style.scss */
+  /* line 493, scss/style.scss */
   #page #torso #fp-blurb {
     font-size: 1.5em;
     line-height: 1.5;
   }
-  /* line 495, scss/style.scss */
+  /* line 498, scss/style.scss */
   #page #torso #fp-events .concerts {
     width: 50%;
     display: block;
     float: left;
   }
-  /* line 500, scss/style.scss */
+  /* line 503, scss/style.scss */
   #page #torso #fp-events .colloquia {
     width: 50%;
     display: block;
     float: left;
   }
-  /* line 507, scss/style.scss */
+  /* line 510, scss/style.scss */
   #page #torso #fp-composers li {
     float: left;
     margin-bottom: 0.4166666em;
     width: 19%;
     margin-right: 1.2%;
   }
-  /* line 512, scss/style.scss */
+  /* line 515, scss/style.scss */
   #page #torso #fp-composers li a {
     height: auto;
     overflow: hidden;
   }
-  /* line 515, scss/style.scss */
+  /* line 518, scss/style.scss */
   #page #torso #fp-composers li a img {
     float: none;
     width: 100%;
     max-width: none;
   }
-  /* line 520, scss/style.scss */
+  /* line 523, scss/style.scss */
   #page #torso #fp-composers li a span {
     display: table-cell;
     vertical-align: middle;
@@ -896,30 +899,30 @@ footer {
     padding: 0 5%;
     white-space: normal;
   }
-  /* line 532, scss/style.scss */
+  /* line 535, scss/style.scss */
   #page #torso #fp-composers li:hover {
     padding: 0;
   }
-  /* line 535, scss/style.scss */
+  /* line 538, scss/style.scss */
   #page #torso #fp-composers li:nth-child(5n) {
     margin-right: 0;
   }
 }
 @media only screen and (max-width: 15em) {
-  /* line 544, scss/style.scss */
+  /* line 547, scss/style.scss */
   html {
     font-size: 0.8em;
   }
-  /* line 551, scss/style.scss */
+  /* line 554, scss/style.scss */
   html #page #torso #fp-composers li a img {
     display: none;
   }
-  /* line 554, scss/style.scss */
+  /* line 557, scss/style.scss */
   html #page #torso #fp-composers li a span {
     max-width: 90%;
     padding: 0 5%;
   }
-  /* line 560, scss/style.scss */
+  /* line 563, scss/style.scss */
   html #page #torso #fp-composers li:hover {
     padding: 0;
   }
@@ -927,7 +930,7 @@ footer {
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-/* line 580, scss/style.scss */
+/* line 583, scss/style.scss */
 .ir {
   background-color: transparent;
   border: 0;
@@ -935,7 +938,7 @@ footer {
   *text-indent: -9999px;
 }
 
-/* line 587, scss/style.scss */
+/* line 590, scss/style.scss */
 .ir:before {
   content: "";
   display: block;
@@ -943,13 +946,13 @@ footer {
   height: 150%;
 }
 
-/* line 594, scss/style.scss */
+/* line 597, scss/style.scss */
 .hidden {
   display: none !important;
   visibility: hidden;
 }
 
-/* line 599, scss/style.scss */
+/* line 602, scss/style.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -961,7 +964,7 @@ footer {
   width: 1px;
 }
 
-/* line 611, scss/style.scss */
+/* line 614, scss/style.scss */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   clip: auto;
@@ -972,24 +975,24 @@ footer {
   width: auto;
 }
 
-/* line 620, scss/style.scss */
+/* line 623, scss/style.scss */
 .invisible {
   visibility: hidden;
 }
 
-/* line 625, scss/style.scss */
+/* line 628, scss/style.scss */
 .clearfix:before,
 .clearfix:after {
   content: " ";
   display: table;
 }
 
-/* line 630, scss/style.scss */
+/* line 633, scss/style.scss */
 .clearfix:after {
   clear: both;
 }
 
-/* line 634, scss/style.scss */
+/* line 637, scss/style.scss */
 .clearfix {
   *zoom: 1;
 }
@@ -998,7 +1001,7 @@ footer {
    Print styles
    ========================================================================== */
 @media print {
-  /* line 643, scss/style.scss */
+  /* line 646, scss/style.scss */
   * {
     background: transparent !important;
     color: #000 !important;
@@ -1006,48 +1009,48 @@ footer {
     text-shadow: none !important;
   }
 
-  /* line 651, scss/style.scss */
+  /* line 654, scss/style.scss */
   a,
   a:visited {
     text-decoration: underline;
   }
 
-  /* line 655, scss/style.scss */
+  /* line 658, scss/style.scss */
   a[href]:after {
     content: " (" attr(href) ")";
   }
 
-  /* line 659, scss/style.scss */
+  /* line 662, scss/style.scss */
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
 
-  /* line 665, scss/style.scss */
+  /* line 668, scss/style.scss */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: "";
   }
 
-  /* line 670, scss/style.scss */
+  /* line 673, scss/style.scss */
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
-  /* line 675, scss/style.scss */
+  /* line 678, scss/style.scss */
   thead {
     display: table-header-group;
   }
 
-  /* line 680, scss/style.scss */
+  /* line 683, scss/style.scss */
   tr,
   img {
     page-break-inside: avoid;
   }
 
-  /* line 684, scss/style.scss */
+  /* line 687, scss/style.scss */
   img {
     max-width: 100% !important;
   }
@@ -1056,7 +1059,7 @@ footer {
     margin: 0.5cm;
 }
 
-  /* line 694, scss/style.scss */
+  /* line 697, scss/style.scss */
   p,
   h2,
   h3 {
@@ -1064,7 +1067,7 @@ footer {
     widows: 3;
   }
 
-  /* line 700, scss/style.scss */
+  /* line 703, scss/style.scss */
   h2,
   h3 {
     page-break-after: avoid;

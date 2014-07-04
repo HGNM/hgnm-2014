@@ -14,7 +14,7 @@
   menuButton.setAttribute('aria-label', 'Menu');
   menuButton.setAttribute('aria-expanded', 'false');
   menuButton.setAttribute('aria-controls', 'menu');
-  menuButton.innerHTML = '<span aria-hidden="true">&#x2261;</span>';
+  menuButton.innerHTML = '<span aria-hidden="true">Menu</span>';
   
   // Menu properties
   menu.setAttribute('aria-hidden', 'true');

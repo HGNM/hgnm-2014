@@ -11,6 +11,7 @@ get_header();
 		else {
 			$yearquery = date('Y');
 		}
+		echo $yearquery;
 		
 		if ( have_posts() ) : ?>
 			<?php while ( have_posts() ) : the_post(); ?>

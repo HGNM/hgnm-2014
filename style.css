@@ -403,7 +403,7 @@ textarea {
 /* line 130, scss/style.scss */
 h2 {
   font-size: 2.5em;
-  font-family: "Dala Floda", serif;
+  font-family: "Dala Floda", Alegreya, Georgia, serif;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   line-height: 1.2;
@@ -435,7 +435,7 @@ p {
 #page header h1 {
   font-size: 2.5em;
   line-height: 1;
-  font-family: "Dala Floda", serif;
+  font-family: "Dala Floda", Alegreya, Georgia, serif;
   margin: .15em 0 0;
   letter-spacing: 0.2em;
   float: left;
@@ -758,11 +758,35 @@ p {
   -o-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
+/* line 405, scss/style.scss */
+#page #torso #fp-archive-link a {
+  padding: 1.5em 5%;
+  display: block;
+  border-bottom: none;
+  text-align: center;
+  background: #30ff8a;
+}
+/* line 411, scss/style.scss */
+#page #torso #fp-archive-link a p {
+  font-size: 1.25em;
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+/* line 417, scss/style.scss */
+#page #torso #fp-archive-link a:hover {
+  margin: 0 5%;
+  background: black;
+  color: #30ff8a;
+}
+/* line 421, scss/style.scss */
+#page #torso #fp-archive-link a:hover h2 {
+  color: #30ff8a;
+}
 
 /* ==========================================================================
    Footer Styles
    ========================================================================== */
-/* line 412, scss/style.scss */
+/* line 433, scss/style.scss */
 footer {
   clear: both;
   color: #999999;
@@ -778,7 +802,7 @@ footer {
    Media Queries
    ========================================================================== */
 @media only screen and (min-width: 45em) {
-  /* line 429, scss/style.scss */
+  /* line 450, scss/style.scss */
   #page header {
     margin-top: -0.55em;
     margin-bottom: 1.5em;
@@ -786,7 +810,7 @@ footer {
     height: auto;
     background: transparent;
   }
-  /* line 435, scss/style.scss */
+  /* line 456, scss/style.scss */
   #page header h1 {
     margin: 0;
     padding-left: 0;
@@ -795,100 +819,100 @@ footer {
     width: 100%;
     letter-spacing: 0;
   }
-  /* line 442, scss/style.scss */
+  /* line 463, scss/style.scss */
   #page header h1 .lowercase {
     display: inline;
   }
-  /* line 446, scss/style.scss */
+  /* line 467, scss/style.scss */
   #page header a {
     color: black;
   }
-  /* line 450, scss/style.scss */
+  /* line 471, scss/style.scss */
   #page header .menu {
     display: block;
     font-size: 1.125em;
     line-height: 2.6666666666em;
   }
-  /* line 454, scss/style.scss */
+  /* line 475, scss/style.scss */
   #page header .menu ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
   }
-  /* line 459, scss/style.scss */
+  /* line 480, scss/style.scss */
   #page header .menu li {
     display: inline-block;
     margin-right: .5em;
   }
-  /* line 463, scss/style.scss */
+  /* line 484, scss/style.scss */
   #page header .menu li:nth-child(odd) {
     background-color: transparent;
   }
-  /* line 466, scss/style.scss */
+  /* line 487, scss/style.scss */
   #page header .menu li:nth-child(even) {
     background-color: transparent;
   }
-  /* line 469, scss/style.scss */
+  /* line 490, scss/style.scss */
   #page header .menu .current-menu-item a:before {
     content: '';
   }
-  /* line 472, scss/style.scss */
+  /* line 493, scss/style.scss */
   #page header .menu a {
     border-radius: 2em;
     color: #222222;
     padding: 0 .5em;
   }
-  /* line 477, scss/style.scss */
+  /* line 498, scss/style.scss */
   #page header .menu a:hover {
     background: #30ff8a;
   }
-  /* line 482, scss/style.scss */
+  /* line 503, scss/style.scss */
   #page header .menu-button {
     display: none;
   }
-  /* line 488, scss/style.scss */
+  /* line 509, scss/style.scss */
   #page #torso .fp-section,
   #page #torso .p-section {
     padding: 0 12.5%;
     padding-top: 1.5em;
     padding-bottom: 1.5em;
   }
-  /* line 493, scss/style.scss */
+  /* line 514, scss/style.scss */
   #page #torso #fp-blurb {
     font-size: 1.5em;
     line-height: 1.5;
   }
-  /* line 498, scss/style.scss */
+  /* line 519, scss/style.scss */
   #page #torso #fp-events .concerts {
     width: 50%;
     display: block;
     float: left;
   }
-  /* line 503, scss/style.scss */
+  /* line 524, scss/style.scss */
   #page #torso #fp-events .colloquia {
     width: 50%;
     display: block;
     float: left;
   }
-  /* line 510, scss/style.scss */
+  /* line 531, scss/style.scss */
   #page #torso #fp-composers li {
     float: left;
     margin-bottom: 0.4166666em;
     width: 19%;
     margin-right: 1.2%;
   }
-  /* line 515, scss/style.scss */
+  /* line 536, scss/style.scss */
   #page #torso #fp-composers li a {
     height: auto;
     overflow: hidden;
   }
-  /* line 518, scss/style.scss */
+  /* line 539, scss/style.scss */
   #page #torso #fp-composers li a img {
     float: none;
     width: 100%;
     max-width: none;
   }
-  /* line 523, scss/style.scss */
+  /* line 544, scss/style.scss */
   #page #torso #fp-composers li a span {
     display: table-cell;
     vertical-align: middle;
@@ -899,30 +923,40 @@ footer {
     padding: 0 5%;
     white-space: normal;
   }
-  /* line 535, scss/style.scss */
+  /* line 556, scss/style.scss */
   #page #torso #fp-composers li:hover {
     padding: 0;
   }
-  /* line 538, scss/style.scss */
+  /* line 559, scss/style.scss */
   #page #torso #fp-composers li:nth-child(5n) {
     margin-right: 0;
   }
+  /* line 564, scss/style.scss */
+  #page #torso #fp-archive-link a {
+    width: 49.4%;
+    margin: 0 auto;
+  }
+  /* line 568, scss/style.scss */
+  #page #torso #fp-archive-link a:hover {
+    width: 44.4%;
+    margin: 0 auto;
+  }
 }
 @media only screen and (max-width: 15em) {
-  /* line 547, scss/style.scss */
+  /* line 578, scss/style.scss */
   html {
     font-size: 0.8em;
   }
-  /* line 554, scss/style.scss */
+  /* line 585, scss/style.scss */
   html #page #torso #fp-composers li a img {
     display: none;
   }
-  /* line 557, scss/style.scss */
+  /* line 588, scss/style.scss */
   html #page #torso #fp-composers li a span {
     max-width: 90%;
     padding: 0 5%;
   }
-  /* line 563, scss/style.scss */
+  /* line 594, scss/style.scss */
   html #page #torso #fp-composers li:hover {
     padding: 0;
   }
@@ -930,7 +964,7 @@ footer {
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-/* line 583, scss/style.scss */
+/* line 614, scss/style.scss */
 .ir {
   background-color: transparent;
   border: 0;
@@ -938,7 +972,7 @@ footer {
   *text-indent: -9999px;
 }
 
-/* line 590, scss/style.scss */
+/* line 621, scss/style.scss */
 .ir:before {
   content: "";
   display: block;
@@ -946,13 +980,13 @@ footer {
   height: 150%;
 }
 
-/* line 597, scss/style.scss */
+/* line 628, scss/style.scss */
 .hidden {
   display: none !important;
   visibility: hidden;
 }
 
-/* line 602, scss/style.scss */
+/* line 633, scss/style.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -964,7 +998,7 @@ footer {
   width: 1px;
 }
 
-/* line 614, scss/style.scss */
+/* line 645, scss/style.scss */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   clip: auto;
@@ -975,24 +1009,24 @@ footer {
   width: auto;
 }
 
-/* line 623, scss/style.scss */
+/* line 654, scss/style.scss */
 .invisible {
   visibility: hidden;
 }
 
-/* line 628, scss/style.scss */
+/* line 659, scss/style.scss */
 .clearfix:before,
 .clearfix:after {
   content: " ";
   display: table;
 }
 
-/* line 633, scss/style.scss */
+/* line 664, scss/style.scss */
 .clearfix:after {
   clear: both;
 }
 
-/* line 637, scss/style.scss */
+/* line 668, scss/style.scss */
 .clearfix {
   *zoom: 1;
 }
@@ -1001,7 +1035,7 @@ footer {
    Print styles
    ========================================================================== */
 @media print {
-  /* line 646, scss/style.scss */
+  /* line 677, scss/style.scss */
   * {
     background: transparent !important;
     color: #000 !important;
@@ -1009,48 +1043,48 @@ footer {
     text-shadow: none !important;
   }
 
-  /* line 654, scss/style.scss */
+  /* line 685, scss/style.scss */
   a,
   a:visited {
     text-decoration: underline;
   }
 
-  /* line 658, scss/style.scss */
+  /* line 689, scss/style.scss */
   a[href]:after {
     content: " (" attr(href) ")";
   }
 
-  /* line 662, scss/style.scss */
+  /* line 693, scss/style.scss */
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
 
-  /* line 668, scss/style.scss */
+  /* line 699, scss/style.scss */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: "";
   }
 
-  /* line 673, scss/style.scss */
+  /* line 704, scss/style.scss */
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
-  /* line 678, scss/style.scss */
+  /* line 709, scss/style.scss */
   thead {
     display: table-header-group;
   }
 
-  /* line 683, scss/style.scss */
+  /* line 714, scss/style.scss */
   tr,
   img {
     page-break-inside: avoid;
   }
 
-  /* line 687, scss/style.scss */
+  /* line 718, scss/style.scss */
   img {
     max-width: 100% !important;
   }
@@ -1059,7 +1093,7 @@ footer {
     margin: 0.5cm;
 }
 
-  /* line 697, scss/style.scss */
+  /* line 728, scss/style.scss */
   p,
   h2,
   h3 {
@@ -1067,7 +1101,7 @@ footer {
     widows: 3;
   }
 
-  /* line 703, scss/style.scss */
+  /* line 734, scss/style.scss */
   h2,
   h3 {
     page-break-after: avoid;

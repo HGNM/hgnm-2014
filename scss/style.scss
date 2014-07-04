@@ -560,6 +560,16 @@ footer {
 					margin-right:0;
 				}
 			} // </#fp-composers>
+			#fp-archive-link {
+				a {
+					width: 49.4%;
+					margin: 0 auto;
+				}
+				a:hover {
+					width: 44.4%;
+					margin: 0 auto;
+				}
+			} // </#fp-archive-link>
 		} // </#torso>
 	} // </#page>
 } // end media-query

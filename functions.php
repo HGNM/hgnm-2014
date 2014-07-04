@@ -50,4 +50,63 @@ return $output;
 // Enable Featured Image for Member Custom Post Type
 add_theme_support( 'post-thumbnails', array( 'member', 'concert' ) );
 
+
+// Get URL query and use it to display posts from a given academic year
+// ?y=2013 will return posts between 1 September 2013 and 31 August 2014
+add_action('pre_get_posts', 'my_pre_get_posts');
+ 
+function my_pre_get_posts( $query )
+{
+	// validate
+	if( is_admin() )
+	{
+		return;
+	}
+ 
+	if( !$query->is_main_query() )
+	{
+		return;
+	}
+ 
+	// get original meta query
+	$meta_query = $query->get('meta_query');
+ 
+        // allow the url to alter the query
+        if( !empty($_GET['y']) )
+        {
+        	$dtstart = $_GET['y'];
+        	$yearstart = $dtstart . '0901';
+        	$yearend = ($dtstart + 1) . '0831';
+        	$academicyear = array($yearstart,$yearend);
+ 
+        	//Add our meta query to the original meta queries
+	    	$meta_query[] = array(
+                'key'		=> 'dtstart',
+                'value'		=> $academicyear,
+                'compare'	=> 'BETWEEN'
+            );
+        }
+        // if no query, get current year
+        else {
+        	$dtstart = date("Y");
+        	$yearstart = $dtstart . '0901';
+        	$yearend = ($dtstart + 1) . '0831';
+        	$academicyear = array($yearstart,$yearend);
+ 
+        	//Add our meta query to the original meta queries
+	    	$meta_query[] = array(
+                'key'		=> 'dtstart',
+                'value'		=> $academicyear,
+                'compare'	=> 'BETWEEN'
+            );
+        }
+ 
+	// update the meta query args
+	$query->set('meta_query', $meta_query);
+ 
+	// always return
+	return;
+ 
+}
+
 ?>

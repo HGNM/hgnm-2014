@@ -50,4 +50,12 @@ return $output;
 // Enable Featured Image for Member Custom Post Type
 add_theme_support( 'post-thumbnails', array( 'member', 'concert' ) );
 
+// Add ability to query custom year variable for use on archive page
+function add_query_vars_filter( $vars ){
+  $vars[] = "y";
+  return $vars;
+}
+add_filter( 'query_vars', 'add_query_vars_filter' );
+
+
 ?>

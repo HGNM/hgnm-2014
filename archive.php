@@ -31,13 +31,13 @@ get_header();
 			// What should happen if someone wants to see into the future?
 			echo '<article class="p-section"><h2>Archives</h2><p>Welcome to the future! It looks like you’re looking for events in the ' . $seasontitle . ' season, but unfortunately this is neither a time machine nor a crystal ball. Why not <a href="' . get_post_type_archive_link('concert') . '">check out what’s happening right now</a>?</p></article>';
 		}
-		elseif ($seasonstart > date('Ymd')) {
-			// What should happen if it is the *next* season
-			echo 'Coming up next year!';
-		}
 		elseif ($seasonstart < 19840900) {
 			// What should happen if it is before HGNM was founded?
 			echo 'Hold your horses, HGNM didn’t even exist then!';
+		}
+		elseif ($seasonstart > date('Ymd')) {
+			// What should happen if it is the *next* season
+			echo 'Coming up next year!';
 		}
 		else {
 			// OK, now we’re talking. Check if posts exist?

@@ -17,6 +17,15 @@ get_header();
 		$seasonend = ($yearquery + 1) . '0831';
 		$season = array($seasonstart,$seasonend);
 		
+		// Set pretty season range
+		// Format 'YYYY–YY' unless turn of century, in which case 'YYYY–YYYY'
+		if (($yearquery % 100) == 99) {
+			$seasontitle = $yearquery . '–' . ($yearquery + 1);
+		}
+		else {
+			$seasontitle = $yearquery . '–' . (($yearquery + 1) % 100);
+		}
+		
 		// Check queries to see if it is for a season starting more than a year in the future. N.B. The *next* season will return as false.
 		if ($seasonstart > date('Ymd', strtotime(date('Ymd', mktime()) . ' + 365 day')) ) {
 			// What should happen if someone wants to see into the future?

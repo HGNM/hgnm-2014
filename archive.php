@@ -11,7 +11,6 @@ get_header();
 		else {
 			$yearquery = date('Y');
 		}
-		echo $yearquery;
 		
 		// Set season date variables
 		$seasonstart = $yearquery . '0901';

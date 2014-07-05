@@ -12,6 +12,11 @@ get_header();
 			$yearquery = date('Y');
 		}
 		echo $yearquery;
+		
+		// Set season date variables
+		$seasonstart = $yearquery . '0901';
+		$seasonend = ($yearquery + 1) . '0831';
+		$season = array($seasonstart,$seasonend);
 		// Display archive title in format 'Archives YYYY–YY' unless turn of century, in which case 'Archives YYYY–YYYY'
 		if (($yearquery % 100) == 99) {
 			echo '<h2>Archives: ' . $yearquery . '–' . ($yearquery + 1) . '</h2>';

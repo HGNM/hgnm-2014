@@ -38,7 +38,7 @@ get_header();
 		}
 		elseif ($seasonstart < 19840900) {
 			// What should happen if it is before HGNM was founded?
-			echo 'Hold your horses, HGNM didn’t even exist then!';
+			echo '<article class="p-section"><h2>Archives</h2><p>' . $yearquery . '? Harvard Group for New Music wasn’t founded until 1984, so there’s nothing to see for this date. Why not <a href="' . get_post_type_archive_link('concert') . '">check out what’s happening right now</a>?</p></article>';
 		}
 		elseif ($seasonstart > date('Ymd')) {
 			// What should happen if it is the *next* season

@@ -23,7 +23,7 @@ get_header();
 			$seasontitle = $yearquery . '–' . ($yearquery + 1);
 		}
 		else {
-			$seasontitle = $yearquery . '–' . (($yearquery + 1) % 100);
+			$seasontitle = $yearquery . '–' . str_pad((($yearquery + 1) % 100), 2, '0', STR_PAD_LEFT);
 		}
 		
 		// Check queries to see if it is for a season starting more than a year in the future. N.B. The *next* season will return as false.

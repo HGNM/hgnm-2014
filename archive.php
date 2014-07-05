@@ -12,6 +12,13 @@ get_header();
 			$yearquery = date('Y');
 		}
 		echo $yearquery;
+		// Display archive title in format 'Archives YYYY–YY' unless turn of century, in which case 'Archives YYYY–YYYY'
+		if (($yearquery % 100) == 99) {
+			echo '<h2>Archives: ' . $yearquery . '–' . ($yearquery + 1) . '</h2>';
+		}
+		else {
+			echo '<h2>Archives: ' . $yearquery . '–' . (($yearquery + 1) % 100) . '</h2>';
+		}
 		
 		if ( have_posts() ) : ?>
 			<?php while ( have_posts() ) : the_post(); ?>

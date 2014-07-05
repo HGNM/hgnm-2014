@@ -41,6 +41,7 @@ get_header();
 		}
 		else {
 			// OK, now we’re talking. Check if posts exist?
+				echo '<h2>Archives: ' . $seasontitle . '</h2>';
 		}
 
 get_footer();

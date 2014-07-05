@@ -32,6 +32,22 @@ get_header();
 			$seasontitle = $yearquery . '–' . str_pad((($yearquery + 1) % 100), 2, '0', STR_PAD_LEFT);
 		}
 		
+		query_posts(
+			array(
+				'numberposts' => -1,
+				'post_type' => 'concert',
+				'meta_key' => 'dtstart',
+				'order' => 'ASC',
+				'meta_query' => array(
+					array(
+						'key' => 'dtstart',
+                        'value'  => $season,
+                        'compare'  => 'BETWEEN'
+					)
+				)
+			)
+		);
+		
 		// Check queries to see if it is for a season starting more than a year in the future. N.B. The *next* season will return as false.
 		if ($seasonstart > date('Ymd', strtotime(date('Ymd', mktime()) . ' + 365 day')) ) {
 			// What should happen if someone wants to see into the future?

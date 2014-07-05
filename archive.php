@@ -9,7 +9,12 @@ get_header();
 			}
 		}
 		else {
-			$yearquery = date('Y');
+			if (date('m') > 8) {
+				$yearquery = date('Y');
+			}
+			else {
+				$yearquery = date('Y') - 1;
+			}
 		}
 		
 		// Set season date variables

@@ -33,24 +33,6 @@ get_header();
 		else {
 			// OK, now we’re talking. Check if posts exist?
 		}
-		
-		// Display archive title in format 'Archives YYYY–YY' unless turn of century, in which case 'Archives YYYY–YYYY'
-		if (($yearquery % 100) == 99) {
-			echo '<h2>Archives: ' . $yearquery . '–' . ($yearquery + 1) . '</h2>';
-		}
-		else {
-			echo '<h2>Archives: ' . $yearquery . '–' . (($yearquery + 1) % 100) . '</h2>';
-		}
-		
-		if ( have_posts() ) : ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-				<article id="post-<?php the_ID(); ?>" <?php post_class('p-section primary entry'); ?>>
-					<h2 class="post-title fname"><?php the_title(); ?></h2>
-						<?php the_content(); ?>
-				</article>
-			<?php endwhile; ?>
-		<?php else: ?>
-		<?php endif;
 
 get_footer();
 

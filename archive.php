@@ -29,7 +29,7 @@ get_header();
 		// Check queries to see if it is for a season starting more than a year in the future. N.B. The *next* season will return as false.
 		if ($seasonstart > date('Ymd', strtotime(date('Ymd', mktime()) . ' + 365 day')) ) {
 			// What should happen if someone wants to see into the future?
-			echo 'Welcome to the future!';
+			echo '<article class="p-section"><h2>Archives</h2><p>Welcome to the future! It looks like you’re looking for events in the ' . $seasontitle . ' season, but unfortunately this is neither a time machine nor a crystal ball. Why not <a href="' . get_post_type_archive_link('concert') . '">check out what’s happening right now</a>?</p></article>';
 		}
 		elseif ($seasonstart > date('Ymd')) {
 			// What should happen if it is the *next* season

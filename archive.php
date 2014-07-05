@@ -16,6 +16,24 @@ get_header();
 		$seasonstart = $yearquery . '0901';
 		$seasonend = ($yearquery + 1) . '0831';
 		$season = array($seasonstart,$seasonend);
+		
+		// Check queries to see if it is for a season starting more than a year in the future. N.B. The *next* season will return as false.
+		if ($seasonstart > date('Ymd', strtotime(date('Ymd', mktime()) . ' + 365 day')) ) {
+			// What should happen if someone wants to see into the future?
+			echo 'Welcome to the future!';
+		}
+		elseif ($seasonstart > date('Ymd')) {
+			// What should happen if it is the *next* season
+			echo 'Coming up next year!';
+		}
+		elseif ($seasonstart < 19840900) {
+			// What should happen if it is before HGNM was founded?
+			echo 'Hold your horses, HGNM didn’t even exist then!';
+		}
+		else {
+			// OK, now we’re talking. Check if posts exist?
+		}
+		
 		// Display archive title in format 'Archives YYYY–YY' unless turn of century, in which case 'Archives YYYY–YYYY'
 		if (($yearquery % 100) == 99) {
 			echo '<h2>Archives: ' . $yearquery . '–' . ($yearquery + 1) . '</h2>';

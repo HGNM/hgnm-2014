@@ -9,6 +9,7 @@ get_header();
 			}
 		}
 		else {
+			// Set correct year query from current date when no query_var present
 			if (date('m') > 8) {
 				$yearquery = date('Y');
 			}

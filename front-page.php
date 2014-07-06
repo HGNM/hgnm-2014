@@ -122,6 +122,13 @@ get_header();
 										else {
 											echo get_the_title($colloquium->ID);
 										}
+									}
+									elseif($type == 'Post-Concert Discussion') {
+										echo $type . ': ' . get_the_title($colloquium->ID);
+									}
+									else {
+										// If none of the above types (shouldn’t happen, but who knows…)
+										echo get_the_title($colloquium->ID);
 									} ?>
 								</span>
 								<span class="location vcard">

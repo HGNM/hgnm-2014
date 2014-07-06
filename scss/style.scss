@@ -276,6 +276,7 @@ p {
 			.concerts {
 				margin-bottom:3em;
 				.vevent {
+					margin-bottom:1.5em;
 					@include transition(all 0.2s ease-out);
 					.dtstart {
 						text-align:center;
@@ -316,7 +317,8 @@ p {
 				} // </a>
 				.vevent:hover {
 					@include transition(all 0.2s ease-in);
-					margin: 0 5%;
+					margin-right: 5%;
+					margin-left: 5%;
 					background: $bright-green;
 					.dtstart {
 						background: $black;

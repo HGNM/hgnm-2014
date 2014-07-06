@@ -63,15 +63,18 @@ get_header();
 		}
 		else {
 			// OK, now we’re talking. Check if posts exist?
-				echo '<h2>Archives: ' . $seasontitle . '</h2>';
-				if ( have_posts() ) : ?>
-					<?php while ( have_posts() ) : the_post(); ?>
-						<article id="fp-blurb" <?php post_class('fp-section'); ?>>
-							<h4><?php the_title(); ?></h4>
-						</article><!-- #post -->
-					<?php endwhile; ?>
-		<?php else: ?>
-		<?php endif;
+			echo '<h2>Archives: ' . $seasontitle . '</h2>';
+			if ( have_posts() ) : ?>
+				<section class="p-section">
+				<h3>Concerts</h3>
+				<?php while ( have_posts() ) : the_post(); ?>
+					<div id="" <?php post_class(''); ?>>
+						<h4><?php the_title(); ?></h4>
+					</div>
+				<?php endwhile; ?>
+				</section>
+			<?php else: ?>
+			<?php endif;
 		}
 
 get_footer();

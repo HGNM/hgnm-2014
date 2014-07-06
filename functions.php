@@ -64,6 +64,11 @@ function archive_add_rewrite_rules() {
 		'index.php?y=$matches[1]&post_type=concert',
 		'top'
 	);
+	add_rewrite_rule(
+		'^events/?$',
+		'index.php?post_type=concert',
+		'top'
+	);
 }
 add_action('init', 'archive_add_rewrite_rules');
 

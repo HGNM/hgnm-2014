@@ -84,16 +84,23 @@ get_header();
 		}
 		else {
 			// OK, now we’re talking. Check if posts exist?
-			echo '<h2>Archives: ' . $seasontitle . '</h2>';
+			echo '<article id="fp-events" class="p-section"><h2>Archives: ' . $seasontitle . '</h2>';
 			if ( have_posts() ) : ?>
-				<section class="p-section">
+				<section class="concerts">
 					<h3>Concerts</h3>
 					<ul>
-					<?php while ( have_posts() ) : the_post(); ?>
-						<li id="" <?php post_class('vevent clearfix'); ?>>
-							<?php $dtstart = DateTime::createFromFormat('d/m/Y', get_field('dtstart', $colloquium->ID)); ?>
-							<h4 class="dtstart"><time class="value-title" datetime="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>" title="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>"><?php echo $dtstart->format('n/j'); ?></time></h4>
-							<span><?php the_title(); ?></span>
+					<?php while ( have_posts() ) : the_post(); ?>						
+						<li <?php post_class('vevent clearfix'); ?>>
+							<a href="<?php echo get_permalink() ?>" class="url">
+								<?php $dtstart = DateTime::createFromFormat('d/m/Y', get_field('dtstart')); ?>
+								<h4 class="dtstart"><time class="value-title" datetime="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>" title="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>">
+									<?php echo '<span class="month">' . $dtstart->format('M') . '</span> <span class="day">' . $dtstart->format('j'); ?>
+								</time></h4>
+								<div class="details">
+									<p class="summary"><?php the_title() ?></p>
+									<p class="location"><?php the_field('location'); ?></p>
+								</div>
+							</a>
 						</li>
 					<?php endwhile; ?>
 					</ul>
@@ -101,7 +108,7 @@ get_header();
 			<?php else: ?>
 			<?php endif;
 			if ($colloquia) : ?>
-				<section class="p-section">
+				<section class="colloquia">
 					<h3>Colloquia</h3>
 					<ul>
 					<?php foreach($colloquia as $colloquium): ?>
@@ -136,6 +143,7 @@ get_header();
 					</ul>
 				</section>
 			<?php endif;
+			echo '</article>';
 		}
 
 get_footer();

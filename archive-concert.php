@@ -99,12 +99,16 @@ get_header();
 			echo '<h2>Archives: ' . $seasontitle . '</h2>';
 			if ( have_posts() ) : ?>
 				<section class="p-section">
-				<h3>Concerts</h3>
-				<?php while ( have_posts() ) : the_post(); ?>
-					<div id="" <?php post_class(''); ?>>
-						<h4><?php the_title(); ?></h4>
-					</div>
-				<?php endwhile; ?>
+					<h3>Concerts</h3>
+					<ul>
+					<?php while ( have_posts() ) : the_post(); ?>
+						<li id="" <?php post_class('vevent clearfix'); ?>>
+							<?php $dtstart = DateTime::createFromFormat('d/m/Y', get_field('dtstart', $colloquium->ID)); ?>
+							<h4 class="dtstart"><time class="value-title" datetime="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>" title="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>"><?php echo $dtstart->format('n/j'); ?></time></h4>
+							<span><?php the_title(); ?></span>
+						</li>
+					<?php endwhile; ?>
+					</ul>
 				</section>
 			<?php else: ?>
 			<?php endif;

@@ -32,6 +32,7 @@ get_header();
 			$seasontitle = $yearquery . '–' . str_pad((($yearquery + 1) % 100), 2, '0', STR_PAD_LEFT);
 		}
 		
+		// Alter main query for displaying concerts in the loop
 		query_posts(
 			array(
 				'numberposts' => -1,

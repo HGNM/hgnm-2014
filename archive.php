@@ -37,7 +37,7 @@ get_header();
 				'numberposts' => -1,
 				'post_type' => 'concert',
 				'meta_key' => 'dtstart',
-				'order' => 'ASC',
+				'order' => 'DESC',
 				'meta_query' => array(
 					array(
 						'key' => 'dtstart',

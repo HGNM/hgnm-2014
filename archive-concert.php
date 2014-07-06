@@ -75,24 +75,12 @@ get_header();
 			// What should happen if it is before HGNM was founded?
 			echo '<article class="p-section"><h2>Archives</h2><p>' . $yearquery . '? Harvard Group for New Music wasn’t founded until 1984, so there’s nothing to see for this date. Why not <a href="' . get_post_type_archive_link('concert') . '">check out what’s happening right now</a>?</p></article>';
 		}
-		elseif ($seasonstart > date('Ymd')) {
-			// What should happen if it is the *next* season
-			echo '<h2>Season ' . $seasontitle . '</h2>';
-			if ( have_posts() ) : ?>
-				<section class="p-section">
-				<h3>Concerts</h3>
-				<?php while ( have_posts() ) : the_post(); ?>
-					<div id="" <?php post_class(''); ?>>
-						<h4><?php the_title(); ?></h4>
-					</div>
-				<?php endwhile; ?>
-				</section>
-			<?php else: ?>
-				// If next season but no concert posts
+		elseif ($seasonstart > date('Ymd') && !have_posts()) {
+			// What should happen if it is the *next* season but there are no posts
+			echo '<h2>Archives: ' . $seasontitle . '</h2>'; ?>
 				<section class="p-section">
 					<p>We’re busy planning for next season, but the details aren’t available yet. Check back soon and in the meantime, why not <a href="<?php get_post_type_archive_link('concert') ?>">check out what’s happening right now</a>?</p></p>
-				</section>
-			<?php endif;
+				</section><?php
 		}
 		else {
 			// OK, now we’re talking. Check if posts exist?

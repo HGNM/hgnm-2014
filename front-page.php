@@ -203,7 +203,7 @@ get_header();
 		// Display archive link
 		?>
 		<section id="fp-archive-link" class="fp-section">
-			<a href="#">
+			<a href="<?php echo get_post_type_archive_link('concert') ?>">
 				<h2>Archive</h2>
 				<p>Dive into an archive of HGNM’s past events, members, audio and video.</p>
 			</a>

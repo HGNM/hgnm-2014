@@ -70,6 +70,10 @@ get_header();
 				<?php endwhile; ?>
 				</section>
 			<?php else: ?>
+				// If next season but no concert posts
+				<section class="p-section">
+					<p>We’re busy planning for next season, but the details aren’t available yet. Check back soon and in the meantime, why not <a href="<?php get_post_type_archive_link('concert') ?>">check out what’s happening right now</a>?</p></p>
+				</section>
 			<?php endif;
 		}
 		else {

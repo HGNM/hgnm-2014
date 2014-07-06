@@ -487,6 +487,9 @@ footer {
 				li:nth-child(even) {
 					background-color: transparent;
 				}
+				li:last-child {
+					margin-right: 0;
+				}
 				.current-menu-item a:before {
 					content: '';
 				}

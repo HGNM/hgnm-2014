@@ -59,7 +59,18 @@ get_header();
 		}
 		elseif ($seasonstart > date('Ymd')) {
 			// What should happen if it is the *next* season
-			echo 'Coming up next year!';
+			echo '<h2>Season ' . $seasontitle . '</h2>';
+			if ( have_posts() ) : ?>
+				<section class="p-section">
+				<h3>Concerts</h3>
+				<?php while ( have_posts() ) : the_post(); ?>
+					<div id="" <?php post_class(''); ?>>
+						<h4><?php the_title(); ?></h4>
+					</div>
+				<?php endwhile; ?>
+				</section>
+			<?php else: ?>
+			<?php endif;
 		}
 		else {
 			// OK, now we’re talking. Check if posts exist?

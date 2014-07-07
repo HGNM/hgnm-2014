@@ -676,11 +676,15 @@ p {
   text-align: left;
 }
 /* line 352, scss/style.scss */
+#page #torso #fp-events .miscevents {
+  clear: both;
+}
+/* line 355, scss/style.scss */
 #page #torso #fp-events .more-events-link {
   margin-bottom: 3em;
   clear: both;
 }
-/* line 355, scss/style.scss */
+/* line 358, scss/style.scss */
 #page #torso #fp-events .more-events-link a {
   padding: 1.5em 5%;
   display: block;
@@ -688,20 +692,20 @@ p {
   text-align: center;
   background: #30ff8a;
 }
-/* line 361, scss/style.scss */
+/* line 364, scss/style.scss */
 #page #torso #fp-events .more-events-link a p {
   font-size: 1.25em;
   line-height: 1.2;
   margin-bottom: 0;
 }
-/* line 367, scss/style.scss */
+/* line 370, scss/style.scss */
 #page #torso #fp-events .more-events-link a:hover {
   margin-right: 5%;
   margin-left: 5%;
   background: black;
   color: #30ff8a;
 }
-/* line 377, scss/style.scss */
+/* line 380, scss/style.scss */
 #page #torso #fp-composers li {
   margin-bottom: 1em;
   -webkit-transition: all 0.2s ease-out;
@@ -710,7 +714,7 @@ p {
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-/* line 380, scss/style.scss */
+/* line 383, scss/style.scss */
 #page #torso #fp-composers li a {
   width: 100%;
   height: 5em;
@@ -731,7 +735,7 @@ p {
   -o-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
 }
-/* line 395, scss/style.scss */
+/* line 398, scss/style.scss */
 #page #torso #fp-composers li a img {
   float: left;
   max-width: 5em;
@@ -745,7 +749,7 @@ p {
   -o-transition: all 0.4s ease-out;
   transition: all 0.4s ease-out;
 }
-/* line 402, scss/style.scss */
+/* line 405, scss/style.scss */
 #page #torso #fp-composers li a span {
   font-size: 0.85em;
   display: inline-block;
@@ -756,7 +760,7 @@ p {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 413, scss/style.scss */
+/* line 416, scss/style.scss */
 #page #torso #fp-composers li a:hover {
   background: black;
   color: #30ff8a;
@@ -767,7 +771,7 @@ p {
   -o-transition: all 0.1s ease-in;
   transition: all 0.1s ease-in;
 }
-/* line 418, scss/style.scss */
+/* line 421, scss/style.scss */
 #page #torso #fp-composers li a:hover img {
   -webkit-filter: grayscale(0) contrast(100%) brightness(100%) saturate(150%);
   -moz-filter: grayscale(0) contrast(100%) brightness(100%) saturate(150%);
@@ -778,7 +782,7 @@ p {
   -o-transition: all 0.4s ease-in;
   transition: all 0.4s ease-in;
 }
-/* line 424, scss/style.scss */
+/* line 427, scss/style.scss */
 #page #torso #fp-composers li:hover {
   padding: 0 5%;
   -webkit-transition: all 0.2s ease-in;
@@ -787,7 +791,7 @@ p {
   -o-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
-/* line 430, scss/style.scss */
+/* line 433, scss/style.scss */
 #page #torso #fp-archive-link a {
   padding: 1.5em 5%;
   display: block;
@@ -795,19 +799,19 @@ p {
   text-align: center;
   background: #30ff8a;
 }
-/* line 436, scss/style.scss */
+/* line 439, scss/style.scss */
 #page #torso #fp-archive-link a p {
   font-size: 1.25em;
   line-height: 1.2;
   margin-bottom: 0;
 }
-/* line 442, scss/style.scss */
+/* line 445, scss/style.scss */
 #page #torso #fp-archive-link a:hover {
   margin: 0 5%;
   background: black;
   color: #30ff8a;
 }
-/* line 446, scss/style.scss */
+/* line 449, scss/style.scss */
 #page #torso #fp-archive-link a:hover h2 {
   color: #30ff8a;
 }
@@ -815,7 +819,7 @@ p {
 /* ==========================================================================
    Footer Styles
    ========================================================================== */
-/* line 458, scss/style.scss */
+/* line 461, scss/style.scss */
 footer {
   clear: both;
   color: #999999;
@@ -831,7 +835,7 @@ footer {
    Media Queries
    ========================================================================== */
 @media only screen and (min-width: 45em) {
-  /* line 475, scss/style.scss */
+  /* line 478, scss/style.scss */
   #page header {
     margin-top: -0.55em;
     margin-bottom: 1.5em;
@@ -839,7 +843,7 @@ footer {
     height: auto;
     background: transparent;
   }
-  /* line 481, scss/style.scss */
+  /* line 484, scss/style.scss */
   #page header h1 {
     margin: 0;
     padding-left: 0;
@@ -848,109 +852,116 @@ footer {
     width: 100%;
     letter-spacing: 0;
   }
-  /* line 488, scss/style.scss */
+  /* line 491, scss/style.scss */
   #page header h1 .lowercase {
     display: inline;
   }
-  /* line 492, scss/style.scss */
+  /* line 495, scss/style.scss */
   #page header a {
     color: black;
   }
-  /* line 496, scss/style.scss */
+  /* line 499, scss/style.scss */
   #page header .menu {
     display: block;
     font-size: 1.125em;
     line-height: 2.6666666666em;
   }
-  /* line 500, scss/style.scss */
+  /* line 503, scss/style.scss */
   #page header .menu ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
   }
-  /* line 505, scss/style.scss */
+  /* line 508, scss/style.scss */
   #page header .menu li {
     display: inline-block;
     margin-right: .5em;
   }
-  /* line 509, scss/style.scss */
+  /* line 512, scss/style.scss */
   #page header .menu li:nth-child(odd) {
     background-color: transparent;
   }
-  /* line 512, scss/style.scss */
+  /* line 515, scss/style.scss */
   #page header .menu li:nth-child(even) {
     background-color: transparent;
   }
-  /* line 515, scss/style.scss */
+  /* line 518, scss/style.scss */
   #page header .menu li:last-child {
     margin-right: 0;
   }
-  /* line 518, scss/style.scss */
+  /* line 521, scss/style.scss */
   #page header .menu .current-menu-item a:before {
     content: '';
   }
-  /* line 521, scss/style.scss */
+  /* line 524, scss/style.scss */
   #page header .menu a {
     border-radius: 2em;
     color: #222222;
     padding: 0 .5em;
   }
-  /* line 526, scss/style.scss */
+  /* line 529, scss/style.scss */
   #page header .menu a:hover {
     background: #30ff8a;
   }
-  /* line 531, scss/style.scss */
+  /* line 534, scss/style.scss */
   #page header .menu-button {
     display: none;
   }
-  /* line 537, scss/style.scss */
+  /* line 540, scss/style.scss */
   #page #torso .fp-section,
   #page #torso .p-section {
     padding: 0 12.5%;
     padding-top: 1.5em;
     padding-bottom: 1.5em;
   }
-  /* line 542, scss/style.scss */
+  /* line 545, scss/style.scss */
   #page #torso #fp-blurb {
     font-size: 1.5em;
     line-height: 1.5;
   }
-  /* line 547, scss/style.scss */
+  /* line 550, scss/style.scss */
   #page #torso #fp-events .concerts, #page #torso #fp-events .colloquia {
     width: 47%;
     padding-right: 6%;
     display: block;
     float: left;
   }
-  /* line 553, scss/style.scss */
+  /* line 556, scss/style.scss */
   #page #torso #fp-events .concerts:nth-child(2n), #page #torso #fp-events .colloquia:nth-child(2n) {
     padding-right: 0;
   }
-  /* line 556, scss/style.scss */
+  /* line 559, scss/style.scss */
+  #page #torso #fp-events .concerts.solo, #page #torso #fp-events .colloquia.solo {
+    width: 49.4%;
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+  }
+  /* line 565, scss/style.scss */
   #page #torso #fp-events .more-events-link, #page #torso #fp-events .miscevents {
     width: 59.4%;
     margin-right: auto;
     margin-left: auto;
   }
-  /* line 563, scss/style.scss */
+  /* line 572, scss/style.scss */
   #page #torso #fp-composers li {
     float: left;
     margin-bottom: 0.4166666em;
     width: 19%;
     margin-right: 1.2%;
   }
-  /* line 568, scss/style.scss */
+  /* line 577, scss/style.scss */
   #page #torso #fp-composers li a {
     height: auto;
     overflow: hidden;
   }
-  /* line 571, scss/style.scss */
+  /* line 580, scss/style.scss */
   #page #torso #fp-composers li a img {
     float: none;
     width: 100%;
     max-width: none;
   }
-  /* line 576, scss/style.scss */
+  /* line 585, scss/style.scss */
   #page #torso #fp-composers li a span {
     display: table-cell;
     vertical-align: middle;
@@ -961,40 +972,40 @@ footer {
     padding: 0 5%;
     white-space: normal;
   }
-  /* line 588, scss/style.scss */
+  /* line 597, scss/style.scss */
   #page #torso #fp-composers li:hover {
     padding: 0;
   }
-  /* line 591, scss/style.scss */
+  /* line 600, scss/style.scss */
   #page #torso #fp-composers li:nth-child(5n) {
     margin-right: 0;
   }
-  /* line 596, scss/style.scss */
+  /* line 605, scss/style.scss */
   #page #torso #fp-archive-link a {
     width: 49.4%;
     margin: 0 auto;
   }
-  /* line 600, scss/style.scss */
+  /* line 609, scss/style.scss */
   #page #torso #fp-archive-link a:hover {
     width: 44.4%;
     margin: 0 auto;
   }
 }
 @media only screen and (max-width: 15em) {
-  /* line 610, scss/style.scss */
+  /* line 619, scss/style.scss */
   html {
     font-size: 0.8em;
   }
-  /* line 617, scss/style.scss */
+  /* line 626, scss/style.scss */
   html #page #torso #fp-composers li a img {
     display: none;
   }
-  /* line 620, scss/style.scss */
+  /* line 629, scss/style.scss */
   html #page #torso #fp-composers li a span {
     max-width: 90%;
     padding: 0 5%;
   }
-  /* line 626, scss/style.scss */
+  /* line 635, scss/style.scss */
   html #page #torso #fp-composers li:hover {
     padding: 0;
   }
@@ -1002,7 +1013,7 @@ footer {
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-/* line 646, scss/style.scss */
+/* line 655, scss/style.scss */
 .ir {
   background-color: transparent;
   border: 0;
@@ -1010,7 +1021,7 @@ footer {
   *text-indent: -9999px;
 }
 
-/* line 653, scss/style.scss */
+/* line 662, scss/style.scss */
 .ir:before {
   content: "";
   display: block;
@@ -1018,13 +1029,13 @@ footer {
   height: 150%;
 }
 
-/* line 660, scss/style.scss */
+/* line 669, scss/style.scss */
 .hidden {
   display: none !important;
   visibility: hidden;
 }
 
-/* line 665, scss/style.scss */
+/* line 674, scss/style.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -1036,7 +1047,7 @@ footer {
   width: 1px;
 }
 
-/* line 677, scss/style.scss */
+/* line 686, scss/style.scss */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   clip: auto;
@@ -1047,24 +1058,24 @@ footer {
   width: auto;
 }
 
-/* line 686, scss/style.scss */
+/* line 695, scss/style.scss */
 .invisible {
   visibility: hidden;
 }
 
-/* line 691, scss/style.scss */
+/* line 700, scss/style.scss */
 .clearfix:before,
 .clearfix:after {
   content: " ";
   display: table;
 }
 
-/* line 696, scss/style.scss */
+/* line 705, scss/style.scss */
 .clearfix:after {
   clear: both;
 }
 
-/* line 700, scss/style.scss */
+/* line 709, scss/style.scss */
 .clearfix {
   *zoom: 1;
 }
@@ -1073,7 +1084,7 @@ footer {
    Print styles
    ========================================================================== */
 @media print {
-  /* line 709, scss/style.scss */
+  /* line 718, scss/style.scss */
   * {
     background: transparent !important;
     color: #000 !important;
@@ -1081,48 +1092,48 @@ footer {
     text-shadow: none !important;
   }
 
-  /* line 717, scss/style.scss */
+  /* line 726, scss/style.scss */
   a,
   a:visited {
     text-decoration: underline;
   }
 
-  /* line 721, scss/style.scss */
+  /* line 730, scss/style.scss */
   a[href]:after {
     content: " (" attr(href) ")";
   }
 
-  /* line 725, scss/style.scss */
+  /* line 734, scss/style.scss */
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
 
-  /* line 731, scss/style.scss */
+  /* line 740, scss/style.scss */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: "";
   }
 
-  /* line 736, scss/style.scss */
+  /* line 745, scss/style.scss */
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
-  /* line 741, scss/style.scss */
+  /* line 750, scss/style.scss */
   thead {
     display: table-header-group;
   }
 
-  /* line 746, scss/style.scss */
+  /* line 755, scss/style.scss */
   tr,
   img {
     page-break-inside: avoid;
   }
 
-  /* line 750, scss/style.scss */
+  /* line 759, scss/style.scss */
   img {
     max-width: 100% !important;
   }
@@ -1131,7 +1142,7 @@ footer {
     margin: 0.5cm;
 }
 
-  /* line 760, scss/style.scss */
+  /* line 769, scss/style.scss */
   p,
   h2,
   h3 {
@@ -1139,7 +1150,7 @@ footer {
     widows: 3;
   }
 
-  /* line 766, scss/style.scss */
+  /* line 775, scss/style.scss */
   h2,
   h3 {
     page-break-after: avoid;

@@ -86,7 +86,7 @@ get_header();
 			// OK, now we’re talking. Check if posts exist?
 			echo '<article id="fp-events" class="p-section"><h2>Archives: ' . $seasontitle . '</h2>';
 			if ( have_posts() ) : ?>
-				<section class="concerts">
+				<section class="concerts <?php if(!$colloquia) { echo 'solo'; } ?>">
 					<h3>Concerts</h3>
 					<ul>
 					<?php while ( have_posts() ) : the_post(); ?>						
@@ -108,7 +108,7 @@ get_header();
 			<?php else: ?>
 			<?php endif;
 			if ($colloquia) : ?>
-				<section class="colloquia">
+				<section class="colloquia <?php if(!have_posts()) { echo 'solo'; } ?>">
 					<h3>Colloquia</h3>
 					<ul>
 					<?php foreach($colloquia as $colloquium): ?>

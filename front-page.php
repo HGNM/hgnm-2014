@@ -184,7 +184,7 @@ get_header();
 						</li>
 					<?php endif; ?>
 				</ul>
-			</section>
+			</section> <!-- #fp-events -->
 		<?php endif;
 		
 		// Get composers names, photos and permalinks

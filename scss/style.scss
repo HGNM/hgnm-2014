@@ -348,7 +348,10 @@ p {
 						text-align: left;
 					}
 				}
-			} // </.colloquia>
+			} // </.colloquia, .miscevents>
+			.miscevents {
+				clear:both;
+			}
 			.more-events-link {
 				margin-bottom:3em;
 				clear:both;

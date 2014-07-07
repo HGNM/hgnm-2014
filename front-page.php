@@ -63,7 +63,7 @@ get_header();
 		);
 		
 		// Display upcoming events
-		if($concerts || $colloquia) : ?>
+		if($concerts || $colloquia || $miscevents) : ?>
 			<section id="fp-events" class="fp-section clearfix">
 				<h2>Events</h2>
 				<ul>

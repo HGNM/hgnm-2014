@@ -16,13 +16,13 @@ Repository for WordPress theme development for new HGNM website.
 		- [ ] print styling
 	- [ ] [index.php](/index.php)
 		- [X] call header
-		- [ ] call content
+		- [X] call content
 			- [X] Blurb
-			- [ ] Upcoming Events
+			- [X] Upcoming Events
 				- [X] Concerts
 				- [X] Colloquia
-				- [ ] Others
-				- [ ] Link to all upcoming events
+				- [X] Others
+				- [X] Link to all upcoming events
 			- [X] Current Members
 				- [X] ordered alphabetically
 		- [X] call footer

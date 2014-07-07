@@ -48,7 +48,7 @@ return $output;
 }
 
 // Enable Featured Image for Member Custom Post Type
-add_theme_support( 'post-thumbnails', array( 'member', 'concert' ) );
+add_theme_support( 'post-thumbnails', array( 'member', 'concert', 'miscevent' ) );
 
 // Add ability to query custom year variable for use on archive page
 function add_query_vars_filter( $vars ){

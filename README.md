@@ -19,6 +19,10 @@ Repository for WordPress theme development for new HGNM website.
 		- [ ] call content
 			- [X] Blurb
 			- [ ] Upcoming Events
+				- [X] Concerts
+				- [X] Colloquia
+				- [ ] Others
+				- [ ] Link to all upcoming events
 			- [X] Current Members
 				- [X] ordered alphabetically
 		- [X] call footer
@@ -28,7 +32,11 @@ Repository for WordPress theme development for new HGNM website.
 	- [X] responsive menu
 - [ ] content single post templates
 	- [ ] HGNM Member ([single-member.php](/single-member.php))
+		- [ ] Display related a/v
+		- [ ] Display related events
 	- [ ] Concert Post ([single-concert.php](/single-concert.php))
+		- [ ] More sophisticated programme display logic
+		- [ ] Archival material (a/v, photos, poster, programme)
 	- [ ] Colloquium Post ([single-colloquium.php](/single-colloquium.php))
 - [ ] content archive templates
 	- [X] Members ([archive-member.php](/archive-member.php))

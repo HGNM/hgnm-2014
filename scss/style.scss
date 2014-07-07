@@ -556,6 +556,12 @@ footer {
 				.concerts:nth-child(2n), .colloquia:nth-child(2n) {
 					padding-right:0;
 				}
+				.concerts.solo, .colloquia.solo {
+					width: 49.4%;
+					margin-left: auto;
+					margin-right: auto;
+					float: none;
+				}
 				.more-events-link, .miscevents {
 					width: 59.4%;
 					margin-right: auto;

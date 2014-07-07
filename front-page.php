@@ -45,6 +45,22 @@ get_header();
 				)
 			)
 		);
+		// Get upcoming miscellaneous events
+		$miscevents = get_posts(
+			array(
+				'numberposts' => 1,
+				'post_type' => 'miscevent',
+				'meta_key' => 'dtstart',
+				'order' => 'ASC',
+				'meta_query' => array(
+					array(
+						'key' => 'dtstart',
+                        'value'  => $today,
+                        'compare'  => '>'
+					)
+				)
+			)
+		);
 		
 		// Display upcoming events
 		if($concerts || $colloquia) : ?>

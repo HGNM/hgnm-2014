@@ -68,7 +68,7 @@ get_header();
 				<h2>Events</h2>
 				<ul>
 					<?php if($concerts) : ?>
-						<li class="concerts">
+						<li class="concerts <?php if(!$colloquia) { echo 'solo'; } ?>">
 							<h3>Next Concert</h3>
 							<?php foreach($concerts as $concert): ?>
 								<div class="vevent clearfix">
@@ -116,7 +116,7 @@ get_header();
 						</li>
 					<?php endif; ?>
 					<?php if($colloquia) : ?>
-						<li class="colloquia">
+						<li class="colloquia <?php if(!$concerts) { echo 'solo'; } ?>">
 						<h3>Upcoming Colloquia</h3>
 						<ul>
 						<?php foreach($colloquia as $colloquium): ?>

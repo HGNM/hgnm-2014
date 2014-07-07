@@ -326,7 +326,8 @@ p {
 					}
 				}
 			} // </.concerts>
-			.colloquia {
+			.colloquia, .miscevents {
+				margin-bottom:3em;
 				text-align:center;
 				ul {
 					font-size:1.25em;
@@ -348,6 +349,28 @@ p {
 					}
 				}
 			} // </.colloquia>
+			.more-events-link {
+				margin-bottom:3em;
+				clear:both;
+				a {
+					padding: 1.5em 5%;
+					display: block;
+					border-bottom: none;
+					text-align: center;
+					background: $link-highlight;
+					p {
+						font-size: 1.25em;
+						line-height: 1.2;
+						margin-bottom:0;
+					}
+				}
+				a:hover {
+					margin-right: 5%;
+					margin-left: 5%;
+					background: $black;
+					color: $link-highlight;
+				}
+			}
 		} // </#fp-events>
 		
 		#fp-composers {
@@ -521,15 +544,19 @@ footer {
 				line-height:1.5;
 			}
 			#fp-events {
-				.concerts {
-					width: 50%;
+				.concerts, .colloquia {
+					width: 47%;
+					padding-right:6%;
 					display:block;
 					float:left;
 				}
-				.colloquia {
-					width: 50%;
-					display:block;
-					float:left;
+				.concerts:nth-child(2n), .colloquia:nth-child(2n) {
+					padding-right:0;
+				}
+				.more-events-link, .miscevents {
+					width: 59.4%;
+					margin-right: auto;
+					margin-left: auto;
 				}
 			}
 			#fp-composers {

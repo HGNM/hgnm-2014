@@ -205,14 +205,14 @@ get_header();
 											<?php endif; ?>
 										</time>
 									</h4>
-									<span class="summary"><a href="<?php echo get_permalink($miscevent->ID) ?>" class="url"><?php echo get_the_title($miscevent->ID); ?></a></span>
+									<span class="summary"><a href="<?php echo get_permalink($miscevent->ID); ?>" class="url"><?php echo get_the_title($miscevent->ID); ?></a></span>
 								</li>
 							<?php endforeach; ?>
 							</ul>
 						</li>
 					<?php endif; ?>
 						<li class="more-events-link">
-							<a href="<?php echo get_post_type_archive_link('concert') ?>">
+							<a href="<?php echo get_post_type_archive_link('concert'); ?>">
 								<p>See all upcoming events »</p>
 							</a>
 						</li>
@@ -259,7 +259,7 @@ get_header();
 		// Display archive link
 		?>
 		<section id="fp-archive-link" class="fp-section">
-			<a href="<?php echo get_post_type_archive_link('concert') ?>">
+			<a href="<?php echo get_post_type_archive_link('concert'); ?>">
 				<h2>Archive</h2>
 				<p>Dive into an archive of HGNM’s past events, members, audio and video.</p>
 			</a>

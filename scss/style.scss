@@ -408,6 +408,10 @@ p {
 						float:left;
 						width: 60%;
 						text-align: left;
+						.icon-link-ext:after {
+							color: $light-text;
+							padding-left: .1em;
+						}
 					}
 				}
 			} // </.colloquia, .miscevents>

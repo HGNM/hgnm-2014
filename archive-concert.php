@@ -105,7 +105,10 @@ get_header();
 			<article id="fp-events" class="p-section">
 				<header>
 					<h2>Archives<br /><?php echo $seasontitle ?></h2>
-					<nav class="clearfix"><a href="" title="Older" class="icon-left-arrow-bold"></a> <a href="" title="Newer" class="icon-right-arrow-bold"></a></nav>
+					<nav class="clearfix">
+						<a href="<?php echo get_post_type_archive_link('concert') . ($yearquery - 1); ?>" title="Older" class="icon-left-arrow-bold"></a>
+						<a href="<?php echo get_post_type_archive_link('concert') . ($yearquery + 1); ?>" title="Newer" class="icon-right-arrow-bold"></a>
+					</nav>
 				</header>
 			<?php
 			if ( have_posts() ) : ?>

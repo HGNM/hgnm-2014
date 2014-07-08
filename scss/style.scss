@@ -182,7 +182,7 @@ textarea {
  
 .icon-left-arrow-bold:before { content: '\e802'; } /* '' */
 .icon-right-arrow-bold:before { content: '\e803'; } /* '' */
-.icon-link-ext:after { content: '\e804'; font-size:80%; } /* '' */
+.icon-link-ext:after { content: '\e804'; } /* '' */
 .icon-facebook:before { content: '\e805'; } /* '' */
 
 
@@ -410,6 +410,7 @@ p {
 						text-align: left;
 						.icon-link-ext:after {
 							color: $light-text;
+							font-size:80%;
 							padding-left: .1em;
 						}
 					}

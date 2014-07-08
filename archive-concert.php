@@ -166,6 +166,34 @@ get_header();
 					</ul>
 				</section>
 			<?php endif;
+			if ($miscevents): ?>
+				<section class="miscevents">
+					<h3>Other Events</h3>
+					<ul>
+					<?php foreach($miscevents as $miscevent): ?>
+						<li class="vevent clearfix">
+							<h4 class="dtstart">
+								<?php
+								$dtstart = DateTime::createFromFormat('d/m/Y', get_field('dtstart', $miscevent->ID));
+								$dtend = DateTime::createFromFormat('d/m/Y', get_field('dtend', $miscevent->ID));
+								echo '<time class="value-title" datetime="' . $dtstart->format('Y-m-d\TH:i:sO') . '" title="' . $dtstart->format('Y-m-d\TH:i:sO') . '">';
+									if(get_field('dtend', $miscevent->ID)) :
+										if ($dtstart->format('n') == $dtend->format('n')) :
+											echo $dtstart->format('n/j') . '–' . $dtend->format('j');
+										else :
+											echo $dtstart->format('n/j') . '–' . $dtend->format('n/j');
+										endif; ?>
+									<?php else : ?>
+										<?php echo $dtstart->format('n/j'); ?>
+									<?php endif; ?>
+								</time>
+							</h4>
+							<span class="summary"><a href="<?php echo get_permalink($miscevent->ID) ?>" class="url"><?php echo get_the_title($miscevent->ID); ?></a></span>
+						</li>
+					<?php endforeach; ?>
+					</ul>
+				</li>
+			<?php endif;
 			echo '</article>';
 		}
 

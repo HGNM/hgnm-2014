@@ -398,9 +398,80 @@ textarea {
 }
 
 /* ==========================================================================
+   Font Icons [from Fontello]
+   ========================================================================== */
+@font-face {
+  font-family: 'hgnm';
+  src: url("font/hgnm.eot?75546016");
+  src: url("font/hgnm.eot?75546016#iefix") format("embedded-opentype"), url("font/hgnm.woff?75546016") format("woff"), url("font/hgnm.ttf?75546016") format("truetype"), url("font/hgnm.svg?75546016#hgnm") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'hgnm';
+    src: url('../font/hgnm.svg?75546016#hgnm') format('svg');
+  }
+}
+*/
+/* line 152, scss/style.scss */
+[class^="icon-"]:before, [class*=" icon-"]:before, .icon-link-ext:after {
+  font-family: "hgnm";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+/* line 183, scss/style.scss */
+.icon-left-arrow-bold:before {
+  content: '\e802';
+}
+
+/* '' */
+/* line 184, scss/style.scss */
+.icon-right-arrow-bold:before {
+  content: '\e803';
+}
+
+/* '' */
+/* line 185, scss/style.scss */
+.icon-link-ext:after {
+  content: '\e804';
+}
+
+/* '' */
+/* line 186, scss/style.scss */
+.icon-facebook:before {
+  content: '\e805';
+}
+
+/* '' */
+/* ==========================================================================
    General Styles
    ========================================================================== */
-/* line 130, scss/style.scss */
+/* line 192, scss/style.scss */
 h2 {
   font-size: 2.5em;
   font-family: "Dala Floda", Alegreya, Georgia, serif;
@@ -412,7 +483,7 @@ h2 {
   color: black;
 }
 
-/* line 141, scss/style.scss */
+/* line 203, scss/style.scss */
 p {
   margin: 0 0 1.5em;
 }
@@ -420,19 +491,19 @@ p {
 /* ==========================================================================
    Header Styles
    ========================================================================== */
-/* line 148, scss/style.scss */
+/* line 210, scss/style.scss */
 #page {
   overflow: hidden;
   margin: 0 auto;
 }
-/* line 151, scss/style.scss */
-#page header {
+/* line 213, scss/style.scss */
+#page .site-header {
   height: 3em;
   color: #fdfff7;
   background: black;
 }
-/* line 155, scss/style.scss */
-#page header h1 {
+/* line 217, scss/style.scss */
+#page .site-header h1 {
   font-size: 2.5em;
   line-height: 1;
   font-family: "Dala Floda", Alegreya, Georgia, serif;
@@ -441,12 +512,12 @@ p {
   float: left;
   padding-left: 5%;
 }
-/* line 163, scss/style.scss */
-#page header h1 .lowercase {
+/* line 225, scss/style.scss */
+#page .site-header h1 .lowercase {
   display: none;
 }
-/* line 167, scss/style.scss */
-#page header a {
+/* line 229, scss/style.scss */
+#page .site-header a {
   text-decoration: none;
   color: #fdfff7;
   -webkit-transition: all 0.2s ease-out;
@@ -455,8 +526,8 @@ p {
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-/* line 175, scss/style.scss */
-#page header .menu {
+/* line 237, scss/style.scss */
+#page .site-header .menu {
   font-family: "Alegreya Sans", sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.15em;
@@ -465,40 +536,40 @@ p {
   display: none;
   clear: both;
 }
-/* line 183, scss/style.scss */
-#page header .menu ul {
+/* line 245, scss/style.scss */
+#page .site-header .menu ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-/* line 188, scss/style.scss */
-#page header .menu li:nth-child(odd) {
+/* line 250, scss/style.scss */
+#page .site-header .menu li:nth-child(odd) {
   background-color: #333333;
 }
-/* line 191, scss/style.scss */
-#page header .menu li:nth-child(even) {
+/* line 253, scss/style.scss */
+#page .site-header .menu li:nth-child(even) {
   background-color: black;
 }
-/* line 194, scss/style.scss */
-#page header .menu .current-menu-item a:before {
+/* line 256, scss/style.scss */
+#page .site-header .menu .current-menu-item a:before {
   content: '▶ ';
 }
-/* line 197, scss/style.scss */
-#page header .menu a {
+/* line 259, scss/style.scss */
+#page .site-header .menu a {
   color: #fdfff7;
   display: block;
   padding: .5em 5%;
 }
-/* line 204, scss/style.scss */
-#page header .menu.active {
+/* line 266, scss/style.scss */
+#page .site-header .menu.active {
   display: block;
 }
-/* line 208, scss/style.scss */
-#page header .no-js .menu {
+/* line 270, scss/style.scss */
+#page .site-header .no-js .menu {
   display: block;
 }
-/* line 212, scss/style.scss */
-#page header .menu-button {
+/* line 274, scss/style.scss */
+#page .site-header .menu-button {
   color: #222222;
   background-color: #30ff8a;
   border: none;
@@ -513,22 +584,25 @@ p {
   height: 2em;
   padding: 0 0.5em;
 }
-/* line 228, scss/style.scss */
-#page header .menu-button.active {
+/* line 290, scss/style.scss */
+#page .site-header .menu-button.active {
   color: #fdfff7;
   background-color: #333333;
 }
-/* line 233, scss/style.scss */
+/* line 295, scss/style.scss */
 #page header.active {
   height: auto;
 }
-/* line 236, scss/style.scss */
+/* line 298, scss/style.scss */
 #page #torso {
   /* ==========================================================================
      Front Page Styles
      ========================================================================== */
+  /* ==========================================================================
+     Archive Styles
+     ========================================================================== */
 }
-/* line 238, scss/style.scss */
+/* line 300, scss/style.scss */
 #page #torso a,
 #page #torso a:visited {
   color: #222222;
@@ -540,7 +614,7 @@ p {
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-/* line 245, scss/style.scss */
+/* line 307, scss/style.scss */
 #page #torso a:hover {
   background: #30ff8a;
   -webkit-transition: all 0.2s ease-in;
@@ -549,25 +623,25 @@ p {
   -o-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
-/* line 254, scss/style.scss */
+/* line 316, scss/style.scss */
 #page #torso .fp-section,
 #page #torso .p-section {
   padding: 0 5%;
   padding-top: 1.5em;
   padding-bottom: 1.5em;
 }
-/* line 258, scss/style.scss */
+/* line 320, scss/style.scss */
 #page #torso .fp-section ul,
 #page #torso .p-section ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-/* line 265, scss/style.scss */
+/* line 327, scss/style.scss */
 #page #torso #fp-events {
   font-family: "Alegreya Sans", sans-serif;
 }
-/* line 267, scss/style.scss */
+/* line 329, scss/style.scss */
 #page #torso #fp-events h3 {
   text-align: center;
   font-size: 0.75em;
@@ -577,11 +651,11 @@ p {
   font-weight: 700;
   margin: 0 0 1em;
 }
-/* line 276, scss/style.scss */
+/* line 338, scss/style.scss */
 #page #torso #fp-events .concerts {
   margin-bottom: 3em;
 }
-/* line 278, scss/style.scss */
+/* line 340, scss/style.scss */
 #page #torso #fp-events .concerts .vevent {
   margin-bottom: 1.5em;
   -webkit-transition: all 0.2s ease-out;
@@ -590,7 +664,7 @@ p {
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-/* line 281, scss/style.scss */
+/* line 343, scss/style.scss */
 #page #torso #fp-events .concerts .vevent .dtstart {
   text-align: center;
   display: block;
@@ -600,7 +674,7 @@ p {
   background: #30ff8a;
   padding: 0 5%;
 }
-/* line 289, scss/style.scss */
+/* line 351, scss/style.scss */
 #page #torso #fp-events .concerts .vevent .dtstart .month {
   display: block;
   text-transform: uppercase;
@@ -609,14 +683,14 @@ p {
   line-height: 1.4;
   padding-top: 0.4em;
 }
-/* line 297, scss/style.scss */
+/* line 359, scss/style.scss */
 #page #torso #fp-events .concerts .vevent .dtstart .day {
   display: block;
   font-size: 5em;
   line-height: 0.6;
   padding-bottom: 0.3em;
 }
-/* line 304, scss/style.scss */
+/* line 366, scss/style.scss */
 #page #torso #fp-events .concerts .vevent .details {
   display: block;
   float: left;
@@ -624,15 +698,15 @@ p {
   font-size: 1.25em;
   line-height: 1.8;
 }
-/* line 310, scss/style.scss */
+/* line 372, scss/style.scss */
 #page #torso #fp-events .concerts .vevent .details p {
   margin: 0;
 }
-/* line 313, scss/style.scss */
+/* line 375, scss/style.scss */
 #page #torso #fp-events .concerts .vevent .details .summary {
   font-weight: 700;
 }
-/* line 318, scss/style.scss */
+/* line 380, scss/style.scss */
 #page #torso #fp-events .concerts .vevent:hover {
   -webkit-transition: all 0.2s ease-in;
   -moz-transition: all 0.2s ease-in;
@@ -643,23 +717,23 @@ p {
   margin-left: 5%;
   background: #30ff8a;
 }
-/* line 323, scss/style.scss */
+/* line 385, scss/style.scss */
 #page #torso #fp-events .concerts .vevent:hover .dtstart {
   background: black;
   color: #30ff8a;
 }
-/* line 329, scss/style.scss */
+/* line 391, scss/style.scss */
 #page #torso #fp-events .colloquia, #page #torso #fp-events .miscevents {
   margin-bottom: 3em;
   text-align: center;
 }
-/* line 332, scss/style.scss */
+/* line 394, scss/style.scss */
 #page #torso #fp-events .colloquia ul, #page #torso #fp-events .miscevents ul {
   font-size: 1.25em;
   line-height: 1.8;
   margin-bottom: 1.2em;
 }
-/* line 336, scss/style.scss */
+/* line 398, scss/style.scss */
 #page #torso #fp-events .colloquia ul .dtstart, #page #torso #fp-events .miscevents ul .dtstart {
   display: block;
   float: left;
@@ -668,23 +742,29 @@ p {
   padding: 0 5%;
   letter-spacing: 0.06em;
 }
-/* line 344, scss/style.scss */
+/* line 406, scss/style.scss */
 #page #torso #fp-events .colloquia ul .summary, #page #torso #fp-events .miscevents ul .summary {
   display: block;
   float: left;
   width: 60%;
   text-align: left;
 }
-/* line 352, scss/style.scss */
+/* line 411, scss/style.scss */
+#page #torso #fp-events .colloquia ul .summary .icon-link-ext:after, #page #torso #fp-events .miscevents ul .summary .icon-link-ext:after {
+  color: #999999;
+  font-size: 80%;
+  padding-left: .1em;
+}
+/* line 419, scss/style.scss */
 #page #torso #fp-events .miscevents {
   clear: both;
 }
-/* line 355, scss/style.scss */
+/* line 422, scss/style.scss */
 #page #torso #fp-events .more-events-link {
   margin-bottom: 3em;
   clear: both;
 }
-/* line 358, scss/style.scss */
+/* line 425, scss/style.scss */
 #page #torso #fp-events .more-events-link a {
   padding: 1.5em 5%;
   display: block;
@@ -692,20 +772,20 @@ p {
   text-align: center;
   background: #30ff8a;
 }
-/* line 364, scss/style.scss */
+/* line 431, scss/style.scss */
 #page #torso #fp-events .more-events-link a p {
   font-size: 1.25em;
   line-height: 1.2;
   margin-bottom: 0;
 }
-/* line 370, scss/style.scss */
+/* line 437, scss/style.scss */
 #page #torso #fp-events .more-events-link a:hover {
   margin-right: 5%;
   margin-left: 5%;
   background: black;
   color: #30ff8a;
 }
-/* line 380, scss/style.scss */
+/* line 447, scss/style.scss */
 #page #torso #fp-composers li {
   margin-bottom: 1em;
   -webkit-transition: all 0.2s ease-out;
@@ -714,7 +794,7 @@ p {
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-/* line 383, scss/style.scss */
+/* line 450, scss/style.scss */
 #page #torso #fp-composers li a {
   width: 100%;
   height: 5em;
@@ -735,7 +815,7 @@ p {
   -o-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
 }
-/* line 398, scss/style.scss */
+/* line 465, scss/style.scss */
 #page #torso #fp-composers li a img {
   float: left;
   max-width: 5em;
@@ -749,7 +829,7 @@ p {
   -o-transition: all 0.4s ease-out;
   transition: all 0.4s ease-out;
 }
-/* line 405, scss/style.scss */
+/* line 472, scss/style.scss */
 #page #torso #fp-composers li a span {
   font-size: 0.85em;
   display: inline-block;
@@ -760,7 +840,7 @@ p {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 416, scss/style.scss */
+/* line 483, scss/style.scss */
 #page #torso #fp-composers li a:hover {
   background: black;
   color: #30ff8a;
@@ -771,7 +851,7 @@ p {
   -o-transition: all 0.1s ease-in;
   transition: all 0.1s ease-in;
 }
-/* line 421, scss/style.scss */
+/* line 488, scss/style.scss */
 #page #torso #fp-composers li a:hover img {
   -webkit-filter: grayscale(0) contrast(100%) brightness(100%) saturate(150%);
   -moz-filter: grayscale(0) contrast(100%) brightness(100%) saturate(150%);
@@ -782,7 +862,7 @@ p {
   -o-transition: all 0.4s ease-in;
   transition: all 0.4s ease-in;
 }
-/* line 427, scss/style.scss */
+/* line 494, scss/style.scss */
 #page #torso #fp-composers li:hover {
   padding: 0 5%;
   -webkit-transition: all 0.2s ease-in;
@@ -791,7 +871,7 @@ p {
   -o-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
-/* line 433, scss/style.scss */
+/* line 500, scss/style.scss */
 #page #torso #fp-archive-link a {
   padding: 1.5em 5%;
   display: block;
@@ -799,27 +879,71 @@ p {
   text-align: center;
   background: #30ff8a;
 }
-/* line 439, scss/style.scss */
+/* line 506, scss/style.scss */
 #page #torso #fp-archive-link a p {
   font-size: 1.25em;
   line-height: 1.2;
   margin-bottom: 0;
 }
-/* line 445, scss/style.scss */
+/* line 512, scss/style.scss */
 #page #torso #fp-archive-link a:hover {
   margin: 0 5%;
   background: black;
   color: #30ff8a;
 }
-/* line 449, scss/style.scss */
+/* line 516, scss/style.scss */
 #page #torso #fp-archive-link a:hover h2 {
   color: #30ff8a;
+}
+/* line 526, scss/style.scss */
+#page #torso header {
+  text-align: center;
+}
+/* line 528, scss/style.scss */
+#page #torso header nav {
+  font-size: 2em;
+  position: relative;
+  top: -2.2em;
+  height: 0;
+  width: 100%;
+  max-width: 12em;
+  margin: 0 auto;
+  line-height: 1;
+}
+/* line 537, scss/style.scss */
+#page #torso header nav a {
+  border-bottom: none;
+  padding: 0.3em 0.2em 0.2em;
+  background: #30ff8a;
+}
+/* line 542, scss/style.scss */
+#page #torso header nav a:hover {
+  background: black;
+  color: #30ff8a;
+}
+/* line 546, scss/style.scss */
+#page #torso header nav a.icon-left-arrow-bold {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-left: 0.1em;
+}
+/* line 552, scss/style.scss */
+#page #torso header nav a.icon-right-arrow-bold {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-right: 0.1em;
+}
+/* line 558, scss/style.scss */
+#page #torso header nav a.icon-left-arrow-bold:before, #page #torso header nav a.icon-right-arrow-bold:before {
+  margin: 0;
 }
 
 /* ==========================================================================
    Footer Styles
    ========================================================================== */
-/* line 461, scss/style.scss */
+/* line 571, scss/style.scss */
 footer {
   clear: both;
   color: #999999;
@@ -835,16 +959,16 @@ footer {
    Media Queries
    ========================================================================== */
 @media only screen and (min-width: 45em) {
-  /* line 478, scss/style.scss */
-  #page header {
+  /* line 588, scss/style.scss */
+  #page .site-header {
     margin-top: -0.55em;
     margin-bottom: 1.5em;
     text-align: center;
     height: auto;
     background: transparent;
   }
-  /* line 484, scss/style.scss */
-  #page header h1 {
+  /* line 594, scss/style.scss */
+  #page .site-header h1 {
     margin: 0;
     padding-left: 0;
     font-size: 4.5em;
@@ -852,116 +976,116 @@ footer {
     width: 100%;
     letter-spacing: 0;
   }
-  /* line 491, scss/style.scss */
-  #page header h1 .lowercase {
+  /* line 601, scss/style.scss */
+  #page .site-header h1 .lowercase {
     display: inline;
   }
-  /* line 495, scss/style.scss */
-  #page header a {
+  /* line 605, scss/style.scss */
+  #page .site-header a {
     color: black;
   }
-  /* line 499, scss/style.scss */
-  #page header .menu {
+  /* line 609, scss/style.scss */
+  #page .site-header .menu {
     display: block;
     font-size: 1.125em;
     line-height: 2.6666666666em;
   }
-  /* line 503, scss/style.scss */
-  #page header .menu ul {
+  /* line 613, scss/style.scss */
+  #page .site-header .menu ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
   }
-  /* line 508, scss/style.scss */
-  #page header .menu li {
+  /* line 618, scss/style.scss */
+  #page .site-header .menu li {
     display: inline-block;
     margin-right: .5em;
   }
-  /* line 512, scss/style.scss */
-  #page header .menu li:nth-child(odd) {
+  /* line 622, scss/style.scss */
+  #page .site-header .menu li:nth-child(odd) {
     background-color: transparent;
   }
-  /* line 515, scss/style.scss */
-  #page header .menu li:nth-child(even) {
+  /* line 625, scss/style.scss */
+  #page .site-header .menu li:nth-child(even) {
     background-color: transparent;
   }
-  /* line 518, scss/style.scss */
-  #page header .menu li:last-child {
+  /* line 628, scss/style.scss */
+  #page .site-header .menu li:last-child {
     margin-right: 0;
   }
-  /* line 521, scss/style.scss */
-  #page header .menu .current-menu-item a:before {
+  /* line 631, scss/style.scss */
+  #page .site-header .menu .current-menu-item a:before {
     content: '';
   }
-  /* line 524, scss/style.scss */
-  #page header .menu a {
+  /* line 634, scss/style.scss */
+  #page .site-header .menu a {
     border-radius: 2em;
     color: #222222;
     padding: 0 .5em;
   }
-  /* line 529, scss/style.scss */
-  #page header .menu a:hover {
+  /* line 639, scss/style.scss */
+  #page .site-header .menu a:hover {
     background: #30ff8a;
   }
-  /* line 534, scss/style.scss */
-  #page header .menu-button {
+  /* line 644, scss/style.scss */
+  #page .site-header .menu-button {
     display: none;
   }
-  /* line 540, scss/style.scss */
+  /* line 650, scss/style.scss */
   #page #torso .fp-section,
   #page #torso .p-section {
     padding: 0 12.5%;
     padding-top: 1.5em;
     padding-bottom: 1.5em;
   }
-  /* line 545, scss/style.scss */
+  /* line 655, scss/style.scss */
   #page #torso #fp-blurb {
     font-size: 1.5em;
     line-height: 1.5;
   }
-  /* line 550, scss/style.scss */
+  /* line 660, scss/style.scss */
   #page #torso #fp-events .concerts, #page #torso #fp-events .colloquia {
     width: 47%;
     padding-right: 6%;
     display: block;
     float: left;
   }
-  /* line 556, scss/style.scss */
+  /* line 666, scss/style.scss */
   #page #torso #fp-events .concerts:nth-child(2n), #page #torso #fp-events .colloquia:nth-child(2n) {
     padding-right: 0;
   }
-  /* line 559, scss/style.scss */
+  /* line 669, scss/style.scss */
   #page #torso #fp-events .concerts.solo, #page #torso #fp-events .colloquia.solo {
     width: 49.4%;
     margin-left: auto;
     margin-right: auto;
     float: none;
   }
-  /* line 565, scss/style.scss */
+  /* line 675, scss/style.scss */
   #page #torso #fp-events .more-events-link, #page #torso #fp-events .miscevents {
     width: 59.4%;
     margin-right: auto;
     margin-left: auto;
   }
-  /* line 572, scss/style.scss */
+  /* line 682, scss/style.scss */
   #page #torso #fp-composers li {
     float: left;
     margin-bottom: 0.4166666em;
     width: 19%;
     margin-right: 1.2%;
   }
-  /* line 577, scss/style.scss */
+  /* line 687, scss/style.scss */
   #page #torso #fp-composers li a {
     height: auto;
     overflow: hidden;
   }
-  /* line 580, scss/style.scss */
+  /* line 690, scss/style.scss */
   #page #torso #fp-composers li a img {
     float: none;
     width: 100%;
     max-width: none;
   }
-  /* line 585, scss/style.scss */
+  /* line 695, scss/style.scss */
   #page #torso #fp-composers li a span {
     display: table-cell;
     vertical-align: middle;
@@ -972,40 +1096,49 @@ footer {
     padding: 0 5%;
     white-space: normal;
   }
-  /* line 597, scss/style.scss */
+  /* line 707, scss/style.scss */
   #page #torso #fp-composers li:hover {
     padding: 0;
   }
-  /* line 600, scss/style.scss */
+  /* line 710, scss/style.scss */
   #page #torso #fp-composers li:nth-child(5n) {
     margin-right: 0;
   }
-  /* line 605, scss/style.scss */
+  /* line 715, scss/style.scss */
   #page #torso #fp-archive-link a {
     width: 49.4%;
     margin: 0 auto;
   }
-  /* line 609, scss/style.scss */
+  /* line 719, scss/style.scss */
   #page #torso #fp-archive-link a:hover {
     width: 44.4%;
     margin: 0 auto;
   }
+  /* line 726, scss/style.scss */
+  #page #torso header nav a {
+    background: transparent;
+  }
+  /* line 729, scss/style.scss */
+  #page #torso header nav a:hover {
+    background: black;
+    color: #30ff8a;
+  }
 }
 @media only screen and (max-width: 15em) {
-  /* line 619, scss/style.scss */
+  /* line 740, scss/style.scss */
   html {
     font-size: 0.8em;
   }
-  /* line 626, scss/style.scss */
+  /* line 747, scss/style.scss */
   html #page #torso #fp-composers li a img {
     display: none;
   }
-  /* line 629, scss/style.scss */
+  /* line 750, scss/style.scss */
   html #page #torso #fp-composers li a span {
     max-width: 90%;
     padding: 0 5%;
   }
-  /* line 635, scss/style.scss */
+  /* line 756, scss/style.scss */
   html #page #torso #fp-composers li:hover {
     padding: 0;
   }
@@ -1013,7 +1146,7 @@ footer {
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-/* line 655, scss/style.scss */
+/* line 776, scss/style.scss */
 .ir {
   background-color: transparent;
   border: 0;
@@ -1021,7 +1154,7 @@ footer {
   *text-indent: -9999px;
 }
 
-/* line 662, scss/style.scss */
+/* line 783, scss/style.scss */
 .ir:before {
   content: "";
   display: block;
@@ -1029,13 +1162,13 @@ footer {
   height: 150%;
 }
 
-/* line 669, scss/style.scss */
+/* line 790, scss/style.scss */
 .hidden {
   display: none !important;
   visibility: hidden;
 }
 
-/* line 674, scss/style.scss */
+/* line 795, scss/style.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -1047,7 +1180,7 @@ footer {
   width: 1px;
 }
 
-/* line 686, scss/style.scss */
+/* line 807, scss/style.scss */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   clip: auto;
@@ -1058,24 +1191,24 @@ footer {
   width: auto;
 }
 
-/* line 695, scss/style.scss */
+/* line 816, scss/style.scss */
 .invisible {
   visibility: hidden;
 }
 
-/* line 700, scss/style.scss */
+/* line 821, scss/style.scss */
 .clearfix:before,
 .clearfix:after {
   content: " ";
   display: table;
 }
 
-/* line 705, scss/style.scss */
+/* line 826, scss/style.scss */
 .clearfix:after {
   clear: both;
 }
 
-/* line 709, scss/style.scss */
+/* line 830, scss/style.scss */
 .clearfix {
   *zoom: 1;
 }
@@ -1084,7 +1217,7 @@ footer {
    Print styles
    ========================================================================== */
 @media print {
-  /* line 718, scss/style.scss */
+  /* line 839, scss/style.scss */
   * {
     background: transparent !important;
     color: #000 !important;
@@ -1092,48 +1225,48 @@ footer {
     text-shadow: none !important;
   }
 
-  /* line 726, scss/style.scss */
+  /* line 847, scss/style.scss */
   a,
   a:visited {
     text-decoration: underline;
   }
 
-  /* line 730, scss/style.scss */
+  /* line 851, scss/style.scss */
   a[href]:after {
     content: " (" attr(href) ")";
   }
 
-  /* line 734, scss/style.scss */
+  /* line 855, scss/style.scss */
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
 
-  /* line 740, scss/style.scss */
+  /* line 861, scss/style.scss */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: "";
   }
 
-  /* line 745, scss/style.scss */
+  /* line 866, scss/style.scss */
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
-  /* line 750, scss/style.scss */
+  /* line 871, scss/style.scss */
   thead {
     display: table-header-group;
   }
 
-  /* line 755, scss/style.scss */
+  /* line 876, scss/style.scss */
   tr,
   img {
     page-break-inside: avoid;
   }
 
-  /* line 759, scss/style.scss */
+  /* line 880, scss/style.scss */
   img {
     max-width: 100% !important;
   }
@@ -1142,7 +1275,7 @@ footer {
     margin: 0.5cm;
 }
 
-  /* line 769, scss/style.scss */
+  /* line 890, scss/style.scss */
   p,
   h2,
   h3 {
@@ -1150,7 +1283,7 @@ footer {
     widows: 3;
   }
 
-  /* line 775, scss/style.scss */
+  /* line 896, scss/style.scss */
   h2,
   h3 {
     page-break-after: avoid;

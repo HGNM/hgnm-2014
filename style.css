@@ -598,9 +598,6 @@ p {
   /* ==========================================================================
      Front Page Styles
      ========================================================================== */
-  /* ==========================================================================
-     Archive Styles
-     ========================================================================== */
 }
 /* line 300, scss/style.scss */
 #page #torso a,
@@ -895,55 +892,86 @@ p {
 #page #torso #fp-archive-link a:hover h2 {
   color: #30ff8a;
 }
-/* line 526, scss/style.scss */
-#page #torso header {
+
+/* ==========================================================================
+   Archive Nav Styles
+   ========================================================================== */
+/* line 528, scss/style.scss */
+.archive-header {
   text-align: center;
 }
-/* line 528, scss/style.scss */
-#page #torso header nav {
+/* line 530, scss/style.scss */
+.archive-header #archive-nav {
+  margin-bottom: 1.5em;
+}
+/* line 533, scss/style.scss */
+.archive-header #archive-nav .left .icon, .archive-header #archive-nav .right .icon {
+  display: none;
+}
+
+/* line 544, scss/style.scss */
+.fontface.generatedcontent #page #torso .archive-header #archive-nav {
   font-size: 2em;
   position: relative;
-  top: -2.2em;
+  top: -2.1em;
   height: 0;
   width: 100%;
   max-width: 12em;
   margin: 0 auto;
   line-height: 1;
 }
-/* line 537, scss/style.scss */
-#page #torso header nav a {
+/* line 553, scss/style.scss */
+.fontface.generatedcontent #page #torso .archive-header #archive-nav .left, .fontface.generatedcontent #page #torso .archive-header #archive-nav .right {
   border-bottom: none;
-  padding: 0.3em 0.2em 0.2em;
   background: #30ff8a;
 }
-/* line 542, scss/style.scss */
-#page #torso header nav a:hover {
+/* line 556, scss/style.scss */
+.fontface.generatedcontent #page #torso .archive-header #archive-nav .left .icon, .fontface.generatedcontent #page #torso .archive-header #archive-nav .right .icon {
+  display: inline-block;
+  padding: 0.2em 0.1em 0.1em;
+}
+/* line 560, scss/style.scss */
+.fontface.generatedcontent #page #torso .archive-header #archive-nav .left .text, .fontface.generatedcontent #page #torso .archive-header #archive-nav .right .text {
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  position: absolute;
+  height: 1px;
+  width: 1px;
+}
+/* line 568, scss/style.scss */
+.fontface.generatedcontent #page #torso .archive-header #archive-nav .left:hover, .fontface.generatedcontent #page #torso .archive-header #archive-nav .right:hover {
   background: black;
   color: #30ff8a;
 }
-/* line 546, scss/style.scss */
-#page #torso header nav a.icon-left-arrow-bold {
+/* line 572, scss/style.scss */
+.fontface.generatedcontent #page #torso .archive-header #archive-nav .left {
   position: absolute;
   top: 0;
   left: 0;
-  padding-left: 0.1em;
 }
-/* line 552, scss/style.scss */
-#page #torso header nav a.icon-right-arrow-bold {
+/* line 576, scss/style.scss */
+.fontface.generatedcontent #page #torso .archive-header #archive-nav .left .icon {
+  padding-right: 0.2em;
+}
+/* line 580, scss/style.scss */
+.fontface.generatedcontent #page #torso .archive-header #archive-nav .right {
   position: absolute;
   top: 0;
   right: 0;
-  padding-right: 0.1em;
 }
-/* line 558, scss/style.scss */
-#page #torso header nav a.icon-left-arrow-bold:before, #page #torso header nav a.icon-right-arrow-bold:before {
+/* line 584, scss/style.scss */
+.fontface.generatedcontent #page #torso .archive-header #archive-nav .right .icon {
+  padding-left: 0.2em;
+}
+/* line 588, scss/style.scss */
+.fontface.generatedcontent #page #torso .archive-header #archive-nav .icon-left-arrow-bold:before, .fontface.generatedcontent #page #torso .archive-header #archive-nav .icon-right-arrow-bold:before {
   margin: 0;
 }
 
 /* ==========================================================================
    Footer Styles
    ========================================================================== */
-/* line 571, scss/style.scss */
+/* line 601, scss/style.scss */
 footer {
   clear: both;
   color: #999999;
@@ -959,7 +987,7 @@ footer {
    Media Queries
    ========================================================================== */
 @media only screen and (min-width: 45em) {
-  /* line 588, scss/style.scss */
+  /* line 618, scss/style.scss */
   #page .site-header {
     margin-top: -0.55em;
     margin-bottom: 1.5em;
@@ -967,7 +995,7 @@ footer {
     height: auto;
     background: transparent;
   }
-  /* line 594, scss/style.scss */
+  /* line 624, scss/style.scss */
   #page .site-header h1 {
     margin: 0;
     padding-left: 0;
@@ -976,116 +1004,116 @@ footer {
     width: 100%;
     letter-spacing: 0;
   }
-  /* line 601, scss/style.scss */
+  /* line 631, scss/style.scss */
   #page .site-header h1 .lowercase {
     display: inline;
   }
-  /* line 605, scss/style.scss */
+  /* line 635, scss/style.scss */
   #page .site-header a {
     color: black;
   }
-  /* line 609, scss/style.scss */
+  /* line 639, scss/style.scss */
   #page .site-header .menu {
     display: block;
     font-size: 1.125em;
     line-height: 2.6666666666em;
   }
-  /* line 613, scss/style.scss */
+  /* line 643, scss/style.scss */
   #page .site-header .menu ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
   }
-  /* line 618, scss/style.scss */
+  /* line 648, scss/style.scss */
   #page .site-header .menu li {
     display: inline-block;
     margin-right: .5em;
   }
-  /* line 622, scss/style.scss */
+  /* line 652, scss/style.scss */
   #page .site-header .menu li:nth-child(odd) {
     background-color: transparent;
   }
-  /* line 625, scss/style.scss */
+  /* line 655, scss/style.scss */
   #page .site-header .menu li:nth-child(even) {
     background-color: transparent;
   }
-  /* line 628, scss/style.scss */
+  /* line 658, scss/style.scss */
   #page .site-header .menu li:last-child {
     margin-right: 0;
   }
-  /* line 631, scss/style.scss */
+  /* line 661, scss/style.scss */
   #page .site-header .menu .current-menu-item a:before {
     content: '';
   }
-  /* line 634, scss/style.scss */
+  /* line 664, scss/style.scss */
   #page .site-header .menu a {
     border-radius: 2em;
     color: #222222;
     padding: 0 .5em;
   }
-  /* line 639, scss/style.scss */
+  /* line 669, scss/style.scss */
   #page .site-header .menu a:hover {
     background: #30ff8a;
   }
-  /* line 644, scss/style.scss */
+  /* line 674, scss/style.scss */
   #page .site-header .menu-button {
     display: none;
   }
-  /* line 650, scss/style.scss */
+  /* line 680, scss/style.scss */
   #page #torso .fp-section,
   #page #torso .p-section {
     padding: 0 12.5%;
     padding-top: 1.5em;
     padding-bottom: 1.5em;
   }
-  /* line 655, scss/style.scss */
+  /* line 685, scss/style.scss */
   #page #torso #fp-blurb {
     font-size: 1.5em;
     line-height: 1.5;
   }
-  /* line 660, scss/style.scss */
+  /* line 690, scss/style.scss */
   #page #torso #fp-events .concerts, #page #torso #fp-events .colloquia {
     width: 47%;
     padding-right: 6%;
     display: block;
     float: left;
   }
-  /* line 666, scss/style.scss */
+  /* line 696, scss/style.scss */
   #page #torso #fp-events .concerts:nth-child(2n), #page #torso #fp-events .colloquia:nth-child(2n) {
     padding-right: 0;
   }
-  /* line 669, scss/style.scss */
+  /* line 699, scss/style.scss */
   #page #torso #fp-events .concerts.solo, #page #torso #fp-events .colloquia.solo {
     width: 49.4%;
     margin-left: auto;
     margin-right: auto;
     float: none;
   }
-  /* line 675, scss/style.scss */
+  /* line 705, scss/style.scss */
   #page #torso #fp-events .more-events-link, #page #torso #fp-events .miscevents {
     width: 59.4%;
     margin-right: auto;
     margin-left: auto;
   }
-  /* line 682, scss/style.scss */
+  /* line 712, scss/style.scss */
   #page #torso #fp-composers li {
     float: left;
     margin-bottom: 0.4166666em;
     width: 19%;
     margin-right: 1.2%;
   }
-  /* line 687, scss/style.scss */
+  /* line 717, scss/style.scss */
   #page #torso #fp-composers li a {
     height: auto;
     overflow: hidden;
   }
-  /* line 690, scss/style.scss */
+  /* line 720, scss/style.scss */
   #page #torso #fp-composers li a img {
     float: none;
     width: 100%;
     max-width: none;
   }
-  /* line 695, scss/style.scss */
+  /* line 725, scss/style.scss */
   #page #torso #fp-composers li a span {
     display: table-cell;
     vertical-align: middle;
@@ -1096,49 +1124,49 @@ footer {
     padding: 0 5%;
     white-space: normal;
   }
-  /* line 707, scss/style.scss */
+  /* line 737, scss/style.scss */
   #page #torso #fp-composers li:hover {
     padding: 0;
   }
-  /* line 710, scss/style.scss */
+  /* line 740, scss/style.scss */
   #page #torso #fp-composers li:nth-child(5n) {
     margin-right: 0;
   }
-  /* line 715, scss/style.scss */
+  /* line 745, scss/style.scss */
   #page #torso #fp-archive-link a {
     width: 49.4%;
     margin: 0 auto;
   }
-  /* line 719, scss/style.scss */
+  /* line 749, scss/style.scss */
   #page #torso #fp-archive-link a:hover {
     width: 44.4%;
     margin: 0 auto;
   }
-  /* line 726, scss/style.scss */
-  #page #torso header nav a {
-    background: transparent;
+
+  /* line 759, scss/style.scss */
+  .fontface.generatedcontent #page #torso .archive-header {
+    margin-bottom: 1.5em;
   }
-  /* line 729, scss/style.scss */
-  #page #torso header nav a:hover {
-    background: black;
-    color: #30ff8a;
+  /* line 762, scss/style.scss */
+  .fontface.generatedcontent #page #torso .archive-header #archive-nav .left, .fontface.generatedcontent #page #torso .archive-header #archive-nav .right {
+    background: transparent;
   }
 }
 @media only screen and (max-width: 15em) {
-  /* line 740, scss/style.scss */
+  /* line 773, scss/style.scss */
   html {
     font-size: 0.8em;
   }
-  /* line 747, scss/style.scss */
+  /* line 780, scss/style.scss */
   html #page #torso #fp-composers li a img {
     display: none;
   }
-  /* line 750, scss/style.scss */
+  /* line 783, scss/style.scss */
   html #page #torso #fp-composers li a span {
     max-width: 90%;
     padding: 0 5%;
   }
-  /* line 756, scss/style.scss */
+  /* line 789, scss/style.scss */
   html #page #torso #fp-composers li:hover {
     padding: 0;
   }
@@ -1146,7 +1174,7 @@ footer {
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-/* line 776, scss/style.scss */
+/* line 809, scss/style.scss */
 .ir {
   background-color: transparent;
   border: 0;
@@ -1154,7 +1182,7 @@ footer {
   *text-indent: -9999px;
 }
 
-/* line 783, scss/style.scss */
+/* line 816, scss/style.scss */
 .ir:before {
   content: "";
   display: block;
@@ -1162,13 +1190,13 @@ footer {
   height: 150%;
 }
 
-/* line 790, scss/style.scss */
+/* line 823, scss/style.scss */
 .hidden {
   display: none !important;
   visibility: hidden;
 }
 
-/* line 795, scss/style.scss */
+/* line 828, scss/style.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -1180,7 +1208,7 @@ footer {
   width: 1px;
 }
 
-/* line 807, scss/style.scss */
+/* line 840, scss/style.scss */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   clip: auto;
@@ -1191,24 +1219,24 @@ footer {
   width: auto;
 }
 
-/* line 816, scss/style.scss */
+/* line 849, scss/style.scss */
 .invisible {
   visibility: hidden;
 }
 
-/* line 821, scss/style.scss */
+/* line 854, scss/style.scss */
 .clearfix:before,
 .clearfix:after {
   content: " ";
   display: table;
 }
 
-/* line 826, scss/style.scss */
+/* line 859, scss/style.scss */
 .clearfix:after {
   clear: both;
 }
 
-/* line 830, scss/style.scss */
+/* line 863, scss/style.scss */
 .clearfix {
   *zoom: 1;
 }
@@ -1217,7 +1245,7 @@ footer {
    Print styles
    ========================================================================== */
 @media print {
-  /* line 839, scss/style.scss */
+  /* line 872, scss/style.scss */
   * {
     background: transparent !important;
     color: #000 !important;
@@ -1225,48 +1253,48 @@ footer {
     text-shadow: none !important;
   }
 
-  /* line 847, scss/style.scss */
+  /* line 880, scss/style.scss */
   a,
   a:visited {
     text-decoration: underline;
   }
 
-  /* line 851, scss/style.scss */
+  /* line 884, scss/style.scss */
   a[href]:after {
     content: " (" attr(href) ")";
   }
 
-  /* line 855, scss/style.scss */
+  /* line 888, scss/style.scss */
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
 
-  /* line 861, scss/style.scss */
+  /* line 894, scss/style.scss */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: "";
   }
 
-  /* line 866, scss/style.scss */
+  /* line 899, scss/style.scss */
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
-  /* line 871, scss/style.scss */
+  /* line 904, scss/style.scss */
   thead {
     display: table-header-group;
   }
 
-  /* line 876, scss/style.scss */
+  /* line 909, scss/style.scss */
   tr,
   img {
     page-break-inside: avoid;
   }
 
-  /* line 880, scss/style.scss */
+  /* line 913, scss/style.scss */
   img {
     max-width: 100% !important;
   }
@@ -1275,7 +1303,7 @@ footer {
     margin: 0.5cm;
 }
 
-  /* line 890, scss/style.scss */
+  /* line 923, scss/style.scss */
   p,
   h2,
   h3 {
@@ -1283,7 +1311,7 @@ footer {
     widows: 3;
   }
 
-  /* line 896, scss/style.scss */
+  /* line 929, scss/style.scss */
   h2,
   h3 {
     page-break-after: avoid;

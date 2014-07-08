@@ -210,7 +210,7 @@ p {
 #page {
 	overflow:hidden;
 	margin: 0 auto;
-	header {
+	.site-header {
 		height: 3em;
 		color: $reverse-text;
 		background: $black;
@@ -537,7 +537,7 @@ footer {
 
 @media only screen and (min-width: 45em) {
 	#page {
-		header {
+		.site-header {
 			margin-top:-0.55em;
 			margin-bottom:1.5em;
 			text-align: center;

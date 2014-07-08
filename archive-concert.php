@@ -129,7 +129,7 @@ get_header();
 								}
 								elseif($type == 'Guest Speaker') {
 									if(get_field('url', $colloquium->ID)) {
-										echo '<a href="' . esc_url( get_field('url', $colloquium->ID) ) . '" class="url exit" target="_blank">' . get_the_title($colloquium->ID) . '</a>';
+										echo '<a href="' . esc_url( get_field('url', $colloquium->ID) ) . '" class="url icon-link-ext" target="_blank">' . get_the_title($colloquium->ID) . '</a>';
 									}
 									else {
 										echo get_the_title($colloquium->ID);

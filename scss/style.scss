@@ -721,6 +721,17 @@ footer {
 					margin: 0 auto;
 				}
 			} // </#fp-archive-link>
+			header {
+				nav {
+					a {
+						background: transparent;
+					}
+					a:hover {
+						background: $black;
+						color: $link-highlight;
+					}
+				}
+			}
 		} // </#torso>
 	} // </#page>
 } // end media-query

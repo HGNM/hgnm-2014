@@ -84,7 +84,13 @@ get_header();
 		}
 		else {
 			// OK, now we’re talking. Check if posts exist?
-			echo '<article id="fp-events" class="p-section"><h2>Archives: ' . $seasontitle . '</h2>';
+			?>
+			<article id="fp-events" class="p-section">
+				<header>
+					<h2>Archives<br /><?php echo $seasontitle ?></h2>
+					<nav class="clearfix"><a href="" title="Older" class="icon-left-arrow-bold"></a> <a href="" title="Newer" class="icon-right-arrow-bold"></a></nav>
+				</header>
+			<?php
 			if ( have_posts() ) : ?>
 				<section class="concerts <?php if(!$colloquia) { echo 'solo'; } ?>">
 					<h3>Concerts</h3>

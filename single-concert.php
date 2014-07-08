@@ -19,12 +19,17 @@ get_header();
 						<h3>Programme</h3>
 						<ul>
 							<?php while( have_rows('programme') ): the_row(); ?>
-								<?php if (get_sub_field('composer') && get_sub_field('work_title')) : ?>
-									<li>
-										<?php $composerid = get_sub_field('composer'); ?>
-										<strong class="composer"><a href="<?php echo esc_url( get_permalink($composerid->ID) ); ?>"><?php echo get_the_title($composerid->ID); ?></a><br /></strong>
-										<em class="work_title"><?php the_sub_field('work_title'); ?></em>
-									</li>
+								<?php if (get_sub_field('composer')) : ?>
+									<?php $composerid = get_sub_field('composer'); ?>
+									<?php if (get_sub_field('work_title')) : ?>
+										<li>
+											<strong class="composer"><a href="<?php echo esc_url( get_permalink($composerid->ID) ); ?>"><?php echo get_the_title($composerid->ID); ?></a><br /></strong>
+											<em class="work_title"><?php the_sub_field('work_title'); ?></em>
+										</li>
+									<?php endif; ?>
+									<?php if (!get_sub_field('work_title')) : ?>
+										<a href="<?php echo esc_url( get_permalink($composerid->ID) ); ?>"><?php echo get_the_title($composerid->ID); ?></a>, 
+									<?php endif; ?>
 								<?php endif; ?>
 							<?php endwhile; ?>
 							<?php while( have_rows('programme_plus') ): the_row(); ?>

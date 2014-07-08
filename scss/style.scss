@@ -518,51 +518,81 @@ p {
 				}
 			}
 		}
-		
-		/* ==========================================================================
-		   Archive Styles
-		   ========================================================================== */
-		
-		header {
-			text-align: center;
-			nav {
-				font-size: 2em;
-				position: relative;
-				top: -2.2em;
-				height: 0;
-				width: 100%;
-				max-width: 12em;
-				margin: 0 auto;
-				line-height: 1;
-				a {
-					border-bottom: none;
-					padding: 0.3em 0.2em 0.2em;
-					background: $link-highlight;
-				}
-				a:hover {
-					background: $black;
-					color: $link-highlight;
-				}
-				a.icon-left-arrow-bold {
-					position:absolute;
-					top: 0;
-					left: 0;
-					padding-left:0.1em;
-				}
-				a.icon-right-arrow-bold {
-					position:absolute;
-					top: 0;
-					right: 0;
-					padding-right:0.1em;
-				}
-				a.icon-left-arrow-bold:before, a.icon-right-arrow-bold:before {
-					margin:0;
+	} // </#torso>
+} // </#page>
+
+/* ==========================================================================
+   Archive Nav Styles
+   ========================================================================== */
+
+.archive-header {
+	text-align: center;
+	#archive-nav {
+		margin-bottom: 1.5em;
+		.left, .right {
+			.icon {
+				display:none;
+			}
+		}
+	}
+}
+
+.fontface.generatedcontent {
+	#page {
+		#torso {
+			.archive-header {
+				#archive-nav {
+					font-size: 2em;
+					position: relative;
+					top: -2.1em;
+					height: 0;
+					width: 100%;
+					max-width: 12em;
+					margin: 0 auto;
+					line-height: 1;
+					.left,.right {
+						border-bottom: none;
+						background: $link-highlight;
+						.icon {
+							display:inline-block;
+							padding: 0.2em 0.1em 0.1em;
+						}
+						.text {
+							clip: rect(0 0 0 0);
+							overflow: hidden;
+							position: absolute;
+							height: 1px;
+							width: 1px;
+						}
+					}
+					.left:hover,.right:hover {
+						background: $black;
+						color: $link-highlight;
+					}
+					.left {
+						position:absolute;
+						top: 0;
+						left: 0;
+						.icon {
+							padding-right:0.2em;
+						}
+					}
+					.right {
+						position:absolute;
+						top: 0;
+						right: 0;
+						.icon {
+							padding-left:0.2em;
+						}
+					}
+					.icon-left-arrow-bold:before, .icon-right-arrow-bold:before {
+						margin:0;
+					}
 				}
 			}
 		}
-		
-	} // </#torso>
-} // </#page>
+	}
+}
 
 /* ==========================================================================
    Footer Styles
@@ -721,19 +751,22 @@ footer {
 					margin: 0 auto;
 				}
 			} // </#fp-archive-link>
-			header {
-				nav {
-					a {
-						background: transparent;
-					}
-					a:hover {
-						background: $black;
-						color: $link-highlight;
+		} // </#torso>
+	} // </#page>
+	.fontface.generatedcontent {
+		#page {
+			#torso {
+				.archive-header {
+					margin-bottom: 1.5em;
+					#archive-nav {
+						.left,.right {
+							background: transparent;
+						}
 					}
 				}
 			}
-		} // </#torso>
-	} // </#page>
+		}
+	}
 } // end media-query
 
 @media only screen and (max-width: 15em) {

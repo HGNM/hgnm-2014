@@ -513,6 +513,41 @@ p {
 				}
 			}
 		}
+		
+		/* ==========================================================================
+		   Archive Styles
+		   ========================================================================== */
+		
+		header {
+			text-align: center;
+			nav {
+				font-size: 2em;
+				position: relative;
+				top: -2.3em;
+				height: 0;
+				width: 100%;
+				max-width: 12em;
+				margin: 0 auto;
+				line-height: 2;
+				a {
+					border-bottom: none;
+				}
+				a:first-child {
+					position:absolute;
+					top: 0;
+					left: 0;
+				}
+				a:last-child {
+					position:absolute;
+					top: 0;
+					right: 0;
+				}
+				.icon-left-arrow-bold:before, .icon-right-arrow-bold:before {
+					margin:0;
+				}
+			}
+		}
+		
 	} // </#torso>
 } // </#page>
 

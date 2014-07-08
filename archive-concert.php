@@ -107,7 +107,10 @@ get_header();
 					<h2>Archives<br /><?php echo $seasontitle ?></h2>
 					<nav class="clearfix">
 						<a href="<?php echo get_post_type_archive_link('concert') . ($yearquery - 1); ?>" title="Older" class="icon-left-arrow-bold"></a>
+						<?php if (($seasonstart + 10000) > date('Ymd', strtotime(date('Ymd', mktime()) . ' + 365 day'))) : ?>
+						<?php else: ?>
 						<a href="<?php echo get_post_type_archive_link('concert') . ($yearquery + 1); ?>" title="Newer" class="icon-right-arrow-bold"></a>
+						<?php endif; ?>
 					</nav>
 				</header>
 			<?php

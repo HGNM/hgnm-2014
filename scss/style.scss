@@ -528,26 +528,34 @@ p {
 			nav {
 				font-size: 2em;
 				position: relative;
-				top: -2.3em;
+				top: -2.2em;
 				height: 0;
 				width: 100%;
 				max-width: 12em;
 				margin: 0 auto;
-				line-height: 2;
+				line-height: 1;
 				a {
 					border-bottom: none;
+					padding: 0.3em 0.2em 0.2em;
+					background: $link-highlight;
+				}
+				a:hover {
+					background: $black;
+					color: $link-highlight;
 				}
 				a.icon-left-arrow-bold {
 					position:absolute;
 					top: 0;
 					left: 0;
+					padding-left:0.1em;
 				}
 				a.icon-right-arrow-bold {
 					position:absolute;
 					top: 0;
 					right: 0;
+					padding-right:0.1em;
 				}
-				.icon-left-arrow-bold:before, .icon-right-arrow-bold:before {
+				a.icon-left-arrow-bold:before, a.icon-right-arrow-bold:before {
 					margin:0;
 				}
 			}

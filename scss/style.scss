@@ -537,12 +537,12 @@ p {
 				a {
 					border-bottom: none;
 				}
-				a:first-child {
+				a.icon-left-arrow-bold {
 					position:absolute;
 					top: 0;
 					left: 0;
 				}
-				a:last-child {
+				a.icon-right-arrow-bold {
 					position:absolute;
 					top: 0;
 					right: 0;

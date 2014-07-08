@@ -11,10 +11,10 @@ get_header();
 		else {
 			// Set correct year query from current date when no query_var present
 			if (date('m') > 8) {
-				$yearquery = date('Y');
+				$yearquery = date('Y') - 1;
 			}
 			else {
-				$yearquery = date('Y') - 1;
+				$yearquery = date('Y') - 2;
 			}
 		}
 		

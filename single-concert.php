@@ -10,7 +10,7 @@ get_header();
 				date_default_timezone_set('America/New_York');
 				$dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart') . ' 20:00')); ?>
 				<p><time class="value" datetime="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>">
-					<?php echo $dtstart->format('j F Y, ga'); ?>
+					<?php echo $dtstart->format('l jS F Y, ga'); ?>
 				</time><br />
 				<?php the_field('location') ?></p>
 				<section class="entry">

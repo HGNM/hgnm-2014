@@ -166,6 +166,30 @@ get_header();
 				<?php endif; ?>
 				
 				<?php
+				// ARCHIVE CONTENT
+				if( get_field('poster_pdf') || get_field('programme_pdf') ) {
+					echo '<section class="archive-docs"><ul>';
+					if( get_field('poster_pdf') ) {
+						$posterpdf = get_field('poster_pdf');
+						if ($posterpdf['mime_type'] == 'application/pdf') {
+							echo '<li><a href="' . esc_url($posterpdf['url']) . '">Download PDF of concert poster</a></li>';
+						}
+						else {
+							echo '<li><a href="' . esc_url($posterpdf['url']) . '">Download concert poster</a></li>';
+						}
+					}
+					if( get_field('programme_pdf') ) {
+						$programme = get_field('programme_pdf');
+						if ($programmepdf['mime_type'] == 'application/pdf') {
+							echo '<li><a href="' . esc_url($programmepdf['url']) . '">Download PDF of concert programme</a></li>';
+						}
+						else {
+							echo '<li><a href="' . esc_url($programmepdf['url']) . '">Download concert programme</a></li>';
+						}
+					}
+					echo '</ul></section>';
+				}
+				?>
 				
 			</article><!-- #posts -->
 			<?php endwhile; ?>

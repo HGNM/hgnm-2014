@@ -4,7 +4,7 @@ get_header();
 
 		if ( have_posts() ) : ?>
 			<?php while ( have_posts() ) : the_post(); ?>
-			<article id="posts" <?php post_class('p-section'); ?>>
+			<article id="post-<?php the_ID(); ?>" <?php post_class('p-section'); ?>>
 				<h2 class="post-title"><?php the_title(); ?></h2>
 				<?php $dtstart = DateTime::createFromFormat('d/m/Y', get_field('dtstart')); ?>
 				<p><time class="value" datetime="<?php echo $dtstart->format('Y-m-d'); ?>">

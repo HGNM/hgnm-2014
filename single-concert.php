@@ -125,7 +125,7 @@ get_header();
 									else {
 										echo $item['composer'];
 									}
-									echo '</strong><br /><em class="work_title">' . $item['work_title'] . '</em>';
+									echo '</strong> <em class="work_title">' . $item['work_title'] . '</em>';
 									echo '</li>';
 								}
 								echo '</ul>';

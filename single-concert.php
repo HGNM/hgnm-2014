@@ -191,6 +191,38 @@ get_header();
 				}
 				?>
 				
+				<?php
+				// A/V CONTENT
+				if( get_field('a_v') ) {
+					$audiolist = $fullprogramme;
+					$videolist = $fullprogramme;
+					foreach($audiolist as $key => $row) {
+						if($row['a_or_v'] !== 'Audio') unset($audiolist[$key]);
+					}
+					foreach($videolist as $key => $row) {
+						if($row['a_or_v'] !== 'Video') unset($videolist[$key]);
+					}
+					if($audiolist || $videolist) {
+						echo '<section class="multimedia">';
+						if ($audiolist) {
+							echo '<h3>Audio</h3><ul>';
+							foreach($audiolist as $item) {
+								echo '<li class="embed-container">' . $item['embed_link'] . '</li>';
+							}
+							echo '</ul>';
+						}
+						if ($videolist) {
+							echo '<h3>Video</h3><ul>';
+							foreach($videolist as $item) {
+									echo '<li class="embed-container">' . $item['embed_link'] . '</li>';
+							}
+							echo '</ul>';
+						}
+						echo '</section>';
+					}
+				}
+				?>
+				
 			</article><!-- #posts -->
 			<?php endwhile; ?>
 		<?php else: ?>

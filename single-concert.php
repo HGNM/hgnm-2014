@@ -10,13 +10,18 @@ get_header();
 				<?php
 				// SET TIMEZONE
 				date_default_timezone_set('America/New_York');
-				$dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart') . ' 20:00')); ?>
-				<p><time class="value" datetime="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>">
-					<?php echo $dtstart->format('l jS F Y, ga'); ?>
-				</time><br />
-				<?php the_field('location') ?></p>
-				<section class="entry">
-					<?php if( get_field('summary') ): ?>
+				$dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart') . ' 20:00'));
+				
+				// EVENT META — date, time & location
+				?>
+				<section class="event-meta">
+					<p class="dtstart"><time class="value" datetime="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>">
+						<?php echo $dtstart->format('l j') . '<sup>' . $dtstart->format('S') . '</sup> ' . $dtstart->format('F Y, ga'); ?>
+					</time></p>
+					
+					<p class="location"><?php the_field('location') ?></p>
+				</section>
+
 				<?php
 				// SUMMARY FIELD
 				if( get_field('summary') ): ?>

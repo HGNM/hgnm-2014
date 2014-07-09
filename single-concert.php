@@ -4,8 +4,9 @@ get_header();
 
 		if ( have_posts() ) : ?>
 			<?php while ( have_posts() ) : the_post(); ?>
-			<article id="post-<?php the_ID(); ?>" <?php post_class('p-section'); ?>>
-				<h2 class="post-title"><?php the_title(); ?></h2>
+			<article id="post-<?php the_ID(); ?>" <?php post_class('p-section vevent'); ?>>
+				<h2 class="post-title summary"><?php the_title(); ?></h2>
+
 				<?php
 				// SET TIMEZONE
 				date_default_timezone_set('America/New_York');

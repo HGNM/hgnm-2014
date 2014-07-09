@@ -121,10 +121,14 @@ get_header();
 						<ul>
 						<?php foreach($colloquia as $colloquium): ?>
 							<li class="vevent clearfix">
-								<?php $dtstart = DateTime::createFromFormat('d/m/Y', get_field('dtstart', $colloquium->ID)); ?>
-								<h4 class="dtstart"><time class="value-title" datetime="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>" title="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>">
+								<?php
+								date_default_timezone_set('America/New_York');
+								$dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart', $colloquium->ID) . ' 12:00')); ?>
+								<h4 class="dtstart">
+									<time class="value-title" datetime="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>" title="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>">
 									<?php echo $dtstart->format('n/j'); ?>
-								</time></h4>
+									</time>
+								</h4>
 								<span class="summary">
 									<?php $type = get_field('colloquium_type', $colloquium->ID);
 									if($type == 'HGNM Member') {

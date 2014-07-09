@@ -17,9 +17,13 @@ get_header();
 				<?php the_field('location') ?></p>
 				<section class="entry">
 					<?php if( get_field('summary') ): ?>
+				<?php
+				// SUMMARY FIELD
+				if( get_field('summary') ): ?>
+				<section class="summary">
 					<?php the_field('summary'); ?>
-					<?php endif; ?>
 				</section>
+				<?php endif; ?>
 
 				<?php
 				// PROGRAMME CONTENT

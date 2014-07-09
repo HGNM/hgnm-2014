@@ -101,6 +101,7 @@ get_header();
 		}
 		else {
 			// OK, now we’re talking. Check if posts exist?
+			// Display archive header and navigation
 			?>
 			<article id="fp-events" class="p-section">
 				<header class="archive-header">
@@ -123,6 +124,7 @@ get_header();
 					</nav>
 				</header>
 			<?php
+			// Display archived concerts for $yearquery season
 			if ( have_posts() ) : ?>
 				<section class="concerts <?php if(!$colloquia) { echo 'solo'; } ?>">
 					<h3>Concerts</h3>
@@ -145,6 +147,7 @@ get_header();
 				</section>
 			<?php else: ?>
 			<?php endif;
+			// Display archived colloquia for $yearquery season
 			if ($colloquia) : ?>
 				<section class="colloquia <?php if(!have_posts()) { echo 'solo'; } ?>">
 					<h3>Colloquia</h3>
@@ -181,6 +184,7 @@ get_header();
 					</ul>
 				</section>
 			<?php endif;
+			// Display archived miscellaneous events for $yearquery season
 			if ($miscevents): ?>
 				<section class="miscevents">
 					<h3>Other Events</h3>

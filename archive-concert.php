@@ -135,7 +135,7 @@ get_header();
 					<?php while ( have_posts() ) : the_post(); ?>						
 						<li <?php post_class('vevent clearfix'); ?>>
 							<a href="<?php echo get_permalink() ?>" class="url">
-								<?php $dtstart = DateTime::createFromFormat('d/m/Y', get_field('dtstart')); ?>
+								<?php $dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart') . ' 20:00')); ?>
 								<h4 class="dtstart"><time class="value-title" datetime="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>" title="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>">
 									<?php echo '<span class="month">' . $dtstart->format('M') . '</span> <span class="day">' . $dtstart->format('j'); ?>
 								</time></h4>
@@ -157,7 +157,7 @@ get_header();
 					<ul>
 					<?php foreach($colloquia as $colloquium): ?>
 						<li id="" <?php post_class('vevent clearfix'); ?>>
-							<?php $dtstart = DateTime::createFromFormat('d/m/Y', get_field('dtstart', $colloquium->ID)); ?>
+							<?php $dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart', $colloquium->ID) . ' 12:00')); ?>
 							<h4 class="dtstart"><time class="value-title" datetime="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>" title="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>"><?php echo $dtstart->format('n/j'); ?></time></h4>
 							<span class="summary">
 								<?php $type = get_field('colloquium_type', $colloquium->ID);

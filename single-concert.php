@@ -18,7 +18,61 @@ get_header();
 					<div class="programme">
 						<h3>Programme</h3>
 						<ul>
-							<?php while( have_rows('programme') ): the_row(); ?>
+							<?php
+							$programme = get_field('programme');
+							$programmeplus = get_field('programme_plus');
+							$count =  count($programme);
+							$i = 0;
+							$hasworks = 1; 
+							while ($i < $count) {
+								if (strlen($programme[$i]['work_title']) != 0) {
+								}
+								else {
+									$hasworks = 0;
+									break;
+								}
+								$i++;
+							}
+							if ($hasworks) {
+								// Output if there is a complete list of work titles
+								while (have_rows('programme')) {
+									the_row();
+									if (get_sub_field('composer')) {
+										$composerid = get_sub_field('composer'); ?>
+											<li>
+												<strong class="composer"><a href="<?php echo esc_url( get_permalink($composerid->ID) ); ?>"><?php echo get_the_title($composerid->ID); ?></a><br /></strong>
+												<em class="work_title"><?php the_sub_field('work_title'); ?></em>
+											</li>
+										<?php }
+									}
+								}
+							else {
+								// Output if incomplete list of work titles
+								$n = 0;
+								echo 'Works by ';
+								while ($n < $count) {
+									if ($n < ($count - 2)) {
+										$composerid = $programme[$n]['composer'];
+										echo '<a href="' . esc_url( get_permalink($composerid->ID) ) . '">' . get_the_title($composerid->ID) . '</a>, ';
+										$n++;
+									}
+									elseif ($n < ($count - 1)) {
+										$composerid = $programme[$n]['composer'];
+										echo '<a href="' . esc_url( get_permalink($composerid->ID) ) . '">' . get_the_title($composerid->ID) . '</a> and ';
+										$n++;
+									}
+									else {
+										$composerid = $programme[$n]['composer'];
+										echo '<a href="' . esc_url( get_permalink($composerid->ID) ) . '">' . get_the_title($composerid->ID) . '.';
+										$n++;
+									}
+								}
+							}
+
+
+							// OLD OUTPUT FOR REFERENCE WHILE BUILDING NEW ?><!-- <?php
+							
+							while( have_rows('programme') ): the_row(); ?>
 								<?php if (get_sub_field('composer')) : ?>
 									<?php $composerid = get_sub_field('composer'); ?>
 									<?php if (get_sub_field('work_title')) : ?>
@@ -40,6 +94,10 @@ get_header();
 									</li>
 								<?php endif; ?>
 							<?php endwhile; ?>
+							
+							-->
+							
+							
 						</ul>
 					</div><!-- .programme -->
 				<?php endif; ?>

@@ -83,6 +83,9 @@ get_header();
 			)
 		);
 		
+		// Set timezone
+		date_default_timezone_set('America/New_York');
+		
 		// Check queries to see if it is for a season starting more than a year in the future. N.B. The *next* season will return as false.
 		if ($seasonstart > date('Ymd', strtotime(date('Ymd', mktime()) . ' + 365 day')) ) {
 			// What should happen if someone wants to see into the future?

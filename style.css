@@ -375,19 +375,46 @@ video {
 }
 
 /* line 107, scss/style.scss */
+iframe {
+  max-width: 100%;
+}
+
+/* embedresponsively.com */
+/* line 112, scss/style.scss */
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 123, scss/style.scss */
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 131, scss/style.scss */
 fieldset {
   border: 0;
   margin: 0;
   padding: 0;
 }
 
-/* line 113, scss/style.scss */
+/* line 137, scss/style.scss */
 textarea {
   resize: vertical;
 }
 
 /* Formats browser update alert for old IE */
-/* line 118, scss/style.scss */
+/* line 142, scss/style.scss */
 .browsehappy {
   margin: 0.2em 0;
   background: #fd8;
@@ -418,7 +445,7 @@ textarea {
   }
 }
 */
-/* line 152, scss/style.scss */
+/* line 176, scss/style.scss */
 [class^="icon-"]:before, [class*=" icon-"]:before, .icon-link-ext:after {
   font-family: "hgnm";
   font-style: normal;
@@ -444,25 +471,25 @@ textarea {
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
-/* line 183, scss/style.scss */
+/* line 207, scss/style.scss */
 .icon-left-arrow-bold:before {
   content: '\e802';
 }
 
 /* '' */
-/* line 184, scss/style.scss */
+/* line 208, scss/style.scss */
 .icon-right-arrow-bold:before {
   content: '\e803';
 }
 
 /* '' */
-/* line 185, scss/style.scss */
+/* line 209, scss/style.scss */
 .icon-link-ext:after {
   content: '\e804';
 }
 
 /* '' */
-/* line 186, scss/style.scss */
+/* line 210, scss/style.scss */
 .icon-facebook:before {
   content: '\e805';
 }
@@ -471,7 +498,7 @@ textarea {
 /* ==========================================================================
    General Styles
    ========================================================================== */
-/* line 192, scss/style.scss */
+/* line 216, scss/style.scss */
 h2 {
   font-size: 2.5em;
   font-family: "Dala Floda", Alegreya, Georgia, serif;
@@ -483,7 +510,7 @@ h2 {
   color: black;
 }
 
-/* line 203, scss/style.scss */
+/* line 227, scss/style.scss */
 p {
   margin: 0 0 1.5em;
 }
@@ -491,18 +518,18 @@ p {
 /* ==========================================================================
    Header Styles
    ========================================================================== */
-/* line 210, scss/style.scss */
+/* line 234, scss/style.scss */
 #page {
   overflow: hidden;
   margin: 0 auto;
 }
-/* line 213, scss/style.scss */
+/* line 237, scss/style.scss */
 #page .site-header {
   height: 3em;
   color: #fdfff7;
   background: black;
 }
-/* line 217, scss/style.scss */
+/* line 241, scss/style.scss */
 #page .site-header h1 {
   font-size: 2.5em;
   line-height: 1;
@@ -512,11 +539,11 @@ p {
   float: left;
   padding-left: 5%;
 }
-/* line 225, scss/style.scss */
+/* line 249, scss/style.scss */
 #page .site-header h1 .lowercase {
   display: none;
 }
-/* line 229, scss/style.scss */
+/* line 253, scss/style.scss */
 #page .site-header a {
   text-decoration: none;
   color: #fdfff7;
@@ -526,7 +553,7 @@ p {
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-/* line 237, scss/style.scss */
+/* line 261, scss/style.scss */
 #page .site-header .menu {
   font-family: "Alegreya Sans", sans-serif;
   text-transform: uppercase;
@@ -536,39 +563,39 @@ p {
   display: none;
   clear: both;
 }
-/* line 245, scss/style.scss */
+/* line 269, scss/style.scss */
 #page .site-header .menu ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-/* line 250, scss/style.scss */
+/* line 274, scss/style.scss */
 #page .site-header .menu li:nth-child(odd) {
   background-color: #333333;
 }
-/* line 253, scss/style.scss */
+/* line 277, scss/style.scss */
 #page .site-header .menu li:nth-child(even) {
   background-color: black;
 }
-/* line 256, scss/style.scss */
+/* line 280, scss/style.scss */
 #page .site-header .menu .current-menu-item a:before {
   content: '▶ ';
 }
-/* line 259, scss/style.scss */
+/* line 283, scss/style.scss */
 #page .site-header .menu a {
   color: #fdfff7;
   display: block;
   padding: .5em 5%;
 }
-/* line 266, scss/style.scss */
+/* line 290, scss/style.scss */
 #page .site-header .menu.active {
   display: block;
 }
-/* line 270, scss/style.scss */
+/* line 294, scss/style.scss */
 #page .site-header .no-js .menu {
   display: block;
 }
-/* line 274, scss/style.scss */
+/* line 298, scss/style.scss */
 #page .site-header .menu-button {
   color: #222222;
   background-color: #30ff8a;
@@ -584,22 +611,22 @@ p {
   height: 2em;
   padding: 0 0.5em;
 }
-/* line 290, scss/style.scss */
+/* line 314, scss/style.scss */
 #page .site-header .menu-button.active {
   color: #fdfff7;
   background-color: #333333;
 }
-/* line 295, scss/style.scss */
+/* line 319, scss/style.scss */
 #page header.active {
   height: auto;
 }
-/* line 298, scss/style.scss */
+/* line 322, scss/style.scss */
 #page #torso {
   /* ==========================================================================
      Front Page Styles
      ========================================================================== */
 }
-/* line 300, scss/style.scss */
+/* line 324, scss/style.scss */
 #page #torso a,
 #page #torso a:visited {
   color: #222222;
@@ -611,7 +638,7 @@ p {
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-/* line 307, scss/style.scss */
+/* line 331, scss/style.scss */
 #page #torso a:hover {
   background: #30ff8a;
   -webkit-transition: all 0.2s ease-in;
@@ -620,25 +647,25 @@ p {
   -o-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
-/* line 316, scss/style.scss */
+/* line 340, scss/style.scss */
 #page #torso .fp-section,
 #page #torso .p-section {
   padding: 0 5%;
   padding-top: 1.5em;
   padding-bottom: 1.5em;
 }
-/* line 320, scss/style.scss */
+/* line 344, scss/style.scss */
 #page #torso .fp-section ul,
 #page #torso .p-section ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-/* line 327, scss/style.scss */
+/* line 351, scss/style.scss */
 #page #torso #fp-events {
   font-family: "Alegreya Sans", sans-serif;
 }
-/* line 329, scss/style.scss */
+/* line 353, scss/style.scss */
 #page #torso #fp-events h3 {
   text-align: center;
   font-size: 0.75em;
@@ -648,11 +675,11 @@ p {
   font-weight: 700;
   margin: 0 0 1em;
 }
-/* line 338, scss/style.scss */
+/* line 362, scss/style.scss */
 #page #torso #fp-events .concerts {
   margin-bottom: 3em;
 }
-/* line 340, scss/style.scss */
+/* line 364, scss/style.scss */
 #page #torso #fp-events .concerts .vevent {
   margin-bottom: 1.5em;
   -webkit-transition: all 0.2s ease-out;
@@ -661,7 +688,7 @@ p {
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-/* line 343, scss/style.scss */
+/* line 367, scss/style.scss */
 #page #torso #fp-events .concerts .vevent .dtstart {
   text-align: center;
   display: block;
@@ -671,7 +698,7 @@ p {
   background: #30ff8a;
   padding: 0 5%;
 }
-/* line 351, scss/style.scss */
+/* line 375, scss/style.scss */
 #page #torso #fp-events .concerts .vevent .dtstart .month {
   display: block;
   text-transform: uppercase;
@@ -680,14 +707,14 @@ p {
   line-height: 1.4;
   padding-top: 0.4em;
 }
-/* line 359, scss/style.scss */
+/* line 383, scss/style.scss */
 #page #torso #fp-events .concerts .vevent .dtstart .day {
   display: block;
   font-size: 5em;
   line-height: 0.6;
   padding-bottom: 0.3em;
 }
-/* line 366, scss/style.scss */
+/* line 390, scss/style.scss */
 #page #torso #fp-events .concerts .vevent .details {
   display: block;
   float: left;
@@ -695,15 +722,15 @@ p {
   font-size: 1.25em;
   line-height: 1.8;
 }
-/* line 372, scss/style.scss */
+/* line 396, scss/style.scss */
 #page #torso #fp-events .concerts .vevent .details p {
   margin: 0;
 }
-/* line 375, scss/style.scss */
+/* line 399, scss/style.scss */
 #page #torso #fp-events .concerts .vevent .details .summary {
   font-weight: 700;
 }
-/* line 380, scss/style.scss */
+/* line 404, scss/style.scss */
 #page #torso #fp-events .concerts .vevent:hover {
   -webkit-transition: all 0.2s ease-in;
   -moz-transition: all 0.2s ease-in;
@@ -714,23 +741,23 @@ p {
   margin-left: 5%;
   background: #30ff8a;
 }
-/* line 385, scss/style.scss */
+/* line 409, scss/style.scss */
 #page #torso #fp-events .concerts .vevent:hover .dtstart {
   background: black;
   color: #30ff8a;
 }
-/* line 391, scss/style.scss */
+/* line 415, scss/style.scss */
 #page #torso #fp-events .colloquia, #page #torso #fp-events .miscevents {
   margin-bottom: 3em;
   text-align: center;
 }
-/* line 394, scss/style.scss */
+/* line 418, scss/style.scss */
 #page #torso #fp-events .colloquia ul, #page #torso #fp-events .miscevents ul {
   font-size: 1.25em;
   line-height: 1.8;
   margin-bottom: 1.2em;
 }
-/* line 398, scss/style.scss */
+/* line 422, scss/style.scss */
 #page #torso #fp-events .colloquia ul .dtstart, #page #torso #fp-events .miscevents ul .dtstart {
   display: block;
   float: left;
@@ -739,29 +766,29 @@ p {
   padding: 0 5%;
   letter-spacing: 0.06em;
 }
-/* line 406, scss/style.scss */
+/* line 430, scss/style.scss */
 #page #torso #fp-events .colloquia ul .summary, #page #torso #fp-events .miscevents ul .summary {
   display: block;
   float: left;
   width: 60%;
   text-align: left;
 }
-/* line 411, scss/style.scss */
+/* line 435, scss/style.scss */
 #page #torso #fp-events .colloquia ul .summary .icon-link-ext:after, #page #torso #fp-events .miscevents ul .summary .icon-link-ext:after {
   color: #999999;
   font-size: 80%;
   padding-left: .1em;
 }
-/* line 419, scss/style.scss */
+/* line 443, scss/style.scss */
 #page #torso #fp-events .miscevents {
   clear: both;
 }
-/* line 422, scss/style.scss */
+/* line 446, scss/style.scss */
 #page #torso #fp-events .more-events-link {
   margin-bottom: 3em;
   clear: both;
 }
-/* line 425, scss/style.scss */
+/* line 449, scss/style.scss */
 #page #torso #fp-events .more-events-link a {
   padding: 1.5em 5%;
   display: block;
@@ -769,20 +796,20 @@ p {
   text-align: center;
   background: #30ff8a;
 }
-/* line 431, scss/style.scss */
+/* line 455, scss/style.scss */
 #page #torso #fp-events .more-events-link a p {
   font-size: 1.25em;
   line-height: 1.2;
   margin-bottom: 0;
 }
-/* line 437, scss/style.scss */
+/* line 461, scss/style.scss */
 #page #torso #fp-events .more-events-link a:hover {
   margin-right: 5%;
   margin-left: 5%;
   background: black;
   color: #30ff8a;
 }
-/* line 447, scss/style.scss */
+/* line 471, scss/style.scss */
 #page #torso #fp-composers li {
   margin-bottom: 1em;
   -webkit-transition: all 0.2s ease-out;
@@ -791,7 +818,7 @@ p {
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-/* line 450, scss/style.scss */
+/* line 474, scss/style.scss */
 #page #torso #fp-composers li a {
   width: 100%;
   height: 5em;
@@ -812,7 +839,7 @@ p {
   -o-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
 }
-/* line 465, scss/style.scss */
+/* line 489, scss/style.scss */
 #page #torso #fp-composers li a img {
   float: left;
   max-width: 5em;
@@ -826,7 +853,7 @@ p {
   -o-transition: all 0.4s ease-out;
   transition: all 0.4s ease-out;
 }
-/* line 472, scss/style.scss */
+/* line 496, scss/style.scss */
 #page #torso #fp-composers li a span {
   font-size: 0.85em;
   display: inline-block;
@@ -837,7 +864,7 @@ p {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 483, scss/style.scss */
+/* line 507, scss/style.scss */
 #page #torso #fp-composers li a:hover {
   background: black;
   color: #30ff8a;
@@ -848,7 +875,7 @@ p {
   -o-transition: all 0.1s ease-in;
   transition: all 0.1s ease-in;
 }
-/* line 488, scss/style.scss */
+/* line 512, scss/style.scss */
 #page #torso #fp-composers li a:hover img {
   -webkit-filter: grayscale(0) contrast(100%) brightness(100%) saturate(150%);
   -moz-filter: grayscale(0) contrast(100%) brightness(100%) saturate(150%);
@@ -859,7 +886,7 @@ p {
   -o-transition: all 0.4s ease-in;
   transition: all 0.4s ease-in;
 }
-/* line 494, scss/style.scss */
+/* line 518, scss/style.scss */
 #page #torso #fp-composers li:hover {
   padding: 0 5%;
   -webkit-transition: all 0.2s ease-in;
@@ -868,7 +895,7 @@ p {
   -o-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
-/* line 500, scss/style.scss */
+/* line 524, scss/style.scss */
 #page #torso #fp-archive-link a {
   padding: 1.5em 5%;
   display: block;
@@ -876,19 +903,19 @@ p {
   text-align: center;
   background: #30ff8a;
 }
-/* line 506, scss/style.scss */
+/* line 530, scss/style.scss */
 #page #torso #fp-archive-link a p {
   font-size: 1.25em;
   line-height: 1.2;
   margin-bottom: 0;
 }
-/* line 512, scss/style.scss */
+/* line 536, scss/style.scss */
 #page #torso #fp-archive-link a:hover {
   margin: 0 5%;
   background: black;
   color: #30ff8a;
 }
-/* line 516, scss/style.scss */
+/* line 540, scss/style.scss */
 #page #torso #fp-archive-link a:hover h2 {
   color: #30ff8a;
 }
@@ -896,20 +923,20 @@ p {
 /* ==========================================================================
    Archive Nav Styles
    ========================================================================== */
-/* line 528, scss/style.scss */
+/* line 552, scss/style.scss */
 .archive-header {
   text-align: center;
 }
-/* line 530, scss/style.scss */
+/* line 554, scss/style.scss */
 .archive-header #archive-nav {
   margin-bottom: 1.5em;
 }
-/* line 533, scss/style.scss */
+/* line 557, scss/style.scss */
 .archive-header #archive-nav .left .icon, .archive-header #archive-nav .right .icon {
   display: none;
 }
 
-/* line 544, scss/style.scss */
+/* line 568, scss/style.scss */
 .fontface.generatedcontent #page #torso .archive-header #archive-nav {
   font-size: 2em;
   position: relative;
@@ -920,17 +947,17 @@ p {
   margin: 0 auto;
   line-height: 1;
 }
-/* line 553, scss/style.scss */
+/* line 577, scss/style.scss */
 .fontface.generatedcontent #page #torso .archive-header #archive-nav .left, .fontface.generatedcontent #page #torso .archive-header #archive-nav .right {
   border-bottom: none;
   background: #30ff8a;
 }
-/* line 556, scss/style.scss */
+/* line 580, scss/style.scss */
 .fontface.generatedcontent #page #torso .archive-header #archive-nav .left .icon, .fontface.generatedcontent #page #torso .archive-header #archive-nav .right .icon {
   display: inline-block;
   padding: 0.2em 0.1em 0.1em;
 }
-/* line 560, scss/style.scss */
+/* line 584, scss/style.scss */
 .fontface.generatedcontent #page #torso .archive-header #archive-nav .left .text, .fontface.generatedcontent #page #torso .archive-header #archive-nav .right .text {
   clip: rect(0 0 0 0);
   overflow: hidden;
@@ -938,32 +965,32 @@ p {
   height: 1px;
   width: 1px;
 }
-/* line 568, scss/style.scss */
+/* line 592, scss/style.scss */
 .fontface.generatedcontent #page #torso .archive-header #archive-nav .left:hover, .fontface.generatedcontent #page #torso .archive-header #archive-nav .right:hover {
   background: black;
   color: #30ff8a;
 }
-/* line 572, scss/style.scss */
+/* line 596, scss/style.scss */
 .fontface.generatedcontent #page #torso .archive-header #archive-nav .left {
   position: absolute;
   top: 0;
   left: 0;
 }
-/* line 576, scss/style.scss */
+/* line 600, scss/style.scss */
 .fontface.generatedcontent #page #torso .archive-header #archive-nav .left .icon {
   padding-right: 0.2em;
 }
-/* line 580, scss/style.scss */
+/* line 604, scss/style.scss */
 .fontface.generatedcontent #page #torso .archive-header #archive-nav .right {
   position: absolute;
   top: 0;
   right: 0;
 }
-/* line 584, scss/style.scss */
+/* line 608, scss/style.scss */
 .fontface.generatedcontent #page #torso .archive-header #archive-nav .right .icon {
   padding-left: 0.2em;
 }
-/* line 588, scss/style.scss */
+/* line 612, scss/style.scss */
 .fontface.generatedcontent #page #torso .archive-header #archive-nav .icon-left-arrow-bold:before, .fontface.generatedcontent #page #torso .archive-header #archive-nav .icon-right-arrow-bold:before {
   margin: 0;
 }
@@ -971,7 +998,7 @@ p {
 /* ==========================================================================
    Footer Styles
    ========================================================================== */
-/* line 601, scss/style.scss */
+/* line 625, scss/style.scss */
 footer {
   clear: both;
   color: #999999;
@@ -987,7 +1014,7 @@ footer {
    Media Queries
    ========================================================================== */
 @media only screen and (min-width: 45em) {
-  /* line 618, scss/style.scss */
+  /* line 642, scss/style.scss */
   #page .site-header {
     margin-top: -0.55em;
     margin-bottom: 1.5em;
@@ -995,7 +1022,7 @@ footer {
     height: auto;
     background: transparent;
   }
-  /* line 624, scss/style.scss */
+  /* line 648, scss/style.scss */
   #page .site-header h1 {
     margin: 0;
     padding-left: 0;
@@ -1004,116 +1031,116 @@ footer {
     width: 100%;
     letter-spacing: 0;
   }
-  /* line 631, scss/style.scss */
+  /* line 655, scss/style.scss */
   #page .site-header h1 .lowercase {
     display: inline;
   }
-  /* line 635, scss/style.scss */
+  /* line 659, scss/style.scss */
   #page .site-header a {
     color: black;
   }
-  /* line 639, scss/style.scss */
+  /* line 663, scss/style.scss */
   #page .site-header .menu {
     display: block;
     font-size: 1.125em;
     line-height: 2.6666666666em;
   }
-  /* line 643, scss/style.scss */
+  /* line 667, scss/style.scss */
   #page .site-header .menu ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
   }
-  /* line 648, scss/style.scss */
+  /* line 672, scss/style.scss */
   #page .site-header .menu li {
     display: inline-block;
     margin-right: .5em;
   }
-  /* line 652, scss/style.scss */
+  /* line 676, scss/style.scss */
   #page .site-header .menu li:nth-child(odd) {
     background-color: transparent;
   }
-  /* line 655, scss/style.scss */
+  /* line 679, scss/style.scss */
   #page .site-header .menu li:nth-child(even) {
     background-color: transparent;
   }
-  /* line 658, scss/style.scss */
+  /* line 682, scss/style.scss */
   #page .site-header .menu li:last-child {
     margin-right: 0;
   }
-  /* line 661, scss/style.scss */
+  /* line 685, scss/style.scss */
   #page .site-header .menu .current-menu-item a:before {
     content: '';
   }
-  /* line 664, scss/style.scss */
+  /* line 688, scss/style.scss */
   #page .site-header .menu a {
     border-radius: 2em;
     color: #222222;
     padding: 0 .5em;
   }
-  /* line 669, scss/style.scss */
+  /* line 693, scss/style.scss */
   #page .site-header .menu a:hover {
     background: #30ff8a;
   }
-  /* line 674, scss/style.scss */
+  /* line 698, scss/style.scss */
   #page .site-header .menu-button {
     display: none;
   }
-  /* line 680, scss/style.scss */
+  /* line 704, scss/style.scss */
   #page #torso .fp-section,
   #page #torso .p-section {
     padding: 0 12.5%;
     padding-top: 1.5em;
     padding-bottom: 1.5em;
   }
-  /* line 685, scss/style.scss */
+  /* line 709, scss/style.scss */
   #page #torso #fp-blurb {
     font-size: 1.5em;
     line-height: 1.5;
   }
-  /* line 690, scss/style.scss */
+  /* line 714, scss/style.scss */
   #page #torso #fp-events .concerts, #page #torso #fp-events .colloquia {
     width: 47%;
     padding-right: 6%;
     display: block;
     float: left;
   }
-  /* line 696, scss/style.scss */
+  /* line 720, scss/style.scss */
   #page #torso #fp-events .concerts:nth-child(2n), #page #torso #fp-events .colloquia:nth-child(2n) {
     padding-right: 0;
   }
-  /* line 699, scss/style.scss */
+  /* line 723, scss/style.scss */
   #page #torso #fp-events .concerts.solo, #page #torso #fp-events .colloquia.solo {
     width: 49.4%;
     margin-left: auto;
     margin-right: auto;
     float: none;
   }
-  /* line 705, scss/style.scss */
+  /* line 729, scss/style.scss */
   #page #torso #fp-events .more-events-link, #page #torso #fp-events .miscevents {
     width: 59.4%;
     margin-right: auto;
     margin-left: auto;
   }
-  /* line 712, scss/style.scss */
+  /* line 736, scss/style.scss */
   #page #torso #fp-composers li {
     float: left;
     margin-bottom: 0.4166666em;
     width: 19%;
     margin-right: 1.2%;
   }
-  /* line 717, scss/style.scss */
+  /* line 741, scss/style.scss */
   #page #torso #fp-composers li a {
     height: auto;
     overflow: hidden;
   }
-  /* line 720, scss/style.scss */
+  /* line 744, scss/style.scss */
   #page #torso #fp-composers li a img {
     float: none;
     width: 100%;
     max-width: none;
   }
-  /* line 725, scss/style.scss */
+  /* line 749, scss/style.scss */
   #page #torso #fp-composers li a span {
     display: table-cell;
     vertical-align: middle;
@@ -1124,49 +1151,49 @@ footer {
     padding: 0 5%;
     white-space: normal;
   }
-  /* line 737, scss/style.scss */
+  /* line 761, scss/style.scss */
   #page #torso #fp-composers li:hover {
     padding: 0;
   }
-  /* line 740, scss/style.scss */
+  /* line 764, scss/style.scss */
   #page #torso #fp-composers li:nth-child(5n) {
     margin-right: 0;
   }
-  /* line 745, scss/style.scss */
+  /* line 769, scss/style.scss */
   #page #torso #fp-archive-link a {
     width: 49.4%;
     margin: 0 auto;
   }
-  /* line 749, scss/style.scss */
+  /* line 773, scss/style.scss */
   #page #torso #fp-archive-link a:hover {
     width: 44.4%;
     margin: 0 auto;
   }
 
-  /* line 759, scss/style.scss */
+  /* line 783, scss/style.scss */
   .fontface.generatedcontent #page #torso .archive-header {
     margin-bottom: 1.5em;
   }
-  /* line 762, scss/style.scss */
+  /* line 786, scss/style.scss */
   .fontface.generatedcontent #page #torso .archive-header #archive-nav .left, .fontface.generatedcontent #page #torso .archive-header #archive-nav .right {
     background: transparent;
   }
 }
 @media only screen and (max-width: 15em) {
-  /* line 773, scss/style.scss */
+  /* line 797, scss/style.scss */
   html {
     font-size: 0.8em;
   }
-  /* line 780, scss/style.scss */
+  /* line 804, scss/style.scss */
   html #page #torso #fp-composers li a img {
     display: none;
   }
-  /* line 783, scss/style.scss */
+  /* line 807, scss/style.scss */
   html #page #torso #fp-composers li a span {
     max-width: 90%;
     padding: 0 5%;
   }
-  /* line 789, scss/style.scss */
+  /* line 813, scss/style.scss */
   html #page #torso #fp-composers li:hover {
     padding: 0;
   }
@@ -1174,7 +1201,7 @@ footer {
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-/* line 809, scss/style.scss */
+/* line 833, scss/style.scss */
 .ir {
   background-color: transparent;
   border: 0;
@@ -1182,7 +1209,7 @@ footer {
   *text-indent: -9999px;
 }
 
-/* line 816, scss/style.scss */
+/* line 840, scss/style.scss */
 .ir:before {
   content: "";
   display: block;
@@ -1190,13 +1217,13 @@ footer {
   height: 150%;
 }
 
-/* line 823, scss/style.scss */
+/* line 847, scss/style.scss */
 .hidden {
   display: none !important;
   visibility: hidden;
 }
 
-/* line 828, scss/style.scss */
+/* line 852, scss/style.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -1208,7 +1235,7 @@ footer {
   width: 1px;
 }
 
-/* line 840, scss/style.scss */
+/* line 864, scss/style.scss */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   clip: auto;
@@ -1219,24 +1246,24 @@ footer {
   width: auto;
 }
 
-/* line 849, scss/style.scss */
+/* line 873, scss/style.scss */
 .invisible {
   visibility: hidden;
 }
 
-/* line 854, scss/style.scss */
+/* line 878, scss/style.scss */
 .clearfix:before,
 .clearfix:after {
   content: " ";
   display: table;
 }
 
-/* line 859, scss/style.scss */
+/* line 883, scss/style.scss */
 .clearfix:after {
   clear: both;
 }
 
-/* line 863, scss/style.scss */
+/* line 887, scss/style.scss */
 .clearfix {
   *zoom: 1;
 }
@@ -1245,7 +1272,7 @@ footer {
    Print styles
    ========================================================================== */
 @media print {
-  /* line 872, scss/style.scss */
+  /* line 896, scss/style.scss */
   * {
     background: transparent !important;
     color: #000 !important;
@@ -1253,48 +1280,48 @@ footer {
     text-shadow: none !important;
   }
 
-  /* line 880, scss/style.scss */
+  /* line 904, scss/style.scss */
   a,
   a:visited {
     text-decoration: underline;
   }
 
-  /* line 884, scss/style.scss */
+  /* line 908, scss/style.scss */
   a[href]:after {
     content: " (" attr(href) ")";
   }
 
-  /* line 888, scss/style.scss */
+  /* line 912, scss/style.scss */
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
 
-  /* line 894, scss/style.scss */
+  /* line 918, scss/style.scss */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: "";
   }
 
-  /* line 899, scss/style.scss */
+  /* line 923, scss/style.scss */
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
-  /* line 904, scss/style.scss */
+  /* line 928, scss/style.scss */
   thead {
     display: table-header-group;
   }
 
-  /* line 909, scss/style.scss */
+  /* line 933, scss/style.scss */
   tr,
   img {
     page-break-inside: avoid;
   }
 
-  /* line 913, scss/style.scss */
+  /* line 937, scss/style.scss */
   img {
     max-width: 100% !important;
   }
@@ -1303,7 +1330,7 @@ footer {
     margin: 0.5cm;
 }
 
-  /* line 923, scss/style.scss */
+  /* line 947, scss/style.scss */
   p,
   h2,
   h3 {
@@ -1311,7 +1338,7 @@ footer {
     widows: 3;
   }
 
-  /* line 929, scss/style.scss */
+  /* line 953, scss/style.scss */
   h2,
   h3 {
     page-break-after: avoid;

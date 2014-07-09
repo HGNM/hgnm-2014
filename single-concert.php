@@ -6,7 +6,7 @@ get_header();
 			<?php while ( have_posts() ) : the_post(); ?>
 			<article id="post-<?php the_ID(); ?>" <?php post_class('p-section'); ?>>
 				<h2 class="post-title"><?php the_title(); ?></h2>
-				<?php $dtstart = DateTime::createFromFormat('d/m/Y', get_field('dtstart')); ?>
+				<?php $dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart') . ' 20:00')); ?>
 				<p><time class="value" datetime="<?php echo $dtstart->format('Y-m-d'); ?>">
 					<?php echo $dtstart->format('j F Y, ga'); ?>
 				</time><br />

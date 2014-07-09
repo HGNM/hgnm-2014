@@ -168,7 +168,7 @@ get_header();
 				<?php
 				// ARCHIVE CONTENT
 				if( get_field('poster_pdf') || get_field('programme_pdf') ) {
-					echo '<section class="archive-docs"><ul>';
+					echo '<section class="archive-docs"><h3>Related Files</h3><ul>';
 					if( get_field('poster_pdf') ) {
 						$posterpdf = get_field('poster_pdf');
 						if ($posterpdf['mime_type'] == 'application/pdf') {

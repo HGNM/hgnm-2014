@@ -14,12 +14,13 @@ Repository for WordPress theme development for new HGNM website.
 				- [X] site title
 				- [X] menu
 		- [ ] print styling
-	- [ ] [index.php](/index.php)
+	- [ ] [front-page.php](/front-page.php)
 		- [X] call header
 		- [X] call content
 			- [X] Blurb
 			- [X] Upcoming Events
 				- [X] Concerts
+					- [ ] Tweak for date-time functionality (currently only date)
 				- [X] Colloquia
 				- [X] Others
 				- [X] Link to all upcoming events
@@ -35,17 +36,18 @@ Repository for WordPress theme development for new HGNM website.
 		- [ ] Display related a/v
 		- [ ] Display related events
 	- [ ] Concert Post ([single-concert.php](/single-concert.php))
-		- [ ] More sophisticated programme display logic
+		- [X] More sophisticated programme display logic
 		- [ ] Archival material (a/v, photos, poster, programme)
 	- [ ] Colloquium Post ([single-colloquium.php](/single-colloquium.php))
-- [ ] content archive templates
+- [ ] archive templates
 	- [X] Members ([archive-member.php](/archive-member.php))
-	- [ ] Concerts ([archive-concert.php](/archive-concert.php))
-	- [ ] Colloquia ([archive-colloquium.php](/archive-colloquium.php))
+	- [ ] Archives ([archive-concert.php](/archive-concert.php))
+	- [ ] Events ([archive-colloquium.php](/archive-colloquium.php))
 - [X] [footer.php](/footer.php)
 - [ ] [functions.php](/functions.php)
 	- [X] Enable featured image for custom post types
 	- [ ] Register custom post types (bundling functionality w/ theme)
+- [ ] Custom fields: use/develop date-time picker for concert post types
 
 ## Dependencies
 

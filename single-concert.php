@@ -17,7 +17,7 @@ get_header();
 
 				// PROGRAMME CONTENT
 				<?php if(have_rows('programme') || have_rows('programme_plus')): ?>
-					<div class="programme">
+					<section class="programme">
 						<h3>Programme</h3>
 							<?php
 							// Get programme data from custom fields
@@ -140,7 +140,7 @@ get_header();
 
 							} ?>
 
-					</div><!-- .programme -->
+					</section><!-- .programme -->
 				<?php endif; ?>
 			</article><!-- #posts -->
 			<?php endwhile; ?>

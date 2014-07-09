@@ -73,7 +73,9 @@ get_header();
 							<?php foreach($concerts as $concert): ?>
 								<div class="vevent clearfix">
 									<a href="<?php echo get_permalink($concert->ID) ?>" class="url">
-										<?php $dtstart = DateTime::createFromFormat('d/m/Y', get_field('dtstart', $concert->ID)); ?>
+										<?php
+										date_default_timezone_set('America/New_York');
+										$dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart', $concert->ID) . ' 20:00')); ?>
 										<h4 class="dtstart"><time class="value-title" datetime="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>" title="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>">
 											<?php echo '<span class="month">' . $dtstart->format('M') . '</span> <span class="day">' . $dtstart->format('j'); ?>
 										</time></h4>

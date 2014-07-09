@@ -15,8 +15,9 @@ get_header();
 					<?php the_field('summary'); ?>
 				<?php endif; ?></div>
 
+				<?php
 				// PROGRAMME CONTENT
-				<?php if(have_rows('programme') || have_rows('programme_plus')): ?>
+				if(have_rows('programme') || have_rows('programme_plus')): ?>
 					<section class="programme">
 						<h3>Programme</h3>
 							<?php
@@ -142,6 +143,8 @@ get_header();
 
 					</section><!-- .programme -->
 				<?php endif; ?>
+				
+				
 			</article><!-- #posts -->
 			<?php endwhile; ?>
 		<?php else: ?>

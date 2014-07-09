@@ -7,6 +7,7 @@ get_header();
 			<article id="post-<?php the_ID(); ?>" <?php post_class('p-section'); ?>>
 				<h2 class="post-title"><?php the_title(); ?></h2>
 				<?php
+				// SET TIMEZONE
 				date_default_timezone_set('America/New_York');
 				$dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart') . ' 20:00')); ?>
 				<p><time class="value" datetime="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>">

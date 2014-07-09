@@ -8,6 +8,7 @@ get_header();
 				<h2 class="post-title"><?php the_title(); ?></h2>
 				<?php $dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart') . ' 20:00')); ?>
 				<p><time class="value" datetime="<?php echo $dtstart->format('Y-m-d'); ?>">
+				date_default_timezone_set('America/New_York');
 					<?php echo $dtstart->format('j F Y, ga'); ?>
 				</time><br />
 				<?php the_field('location') ?></p>

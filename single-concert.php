@@ -14,6 +14,8 @@ get_header();
 				<div class="entry"><?php if( get_field('summary') ): ?>
 					<?php the_field('summary'); ?>
 				<?php endif; ?></div>
+
+				// PROGRAMME CONTENT
 				<?php if(have_rows('programme') || have_rows('programme_plus')): ?>
 					<div class="programme">
 						<h3>Programme</h3>

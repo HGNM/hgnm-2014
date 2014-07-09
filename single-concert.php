@@ -11,9 +11,11 @@ get_header();
 					<?php echo $dtstart->format('j F Y, ga'); ?>
 				</time><br />
 				<?php the_field('location') ?></p>
-				<div class="entry"><?php if( get_field('summary') ): ?>
+				<section class="entry">
+					<?php if( get_field('summary') ): ?>
 					<?php the_field('summary'); ?>
-				<?php endif; ?></div>
+					<?php endif; ?>
+				</section>
 
 				<?php
 				// PROGRAMME CONTENT

@@ -34,6 +34,11 @@ get_header();
 				// PERFORMER LINK
 				if( get_field('performer_url') ): ?>
 					<a href="<?php esc_url( the_field('performer_url') ); ?>">Find out more about <?php the_title(); ?></a>
+							<?php
+							// FACEBOOK LINK
+							if( get_field('facebook_url') ): ?>
+								<li><a href="<?php esc_url( the_field('facebook_url') ); ?>">See this event on Facebook</a></li>
+							<?php endif; ?>
 				<?php endif; ?>
 
 				<?php

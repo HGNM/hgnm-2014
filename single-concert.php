@@ -147,7 +147,12 @@ get_header();
 
 					</section><!-- .programme -->
 				<?php endif; ?>
-				
+
+				<?php
+				// Performer link
+				if( get_field('performer_url') ): ?>
+					<a href="<?php esc_url( the_field('performer_url') ); ?>">Find out more about <?php the_title(); ?></a>
+				<?php endif; ?>
 				
 			</article><!-- #posts -->
 			<?php endwhile; ?>

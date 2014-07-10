@@ -29,7 +29,7 @@ get_header();
 				<?php
 				// SUMMARY FIELD
 				if( get_field('summary') ): ?>
-				<section class="summary">
+				<section class="description">
 					<?php the_field('summary'); ?>
 				</section>
 				<?php endif; ?>

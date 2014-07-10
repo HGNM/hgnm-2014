@@ -692,6 +692,13 @@ iframe {
 		}
 		
 		.archive-docs {
+			li {
+				margin-bottom: 0.75em;
+				.icon-download {
+					font-size: 150%;
+					line-height: 1;
+				}
+			}
 		}
 		
 		.multimedia {

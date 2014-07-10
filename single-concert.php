@@ -20,6 +20,10 @@ get_header();
 					</time></p>
 					
 					<p class="location"><?php the_field('location') ?></p>
+					
+					<?php if ($dtstart->format('Ymd') > date('Ymd')) : ?>
+						<p class="tickets"><span class="price">free</span> & open to the public</p>
+					<?php endif; ?>
 				</section>
 
 				<?php

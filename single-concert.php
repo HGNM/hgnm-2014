@@ -16,7 +16,7 @@ get_header();
 				?>
 				<section class="event-meta">
 					<p class="dtstart"><time class="value" datetime="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>">
-						<?php echo $dtstart->format('l j') . '<sup>' . $dtstart->format('S') . '</sup> ' . $dtstart->format('F Y, ga'); ?>
+						<?php echo $dtstart->format('l, j F Y, ga'); ?>
 					</time></p>
 					
 					<p class="location"><?php the_field('location') ?></p>

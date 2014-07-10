@@ -959,6 +959,29 @@ footer {
 				}
 			}
 			
+			.has-programme {
+				.programme {
+					float: left;
+					width: 48%;
+					padding-right:4%;
+				}
+				.external-links,
+				.archive-docs {
+					float: left;
+					width: 48%;
+				}
+				.external-links {
+					li {
+					float:none;
+					width:100%;
+					padding-right: 0;
+					}
+				}
+				.archive-link, .multimedia {
+					clear:both;
+				}
+			}
+			
 			
 		} // </#torso>
 	} // </#page>

@@ -179,7 +179,8 @@ textarea {
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
- 
+
+.icon-download:before { content: '\e800'; } /* '' */
 .icon-left-arrow-bold:before { content: '\e802'; } /* '' */
 .icon-right-arrow-bold:before { content: '\e803'; } /* '' */
 .icon-link-ext:after { content: '\e804'; } /* '' */

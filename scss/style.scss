@@ -899,8 +899,10 @@ footer {
 			.programme {
 				li {
 					.composer {
+						display:block;	
 					}
 					.composer:after {
+						content: '';
 					}
 					.work_title {
 					}

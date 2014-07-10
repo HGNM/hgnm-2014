@@ -1306,17 +1306,17 @@ footer {
     line-height: 1.8;
   }
   /* line 916, scss/style.scss */
-  #page #torso .external-links {
+  #page #torso .external-links.both {
     margin-bottom: 3em;
   }
   /* line 918, scss/style.scss */
-  #page #torso .external-links li {
+  #page #torso .external-links.both li {
     width: 48%;
     float: left;
     padding-right: 4%;
   }
   /* line 931, scss/style.scss */
-  #page #torso .external-links li:nth-child(2n) {
+  #page #torso .external-links.both li:nth-child(2n) {
     padding-right: 0;
   }
   /* line 938, scss/style.scss */

@@ -36,12 +36,12 @@ get_header();
 							<?php
 							// PERFORMER LINK
 							if( get_field('performer_url') ): ?>
-								<li><a href="<?php esc_url( the_field('performer_url') ); ?>">Find out more about <?php the_title(); ?></a></li>
+								<li><a href="<?php esc_url( the_field('performer_url') ); ?>">Find out more about <span class="perfname"><?php the_title(); ?><span class="icon icon-link-ext" aria-hidden="true"></span></span></a></li>
 							<?php endif; ?>
 							<?php
 							// FACEBOOK LINK
 							if( get_field('facebook_url') ): ?>
-								<li><a href="<?php esc_url( the_field('facebook_url') ); ?>">See this event on Facebook</a></li>
+								<li><a href="<?php esc_url( the_field('facebook_url') ); ?>">See this event on Facebook <span class="icon icon-facebook" aria-hidden="true"></span></a></li>
 							<?php endif; ?>
 						</ul>
 					</section>

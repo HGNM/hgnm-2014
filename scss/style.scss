@@ -887,6 +887,9 @@ footer {
 			.external-links {
 				margin-bottom: 3em;
 				li {
+					width:48%;
+					float:left;
+					padding-right:4%;
 					a {
 					}
 					.perfname {
@@ -895,6 +898,9 @@ footer {
 					}
 					a:hover {
 					}
+				}
+				li:nth-child(2n) {
+					padding-right:0;
 				}
 			}
 			

@@ -234,7 +234,7 @@ get_header();
 				}
 				?>
 				
-			</article><!-- #posts -->
+			</article><!-- #post-ID .vevent -->
 			<?php endwhile; ?>
 		<?php else: ?>
 		<?php endif;

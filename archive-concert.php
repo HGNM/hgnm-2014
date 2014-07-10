@@ -38,7 +38,8 @@ get_header();
 				'numberposts' => -1,
 				'post_type' => 'concert',
 				'meta_key' => 'dtstart',
-				'order' => 'DESC',
+				'orderby' => 'dtstart',
+				'order' => 'ASC',
 				'meta_query' => array(
 					array(
 						'key' => 'dtstart',
@@ -55,7 +56,8 @@ get_header();
 				'numberposts' => -1,
 				'post_type' => 'colloquium',
 				'meta_key' => 'dtstart',
-				'order' => 'DESC',
+				'orderby' => 'dtstart',
+				'order' => 'ASC',
 				'meta_query' => array(
 					array(
 						'key' => 'dtstart',
@@ -72,7 +74,8 @@ get_header();
 				'numberposts' => -1,
 				'post_type' => 'miscevent',
 				'meta_key' => 'dtstart',
-				'order' => 'DESC',
+				'orderby' => 'dtstart',
+				'order' => 'ASC',
 				'meta_query' => array(
 					array(
 						'key' => 'dtstart',

@@ -218,22 +218,22 @@ get_header();
 						if($row['a_or_v'] !== 'Video') unset($videolist[$key]);
 					}
 					if($audiolist || $videolist) {
-						echo '<section class="multimedia">';
+						echo '<section class="multimedia"><ul>';
 						if ($audiolist) {
-							echo '<h3>Audio</h3><ul>';
+							echo '<li class="audio clearfix"><h3>Audio</h3><ul>';
 							foreach($audiolist as $item) {
-								echo '<li class="embed-container">' . $item['embed_link'] . '</li>';
+								echo '<li><span class="embed-container">' . $item['embed_link'] . '</span></li>';
 							}
-							echo '</ul>';
+							echo '</ul></li>';
 						}
 						if ($videolist) {
-							echo '<h3>Video</h3><ul>';
+							echo '<li class="video clearfix"><h3>Video</h3><ul>';
 							foreach($videolist as $item) {
-									echo '<li class="embed-container">' . $item['embed_link'] . '</li>';
+									echo '<li><span class="embed-container">' . $item['embed_link'] . '</span></li>';
 							}
-							echo '</ul>';
+							echo '</ul></li>';
 						}
-						echo '</section>';
+						echo '</ul></section>';
 					}
 				}
 				?>

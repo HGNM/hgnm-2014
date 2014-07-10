@@ -33,23 +33,6 @@ get_header();
 					<?php the_field('summary'); ?>
 				</section>
 				<?php endif; ?>
-				
-				<?php if(get_field('performer_url') || get_field('facebook_url')) : ?>
-					<section class="external-links clearfix <?php if(get_field('performer_url') & get_field('facebook_url')) { echo 'both'; } ?>">
-						<ul>
-							<?php
-							// PERFORMER LINK
-							if( get_field('performer_url') ): ?>
-								<li><a href="<?php esc_url( the_field('performer_url') ); ?>">Find out more about <span class="perfname"><?php the_title(); ?><span class="icon icon-link-ext" aria-hidden="true"></span></span></a></li>
-							<?php endif; ?>
-							<?php
-							// FACEBOOK LINK
-							if( get_field('facebook_url') ): ?>
-								<li><a href="<?php esc_url( the_field('facebook_url') ); ?>">See this event on Facebook <span class="icon icon-facebook" aria-hidden="true"></span></a></li>
-							<?php endif; ?>
-						</ul>
-					</section>
-				<?php endif; ?>
 
 				<?php
 				// PROGRAMME CONTENT
@@ -178,6 +161,23 @@ get_header();
 							} ?>
 
 					</section><!-- .programme -->
+				<?php endif; ?>
+				
+				<?php if(get_field('performer_url') || get_field('facebook_url')) : ?>
+					<section class="external-links clearfix <?php if(get_field('performer_url') & get_field('facebook_url')) { echo 'both'; } ?>">
+						<ul>
+							<?php
+							// PERFORMER LINK
+							if( get_field('performer_url') ): ?>
+								<li><a href="<?php esc_url( the_field('performer_url') ); ?>">Find out more about <span class="perfname"><?php the_title(); ?><span class="icon icon-link-ext" aria-hidden="true"></span></span></a></li>
+							<?php endif; ?>
+							<?php
+							// FACEBOOK LINK
+							if( get_field('facebook_url') ): ?>
+								<li><a href="<?php esc_url( the_field('facebook_url') ); ?>">See this event on Facebook <span class="icon icon-facebook" aria-hidden="true"></span></a></li>
+							<?php endif; ?>
+						</ul>
+					</section>
 				<?php endif; ?>
 				
 				<?php

@@ -55,7 +55,7 @@ get_header();
 				// PROGRAMME CONTENT
 				if(have_rows('programme') || have_rows('programme_plus')): ?>
 					<section class="programme">
-						<h3>Programme</h3>
+						<h3>Program</h3>
 							<?php
 							// Get programme data from custom fields
 							$programme = get_field('programme');

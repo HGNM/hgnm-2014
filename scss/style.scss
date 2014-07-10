@@ -713,6 +713,9 @@ iframe {
 		}
 		
 		.multimedia {
+			.embed-container {
+				display:block;
+			}
 		}
 		
 		.archive-link {
@@ -951,6 +954,16 @@ footer {
 			}
 			
 			.multimedia {
+				.audio, .video {
+					li {
+						width: 32.5%;
+						padding-right: 1.25%;
+						float:left;
+					}
+					li:nth-child(3n) {
+						padding-right: 0;
+					}
+				}
 			}
 			
 			

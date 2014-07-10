@@ -625,30 +625,70 @@ iframe {
 /* ==========================================================================
    Concert Single Styles
    ========================================================================== */
-.event-meta {
-	.dtstart {
+#page {
+	#torso {
+		.event-meta {
+			text-align:center;
+			font-family: $sans-stack;
+			font-size:1.25em;
+			line-height:1.2;
+			.dtstart {
+				margin-bottom:0;
+				font-weight:700;
+			}
+			.location {
+			}
+		}
+		
+		.summary {
+		}
+		
+		.external-links {
+			margin-bottom: 3em;
+			font-family: $sans-stack;
+			li {
+				margin-bottom:1.5em;
+				a {
+					padding: 1.5em 5%;
+					display: block;
+					border-bottom: none;
+					text-align: center;
+					background: $link-highlight;
+					font-size: 1.25em;
+					line-height: 1.2;
+					margin-bottom:0;
+				}
+				a:hover {
+					margin-right: 5%;
+					margin-left: 5%;
+					background: $black;
+					color: $link-highlight;
+				}
+			}
+		}
+		
+		.programme {
+			margin-bottom:3em;
+			li {
+				margin-bottom:0.75em;
+				.composer {
+
+				}
+				.composer:after {
+					font-weight:400;
+					content: ' //';
+				}
+				.work_title {
+				}
+			}
+		}
+		
+		.archive-docs {
+		}
+		
+		.multimedia {
+		}
 	}
-	.location {
-	}
-}
-
-.summary {
-}
-
-.external-links {
-}
-
-.programme {
-	.composer {
-	}
-	.work_title {
-	}
-}
-
-.archive-docs {
-}
-
-.multimedia {
 }
 
 /* ==========================================================================

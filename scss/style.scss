@@ -658,6 +658,13 @@ iframe {
 					line-height: 1.2;
 					margin-bottom:0;
 				}
+				.perfname {
+					white-space: nowrap;
+				}
+				.icon-link-ext:after {
+					font-size:80%;
+					padding-left: .3em;
+				}
 				a:hover {
 					margin-right: 5%;
 					margin-left: 5%;

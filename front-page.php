@@ -19,6 +19,7 @@ get_header();
 				'numberposts' => 1,
 				'post_type' => 'concert',
 				'meta_key' => 'dtstart',
+				'orderby' => 'dtstart',
 				'order' => 'ASC',
 				'meta_query' => array(
 					array(
@@ -35,6 +36,7 @@ get_header();
 				'numberposts' => 3,
 				'post_type' => 'colloquium',
 				'meta_key' => 'dtstart',
+				'orderby' => 'dtstart',
 				'order' => 'ASC',
 				'meta_query' => array(
 					array(
@@ -51,6 +53,7 @@ get_header();
 				'numberposts' => 1,
 				'post_type' => 'miscevent',
 				'meta_key' => 'dtstart',
+				'orderby' => 'dtstart',
 				'order' => 'ASC',
 				'meta_query' => array(
 					array(

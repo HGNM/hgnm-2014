@@ -35,7 +35,7 @@ get_header();
 				<?php endif; ?>
 				
 				<?php if(get_field('performer_url') || get_field('facebook_url')) : ?>
-					<section class="external-links">
+					<section class="external-links clearfix">
 						<ul>
 							<?php
 							// PERFORMER LINK

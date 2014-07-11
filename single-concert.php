@@ -126,7 +126,7 @@ get_header();
 								// Output if incomplete list of work titles
 								// Format: a list of composer names seperated by commas, final pair joined by ' and '
 								$n = 0;
-								echo '<p>Works by ';
+								echo '<p class="no-works">Works by ';
 								foreach ($fullprogramme as $item) {
 									if ($n == ($count - 1)) {
 										// last item

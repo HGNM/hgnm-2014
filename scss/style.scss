@@ -666,6 +666,7 @@ iframe {
 		
 		.external-links {
 			margin-bottom: 1.5em;
+			margin-top: 3em;
 			font-family: $sans-stack;
 			li {
 				margin-bottom:1.5em;
@@ -792,6 +793,17 @@ iframe {
 		}
 	}
 }
+
+#page {
+	#torso {
+		.has-docs {
+			.external-links {
+				margin-top: 0;
+			}
+		}
+	}
+}
+
 
 /* ==========================================================================
    Footer Styles

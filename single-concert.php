@@ -7,6 +7,7 @@ get_header();
 			$postclass = 'p-section vevent';
 			if (get_field('summary')) { $postclass = $postclass . ' has-summary'; }
 			if (get_field('programme')) { $postclass = $postclass . ' has-programme'; }
+			if (get_field('poster_pdf') || get_field('programme_pdf')) { $postclass = $postclass . ' has-docs'; }
 			?>
 			<article id="post-<?php the_ID(); ?>" <?php post_class($postclass); ?>>
 				<h2 class="post-title summary"><?php the_title(); ?></h2>

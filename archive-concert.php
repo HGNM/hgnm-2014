@@ -167,6 +167,10 @@ get_header();
 
 		} // endforeach years checker
 		
+		$flippedmenuitems = (array_flip($menuitems));
+		$currentindex = $flippedmenuitems[$yearquery];
+		$previousyear = $menuitems[($currentindex - 1)];
+		$nextyear = $menuitems[($currentindex + 1)];
 		
 		// Set timezone
 		date_default_timezone_set('America/New_York');

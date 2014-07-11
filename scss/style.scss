@@ -726,6 +726,24 @@ iframe {
 			}
 		}
 		
+		.gallery {
+			margin-bottom: 3em;
+			.popup-gallery {
+				li {
+					float: left;
+					width: 48%;
+					padding-right: 4%;
+					margin-bottom: 1.5em;
+					img {
+						width:100%;
+					}
+				}
+				li:nth-child(2n) {
+					padding-right:0;
+				}
+			}
+		}
+		
 		.archive-link {
 			font-family: $sans-stack;
 				margin-bottom:1.5em;

@@ -447,6 +447,11 @@ iframe {
 							color: $light-text;
 							font-size:80%;
 							padding-left: .1em;
+							@include transition(all 0.2s ease-out);
+						}
+						.icon-link-ext:hover:after {
+							color: $text-color;
+							@include transition(all 0.2s ease-in);
 						}
 					}
 				}

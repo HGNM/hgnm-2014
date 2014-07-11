@@ -37,11 +37,16 @@ Repository for WordPress theme development for new HGNM website.
 		- [ ] Display related events
 	- [ ] Concert Post ([single-concert.php](/single-concert.php))
 		- [X] More sophisticated programme display logic
-		- [ ] Archival material (a/v, photos, poster, programme)
+		- [ ] Archival material
+			- [X] A/V
+			- [ ] Photos
+				- [ ] Implement [Magnific Popup](http://dimsemenov.com/plugins/magnific-popup/) (?)
+			- [X] Poster & Programme
 	- [ ] Colloquium Post ([single-colloquium.php](/single-colloquium.php))
 - [ ] archive templates
 	- [X] Members ([archive-member.php](/archive-member.php))
 	- [ ] Archives ([archive-concert.php](/archive-concert.php))
+		- [ ] Dropdown year navigation
 	- [ ] Events ([archive-colloquium.php](/archive-colloquium.php))
 - [X] [footer.php](/footer.php)
 - [ ] [functions.php](/functions.php)

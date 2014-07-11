@@ -996,6 +996,11 @@ footer {
 						padding-right: 1.25%;
 						margin-bottom: 1.5em;
 						img {
+						a {
+							cursor: -webkit-zoom-in;
+							cursor: -moz-zoom-in;
+							cursor: zoom-in;
+						}
 						}
 					}
 					li:nth-child(2n) {

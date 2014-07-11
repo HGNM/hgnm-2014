@@ -39,7 +39,7 @@ Repository for WordPress theme development for new HGNM website.
 		- [X] More sophisticated programme display logic
 		- [ ] Archival material
 			- [X] A/V
-			- [ ] Photos
+			- [X] Photos
 				- [ ] Implement [Magnific Popup](http://dimsemenov.com/plugins/magnific-popup/) (?)
 			- [X] Poster & Programme
 	- [ ] Colloquium Post ([single-colloquium.php](/single-colloquium.php))

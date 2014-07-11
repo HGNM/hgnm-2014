@@ -717,9 +717,17 @@ iframe {
 			margin-bottom:3em;
 			li {
 				margin-bottom: 0.75em;
+				position: relative;
 				.icon-download {
-					font-size: 150%;
+					position:absolute;
+					font-size: 165%;
 					line-height: 1;
+				}
+				.icon-download:before {
+					margin-left:0;
+				}
+				a {
+					margin-left: 2em;
 				}
 			}
 		}

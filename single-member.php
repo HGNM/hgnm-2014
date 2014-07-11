@@ -19,7 +19,35 @@ get_header();
 							<div class="url">
 								<a href="<?php the_field('url'); ?>">Personal Website</a>
 							</div>
-						<?php endif; ?>
+						<?php endif;
+						
+						// Get archived colloquia
+						$colloquia = get_posts(
+							array(
+								'numberposts' => -1,
+								'post_type' => 'colloquium',
+								'meta_key' => 'dtstart',
+								'orderby' => 'dtstart',
+								'order' => 'ASC',
+								'meta_query' => array(
+									array(
+										'key' => 'fname',
+				                        'value'  => get_the_ID(),
+									)
+								)
+							)
+						);
+						
+						foreach ($colloquia as $colloquium) {
+							date_default_timezone_set('America/New_York');
+							$dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart', $colloquium->ID) . ' 12:00'));
+							if ($dtstart->format('Ymd') >= date('Ymd')) {
+								echo '<h3>Upcoming Colloquium</h3><p>' . $dtstart->format('l, j F') . '</p>';
+							}
+						}
+						
+						?>
+						
 					</section>
 				</article><!-- #post -->
 			<?php endwhile; ?>

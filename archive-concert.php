@@ -300,7 +300,7 @@ get_header();
 			}
 			
 			if ($menuitems) {
-				echo '<select>';
+				echo '<ul>';
 				foreach ($menuitems as $item) {
 					if (($item % 100) == 99) {
 						$menulabel = $item . '–' . ($item + 1);
@@ -308,9 +308,9 @@ get_header();
 					else {
 						$menulabel = $item . '–' . str_pad((($item + 1) % 100), 2, '0', STR_PAD_LEFT);
 					}
-					echo '<option>' . $menulabel . '</option>';
+					echo '<li><a href="' . get_post_type_archive_link('concert') . $item . '/">' . $menulabel . '</a></li>';
 				}
-				echo '</select>';
+				echo '</ul>';
 			}
 			
 			echo '</article>';

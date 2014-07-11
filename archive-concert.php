@@ -301,7 +301,7 @@ get_header();
 						</li>
 					<?php endforeach; ?>
 					</ul>
-				</li>
+				</section>
 			<?php endif;
 			
 			if ($menuitems) {

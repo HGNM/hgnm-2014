@@ -242,6 +242,24 @@ get_header();
 				}
 				?>
 				
+				<?php 
+				// GALLERY
+				$images = get_field('gallery');
+				 
+				if( $images ): ?>
+				<section class="gallery">
+				    <ul class="popup-gallery">
+				        <?php foreach( $images as $image ): ?>
+				            <li>
+				            	<a href="<?php echo $image['url']; ?>" title="<?php echo $image['title']; ?>">
+				            		 <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
+				            	</a>
+				            </li>
+				        <?php endforeach; ?>
+				    </ul>
+			    </section>
+				<?php endif; ?>
+				
 				<section class="archive-link">
 				<?php
 				//ARCHIVE LINK - shows link to archive for season that includes this concert

@@ -248,7 +248,8 @@ get_header();
 				 
 				if( $images ): ?>
 				<section class="gallery">
-				    <ul class="popup-gallery">
+					<h3>Photos</h3>
+				    <ul class="popup-gallery clearfix">
 				        <?php foreach( $images as $image ): ?>
 				            <li>
 				            	<a href="<?php echo $image['url']; ?>" title="<?php echo $image['title']; ?>">

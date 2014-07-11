@@ -199,16 +199,14 @@ get_header();
 				<header class="archive-header">
 					<h2>Archives<br /><?php echo $seasontitle ?></h2>
 					<nav id="archive-nav" class="clearfix">
-						<?php if (($seasonstart - 10000) < 19840900) : ?>
-						<?php else: ?>
-							<a href="<?php echo get_post_type_archive_link('concert') . ($yearquery - 1) . '/'; ?>" class="left">
+						<?php if ($previousyear) : ?>
+							<a href="<?php echo get_post_type_archive_link('concert') . $previousyear . '/'; ?>" class="left">
 								<span class="icon icon-left-arrow-bold" aria-hidden="true"></span>
 								<span class="text">Older Archive</span>
 							</a>
 						<?php endif; ?>
-						<?php if (($seasonstart + 10000) > date('Ymd', strtotime(date('Ymd', mktime()) . ' + 365 day'))) : ?>
-						<?php else: ?>
-							<a href="<?php echo get_post_type_archive_link('concert') . ($yearquery + 1) . '/'; ?>" class="right">
+						<?php if ($nextyear) : ?>
+							<a href="<?php echo get_post_type_archive_link('concert') . $nextyear . '/'; ?>" class="right">
 								<span class="text">Newer Archive</span>
 								<span class="icon icon-right-arrow-bold" aria-hidden="true"></span>
 							</a>
@@ -319,7 +317,7 @@ get_header();
 				}
 				echo '</ul>';
 			}
-			
+
 			echo '</article>';
 		}
 

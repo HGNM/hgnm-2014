@@ -219,6 +219,100 @@ get_header();
 					</ul>
 				</li>
 			<?php endif;
+			
+			// Let’s start building a select menu
+			$seed = 1984;
+			if (date('m') > 8) {
+				$now = date('Y') + 1;
+			}
+			else {
+				$now = date('Y');
+			}
+			$years = range($seed, $now);
+			
+			$menuitems = array();
+			
+			foreach ($years as $year) {
+				
+				// Set query variables for each year
+				$querystart = $year . '0901';
+				$queryend = ($year + 1) . '0831';
+				$query = array($querystart,$queryend);
+				
+				// Get archived concerts
+				$concertcheck = get_posts(
+					array(
+						'numberposts' => 1,
+						'post_type' => 'concert',
+						'meta_key' => 'dtstart',
+						'orderby' => 'dtstart',
+						'order' => 'ASC',
+						'meta_query' => array(
+							array(
+								'key' => 'dtstart',
+		                        'value'  => $query,
+		                        'compare'  => 'BETWEEN'
+							)
+						)
+					)
+				);
+				
+				// Get archived colloquia
+				$colloquiumcheck = get_posts(
+					array(
+						'numberposts' => 1,
+						'post_type' => 'colloquium',
+						'meta_key' => 'dtstart',
+						'orderby' => 'dtstart',
+						'order' => 'ASC',
+						'meta_query' => array(
+							array(
+								'key' => 'dtstart',
+		                        'value'  => $query,
+		                        'compare'  => 'BETWEEN'
+							)
+						)
+					)
+				);
+				
+				// Get archived miscellaneous events
+				$misceventscheck = get_posts(
+					array(
+						'numberposts' => 1,
+						'post_type' => 'miscevent',
+						'meta_key' => 'dtstart',
+						'orderby' => 'dtstart',
+						'order' => 'ASC',
+						'meta_query' => array(
+							array(
+								'key' => 'dtstart',
+		                        'value'  => $query,
+		                        'compare'  => 'BETWEEN'
+							)
+						)
+					)
+				);
+				
+				if ( $concertcheck || $colloquiumcheck || $misceventscheck ) {
+					$menuitems = array_merge($menuitems, array($year));
+				}
+
+			}
+			
+			if ($menuitems) {
+				echo '<select>';
+				foreach ($menuitems as $item) {
+					if (($item % 100) == 99) {
+						$menulabel = $item . '–' . ($item + 1);
+					}
+					else {
+						$menulabel = $item . '–' . str_pad((($item + 1) % 100), 2, '0', STR_PAD_LEFT);
+					}
+					echo '<option>' . $menulabel . '</option>';
+				}
+				echo '</select>';
+			}
+			
 			echo '</article>';
 		}
 

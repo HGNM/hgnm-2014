@@ -979,6 +979,24 @@ footer {
 				}
 			}
 			
+			.gallery {
+				.popup-gallery {
+					li {
+						width: 19%;
+						padding-right: 1.25%;
+						margin-bottom: 1.5em;
+						img {
+						}
+					}
+					li:nth-child(2n) {
+						padding-right:1.25%;
+					}
+					li:nth-child(5n) {
+						padding-right:0;
+					}
+				}
+			}
+			
 			.has-programme {
 				.programme {
 					float: left;

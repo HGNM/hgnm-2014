@@ -60,6 +60,8 @@ get_header();
 						$pastcolloquia = $colloquia;
 						$upcomingconcerts = $concerts;
 						$pastconcerts = $concerts;
+						date_default_timezone_set('America/New_York');
+						
 							$dtstart = get_field('dtstart', $row->ID) . ' 12:00';
 							$dtstart = DateTime::createFromFormat('d/m/Y G:i', $dtstart);
 							if (($dtstart->format('Ymd')) < date('Ymd')) {

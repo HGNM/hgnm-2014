@@ -38,7 +38,6 @@ get_header();
 							)
 						);
 						
-						foreach ($upcoming as $key => $row) {
 						// Get archived concerts
 						$concerts = get_posts(
 							array(
@@ -62,18 +61,19 @@ get_header();
 						$pastconcerts = $concerts;
 						date_default_timezone_set('America/New_York');
 						
+						foreach ($upcomingcolloquia as $key => $row) {
 							$dtstart = get_field('dtstart', $row->ID) . ' 12:00';
 							$dtstart = DateTime::createFromFormat('d/m/Y G:i', $dtstart);
 							if (($dtstart->format('Ymd')) < date('Ymd')) {
-								unset($upcoming[$key]);
+								unset($upcomingcolloquia[$key]);
 							}
 						}
 						
-						foreach ($past as $key => $row) {
+						foreach ($pastcolloquia as $key => $row) {
 							$dtstart = get_field('dtstart', $row->ID) . ' 12:00';
 							$dtstart = DateTime::createFromFormat('d/m/Y G:i', $dtstart);
 							if (($dtstart->format('Ymd')) >= date('Ymd')) {
-								unset($past[$key]);
+								unset($pastcolloquia[$key]);
 							}
 						}
 						

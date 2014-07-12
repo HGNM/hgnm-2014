@@ -61,6 +61,7 @@ get_header();
 						$pastconcerts = $concerts;
 						date_default_timezone_set('America/New_York');
 						
+						// Unset array items in the past — COLLOQUIA
 						foreach ($upcomingcolloquia as $key => $row) {
 							$dtstart = get_field('dtstart', $row->ID) . ' 12:00';
 							$dtstart = DateTime::createFromFormat('d/m/Y G:i', $dtstart);
@@ -69,6 +70,7 @@ get_header();
 							}
 						}
 						
+						// Unset array items in the future (or today) — COLLOQUIA
 						foreach ($pastcolloquia as $key => $row) {
 							$dtstart = get_field('dtstart', $row->ID) . ' 12:00';
 							$dtstart = DateTime::createFromFormat('d/m/Y G:i', $dtstart);
@@ -82,6 +84,7 @@ get_header();
 							$dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart', $colloquium->ID) . ' 12:00'));
 							if ($dtstart->format('Ymd') >= date('Ymd')) {
 								echo '<h3>Upcoming Colloquium</h3><p>' . $dtstart->format('l, j F') . '</p>';
+						// Unset array items in the past — CONCERTS
 						foreach ($upcomingconcerts as $key => $row) {
 							$dtstart = get_field('dtstart', $row->ID) . ' 12:00';
 							$dtstart = DateTime::createFromFormat('d/m/Y G:i', $dtstart);
@@ -90,6 +93,7 @@ get_header();
 							}
 						}
 						
+						// Unset array items in the future (or today) — CONCERTS
 						foreach ($pastconcerts as $key => $row) {
 							$dtstart = get_field('dtstart', $row->ID) . ' 12:00';
 							$dtstart = DateTime::createFromFormat('d/m/Y G:i', $dtstart);

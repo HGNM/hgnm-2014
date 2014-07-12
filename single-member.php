@@ -38,6 +38,25 @@ get_header();
 							)
 						);
 						
+						$upcoming = $colloquia;
+						$past = $colloquia;
+
+						foreach ($upcoming as $key => $row) {
+							$dtstart = get_field('dtstart', $row->ID) . ' 12:00';
+							$dtstart = DateTime::createFromFormat('d/m/Y G:i', $dtstart);
+							if (($dtstart->format('Ymd')) < date('Ymd')) {
+								unset($upcoming[$key]);
+							}
+						}
+						
+						foreach ($past as $key => $row) {
+							$dtstart = get_field('dtstart', $row->ID) . ' 12:00';
+							$dtstart = DateTime::createFromFormat('d/m/Y G:i', $dtstart);
+							if (($dtstart->format('Ymd')) >= date('Ymd')) {
+								unset($past[$key]);
+							}
+						}
+						
 						foreach ($colloquia as $colloquium) {
 							date_default_timezone_set('America/New_York');
 							$dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart', $colloquium->ID) . ' 12:00'));

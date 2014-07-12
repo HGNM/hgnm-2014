@@ -38,9 +38,6 @@ get_header();
 							)
 						);
 						
-						$upcoming = $colloquia;
-						$past = $colloquia;
-
 						foreach ($upcoming as $key => $row) {
 						// Get archived concerts
 						$concerts = get_posts(
@@ -58,6 +55,11 @@ get_header();
 								)
 							)
 						);
+						
+						$upcomingcolloquia = $colloquia;
+						$pastcolloquia = $colloquia;
+						$upcomingconcerts = $concerts;
+						$pastconcerts = $concerts;
 							$dtstart = get_field('dtstart', $row->ID) . ' 12:00';
 							$dtstart = DateTime::createFromFormat('d/m/Y G:i', $dtstart);
 							if (($dtstart->format('Ymd')) < date('Ymd')) {

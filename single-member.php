@@ -42,6 +42,22 @@ get_header();
 						$past = $colloquia;
 
 						foreach ($upcoming as $key => $row) {
+						// Get archived concerts
+						$concerts = get_posts(
+							array(
+								'numberposts' => -1,
+								'post_type' => 'concert',
+								'meta_key' => 'dtstart',
+								'orderby' => 'dtstart',
+								'order' => 'ASC',
+								'meta_query' => array(
+									array(
+										'key' => 'fname',
+				                        'value'  => get_the_ID(),
+									)
+								)
+							)
+						);
 							$dtstart = get_field('dtstart', $row->ID) . ' 12:00';
 							$dtstart = DateTime::createFromFormat('d/m/Y G:i', $dtstart);
 							if (($dtstart->format('Ymd')) < date('Ymd')) {

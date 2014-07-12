@@ -79,11 +79,6 @@ get_header();
 							}
 						}
 						
-						foreach ($colloquia as $colloquium) {
-							date_default_timezone_set('America/New_York');
-							$dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart', $colloquium->ID) . ' 12:00'));
-							if ($dtstart->format('Ymd') >= date('Ymd')) {
-								echo '<h3>Upcoming Colloquium</h3><p>' . $dtstart->format('l, j F') . '</p>';
 						// Unset array items in the past — CONCERTS
 						foreach ($upcomingconcerts as $key => $row) {
 							$dtstart = get_field('dtstart', $row->ID) . ' 12:00';
@@ -102,7 +97,14 @@ get_header();
 							}
 						}
 						
+						// Display Upcoming Colloquia
+						if ($upcomingcolloquia) {
+							echo '<h3>Upcoming Colloquium</h3><ul>';
+							foreach ($upcomingcolloquia as $item) {
+								$dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart', $item->ID) . ' 12:00'));
+								echo '<li>' . $dtstart->format('l, j F') . '</li>';
 							}
+							echo '</ul>';
 						}
 						
 						?>

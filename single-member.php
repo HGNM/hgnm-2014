@@ -82,6 +82,22 @@ get_header();
 							$dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart', $colloquium->ID) . ' 12:00'));
 							if ($dtstart->format('Ymd') >= date('Ymd')) {
 								echo '<h3>Upcoming Colloquium</h3><p>' . $dtstart->format('l, j F') . '</p>';
+						foreach ($upcomingconcerts as $key => $row) {
+							$dtstart = get_field('dtstart', $row->ID) . ' 12:00';
+							$dtstart = DateTime::createFromFormat('d/m/Y G:i', $dtstart);
+							if (($dtstart->format('Ymd')) < date('Ymd')) {
+								unset($upcomingconcerts[$key]);
+							}
+						}
+						
+						foreach ($pastconcerts as $key => $row) {
+							$dtstart = get_field('dtstart', $row->ID) . ' 12:00';
+							$dtstart = DateTime::createFromFormat('d/m/Y G:i', $dtstart);
+							if (($dtstart->format('Ymd')) >= date('Ymd')) {
+								unset($pastconcerts[$key]);
+							}
+						}
+						
 							}
 						}
 						

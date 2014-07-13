@@ -120,6 +120,25 @@ get_header();
 							}
 							echo '</div>';
 						}
+						
+						// Display Next Concerts
+						if ($upcomingconcerts) {
+							echo '<div class="concerts"><h3>Upcoming Concerts</h3><ul>';
+							foreach ($upcomingconcerts as $item) : ?>
+								<li class="vevent clearfix">
+									<a href="<?php echo get_permalink($item->ID) ?>" class="url">
+										<?php $dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart', $item->ID) . ' 20:00')); ?>
+										<h4 class="dtstart"><time class="value-title" datetime="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>" title="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>">
+											<?php echo '<span class="month">' . $dtstart->format('M') . '</span> <span class="day">' . $dtstart->format('j'); ?>
+										</time></h4>
+										<div class="details">
+											<?php echo '<p class="summary">' . get_the_title($item->ID) . '</p>'; ?>
+											<p class="location vcard"><?php the_field('location', $item->ID); ?></p>
+										</div>
+									</a>
+								</li>
+							<?php endforeach;
+							echo '</div>';
 						}
 						
 						?>

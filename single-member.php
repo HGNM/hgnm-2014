@@ -109,14 +109,17 @@ get_header();
 							}
 						}
 						
-						// Display Upcoming Colloquia
+						// Display Next Colloquium
 						if ($upcomingcolloquia) {
-							echo '<h3>Upcoming Colloquium</h3><ul>';
+							echo '<div class="colloquia"><h3>Next Colloquium</h3>';
 							foreach ($upcomingcolloquia as $item) {
 								$dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart', $item->ID) . ' 12:00'));
-								echo '<li>' . $dtstart->format('l, j F') . '</li>';
+								echo '<h4>' . $dtstart->format('l, j F') . '</h4>';
+								echo '<p>Talk at 12pm in the Davison Room, Harvard University Music Building.</p>';
+								break;
 							}
-							echo '</ul>';
+							echo '</div>';
+						}
 						}
 						
 						?>

@@ -52,6 +52,7 @@ get_header();
 						// Get archived concerts
 						$concerts = get_posts(
 							array(
+								'suppress_filters' => FALSE,
 								'numberposts' => -1,
 								'post_type' => 'concert',
 								'meta_key' => 'dtstart',

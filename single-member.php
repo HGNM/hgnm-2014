@@ -21,6 +21,9 @@ get_header();
 							</div>
 						<?php endif;
 						
+						// Get composer ID to look for
+						$testID = get_the_ID();
+						
 						// Get archived colloquia
 						$colloquia = get_posts(
 							array(

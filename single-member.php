@@ -41,6 +41,14 @@ get_header();
 							)
 						);
 						
+						// custom filter to replace '=' with 'LIKE'
+						function my_posts_where( $where ) {
+							$where = str_replace("meta_key = 'programme_%_composer'", "meta_key LIKE 'programme_%_composer'", $where);
+							return $where;
+						}
+						 
+						add_filter('posts_where', 'my_posts_where');
+						
 						// Get archived concerts
 						$concerts = get_posts(
 							array(

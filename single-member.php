@@ -35,7 +35,7 @@ get_header();
 								'meta_query' => array(
 									array(
 										'key' => 'fname',
-				                        'value'  => get_the_ID(),
+				                        'value'  => $testID,
 									)
 								)
 							)

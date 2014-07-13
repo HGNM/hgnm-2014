@@ -4,7 +4,7 @@ get_header();
 
 		if ( have_posts() ) : ?>
 			<?php while ( have_posts() ) : the_post(); ?>
-				<article id="post" <?php post_class('p-section'); ?>>
+				<article id="post-<?php the_ID(); ?>" <?php post_class('p-section'); ?>>
 					<h2 class="post-title fname"><?php the_title(); ?></h2>
 					<section class="primary entry">
 						<?php the_content(); ?>

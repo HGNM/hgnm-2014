@@ -59,8 +59,8 @@ get_header();
 								'order' => 'ASC',
 								'meta_query' => array(
 									array(
-										'key' => 'fname',
-				                        'value'  => get_the_ID(),
+										'key' => 'programme_%_composer',
+				                        'value'  => $testID,
 									)
 								)
 							)

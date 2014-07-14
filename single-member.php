@@ -93,9 +93,13 @@ get_header();
 					}
 				}
 				
+				// Create post-class string. Sets class of 'no-secondary' if no sidebar content exists
+				$postclass = 'p-section';
+				if ( !( has_post_thumbnail() || get_field('url') || $upcomingcolloquia || $upcomingconcerts ) ){ $postclass = $postclass . ' no-secondary'; }
+				
 				?>
 			
-				<article id="post-<?php the_ID(); ?>" <?php post_class('p-section'); ?>>
+				<article id="post-<?php the_ID(); ?>" <?php post_class($postclass); ?>>
 					<h2 class="post-title fname"><?php the_title(); ?></h2>
 					<section class="primary entry">
 						<?php the_content(); ?>

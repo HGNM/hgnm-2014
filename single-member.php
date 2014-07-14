@@ -131,7 +131,12 @@ get_header();
 							
 							// Display Next Concerts
 							if ($upcomingconcerts) {
-								echo '<div class="concerts"><h3>Upcoming Concerts</h3><ul>';
+								if (count($upcomingconcerts) > 1) {
+									echo '<div class="concerts"><h3>Upcoming Concerts</h3><ul>';
+								}
+								else {
+									echo '<div class="concerts"><h3>Next Concert</h3><ul>';
+								}
 								foreach ($upcomingconcerts as $item) : ?>
 									<li class="vevent clearfix">
 										<a href="<?php echo get_permalink($item->ID) ?>" class="url">

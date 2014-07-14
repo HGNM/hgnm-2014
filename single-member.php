@@ -100,55 +100,55 @@ get_header();
 					<section class="primary entry">
 						<?php the_content(); ?>
 					</section>
-					<section class="secondary">
-						<?php if( has_post_thumbnail() ): ?>
-							<div class="featured-img">
-								<?php echo get_the_post_thumbnail($post->ID, 'medium'); ?>
-							</div>
-						<?php endif; ?>
-						<?php if( get_field('url') ): ?>
-							<div class="url">
-								<a href="<?php the_field('url'); ?>">Personal Website</a>
-							</div>
-						<?php endif;
+					<?php if ( has_post_thumbnail() || get_field('url') || $upcomingcolloquia || $upcomingconcerts ) : ?>
+						<section class="secondary">
+							<?php if( has_post_thumbnail() ): ?>
+								<div class="featured-img">
+									<?php echo get_the_post_thumbnail($post->ID, 'medium'); ?>
+								</div>
+							<?php endif; ?>
+							<?php if( get_field('url') ): ?>
+								<div class="url">
+									<a href="<?php the_field('url'); ?>">Personal Website</a>
+								</div>
+							<?php endif;
+							
+							// Display Next Colloquium
+							if ($upcomingcolloquia) {
+								echo '<div class="colloquia"><h3>Next Colloquium</h3>';
+								foreach ($upcomingcolloquia as $item) {
+									$dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart', $item->ID) . ' 12:00'));
+									echo '<h4>' . $dtstart->format('l, j F') . '</h4>';
+									echo '<p>Talk at 12pm in the Davison Room, Harvard University Music Building.</p>';
+									break;
+								}
+								echo '</div>';
 							}
+							
+							// Display Next Concerts
+							if ($upcomingconcerts) {
+								echo '<div class="concerts"><h3>Upcoming Concerts</h3><ul>';
+								foreach ($upcomingconcerts as $item) : ?>
+									<li class="vevent clearfix">
+										<a href="<?php echo get_permalink($item->ID) ?>" class="url">
+											<?php $dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart', $item->ID) . ' 20:00')); ?>
+											<h4 class="dtstart"><time class="value-title" datetime="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>" title="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>">
+												<?php echo '<span class="month">' . $dtstart->format('M') . '</span> <span class="day">' . $dtstart->format('j'); ?>
+											</time></h4>
+											<div class="details">
+												<?php echo '<p class="summary">' . get_the_title($item->ID) . '</p>'; ?>
+												<p class="location vcard"><?php the_field('location', $item->ID); ?></p>
+											</div>
+										</a>
+									</li>
+								<?php endforeach;
+								echo '</div>';
 							}
-						
-						// Display Next Colloquium
-						if ($upcomingcolloquia) {
-							echo '<div class="colloquia"><h3>Next Colloquium</h3>';
-							foreach ($upcomingcolloquia as $item) {
-								$dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart', $item->ID) . ' 12:00'));
-								echo '<h4>' . $dtstart->format('l, j F') . '</h4>';
-								echo '<p>Talk at 12pm in the Davison Room, Harvard University Music Building.</p>';
-								break;
-							}
-							echo '</div>';
-						}
-						
-						// Display Next Concerts
-						if ($upcomingconcerts) {
-							echo '<div class="concerts"><h3>Upcoming Concerts</h3><ul>';
-							foreach ($upcomingconcerts as $item) : ?>
-								<li class="vevent clearfix">
-									<a href="<?php echo get_permalink($item->ID) ?>" class="url">
-										<?php $dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart', $item->ID) . ' 20:00')); ?>
-										<h4 class="dtstart"><time class="value-title" datetime="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>" title="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>">
-											<?php echo '<span class="month">' . $dtstart->format('M') . '</span> <span class="day">' . $dtstart->format('j'); ?>
-										</time></h4>
-										<div class="details">
-											<?php echo '<p class="summary">' . get_the_title($item->ID) . '</p>'; ?>
-											<p class="location vcard"><?php the_field('location', $item->ID); ?></p>
-										</div>
-									</a>
-								</li>
-							<?php endforeach;
-							echo '</div>';
-						}
-						
-						?>
-						
-					</section>
+							
+							?>
+							
+						</section> <!-- .secondary -->
+					<?php endif; ?>
 				</article><!-- #post -->
 			<?php endwhile; ?>
 		<?php else: ?>

@@ -1187,7 +1187,24 @@ footer {
 					clear:both;
 				}
 			}
-			
+
+			.member {
+				.primary {
+					width:58.25%;
+					margin-right: 3.75%;
+					float:left;
+				}
+				.secondary {
+					width: 38%;
+					float:left;
+				}
+			}
+			.member.no-primary {
+				.secondary {
+					float:none;
+					margin: 0 auto;
+				}
+			}
 			
 		} // </#torso>
 	} // </#page>

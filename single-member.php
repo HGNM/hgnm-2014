@@ -104,9 +104,11 @@ get_header();
 			
 				<article id="post-<?php the_ID(); ?>" <?php post_class($postclass); ?>>
 					<h2 class="post-title fname"><?php the_title(); ?></h2>
-					<section class="primary entry">
-						<?php the_content(); ?>
-					</section>
+					<?php if ( get_the_content() ) : ?>
+						<section class="primary entry">
+							<?php the_content(); ?>
+						</section>
+					<?php endif; ?>
 					<?php if ( has_post_thumbnail() || get_field('url') || $upcomingcolloquia || $upcomingconcerts ) : ?>
 						<section class="secondary">
 							<?php if( has_post_thumbnail() ): ?>

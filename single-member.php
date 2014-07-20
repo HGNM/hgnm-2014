@@ -112,8 +112,9 @@ get_header();
 					<?php if ( has_post_thumbnail() || get_field('url') || $upcomingcolloquia || $upcomingconcerts ) : ?>
 						<section class="secondary">
 						
+							<?php
 							// Display Featured Image
-							<?php if( has_post_thumbnail() ): ?>
+							if( has_post_thumbnail() ): ?>
 								<div class="featured-img">
 									<?php $thumbid = get_post_thumbnail_id();
 									$thumbsrc = wp_get_attachment_image_src( $thumbid, 'medium' );

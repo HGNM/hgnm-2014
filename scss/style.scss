@@ -863,6 +863,10 @@ iframe {
 					p {
 						font-family: $serif-stack;
 						text-align:left;
+						.icon-link-ext:after {
+							font-size:80%;
+							padding-left: .3em;
+						}
 					}
 				} // </.colloquia>
 				.concerts {

@@ -827,6 +827,31 @@ iframe {
 						width:100%;
 					}
 				}
+				.url {
+					margin-bottom:1.5em;
+					a {
+						padding: 1.5em 5%;
+						display: block;
+						border-bottom: none;
+						text-align: center;
+						background: $link-highlight;
+						font-size: 1.25em;
+						line-height: 1.2;
+						margin-bottom:0;
+					}
+					a:hover {
+						margin-right: 4%;
+						margin-left: 4%;
+						padding-right: 1%;
+						padding-left: 1%;
+						background: $black;
+						color: $link-highlight;
+					}
+					.icon-link-ext:after {
+						font-size:80%;
+						padding-left: .3em;
+					}
+				}
 				.colloquia {
 					margin-bottom:3em;
 					text-align:center;

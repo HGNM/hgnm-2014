@@ -111,6 +111,8 @@ get_header();
 					<?php endif; ?>
 					<?php if ( has_post_thumbnail() || get_field('url') || $upcomingcolloquia || $upcomingconcerts ) : ?>
 						<section class="secondary">
+						
+							// Display Featured Image
 							<?php if( has_post_thumbnail() ): ?>
 								<div class="featured-img">
 									<?php $thumbid = get_post_thumbnail_id();

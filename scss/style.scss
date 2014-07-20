@@ -804,6 +804,87 @@ iframe {
 	}
 }
 
+/* ==========================================================================
+   Member Single Styles
+   ========================================================================== */
+
+		.member {
+			.secondary {
+				font-family: $sans-stack;
+				h3 {
+					text-align: center;
+					font-size: 0.75em;
+					line-height:2;
+					text-transform:uppercase;
+					letter-spacing: .3em;
+					font-weight:700;
+					margin:0 0 1em;
+				}
+				.featured-img {
+					img {
+						width:100%;
+					}
+				}
+				.colloquia {
+					margin-bottom:3em;
+					text-align:center;
+				} // </.colloquia>
+				.concerts {
+					margin-bottom:3em;
+					.vevent {
+						margin-bottom:1.5em;
+						@include transition(all 0.2s ease-out);
+						.dtstart {
+							text-align:center;
+							display:block;
+							float:left;
+							width:25%;
+							margin:0 5% 0 0;
+							background: $bright-green;
+							padding: 0 5%;
+							.month {
+								display:block;
+								text-transform:uppercase;
+								letter-spacing: 0.2em;
+								font-size: 1.25em;
+								line-height:1.4;
+								padding-top:0.4em;
+							}
+							.day {
+								display:block;
+								font-size: 5em;
+								line-height:0.6;
+								padding-bottom:0.3em;
+							}
+						}
+						.details {
+							display:block;
+							float:left;
+							width:60%;
+							font-size:1.25em;
+							line-height:1.8;
+							p {
+								margin: 0;
+							}
+							.summary {
+								font-weight:700;
+							}
+						}
+					} // </a>
+					.vevent:hover {
+						@include transition(all 0.2s ease-in);
+						margin-right: 5%;
+						margin-left: 5%;
+						background: $bright-green;
+						.dtstart {
+							background: $black;
+							color: $bright-green;
+						}
+					}
+				} // </.concerts>
+			} // </.secondary>
+		} // </.member>
+
 
 /* ==========================================================================
    Footer Styles

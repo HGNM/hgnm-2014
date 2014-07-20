@@ -113,7 +113,10 @@ get_header();
 						<section class="secondary">
 							<?php if( has_post_thumbnail() ): ?>
 								<div class="featured-img">
-									<?php echo get_the_post_thumbnail($post->ID, 'medium'); ?>
+									<?php $thumbid = get_post_thumbnail_id();
+									$thumbsrc = wp_get_attachment_image_src( $thumbid, 'medium' );
+									$thumbalt = get_post_meta($thumbid, '_wp_attachment_image_alt', true);
+									echo '<img src="' . $thumbsrc[0] . '" alt="' . $thumbalt . '">'; ?>
 								</div>
 							<?php endif; ?>
 							<?php if( get_field('url') ): ?>

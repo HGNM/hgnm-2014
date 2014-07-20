@@ -855,6 +855,15 @@ iframe {
 				.colloquia {
 					margin-bottom:3em;
 					text-align:center;
+					h4 {
+						font-size:1.25em;
+						line-height:1.8;
+						margin:0;
+					}
+					p {
+						font-family: $serif-stack;
+						text-align:left;
+					}
 				} // </.colloquia>
 				.concerts {
 					margin-bottom:3em;

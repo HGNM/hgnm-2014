@@ -93,9 +93,12 @@ get_header();
 					}
 				}
 				
-				// Create post-class string. Sets class of 'no-secondary' if no sidebar content exists
+				// Create post-class string.
+				// Sets class of 'no-secondary' if no sidebar content exists.
 				$postclass = 'p-section';
 				if ( !( has_post_thumbnail() || get_field('url') || $upcomingcolloquia || $upcomingconcerts ) ){ $postclass = $postclass . ' no-secondary'; }
+				// Sets class of 'no-primary' if no main content.
+				if ( !get_the_content() ) { $postclass = $postclass . ' no-primary'; }
 				
 				?>
 			

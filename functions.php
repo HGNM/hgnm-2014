@@ -50,6 +50,10 @@ return $output;
 // Enable Featured Image for Member Custom Post Type
 add_theme_support( 'post-thumbnails', array( 'member', 'concert', 'miscevent' ) );
 
+// Register custom image sizes
+add_image_size('hgnm-thumb', 200, 200, true);
+add_image_size('hgnm-main', 600, 400, true);
+
 // Add ability to query custom year variable for use on archive page
 function add_query_vars_filter( $vars ){
   $vars[] = "y";

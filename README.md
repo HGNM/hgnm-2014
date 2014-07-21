@@ -33,12 +33,14 @@ Repository for WordPress theme development for new HGNM website.
 	- [X] responsive menu
 - [ ] content single post templates
 	- [ ] HGNM Member ([single-member.php](/single-member.php))
-		- [ ] Add last updated indication
+		- [X] Add last updated indication
 		- [ ] Display related a/v
 		- [ ] Display related events
+			- [X] Upcoming
+			- [ ] Past
 	- [ ] Concert Post ([single-concert.php](/single-concert.php))
 		- [X] More sophisticated programme display logic
-		- [ ] Archival material
+		- [X] Archival material
 			- [X] A/V
 			- [X] Photos
 				- [ ] Implement [Magnific Popup](http://dimsemenov.com/plugins/magnific-popup/) (?)

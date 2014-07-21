@@ -107,6 +107,7 @@ get_header();
 					<?php if ( get_the_content() ) : ?>
 						<section class="primary entry clearfix">
 							<?php the_content(); ?>
+							<?php echo '<p class="updated">Last updated: ' . get_the_modified_time('F j, Y') . '</p>'; ?> 
 						</section>
 					<?php endif; ?>
 					<?php if ( has_post_thumbnail() || get_field('url') || $upcomingcolloquia || $upcomingconcerts ) : ?>

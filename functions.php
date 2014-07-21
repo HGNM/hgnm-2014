@@ -11,8 +11,9 @@ function baw_hack_wp_title_for_home( $title )
 }
 
 // Register custom menu
-register_nav_menu( 'primary', 'Primary Menu' );
-
+if ( function_exists( 'register_nav_menu' ) ) {
+	register_nav_menu( 'primary', 'Primary Menu' );
+}
 
 // Enqueue Google Fonts
  function load_fonts() {
@@ -48,11 +49,15 @@ return $output;
 }
 
 // Enable Featured Image for Member Custom Post Type
-add_theme_support( 'post-thumbnails', array( 'member', 'concert', 'miscevent' ) );
+if ( function_exists( 'add_theme_support' ) ) {
+	add_theme_support( 'post-thumbnails', array( 'member', 'concert', 'miscevent' ) );
+}
 
 // Register custom image sizes
-add_image_size('hgnm-thumb', 200, 200, true);
-add_image_size('hgnm-main', 600, 400, true);
+if ( function_exists( 'add_image_size' ) ) {
+	add_image_size('hgnm-thumb', 200, 200, true);
+	add_image_size('hgnm-main', 600, 400, true);
+}
 
 // Add ability to query custom year variable for use on archive page
 function add_query_vars_filter( $vars ){

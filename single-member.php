@@ -134,8 +134,8 @@ get_header();
 								echo '<div class="colloquia"><h3>Next Colloquium</h3>';
 								foreach ($upcomingcolloquia as $item) {
 									$dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart', $item->ID) . ' 12:00'));
-									echo '<h4>' . $dtstart->format('l, j F') . '</h4>';
-									echo '<p>Talk at 12pm in the Davison Room, <a href="http://www.map.harvard.edu/?ctrx=759617&ctry=2962591&level=10&layers=Campus%20Base%20and%20Buildings,Bike%20Facilities,Map%20Text" target="_blank" class="icon-link-ext">Harvard University Music Building</a>.</p>';
+									echo '<h4 class="dtstart">' . $dtstart->format('l, j F — Ga') . '</h4>';
+									echo '<p class="location">Davison Room, <a href="http://www.map.harvard.edu/?ctrx=759617&ctry=2962591&level=10&layers=Campus%20Base%20and%20Buildings,Bike%20Facilities,Map%20Text" target="_blank" class="icon-link-ext">Harvard University Music Building</a></p>';
 									break;
 								}
 								echo '</div>';

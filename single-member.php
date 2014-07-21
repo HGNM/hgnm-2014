@@ -170,6 +170,9 @@ get_header();
 							
 						</section> <!-- .secondary -->
 					<?php endif; ?>
+					<section class="composers-link">
+						<?php echo '<a href="' . get_post_type_archive_link('member') . '">See all composers</a>'; ?>
+					</section>
 				</article><!-- #post -->
 			<?php endwhile; ?>
 		<?php else: ?>

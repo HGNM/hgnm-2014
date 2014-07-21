@@ -256,7 +256,8 @@ get_header();
 			foreach($posts as $post)
 			{
 				$imgsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbnail');
-				echo '<li><a href="' . get_permalink($post->ID) . '">';
+				if(!has_post_thumbnail()) { $class = ' class="no-img"'; } else { $class = ''; }
+				echo '<li' . $class . '><a href="' . get_permalink($post->ID) . '">';
 				if(has_post_thumbnail()) {
 					echo '<img src="' . $imgsrc[0] . '" alt="' . get_the_title($post->ID) . '">';
 				}

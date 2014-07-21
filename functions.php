@@ -81,4 +81,10 @@ function archive_add_rewrite_rules() {
 }
 add_action('init', 'archive_add_rewrite_rules');
 
+// Flush rewrite rules after theme is activated
+function my_rewrite_flush() {
+    flush_rewrite_rules();
+}
+add_action( 'after_switch_theme', 'my_rewrite_flush' );
+
 ?>

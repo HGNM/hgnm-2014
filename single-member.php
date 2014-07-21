@@ -118,7 +118,7 @@ get_header();
 							if( has_post_thumbnail() ): ?>
 								<div class="featured-img">
 									<?php $thumbid = get_post_thumbnail_id();
-									$thumbsrc = wp_get_attachment_image_src( $thumbid, 'medium' );
+									$thumbsrc = wp_get_attachment_image_src( $thumbid, 'hgnm-main' );
 									$thumbalt = get_post_meta($thumbid, '_wp_attachment_image_alt', true);
 									echo '<img src="' . $thumbsrc[0] . '" alt="' . $thumbalt . '">'; ?>
 								</div>

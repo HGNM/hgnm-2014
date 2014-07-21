@@ -810,6 +810,11 @@ iframe {
 #page {
 	#torso {
 		.member {
+			.primary {
+				.updated {
+					color: $light-text;
+				}
+			}
 			.secondary {
 				font-family: $sans-stack;
 				h3 {

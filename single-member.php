@@ -105,12 +105,12 @@ get_header();
 				<article id="post-<?php the_ID(); ?>" <?php post_class($postclass); ?>>
 					<h2 class="post-title fname"><?php the_title(); ?></h2>
 					<?php if ( get_the_content() ) : ?>
-						<section class="primary entry">
+						<section class="primary entry clearfix">
 							<?php the_content(); ?>
 						</section>
 					<?php endif; ?>
 					<?php if ( has_post_thumbnail() || get_field('url') || $upcomingcolloquia || $upcomingconcerts ) : ?>
-						<section class="secondary">
+						<section class="secondary clearfix">
 						
 							<?php
 							// Display Featured Image

@@ -1223,6 +1223,11 @@ footer {
 					width:58.25%;
 					margin-right: 3.75%;
 					float:left;
+					p:first-child {
+						font-size: 1.25em;
+						line-height: 1.8;
+						margin-bottom: 1.2em;
+					}
 				}
 				.secondary {
 					width: 38%;

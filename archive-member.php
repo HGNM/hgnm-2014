@@ -68,7 +68,7 @@ get_header();
 			echo '<section id="fp-composers" class="fp-section"><h2>Past Members</h2><ul class="clearfix">';
 			foreach($posts as $post)
 			{
-				$imgsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbnail');
+				$imgsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'hgnm-thumb');
 				echo '<li><a href="' . get_permalink($post->ID) . '">';
 				echo '<span>' . get_the_title($post->ID) . '</span>' . '</a></li>';
 			}

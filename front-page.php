@@ -255,7 +255,7 @@ get_header();
 			echo '<section id="fp-composers" class="fp-section"><h2>Composers</h2><ul class="clearfix">';
 			foreach($posts as $post)
 			{
-				$imgsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbnail');
+				$imgsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'hgnm-thumb');
 				if(!has_post_thumbnail()) { $class = ' class="no-img"'; } else { $class = ''; }
 				echo '<li' . $class . '><a href="' . get_permalink($post->ID) . '">';
 				if(has_post_thumbnail()) {

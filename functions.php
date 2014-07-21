@@ -75,7 +75,7 @@ function archive_add_rewrite_rules() {
 	);
 	add_rewrite_rule(
 		'^events/?$',
-		'index.php?post_type=concert',
+		'index.php?post_type=colloquium',
 		'top'
 	);
 }

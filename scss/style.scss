@@ -1104,6 +1104,11 @@ footer {
 				li:nth-child(5n) {
 					margin-right:0;
 				}
+				.no-img {
+					a {
+						padding-top:100%;
+					}
+				}
 			} // </#fp-composers>
 			#fp-archive-link {
 				a {

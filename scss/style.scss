@@ -1017,6 +1017,25 @@ iframe {
 	}
 }
 
+/* ==========================================================================
+   Lightbox Styles
+   ========================================================================== */
+
+.mfp-bottom-bar {
+	font-family: $sans-stack;
+	.mfp-counter {
+		-moz-font-feature-settings:normal;
+		-ms-font-feature-settings:normal;
+		-o-font-feature-settings:normal;
+		-webkit-font-feature-settings:normal;
+		font-feature-settings:normal;
+		font-size: 1em;
+	}
+	.mfp-title, .mfp-counter {
+		padding-top: 0.75em;
+	}
+}
+
 
 /* ==========================================================================
    Footer Styles

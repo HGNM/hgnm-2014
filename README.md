@@ -48,9 +48,9 @@ Repository for WordPress theme development for new HGNM website.
 	- [ ] Colloquium Post ([single-colloquium.php](/single-colloquium.php))
 - [ ] archive templates
 	- [X] Members ([archive-member.php](/archive-member.php))
-	- [ ] Archives ([archive-concert.php](/archive-concert.php))
-		- [ ] Dropdown year navigation
-	- [ ] Events ([archive-colloquium.php](/archive-colloquium.php))
+	- [X] Archives ([archive-concert.php](/archive-concert.php))
+		- [X] Year navigation
+	- [X] Events ([archive-colloquium.php](/archive-colloquium.php))
 - [X] [footer.php](/footer.php)
 - [ ] [functions.php](/functions.php)
 	- [X] Enable featured image for custom post types

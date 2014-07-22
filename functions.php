@@ -86,7 +86,7 @@ function member_post_type() {
 		'menu_position'       => 5,
 		'menu_icon'           => 'dashicons-id-alt',
 		'can_export'          => true,
-		'has_archive'         => true,
+		'has_archive'         => 'composers',
 		'exclude_from_search' => false,
 		'publicly_queryable'  => true,
 		'rewrite'             => $rewrite,

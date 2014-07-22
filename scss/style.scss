@@ -650,6 +650,11 @@ iframe {
 #page {
 	#torso {
 		#years-nav {
+			clear:both;
+			margin-top:6em;
+			padding: 1.5em;
+			background: $light-shade;
+			background: $darken-tint;
 			h3 {
 				font-family: $serif-stack;
 				text-transform: none;

@@ -19,6 +19,7 @@ $text-color: #222;
 $dark-bg: #333;
 $bright-green: #30FF8A;
 $light-text: #999;
+$light-shade: #ddd;
 $off-white: #FDFFF7;
 
 // Secondary color variable definitions
@@ -29,6 +30,7 @@ $selection-bg: $bright-green;
 $menu-highlight: $bright-green;
 $link-text: $text-color;
 $link-highlight:$bright-green;
+$inactive:$light-shade;
 
 // Font stack variables
 $serif-stack: Alegreya, Georgia, serif;

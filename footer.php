@@ -23,7 +23,9 @@
 						delegate: 'a',
 						type:'image',
 						gallery:{enabled:true},
-						disableOn: 720
+						disableOn: 720,
+						zoom: { enabled:true, duration: 200 },
+						preload: [1,3]
 					});
 				});
 			}

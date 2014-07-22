@@ -13,22 +13,29 @@ Text Domain: hgnm-2014
 This theme is probably useless for any general purpose, but if it proves useful, make use of it in any way permitted under the GNU license.
 */
 
+// Color variables
 $black: #000;
-$off-white: #FDFFF7;
 $text-color: #222;
-$reverse-text: $off-white;
-$light-text: #999;
 $dark-bg: #333;
+$bright-green: #30FF8A;
+$light-text: #999;
+$off-white: #FDFFF7;
+
+// Secondary color variable definitions
+$reverse-text: $off-white;
 $menu-stripe-odd: $dark-bg;
 $menu-stripe-even: $black;
-$bright-green: #30FF8A;
 $selection-bg: $bright-green;
 $menu-highlight: $bright-green;
 $link-text: $text-color;
 $link-highlight:$bright-green;
+
+// Font stack variables
 $serif-stack: Alegreya, Georgia, serif;
 $sans-stack: 'Alegreya Sans', sans-serif;
 $display-stack: 'Dala Floda', Alegreya, Georgia, serif;
+
+// Layout variables
 $body-padding: 0 5%;
 $more-padding: 0 12.5%;
 $max-width: 60em;

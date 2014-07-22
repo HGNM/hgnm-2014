@@ -54,7 +54,8 @@ Repository for WordPress theme development for new HGNM website.
 - [X] [footer.php](/footer.php)
 - [ ] [functions.php](/functions.php)
 	- [X] Enable featured image for custom post types
-	- [ ] Register custom post types (bundling functionality w/ theme)
+	- [X] Register custom post types (bundling functionality w/ theme)
+	- [ ] Remove default post type
 - [ ] Custom fields: use/develop date-time picker for concert post types
 
 ## Dependencies

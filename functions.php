@@ -250,6 +250,12 @@ function miscevent_post_type() {
 // Hook into the 'init' action
 add_action( 'init', 'miscevent_post_type', 0 );
 
+// Remove default post type from admin menu
+function remove_menus(){
+  remove_menu_page( 'edit.php' );
+}
+add_action( 'admin_menu', 'remove_menus' );
+
 // Enable Featured Image for Member Custom Post Type
 if ( function_exists( 'add_theme_support' ) ) {
 	add_theme_support( 'post-thumbnails', array( 'member', 'concert', 'miscevent' ) );

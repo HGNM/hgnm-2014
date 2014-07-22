@@ -17,12 +17,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
 		<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="screen" />
+		<link rel="stylesheet" href="<?php _e (get_stylesheet_directory_uri() . '/css/magnific-popup.css'); ?>" type="text/css" media="screen" />
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 		
 		<script src="<?php _e (get_stylesheet_directory_uri() . '/js/vendor/modernizr-2.6.2.min.js'); ?>"></script>
 		
 				<!-- Extra calls for development purposes (links to stylesheets etc. when accessing localhost remotely) -->
 				<link rel="stylesheet" href="<?php _e (home_url('/wp-content/themes/hgnm-2014/style.css')); ?>" type="text/css" media="screen" />
+				<link rel="stylesheet" href="<?php _e (home_url('/wp-content/themes/hgnm-2014/css/magnific-popup.css')); ?>" type="text/css" media="screen" />
 				<script src="<?php _e (home_url('/wp-content/themes/hgnm-2014/js/vendor/modernizr-2.6.2.min.js')); ?>"></script>
 				<!-- End dev calls -->
 		

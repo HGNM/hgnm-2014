@@ -305,7 +305,7 @@ get_header();
 			<?php endif;
 			
 			if ($menuitems) {
-				echo '<ul>';
+				echo '<footer id="years-nav"><h3>Explore Seasons</h3><ul>';
 				foreach ($menuitems as $item) {
 					if (($item % 100) == 99) {
 						$menulabel = $item . '–' . ($item + 1);
@@ -317,7 +317,7 @@ get_header();
 					if ($item == $yearquery) { echo ' class="current"'; }
 					echo '><a href="' . get_post_type_archive_link('concert') . $item . '/">' . $menulabel . '</a></li>';
 				}
-				echo '</ul>';
+				echo '</ul></footer>';
 			}
 
 			echo '</article>';

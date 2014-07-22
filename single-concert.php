@@ -277,7 +277,7 @@ get_header();
 					else {
 						$seasontitle = $yearquery . '–' . str_pad((($yearquery + 1) % 100), 2, '0', STR_PAD_LEFT);
 					}
-					echo '<a href="' . get_post_type_archive_link('concert') . $yearquery . '/">See all events in the ' . $seasontitle . ' season</a>';
+					echo '<a href="' . get_post_type_archive_link('concert') . $yearquery . '/">See all events in the ' . $seasontitle . ' season »</a>';
 				?>
 				</section>
 				

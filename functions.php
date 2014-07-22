@@ -256,6 +256,13 @@ function remove_menus(){
 }
 add_action( 'admin_menu', 'remove_menus' );
 
+// Remove default post type from admin toolbar
+add_action( 'admin_bar_menu', 'remove_toolbar_item', 999 );
+
+function remove_toolbar_item( $wp_admin_bar ) {
+	$wp_admin_bar->remove_node( 'new-post' );
+}
+
 // Enable Featured Image for Member Custom Post Type
 if ( function_exists( 'add_theme_support' ) ) {
 	add_theme_support( 'post-thumbnails', array( 'member', 'concert', 'miscevent' ) );

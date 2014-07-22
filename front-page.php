@@ -221,7 +221,7 @@ get_header();
 						</li>
 					<?php endif; ?>
 						<li class="more-events-link">
-							<a href="<?php echo get_post_type_archive_link('concert'); ?>">
+							<a href="<?php echo get_post_type_archive_link('colloquium'); ?>">
 								<p>See all upcoming events »</p>
 							</a>
 						</li>

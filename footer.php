@@ -17,6 +17,7 @@
 				<!-- End dev calls -->
 				
 		<script>
+		if( $('.popup-gallery').length ) {
 			$(document).ready(function() {
 				$('.popup-gallery').magnificPopup({
 					delegate: 'a',
@@ -25,6 +26,7 @@
 					disableOn: 720
 				});
 			});
+		}
 		</script>
 		
 		<?php wp_footer(); ?>

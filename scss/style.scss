@@ -22,6 +22,10 @@ $light-text: #999;
 $light-shade: #ddd;
 $off-white: #FDFFF7;
 
+// RGBA color variables
+$darken-tint: rgba(0, 0, 0, 0.15);
+$lighten-tint: rgba(255, 255, 255, 0.15);
+
 // Secondary color variable definitions
 $reverse-text: $off-white;
 $menu-stripe-odd: $dark-bg;

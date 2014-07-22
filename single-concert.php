@@ -254,7 +254,7 @@ get_header();
 				        <?php foreach( $images as $image ): ?>
 				            <li>
 				            	<a href="<?php echo $image['url']; ?>" title="<?php echo $image['title']; ?>">
-				            		 <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
+				            		 <img src="<?php echo $image['sizes']['hgnm-thumb']; ?>" alt="<?php echo $image['alt']; ?>" />
 				            	</a>
 				            </li>
 				        <?php endforeach; ?>

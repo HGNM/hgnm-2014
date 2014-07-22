@@ -15,6 +15,17 @@
 				<script src="<?php _e (home_url('/wp-content/themes/hgnm-2014/js/main.js')); ?>"></script>
 				<script src="<?php _e (home_url('/wp-content/themes/hgnm-2014/js/plugins.js')); ?>"></script>
 				<!-- End dev calls -->
+				
+		<script>
+			$(document).ready(function() {
+				$('.popup-gallery').magnificPopup({
+					delegate: 'a',
+					type:'image',
+					gallery:{enabled:true},
+					disableOn: 720
+				});
+			});
+		</script>
 		
 		<?php wp_footer(); ?>
 	</body>

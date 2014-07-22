@@ -711,8 +711,8 @@ iframe {
 				margin-bottom:1.2em;
 			}
 			.tickets {
-				font-size: 0.6em; // 0.6 * 1.25 = 0.75
-				line-height:1;
+				font-size: 0.7em; // 0.7 * 1.25 = 0.875em = 14px
+				line-height: 1.714285714; // 1.714… * 14px = 24px
 				text-transform:uppercase;
 				letter-spacing: .3em;
 				font-weight:700;

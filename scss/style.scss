@@ -634,6 +634,46 @@ iframe {
 	}
 }
 
+#page {
+	#torso {
+		#years-nav {
+			h3 {
+				font-family: $serif-stack;
+				text-transform: none;
+				letter-spacing: 0;
+				font-size: 1.5em;
+				line-height: 1;
+			}
+			ul {
+				font-size: 1.5em;
+				line-height: 1;
+				text-align:center;
+				li {
+					margin: 0.25em;
+					display: inline-block;
+					a {
+						display: block;
+						border-bottom: 0;
+						padding: 0.5em;
+						background: $text-color;
+						color: $link-highlight;
+					}
+					a:hover {
+						background: $link-highlight;
+						color: $text-color;
+					}
+				}
+				li.current {
+					a {
+						background: $light-text;
+						color: $text-color;
+					}
+				}
+			}
+		}
+	}
+}
+
 /* ==========================================================================
    Concert Single Styles
    ========================================================================== */

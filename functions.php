@@ -199,6 +199,57 @@ function colloquium_post_type() {
 // Hook into the 'init' action
 add_action( 'init', 'colloquium_post_type', 0 );
 
+// Register Miscellaneous Event Post Type
+function miscevent_post_type() {
+
+	$labels = array(
+		'name'                => _x( 'Misc. Events', 'Post Type General Name', 'text_domain' ),
+		'singular_name'       => _x( 'Misc. Event', 'Post Type Singular Name', 'text_domain' ),
+		'menu_name'           => __( 'Misc. Events', 'text_domain' ),
+		'parent_item_colon'   => __( 'Parent Item:', 'text_domain' ),
+		'all_items'           => __( 'All Misc. Events', 'text_domain' ),
+		'view_item'           => __( 'View Misc. Event', 'text_domain' ),
+		'add_new_item'        => __( 'Add New Misc. Event', 'text_domain' ),
+		'add_new'             => __( 'Add New', 'text_domain' ),
+		'edit_item'           => __( 'Edit Misc. Event', 'text_domain' ),
+		'update_item'         => __( 'Update Misc. Event', 'text_domain' ),
+		'search_items'        => __( 'Search Misc. Events', 'text_domain' ),
+		'not_found'           => __( 'Not found', 'text_domain' ),
+		'not_found_in_trash'  => __( 'Not found in Trash', 'text_domain' ),
+	);
+	$rewrite = array(
+		'slug'                => 'other-events',
+		'with_front'          => true,
+		'pages'               => true,
+		'feeds'               => true,
+	);
+	$args = array(
+		'label'               => __( 'miscevent', 'text_domain' ),
+		'description'         => __( 'Miscellaneous HGNM events that don’t fall into the concert/colloquium category', 'text_domain' ),
+		'labels'              => $labels,
+		'supports'            => array( 'title', 'editor', 'thumbnail', ),
+		'hierarchical'        => false,
+		'public'              => true,
+		'show_ui'             => true,
+		'show_in_menu'        => true,
+		'show_in_nav_menus'   => true,
+		'show_in_admin_bar'   => true,
+		'menu_position'       => 5,
+		'menu_icon'           => 'dashicons-calendar',
+		'can_export'          => true,
+		'has_archive'         => false,
+		'exclude_from_search' => false,
+		'publicly_queryable'  => true,
+		'rewrite'             => $rewrite,
+		'capability_type'     => 'post',
+	);
+	register_post_type( 'miscevent', $args );
+
+}
+
+// Hook into the 'init' action
+add_action( 'init', 'miscevent_post_type', 0 );
+
 // Enable Featured Image for Member Custom Post Type
 if ( function_exists( 'add_theme_support' ) ) {
 	add_theme_support( 'post-thumbnails', array( 'member', 'concert', 'miscevent' ) );

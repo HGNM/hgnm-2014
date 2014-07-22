@@ -38,12 +38,12 @@ Repository for WordPress theme development for new HGNM website.
 		- [ ] Display related events
 			- [X] Upcoming
 			- [ ] Past
-	- [ ] Concert Post ([single-concert.php](/single-concert.php))
+	- [X] Concert Post ([single-concert.php](/single-concert.php))
 		- [X] More sophisticated programme display logic
 		- [X] Archival material
 			- [X] A/V
 			- [X] Photos
-				- [ ] Implement [Magnific Popup](http://dimsemenov.com/plugins/magnific-popup/) (?)
+				- [X] Implement [Magnific Popup](http://dimsemenov.com/plugins/magnific-popup/)
 			- [X] Poster & Programme
 	- [ ] Colloquium Post ([single-colloquium.php](/single-colloquium.php))
 - [ ] archive templates

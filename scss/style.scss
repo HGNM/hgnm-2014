@@ -384,7 +384,7 @@ iframe {
 				margin:0 0 2.571428571em; // 2.571… * 14px = 36px
 			}
 			.concerts {
-				margin-bottom:3em;
+				margin-bottom:4.5em;
 				.vevent {
 					margin-bottom:1.5em;
 					@include transition(all 0.2s ease-out);
@@ -437,7 +437,7 @@ iframe {
 				}
 			} // </.concerts>
 			.colloquia, .miscevents {
-				margin-bottom:3em;
+				margin-bottom:4.5em;
 				text-align:center;
 				ul {
 					font-size:1.25em;
@@ -473,7 +473,7 @@ iframe {
 				clear:both;
 			}
 			.more-events-link {
-				margin-bottom:3em;
+				margin-bottom:4.5em;
 				clear:both;
 				a {
 					padding: 1.5em 5%;

@@ -557,6 +557,9 @@ body { background: $halftone; }
 				padding: 0 5%;
 				@include transition( all 0.2s ease-in);
 			}
+			li:last-child {
+				margin-bottom:0;
+			}
 		} // </#fp-composers>
 		#fp-archive-link {
 			a {

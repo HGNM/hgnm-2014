@@ -16,15 +16,26 @@ get_header();
 				<?php endif; ?>
 
 				<?php
+				// SET START TIME VARIABLE
+				if (get_field('start_time')) {
+					$start_time = get_field('start_time');
+				}
 				// SET TIMEZONE
 				date_default_timezone_set('America/New_York');
-				$dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart') . ' 20:00'));
+				
+				// SET START DATE VARIABLE
+				if ($start_time) {
+					$dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart') . ' ' . $start_time));
+				}
+				else {
+					$dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart') . ' 20:00'));
+				}
 				
 				// EVENT META — date, time & location
 				?>
 				<section class="event-meta">
 					<p class="dtstart"><time class="value" datetime="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>">
-						<?php echo $dtstart->format('l, j F Y, ga'); ?>
+						<?php echo $dtstart->format('l, j F Y, g:ia'); ?>
 					</time></p>
 					
 					<p class="location"><?php the_field('location') ?></p>

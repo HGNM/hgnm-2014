@@ -72,12 +72,36 @@ get_header();
 					} ?>
 					</time></p>
 					
-					<p class="location"><?php the_field('location') ?></p>
 					
-					<?php if ($dtstart->format('Ymd') > date('Ymd')) : ?>
-						<p class="tickets"><span class="price">free</span> & open to the public</p>
-					<?php endif; ?>
-				</section>
+					<?php 
+					if( have_rows('details') ) {
+						// loop through the rows of data
+						while ( have_rows('details') ) {
+							the_row();
+							if( get_row_layout() == 'location' ) {
+								echo '<p class="location">';
+								if (get_sub_field('fn')) { echo '<span class="fn org">' . get_sub_field('fn') . '</span>'; }
+								if ( get_sub_field('street-address') || get_sub_field('locality') || get_sub_field('region') || get_sub_field('postal-code') || get_sub_field('country-name') ) {
+									echo '<span class="adr">';
+									if (get_sub_field('street-address')) { echo '<br /><span class="street-address">' . get_sub_field('street-address') . '</span>'; }
+									if (get_sub_field('locality')) {
+										echo '<br /><span class="locality">' . get_sub_field('locality') . '</span>';
+										if (get_sub_field('region')) {
+											echo ', ';
+										}
+									}
+									if (get_sub_field('region')) { echo '<span class="region">' . get_sub_field('region') . '</span>'; }
+									if (get_sub_field('postal-code')) { echo ' <span class="postal-code">' . get_sub_field('postal-code') . '</span>'; }
+									if (get_sub_field('country-name')) { echo '<br /><span class="country-name">' . get_sub_field('country-name') . '</span>'; }
+									echo '</span>';
+								}
+								echo '</p>';
+							}
+						}
+					}
+					?>
+
+				</section> // event meta
 
 				<?php
 				// SUMMARY FIELD

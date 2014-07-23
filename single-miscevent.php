@@ -114,7 +114,7 @@ get_header();
 						
 						// EXTERNAL LINK
 						if ( get_row_layout() == 'link' ) {
-							echo '<section class="external-links"><ul><li><a href="' . get_sub_field('url') . '">' . get_sub_field('title') . ' »</a></li></ul></section>';
+							echo '<section class="external-links"><ul><li><a href="' . get_sub_field('url') . '" class="url">' . get_sub_field('title') . ' »</a></li></ul></section>';
 						}
 						
 						// ARCHIVE CONTENT

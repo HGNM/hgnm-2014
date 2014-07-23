@@ -586,6 +586,30 @@ iframe {
 				}
 			}
 		}
+		
+	/* ==========================================================================
+	   Meta Styles
+	   ========================================================================== */
+		a.edit-button {
+			padding: 0.75em;
+			background: $secondary-highlight;
+			border-bottom: 0;
+			font-family: $sans-stack;
+			text-transform: uppercase;
+			letter-spacing: 0.15em;
+			font-weight: 700;
+			color: $reverse-text;
+			border-radius: 0.15em;
+			width: 3em;
+			display: block;
+			text-align: center;
+			margin: 1.5em auto;
+		}
+		a.edit-button:hover {
+			color: $black;
+			background: $link-highlight;
+		}
+		
 	} // </#torso>
 } // </#page>
 

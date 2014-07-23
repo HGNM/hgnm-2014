@@ -208,7 +208,7 @@ textarea {
    General Styles
    ========================================================================== */
 h2 {
-	font-size: 2.5em;
+	font-size: 2em;
 	font-family: $display-stack;
 	letter-spacing: 0.2em;
 	text-transform: uppercase;
@@ -1071,6 +1071,7 @@ iframe {
 
 @media only screen and (min-width: 45em) { // larger screens, > 720px
 	body { background: $halftone; }
+	h2 { font-size: 2.5em; }
 	#page {
 		.site-header {
 			margin-top:-0.55em;

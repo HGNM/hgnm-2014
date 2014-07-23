@@ -560,6 +560,9 @@ iframe {
 				margin-bottom:0;
 			}
 		} // </.composers>
+		.composers:nth-child(2) {
+			background: $overlay;
+		}
 		#fp-archive-link {
 			a {
 				padding: 1.5em 5%;

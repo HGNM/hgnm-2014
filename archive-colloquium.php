@@ -181,9 +181,13 @@ get_header();
 					<?php endforeach; ?>
 					</ul>
 				</section>
-			<?php endif;
-
-			echo '</article>';
+			<?php endif; ?>
+			<footer class="more-events-link">
+				<a href="<?php echo get_post_type_archive_link('concert') . $yearquery . '/'; ?>">
+					<p>See past events from this season »</p>
+				</a>
+			</footer>
+			<?php echo '</article>';
 
 get_footer();
 

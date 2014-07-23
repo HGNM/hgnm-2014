@@ -1069,7 +1069,7 @@ iframe {
    Media Queries
    ========================================================================== */
 
-@media only screen and (min-width: 45em) {
+@media only screen and (min-width: 45em) { // larger screens, > 720px
 	body { background: $halftone; }
 	#page {
 		.site-header {
@@ -1359,14 +1359,14 @@ iframe {
 	}
 } // end media-query
 
-@media only screen and (min-width: 78.75em) {
+@media only screen and (min-width: 78.75em) { // HUGE screens, > 1260px
 	.fp-section, .p-section {
 		width: 59.0625em;
 		margin: 0 auto;
 	}
 }
 
-@media only screen and (max-width: 15em) {
+@media only screen and (max-width: 15em) { // TINY screens, < 240px
 	html {
 		font-size:0.8em;
 		#page {

@@ -1359,6 +1359,13 @@ iframe {
 	}
 } // end media-query
 
+@media only screen and (min-width: 78.75em) {
+	.fp-section, .p-section {
+		width: 59.0625em;
+		margin: 0 auto;
+	}
+}
+
 @media only screen and (max-width: 15em) {
 	html {
 		font-size:0.8em;

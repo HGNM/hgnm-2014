@@ -8,9 +8,9 @@ Repository for WordPress theme development for new HGNM website.
 	- [ ] [style.css](/style.css)
 		- [X] Theme Header
 		- [ ] screen styling
-			- [ ] small screens (mobile first)
+			- [X] small screens (mobile first)
 				- [X] site title & menu
-			- [ ] larger screens
+			- [X] larger screens
 				- [X] site title
 				- [X] menu
 		- [ ] print styling
@@ -46,13 +46,14 @@ Repository for WordPress theme development for new HGNM website.
 				- [X] Implement [Magnific Popup](http://dimsemenov.com/plugins/magnific-popup/)
 			- [X] Poster & Programme
 	- [ ] Colloquium Post ([single-colloquium.php](/single-colloquium.php))
-- [ ] archive templates
+	- [ ] Miscellaneous Events Post ([single-miscevent.php](/single-miscevent.php))
+- [X] archive templates
 	- [X] Members ([archive-member.php](/archive-member.php))
 	- [X] Archives ([archive-concert.php](/archive-concert.php))
 		- [X] Year navigation
 	- [X] Events ([archive-colloquium.php](/archive-colloquium.php))
 - [X] [footer.php](/footer.php)
-- [ ] [functions.php](/functions.php)
+- [X] [functions.php](/functions.php)
 	- [X] Enable featured image for custom post types
 	- [X] Register custom post types (bundling functionality w/ theme)
 	- [X] Remove default post type from admin area

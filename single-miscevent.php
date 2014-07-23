@@ -73,9 +73,9 @@ get_header();
 					</time></p>
 					
 					
-					<?php 
+					<?php
+					// Display event location using microformat hCard
 					if( have_rows('details') ) {
-						// loop through the rows of data
 						while ( have_rows('details') ) {
 							the_row();
 							if( get_row_layout() == 'location' ) {

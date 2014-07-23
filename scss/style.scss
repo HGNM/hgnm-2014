@@ -752,6 +752,10 @@ iframe {
 			}
 			.location {
 				margin-bottom:1.2em;
+				.icon-link-ext:after {
+					font-size: 80%;
+					padding-left: 0.3em;
+				}
 			}
 			.tickets {
 				font-size: 0.7em; // 0.7 * 1.25 = 0.875em = 14px

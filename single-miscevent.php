@@ -16,15 +16,60 @@ get_header();
 				<?php endif; ?>
 
 				<?php
+				
+				// SET START TIME VARIABLE
+				if (get_field('start_time')) {
+					$start_time = get_field('start_time');
+				}
 				// SET TIMEZONE
 				date_default_timezone_set('America/New_York');
-				$dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart') . ' 20:00'));
+				
+				// SET START DATE VARIABLE
+				if ($start_time && ! get_field('dtend')) {
+					$dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart') . ' ' . $start_time));
+				}
+				else {
+					$dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart') . ' 20:00'));
+				}
+				
+				// SET END DATE VARIABLE
+				if (get_field('dtend')) {
+					$dtend = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtend') . ' 20:00'));
+				}
 				
 				// EVENT META — date, time & location
 				?>
 				<section class="event-meta">
 					<p class="dtstart"><time class="value" datetime="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>">
-						<?php echo $dtstart->format('l, j F Y, ga'); ?>
+					<?php if (get_field('dtstart') && get_field('dtend')) {
+						// if dtend is set
+						if ($dtstart == $dtend) {
+							// if dtstart and dtend are the same, just show dtstart
+							echo $dtstart->format('l, j F Y');
+						}
+						elseif ($dtstart < $dtend) {
+							if ($dtstart->format('mY') == $dtend->format('mY')) {
+								// if same month and same year
+								echo $dtstart->format('l, j') . ' – ' . $dtend->format('l, j F Y');
+							}
+							elseif ($dtstart->format('Y') == $dtend->format('Y')) {
+								// if same year
+								echo $dtstart->format('l, j F') . ' – ' . $dtend->format('l, j F Y');
+							}
+							else {
+								// if different years
+								echo $dtstart->format('l, j F Y') . ' – ' . $dtend->format('l, j F Y');
+							}
+						}
+					}
+					elseif (get_field('dtstart') && $start_time) {
+						// if start_time is set but not dtend
+						echo $dtstart->format('l, j F Y, g:ia');
+					}
+					elseif (get_field('dtstart')) {
+						// if only dtstart is set
+						echo $dtstart->format('l, j F Y');
+					} ?>
 					</time></p>
 					
 					<p class="location"><?php the_field('location') ?></p>

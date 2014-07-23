@@ -101,7 +101,7 @@ get_header();
 					}
 					?>
 
-				</section> // event meta
+				</section> <!-- event meta -->
 
 				<?php
 				// SUMMARY FIELD

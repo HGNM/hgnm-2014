@@ -1140,8 +1140,10 @@ iframe {
 				padding-bottom:1.5em;
 			}
 			#fp-blurb {
-				font-size:1.5em;
-				line-height:1.5;
+				.entry {
+					font-size:1.5em;
+					line-height:1.5;
+				}
 			}
 			#events {
 				.concerts, .colloquia {

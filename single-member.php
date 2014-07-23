@@ -104,6 +104,9 @@ get_header();
 			
 				<article id="post-<?php the_ID(); ?>" <?php post_class($postclass); ?>>
 					<h2 class="post-title fname"><?php the_title(); ?></h2>
+					<?php if (current_user_can('edit_post')) : ?>
+						<a href="<?php echo get_edit_post_link(); ?>" class="edit-button">Edit</a>
+					<?php endif; ?>
 					<?php if ( get_the_content() ) : ?>
 						<section class="primary entry clearfix">
 							<?php the_content(); ?>

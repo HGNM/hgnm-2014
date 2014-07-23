@@ -7,6 +7,9 @@ get_header();
 		// Get home page blurb
 		if ( have_posts() ) : ?>
 			<?php while ( have_posts() ) : the_post(); ?>
+				<?php if (current_user_can('edit_post')) : ?>
+					<a href="<?php echo get_edit_post_link(); ?>" class="edit-button">Edit</a>
+				<?php endif; ?>
 				<section id="fp-blurb" <?php post_class('fp-section'); ?>>
 					<div class="entry"><?php the_content(); ?></div>
 				</section><!-- #post -->

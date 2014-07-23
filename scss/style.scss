@@ -910,7 +910,16 @@ iframe {
 		.member {
 			.primary {
 				.updated {
-					color: $light-text;
+					display: inline-block;
+					background: $overlay;
+					background-color: rgba(0, 0, 0, 0.01);
+					font-size: 0.75em;
+					text-transform: uppercase;
+					letter-spacing: 0.15em;
+					padding: 0.25em 0.66666666em;
+					font-weight: 700;
+					font-family: $sans-stack;
+					margin-bottom: 2em;
 				}
 			}
 			.secondary {

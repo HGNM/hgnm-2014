@@ -258,7 +258,6 @@ iframe {
 /* ==========================================================================
    Section Background Styles
    ========================================================================== */
-body { background: $halftone; }
 #events.fp-section { background: $overlay; }
 
 /* ==========================================================================
@@ -1068,6 +1067,7 @@ body { background: $halftone; }
    ========================================================================== */
 
 @media only screen and (min-width: 45em) {
+	body { background: $halftone; }
 	#page {
 		.site-header {
 			margin-top:-0.55em;

@@ -150,6 +150,7 @@ get_header();
 						</li>
 					<?php endforeach; ?>
 					</ul>
+					<p>All colloquia are at 12pm in the Davison Room, <a href="http://www.map.harvard.edu/?ctrx=759617&ctry=2962591&level=10&layers=Campus%20Base%20and%20Buildings,Bike%20Facilities,Map%20Text" target="_blank" class="icon-link-ext">Harvard University Music Building</a></p>
 				</section>
 			<?php endif;
 			// Display archived miscellaneous events for $yearquery season

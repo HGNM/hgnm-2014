@@ -45,8 +45,8 @@ Repository for WordPress theme development for new HGNM website.
 			- [X] Photos
 				- [X] Implement [Magnific Popup](http://dimsemenov.com/plugins/magnific-popup/)
 			- [X] Poster & Programme
-	- [ ] Colloquium Post ([single-colloquium.php](/single-colloquium.php))
-	- [ ] Miscellaneous Events Post ([single-miscevent.php](/single-miscevent.php))
+	- [X] Colloquium Post ([single-colloquium.php](/single-colloquium.php))
+	- [X] Miscellaneous Events Post ([single-miscevent.php](/single-miscevent.php))
 - [X] archive templates
 	- [X] Members ([archive-member.php](/archive-member.php))
 	- [X] Archives ([archive-concert.php](/archive-concert.php))
@@ -57,7 +57,7 @@ Repository for WordPress theme development for new HGNM website.
 	- [X] Enable featured image for custom post types
 	- [X] Register custom post types (bundling functionality w/ theme)
 	- [X] Remove default post type from admin area
-- [ ] Custom fields: use/develop date-time picker for concert post types
+- [X] Custom fields: use/develop date-time picker for concert post types
 
 ## Dependencies
 

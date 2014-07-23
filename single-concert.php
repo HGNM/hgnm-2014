@@ -185,8 +185,8 @@ get_header();
 						}
 					}
 					if( get_field('programme_pdf') ) {
-						$programme = get_field('programme_pdf');
-						if ($programme['mime_type'] == 'application/pdf') {
+						$programmepdf = get_field('programme_pdf');
+						if ($programmepdf['mime_type'] == 'application/pdf') {
 							echo '<li><span class="icon icon-download" aria-hidden="true"></span><a href="' . esc_url($programmepdf['url']) . '">Download PDF of program booklet</a></li>';
 						}
 						else {

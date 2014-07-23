@@ -25,7 +25,7 @@ get_header();
 		));
 		if($posts)
 		{
-			echo '<section id="fp-composers" class="fp-section"><h2>Composers</h2><ul class="clearfix">';
+			echo '<section class="composers p-section"><h2>Composers</h2><ul class="clearfix">';
 			foreach($posts as $post)
 			{
 				$imgsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbnail');
@@ -65,7 +65,7 @@ get_header();
 		));
 		if($posts)
 		{
-			echo '<section id="fp-composers" class="fp-section"><h2>Past Members</h2><ul class="clearfix">';
+			echo '<section class="composers p-section"><h2>Past Members</h2><ul class="clearfix">';
 			foreach($posts as $post)
 			{
 				$imgsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'hgnm-thumb');

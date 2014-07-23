@@ -372,7 +372,7 @@ iframe {
 			}
 		}
 		
-		#fp-events {
+		#events {
 			font-family: $sans-stack;
 			h3 {
 				text-align: center;
@@ -496,7 +496,7 @@ iframe {
 			}
 		} // </#fp-events>
 		
-		#fp-composers {
+		.composers {
 			li {
 					margin-bottom:1em;
 					@include transition(all 0.2s ease-out);
@@ -1129,7 +1129,7 @@ iframe {
 				font-size:1.5em;
 				line-height:1.5;
 			}
-			#fp-events {
+			#events {
 				.concerts, .colloquia {
 					width: 47%;
 					padding-right:6%;
@@ -1151,7 +1151,7 @@ iframe {
 					margin-left: auto;
 				}
 			}
-			#fp-composers {
+			.composers {
 				li {
 					float: left;
 					margin-bottom:0.4166666em;

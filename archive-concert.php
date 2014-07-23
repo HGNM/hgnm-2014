@@ -195,7 +195,7 @@ get_header();
 			// OK, now we’re talking. Check if posts exist?
 			// Display archive header and navigation
 			?>
-			<article id="fp-events" class="p-section">
+			<article id="events" class="p-section clearfix">
 				<header class="archive-header">
 					<h2>Archives<br /><?php echo $seasontitle ?></h2>
 					<nav id="archive-nav" class="clearfix">

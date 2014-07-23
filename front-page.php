@@ -2,12 +2,14 @@
 
 get_header();
 
+		echo '<article>';
+
 		// Get home page blurb
 		if ( have_posts() ) : ?>
 			<?php while ( have_posts() ) : the_post(); ?>
-				<article id="fp-blurb" <?php post_class('fp-section'); ?>>
+				<section id="fp-blurb" <?php post_class('fp-section'); ?>>
 					<div class="entry"><?php the_content(); ?></div>
-				</article><!-- #post -->
+				</section><!-- #post -->
 			<?php endwhile; ?>
 		<?php else: ?>
 		<?php endif;
@@ -67,7 +69,7 @@ get_header();
 		
 		// Display upcoming events
 		if($concerts || $colloquia || $miscevents) : ?>
-			<section id="fp-events" class="fp-section clearfix">
+			<section id="events" class="fp-section clearfix">
 				<h2>Events</h2>
 				<ul>
 					<?php if($concerts) : ?>
@@ -252,7 +254,7 @@ get_header();
 		));
 		if($posts)
 		{
-			echo '<section id="fp-composers" class="fp-section"><h2>Composers</h2><ul class="clearfix">';
+			echo '<section class="composers fp-section"><h2>Composers</h2><ul class="clearfix">';
 			foreach($posts as $post)
 			{
 				$imgsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'hgnm-thumb');
@@ -274,6 +276,8 @@ get_header();
 				<p>Dive into an archive of HGNM’s past events, members, audio and video.</p>
 			</a>
 		</section>
+		
+		</article>
 
 <?php get_footer();
 

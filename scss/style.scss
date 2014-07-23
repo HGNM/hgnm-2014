@@ -26,6 +26,10 @@ $off-white: #FDFFF7;
 $darken-tint: rgba(0, 0, 0, 0.15);
 $lighten-tint: rgba(255, 255, 255, 0.15);
 
+// Background pattern variables
+$halftone: url('img/halftone.png') center;
+$overlay: url('img/absurdidad.png') center;
+
 // Secondary color variable definitions
 $reverse-text: $off-white;
 $menu-stripe-odd: $dark-bg;

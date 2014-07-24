@@ -188,6 +188,13 @@ get_header();
 					<p>We’re busy planning for next season, but the details aren’t available yet. Check back soon and in the meantime, why not <a href="<?php get_post_type_archive_link('colloquium') ?>">check out what’s happening right now</a>?</p></p>
 				</section><?php
 		}
+		elseif ( !have_posts() && !$colloquia && !$miscevents ) {
+			// What should happen there are no posts
+			echo '<h2>Archives: ' . $seasontitle . '</h2>'; ?>
+				<section class="p-section">
+					<p>Whoops, looks like we don’t have any events for this season. Why not <a href="<?php get_post_type_archive_link('colloquium') ?>">check out what’s happening right now</a>?</p></p>
+				</section><?php
+		}
 		else {
 			// OK, now we’re talking. Check if posts exist?
 			// Display archive header and navigation

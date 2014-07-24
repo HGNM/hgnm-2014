@@ -7,14 +7,14 @@ Repository for WordPress theme development for new HGNM website.
 - [ ] WordPress core
 	- [ ] [style.css](/style.css)
 		- [X] Theme Header
-		- [ ] screen styling
+		- [X] screen styling
 			- [X] small screens (mobile first)
 				- [X] site title & menu
 			- [X] larger screens
 				- [X] site title
 				- [X] menu
 		- [ ] print styling
-	- [ ] [front-page.php](/front-page.php)
+	- [X] [front-page.php](/front-page.php)
 		- [X] call header
 		- [X] call content
 			- [X] Blurb

@@ -76,10 +76,6 @@ get_header();
 			)
 		);
 		
-		// Set timezone
-		date_default_timezone_set('America/New_York');
-		
-		
 			// Display events header and navigation
 			?>
 			<article id="events" class="p-section clearfix">
@@ -101,7 +97,22 @@ get_header();
 					<?php while ( have_posts() ) : the_post(); ?>						
 						<li <?php post_class('vevent clearfix'); ?>>
 							<a href="<?php echo get_permalink() ?>" class="url">
-								<?php $dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart') . ' 20:00')); ?>
+								<?php
+								// SET START TIME VARIABLE
+								if (get_field('start_time')) {
+									$start_time = get_field('start_time');
+								}
+								// SET TIMEZONE
+								date_default_timezone_set('America/New_York');
+								
+								// SET START DATE VARIABLE
+								if ($start_time) {
+									$dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart') . ' ' . $start_time));
+								}
+								else {
+									$dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart') . ' 20:00'));
+								}
+								?>
 								<h4 class="dtstart"><time class="value-title" datetime="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>" title="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>">
 									<?php echo '<span class="month">' . $dtstart->format('M') . '</span> <span class="day">' . $dtstart->format('j'); ?>
 								</time></h4>

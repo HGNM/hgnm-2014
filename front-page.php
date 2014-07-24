@@ -82,8 +82,21 @@ get_header();
 								<div class="vevent clearfix">
 									<a href="<?php echo get_permalink($concert->ID) ?>" class="url">
 										<?php
+										// SET START TIME VARIABLE
+										if (get_field('start_time')) {
+											$start_time = get_field('start_time', $concert->ID);
+										}
+										// SET TIMEZONE
 										date_default_timezone_set('America/New_York');
-										$dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart', $concert->ID) . ' 20:00')); ?>
+										
+										// SET START DATE VARIABLE
+										if ($start_time) {
+											$dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart', $concert->ID) . ' ' . $start_time));
+										}
+										else {
+											$dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart', $concert->ID) . ' 20:00'));
+										}
+										?>
 										<h4 class="dtstart"><time class="value-title" datetime="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>" title="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>">
 											<?php echo '<span class="month">' . $dtstart->format('M') . '</span> <span class="day">' . $dtstart->format('j'); ?>
 										</time></h4>

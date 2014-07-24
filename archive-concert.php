@@ -172,9 +172,6 @@ get_header();
 		$previousyear = $menuitems[($currentindex - 1)];
 		$nextyear = $menuitems[($currentindex + 1)];
 		
-		// Set timezone
-		date_default_timezone_set('America/New_York');
-		
 		// Check queries to see if it is for a season starting more than a year in the future. N.B. The *next* season will return as false.
 		if ($seasonstart > date('Ymd', strtotime(date('Ymd', mktime()) . ' + 365 day')) ) {
 			// What should happen if someone wants to see into the future?
@@ -222,7 +219,22 @@ get_header();
 					<?php while ( have_posts() ) : the_post(); ?>						
 						<li <?php post_class('vevent clearfix'); ?>>
 							<a href="<?php echo get_permalink() ?>" class="url">
-								<?php $dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart') . ' 20:00')); ?>
+								<?php 
+								// SET START TIME VARIABLE
+								if (get_field('start_time')) {
+									$start_time = get_field('start_time');
+								}
+								// SET TIMEZONE
+								date_default_timezone_set('America/New_York');
+								
+								// SET START DATE VARIABLE
+								if ($start_time) {
+									$dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart') . ' ' . $start_time));
+								}
+								else {
+									$dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart') . ' 20:00'));
+								}
+								?>
 								<h4 class="dtstart"><time class="value-title" datetime="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>" title="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>">
 									<?php echo '<span class="month">' . $dtstart->format('M') . '</span> <span class="day">' . $dtstart->format('j'); ?>
 								</time></h4>

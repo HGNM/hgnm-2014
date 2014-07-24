@@ -313,11 +313,13 @@ function my_dtstart_orderby( $query ) {
 		return;
 		
 	$screen = get_current_screen();
-	if ($screen->post_type == 'concert' || $screen->post_type == 'colloquium' || $screen->post_type == 'miscevent') { 
-		$orderby = $query->get( 'orderby');
-		if( 'dtstart' == $orderby || 'menu_order title' != $orderby && 'date' != $orderby && 'title' != $orderby ) {
-	        $query->set('meta_key','dtstart');
-	        $query->set('orderby','meta_value_num');
+	if ($screen->base == 'edit') {
+		if ( $screen->post_type == 'concert' || $screen->post_type == 'colloquium' || $screen->post_type == 'miscevent' ) {
+			$orderby = $query->get( 'orderby');
+			if( 'dtstart' == $orderby || 'menu_order title' != $orderby && 'date' != $orderby && 'title' != $orderby ) {
+		        $query->set('meta_key','dtstart');
+	    	    $query->set('orderby','meta_value_num');
+			}
 	    }
 	}
 }

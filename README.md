@@ -10,8 +10,8 @@ Repository for WordPress theme development for new HGNM website.
 - [ ] OpenGraph meta
 - [ ] change colloquium location link to Google Maps & use lightbox popup
 - [ ] HGNM Member template ([single-member.php](/single-member.php))
-		- [ ] Display related a/v
-		- [ ] Display past related events
+	- [ ] Display related a/v
+	- [ ] Display past related events
 - [ ] site search
 
 ## Dependencies

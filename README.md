@@ -2,62 +2,17 @@
 
 Repository for WordPress theme development for new HGNM website.
 
-## Roadmap
+## To-do
 
-- [ ] WordPress core
-	- [ ] [style.css](/style.css)
-		- [X] Theme Header
-		- [X] screen styling
-			- [X] small screens (mobile first)
-				- [X] site title & menu
-			- [X] larger screens
-				- [X] site title
-				- [X] menu
-		- [ ] print styling
-	- [X] [front-page.php](/front-page.php)
-		- [X] call header
-		- [X] call content
-			- [X] Blurb
-			- [X] Upcoming Events
-				- [X] Concerts
-					- [X] Tweak for date-time functionality (currently only date)
-				- [X] Colloquia
-				- [X] Others
-				- [X] Link to all upcoming events
-			- [X] Current Members
-				- [X] ordered alphabetically
-		- [X] call footer
-- [X] [header.php](/header.php)
-	- [X] `<head>`
-	- [X] responsive site title
-	- [X] responsive menu
-- [ ] content single post templates
-	- [ ] HGNM Member ([single-member.php](/single-member.php))
-		- [X] Add last updated indication
+- [ ] print styling
+- [ ] contact form
+- [ ] Facebook page link
+- [ ] OpenGraph meta
+- [ ] change colloquium location link to Google Maps & use lightbox popup
+- [ ] HGNM Member template ([single-member.php](/single-member.php))
 		- [ ] Display related a/v
-		- [ ] Display related events
-			- [X] Upcoming
-			- [ ] Past
-	- [X] Concert Post ([single-concert.php](/single-concert.php))
-		- [X] More sophisticated programme display logic
-		- [X] Archival material
-			- [X] A/V
-			- [X] Photos
-				- [X] Implement [Magnific Popup](http://dimsemenov.com/plugins/magnific-popup/)
-			- [X] Poster & Programme
-	- [X] Colloquium Post ([single-colloquium.php](/single-colloquium.php))
-	- [X] Miscellaneous Events Post ([single-miscevent.php](/single-miscevent.php))
-- [X] archive templates
-	- [X] Members ([archive-member.php](/archive-member.php))
-	- [X] Archives ([archive-concert.php](/archive-concert.php))
-		- [X] Year navigation
-	- [X] Events ([archive-colloquium.php](/archive-colloquium.php))
-- [X] [footer.php](/footer.php)
-- [X] [functions.php](/functions.php)
-	- [X] Enable featured image for custom post types
-	- [X] Register custom post types (bundling functionality w/ theme)
-	- [X] Remove default post type from admin area
-- [X] Custom fields: use/develop date-time picker for concert post types
+		- [ ] Display past related events
+- [ ] site search
 
 ## Dependencies
 

@@ -1,6 +1,6 @@
 			</div><!-- #torso -->
 			<footer id="colophon" class="site-footer" role="contentinfo">
-				<div class="site-info"><?php echo hgnm_copyright(); ?></div>
+				<div class="site-info"><?php echo hgnm_copyright(); ?> | <a href="<?php echo admin_url(); ?>">Login</a></div>
 			</footer>
 		</div><!-- #page -->
 

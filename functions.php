@@ -287,7 +287,7 @@ function hgnm_columns_content($column_name, $post_ID) {
     if ($column_name == 'dtstart') {
         $post_date = get_dtstart($post_ID);
         if ($post_date) {
-            echo $post_date . '';
+            echo $post_date;
         }
     }
 }

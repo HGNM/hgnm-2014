@@ -23,6 +23,9 @@ get_header();
 				)
 			)
 		));
+		
+		echo '<article>';
+		
 		if($posts)
 		{
 			echo '<section class="composers p-section"><h2>Composers</h2><ul class="clearfix">';
@@ -42,7 +45,7 @@ get_header();
 		
 		// Get graduated composers names, photos and permalinks
 		$today = date('Ymd', strtotime('-1 day'));
-		$posts = get_posts(array(
+		$posts2 = get_posts(array(
 			'numberposts' => -1,
 			'post_type' => 'member',
 			'meta_key' => 'dtend',
@@ -63,10 +66,10 @@ get_header();
 				)
 			)
 		));
-		if($posts)
+		if($posts2)
 		{
 			echo '<section class="composers p-section"><h2>Past Members</h2><ul class="clearfix">';
-			foreach($posts as $post)
+			foreach($posts2 as $post)
 			{
 				$imgsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'hgnm-thumb');
 				echo '<li><a href="' . get_permalink($post->ID) . '">';
@@ -74,6 +77,12 @@ get_header();
 			}
 			echo '</ul></section>';
 		}
+		
+		if( !$posts && !$posts2 ) {
+			echo '<section class="composers p-section"><h2>Composers</h2><p>I’m afraid it looks like there aren’t any composers to show you yet.</p>'
+		}
+		
+		echo '</article>';
 
 
 

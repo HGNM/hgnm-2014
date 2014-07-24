@@ -143,6 +143,32 @@ textarea {
 }
 
 /* ==========================================================================
+   Dala Floda Font [from Comercial Type]
+   ==========================================================================
+        This font software is the property of Commercial Type.
+
+        You may not modify the font software, use it on another website, or install it on a computer.
+
+        License information is available at http://commercialtype.com/eula
+        For more information please visit Commercial Type at http://commercialtype.com or email us at info[at]commercialtype.com
+
+        Copyright (C) 2013 Schwartzco Inc.
+        License: 1407-HRGQJV     
+*/
+
+@font-face {
+  font-family: 'Dala Floda Web';
+  src: url('font/DalaFloda-Bold-Web.eot');
+  src: url('font/DalaFloda-Bold-Web.eot?#iefix') format('embedded-opentype'),
+     url('font/DalaFloda-Bold-Web.woff') format('woff'),
+     url('font/DalaFloda-Bold-Web.ttf') format('truetype'),
+     url('font/DalaFloda-Bold-Web.svg#Dala Floda Web') format('svg');
+  font-weight:  700;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+/* ==========================================================================
    Font Icons [from Fontello]
    ========================================================================== */
 

@@ -9,9 +9,10 @@ Repository for WordPress theme development for new HGNM website.
 - [ ] Facebook page link
 - [ ] OpenGraph meta
 - [ ] change colloquium location link to Google Maps & use lightbox popup
+- [ ] show support thanks on concert pages ([single-concert.php](/single-concert.php)) (?)
 - [ ] HGNM Member template ([single-member.php](/single-member.php))
-	- [ ] Display related a/v
-	- [ ] Display past related events
+	- [ ] display related a/v
+	- [ ] display past related events
 - [ ] site search
 
 ## Dependencies

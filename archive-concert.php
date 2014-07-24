@@ -185,7 +185,7 @@ get_header();
 			// What should happen if it is the *next* season but there are no posts
 			echo '<h2>Archives: ' . $seasontitle . '</h2>'; ?>
 				<section class="p-section">
-					<p>We’re busy planning for next season, but the details aren’t available yet. Check back soon and in the meantime, why not <a href="<?php get_post_type_archive_link('concert') ?>">check out what’s happening right now</a>?</p></p>
+					<p>We’re busy planning for next season, but the details aren’t available yet. Check back soon and in the meantime, why not <a href="<?php get_post_type_archive_link('colloquium') ?>">check out what’s happening right now</a>?</p></p>
 				</section><?php
 		}
 		else {

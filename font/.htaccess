@@ -1,0 +1,8 @@
+Options -Indexes
+IndexIgnore *.ttf
+RewriteEngine on
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^http://(www\.)?hgnm.mbrsi.org/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://(www\.)?hgnm.org/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://(www\.)?chrisswithinbank.net/.*$ [NC]
+RewriteRule \.ttf$ - [F]

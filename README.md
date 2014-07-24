@@ -20,7 +20,7 @@ Repository for WordPress theme development for new HGNM website.
 			- [X] Blurb
 			- [X] Upcoming Events
 				- [X] Concerts
-					- [ ] Tweak for date-time functionality (currently only date)
+					- [X] Tweak for date-time functionality (currently only date)
 				- [X] Colloquia
 				- [X] Others
 				- [X] Link to all upcoming events

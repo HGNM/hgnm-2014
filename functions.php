@@ -250,9 +250,10 @@ function miscevent_post_type() {
 // Hook into the 'init' action
 add_action( 'init', 'miscevent_post_type', 0 );
 
-// Remove default post type from admin menu
+// Remove default post type & comments from admin menu
 function remove_menus(){
   remove_menu_page( 'edit.php' );
+  remove_menu_page( 'edit-comments.php' );
 }
 add_action( 'admin_menu', 'remove_menus' );
 

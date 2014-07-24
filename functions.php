@@ -309,15 +309,17 @@ function my_sortable_dtstart_column( $columns ) {
 // Fix orderby query
 add_action( 'pre_get_posts', 'my_dtstart_orderby' );
 function my_dtstart_orderby( $query ) {
-    if( ! is_admin() )
-        return;
- 
-	$orderby = $query->get( 'orderby');
-	
-	if( 'dtstart' == $orderby || 'menu_order title' != $orderby && 'date' != $orderby && 'title' != $orderby ) {
-        $query->set('meta_key','dtstart');
-        $query->set('orderby','meta_value_num');
-    }
+	if( ! is_admin() )
+		return;
+		
+	$screen = get_current_screen();
+	if ($screen->post_type == 'concert' || $screen->post_type == 'colloquium' || $screen->post_type == 'miscevent') { 
+		$orderby = $query->get( 'orderby');
+		if( 'dtstart' == $orderby || 'menu_order title' != $orderby && 'date' != $orderby && 'title' != $orderby ) {
+	        $query->set('meta_key','dtstart');
+	        $query->set('orderby','meta_value_num');
+	    }
+	}
 }
 
 // Enable Featured Image for Member Custom Post Type

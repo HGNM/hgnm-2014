@@ -22,12 +22,6 @@
 		
 		<script src="<?php _e (get_stylesheet_directory_uri() . '/js/vendor/modernizr-2.6.2.min.js'); ?>"></script>
 		
-				<!-- Extra calls for development purposes (links to stylesheets etc. when accessing localhost remotely) -->
-				<link rel="stylesheet" href="<?php _e (home_url('/wp-content/themes/hgnm-2014/style.css')); ?>" type="text/css" media="screen" />
-				<link rel="stylesheet" href="<?php _e (home_url('/wp-content/themes/hgnm-2014/css/magnific-popup.css')); ?>" type="text/css" media="screen" />
-				<script src="<?php _e (home_url('/wp-content/themes/hgnm-2014/js/vendor/modernizr-2.6.2.min.js')); ?>"></script>
-				<!-- End dev calls -->
-		
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?> lang="en">

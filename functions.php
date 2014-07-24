@@ -303,4 +303,17 @@ function my_rewrite_flush() {
 }
 add_action( 'after_switch_theme', 'my_rewrite_flush' );
 
+// Setup core options on theme activation
+function options_setup() {
+	update_option( 'default_comment_status', 'closed' );
+	update_option( 'default_ping_status', 'closed' );
+	update_option( 'blogname', 'Harvard Group for New Music' );
+	update_option( 'blogdescription', 'The community of graduate composers at Harvard University' );
+	update_option( 'timezone_string', 'America/New_York' );
+	update_option( 'permalink_structure', '/%postname%/' );
+	update_option( 'show_on_front', 'page' );
+	update_option( 'use_smilies', 0 );
+}
+add_action( 'after_switch_theme', 'options_setup' );
+
 ?>

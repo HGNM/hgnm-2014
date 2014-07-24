@@ -79,7 +79,7 @@ get_header();
 		}
 		
 		if( !$posts && !$posts2 ) {
-			echo '<section class="composers p-section"><h2>Composers</h2><p>I’m afraid it looks like there aren’t any composers to show you yet.</p>'
+			echo '<section class="composers p-section"><h2>Composers</h2><p>I’m afraid it looks like there aren’t any composers to show you yet.</p>';
 		}
 		
 		echo '</article>';

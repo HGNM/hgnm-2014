@@ -4,7 +4,7 @@ Theme URI: https://github.com/delucis/hgnm-2014
 Author: Chris Swithinbank
 Author URI: http://www.chrisswithinbank.net/
 Description: Custom theme for the Harvard Group for New Music website.
-Version: 0.5-beta.1
+Version: 0.6-beta.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: responsive-layout
@@ -1738,67 +1738,68 @@ iframe {
   /* line 1289, scss/style.scss */
   #page #torso .composers .no-img a {
     padding-top: 100%;
+    margin-top: 1px;
   }
-  /* line 1295, scss/style.scss */
+  /* line 1296, scss/style.scss */
   #page #torso #fp-archive-link a {
     width: 49.5%;
     margin: 0 auto;
   }
-  /* line 1299, scss/style.scss */
+  /* line 1300, scss/style.scss */
   #page #torso #fp-archive-link a:hover {
     width: 44.5%;
     margin: 0 auto;
   }
-  /* line 1305, scss/style.scss */
+  /* line 1306, scss/style.scss */
   #page #torso .support {
     margin-top: -1.33333em;
   }
-  /* line 1315, scss/style.scss */
+  /* line 1316, scss/style.scss */
   #page #torso .description {
     font-size: 1.25em;
     line-height: 1.8;
   }
-  /* line 1318, scss/style.scss */
+  /* line 1319, scss/style.scss */
   #page #torso .description h3 {
     font-size: 1.2em;
   }
-  /* line 1323, scss/style.scss */
+  /* line 1324, scss/style.scss */
   #page #torso .external-links.both {
     margin-bottom: 3em;
   }
-  /* line 1325, scss/style.scss */
+  /* line 1326, scss/style.scss */
   #page #torso .external-links.both li {
     width: 48%;
     float: left;
     padding-right: 4%;
   }
-  /* line 1338, scss/style.scss */
+  /* line 1339, scss/style.scss */
   #page #torso .external-links.both li:nth-child(2n) {
     padding-right: 0;
   }
-  /* line 1352, scss/style.scss */
+  /* line 1353, scss/style.scss */
   #page #torso .multimedia .audio li, #page #torso .multimedia .video li {
     width: 32.5%;
     padding-right: 1.25%;
     float: left;
   }
-  /* line 1357, scss/style.scss */
+  /* line 1358, scss/style.scss */
   #page #torso .multimedia .audio li:nth-child(3n), #page #torso .multimedia .video li:nth-child(3n) {
     padding-right: 0;
   }
-  /* line 1365, scss/style.scss */
+  /* line 1366, scss/style.scss */
   #page #torso .gallery .popup-gallery li {
     width: 19%;
     padding-right: 1.25%;
     margin-bottom: 1.5em;
   }
-  /* line 1369, scss/style.scss */
+  /* line 1370, scss/style.scss */
   #page #torso .gallery .popup-gallery li a {
     cursor: -webkit-zoom-in;
     cursor: -moz-zoom-in;
     cursor: zoom-in;
   }
-  /* line 1375, scss/style.scss */
+  /* line 1376, scss/style.scss */
   #page #torso .gallery .popup-gallery li a:hover img {
     box-shadow: 0 0 0 0.375em black;
     -webkit-transition: all 0.2s ease-in;
@@ -1807,90 +1808,90 @@ iframe {
     -o-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in;
   }
-  /* line 1381, scss/style.scss */
+  /* line 1382, scss/style.scss */
   #page #torso .gallery .popup-gallery li:nth-child(2n) {
     padding-right: 1.25%;
   }
-  /* line 1384, scss/style.scss */
+  /* line 1385, scss/style.scss */
   #page #torso .gallery .popup-gallery li:nth-child(5n) {
     padding-right: 0;
   }
-  /* line 1391, scss/style.scss */
+  /* line 1392, scss/style.scss */
   #page #torso .has-programme .programme {
     float: left;
     width: 48%;
     padding-right: 4%;
   }
-  /* line 1397, scss/style.scss */
+  /* line 1398, scss/style.scss */
   #page #torso .has-programme .external-links,
   #page #torso .has-programme .archive-docs {
     float: left;
     width: 48%;
   }
-  /* line 1402, scss/style.scss */
+  /* line 1403, scss/style.scss */
   #page #torso .has-programme .external-links li {
     float: none;
     width: 100%;
     padding-right: 0;
   }
-  /* line 1408, scss/style.scss */
+  /* line 1409, scss/style.scss */
   #page #torso .has-programme .archive-link, #page #torso .has-programme .multimedia {
     clear: both;
   }
-  /* line 1414, scss/style.scss */
+  /* line 1415, scss/style.scss */
   #page #torso .member .primary {
     width: 58.25%;
     margin-right: 3.75%;
     float: left;
   }
-  /* line 1418, scss/style.scss */
+  /* line 1419, scss/style.scss */
   #page #torso .member .primary p:first-child {
     font-size: 1.25em;
     line-height: 1.8;
     margin-bottom: 1.2em;
   }
-  /* line 1424, scss/style.scss */
+  /* line 1425, scss/style.scss */
   #page #torso .member .secondary {
     width: 38%;
     float: left;
   }
-  /* line 1430, scss/style.scss */
+  /* line 1431, scss/style.scss */
   #page #torso .member.no-primary .secondary {
     float: none;
     margin: 0 auto;
   }
 
-  /* line 1441, scss/style.scss */
+  /* line 1442, scss/style.scss */
   .fontface.generatedcontent #page #torso .archive-header {
     margin-bottom: 1.5em;
   }
-  /* line 1444, scss/style.scss */
+  /* line 1445, scss/style.scss */
   .fontface.generatedcontent #page #torso .archive-header #archive-nav .left, .fontface.generatedcontent #page #torso .archive-header #archive-nav .right {
     background: transparent;
   }
 }
 @media only screen and (min-width: 78.75em) {
-  /* line 1455, scss/style.scss */
+  /* line 1456, scss/style.scss */
   .fp-section, .p-section {
     width: 59.0625em;
     margin: 0 auto;
   }
 }
 @media only screen and (max-width: 15em) {
-  /* line 1462, scss/style.scss */
+  /* line 1463, scss/style.scss */
   html {
     font-size: 0.8em;
   }
-  /* line 1469, scss/style.scss */
+  /* line 1470, scss/style.scss */
   html #page #torso #fp-composers li a img {
     display: none;
   }
-  /* line 1472, scss/style.scss */
+  /* line 1473, scss/style.scss */
   html #page #torso #fp-composers li a span {
     max-width: 90%;
     padding: 0 5%;
   }
-  /* line 1478, scss/style.scss */
+  /* line 1479, scss/style.scss */
   html #page #torso #fp-composers li:hover {
     padding: 0;
   }
@@ -1898,7 +1899,7 @@ iframe {
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-/* line 1498, scss/style.scss */
+/* line 1499, scss/style.scss */
 .ir {
   background-color: transparent;
   border: 0;
@@ -1906,7 +1907,7 @@ iframe {
   *text-indent: -9999px;
 }
 
-/* line 1505, scss/style.scss */
+/* line 1506, scss/style.scss */
 .ir:before {
   content: "";
   display: block;
@@ -1914,13 +1915,13 @@ iframe {
   height: 150%;
 }
 
-/* line 1512, scss/style.scss */
+/* line 1513, scss/style.scss */
 .hidden {
   display: none !important;
   visibility: hidden;
 }
 
-/* line 1517, scss/style.scss */
+/* line 1518, scss/style.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -1932,7 +1933,7 @@ iframe {
   width: 1px;
 }
 
-/* line 1529, scss/style.scss */
+/* line 1530, scss/style.scss */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   clip: auto;
@@ -1943,24 +1944,24 @@ iframe {
   width: auto;
 }
 
-/* line 1538, scss/style.scss */
+/* line 1539, scss/style.scss */
 .invisible {
   visibility: hidden;
 }
 
-/* line 1543, scss/style.scss */
+/* line 1544, scss/style.scss */
 .clearfix:before,
 .clearfix:after {
   content: " ";
   display: table;
 }
 
-/* line 1548, scss/style.scss */
+/* line 1549, scss/style.scss */
 .clearfix:after {
   clear: both;
 }
 
-/* line 1552, scss/style.scss */
+/* line 1553, scss/style.scss */
 .clearfix {
   *zoom: 1;
 }
@@ -1969,7 +1970,7 @@ iframe {
    Print styles
    ========================================================================== */
 @media print {
-  /* line 1561, scss/style.scss */
+  /* line 1562, scss/style.scss */
   * {
     background: transparent !important;
     color: #000 !important;
@@ -1977,48 +1978,48 @@ iframe {
     text-shadow: none !important;
   }
 
-  /* line 1569, scss/style.scss */
+  /* line 1570, scss/style.scss */
   a,
   a:visited {
     text-decoration: underline;
   }
 
-  /* line 1573, scss/style.scss */
+  /* line 1574, scss/style.scss */
   a[href]:after {
     content: " (" attr(href) ")";
   }
 
-  /* line 1577, scss/style.scss */
+  /* line 1578, scss/style.scss */
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
 
-  /* line 1583, scss/style.scss */
+  /* line 1584, scss/style.scss */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: "";
   }
 
-  /* line 1588, scss/style.scss */
+  /* line 1589, scss/style.scss */
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
-  /* line 1593, scss/style.scss */
+  /* line 1594, scss/style.scss */
   thead {
     display: table-header-group;
   }
 
-  /* line 1598, scss/style.scss */
+  /* line 1599, scss/style.scss */
   tr,
   img {
     page-break-inside: avoid;
   }
 
-  /* line 1602, scss/style.scss */
+  /* line 1603, scss/style.scss */
   img {
     max-width: 100% !important;
   }
@@ -2027,7 +2028,7 @@ iframe {
     margin: 0.5cm;
 }
 
-  /* line 1612, scss/style.scss */
+  /* line 1613, scss/style.scss */
   p,
   h2,
   h3 {
@@ -2035,7 +2036,7 @@ iframe {
     widows: 3;
   }
 
-  /* line 1618, scss/style.scss */
+  /* line 1619, scss/style.scss */
   h2,
   h3 {
     page-break-after: avoid;

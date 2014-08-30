@@ -16,6 +16,38 @@
 			<?php if (function_exists('is_tag') && is_tag()) {
 				echo 'Tag Archive for &quot;'.$tag.'&quot; - ';
 			}
+			elseif (is_post_type_archive('concert')) {
+				// If there is a year query, e.g. '?y=2012', get it and use it as a variable, else set it to the current year
+				if(get_query_var('y')) {
+					if (filter_var(get_query_var('y'), FILTER_VALIDATE_INT, array('options' => array ('min_range' => 0, 'max_range' => 9999,))) !== FALSE) {
+						$yearquery = get_query_var('y');
+					}
+				}
+				else {
+					// Set correct year query from current date when no query_var present
+					if (date('m') > 8) {
+						$yearquery = date('Y') - 1;
+					}
+					else {
+						$yearquery = date('Y') - 2;
+					}
+				}
+				// Set pretty season range
+				// Format 'YYYY–YY' unless turn of century, in which case 'YYYY–YYYY'
+				if (($yearquery % 100) == 99) {
+					$seasontitle = $yearquery . '–' . ($yearquery + 1);
+				}
+				else {
+					$seasontitle = $yearquery . '–' . str_pad((($yearquery + 1) % 100), 2, '0', STR_PAD_LEFT);
+				}
+				echo $seasontitle . ' Event Archives - ';
+			}
+			elseif (is_post_type_archive('colloquium')) {
+				echo 'Upcoming Events - ';
+			}
+			elseif (is_post_type_archive('member')) {
+				echo 'Composers - ';
+			}
 			elseif (is_archive()) {
 				wp_title('');
 				echo ' Archive - ';

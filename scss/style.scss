@@ -767,6 +767,16 @@ iframe {
    ========================================================================== */
 #page {
 	#torso {
+		.support {
+			text-align: center;
+			text-transform: uppercase;
+			letter-spacing: 0.15em;
+			word-spacing: 0.15em;
+			margin-bottom: 1.3333333333em;
+			line-height: 1.3333333333em;
+			font-size: 1.125em;
+			font-family: 'Alegreya Sans';
+		}
 		.event-meta {
 			text-align:center;
 			font-family: $sans-stack;
@@ -1292,6 +1302,9 @@ iframe {
 				}
 			} // </#fp-archive-link>
 			
+			.support {
+				margin-top: -1.3333333333em;
+			}
 			.event-meta {
 				.dtstart {
 				}

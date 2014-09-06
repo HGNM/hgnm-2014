@@ -5,9 +5,9 @@ Repository for WordPress theme development for new HGNM website.
 ## To-do
 
 - [ ] print styling
-- [ ] contact form
-- [ ] Facebook page link
-- [ ] change colloquium location link to Google Maps & use lightbox popup
+- [X] contact form
+- [X] Facebook page link
+- [X] change colloquium location link to Google Maps & use lightbox popup
 - [X] show support thanks on concert pages ([single-concert.php](/single-concert.php))
 - [X] fix titling on custom archive types
 - [ ] HGNM Member template ([single-member.php](/single-member.php))

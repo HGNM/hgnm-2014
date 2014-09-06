@@ -407,6 +407,30 @@ iframe {
 			}
 		}
 		
+		#fp-blurb {
+			.social-link {
+				font-family: $sans-stack;
+				margin-bottom:3em;
+				clear:both;
+				a {
+					padding: 1.2em 5%;
+					display: block;
+					border-bottom: none;
+					text-align: center;
+					background: $link-highlight;
+					font-size: 1.25em;
+					line-height: 1.2;
+					margin-bottom:0;
+				}
+				a:hover {
+					margin-right: 5%;
+					margin-left: 5%;
+					background: $black;
+					color: $link-highlight;
+				}
+			}
+		}
+		
 		#events {
 			font-family: $sans-stack;
 			h3 {
@@ -1287,6 +1311,11 @@ iframe {
 				.entry {
 					font-size:1.5em;
 					line-height:1.5;
+				}
+				.social-link {
+					width: 59.4%;
+					margin-right: auto;
+					margin-left: auto;
 				}
 			}
 			#events {

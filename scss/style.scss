@@ -1138,7 +1138,7 @@ iframe {
    ========================================================================== */
 #torso {
 	.contact-form {
-		div {
+		div, input.pushbutton-wide {
 			margin-bottom: 1.5em;
 			box-shadow: 0 0 0.75em -0.15em $light-text;
 		}
@@ -1179,7 +1179,7 @@ iframe {
 	   		width: 100%;
 	   		background: $link-highlight;
 	   		border: 0;
-	   		padding: 0.85714286em 5%;
+	   		padding: 1.71428571em 5% 5%;
 	   	}
 	   	input.pushbutton-wide:hover {
 	   		background: $black;

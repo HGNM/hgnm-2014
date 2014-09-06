@@ -12,6 +12,7 @@ get_header();
 				<?php endif; ?>
 				<section id="fp-blurb" <?php post_class('fp-section'); ?>>
 					<div class="entry"><?php the_content(); ?></div>
+					<p class="social-link"><a href="https://www.facebook.com/pages/Harvard-Group-for-New-Music/130937206919388">Join us on Facebook <span class="icon icon-facebook" aria-hidden="true"></span></a></p>
 				</section><!-- #post -->
 			<?php endwhile; ?>
 		<?php else: ?>

@@ -1109,6 +1109,64 @@ iframe {
 }
 
 /* ==========================================================================
+   Contact Form Styles
+   ========================================================================== */
+#torso {
+	.contact-form {
+		div {
+			margin-bottom: 1.5em;
+			box-shadow: 0 0 0.75em -0.15em $light-text;
+		}
+		label, input.pushbutton-wide {
+			color: $black;
+			font-family: $sans-stack;
+			text-transform: uppercase;
+			letter-spacing: 0.15em;
+			font-size: 0.875em; // 14px
+			line-height:1.714285714; // 1.714… * 14px = 24px
+			margin:0;
+			font-weight: 700;
+			span {
+				font-weight: 400;
+				color: $dark-bg;
+			}
+		}
+		label {
+			opacity: 0.5;
+			background: $light-shade;
+			padding: 0.85714286em 5%;
+			width: 90%;
+		}
+		input[type='text'], input[type='email'] {
+			width: 90%;
+			padding: 0.75em 5%;
+			line-height: 1.5;
+			margin-bottom: 0;
+			border: 0;
+		}
+	   	textarea {
+	   		width:90%;
+	   		border: 0;
+	   		margin: 0;
+	   		padding: 0.625em 5%;
+	   	}
+	   	input.pushbutton-wide {
+	   		width: 100%;
+	   		background: $link-highlight;
+	   		border: 0;
+	   		padding: 0.85714286em 5%;
+	   	}
+	   	input.pushbutton-wide:hover {
+	   		background: $black;
+	   		color: $link-highlight;
+	   	}
+	}
+	div[id|=contact-form] blockquote {
+		margin: 0;
+	}
+}
+
+/* ==========================================================================
    Lightbox Styles
    ========================================================================== */
 

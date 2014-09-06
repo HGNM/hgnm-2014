@@ -1565,7 +1565,7 @@ iframe {
    Contact Form Styles
    ========================================================================== */
 /* line 1141, scss/style.scss */
-#torso .contact-form div {
+#torso .contact-form div, #torso .contact-form input.pushbutton-wide {
   margin-bottom: 1.5em;
   box-shadow: 0 0 0.75em -0.15em #999999;
 }
@@ -1612,7 +1612,7 @@ iframe {
   width: 100%;
   background: #30ff8a;
   border: 0;
-  padding: 0.85714286em 5%;
+  padding: 1.71428571em 5% 5%;
 }
 /* line 1184, scss/style.scss */
 #torso .contact-form input.pushbutton-wide:hover {
@@ -1959,38 +1959,44 @@ iframe {
     float: none;
     margin: 0 auto;
   }
+  /* line 1526, scss/style.scss */
+  #page #torso div[id|=contact-form] {
+    max-width: 25em;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-  /* line 1530, scss/style.scss */
+  /* line 1537, scss/style.scss */
   .fontface.generatedcontent #page #torso .archive-header {
     margin-bottom: 1.5em;
   }
-  /* line 1533, scss/style.scss */
+  /* line 1540, scss/style.scss */
   .fontface.generatedcontent #page #torso .archive-header #archive-nav .left, .fontface.generatedcontent #page #torso .archive-header #archive-nav .right {
     background: transparent;
   }
 }
 @media only screen and (min-width: 78.75em) {
-  /* line 1544, scss/style.scss */
+  /* line 1551, scss/style.scss */
   .fp-section, .p-section {
     width: 59.0625em;
     margin: 0 auto;
   }
 }
 @media only screen and (max-width: 15em) {
-  /* line 1551, scss/style.scss */
+  /* line 1558, scss/style.scss */
   html {
     font-size: 0.8em;
   }
-  /* line 1558, scss/style.scss */
+  /* line 1565, scss/style.scss */
   html #page #torso #fp-composers li a img {
     display: none;
   }
-  /* line 1561, scss/style.scss */
+  /* line 1568, scss/style.scss */
   html #page #torso #fp-composers li a span {
     max-width: 90%;
     padding: 0 5%;
   }
-  /* line 1567, scss/style.scss */
+  /* line 1574, scss/style.scss */
   html #page #torso #fp-composers li:hover {
     padding: 0;
   }
@@ -1998,7 +2004,7 @@ iframe {
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-/* line 1587, scss/style.scss */
+/* line 1594, scss/style.scss */
 .ir {
   background-color: transparent;
   border: 0;
@@ -2006,7 +2012,7 @@ iframe {
   *text-indent: -9999px;
 }
 
-/* line 1594, scss/style.scss */
+/* line 1601, scss/style.scss */
 .ir:before {
   content: "";
   display: block;
@@ -2014,13 +2020,13 @@ iframe {
   height: 150%;
 }
 
-/* line 1601, scss/style.scss */
+/* line 1608, scss/style.scss */
 .hidden {
   display: none !important;
   visibility: hidden;
 }
 
-/* line 1606, scss/style.scss */
+/* line 1613, scss/style.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -2032,7 +2038,7 @@ iframe {
   width: 1px;
 }
 
-/* line 1618, scss/style.scss */
+/* line 1625, scss/style.scss */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   clip: auto;
@@ -2043,24 +2049,24 @@ iframe {
   width: auto;
 }
 
-/* line 1627, scss/style.scss */
+/* line 1634, scss/style.scss */
 .invisible {
   visibility: hidden;
 }
 
-/* line 1632, scss/style.scss */
+/* line 1639, scss/style.scss */
 .clearfix:before,
 .clearfix:after {
   content: " ";
   display: table;
 }
 
-/* line 1637, scss/style.scss */
+/* line 1644, scss/style.scss */
 .clearfix:after {
   clear: both;
 }
 
-/* line 1641, scss/style.scss */
+/* line 1648, scss/style.scss */
 .clearfix {
   *zoom: 1;
 }
@@ -2069,7 +2075,7 @@ iframe {
    Print styles
    ========================================================================== */
 @media print {
-  /* line 1650, scss/style.scss */
+  /* line 1657, scss/style.scss */
   * {
     background: transparent !important;
     color: #000 !important;
@@ -2077,48 +2083,48 @@ iframe {
     text-shadow: none !important;
   }
 
-  /* line 1658, scss/style.scss */
+  /* line 1665, scss/style.scss */
   a,
   a:visited {
     text-decoration: underline;
   }
 
-  /* line 1662, scss/style.scss */
+  /* line 1669, scss/style.scss */
   a[href]:after {
     content: " (" attr(href) ")";
   }
 
-  /* line 1666, scss/style.scss */
+  /* line 1673, scss/style.scss */
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
 
-  /* line 1672, scss/style.scss */
+  /* line 1679, scss/style.scss */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: "";
   }
 
-  /* line 1677, scss/style.scss */
+  /* line 1684, scss/style.scss */
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
-  /* line 1682, scss/style.scss */
+  /* line 1689, scss/style.scss */
   thead {
     display: table-header-group;
   }
 
-  /* line 1687, scss/style.scss */
+  /* line 1694, scss/style.scss */
   tr,
   img {
     page-break-inside: avoid;
   }
 
-  /* line 1691, scss/style.scss */
+  /* line 1698, scss/style.scss */
   img {
     max-width: 100% !important;
   }
@@ -2127,7 +2133,7 @@ iframe {
     margin: 0.5cm;
 }
 
-  /* line 1701, scss/style.scss */
+  /* line 1708, scss/style.scss */
   p,
   h2,
   h3 {
@@ -2135,7 +2141,7 @@ iframe {
     widows: 3;
   }
 
-  /* line 1707, scss/style.scss */
+  /* line 1714, scss/style.scss */
   h2,
   h3 {
     page-break-after: avoid;

@@ -274,10 +274,12 @@ get_header();
 			foreach($posts as $post)
 			{
 				$imgsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'hgnm-thumb');
-				if(!has_post_thumbnail()) { $class = ' class="no-img"'; } else { $class = ''; }
-				echo '<li' . $class . '><a href="' . get_permalink($post->ID) . '">';
+				echo '<li><a href="' . get_permalink($post->ID) . '">';
 				if(has_post_thumbnail()) {
 					echo '<img src="' . $imgsrc[0] . '" alt="' . get_the_title($post->ID) . '">';
+				}
+				else {
+					echo '<img src="' . get_stylesheet_directory_uri() . '/img/fallback-200x200.gif" alt="' . get_the_title($post->ID) . '">';
 				}
 				echo '<span>' . get_the_title($post->ID) . '</span>' . '</a></li>';
 			}

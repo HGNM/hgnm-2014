@@ -24,12 +24,12 @@ get_header();
 							<p class="location map-popup">Davison Room, <a href="https://www.google.com/maps/place/Music+Bldg,+Harvard+University,+Cambridge,+MA+02138/@42.3769058,-71.1170215,15z/data=!4m2!3m1!1s0x89e3774164253f4d:0x4139366065ac28ee" class="icon-location">Harvard University Music Building</a></p>
 
 						</section>
-						<section class="event-photo">
-							<?php if (get_field('photo')) {
-								$photo = get_field('photo');
-								echo '<img src="' . $photo['sizes']['hgnm-main'] . '" alt="' . $photo['alt'] . '">';
-							} ?>
-						</section>
+						<?php if (get_field('photo')) {
+							echo '<section class="event-photo">';
+							$photo = get_field('photo');
+							echo '<img src="' . $photo['sizes']['hgnm-main'] . '" alt="' . $photo['alt'] . '">';
+							echo '</section>';
+						} ?>
 						<?php the_content(); ?>
 				</article>
 			<?php endwhile; ?>

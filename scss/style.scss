@@ -1134,6 +1134,15 @@ iframe {
 }
 
 /* ==========================================================================
+   Colloquium Single Styles
+   ========================================================================== */
+.event-photo {
+	img {
+		width: 100%;
+	}
+}
+
+/* ==========================================================================
    Contact Form Styles
    ========================================================================== */
 #torso {
@@ -1519,6 +1528,17 @@ iframe {
 				.secondary {
 					float:none;
 					margin: 0 auto;
+				}
+			}
+			
+			// Colloquium single styles
+			.event-photo {
+				margin-left: auto;
+				margin-right: auto;
+				width: 58.25%;
+				img {
+					width: auto;
+					max-width: 100%;
 				}
 			}
 

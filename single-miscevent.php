@@ -135,7 +135,7 @@ get_header();
 						// VIDEOS
 						if ( get_row_layout() == 'videos' ) {
 							if( have_rows('videos') ) {
-								echo '<section class="multimedia"><h3>Videos</h3><ul class="video clearfix">';
+								echo '<section class="multimedia"><h3>Media</h3><ul class="video clearfix">';
 								while ( have_rows('videos') ) {
 									the_row();
 									if ( get_sub_field('embed_link') ) {

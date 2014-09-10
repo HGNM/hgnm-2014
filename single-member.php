@@ -138,7 +138,7 @@ get_header();
 								foreach ($upcomingcolloquia as $item) {
 									$dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart', $item->ID) . ' 12:00'));
 									echo '<h4 class="dtstart">' . $dtstart->format('l, j F — Ga') . '</h4>';
-									echo '<p class="location">Davison Room, <a href="http://www.map.harvard.edu/?ctrx=759617&ctry=2962591&level=10&layers=Campus%20Base%20and%20Buildings,Bike%20Facilities,Map%20Text" target="_blank" class="icon-link-ext">Harvard University Music Building</a></p>';
+									echo '<p class="location map-popup">Davison Room, <a href="https://www.google.com/maps/place/Music+Bldg,+Harvard+University,+Cambridge,+MA+02138/@42.3769058,-71.1170215,15z/data=!4m2!3m1!1s0x89e3774164253f4d:0x4139366065ac28ee" class="icon-location">Harvard University Music Building</a></p>';
 									break;
 								}
 								echo '</div>';

@@ -21,7 +21,7 @@ get_header();
 								<?php echo $dtstart->format('l, j F Y, ga'); ?>
 							</time></p>
 							
-							<p class="location">Davison Room, <a href="http://www.map.harvard.edu/?ctrx=759617&ctry=2962591&level=10&layers=Campus%20Base%20and%20Buildings,Bike%20Facilities,Map%20Text" target="_blank" class="icon-link-ext">Harvard University Music Building</a></p>
+							<p class="location map-popup">Davison Room, <a href="https://www.google.com/maps/place/Music+Bldg,+Harvard+University,+Cambridge,+MA+02138/@42.3769058,-71.1170215,15z/data=!4m2!3m1!1s0x89e3774164253f4d:0x4139366065ac28ee" class="icon-location">Harvard University Music Building</a></p>
 
 						</section>
 						<?php the_content(); ?>

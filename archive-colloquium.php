@@ -195,7 +195,7 @@ get_header();
 			<?php endif; ?>
 			<footer class="more-events-link">
 				<a href="<?php echo get_post_type_archive_link('concert') . $yearquery . '/'; ?>">
-					<p>See past events from this season »</p>
+					<p>See all events from this season »</p>
 				</a>
 			</footer>
 			<?php echo '</article>';

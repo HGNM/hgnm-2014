@@ -1527,6 +1527,13 @@ iframe {
 						line-height: 1.8;
 						margin-bottom: 1.2em;
 					}
+					blockquote, ul, li, ol {
+						p:first-child {
+							font-size: 1em;
+							line-height: 1.5;
+							margin-bottom: 1.5em;
+						}
+					}
 				}
 				.secondary {
 					width: 38%;

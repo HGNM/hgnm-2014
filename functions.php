@@ -27,7 +27,7 @@ if ( function_exists( 'register_nav_menu' ) ) {
             wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Alegreya:400italic,400,700|Alegreya+Sans:400,700');
             wp_enqueue_style( 'googleFonts');
         }
-    
+
     add_action('wp_print_styles', 'load_fonts');
 
 // Function for dynamic copyright date in footer
@@ -298,7 +298,7 @@ function hgnm_columns_content($column_name, $post_ID) {
         }
     }
 }
-// Hook 
+// Hook
 add_filter('manage_concert_posts_columns', 'hgnm_columns_head');
 add_action('manage_concert_posts_custom_column', 'hgnm_columns_content', 10, 2);
 add_filter('manage_colloquium_posts_columns', 'hgnm_columns_head');
@@ -318,7 +318,7 @@ add_action( 'pre_get_posts', 'my_dtstart_orderby' );
 function my_dtstart_orderby( $query ) {
 	if( ! is_admin() )
 		return;
-		
+
 	$screen = get_current_screen();
 	if ($screen->base == 'edit') {
 		if ( $screen->post_type == 'concert' || $screen->post_type == 'colloquium' || $screen->post_type == 'miscevent' ) {

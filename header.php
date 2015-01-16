@@ -73,7 +73,7 @@
 		</title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		
+
 		<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="screen" />
 		<link rel="stylesheet" href="<?php _e (get_stylesheet_directory_uri() . '/css/magnific-popup.css'); ?>" type="text/css" media="screen" />
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
@@ -81,9 +81,9 @@
 		<link rel="apple-touch-icon-precomposed" href="<?php _e (get_stylesheet_directory_uri() . '/img/favicon-152.png'); ?>">
 		<meta name="msapplication-TileColor" content="#30ff8a">
 		<meta name="msapplication-TileImage" content="<?php _e (get_stylesheet_directory_uri() . '/img/favicon-144.png'); ?>">
-		
+
 		<script src="<?php _e (get_stylesheet_directory_uri() . '/js/vendor/modernizr-2.6.2.min.js'); ?>"></script>
-		
+
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?> lang="en">
@@ -93,7 +93,7 @@
 		<div id="page" class="site">
 
 			<header id="masthead" class="site-header js-header clearfix" role="banner">
-			
+
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 					<?php // Finds characters that are not uppercase and wraps them in a span of class 'lowercase'
 						$title = get_bloginfo('name');
@@ -120,10 +120,10 @@
 						}
 					?>
 				</a></h1>
-	
+
 				<nav id="menu" class="menu js-menu" role="navigation">
 			        	<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => 'false', 'menu_class' => '' ) ); ?>
 				</nav>
-				
+
 			</header>
 			<div id="torso">

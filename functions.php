@@ -10,6 +10,13 @@ function baw_hack_wp_title_for_home( $title )
   return $title;
 }
 
+// Remove hentry from post_class
+function isa_remove_hentry_class( $classes ) {
+  $classes = array_diff( $classes, array( 'hentry' ) );
+  return $classes;
+}
+add_filter( 'post_class', 'isa_remove_hentry_class' );
+
 // Register custom menu
 if ( function_exists( 'register_nav_menu' ) ) {
 	register_nav_menu( 'primary', 'Primary Menu' );

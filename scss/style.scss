@@ -1115,6 +1115,12 @@ iframe {
 					}
 				} // </.concerts>
 			} // </.secondary>
+			.composerav {
+				margin-bottom: 3em;
+				.embed-container {
+					display:block;
+				}
+			} // </.composerav>
 			.composers-link {
 				clear: both;
 				font-family: $sans-stack;
@@ -1540,11 +1546,38 @@ iframe {
 					width: 38%;
 					float:left;
 				}
+				.composerav {
+					width:58.25%;
+					margin-right: 3.75%;
+					float:left;
+					.audio {
+						li {
+							width: 49%;
+							padding-right: 2%;
+							float:left;
+						}
+						li:nth-child(2n) {
+							padding-right: 0;
+						}
+					}
+				}
 			}
 			.member.no-primary {
 				.secondary {
 					float:none;
 					margin: 0 auto;
+				}
+				.composerav {
+					width: 38%;
+					float:none;
+					margin: 0 auto;
+					.audio {
+						li {
+							width: 100%;
+							padding-right: 0;
+							float: none;
+						}
+					}
 				}
 			}
 

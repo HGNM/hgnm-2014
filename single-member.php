@@ -202,8 +202,8 @@ get_header();
 									while(have_rows('programme', $post->ID)) : the_row();
 										if ( get_sub_field('composer')->ID == $testID && get_sub_field(embed_link) ) : ?>
 											<li>
+												<p><span class="mediadt"><?php $concdt = DateTime::createFromFormat('d/m/Y', get_field('dtstart')); echo $concdt->format('n.j.Y'); ?></span><br /><em><?php the_sub_field('work_title', $post->ID); ?></em>, <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
 												<span class="embed-container"><?php the_sub_field('embed_link', $post->ID) ?></span>
-												<p><em><?php the_sub_field('work_title', $post->ID); ?></em>, <?php the_title(); ?>, <?php the_field('dtstart'); ?></p>
 											</li>
 										<?php endif;
 									endwhile;

@@ -88,9 +88,9 @@ body {
 
 *, *:after, *:before {
 	-moz-font-feature-settings:"kern" 1, "liga" 1;
-	-ms-font-feature-settings:"kern" 1, "liga" 1; 
-	-o-font-feature-settings:"kern" 1, "liga" 1; 
-	-webkit-font-feature-settings:"kern" 1, "liga" 1; 
+	-ms-font-feature-settings:"kern" 1, "liga" 1;
+	-o-font-feature-settings:"kern" 1, "liga" 1;
+	-webkit-font-feature-settings:"kern" 1, "liga" 1;
 	font-feature-settings:"kern" 1, "liga" 1;
 }
 
@@ -153,7 +153,7 @@ textarea {
         For more information please visit Commercial Type at http://commercialtype.com or email us at info[at]commercialtype.com
 
         Copyright (C) 2013 Schwartzco Inc.
-        License: 1407-HRGQJV     
+        License: 1407-HRGQJV
 */
 
 @font-face {
@@ -192,34 +192,34 @@ textarea {
   }
 }
 */
- 
+
  [class^="icon-"]:before, [class*=" icon-"]:before, .icon-link-ext:after, .icon-location:after {
   font-family: "hgnm";
   font-style: normal;
   font-weight: normal;
   speak: none;
- 
+
   display: inline-block;
   text-decoration: inherit;
   width: 1em;
   margin-right: .2em;
   text-align: center;
   /* opacity: .8; */
- 
+
   /* For safety - reset parent styles, that can break glyph codes*/
   font-variant: normal;
   text-transform: none;
-     
+
   /* fix buttons height, for twitter bootstrap */
   line-height: 1em;
- 
+
   /* Animation center compensation - margins should be symmetric */
   /* remove if not needed */
   margin-left: .2em;
- 
+
   /* you can be more comfortable with increased icons size */
   /* font-size: 120%; */
- 
+
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
@@ -321,9 +321,9 @@ iframe {
 			color: $reverse-text;
 			@include transition(all 0.2s ease-out);
 		}
-	
+
 	// == Accessible Mobile Menu Styling == //
-	
+
 		.menu {
 			font-family: $sans-stack;
 			text-transform: uppercase;
@@ -352,19 +352,19 @@ iframe {
 				padding: .5em 5%;
 			}
 		}
-		
+
 		.menu.active {
 			display: block;
 		}
-		
+
 		.no-js .menu {
 			display: block;
 		}
-		
+
 		.menu-button {
 			color: $text-color;
 			background-color: $menu-highlight;
-			border: none;  
+			border: none;
 			font-size: 1.5em;
 			font-weight:700;
 			text-transform:uppercase;
@@ -376,7 +376,7 @@ iframe {
 			height: 2em;
 			padding:0 0.5em;
 		}
-		
+
 		.menu-button.active {
 			color: $reverse-text;
 			background-color: $menu-stripe-odd;
@@ -393,7 +393,7 @@ iframe {
 			border-bottom: 2px solid $link-highlight;
 			@include transition(all 0.2s ease-out);
 		}
-		
+
 		a:hover {
 			background: $link-highlight;
 			@include transition(all 0.2s ease-in);
@@ -401,7 +401,7 @@ iframe {
 		/* ==========================================================================
 		   Front Page Styles
 		   ========================================================================== */
-		
+
 		.fp-section,
 		.p-section {
 			padding:$body-padding;
@@ -413,7 +413,7 @@ iframe {
 				margin:0;
 			}
 		}
-		
+
 		#fp-blurb {
 			.social-link {
 				font-family: $sans-stack;
@@ -437,7 +437,7 @@ iframe {
 				}
 			}
 		}
-		
+
 		#events {
 			font-family: $sans-stack;
 			h3 {
@@ -568,7 +568,7 @@ iframe {
 				}
 			}
 		} // </#events>
-		
+
 		.composers {
 			li {
 					margin-bottom:1em;
@@ -650,7 +650,7 @@ iframe {
 				}
 			}
 		}
-		
+
 	/* ==========================================================================
 	   Meta Styles
 	   ========================================================================== */
@@ -673,7 +673,7 @@ iframe {
 			color: $black;
 			background: $link-highlight;
 		}
-		
+
 	} // </#torso>
 } // </#page>
 
@@ -836,10 +836,10 @@ iframe {
 				margin-bottom: 2em;
 			}
 		}
-		
+
 		.summary {
 		}
-		
+
 		.external-links {
 			margin-bottom: 1.5em;
 			margin-top: 3em;
@@ -873,7 +873,7 @@ iframe {
 				}
 			}
 		}
-		
+
 		.programme {
 			margin-bottom:3em;
 			li {
@@ -889,7 +889,7 @@ iframe {
 				}
 			}
 		}
-		
+
 		.archive-docs {
 			margin-bottom:3em;
 			li {
@@ -908,14 +908,14 @@ iframe {
 				}
 			}
 		}
-		
+
 		.multimedia {
 			margin-bottom: 3em;
 			.embed-container {
 				display:block;
 			}
 		}
-		
+
 		.gallery {
 			clear:both;
 			margin-bottom: 3em;
@@ -944,7 +944,7 @@ iframe {
 				}
 			}
 		}
-		
+
 		.archive-link {
 			font-family: $sans-stack;
 				margin-bottom:1.5em;
@@ -1232,7 +1232,7 @@ iframe {
 /* ==========================================================================
    Footer Styles
    ========================================================================== */
-   
+
 .site-footer {
 	clear:both;
 	color: $light-text;
@@ -1279,7 +1279,7 @@ iframe {
 			a {
 				color: $black;
 			}
-			
+
 			.menu {
 				display: block;
 				font-size:1.125em;
@@ -1314,7 +1314,7 @@ iframe {
 					background: $bright-green;
 				}
 			}
-			
+
 			.menu-button {
 				display:none;
 			}
@@ -1408,7 +1408,7 @@ iframe {
 					margin: 0 auto;
 				}
 			} // </#fp-archive-link>
-			
+
 			.support {
 				margin-top: -1.3333333333em;
 			}
@@ -1418,7 +1418,7 @@ iframe {
 				.location {
 				}
 			}
-			
+
 			.description {
 				font-size:1.25em;
 				line-height: 1.8;
@@ -1427,7 +1427,7 @@ iframe {
 					font-size: 1.2em;
 				}
 			}
-			
+
 			.external-links.both {
 				margin-bottom: 3em;
 				li {
@@ -1447,14 +1447,14 @@ iframe {
 					padding-right:0;
 				}
 			}
-			
+
 			.archive-docs {
 				li {
 					.icon-download {
 					}
 				}
 			}
-			
+
 			.multimedia {
 				.audio, .video {
 					li {
@@ -1467,7 +1467,7 @@ iframe {
 					}
 				}
 			}
-			
+
 			.gallery {
 				.popup-gallery {
 					li {
@@ -1494,7 +1494,7 @@ iframe {
 					}
 				}
 			}
-			
+
 			.has-programme {
 				.programme {
 					float: left;
@@ -1547,7 +1547,7 @@ iframe {
 					margin: 0 auto;
 				}
 			}
-			
+
 			// Colloquium single styles
 			.event-photo {
 				margin-left: auto;
@@ -1565,7 +1565,7 @@ iframe {
 				margin-left: auto;
 				margin-right: auto;
 			}
-			
+
 		} // </#torso>
 	} // </#page>
 	.fontface.generatedcontent {

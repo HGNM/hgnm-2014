@@ -45,6 +45,10 @@
 			elseif (is_post_type_archive('colloquium')) {
 				echo 'Upcoming Events - ';
 			}
+			elseif (is_singular('colloquium')) {
+				$colldt = DateTime::createFromFormat('d/m/Y', get_field('dtstart'));
+				echo 'Colloquium: ' . get_the_title() . ', ' . $colldt->format('n/j/Y') . ' — ';
+			}
 			elseif (is_post_type_archive('member')) {
 				echo 'Composers - ';
 			}

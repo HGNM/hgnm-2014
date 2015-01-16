@@ -195,7 +195,7 @@ get_header();
 					<?php endif; ?>
 
 					<?php if( $archivemedia ): ?>
-						<section class="composerav">
+						<section class="composerav clearfix">
 							<h3>Performances from HGNM concerts</h3>
 							<ul class="audio clearfix">
 								<?php foreach($archivemedia as $post) :

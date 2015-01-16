@@ -93,6 +93,9 @@ get_header();
 					}
 				}
 
+				// Set variable that can be checked and emptied if no media is found
+				$archivemedia = $pastconcerts;
+
 				// Create post-class string.
 				// Sets class of 'no-secondary' if no sidebar content exists.
 				$postclass = 'p-section';

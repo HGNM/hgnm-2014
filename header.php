@@ -49,6 +49,10 @@
 				$colldt = DateTime::createFromFormat('d/m/Y', get_field('dtstart'));
 				echo 'Colloquium: ' . get_the_title() . ', ' . $colldt->format('n/j/Y') . ' — ';
 			}
+			elseif(is_singular('concert')) {
+				$concdt = DateTime::createFromFormat('d/m/Y', get_field('dtstart'));
+				echo get_the_title() . ', ' . $concdt->format('n/j/Y') . ' — ';
+			}
 			elseif (is_post_type_archive('member')) {
 				echo 'Composers - ';
 			}

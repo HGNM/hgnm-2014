@@ -193,6 +193,25 @@ get_header();
 
 						</section> <!-- .secondary -->
 					<?php endif; ?>
+
+					<?php if( $archivemedia ): ?>
+						<section class="composerav">
+							<h3>Performances from HGNM concerts</h3>
+							<ul class="audio clearfix">
+								<?php foreach($archivemedia as $post) :
+									while(have_rows('programme', $post->ID)) : the_row();
+										if ( get_sub_field('composer')->ID == $testID && get_sub_field(embed_link) ) : ?>
+											<li>
+												<span class="embed-container"><?php the_sub_field('embed_link', $post->ID) ?></span>
+												<p><em><?php the_sub_field('work_title', $post->ID); ?></em>, <?php the_title(); ?>, <?php the_field('dtstart'); ?></p>
+											</li>
+										<?php endif;
+									endwhile;
+								endforeach; ?>
+							</ul>
+						</section> <!-- .composerav -->
+					<?php endif; ?>
+
 					<section class="composers-link">
 						<?php echo '<a href="' . get_post_type_archive_link('member') . '">See all composers »</a>'; ?>
 					</section>

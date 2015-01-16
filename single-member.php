@@ -96,6 +96,23 @@ get_header();
 				// Set variable that can be checked and emptied if no media is found
 				$archivemedia = $pastconcerts;
 
+				// Unset array items if they don’t contain media for this composer
+				foreach ($archivemedia as $key => $row) {
+					$mediacheck = 0;
+					if(have_rows('programme', $row->ID)) {
+						while( have_rows('programme', $row->ID) ) : the_row();
+							// Check if there’s a row for this composer with a media embed link
+							if ( get_sub_field('composer')->ID == $testID && get_sub_field(embed_link) ) {
+								$mediacheck = 1;
+							}
+						endwhile;
+					}
+					// If no media for this composer has been found, remove this post from our array
+					if ( $mediacheck == 0 ) {
+						unset($archivemedia[$key]);
+					}
+				}
+
 				// Create post-class string.
 				// Sets class of 'no-secondary' if no sidebar content exists.
 				$postclass = 'p-section';

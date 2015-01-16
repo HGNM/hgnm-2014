@@ -19,7 +19,7 @@ get_header();
 						'meta_query' => array(
 							array(
 								'key' => 'fname',
-				                      'value'  => $testID,
+				        'value'  => $testID,
 							)
 						)
 					)
@@ -45,7 +45,7 @@ get_header();
 						'meta_query' => array(
 							array(
 								'key' => 'programme_%_composer',
-				                      'value'  => $testID,
+				        'value'  => $testID,
 							)
 						)
 					)

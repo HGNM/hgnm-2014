@@ -55,6 +55,37 @@ $output = $copyright;
 return $output;
 }
 
+// Customise WordPress login.php
+function hgnm_login_css() { ?>
+  <style type="text/css">
+  body.login {
+    background: #111;
+  }
+  body.login div#login h1 a {
+    background-image: url(<?php echo get_bloginfo( 'template_directory' ) ?>/img/login-logo.png);
+    background-size: 200px 75px;
+    width: 200px;
+  }
+  body.login p#backtoblog a, body.login p#nav a {
+    color: #FF7091;
+  }
+  </style>
+  <link rel="shortcut icon" href="http://www.luxlx.co.uk/favico.ico"/>
+  <?php }
+add_action( 'login_enqueue_scripts', 'hgnm_login_css' );
+
+// Use website URL for admin log-in logo link
+function hgnm_url_login(){
+  return home_url();
+}
+add_filter('login_headerurl', 'hgnm_url_login');
+
+// Replace ‘Powered by WordPress’ logo alt text with site title
+function hgnm_login_logo_title() {
+  return get_bloginfo();
+}
+add_filter( 'login_headertitle', 'hgnm_login_logo_title' );
+
 // Register Member Custom Post Type
 function member_post_type() {
 

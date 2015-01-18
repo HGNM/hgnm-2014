@@ -66,8 +66,6 @@ function hgnm_login_css() { ?>
     background-size: 200px 75px;
     width: 200px;
   }
-  body.login p#backtoblog a, body.login p#nav a {
-    color: #FF7091;
   }
   </style>
   <link rel="shortcut icon" href="http://www.luxlx.co.uk/favico.ico"/>

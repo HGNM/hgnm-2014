@@ -59,7 +59,7 @@ return $output;
 function hgnm_login_css() { ?>
   <style type="text/css">
   body.login {
-    background: #111;
+    background: #333;
   }
   body.login div#login h1 a {
     background-image: url(<?php echo get_bloginfo( 'template_directory' ) ?>/img/login-logo.png);

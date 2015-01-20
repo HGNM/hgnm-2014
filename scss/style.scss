@@ -905,6 +905,17 @@ iframe {
 				}
 				a {
 					margin-left: 2em;
+					margin-right: 0.5em;
+				}
+				.docs-meta {
+					display: inline-block;
+					background: $overlay;
+					background-color: rgba(0, 0, 0, 0.01);
+					font-size: 0.75em;
+					letter-spacing: 0.15em;
+					padding: 0.25em 0.66666666em;
+					font-weight: 700;
+					font-family: $sans-stack;
 				}
 			}
 		}

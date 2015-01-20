@@ -30,7 +30,7 @@ get_header();
 				}
 				// SET TIMEZONE
 				date_default_timezone_set('America/New_York');
-				
+
 				// SET START DATE VARIABLE
 				if ($start_time) {
 					$dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart') . ' ' . $start_time));
@@ -38,16 +38,16 @@ get_header();
 				else {
 					$dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart') . ' 20:00'));
 				}
-				
+
 				// EVENT META — date, time & location
 				?>
 				<section class="event-meta">
 					<p class="dtstart"><time class="value" datetime="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>">
 						<?php echo $dtstart->format('l, j F Y, g:ia'); ?>
 					</time></p>
-					
+
 					<p class="location"><?php the_field('location') ?></p>
-					
+
 					<?php if ($dtstart->format('Ymd') > date('Ymd')) : ?>
 						<p class="tickets"><span class="price">free</span> & open to the public</p>
 					<?php endif; ?>
@@ -73,7 +73,7 @@ get_header();
 
 							// Create empty array to populate with programme data
 							$fullprogramme = array();
-							
+
 							// For each programme item create an array and append it to the $fullprogramme array
 							foreach ($programme as $item) {
 								$id = $item['composer'];
@@ -85,7 +85,7 @@ get_header();
 								$row = array(array('composer' => $composer, 'url' => $url, 'work_title' => $work_title, 'embed_link' => $embed_link, 'a_or_v' => $a_or_v));
 								$fullprogramme = array_merge($fullprogramme, $row);
 							}
-							
+
 							// For each programme plus item create an array and append it to the $fullprogramme array
 							foreach ($programmeplus as $item) {
 								$composer = $item['composer'];
@@ -96,22 +96,22 @@ get_header();
 								$row = array(array('composer' => $composer, 'url' => $url, 'work_title' => $work_title, 'embed_link' => $embed_link, 'a_or_v' => $a_or_v));
 								$fullprogramme = array_merge($fullprogramme, $row);
 							}
-							
+
 							// Set up list of names to sort by
 							foreach ( $fullprogramme as $key => $row ) {
 								$column_id[$key]=$row['composer'];
 							}
-							
+
 							// Sort programme by composer name
 							array_multisort($column_id, SORT_STRING, $fullprogramme);
-							
-							
+
+
 							// Count programme items
 							$count =  count($fullprogramme);
-							
+
 							// Test to see if there’s a complete list of work titles
 							$i = 0;
-							$hasworks = 1; 
+							$hasworks = 1;
 							while ($i < $count) {
 								if (strlen($fullprogramme[$i]['work_title']) != 0) {
 								}
@@ -121,7 +121,7 @@ get_header();
 								}
 								$i++;
 							}
-							
+
 							// Output if there is a complete list of work titles
 							// Format: 	<li>
 							//				<strong class="composer">COMPOSER-NAME</strong><br />
@@ -189,7 +189,7 @@ get_header();
 
 					</section><!-- .programme -->
 				<?php endif; ?>
-				
+
 				<?php
 				// ARCHIVE CONTENT
 				if( get_field('poster_pdf') || get_field('programme_pdf') ) {
@@ -201,6 +201,7 @@ get_header();
 							echo '<li><span class="icon icon-download" aria-hidden="true"></span><a href="' . esc_url($posterpdf['url']) . '">Download PDF of concert poster</a> (' . $filesize . ')</li>';
 						}
 						else {
+							$filetype = wp_check_filetype($posterpdf['url']);
 							echo '<li><span class="icon icon-download" aria-hidden="true"></span><a href="' . esc_url($posterpdf['url']) . '">Download concert poster</a> (' . strtoupper($filetype['ext']) . ', ' . $filesize . ')</li>';
 						}
 					}
@@ -217,7 +218,7 @@ get_header();
 					echo '</ul></section>';
 				}
 				?>
-				
+
 				<?php if(get_field('performer_url') || get_field('facebook_url')) : ?>
 					<section class="external-links clearfix <?php if(get_field('performer_url') & get_field('facebook_url')) { echo 'both'; } ?>">
 						<ul>
@@ -234,7 +235,7 @@ get_header();
 						</ul>
 					</section>
 				<?php endif; ?>
-				
+
 				<?php
 				// A/V CONTENT
 				if( get_field('a_v') ) {
@@ -266,11 +267,11 @@ get_header();
 					}
 				}
 				?>
-				
-				<?php 
+
+				<?php
 				// GALLERY
 				$images = get_field('gallery');
-				 
+
 				if( $images ): ?>
 				<section class="gallery">
 					<h3>Photos</h3>
@@ -285,7 +286,7 @@ get_header();
 				    </ul>
 			    </section>
 				<?php endif; ?>
-				
+
 				<section class="archive-link">
 				<?php
 				//ARCHIVE LINK - shows link to archive for season that includes this concert
@@ -304,7 +305,7 @@ get_header();
 					echo '<a href="' . get_post_type_archive_link('concert') . $yearquery . '/">See all events in the ' . $seasontitle . ' season »</a>';
 				?>
 				</section>
-				
+
 			</article><!-- #post-ID .vevent -->
 			<?php endwhile; ?>
 		<?php else: ?>

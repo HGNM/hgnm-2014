@@ -70,7 +70,7 @@ function hgnm_login_css() { ?>
     text-align: center;
   }
   </style>
-  <link rel="shortcut icon" href="http://www.luxlx.co.uk/favico.ico"/>
+  <link rel="shortcut icon" href="<?php echo home_url(); ?>/favico.ico"/>
   <?php }
 add_action( 'login_enqueue_scripts', 'hgnm_login_css' );
 

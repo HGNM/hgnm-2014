@@ -196,20 +196,22 @@ get_header();
 					echo '<section class="archive-docs"><h3>Related Files</h3><ul>';
 					if( get_field('poster_pdf') ) {
 						$posterpdf = get_field('poster_pdf');
+						$filesize = size_format(filesize(get_attached_file($posterpdf['ID'])));
 						if ($posterpdf['mime_type'] == 'application/pdf') {
-							echo '<li><span class="icon icon-download" aria-hidden="true"></span><a href="' . esc_url($posterpdf['url']) . '">Download PDF of concert poster</a></li>';
+							echo '<li><span class="icon icon-download" aria-hidden="true"></span><a href="' . esc_url($posterpdf['url']) . '">Download PDF of concert poster</a> (' . $filesize . ')</li>';
 						}
 						else {
-							echo '<li><span class="icon icon-download" aria-hidden="true"></span><a href="' . esc_url($posterpdf['url']) . '">Download concert poster</a></li>';
+							echo '<li><span class="icon icon-download" aria-hidden="true"></span><a href="' . esc_url($posterpdf['url']) . '">Download concert poster</a> (' . strtoupper($filetype['ext']) . ', ' . $filesize . ')</li>';
 						}
 					}
 					if( get_field('programme_pdf') ) {
 						$programmepdf = get_field('programme_pdf');
+						$progfilesize = size_format(filesize(get_attached_file($programmepdf['ID'])));
 						if ($programmepdf['mime_type'] == 'application/pdf') {
-							echo '<li><span class="icon icon-download" aria-hidden="true"></span><a href="' . esc_url($programmepdf['url']) . '">Download PDF of program booklet</a></li>';
+							echo '<li><span class="icon icon-download" aria-hidden="true"></span><a href="' . esc_url($programmepdf['url']) . '">Download PDF of program booklet</a> (' . $progfilesize . ')</li>';
 						}
 						else {
-							echo '<li><span class="icon icon-download" aria-hidden="true"></span><a href="' . esc_url($programmepdf['url']) . '">Download program booklet</a></li>';
+							echo '<li><span class="icon icon-download" aria-hidden="true"></span><a href="' . esc_url($programmepdf['url']) . '">Download program booklet</a> (' . $progfilesize . ')</li>';
 						}
 					}
 					echo '</ul></section>';

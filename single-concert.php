@@ -56,7 +56,7 @@ get_header();
 				<?php
 				// SUMMARY FIELD
 				if( get_field('summary') ): ?>
-				<section class="description">
+				<section class="description clearfix">
 					<?php // If the poster custom field is an image, display it with the summary (if present)
 					if(get_field('poster_pdf')) {
 						$posterimg = get_field('poster_pdf');

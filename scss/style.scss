@@ -837,7 +837,18 @@ iframe {
 			}
 		}
 
-		.summary {
+		.description {
+			.concert-poster {
+				margin:0 auto 1.5em;
+				max-width:50%;
+				a {
+					display: block;
+					border: 0;
+					img {
+						width:100%;
+					}
+				}
+			}
 		}
 
 		.external-links {
@@ -1451,6 +1462,11 @@ iframe {
 				h3 {
 					font-size: 1.2em;
 				}
+				.concert-poster {
+					display: inline-block;
+					float: right;
+					margin-left: 1.5em;
+				}
 			}
 
 			.external-links.both {
@@ -1662,6 +1678,11 @@ iframe {
 					}
 					li:hover {
 						padding:0;
+					}
+				}
+				.description {
+					.concert-poster {
+						max-width:100%;
 					}
 				}
 			}

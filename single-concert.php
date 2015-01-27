@@ -56,7 +56,20 @@ get_header();
 				<?php
 				// SUMMARY FIELD
 				if( get_field('summary') ): ?>
-				<section class="description">
+				<section class="description clearfix">
+					<?php // If the poster custom field is an image, display it with the summary (if present)
+					if(get_field('poster_pdf')) {
+						$posterimg = get_field('poster_pdf');
+						// Check poster attachment is an image
+						if(substr($posterimg['mime_type'], 0, 5) == 'image') {
+							// Display poster
+							echo '<aside class="concert-poster popup-gallery">';
+							$posterimgsrc = wp_get_attachment_image_src($posterimg['ID'], 'medium');
+							$posterimglinksrc = wp_get_attachment_image_src($posterimg['ID'], 'large');
+							echo '<a href="' . $posterimglinksrc['0'] . '" title="' . $posterimg['title'] . '"><img src="' . $posterimgsrc[0] . '" alt="' . $posterimg['alt'] . '"></a>';
+							echo '</aside>';
+						}
+					} ?>
 					<?php the_field('summary'); ?>
 				</section>
 				<?php endif; ?>

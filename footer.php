@@ -1,6 +1,6 @@
 			</div><!-- #torso -->
 			<footer id="colophon" class="site-footer" role="contentinfo">
-				<div class="site-info"><?php echo hgnm_copyright(); ?> | <a href="<?php echo admin_url(); ?>">Login</a></div>
+				<div class="site-info"><?php echo hgnm_copyright(); ?> • <a href="<?php echo admin_url(); ?>">Login</a></div>
 			</footer>
 		</div><!-- #page -->
 
@@ -9,7 +9,7 @@
 
 		<script src="<?php _e (get_stylesheet_directory_uri() . '/js/main.js'); ?>"></script>
 		<script src="<?php _e (get_stylesheet_directory_uri() . '/js/plugins.js'); ?>"></script>
-				
+
 		<script>
 			if( $('.popup-gallery').length ) {
 				$(document).ready(function() {
@@ -41,7 +41,7 @@
 				});
 			}
 		</script>
-		
+
 		<?php wp_footer(); ?>
 	</body>
 </html>

@@ -436,6 +436,8 @@ function options_setup() {
 	update_option( 'permalink_structure', '/%postname%/' );
 	update_option( 'show_on_front', 'page' );
 	update_option( 'use_smilies', 0 );
+  update_option( 'medium_size_w', 300 );
+  update_option( 'medium_size_h', 550 );
 }
 add_action( 'after_switch_theme', 'options_setup' );
 

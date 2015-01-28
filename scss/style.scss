@@ -844,6 +844,9 @@ iframe {
 				a {
 					display: block;
 					border: 0;
+					cursor: -webkit-zoom-in;
+					cursor: -moz-zoom-in;
+					cursor: zoom-in;
 					img {
 						width:100%;
 					}

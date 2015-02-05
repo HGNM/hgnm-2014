@@ -551,6 +551,9 @@ iframe {
 			} // </.colloquia, .miscevents>
 			.miscevents {
 				clear:both;
+				.vevent {
+					margin-bottom: 1.2em;
+				}
 			}
 			.more-events-link {
 				margin-bottom:3em;

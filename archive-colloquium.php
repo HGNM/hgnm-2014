@@ -9,10 +9,10 @@ get_header();
 		else {
 			$yearquery = date('Y') - 1;
 		}
-		
+
 		// Set season date variables
 		$seasonstart = date('Ymd') - 1;
-		
+
 		// Set pretty season range
 		// Format 'YYYY–YY' unless turn of century, in which case 'YYYY–YYYY'
 		if (($yearquery % 100) == 99) {
@@ -21,7 +21,7 @@ get_header();
 		else {
 			$seasontitle = $yearquery . '–' . str_pad((($yearquery + 1) % 100), 2, '0', STR_PAD_LEFT);
 		}
-		
+
 		// Alter main query for displaying concerts in the loop
 		query_posts(
 			array(
@@ -33,13 +33,13 @@ get_header();
 				'meta_query' => array(
 					array(
 						'key' => 'dtstart',
-                        'value'  => $seasonstart,
-                        'compare'  => '>='
+            'value'  => $seasonstart,
+            'compare'  => '>='
 					)
 				)
 			)
 		);
-		
+
 		// Get upcoming colloquia
 		$colloquia = get_posts(
 			array(
@@ -51,13 +51,13 @@ get_header();
 				'meta_query' => array(
 					array(
 						'key' => 'dtstart',
-                        'value'  => $seasonstart,
-                        'compare'  => '>='
+            'value'  => $seasonstart,
+            'compare'  => '>='
 					)
 				)
 			)
 		);
-		
+
 		// Get upcoming miscellaneous events
 		$miscevents = get_posts(
 			array(
@@ -69,13 +69,13 @@ get_header();
 				'meta_query' => array(
 					array(
 						'key' => 'dtstart',
-                        'value'  => $seasonstart,
-                        'compare'  => '>='
+            'value'  => $seasonstart,
+            'compare'  => '>='
 					)
 				)
 			)
 		);
-		
+
 			// Display events header and navigation
 			?>
 			<article id="events" class="p-section clearfix">
@@ -88,13 +88,13 @@ get_header();
 			if (! (have_posts() || $colloquia || $miscevents)) {
 				echo '<section class="entry"><p>It looks like there are no events planned at the moment. Please check back later.</p></section>';
 			}
-			
+
 			// Display archived concerts for $yearquery season
 			if ( have_posts() ) : ?>
 				<section class="concerts <?php if(!$colloquia) { echo 'solo'; } ?>">
 					<h3>Upcoming Concerts</h3>
 					<ul>
-					<?php while ( have_posts() ) : the_post(); ?>						
+					<?php while ( have_posts() ) : the_post(); ?>
 						<li <?php post_class('vevent clearfix'); ?>>
 							<a href="<?php echo get_permalink() ?>" class="url">
 								<?php
@@ -104,7 +104,7 @@ get_header();
 								}
 								// SET TIMEZONE
 								date_default_timezone_set('America/New_York');
-								
+
 								// SET START DATE VARIABLE
 								if ($start_time) {
 									$dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart') . ' ' . $start_time));

@@ -30,8 +30,8 @@ get_header();
 				'meta_query' => array(
 					array(
 						'key' => 'dtstart',
-                        'value'  => $today,
-                        'compare'  => '>'
+            'value'  => $today,
+            'compare'  => '>'
 					)
 				)
 			)
@@ -47,8 +47,8 @@ get_header();
 				'meta_query' => array(
 					array(
 						'key' => 'dtstart',
-                        'value'  => $today,
-                        'compare'  => '>'
+            'value'  => $today,
+            'compare'  => '>'
 					)
 				)
 			)

@@ -17,12 +17,12 @@ get_header();
 				$yearquery = date('Y') - 2;
 			}
 		}
-		
+
 		// Set season date variables
 		$seasonstart = $yearquery . '0901';
 		$seasonend = ($yearquery + 1) . '0831';
 		$season = array($seasonstart,$seasonend);
-		
+
 		// Set pretty season range
 		// Format 'YYYY–YY' unless turn of century, in which case 'YYYY–YYYY'
 		if (($yearquery % 100) == 99) {
@@ -31,7 +31,7 @@ get_header();
 		else {
 			$seasontitle = $yearquery . '–' . str_pad((($yearquery + 1) % 100), 2, '0', STR_PAD_LEFT);
 		}
-		
+
 		// Alter main query for displaying concerts in the loop
 		query_posts(
 			array(
@@ -43,13 +43,13 @@ get_header();
 				'meta_query' => array(
 					array(
 						'key' => 'dtstart',
-                        'value'  => $season,
-                        'compare'  => 'BETWEEN'
+            'value'  => $season,
+            'compare'  => 'BETWEEN'
 					)
 				)
 			)
 		);
-		
+
 		// Get archived colloquia
 		$colloquia = get_posts(
 			array(
@@ -61,13 +61,13 @@ get_header();
 				'meta_query' => array(
 					array(
 						'key' => 'dtstart',
-                        'value'  => $season,
-                        'compare'  => 'BETWEEN'
+            'value'  => $season,
+            'compare'  => 'BETWEEN'
 					)
 				)
 			)
 		);
-		
+
 		// Get archived miscellaneous events
 		$miscevents = get_posts(
 			array(
@@ -79,8 +79,8 @@ get_header();
 				'meta_query' => array(
 					array(
 						'key' => 'dtstart',
-                        'value'  => $season,
-                        'compare'  => 'BETWEEN'
+            'value'  => $season,
+            'compare'  => 'BETWEEN'
 					)
 				)
 			)
@@ -97,16 +97,16 @@ get_header();
 			$now = date('Y');
 		}
 		$years = range($seed, $now);
-		
+
 		$menuitems = array();
-		
+
 		foreach ($years as $year) {
-			
+
 			// Set query variables for each year
 			$querystart = $year . '0901';
 			$queryend = ($year + 1) . '0831';
 			$query = array($querystart,$queryend);
-			
+
 			// Get archived concerts
 			$concertcheck = get_posts(
 				array(
@@ -124,7 +124,7 @@ get_header();
 					)
 				)
 			);
-			
+
 			// Get archived colloquia
 			$colloquiumcheck = get_posts(
 				array(
@@ -142,7 +142,7 @@ get_header();
 					)
 				)
 			);
-			
+
 			// Get archived miscellaneous events
 			$misceventscheck = get_posts(
 				array(
@@ -160,18 +160,18 @@ get_header();
 					)
 				)
 			);
-			
+
 			if ( $concertcheck || $colloquiumcheck || $misceventscheck ) {
 				$menuitems = array_merge($menuitems, array($year));
 			}
 
 		} // endforeach years checker
-		
+
 		$flippedmenuitems = (array_flip($menuitems));
 		$currentindex = $flippedmenuitems[$yearquery];
 		$previousyear = $menuitems[($currentindex - 1)];
 		$nextyear = $menuitems[($currentindex + 1)];
-		
+
 		// Check queries to see if it is for a season starting more than a year in the future. N.B. The *next* season will return as false.
 		echo '<article id="events" class="p-section clearfix">';
 		if ($seasonstart > date('Ymd', strtotime(date('Ymd', mktime()) . ' + 365 day')) ) {
@@ -221,17 +221,17 @@ get_header();
 				<section class="concerts <?php if(!$colloquia) { echo 'solo'; } ?>">
 					<h3>Concerts</h3>
 					<ul>
-					<?php while ( have_posts() ) : the_post(); ?>						
+					<?php while ( have_posts() ) : the_post(); ?>
 						<li <?php post_class('vevent clearfix'); ?>>
 							<a href="<?php echo get_permalink() ?>" class="url">
-								<?php 
+								<?php
 								// SET START TIME VARIABLE
 								if (get_field('start_time')) {
 									$start_time = get_field('start_time');
 								}
 								// SET TIMEZONE
 								date_default_timezone_set('America/New_York');
-								
+
 								// SET START DATE VARIABLE
 								if ($start_time) {
 									$dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart') . ' ' . $start_time));
@@ -321,7 +321,7 @@ get_header();
 					</ul>
 				</section>
 			<?php endif;
-			
+
 			if ($menuitems) {
 				echo '<footer id="years-nav"><h3>Explore Seasons</h3><ul>';
 				foreach ($menuitems as $item) {

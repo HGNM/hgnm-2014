@@ -17,7 +17,7 @@ get_header();
 			<?php endwhile; ?>
 		<?php else: ?>
 		<?php endif;
-		
+
 		// Get upcoming concerts
 		$today = date('Ymd', strtotime('-1 day'));
 		$concerts = get_posts(
@@ -62,15 +62,21 @@ get_header();
 				'orderby' => 'dtstart',
 				'order' => 'ASC',
 				'meta_query' => array(
+					'relation' => 'OR',
 					array(
 						'key' => 'dtstart',
-                        'value'  => $today,
-                        'compare'  => '>'
+						'value' => $today,
+            'compare' => '>'
+					),
+					array(
+						'key' => 'dtend',
+						'value' => $today,
+						'compare' => '>'
 					)
 				)
 			)
 		);
-		
+
 		// Display upcoming events
 		if($concerts || $colloquia || $miscevents) : ?>
 			<section id="events" class="fp-section clearfix">
@@ -89,7 +95,7 @@ get_header();
 										}
 										// SET TIMEZONE
 										date_default_timezone_set('America/New_York');
-										
+
 										// SET START DATE VARIABLE
 										if ($start_time) {
 											$dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart', $concert->ID) . ' ' . $start_time));
@@ -247,7 +253,7 @@ get_header();
 				</ul>
 			</section> <!-- #fp-events -->
 		<?php endif;
-		
+
 		// Get composers names, photos and permalinks
 		$today = date('Ymd', strtotime('-1 day'));
 		$posts = get_posts(array(
@@ -286,7 +292,7 @@ get_header();
 			}
 			echo '</ul></section>';
 		}
-		
+
 		// Display archive link
 		?>
 		<section id="fp-archive-link" class="fp-section">
@@ -295,7 +301,7 @@ get_header();
 				<p>Dive into an archive of HGNM’s past events, members, audio and video.</p>
 			</a>
 		</section>
-		
+
 		</article>
 
 <?php get_footer();

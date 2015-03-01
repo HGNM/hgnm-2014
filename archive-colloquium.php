@@ -67,10 +67,16 @@ get_header();
 				'orderby' => 'dtstart',
 				'order' => 'ASC',
 				'meta_query' => array(
+					'relation' => 'OR',
 					array(
 						'key' => 'dtstart',
             'value'  => $seasonstart,
             'compare'  => '>='
+					),
+					array(
+						'key' => 'dtend',
+						'value' => $seasonstart,
+						'compare' => '>='
 					)
 				)
 			)

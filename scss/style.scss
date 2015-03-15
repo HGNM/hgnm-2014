@@ -1050,6 +1050,7 @@ iframe {
 					margin-bottom: 1.5em;
 					img {
 						width:100%;
+						mix-blend-mode: multiply;
 						@include filter(grayscale(1) contrast(125%) brightness(125%) saturate(100%));
 						@include transition(all 0.4s ease-out);
 					}

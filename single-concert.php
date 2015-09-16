@@ -88,26 +88,30 @@ get_header();
 							$fullprogramme = array();
 
 							// For each programme item create an array and append it to the $fullprogramme array
-							foreach ($programme as $item) {
-								$id = $item['composer'];
-								$composer = get_the_title($id->ID);
-								$url = get_permalink($id->ID);
-								$work_title = $item['work_title'];
-								$embed_link = $item['embed_link'];
-								$a_or_v = $item['a_or_v'];
-								$row = array(array('composer' => $composer, 'url' => $url, 'work_title' => $work_title, 'embed_link' => $embed_link, 'a_or_v' => $a_or_v));
-								$fullprogramme = array_merge($fullprogramme, $row);
+							if ($programme) {
+								foreach ($programme as $item) {
+									$id = $item['composer'];
+									$composer = get_the_title($id->ID);
+									$url = get_permalink($id->ID);
+									$work_title = $item['work_title'];
+									$embed_link = $item['embed_link'];
+									$a_or_v = $item['a_or_v'];
+									$row = array(array('composer' => $composer, 'url' => $url, 'work_title' => $work_title, 'embed_link' => $embed_link, 'a_or_v' => $a_or_v));
+									$fullprogramme = array_merge($fullprogramme, $row);
+								}
 							}
 
 							// For each programme plus item create an array and append it to the $fullprogramme array
-							foreach ($programmeplus as $item) {
-								$composer = $item['composer'];
-								$url = '';
-								$work_title = $item['work_title'];
-								$embed_link = $item['embed_link'];
-								$a_or_v = $item['a_or_v'];
-								$row = array(array('composer' => $composer, 'url' => $url, 'work_title' => $work_title, 'embed_link' => $embed_link, 'a_or_v' => $a_or_v));
-								$fullprogramme = array_merge($fullprogramme, $row);
+							if ($programmeplus) {
+								foreach ($programmeplus as $item) {
+									$composer = $item['composer'];
+									$url = '';
+									$work_title = $item['work_title'];
+									$embed_link = $item['embed_link'];
+									$a_or_v = $item['a_or_v'];
+									$row = array(array('composer' => $composer, 'url' => $url, 'work_title' => $work_title, 'embed_link' => $embed_link, 'a_or_v' => $a_or_v));
+									$fullprogramme = array_merge($fullprogramme, $row);
+								}
 							}
 
 							// Set up list of names to sort by

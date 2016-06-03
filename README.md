@@ -1,4 +1,4 @@
-# HGNM
+# hgnm-2014
 
 Repository for WordPress theme development for new HGNM website.
 

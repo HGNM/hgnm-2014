@@ -25,7 +25,7 @@ Repository for WordPress theme development for new HGNM website.
   npm start
   ```
 
-That’s it! Using the `hgnm-wp-dev` environment, a fully functional WordPress install can be found at <http://hgnm.dev>. Log in with `admin` and `vagrant`.
+That’s it! Using the `hgnm-wp-dev` environment, a fully functional WordPress install can be found at <http://hgnm.dev>. Log in as `admin` with password `vagrant`.
 
 Changes to any of the `php` files can be seen simply by refreshing your browser.
 

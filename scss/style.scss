@@ -152,17 +152,17 @@ textarea {
         License information is available at http://commercialtype.com/eula
         For more information please visit Commercial Type at http://commercialtype.com or email us at info[at]commercialtype.com
 
-        Copyright (C) 2013 Schwartzco Inc.
+        Copyright (C) 2016 Schwartzco Inc.
         License: 1407-HRGQJV
 */
+
 
 @font-face {
   font-family: 'Dala Floda Web';
   src: url('font/DalaFloda-Bold-Web.eot');
   src: url('font/DalaFloda-Bold-Web.eot?#iefix') format('embedded-opentype'),
-     url('font/DalaFloda-Bold-Web.woff') format('woff'),
-     url('font/DalaFloda-Bold-Web.ttf') format('truetype'),
-     url('font/DalaFloda-Bold-Web.svg#Dala Floda Web') format('svg');
+       url('font/DalaFloda-Bold-Web.woff2') format('woff2'),
+       url('font/DalaFloda-Bold-Web.woff') format('woff');
   font-weight:  700;
   font-style:   normal;
   font-stretch: normal;

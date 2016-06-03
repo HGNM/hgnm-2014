@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/HGNM/hgnm-2014/issues"
   },
-  "homepage": "https://github.com/HGNM/hgnm-2014#readme"
+  "homepage": "https://github.com/HGNM/hgnm-2014#readme",
+  "devDependencies": {
+    "node-sass": "^3.7.0"
+  }
 }

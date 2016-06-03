@@ -20,6 +20,7 @@ Repository for WordPress theme development for new HGNM website.
 
 ### Build CSS
 - Watch `scss/style.scss` and auto-compile when it changes:
+
   ```sh
   npm start
   ```

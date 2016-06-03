@@ -18,9 +18,10 @@ function isa_remove_hentry_class( $classes ) {
 add_filter( 'post_class', 'isa_remove_hentry_class' );
 
 // Register custom menu
-if ( function_exists( 'register_nav_menu' ) ) {
-	register_nav_menu( 'primary', 'Primary Menu' );
+function register_my_menu() {
+  register_nav_menu('primary',__( 'Primary Menu' ));
 }
+add_action( 'init', 'register_my_menu' );
 
 // Enqueue Google Fonts
  function load_fonts() {

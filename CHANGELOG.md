@@ -1,5 +1,13 @@
 # Changelog
 
+### v1.7.0
+* Try to assign menu location in `function.php` (failing) :warning:
+* Set ACF field groups from `functions.php` rather than via GUI
+* Create [npm](https://npmjs.com/) `package.json` & build/watch scripts to process `scss/style.scss`, using `npm start` :tada:
+* Update `@font-face` CSS with latest code from [Commercial Type](https://commercialtype.com/)
+* Document development environment in README
+* Move changelog from README to dedicated file
+
 ### v1.6.0
 * Fix for compatibility with Advanced Custom Fields 5.3.x in single-concert.php
 * Set blending mode to “multiply” for colloquium & composer page featured images

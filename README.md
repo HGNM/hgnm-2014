@@ -36,7 +36,9 @@ To change `css` styling, edit `scss/style.scss`, which will auto-compile if `npm
 _These are automatically installed if you use the `hgnm-wp-dev` environment._
 
 - Elliot Condon’s [Advanced Custom Fields {v5}](https://www.advancedcustomfields.com/pro/)
-Used to manage complex custom back-end input fields, which will be displayed within the theme.
-- [Date & Time Picker field](https://github.com/yanknudtskov/acf-field-date-time-picker) plug-in for ACF5
+
+  Used to manage complex custom back-end input fields, which will be displayed within the theme.
+
+- [Date & Time Picker field](https://github.com/soderlind/acf-field-date-time-picker) plug-in for ACF5
 
 ## [Changelog](CHANGELOG.md)

@@ -41,6 +41,16 @@ function assign_menu_location() {
 }
 add_action( 'init', 'assign_menu_location');
 
+// Set front page to display a “static” page
+function set_front_page_to_home() {
+  $homepage = get_page_by_title( 'Home' );
+  if ( $homepage ) {
+    update_option( 'page_on_front', $homepage->ID );
+    update_option( 'show_on_front', 'page' );
+  }
+}
+add_action( 'init', 'set_front_page_to_home');
+
 // Enqueue Google Fonts
  function load_fonts() {
             wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Alegreya:400italic,400,700|Alegreya+Sans:400,700');

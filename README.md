@@ -10,6 +10,10 @@ Used to manage complex custom back-end input fields, which will be displayed wit
 
 ## Changelog
 
+### v1.6.0
+* Fix for compatibility with Advanced Custom Fields 5.3.x in single-concert.php
+* Set blending mode to “multiply” for colloquium & composer page featured images
+
 ### v1.5.0
 * Added 404 error page
 

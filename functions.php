@@ -372,6 +372,8 @@ add_action( 'pre_get_posts', 'my_dtstart_orderby' );
 function my_dtstart_orderby( $query ) {
 	if( ! is_admin() )
 		return;
+  if( ! function_exists('get_current_screen') )
+    return;
 
 	$screen = get_current_screen();
 	if ($screen->base == 'edit') {

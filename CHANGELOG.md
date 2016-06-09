@@ -1,5 +1,12 @@
 # Changelog
 
+### v1.7.2
+* Rewrite `assign_menu_location()`, closing #5.
+* Fix bug in `my_dtstart_orderby()` that blocked WP customizer.
+
+### v1.7.1
+* Add top padding to `.site-header`, as requested in #2.
+
 ### v1.7.0
 * Try to assign menu location in `function.php` (failing) :warning:
 * Set ACF field groups from `functions.php` rather than via GUI

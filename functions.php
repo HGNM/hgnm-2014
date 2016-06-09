@@ -467,6 +467,17 @@ function options_setup() {
 add_action( 'after_switch_theme', 'options_setup' );
 
 /* ==========================================
+            THEME UPDATE CHECKER
+   ========================================== */
+// Initialize the update checker.
+require 'theme-update-checker.php';
+$example_update_checker = new ThemeUpdateChecker(
+    'hgnm-2014',
+    'https://raw.githubusercontent.com/HGNM/hgnm-2014/master/package.json'
+);
+
+
+/* ==========================================
    SET UP ADVANCED CUSTOM FIELDS FIELD GROUPS
    ========================================== */
 if( function_exists('acf_add_local_field_group') ):

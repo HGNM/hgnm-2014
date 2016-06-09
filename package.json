@@ -7,10 +7,7 @@
     "css:build": "node-sass --include-path scss scss/style.scss style.css",
     "css:watch": "node-sass --include-path scss scss/style.scss style.css -w"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/HGNM/hgnm-2014.git"
-  },
+  "repository": "HGNM/hgnm-2014",
   "keywords": [
     "Wordpress",
     "theme"

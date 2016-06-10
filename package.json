@@ -4,8 +4,10 @@
   "description": "Repository for WordPress theme development for hgnm.org",
   "scripts": {
     "start": "npm run css:build && npm run css:watch",
+    "build": "npm run css:build && npm run bundle",
     "css:build": "node-sass --include-path scss scss/style.scss style.css",
-    "css:watch": "node-sass --include-path scss scss/style.scss style.css -w"
+    "css:watch": "node-sass --include-path scss scss/style.scss style.css -w",
+    "bundle": "bestzip hgnm-2014.zip /"
   },
   "repository": "HGNM/hgnm-2014",
   "keywords": [

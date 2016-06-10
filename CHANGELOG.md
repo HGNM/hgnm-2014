@@ -1,5 +1,9 @@
 # Changelog
 
+### v1.8.1
+* Introduces more extensive build chain.
+* Introduces compatibility with Travis CI.
+
 ### v1.8.0
 * Add update check functionality: enables WordPress to check against GitHub repository for more recent versions
 

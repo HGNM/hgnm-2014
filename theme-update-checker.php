@@ -292,8 +292,8 @@ class ThemeUpdate {
 			'url' => $this->homepage,
 		);
 
-		if ( !empty($this->download_url) ){
-			$update['package'] = $this->download_url;
+		if ( !empty($this->repository) ){
+			$update['package'] = "https://github.com/" . $this->repository . "/archive/v" . $this->version . ".zip";
 		}
 
 		return $update;

@@ -7,3 +7,13 @@ install:
   - npm install
 script:
   - npm run build
+deploy:
+  provider: releases
+  api_key:
+    secure: CJa6+7F3KMRxjwdAx/4zgLU55l1uUE3CPUN0ezitehbcJX+yQoKfM0LevIgZw2UVjyGD3xXttTe3YDG0ypG9jqqxhJSa3bA7dV9OnP4+rY/vPvjZLRmBTqSjb5S/d4oB78l4hxgxw7+RuwEr0DXhaFJ4BzJ00zplQ9TAmlPOZPs=
+  file: hgnm-2014.zip
+  skip_cleanup: true
+  on:
+    repo: HGNM/hgnm-2014
+    tags: true
+    node: '4.2'

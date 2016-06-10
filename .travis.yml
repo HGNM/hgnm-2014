@@ -2,6 +2,10 @@ language: php
 php:
 - '5.5'
 - '5.4'
+node_js:
+- '4'
+- '4.2'
+- '5.1'
 install:
   - npm install
 script:

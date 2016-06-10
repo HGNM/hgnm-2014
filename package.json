@@ -3,7 +3,7 @@
   "version": "1.8.0",
   "description": "Repository for WordPress theme development for hgnm.org",
   "scripts": {
-    "start": "npm run css:build && npm run css:watch",
+    "start": "npm run copy && npm run css:build && npm run css:watch",
     "build": "npm run copy && npm run css:build && npm run zip",
     "css:build": "node-sass --include-path src/scss src/scss/style.scss dist/style.css",
     "css:watch": "node-sass --include-path src/scss src/scss/style.scss dist/style.css -w",

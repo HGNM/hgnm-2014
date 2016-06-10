@@ -252,7 +252,7 @@ if ( !class_exists('ThemeUpdate') ):
  */
 class ThemeUpdate {
 	public $version;      //Version number.
-	public $homepage;  		//The URL where the user can learn more about this version. 
+	public $homepage;  		//The URL where the user can learn more about this version.
 	public $download_url; //The download URL for this version of the theme. Optional.
 
 	/**
@@ -293,7 +293,7 @@ class ThemeUpdate {
 		);
 
 		if ( !empty($this->repository) ){
-			$update['package'] = "https://github.com/" . $this->repository . "/archive/v" . $this->version . ".zip";
+			$update['package'] = "https://github.com/" . $this->repository . "/releases/download/v" . $this->version . "/hgnm-2014.zip";
 		}
 
 		return $update;

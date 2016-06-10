@@ -1,5 +1,7 @@
 # hgnm-2014
 
+[![Build Status](https://travis-ci.org/HGNM/hgnm-2014.svg?branch=master)](https://travis-ci.org/HGNM/hgnm-2014)
+
 Repository for WordPress theme development for <http://hgnm.org>.
 
 ## Development

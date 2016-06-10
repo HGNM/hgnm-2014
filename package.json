@@ -5,9 +5,9 @@
   "scripts": {
     "start": "npm run copy && npm run css:build && npm run css:watch",
     "build": "npm run copy && npm run css:build && npm run zip",
-    "css:build": "node-sass --include-path src/scss src/scss/style.scss dist/style.css",
-    "css:watch": "node-sass --include-path src/scss src/scss/style.scss dist/style.css -w",
-    "copy": "cpy '**/*' '!scss/*' '../dist/' --cwd=src --parents --nodir",
+    "css:build": "node-sass --include-path scss scss/style.scss dist/style.css",
+    "css:watch": "node-sass --include-path scss scss/style.scss dist/style.css -w",
+    "copy": "cpy '**/*' '!scss/*' '!dist/*' 'dist/' --parents --nodir",
     "zip": "bestzip hgnm-2014.zip dist/",
     "postinstall": "./install-dependencies.sh"
   },

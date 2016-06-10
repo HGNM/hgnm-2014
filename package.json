@@ -24,7 +24,7 @@
   "homepage": "https://github.com/HGNM/hgnm-2014#readme",
   "devDependencies": {
     "bestzip": "^1.1.3",
-    "cpy-cli": "github:chimon2000/cpy-cli",
+    "cpy-cli": "git+https://github.com/chimon2000/cpy-cli.git",
     "node-sass": "^3.7.0"
   }
 }

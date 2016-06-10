@@ -1,5 +1,8 @@
 # Changelog
 
+### v1.8.2
+* Switch to Travis-deployed downloads in theme update checker, closing #7.
+
 ### v1.8.1
 * Introduces more extensive build chain.
 * Introduces compatibility with Travis CI.

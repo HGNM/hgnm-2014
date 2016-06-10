@@ -1,5 +1,8 @@
 # Changelog
 
+### v1.8.0
+* Add update check functionality: enables WordPress to check against GitHub repository for more recent versions
+
 ### v1.7.2
 * Rewrite `assign_menu_location()`, closing #5.
 * Fix bug in `my_dtstart_orderby()` that blocked WP customizer.

@@ -4,8 +4,12 @@
   "description": "Repository for WordPress theme development for hgnm.org",
   "scripts": {
     "start": "npm run css:build && npm run css:watch",
+    "build": "npm run css:build && npm run copy && npm run zip",
     "css:build": "node-sass --include-path scss scss/style.scss style.css",
-    "css:watch": "node-sass --include-path scss scss/style.scss style.css -w"
+    "css:watch": "node-sass --include-path scss scss/style.scss style.css -w",
+    "copy": "cpy '**/*' '!scss/*' '!dist/*' '!.gitignore' '!.travis.yml' '!install-dependencies.sh' '!node_modules/**/*' '!hgnm-2014.zip' 'dist/' --parents --nodir",
+    "zip": "bestzip hgnm-2014.zip dist/",
+    "postinstall": "./install-dependencies.sh"
   },
   "repository": "HGNM/hgnm-2014",
   "keywords": [
@@ -19,6 +23,11 @@
   },
   "homepage": "https://github.com/HGNM/hgnm-2014#readme",
   "devDependencies": {
+    "bestzip": "^1.1.3",
+    "cpy-cli": "git+https://github.com/chimon2000/cpy-cli.git",
     "node-sass": "^3.7.0"
+  },
+  "engines": {
+    "node": ">=4.0.0"
   }
 }

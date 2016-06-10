@@ -9,6 +9,8 @@
 ehthumbs.db
 Thumbs.db
 DalaFloda*
+dist/*
+hgnm-2014.zip
 
 # Created by https://www.gitignore.io/api/node
 ### Node ###

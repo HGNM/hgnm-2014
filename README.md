@@ -27,6 +27,12 @@ Repository for WordPress theme development for <http://hgnm.org>.
   npm start
   ```
 
+- Build theme, producing a bundled `hgnm-2014.zip` theme archive:
+
+    ```sh
+    npm run build
+    ```
+
 That’s it! Using the `hgnm-wp-dev` environment, a fully functional WordPress install can be found at <http://hgnm.dev>. Log in as `admin` with password `vagrant`.
 
 Changes to any of the `php` files can be seen simply by refreshing your browser.

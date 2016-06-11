@@ -1,5 +1,9 @@
 # Changelog
 
+### v1.8.3
+* Fix theme directory naming bug (#12).
+* Improve build scripts (#9).
+
 ### v1.8.2
 * Switch to Travis-deployed downloads in theme update checker, closing #7.
 

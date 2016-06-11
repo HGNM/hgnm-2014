@@ -9,6 +9,7 @@
     "css:watch": "node-sass --include-path scss scss/style.scss style.css -w",
     "copy": "cpy '**/*' '!scss/*' '!hgnm-2014/*' '!.gitignore' '!.travis.yml' '!install-dependencies.sh' '!node_modules/**/*' '!hgnm-2014.zip' 'hgnm-2014/' --parents --nodir",
     "zip": "bestzip hgnm-2014.zip hgnm-2014/",
+    "clean": "rimraf hgnm-2014",
     "postinstall": "./install-dependencies.sh"
   },
   "repository": "HGNM/hgnm-2014",

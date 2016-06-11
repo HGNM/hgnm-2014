@@ -4,7 +4,7 @@
   "description": "Repository for WordPress theme development for hgnm.org",
   "scripts": {
     "start": "npm run css:build && npm run css:watch",
-    "build": "npm run css:build && npm run copy && npm run zip",
+    "build": "npm run css:build && npm run copy && npm run zip && npm run clean",
     "css:build": "node-sass --include-path scss scss/style.scss style.css",
     "css:watch": "node-sass --include-path scss scss/style.scss style.css -w",
     "copy": "cpy '**/*' '!scss/*' '!hgnm-2014/*' '!.gitignore' '!.travis.yml' '!install-dependencies.sh' '!node_modules/**/*' '!hgnm-2014.zip' 'hgnm-2014/' --parents --nodir",

@@ -39,6 +39,32 @@ Changes to any of the `php` files can be seen simply by refreshing your browser.
 
 To change `css` styling, edit `scss/style.scss`, which will auto-compile if `npm start` is running.
 
+## Releasing a version
+
+1. Document changes in [`CHANGELOG.md`](CHANGELOG.md).
+
+2. Increment version number in `scss/style.scss` header (and auto-compile a new `style.css`) using [semantic versioning](http://semver.org/).
+
+3. Increment the package version number and tag the commit using `npm version`:
+  ```sh
+  npm version major # 1.3.2 -> 2.0.0
+  npm version minor # 1.3.2 -> 1.4.0
+  npm version patch # 1.3.2 -> 1.3.3
+  ```
+  A default commit message will be set using the version number. To use a custom commit message instead (`%s` can be used to print the version number):
+  ```sh
+  npm version patch -m "Release %s. Closes #39."
+  ```
+
+4. Push your changes including the newly created tag:
+  ```sh
+  git push --folow-tags
+  ```
+
+  After you have pushed your tag, Travis CI will build `hgnm-2014.zip` and attach it to the GitHub release. This archive is used by automatic theme updates in WordPress.
+
+5. Copy the changes listed in `CHANGELOG.md` to the release notes on GitHub.
+
 ## Dependencies
 
 _These are automatically installed if you use the `hgnm-wp-dev` environment._

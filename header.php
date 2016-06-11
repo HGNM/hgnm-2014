@@ -83,7 +83,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="screen" />
-		<link rel="stylesheet" href="<?php _e (get_stylesheet_directory_uri() . '/css/magnific-popup.css'); ?>" type="text/css" media="screen" />
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 		<link rel="shortcut icon" sizes="16x16 32x32 48x48 64x64" href="http://hgnm.org/favicon.ico">
 		<link rel="apple-touch-icon-precomposed" href="<?php _e (get_stylesheet_directory_uri() . '/img/favicon-152.png'); ?>">

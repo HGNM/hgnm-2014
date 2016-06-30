@@ -1,6 +1,6 @@
 # hgnm-2014
 
-[![Build Status](https://travis-ci.org/HGNM/hgnm-2014.svg?branch=master)](https://travis-ci.org/HGNM/hgnm-2014)
+[![GitHub release](https://img.shields.io/github/release/hgnm/hgnm-2014.svg?maxAge=2592000)](https://github.com/HGNM/hgnm-2014/releases/latest) [![Build Status](https://travis-ci.org/HGNM/hgnm-2014.svg?branch=master)](https://travis-ci.org/HGNM/hgnm-2014)
 
 Repository for WordPress theme development for <http://hgnm.org>.
 

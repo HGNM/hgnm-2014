@@ -1,6 +1,6 @@
 {
   "name": "hgnm-2014",
-  "version": "1.8.3",
+  "version": "1.9.0",
   "description": "Repository for WordPress theme development for hgnm.org",
   "scripts": {
     "start": "npm run css:build && npm run css:watch",

@@ -1,5 +1,9 @@
 # Changelog
 
+### HEAD
+* Update node-sass command used in build script to output compressed CSS (#10).
+* Consolidate CSS assets by bundling `magnific-popup.css` into main `style.css` on build (#11).
+
 ### v1.8.3
 * Fix theme directory naming bug (#12).
 * Improve build scripts (#9).

@@ -1,8 +1,17 @@
 # Changelog
 
-### HEAD
-* Update node-sass command used in build script to output compressed CSS (#10).
+### v1.9.0
+#### 🎉 Back to School 2017
+* Update `node-sass` command used in build script to output compressed CSS (#10).
 * Consolidate CSS assets by bundling `magnific-popup.css` into main `style.css` on build (#11).
+* Update colloquia location:
+  - Change `Davison Room` to `Room 6` on front page and events page.
+  - Remove location note from archives.
+  - Remove room indication on single colloquium pages.
+* Update development dependencies:
+  - `bestzip`: `^1.1.3` → `^1.1.4`
+  - `node-sass`: `^3.7.0` → `^4.5.3`
+  - `rimraf`: `^2.5.2` → `^2.6.1`
 
 ### v1.8.3
 * Fix theme directory naming bug (#12).

@@ -58,7 +58,7 @@ To change `css` styling, edit `scss/style.scss`, which will auto-compile if `npm
 
 4. Push your changes including the newly created tag:
   ```sh
-  git push --folow-tags
+  git push --follow-tags
   ```
 
   After you have pushed your tag, Travis CI will build `hgnm-2014.zip` and attach it to the GitHub release. This archive is used by automatic theme updates in WordPress.

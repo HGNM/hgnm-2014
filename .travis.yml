@@ -8,7 +8,7 @@ script:
 deploy:
   provider: releases
   api_key:
-    secure: CJa6+7F3KMRxjwdAx/4zgLU55l1uUE3CPUN0ezitehbcJX+yQoKfM0LevIgZw2UVjyGD3xXttTe3YDG0ypG9jqqxhJSa3bA7dV9OnP4+rY/vPvjZLRmBTqSjb5S/d4oB78l4hxgxw7+RuwEr0DXhaFJ4BzJ00zplQ9TAmlPOZPs=
+    secure: ZMKfEJf7VzltObcnLS1i1+T4LNiv522eTUKgs8lOlos81e7siZ+13pQDkWjUkzRDtxkqgyERbiT/tmq519GPsHHJhcGn+CwWjwVji9PrUrwrzcN+6p3xlaNuhP7+avclSelr/SWLSTDWJ/LwxAFDW/CsZfuNLaM2KidyGETgou8=
   file: hgnm-2014.zip
   skip_cleanup: true
   on:

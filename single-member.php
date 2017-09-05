@@ -102,7 +102,7 @@ get_header();
 					if(have_rows('programme', $row->ID)) {
 						while( have_rows('programme', $row->ID) ) : the_row();
 							// Check if there’s a row for this composer with a media embed link
-							if ( get_sub_field('composer')->ID == $testID && get_sub_field(embed_link) ) {
+							if ( get_sub_field('composer')->ID == $testID && get_sub_field('embed_link') ) {
 								$mediacheck = 1;
 							}
 						endwhile;
@@ -200,7 +200,7 @@ get_header();
 							<ul class="audio clearfix">
 								<?php foreach($archivemedia as $post) :
 									while(have_rows('programme', $post->ID)) : the_row();
-										if ( get_sub_field('composer')->ID == $testID && get_sub_field(embed_link) ) : ?>
+										if ( get_sub_field('composer')->ID == $testID && get_sub_field('embed_link') ) : ?>
 											<li>
 												<p><span class="mediadt"><?php $concdt = DateTime::createFromFormat('d/m/Y', get_field('dtstart')); echo $concdt->format('n.j.Y'); ?></span><br /><em><?php the_sub_field('work_title', $post->ID); ?></em>, <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
 												<span class="embed-container"><?php the_sub_field('embed_link', $post->ID) ?></span>

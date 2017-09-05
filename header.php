@@ -108,7 +108,7 @@
 						while ($i < strlen($title)) {
 							if (!ctype_upper($title[$i])) {
 								$startpos = $i;
-								while ($i < strlen($title) && !ctype_upper($title[$i+1])) {
+								while ($i < (strlen($title) - 1) && !ctype_upper($title[$i+1])) {
 									$i++;
 								}
 								$endpos = $i+1;

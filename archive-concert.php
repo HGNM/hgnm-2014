@@ -169,8 +169,8 @@ get_header();
 
 		$flippedmenuitems = (array_flip($menuitems));
 		$currentindex = $flippedmenuitems[$yearquery];
-		$previousyear = $menuitems[($currentindex - 1)];
-		$nextyear = $menuitems[($currentindex + 1)];
+		$previousyear = isset($menuitems[($currentindex - 1)]) ? $menuitems[($currentindex - 1)] : null;
+		$nextyear = isset($menuitems[($currentindex + 1)]) ? $menuitems[($currentindex + 1)] : null;
 
 		// Check queries to see if it is for a season starting more than a year in the future. N.B. The *next* season will return as false.
 		echo '<article id="events" class="p-section clearfix">';

@@ -168,7 +168,7 @@ get_header();
 		} // endforeach years checker
 
 		$flippedmenuitems = (array_flip($menuitems));
-		$currentindex = $flippedmenuitems[$yearquery];
+		$currentindex = isset($flippedmenuitems[$yearquery]) ? $flippedmenuitems[$yearquery] : null;
 		$previousyear = isset($menuitems[($currentindex - 1)]) ? $menuitems[($currentindex - 1)] : null;
 		$nextyear = isset($menuitems[($currentindex + 1)]) ? $menuitems[($currentindex + 1)] : null;
 

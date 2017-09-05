@@ -23,9 +23,9 @@ get_header();
 				)
 			)
 		));
-		
+
 		echo '<article>';
-		
+
 		if($posts)
 		{
 			echo '<section class="composers p-section"><h2>Composers</h2><ul class="clearfix">';
@@ -43,8 +43,8 @@ get_header();
 			}
 			echo '</ul></section>';
 		}
-		
-		
+
+
 		// Get graduated composers names, photos and permalinks
 		$today = date('Ymd', strtotime('-1 day'));
 		$posts2 = get_posts(array(
@@ -79,11 +79,11 @@ get_header();
 			}
 			echo '</ul></section>';
 		}
-		
+
 		if( !$posts && !$posts2 ) {
 			echo '<section class="composers p-section"><h2>Composers</h2><p>I’m afraid it looks like there aren’t any composers to show you yet.</p>';
 		}
-		
+
 		echo '</article>';
 
 

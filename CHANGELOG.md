@@ -1,5 +1,12 @@
 # Changelog
 
+### v1.10.0
+
+* Removes dependency on Per Søderlind’s [Date & Time Picker field](https://github.com/soderlind/acf-field-date-time-picker) and switches to ACF Pro’s time picker (ACF Pro >= `5.3.9`).
+* Simplified Travis builds and refreshed deploy token.
+* Clean up PHP warnings in `archive-concert.php`, `archive-member.php`,
+`header.php`, and `single-member.php`.
+
 ### v1.9.0
 #### 🎉 Back to School 2017
 * Update `node-sass` command used in build script to output compressed CSS (#10).

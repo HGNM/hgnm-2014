@@ -73,6 +73,4 @@ _These are automatically installed if you use the `hgnm-wp-dev` environment._
 
   Used to manage complex custom back-end input fields, which will be displayed within the theme.
 
-- Per Søderlind’s [Date & Time Picker field](https://github.com/soderlind/acf-field-date-time-picker) plug-in for ACF5
-
 ## [Changelog](CHANGELOG.md)

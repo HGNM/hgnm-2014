@@ -2,7 +2,7 @@
 
 ### v1.10.0
 
-* Removes dependency on Per Søderlind’s [Date & Time Picker field](https://github.com/soderlind/acf-field-date-time-picker) and switches to ACF Pro’s time picker (ACF Pro >= `5.3.9`).
+* Removes dependency on Per Søderlind’s [Date & Time Picker field](https://github.com/soderlind/acf-field-date-time-picker) and switches to using the [ACF Pro time picker](https://www.advancedcustomfields.com/resources/time-picker/) (ACF Pro >= `5.3.9`).
 * Simplified Travis builds and refreshed deploy token.
 * Clean up PHP warnings in `archive-concert.php`, `archive-member.php`,
 `header.php`, and `single-member.php`.

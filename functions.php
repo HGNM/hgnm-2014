@@ -734,7 +734,7 @@ acf_add_local_field_group(array (
 			'key' => 'field_53d04a547f12b',
 			'label' => 'Concert Time',
 			'name' => 'start_time',
-			'type' => 'date_time_picker',
+			'type' => 'time_picker',
 			'instructions' => '',
 			'required' => 1,
 			'conditional_logic' => 0,
@@ -743,13 +743,8 @@ acf_add_local_field_group(array (
 				'class' => '',
 				'id' => '',
 			),
-			'show_date' => 'false',
-			'date_format' => 'm/d/y',
-			'time_format' => 'HH:mm',
-			'show_week_number' => 'false',
-			'picker' => 'slider',
-			'save_as_timestamp' => 'true',
-			'get_as_timestamp' => 'false',
+			'display_format' => 'g:i a',
+			'return_format' => 'G:i',
 		),
 		array (
 			'key' => 'field_539b1547a8d9d',
@@ -772,6 +767,7 @@ acf_add_local_field_group(array (
 			'default_value' => 'Paine Hall<br />Harvard University',
 			'layout' => 'horizontal',
 			'allow_null' => 0,
+			'return_format' => 'value',
 		),
 		array (
 			'key' => 'field_54021a0e5e714',
@@ -796,6 +792,7 @@ acf_add_local_field_group(array (
 			'default_value' => 'Neither',
 			'layout' => 'horizontal',
 			'allow_null' => 0,
+			'return_format' => 'value',
 		),
 		array (
 			'key' => 'field_539b1d6612f14',
@@ -846,6 +843,7 @@ acf_add_local_field_group(array (
 			'toolbar' => 'basic',
 			'media_upload' => 0,
 			'tabs' => 'all',
+			'delay' => 0,
 		),
 		array (
 			'key' => 'field_539b14e037946',
@@ -878,6 +876,9 @@ acf_add_local_field_group(array (
 			),
 			'message' => 'Show audio/video embedding options?',
 			'default_value' => 0,
+			'ui' => 0,
+			'ui_on_text' => '',
+			'ui_off_text' => '',
 		),
 		array (
 			'key' => 'field_539c5e6fe8895',
@@ -892,8 +893,8 @@ acf_add_local_field_group(array (
 				'class' => '',
 				'id' => '',
 			),
-			'min' => '',
-			'max' => '',
+			'min' => 0,
+			'max' => 0,
 			'layout' => 'row',
 			'button_label' => 'Add Piece',
 			'sub_fields' => array (
@@ -997,6 +998,7 @@ acf_add_local_field_group(array (
 					'default_value' => 'none',
 					'layout' => 'vertical',
 					'allow_null' => 0,
+					'return_format' => 'value',
 				),
 			),
 			'collapsed' => '',
@@ -1014,8 +1016,8 @@ acf_add_local_field_group(array (
 				'class' => '',
 				'id' => '',
 			),
-			'min' => '',
-			'max' => '',
+			'min' => 0,
+			'max' => 0,
 			'layout' => 'row',
 			'button_label' => 'Add Piece',
 			'sub_fields' => array (
@@ -1116,6 +1118,7 @@ acf_add_local_field_group(array (
 					'default_value' => '',
 					'layout' => 'vertical',
 					'allow_null' => 0,
+					'return_format' => 'value',
 				),
 			),
 			'collapsed' => '',
@@ -1339,6 +1342,8 @@ acf_add_local_field_group(array (
 	'description' => '',
 ));
 
+if( function_exists('acf_add_local_field_group') ):
+
 acf_add_local_field_group(array (
 	'key' => 'group_53ba94605aef9',
 	'title' => 'Other Events',
@@ -1347,7 +1352,7 @@ acf_add_local_field_group(array (
 			'key' => 'field_53ba9460600e2',
 			'label' => 'Use the event title, e.g. “HGNM Conference: New Perspectives on New Music” or “HGNM Composers in Lyon”',
 			'name' => '',
-			'type' => 'message',
+			'type' => 'text',
 			'instructions' => '',
 			'required' => 0,
 			'conditional_logic' => 0,
@@ -1356,11 +1361,11 @@ acf_add_local_field_group(array (
 				'class' => '',
 				'id' => '',
 			),
-			'message' => 'Below, add any content that might be relevant to the event.
-
-N.B. Apart from time and location, you have control over the order of the information on the page. Drag and drop content sections to order information as you’d like it to appear. You can use the ‘Preview Changes’ button to see how things are shaping up.',
-			'esc_html' => 0,
-			'new_lines' => 'wpautop',
+			'default_value' => '',
+			'maxlength' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
 		),
 		array (
 			'key' => 'field_53ba9460600fa',
@@ -1383,7 +1388,7 @@ N.B. Apart from time and location, you have control over the order of the inform
 			'key' => 'field_53d01b4c3c002',
 			'label' => 'Event Start Time',
 			'name' => 'start_time',
-			'type' => 'date_time_picker',
+			'type' => 'time_picker',
 			'instructions' => '',
 			'required' => 0,
 			'conditional_logic' => 0,
@@ -1392,13 +1397,8 @@ N.B. Apart from time and location, you have control over the order of the inform
 				'class' => '',
 				'id' => '',
 			),
-			'show_date' => 'false',
-			'date_format' => 'm/d/y',
-			'time_format' => 'HH:mm',
-			'show_week_number' => 'false',
-			'picker' => 'slider',
-			'save_as_timestamp' => 'true',
-			'get_as_timestamp' => 'false',
+			'display_format' => 'g:i a',
+			'return_format' => 'G:i',
 		),
 		array (
 			'key' => 'field_53ba9c39ef620',
@@ -1457,6 +1457,7 @@ N.B. Apart from time and location, you have control over the order of the inform
 							'tabs' => 'all',
 							'toolbar' => 'full',
 							'media_upload' => 1,
+							'delay' => 0,
 						),
 					),
 					'min' => '',
@@ -1700,8 +1701,8 @@ N.B. Apart from time and location, you have control over the order of the inform
 								'class' => '',
 								'id' => '',
 							),
-							'min' => '',
-							'max' => '',
+							'min' => 0,
+							'max' => 0,
 							'layout' => 'table',
 							'button_label' => 'Add Video',
 							'sub_fields' => array (
@@ -1747,8 +1748,8 @@ N.B. Apart from time and location, you have control over the order of the inform
 								'class' => '',
 								'id' => '',
 							),
-							'min' => '',
-							'max' => '',
+							'min' => 0,
+							'max' => 0,
 							'layout' => 'table',
 							'button_label' => 'Add Row',
 							'sub_fields' => array (
@@ -1822,6 +1823,8 @@ N.B. Apart from time and location, you have control over the order of the inform
 	'active' => 1,
 	'description' => '',
 ));
+
+endif;
 
 endif;
 

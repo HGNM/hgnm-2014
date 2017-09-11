@@ -1350,7 +1350,7 @@ acf_add_local_field_group(array (
 			'key' => 'field_53ba9460600e2',
 			'label' => 'Use the event title, e.g. “HGNM Conference: New Perspectives on New Music” or “HGNM Composers in Lyon”',
 			'name' => '',
-			'type' => 'text',
+			'type' => 'message',
 			'instructions' => '',
 			'required' => 0,
 			'conditional_logic' => 0,
@@ -1359,11 +1359,11 @@ acf_add_local_field_group(array (
 				'class' => '',
 				'id' => '',
 			),
-			'default_value' => '',
-			'maxlength' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
+			'message' => 'Below, add any content that might be relevant to the event.
+
+N.B. Apart from time and location, you have control over the order of the information on the page. Drag and drop content sections to order information as you’d like it to appear. You can use the ‘Preview Changes’ button to see how things are shaping up.',
+			'esc_html' => 0,
+			'new_lines' => 'wpautop',
 		),
 		array (
 			'key' => 'field_53ba9460600fa',

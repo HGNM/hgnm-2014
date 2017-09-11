@@ -1,5 +1,11 @@
 # Changelog
 
+### v1.10.1
+
+* 🐛 Fix custom field conditional logic rules for compatibility with ACF Pro update.
+* Restore Miscellaneous Event post type instructions custom field.
+* Improve custom field registration logic.
+
 ### v1.10.0
 
 * Removes dependency on Per Søderlind’s [Date & Time Picker field](https://github.com/soderlind/acf-field-date-time-picker) and switches to using the [ACF Pro time picker](https://www.advancedcustomfields.com/resources/time-picker/) (ACF Pro >= `5.3.9`).

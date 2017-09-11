@@ -521,11 +521,12 @@ acf_add_local_field_group(array (
 				'Guest Speaker' => 'Guest Speaker',
 				'Post-Concert Discussion' => 'Post-Concert Discussion',
 			),
+			'allow_null' => 0,
 			'other_choice' => 0,
 			'save_other_choice' => 0,
 			'default_value' => 'HGNM Member',
 			'layout' => 'horizontal',
-			'allow_null' => 0,
+			'return_format' => 'value',
 		),
 		array (
 			'key' => 'field_539c713ed0e17',

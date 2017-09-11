@@ -536,7 +536,7 @@ acf_add_local_field_group(array (
 			'required' => 1,
 			'conditional_logic' => array (
 				array (
-					'rule_rule_rule_0' => array (
+					array (
 						'field' => 'field_539c70f2d0e16',
 						'operator' => '==',
 						'value' => 'HGNM Member',
@@ -567,7 +567,7 @@ acf_add_local_field_group(array (
 			'required' => 0,
 			'conditional_logic' => array (
 				array (
-					'rule_rule_rule_rule_rule_0' => array (
+					array (
 						'field' => 'field_539c70f2d0e16',
 						'operator' => '==',
 						'value' => 'Post-Concert Discussion',
@@ -598,7 +598,7 @@ acf_add_local_field_group(array (
 			'required' => 0,
 			'conditional_logic' => array (
 				array (
-					'rule_rule_rule_rule_rule_0' => array (
+					array (
 						'field' => 'field_539c70f2d0e16',
 						'operator' => '==',
 						'value' => 'Guest Speaker',
@@ -952,7 +952,7 @@ acf_add_local_field_group(array (
 					'required' => 0,
 					'conditional_logic' => array (
 						array (
-							'rule_rule_rule_0' => array (
+							array (
 								'field' => 'field_539d881cf4335',
 								'operator' => '==',
 								'value' => '1',
@@ -976,7 +976,7 @@ acf_add_local_field_group(array (
 					'required' => 0,
 					'conditional_logic' => array (
 						array (
-							'rule_rule_rule_rule_rule_rule_rule_rule_rule_rule_rule_rule_rule_rule_rule_rule_0' => array (
+							array (
 								'field' => 'field_539d881cf4335',
 								'operator' => '==',
 								'value' => '1',

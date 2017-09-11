@@ -1,5 +1,7 @@
 # Changelog
 
+## v1
+
 ### v1.10.1
 
 * 🐛 Fix custom field conditional logic rules for compatibility with ACF Pro update.
@@ -101,6 +103,8 @@
 * Tweaked miscellaneous styling and generic copy
 * Added colloquium flyer field for single colloquium pages
 * Restricted contact form width on larger screens and tweaked styling
+
+## Beta versions
 
 ### v0.7-beta.0
 * Added bundled fallback profile images that are called on member archive pages when no member photo exists

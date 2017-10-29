@@ -31,7 +31,7 @@ get_header();
 			echo '<section class="composers p-section"><h2>Composers</h2><ul class="clearfix">';
 			foreach($posts as $post)
 			{
-				$imgsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbnail');
+				$imgsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'hgnm-thumb');
 				echo '<li><a href="' . get_permalink($post->ID) . '">';
 				if(has_post_thumbnail()) {
 					echo '<img src="' . $imgsrc[0] . '" alt="' . get_the_title($post->ID) . '">';

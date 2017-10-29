@@ -2,6 +2,10 @@
 
 ## v1
 
+### v1.10.2
+
+* Use `hgnm-thumb` image size for thumbnails on composers page.
+
 ### v1.10.1
 
 * 🐛 Fix custom field conditional logic rules for compatibility with ACF Pro update.

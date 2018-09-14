@@ -2,6 +2,16 @@
 
 ## v1
 
+### v1.11.0
+
+* Fix media display on composer pages (085c980)
+* Fix PHP warnings (2d6bbe7, 2364d69)
+* Upgrade dependencies (b17289f)
+* Improve colloquium filter on composer pages (cbd9dfa)
+* Add `.woff2` version of icon font and tidy up `@font-face` declaration (c9ef1d5, 14a44e5)
+* Update README to reflect changes in `hgnm-wp-dev` (2ab0902)
+* Clean up miscellaneous whitespace (83f24a2)
+
 ### v1.10.2
 
 * Use `hgnm-thumb` image size for thumbnails on composers page.

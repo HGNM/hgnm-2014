@@ -27,7 +27,7 @@ get_header();
 
 				// custom filter to replace '=' with 'LIKE'
 				function my_posts_where( $where ) {
-					$where = str_replace("meta_key = 'programme_%_composer'", "meta_key LIKE 'programme_%_composer'", $where);
+					$where = str_replace("meta_key = 'programme_$", "meta_key LIKE 'programme_%", $where);
 					return $where;
 				}
 
@@ -44,7 +44,7 @@ get_header();
 						'order' => 'ASC',
 						'meta_query' => array(
 							array(
-								'key' => 'programme_%_composer',
+								'key' => 'programme_$_composer',
 				        'value'  => $testID,
 							)
 						)

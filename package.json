@@ -24,10 +24,10 @@
   },
   "homepage": "https://github.com/HGNM/hgnm-2014#readme",
   "devDependencies": {
-    "bestzip": "^1.1.4",
+    "bestzip": "^2.1.1",
     "cpy-cli": "git+https://github.com/chimon2000/cpy-cli.git",
-    "node-sass": "^4.5.3",
-    "rimraf": "^2.6.1"
+    "node-sass": "^4.9.3",
+    "rimraf": "^2.6.2"
   },
   "engines": {
     "node": ">=4.0.0"

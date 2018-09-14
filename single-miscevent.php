@@ -13,14 +13,14 @@ get_header();
 				<?php endif; ?>
 
 				<?php
-				
+
 				// SET START TIME VARIABLE
 				if (get_field('start_time')) {
 					$start_time = get_field('start_time');
 				}
 				// SET TIMEZONE
 				date_default_timezone_set('America/New_York');
-				
+
 				// SET START DATE VARIABLE
 				if (!empty($start_time) && ! get_field('dtend')) {
 					$dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart') . ' ' . $start_time));
@@ -28,12 +28,12 @@ get_header();
 				else {
 					$dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart') . ' 20:00'));
 				}
-				
+
 				// SET END DATE VARIABLE
 				if (get_field('dtend')) {
 					$dtend = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtend') . ' 20:00'));
 				}
-				
+
 				// EVENT META — date, time & location
 				?>
 				<section class="event-meta">
@@ -68,8 +68,8 @@ get_header();
 						echo $dtstart->format('l, j F Y');
 					} ?>
 					</time></p>
-					
-					
+
+
 					<?php
 					// Display event location using microformat hCard
 					if( have_rows('details') ) {
@@ -111,12 +111,12 @@ get_header();
 								<?php the_sub_field('summary'); ?>
 							</section>
 						<?php endif;
-						
+
 						// EXTERNAL LINK
 						if ( get_row_layout() == 'link' ) {
 							echo '<section class="external-links"><ul><li><a href="' . get_sub_field('url') . '" class="url">' . get_sub_field('title') . ' »</a></li></ul></section>';
 						}
-						
+
 						// ARCHIVE CONTENT
 						if ( get_row_layout() == 'documents' ) {
 							if( have_rows('document') ) {
@@ -131,7 +131,7 @@ get_header();
 								echo '</ul></section>';
 							}
 						}
-						
+
 						// VIDEOS
 						if ( get_row_layout() == 'videos' ) {
 							if( have_rows('videos') ) {
@@ -146,7 +146,7 @@ get_header();
 								echo '</ul></section>';
 							}
 						}
-						
+
 						// PHOTOS
 						if ( get_row_layout() == 'photos' ) {
 							$images = get_sub_field('gallery');
@@ -168,7 +168,7 @@ get_header();
 					}
 				}
 				?>
-								
+
 				<section class="archive-link">
 				<?php
 				//ARCHIVE LINK - shows link to archive for season that includes this concert
@@ -187,7 +187,7 @@ get_header();
 					echo '<a href="' . get_post_type_archive_link('concert') . $yearquery . '/">See all events in the ' . $seasontitle . ' season »</a>';
 				?>
 				</section>
-				
+
 			</article><!-- #post-ID .vevent -->
 			<?php endwhile; ?>
 		<?php else: ?>

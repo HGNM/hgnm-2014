@@ -174,25 +174,13 @@ textarea {
 
 @font-face {
   font-family: 'hgnm';
-  src: url('font/hgnm.eot?75546016');
-  src: url('font/hgnm.eot?75546016#iefix') format('embedded-opentype'),
-       url('font/hgnm.woff?75546016') format('woff'),
-       url('font/hgnm.ttf?75546016') format('truetype'),
-       url('font/hgnm.svg?75546016#hgnm') format('svg');
+  src: url('font/hgnm.eot');
+  src: url('font/hgnm.eot?#iefix') format('embedded-opentype'),
 			 url('font/hgnm.woff2') format('woff2'),
+       url('font/hgnm.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
-/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
-/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
-/*
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  @font-face {
-    font-family: 'hgnm';
-    src: url('../font/hgnm.svg?75546016#hgnm') format('svg');
-  }
-}
-*/
 
  [class^="icon-"]:before, [class*=" icon-"]:before, .icon-link-ext:after, .icon-location:after {
   font-family: "hgnm";

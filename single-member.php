@@ -20,6 +20,10 @@ get_header();
 							array(
 								'key' => 'fname',
 				        'value'  => $testID,
+							),
+							array(
+								'key' => 'colloquium_type',
+				        'value'  => 'HGNM Member',
 							)
 						)
 					)

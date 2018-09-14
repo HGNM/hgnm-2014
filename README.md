@@ -12,7 +12,7 @@ Repository for WordPress theme development for <http://hgnm.org>.
 
 2. Once `hgnm-wp-dev` is up and running, `cd` to the theme directory:
   ```sh
-  cd wordpress/wp-content/themes/hgnm-2014
+  cd ~/Local\ Sites/hgnm/app/public/wp-content/themes/hgnm-2014
   ```
 
 3. Install development dependencies (requires [Node/npm](https://nodejs.org/)):
@@ -33,7 +33,7 @@ Repository for WordPress theme development for <http://hgnm.org>.
     npm run build
     ```
 
-That’s it! Using the `hgnm-wp-dev` environment, a fully functional WordPress install can be found at <http://hgnm.dev>. Log in as `admin` with password `vagrant`.
+That’s it! Using the `hgnm-wp-dev` set-up with Local by Flywheel, a fully functional WordPress install can be found at <http://hgnm.local>.
 
 Changes to any of the `php` files can be seen simply by refreshing your browser.
 

@@ -7,7 +7,7 @@ for dependency in "${dependencies[@]}"; do
 done
 
 # Get required proprietary fonts for theme
-wget -O df.zip "http://chrisswithinbank.net/wp-content/uploads/2016/06/1407-HRGQJV.zip"
+wget --retry-connrefused --waitretry=1 --read-timeout=60 --timeout=60 -O df.zip "http://chrisswithinbank.net/wp-content/uploads/2016/06/1407-HRGQJV.zip"
 if [[ -f "df.zip" ]]; then
   unzip df.zip -d font/
   rm df.zip

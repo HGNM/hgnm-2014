@@ -2,7 +2,11 @@
 
 ## v1
 
-### v1.11.1
+### v1.12.1
+
+* Fix out-of-sync version tags (`package.json` and git tag vs `style.css`) (7e44c51)
+
+### v1.12.0
 
 * Eliminate jQuery use, replacing `magnific-popup` with `baguetteBox.js` (73f038d)
 * Set retry options on wget call to download fonts in `install-dependencies.sh` (89feb2a) 

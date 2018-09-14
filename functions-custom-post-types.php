@@ -241,4 +241,27 @@ function cpad_at_glance_content_table_end() {
     }
 }
 
+// Show custom icons in ‘At a Glance’ module
+add_action( 'admin_head', 'style_dashboard_glance_items' );
+function style_dashboard_glance_items() {
+	echo '<style>
+		#dashboard_right_now .composer-count a:before,
+		#dashboard_right_now .composer-count span:before {
+			content: "\f337";
+		}
+		#dashboard_right_now .concert-count a:before,
+		#dashboard_right_now .concert-count span:before {
+			content: "\f127";
+		}
+		#dashboard_right_now .colloquium-count a:before,
+		#dashboard_right_now .colloquium-count span:before {
+			content: "\f125";
+		}
+		#dashboard_right_now .miscevent-count a:before,
+		#dashboard_right_now .miscevent-count span:before {
+			content: "\f145";
+		}
+	</style>';
+}
+
 ?>

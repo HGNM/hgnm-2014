@@ -22,7 +22,7 @@ get_header();
 				date_default_timezone_set('America/New_York');
 				
 				// SET START DATE VARIABLE
-				if ($start_time && ! get_field('dtend')) {
+				if (!empty($start_time) && ! get_field('dtend')) {
 					$dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart') . ' ' . $start_time));
 				}
 				else {

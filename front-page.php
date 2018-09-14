@@ -97,7 +97,7 @@ get_header();
 										date_default_timezone_set('America/New_York');
 
 										// SET START DATE VARIABLE
-										if ($start_time) {
+										if (!empty($start_time)) {
 											$dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart', $concert->ID) . ' ' . $start_time));
 										}
 										else {

@@ -2,6 +2,11 @@
 
 ## v1
 
+### v1.11.1
+
+* Eliminate jQuery use, replacing `magnific-popup` with `baguetteBox.js` (73f038d)
+* Set retry options on wget call to download fonts in `install-dependencies.sh` (89feb2a) 
+
 ### v1.11.0
 
 * Fix media display on composer pages (085c980)

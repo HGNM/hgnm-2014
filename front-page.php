@@ -147,70 +147,9 @@ get_header();
 						<li class="colloquia <?php if(!$concerts) { echo 'solo'; } ?>">
 						<h3>Upcoming Colloquia</h3>
 						<ul>
-						<?php foreach($colloquia as $colloquium): ?>
-							<li class="vevent clearfix">
-								<?php
-								date_default_timezone_set('America/New_York');
-								$dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart', $colloquium->ID) . ' 12:00')); ?>
-								<h4 class="dtstart">
-									<time class="value-title" datetime="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>" title="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>">
-									<?php echo $dtstart->format('n/j'); ?>
-									</time>
-								</h4>
-								<span class="summary">
-									<?php $type = get_field('colloquium_type', $colloquium->ID);
-									if($type == 'HGNM Member') {
-										$composerid = get_field('fname', $colloquium->ID);
-										echo '<a href="' . esc_url( get_permalink($composerid->ID) ) . '" class="url">' . get_the_title($colloquium->ID) . '</a>';
-									}
-									elseif($type == 'Guest Speaker') {
-										if(get_field('url', $colloquium->ID)) {
-											echo '<a href="' . esc_url( get_field('url', $colloquium->ID) ) . '" class="url icon-link-ext" target="_blank">' . get_the_title($colloquium->ID) . '</a>';
-										}
-										else {
-											echo get_the_title($colloquium->ID);
-										}
-									}
-									elseif($type == 'Post-Concert Discussion') {
-										echo $type . ': ' . get_the_title($colloquium->ID);
-									}
-									else {
-										// If none of the above types (shouldn’t happen, but who knows…)
-										echo get_the_title($colloquium->ID);
-									} ?>
-								</span>
-								<span class="location vcard">
-									<span class="fn org">
-										<span class="value-title" title="Harvard University Department of Music">
-									</span>
-									<span class="adr">
-										<span class="street-address">
-											<span class="value-title" title="North Yard, Harvard University">
-										</span>
-										<span class="locality">
-											<span class="value-title" title="Cambridge">
-										</span>
-										<span class="region">
-											<span class="value-title" title="MA">
-										</span>
-										<span class="postal-code">
-											<span class="value-title" title="02138">
-										</span>
-									</span>
-									<span class="geo">
-									   <span class="latitude">
-									      <span class="value-title" title="42.377009" ></span>
-									   </span>
-									   <span class="longitude">
-									      <span class="value-title" title="-71.117042"></span>
-									   </span>
-									</span>
-								</span>
-								<span class="category">
-									<span class="value-title" title="Colloquium"></span>
-								</span>
-							</li>
-						<?php endforeach; ?>
+						<?php foreach($colloquia as $colloquium) {
+							component('colloquium_list_item', $colloquium->ID);
+						} ?>
 						</ul>
 						<p class="map-popup">All colloquia are at 12pm in Room 6, <a href="https://www.google.com/maps/place/Music+Bldg,+Harvard+University,+Cambridge,+MA+02138/@42.3769058,-71.1170215,15z/data=!4m2!3m1!1s0x89e3774164253f4d:0x4139366065ac28ee" class="icon-location">Harvard University Music Building</a></p>
 						</li>

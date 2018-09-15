@@ -89,7 +89,10 @@
 		<meta name="msapplication-TileColor" content="#30ff8a">
 		<meta name="msapplication-TileImage" content="<?php _e (get_stylesheet_directory_uri() . '/img/favicon-144.png'); ?>">
 
-		<script src="<?php _e (get_stylesheet_directory_uri() . '/js/vendor/modernizr-2.6.2.min.js'); ?>"></script>
+		<link href="<?php _e (get_stylesheet_directory_uri() . '/font/DalaFloda-Bold-Web.woff2'); ?>" rel="preload" as="font" type="font/woff2">
+		<link href="<?php _e (get_stylesheet_directory_uri() . '/font/hgnm.woff2'); ?>" rel="preload" as="font" type="font/woff2">
+
+		<script async src="<?php _e (get_stylesheet_directory_uri() . '/js/vendor/modernizr-3.6.0.min.js'); ?>"></script>
 
 		<?php wp_head(); ?>
 	</head>

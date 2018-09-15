@@ -19,7 +19,9 @@ get_header();
 								<?php echo $dtstart->format('l, j F Y, ga'); ?>
 							</time></p>
 
-							<p class="location map-popup"><a href="https://www.google.com/maps/place/Music+Bldg,+Harvard+University,+Cambridge,+MA+02138/@42.3769058,-71.1170215,15z/data=!4m2!3m1!1s0x89e3774164253f4d:0x4139366065ac28ee" class="icon-location">Harvard University Music Building</a></p>
+							<?php component(
+								'colloquium_location_link', array( "location_only" => true )
+							); ?>
 
 						</section>
 						<?php if (get_field('photo')) {

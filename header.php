@@ -86,8 +86,9 @@
 		<meta name="msapplication-TileColor" content="#30ff8a">
 		<meta name="msapplication-TileImage" content="<?php _e (get_stylesheet_directory_uri() . '/img/favicon-144.png'); ?>">
 
-		<link href="<?php _e (get_stylesheet_directory_uri() . '/font/DalaFloda-Bold-Web.woff2'); ?>" rel="preload" as="font" type="font/woff2">
-		<link href="<?php _e (get_stylesheet_directory_uri() . '/font/hgnm.woff2'); ?>" rel="preload" as="font" type="font/woff2">
+		<link href="<?php _e (get_stylesheet_directory_uri() . '/font/DalaFloda-Bold-Web.woff2'); ?>" rel="preload" as="font" type="font/woff2" crossorigin>
+		<link href="<?php _e (get_stylesheet_directory_uri() . '/font/hgnm.woff2'); ?>" rel="preload" as="font" type="font/woff2" crossorigin>
+		<link href="<?php _e (get_stylesheet_directory_uri() . '/img/halftone.png'); ?>" rel="preload" as="image" type="image/png" crossorigin>
 
 		<script async src="<?php _e (get_stylesheet_directory_uri() . '/js/vendor/modernizr-3.6.0.min.js'); ?>"></script>
 

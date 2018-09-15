@@ -258,11 +258,9 @@ get_header();
 			if ($colloquia) : ?>
 				<section class="colloquia <?php if(!have_posts()) { echo 'solo'; } ?>">
 					<h3>Colloquia</h3>
-					<ul>
-					<?php foreach($colloquia as $colloquium) {
-						component('colloquium_list_item', $colloquium->ID);
-					} ?>
-					</ul>
+					<?php
+						component('colloquium_list', array("colloquia" => $colloquia))
+					?>
 				</section>
 			<?php endif;
 			// Display archived miscellaneous events for $yearquery season

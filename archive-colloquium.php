@@ -136,12 +136,10 @@ get_header();
 			if ($colloquia) : ?>
 				<section class="colloquia <?php if(!have_posts()) { echo 'solo'; } ?>">
 					<h3>Upcoming Colloquia</h3>
-					<ul>
-						<?php foreach($colloquia as $colloquium) {
-							component('colloquium_list_item', $colloquium->ID);
-						} ?>
-					</ul>
-					<p class="map-popup">All colloquia are at 12pm in Room 6, <a href="https://www.google.com/maps/place/Music+Bldg,+Harvard+University,+Cambridge,+MA+02138/@42.3769058,-71.1170215,15z/data=!4m2!3m1!1s0x89e3774164253f4d:0x4139366065ac28ee" class="icon-location">Harvard University Music Building</a></p>
+					<?php component('colloquium_list', array(
+						"colloquia" => $colloquia,
+						"show_map_link" => true
+					)) ?>
 				</section>
 			<?php endif;
 			// Display archived miscellaneous events for $yearquery season

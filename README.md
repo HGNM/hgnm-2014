@@ -65,6 +65,10 @@ To change `css` styling, edit `scss/style.scss`, which will auto-compile if `npm
 
 5. Copy the changes listed in `CHANGELOG.md` to the release notes on GitHub.
 
+## Architecture
+
+For more details on how `hgnm-2014` is structured and implements its functionality, see [ARCHITECTURE](ARCHITECTURE.md).
+
 ## Dependencies
 
 _These are automatically installed if you use the `hgnm-wp-dev` environment._

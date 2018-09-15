@@ -2,6 +2,9 @@
 // Fix empty <title>s, remove .hentry from posts, enqueue Google Fonts
 include('functions/template-tweaks.php');
 
+// Register template component loading method
+include('functions/component-loader.php');
+
 // Register custom menu
 include('functions/custom-menu.php');
 

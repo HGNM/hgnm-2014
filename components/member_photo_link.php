@@ -5,7 +5,7 @@ if (!function_exists('member_function_link')) {
   {
     $imgsrc = wp_get_attachment_image_src( get_post_thumbnail_id($ID), 'hgnm-thumb');
     echo '<li><a href="' . get_permalink($ID) . '">';
-    if(has_post_thumbnail()) {
+    if(!empty($imgsrc)) {
       echo '<img src="' . $imgsrc[0] . '" alt="' . get_the_title($ID) . '">';
     }
     else {

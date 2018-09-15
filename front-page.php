@@ -210,12 +210,8 @@ get_header();
 				)
 			)
 		));
-		if($posts)
-		{
-			echo '<section class="composers fp-section"><h2>Composers</h2><ul class="clearfix">';
-			foreach($posts as $post) { component('member_photo_link', $post->ID); }
-			echo '</ul></section>';
-		}
+
+		if($posts) { component('member_list', $posts); }
 
 		// Display archive link
 		?>

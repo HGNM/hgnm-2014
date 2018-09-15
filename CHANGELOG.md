@@ -2,6 +2,16 @@
 
 ## v1
 
+### 1.13.0
+
+* Refactor `functions.php` into several large chunks to make it a little easier to understand (c3f90f5)
+* Refactor `scss/style.scss` to import SASS variables and normalize.css from partials (1638524, 47091fb)
+* Display icons for custom post types in the ‘At a Glance’ dashboard module (861a30f)
+* Disable `wp-emoji` (1973e80)
+* Remove “Browse Happy” warnings for old versions of IE (37e0361)
+* Use `rel="preload"` for fonts and site background image (649a1af)
+* Update [Modernizr](https://modernizr.com/) and use as small a build as possible (7f6689c)
+
 ### 1.12.1
 
 * Fix out-of-sync version tags (`package.json` and git tag vs `style.css`) (7e44c51)

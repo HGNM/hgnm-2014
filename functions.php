@@ -252,4 +252,9 @@ $example_update_checker = new ThemeUpdateChecker(
    ========================================== */
 include('functions-acf-field-groups.php');
 
+/* ==========================================
+   DISABLE WP-EMOJI
+   ========================================== */
+include('functions-disable-wp-emoji.php');
+
 ?>

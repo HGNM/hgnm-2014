@@ -19,9 +19,7 @@ get_header();
 						echo '<p class="support">The Thelma E. Goldberg Concert</p>';
 					}
 				} ?>
-				<?php if (current_user_can('edit_posts')) : ?>
-					<a href="<?php echo get_edit_post_link(); ?>" class="edit-button">Edit</a>
-				<?php endif; ?>
+				<?php component('edit_button') ?>
 
 				<?php
 				// SET START TIME VARIABLE

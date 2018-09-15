@@ -1,7 +1,12 @@
 <?php
 if (!function_exists('component')) {
-  function component($name) {
-    include(locate_template("components/$name", false, false));
+  /**
+   * Load a template component
+   * @param  string $name The name of a component file to load
+   * @param  any    $opts Options to pass to component function
+   */
+  function component($name, $opts = '') {
+    include(locate_template("components/$name.php", false, false));
   }
 }
 ?>

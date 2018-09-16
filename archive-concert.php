@@ -228,9 +228,7 @@ get_header();
                 echo 'solo';
             } ?>">
           <h3>Colloquia</h3>
-          <?php
-                        component('colloquium_list', array("colloquia" => $colloquia))
-                    ?>
+          <?= component('colloquium_list', array("colloquia" => $colloquia)) ?>
         </section>
       <?php endif;
             // Display archived miscellaneous events for $yearquery season

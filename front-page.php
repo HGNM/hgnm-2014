@@ -86,7 +86,7 @@ get_header();
         } ?>">
               <h3>Next Concert</h3>
               <?php foreach ($concerts as $concert) {
-                      echo component('concert_list_item', array(
+            echo component('concert_list_item', array(
                           "id" => $concert->ID,
                           "el" => "div"
                       ));
@@ -98,7 +98,7 @@ get_header();
             echo 'solo';
         } ?>">
             <h3>Upcoming Colloquia</h3>
-            <?php component('colloquium_list', array(
+            <?= component('colloquium_list', array(
                             "colloquia" => $colloquia,
                             "show_map_link" => true
                         )) ?>

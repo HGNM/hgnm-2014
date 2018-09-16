@@ -11,7 +11,9 @@
 	- [Template concatenation flow](#template-concatenation-flow)
 	- [A note on “archive” pages](#a-note-on-archive-pages)
 - [Theme functionality](#theme-functionality)
-	- [Component Loading](#component-loading)
+- [Components](#components)
+	- [Loading a component](#loading-a-component)
+	- [Writing a component](#writing-a-component)
 - [Build & release infrastructure](#build-release-infrastructure)
 
 <!-- /TOC -->
@@ -233,14 +235,18 @@ To accomplish season-by-season archives instead of calendar year archives, a cus
 Besides the templates described above, WordPress themes provide much of their custom functionality via their [`functions.php`](functions.php) file. To try to break code up into more easily digestible chunks, `hgnm-2014` has a [`functions`](functions) directory with many separate PHP files for specific areas of functionality that are included by `functions.php` using PHP’s `include()` method.
 
 
-### Component Loading
+
+
+## Components
+
+### Loading a component
 
 To break up the large page templates described above, some layouts that are re-used are stored in the [`components`](components) directory and included in the main templates using the `component()` method declared in [`functions/component-loader.php`](functions/component-loader.php).
 
-For example, `footer.php` includes a copyright string that updates its date range automatically and is defined in `components/copyright.php`. To include a component call `component()` with the component file name as the only argument:
+For example, `footer.php` includes a copyright string that updates its date range automatically and is defined in `components/copyright.php`. To include a component call `component()` with the component file name as the first argument:
 
 ```php
-<?php component('copyright') ?>
+<?= component('copyright') ?>
 ```
 
 If the component needs to be passed additional data, this can be achieved via the `component` method’s second argument:
@@ -248,6 +254,45 @@ If the component needs to be passed additional data, this can be achieved via th
 ```php
 <?php component('colloquium_location_link', array( "location_only" => true )) ?>
 ```
+
+
+### Writing a component
+
+A component is a PHP file declaring a function that renders the component and a call to that function. There are two component patterns:
+
+1.  a component that directly prints output to the template it is called in
+2.  a component that returns an HTML string, which needs to be printed explicitly
+
+The second pattern is generally preferable as it allows you to pass a component around, for example handing it to another component for use as a child element.
+
+The basic skeleton of a component looks like this (following pattern 2):
+
+```php
+<?php
+// Make sure the function hasn’t already been declared
+if (!function_exists('my_component')) {
+    // Declare a function that returns the component HTML
+    function my_component($opts)
+    {
+        return '<p>' .
+        (array_key_exists('text', $opts) ? $opts['text'] : '') .
+        '</p>';
+    }
+}
+
+// Call the component function with $opts and return it
+return my_component($opts);
+```
+
+Saved as `components/my_component.php` we can then use this as follows:
+
+```php
+<?php
+echo component('my_component', array( "text" => 'Paragraph text' ));
+```
+
+A component function written following design pattern 1 would `echo` the HTML directly instead of returning it and the call to the component function would be made without returning the value.
+
 
 
 

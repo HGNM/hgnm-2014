@@ -21,9 +21,9 @@ include('functions/disable-default-post-types.php');
 include('functions/custom-post-type-admin.php');
 
 // Register custom image sizes
-if ( function_exists( 'add_image_size' ) ) {
-  add_image_size('hgnm-thumb', 200, 200, true);
-  add_image_size('hgnm-main', 600, 400, true);
+if (function_exists('add_image_size')) {
+    add_image_size('hgnm-thumb', 200, 200, true);
+    add_image_size('hgnm-main', 600, 400, true);
 }
 
 // Configure archive year query and permalink rewrites
@@ -44,5 +44,3 @@ include('functions/acf-field-groups.php');
 
  // Disable wp-emoji
 include('functions/disable-wp-emoji.php');
-
-?>

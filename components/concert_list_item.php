@@ -1,28 +1,25 @@
 <?php
 if (!function_exists('concert_list_item')) {
-  function concert_list_item(array $opts)
-  {
-    $ID = $opts['id'];
-    $EL = array_key_exists('el', $opts) ? $opts['el'] : 'li';
-    ?>
+    function concert_list_item(array $opts)
+    {
+        $ID = $opts['id'];
+        $EL = array_key_exists('el', $opts) ? $opts['el'] : 'li'; ?>
     <<?php echo $EL ?> class="vevent clearfix">
       <a href="<?php echo get_permalink($ID) ?>" class="url">
         <?php
         // SET START TIME VARIABLE
         if (get_field('start_time')) {
-          $start_time = get_field('start_time', $ID);
+            $start_time = get_field('start_time', $ID);
         }
         // SET TIMEZONE
         date_default_timezone_set('America/New_York');
 
         // SET START DATE VARIABLE
         if (!empty($start_time)) {
-          $dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart', $ID) . ' ' . $start_time));
-        }
-        else {
-          $dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart', $ID) . ' 20:00'));
-        }
-        ?>
+            $dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart', $ID) . ' ' . $start_time));
+        } else {
+            $dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart', $ID) . ' 20:00'));
+        } ?>
         <h4 class="dtstart"><time class="value-title" datetime="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>" title="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>">
           <?php echo '<span class="month">' . $dtstart->format('M') . '</span> <span class="day">' . $dtstart->format('j'); ?>
         </time></h4>
@@ -62,7 +59,7 @@ if (!function_exists('concert_list_item')) {
       </span>
     </<?php echo $EL ?>>
     <?php
-  }
+    }
 }
 
 concert_list_item($opts)

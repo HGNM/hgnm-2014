@@ -2,8 +2,8 @@
 
 get_header();
 
-		if ( have_posts() ) : ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+        if (have_posts()) : ?>
+			<?php while (have_posts()) : the_post(); ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class('p-section primary entry'); ?>>
 					<h2 class="post-title fname"><?php the_title(); ?></h2>
 					<?php if (current_user_can('edit_posts')) : ?>

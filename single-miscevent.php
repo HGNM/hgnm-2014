@@ -8,7 +8,7 @@ get_header();
             ?>
 			<article id="post-<?php the_ID(); ?>" <?php post_class($postclass); ?>>
 				<h2 class="post-title summary"><?php the_title(); ?></h2>
-				<?php component('edit_button') ?>
+				<?= component('edit_button') ?>
 
 				<?php
 

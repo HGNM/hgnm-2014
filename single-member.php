@@ -133,7 +133,7 @@ if (have_posts()) :
 
 <article id="post-<?php the_ID(); ?>" <?php post_class($postclass); ?>>
   <h2 class="post-title fname entry-title"><?php the_title(); ?></h2>
-  <?php     component('edit_button');
+  <?php echo component('edit_button');
         if (get_the_content()) : ?>
   <section class="primary entry clearfix">
     <?php   the_content(); ?>

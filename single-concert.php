@@ -28,7 +28,7 @@ if (have_posts()) {
             }
         }
 
-        component('edit_button');
+        echo component('edit_button');
 
         // SET START TIME VARIABLE
         if (get_field('start_time')) {

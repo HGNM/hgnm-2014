@@ -6,7 +6,7 @@ get_header();
       <?php while (have_posts()) : the_post(); ?>
         <article id="post-<?php the_ID(); ?>" <?php post_class('p-section primary entry'); ?>>
           <h2 class="post-title fname"><?php the_title(); ?></h2>
-          <?php component('edit_button') ?>
+          <?= component('edit_button') ?>
             <?php
                         // SET TIMEZONE
                         date_default_timezone_set('America/New_York');

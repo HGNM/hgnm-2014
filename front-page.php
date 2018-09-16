@@ -7,7 +7,7 @@ get_header();
         // Get home page blurb
         if (have_posts()) : ?>
       <?php while (have_posts()) : the_post(); ?>
-        <?php component('edit_button') ?>
+        <?= component('edit_button') ?>
         <section id="fp-blurb" <?php post_class('fp-section'); ?>>
           <div class="entry"><?php the_content(); ?></div>
           <p class="social-link"><a href="https://www.facebook.com/pages/Harvard-Group-for-New-Music/130937206919388">Join us on Facebook <span class="icon icon-facebook" aria-hidden="true"></span></a></p>

@@ -164,7 +164,7 @@ get_header();
         ));
 
         if ($posts) {
-            component('member_list', array(
+            echo component('member_list', array(
                 "members" => $posts
             ));
         }

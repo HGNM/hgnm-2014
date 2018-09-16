@@ -11,20 +11,22 @@ if (!function_exists('member_list')) {
         $show_image = array_key_exists('show_image', $opts) ? $opts['show_image'] : true;
         $classes = is_front_page() ? 'composers fp-section' : 'composers p-section';
 
-        echo '<section class="' . $classes . '">' .
-               '<h2>' . $heading . '</h2>' .
-               '<ul class="clearfix">';
+        $html = '<section class="' . $classes . '">' .
+                  '<h2>' . $heading . '</h2>' .
+                  '<ul class="clearfix">';
 
         foreach ($members as $post) {
-            echo component('member_list_item', array(
+            $html .= component('member_list_item', array(
                 "ID" => $post->ID,
                 "show_image" => $show_image
             ));
         }
 
-        echo   '</ul>' .
-             '</section>';
+        $html .=  '</ul>' .
+                '</section>';
+
+        return $html;
     }
 }
 
-member_list($opts);
+return member_list($opts);

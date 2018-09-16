@@ -27,7 +27,7 @@ get_header();
         echo '<article>';
 
         if ($members) {
-            component('member_list', array(
+            echo component('member_list', array(
                 "members" => $members
             ));
         }
@@ -57,7 +57,7 @@ get_header();
         ));
 
         if ($past_members) {
-            component('member_list', array(
+            echo component('member_list', array(
                 "members" => $past_members,
                 "heading" => 'Past Members',
                 "show_image" => false

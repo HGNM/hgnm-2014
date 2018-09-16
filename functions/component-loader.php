@@ -7,6 +7,11 @@ if (!function_exists('component')) {
      */
     function component($name, $opts = array())
     {
-        return include(locate_template("components/$name.php", false, false));
+        $template_path = "components/$name.php";
+        $template = locate_template($template_path, false, false);
+        if (empty($template)) {
+          throw new Exception("Template not found at $template_path");
+        }
+        return include($template);
     }
 }

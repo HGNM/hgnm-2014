@@ -6,7 +6,7 @@ if (!function_exists('colloquium_list')) {
 
         echo '<ul>';
         foreach ($opts['colloquia'] as $colloquium) {
-            component('colloquium_list_item', $colloquium->ID);
+            echo component('colloquium_list_item', $colloquium->ID);
         }
         echo '</ul>';
         if ($show_map_link) {

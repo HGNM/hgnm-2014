@@ -1,5 +1,5 @@
       </div><!-- #torso -->
-      <footer id="colophon" class="site-footer" role="contentinfo">
+      <footer id="colophon" class="site-footer">
         <div class="site-info"><?= component('copyright'); ?> • <a href="<?php echo admin_url(); ?>">Login</a></div>
       </footer>
     </div><!-- #page -->

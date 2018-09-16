@@ -5,10 +5,10 @@
 ?>
 
 <!DOCTYPE html>
-<html class="no-js">
+<html class="no-js" lang="en">
   <head>
     <meta charset="<?php bloginfo('charset'); ?>" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>
       <?php if (function_exists('is_tag') && is_tag()) {
     echo 'Tag Archive for &quot;'.$tag.'&quot; - ';
@@ -84,7 +84,7 @@
   <body <?php body_class(); ?> lang="en">
     <div id="page" class="site">
 
-      <header id="masthead" class="site-header js-header clearfix" role="banner">
+      <header id="masthead" class="site-header js-header clearfix">
 
         <h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
           <?php // Finds characters that are not uppercase and wraps them in a span of class 'lowercase'
@@ -112,7 +112,7 @@
                     ?>
         </a></h1>
 
-        <nav id="menu" class="menu js-menu" role="navigation">
+        <nav id="menu" class="menu js-menu">
                 <?php wp_nav_menu(array( 'theme_location' => 'primary', 'container' => 'false', 'menu_class' => '' )); ?>
         </nav>
 

@@ -19,18 +19,18 @@ get_header();
                 <?php echo $dtstart->format('l, j F Y, ga'); ?>
               </time></p>
 
-              <?php component(
-                                'colloquium_location_link',
-                            array( "location_only" => true )
-                            ); ?>
+              <?= component(
+                  'colloquium_location_link',
+                  array("location_only" => true)
+              ); ?>
 
             </section>
             <?php if (get_field('photo')) {
-                                echo '<section class="event-photo">';
-                                $photo = get_field('photo');
-                                echo '<img src="' . $photo['sizes']['hgnm-main'] . '" alt="' . $photo['alt'] . '">';
-                                echo '</section>';
-                            } ?>
+                  echo '<section class="event-photo">';
+                  $photo = get_field('photo');
+                  echo '<img src="' . $photo['sizes']['hgnm-main'] . '" alt="' . $photo['alt'] . '">';
+                  echo '</section>';
+              } ?>
             <?php the_content(); ?>
         </article>
       <?php endwhile; ?>

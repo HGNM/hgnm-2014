@@ -172,7 +172,7 @@ if (have_posts()) :
                     echo '<h4 class="dtstart">' .
                             $dtstart->format('l, j F — Ga') .
                          '</h4>';
-                    component(
+                    echo component(
                         'colloquium_location_link',
                         array( "location_only" => true )
                     );

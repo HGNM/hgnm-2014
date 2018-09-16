@@ -252,7 +252,7 @@ For example, `footer.php` includes a copyright string that updates its date rang
 If the component needs to be passed additional data, this can be achieved via the `component` method’s second argument:
 
 ```php
-<?php component('colloquium_location_link', array( "location_only" => true )) ?>
+<?= component('colloquium_location_link', array( "location_only" => true )) ?>
 ```
 
 

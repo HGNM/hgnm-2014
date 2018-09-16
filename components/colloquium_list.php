@@ -10,7 +10,7 @@ if (!function_exists('colloquium_list')) {
         }
         echo '</ul>';
         if ($show_map_link) {
-            component('colloquium_location_link');
+            echo component('colloquium_location_link');
         }
     }
 }

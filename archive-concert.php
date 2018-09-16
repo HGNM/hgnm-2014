@@ -221,35 +221,10 @@ get_header();
 				<section class="concerts <?php if(!$colloquia) { echo 'solo'; } ?>">
 					<h3>Concerts</h3>
 					<ul>
-					<?php while ( have_posts() ) : the_post(); ?>
-						<li <?php post_class('vevent clearfix'); ?>>
-							<a href="<?php echo get_permalink() ?>" class="url">
-								<?php
-								// SET START TIME VARIABLE
-								if (get_field('start_time')) {
-									$start_time = get_field('start_time');
-								}
-								// SET TIMEZONE
-								date_default_timezone_set('America/New_York');
-
-								// SET START DATE VARIABLE
-								if ($start_time) {
-									$dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart') . ' ' . $start_time));
-								}
-								else {
-									$dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart') . ' 20:00'));
-								}
-								?>
-								<h4 class="dtstart"><time class="value-title" datetime="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>" title="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>">
-									<?php echo '<span class="month">' . $dtstart->format('M') . '</span> <span class="day">' . $dtstart->format('j'); ?>
-								</time></h4>
-								<div class="details">
-									<p class="summary"><?php the_title() ?></p>
-									<p class="location"><?php the_field('location'); ?></p>
-								</div>
-							</a>
-						</li>
-					<?php endwhile; ?>
+						<?php while ( have_posts() ) {
+							the_post();
+							component('concert_list_item', array( "id" => get_the_ID() ));
+						} ?>
 					</ul>
 				</section>
 			<?php else: ?>

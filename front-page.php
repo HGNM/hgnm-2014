@@ -83,64 +83,12 @@ get_header();
 					<?php if($concerts) : ?>
 						<li class="concerts <?php if(!$colloquia) { echo 'solo'; } ?>">
 							<h3>Next Concert</h3>
-							<?php foreach($concerts as $concert): ?>
-								<div class="vevent clearfix">
-									<a href="<?php echo get_permalink($concert->ID) ?>" class="url">
-										<?php
-										// SET START TIME VARIABLE
-										if (get_field('start_time')) {
-											$start_time = get_field('start_time', $concert->ID);
-										}
-										// SET TIMEZONE
-										date_default_timezone_set('America/New_York');
-
-										// SET START DATE VARIABLE
-										if (!empty($start_time)) {
-											$dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart', $concert->ID) . ' ' . $start_time));
-										}
-										else {
-											$dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart', $concert->ID) . ' 20:00'));
-										}
-										?>
-										<h4 class="dtstart"><time class="value-title" datetime="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>" title="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>">
-											<?php echo '<span class="month">' . $dtstart->format('M') . '</span> <span class="day">' . $dtstart->format('j'); ?>
-										</time></h4>
-										<div class="details">
-											<?php echo '<p class="summary">' . get_the_title($concert->ID) . '</p>'; ?>
-											<p class="location vcard"><?php the_field('location', $concert->ID); ?>
-												<span class="fn org">
-													<span class="value-title" title="Paine Hall, Harvard University Department of Music">
-												</span>
-												<span class="adr">
-													<span class="street-address">
-														<span class="value-title" title="North Yard, Harvard University">
-													</span>
-													<span class="locality">
-														<span class="value-title" title="Cambridge">
-													</span>
-													<span class="region">
-														<span class="value-title" title="MA">
-													</span>
-													<span class="postal-code">
-														<span class="value-title" title="02138">
-													</span>
-												</span>
-												<span class="geo">
-												   <span class="latitude">
-												      <span class="value-title" title="42.377009" ></span>
-												   </span>
-												   <span class="longitude">
-												      <span class="value-title" title="-71.117042"></span>
-												   </span>
-												</span>
-											</p>
-										</div>
-									</a>
-									<span class="category">
-										<span class="value-title" title="Concert"></span>
-									</span>
-								</div>
-							<?php endforeach; ?>
+							<?php foreach($concerts as $concert) {
+								component('concert_list_item', array(
+									"id" => $concert->ID,
+									"el" => "div"
+								));
+							} ?>
 						</li>
 					<?php endif; ?>
 					<?php if($colloquia) : ?>

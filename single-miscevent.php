@@ -142,7 +142,12 @@ get_header();
                                     the_row();
                                     if (get_sub_field('embed_link')) {
                                         $embed = get_sub_field('embed_link');
-                                        echo '<li><span class="embed-container">' . $embed . '</span></li>';
+                                        echo '<li>';
+                                        echo component(
+                                            'responsive_embed',
+                                            $embed
+                                        );
+                                        echo '</li>';
                                     }
                                 }
                                 echo '</ul></section>';

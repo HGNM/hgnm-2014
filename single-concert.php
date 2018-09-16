@@ -279,7 +279,9 @@ if (have_posts()) {
                 if ($audiolist) {
                     echo '<li class="audio clearfix"><h3>Audio</h3><ul>';
                     foreach ($audiolist as $item) {
-                        echo '<li><span class="embed-container">' . $item['embed_link'] . '</span></li>';
+                        echo '<li>';
+                        echo component('responsive_embed', $item['embed_link']);
+                        echo '</li>';
                     }
                     echo '</ul></li>';
                 }

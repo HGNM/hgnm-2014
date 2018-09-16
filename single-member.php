@@ -218,9 +218,7 @@ if (have_posts()) :
             <?php       the_title(); ?>
           </a>
         </p>
-        <span class="embed-container">
-          <?php         the_sub_field('embed_link', $post->ID) ?>
-        </span>
+        <?= component('responsive_embed', get_sub_field('embed_link', $post->ID)) ?>
       </li>
       <?php         endif;
                 endwhile;

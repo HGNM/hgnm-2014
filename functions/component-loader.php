@@ -7,6 +7,6 @@ if (!function_exists('component')) {
      */
     function component($name, $opts = array())
     {
-        include(locate_template("components/$name.php", false, false));
+        return include(locate_template("components/$name.php", false, false));
     }
 }

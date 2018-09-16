@@ -86,10 +86,10 @@ get_header();
         } ?>">
               <h3>Next Concert</h3>
               <?php foreach ($concerts as $concert) {
-            component('concert_list_item', array(
-                                    "id" => $concert->ID,
-                                    "el" => "div"
-                                ));
+                      echo component('concert_list_item', array(
+                          "id" => $concert->ID,
+                          "el" => "div"
+                      ));
         } ?>
             </li>
           <?php endif; ?>

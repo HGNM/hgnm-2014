@@ -191,7 +191,7 @@ if (have_posts()) :
                        '<h3>' . $heading . '</h3>' .
                        '<ul>';
                 foreach ($upcomingconcerts as $concert) {
-                    component('concert_list_item', array("id" => $concert->ID));
+                    echo component('concert_list_item', array("id" => $concert->ID));
                 }
                 echo   '</ul>' .
                      '</div>';

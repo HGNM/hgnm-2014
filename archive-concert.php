@@ -216,7 +216,7 @@ get_header();
           <ul>
             <?php while (have_posts()) {
                 the_post();
-                component('concert_list_item', array( "id" => get_the_ID() ));
+                echo component('concert_list_item', array( "id" => get_the_ID() ));
             } ?>
           </ul>
         </section>

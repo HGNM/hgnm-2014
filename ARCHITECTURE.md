@@ -258,40 +258,37 @@ If the component needs to be passed additional data, this can be achieved via th
 
 ### Writing a component
 
-A component is a PHP file declaring a function that renders the component and a call to that function. There are two component patterns:
+A component is a PHP file declaring a function that renders the component and a call to that function. While technically a component is any function, best practice is for a component to return an HTML string. This allows you to pass a component around, for example handing it to another component for use as a child element, only printing its output when needed.
 
-1.  a component that directly prints output to the template it is called in
-2.  a component that returns an HTML string, which needs to be printed explicitly
-
-The second pattern is generally preferable as it allows you to pass a component around, for example handing it to another component for use as a child element.
-
-The basic skeleton of a component looks like this (following pattern 2):
+The basic skeleton of a component looks like this:
 
 ```php
 <?php
 // Make sure the function hasn’t already been declared
-if (!function_exists('my_component')) {
+if (!function_exists('pretty_p')) {
     // Declare a function that returns the component HTML
-    function my_component($opts)
+    function pretty_p($opts)
     {
-        return '<p>' .
-        (array_key_exists('text', $opts) ? $opts['text'] : '') .
-        '</p>';
+        $html = '<p class="pretty">';
+        if (array_key_exists('text', $opts)) {
+        	$html .= $opts['text'];
+        }
+        $html .= '</p>';
+        return $html;
     }
 }
 
-// Call the component function with $opts and return it
-return my_component($opts);
+// Call the component function and return it
+return pretty_p($opts);
 ```
 
-Saved as `components/my_component.php` we can then use this as follows:
+The second argument passed to `component()` is injected into your component’s scope as `$opts`, so by saving the component as `components/pretty_p.php` we can then use it as follows:
 
 ```php
-<?php
-echo component('my_component', array( "text" => 'Paragraph text' ));
+<?= component('pretty_p', array( "text" => 'Paragraph text' )); ?>
 ```
 
-A component function written following design pattern 1 would `echo` the HTML directly instead of returning it and the call to the component function would be made without returning the value.
+**N.B.** the `<?= '...' ?>` PHP tag is shorthand for `<?php echo '...' ?>`
 
 
 

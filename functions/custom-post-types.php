@@ -201,17 +201,17 @@ function miscevent_post_type()
 // Hook into the 'init' action
 add_action('init', 'miscevent_post_type', 0);
 
-/*	=======================================
+/*  =======================================
     ADD FEATURED IMAGE TO CUSTOM POST TYPES
-        =======================================	*/
+        =======================================  */
 // Enable Featured Image for Custom Post Types
 if (function_exists('add_theme_support')) {
     add_theme_support('post-thumbnails', array( 'member', 'concert', 'miscevent' ));
 }
 
-/*	==================================
+/*  ==================================
     ADD CUSTOM POST TYPES TO DASHBOARD
-        ==================================	*/
+        ==================================  */
 // Add custom post types to dashboard ‘At a Glance’ module
 add_action('dashboard_glance_items', 'cpad_at_glance_content_table_end');
 function cpad_at_glance_content_table_end()
@@ -243,21 +243,21 @@ add_action('admin_head', 'style_dashboard_glance_items');
 function style_dashboard_glance_items()
 {
     echo '<style>
-		#dashboard_right_now .composer-count a:before,
-		#dashboard_right_now .composer-count span:before {
-			content: "\f337";
-		}
-		#dashboard_right_now .concert-count a:before,
-		#dashboard_right_now .concert-count span:before {
-			content: "\f127";
-		}
-		#dashboard_right_now .colloquium-count a:before,
-		#dashboard_right_now .colloquium-count span:before {
-			content: "\f125";
-		}
-		#dashboard_right_now .miscevent-count a:before,
-		#dashboard_right_now .miscevent-count span:before {
-			content: "\f145";
-		}
-	</style>';
+    #dashboard_right_now .composer-count a:before,
+    #dashboard_right_now .composer-count span:before {
+      content: "\f337";
+    }
+    #dashboard_right_now .concert-count a:before,
+    #dashboard_right_now .concert-count span:before {
+      content: "\f127";
+    }
+    #dashboard_right_now .colloquium-count a:before,
+    #dashboard_right_now .colloquium-count span:before {
+      content: "\f125";
+    }
+    #dashboard_right_now .miscevent-count a:before,
+    #dashboard_right_now .miscevent-count span:before {
+      content: "\f145";
+    }
+  </style>';
 }

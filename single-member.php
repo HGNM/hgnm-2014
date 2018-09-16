@@ -3,7 +3,7 @@
 get_header();
 
         if (have_posts()) : ?>
-			<?php while (have_posts()) : the_post();
+      <?php while (have_posts()) : the_post();
 
                 // Get composer ID to look for
                 $testID = get_the_ID();
@@ -131,33 +131,33 @@ get_header();
 
                 ?>
 
-				<article id="post-<?php the_ID(); ?>" <?php post_class($postclass); ?>>
-					<h2 class="post-title fname entry-title"><?php the_title(); ?></h2>
-					<?php component('edit_button') ?>
-					<?php if (get_the_content()) : ?>
-						<section class="primary entry clearfix">
-							<?php the_content(); ?>
-							<?php echo '<p class="updated">Last updated: ' . get_the_modified_time('F j, Y') . '</p>'; ?>
-						</section>
-					<?php endif; ?>
-					<?php if (has_post_thumbnail() || get_field('url') || $upcomingcolloquia || $upcomingconcerts) : ?>
-						<section class="secondary clearfix">
+        <article id="post-<?php the_ID(); ?>" <?php post_class($postclass); ?>>
+          <h2 class="post-title fname entry-title"><?php the_title(); ?></h2>
+          <?php component('edit_button') ?>
+          <?php if (get_the_content()) : ?>
+            <section class="primary entry clearfix">
+              <?php the_content(); ?>
+              <?php echo '<p class="updated">Last updated: ' . get_the_modified_time('F j, Y') . '</p>'; ?>
+            </section>
+          <?php endif; ?>
+          <?php if (has_post_thumbnail() || get_field('url') || $upcomingcolloquia || $upcomingconcerts) : ?>
+            <section class="secondary clearfix">
 
-							<?php
+              <?php
                             // Display Featured Image
                             if (has_post_thumbnail()): ?>
-								<div class="featured-img">
-									<?php $thumbid = get_post_thumbnail_id();
+                <div class="featured-img">
+                  <?php $thumbid = get_post_thumbnail_id();
                                     $thumbsrc = wp_get_attachment_image_src($thumbid, 'hgnm-main');
                                     $thumbalt = get_post_meta($thumbid, '_wp_attachment_image_alt', true);
                                     echo '<img src="' . $thumbsrc[0] . '" alt="' . $thumbalt . '">'; ?>
-								</div>
-							<?php endif; ?>
-							<?php if (get_field('url')): ?>
-								<div class="url">
-									<a href="<?php the_field('url'); ?>" class="icon-link-ext">Personal Website</a>
-								</div>
-							<?php endif;
+                </div>
+              <?php endif; ?>
+              <?php if (get_field('url')): ?>
+                <div class="url">
+                  <a href="<?php the_field('url'); ?>" class="icon-link-ext">Personal Website</a>
+                </div>
+              <?php endif;
 
                             // Display Next Colloquium
                             if ($upcomingcolloquia) {
@@ -182,52 +182,52 @@ get_header();
                                     echo '<div class="concerts"><h3>Next Concert</h3><ul>';
                                 }
                                 foreach ($upcomingconcerts as $item) : ?>
-									<li class="vevent clearfix">
-										<a href="<?php echo get_permalink($item->ID) ?>" class="url">
-											<?php $dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart', $item->ID) . ' 20:00')); ?>
-											<h4 class="dtstart"><time class="value-title" datetime="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>" title="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>">
-												<?php echo '<span class="month">' . $dtstart->format('M') . '</span> <span class="day">' . $dtstart->format('j'); ?>
-											</time></h4>
-											<div class="details">
-												<?php echo '<p class="summary">' . get_the_title($item->ID) . '</p>'; ?>
-												<p class="location vcard"><?php the_field('location', $item->ID); ?></p>
-											</div>
-										</a>
-									</li>
-								<?php endforeach;
+                  <li class="vevent clearfix">
+                    <a href="<?php echo get_permalink($item->ID) ?>" class="url">
+                      <?php $dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart', $item->ID) . ' 20:00')); ?>
+                      <h4 class="dtstart"><time class="value-title" datetime="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>" title="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>">
+                        <?php echo '<span class="month">' . $dtstart->format('M') . '</span> <span class="day">' . $dtstart->format('j'); ?>
+                      </time></h4>
+                      <div class="details">
+                        <?php echo '<p class="summary">' . get_the_title($item->ID) . '</p>'; ?>
+                        <p class="location vcard"><?php the_field('location', $item->ID); ?></p>
+                      </div>
+                    </a>
+                  </li>
+                <?php endforeach;
                                 echo '</div>';
                             }
 
                             ?>
 
-						</section> <!-- .secondary -->
-					<?php endif; ?>
+            </section> <!-- .secondary -->
+          <?php endif; ?>
 
-					<?php if ($archivemedia): ?>
-						<section class="composerav clearfix">
-							<h3>Performances from HGNM concerts</h3>
-							<ul class="audio clearfix">
-								<?php foreach ($archivemedia as $post) :
+          <?php if ($archivemedia): ?>
+            <section class="composerav clearfix">
+              <h3>Performances from HGNM concerts</h3>
+              <ul class="audio clearfix">
+                <?php foreach ($archivemedia as $post) :
                                     while (have_rows('programme', $post->ID)) : the_row();
                                         if (get_sub_field('composer')->ID == $testID && get_sub_field('embed_link')) : ?>
-											<li>
-												<p><span class="mediadt"><?php $concdt = DateTime::createFromFormat('d/m/Y', get_field('dtstart')); echo $concdt->format('n.j.Y'); ?></span><br /><em><?php the_sub_field('work_title', $post->ID); ?></em>, <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
-												<span class="embed-container"><?php the_sub_field('embed_link', $post->ID) ?></span>
-											</li>
-										<?php endif;
+                      <li>
+                        <p><span class="mediadt"><?php $concdt = DateTime::createFromFormat('d/m/Y', get_field('dtstart')); echo $concdt->format('n.j.Y'); ?></span><br /><em><?php the_sub_field('work_title', $post->ID); ?></em>, <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+                        <span class="embed-container"><?php the_sub_field('embed_link', $post->ID) ?></span>
+                      </li>
+                    <?php endif;
                                     endwhile;
                                 endforeach; ?>
-							</ul>
-						</section> <!-- .composerav -->
-					<?php endif; ?>
+              </ul>
+            </section> <!-- .composerav -->
+          <?php endif; ?>
 
-					<section class="composers-link">
-						<?php echo '<a href="' . get_post_type_archive_link('member') . '">See all composers »</a>'; ?>
-					</section>
-				</article><!-- #post -->
-			<?php endwhile; ?>
-		<?php else: ?>
-		<?php endif;
+          <section class="composers-link">
+            <?php echo '<a href="' . get_post_type_archive_link('member') . '">See all composers »</a>'; ?>
+          </section>
+        </article><!-- #post -->
+      <?php endwhile; ?>
+    <?php else: ?>
+    <?php endif;
 
 get_footer();
 

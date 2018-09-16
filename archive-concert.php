@@ -178,70 +178,70 @@ get_header();
         } elseif ($seasonstart > date('Ymd') && !have_posts()) {
             // What should happen if it is the *next* season but there are no posts
             echo '<h2>Archives: ' . $seasontitle . '</h2>'; ?>
-					<p>We’re busy planning for next season, but the details aren’t available yet. Check back soon and in the meantime, why not <a href="<?php echo get_post_type_archive_link('colloquium') ?>">check out what’s happening right now</a>?</p></p>
-		<?php
+          <p>We’re busy planning for next season, but the details aren’t available yet. Check back soon and in the meantime, why not <a href="<?php echo get_post_type_archive_link('colloquium') ?>">check out what’s happening right now</a>?</p></p>
+    <?php
         } elseif (!have_posts() && !$colloquia && !$miscevents) {
             // What should happen there are no posts
             echo '<h2>Archives: ' . $seasontitle . '</h2>'; ?>
-					<p>Whoops, looks like we don’t have any events for this season. Why not <a href="<?php echo get_post_type_archive_link('colloquium') ?>">check out what’s happening right now</a>?</p></p>
-		<?php
+          <p>Whoops, looks like we don’t have any events for this season. Why not <a href="<?php echo get_post_type_archive_link('colloquium') ?>">check out what’s happening right now</a>?</p></p>
+    <?php
         } else {
             // OK, now we’re talking. Check if posts exist?
             // Display archive header and navigation
             ?>
-				<header class="archive-header">
-					<h2>Archives<br /><?php echo $seasontitle ?></h2>
-					<nav id="archive-nav" class="clearfix">
-						<?php if ($previousyear) : ?>
-							<a href="<?php echo get_post_type_archive_link('concert') . $previousyear . '/'; ?>" class="left">
-								<span class="icon icon-left-arrow-bold" aria-hidden="true"></span>
-								<span class="text">Older Archive</span>
-							</a>
-						<?php endif; ?>
-						<?php if ($nextyear) : ?>
-							<a href="<?php echo get_post_type_archive_link('concert') . $nextyear . '/'; ?>" class="right">
-								<span class="text">Newer Archive</span>
-								<span class="icon icon-right-arrow-bold" aria-hidden="true"></span>
-							</a>
-						<?php endif; ?>
-					</nav>
-				</header>
-			<?php
+        <header class="archive-header">
+          <h2>Archives<br /><?php echo $seasontitle ?></h2>
+          <nav id="archive-nav" class="clearfix">
+            <?php if ($previousyear) : ?>
+              <a href="<?php echo get_post_type_archive_link('concert') . $previousyear . '/'; ?>" class="left">
+                <span class="icon icon-left-arrow-bold" aria-hidden="true"></span>
+                <span class="text">Older Archive</span>
+              </a>
+            <?php endif; ?>
+            <?php if ($nextyear) : ?>
+              <a href="<?php echo get_post_type_archive_link('concert') . $nextyear . '/'; ?>" class="right">
+                <span class="text">Newer Archive</span>
+                <span class="icon icon-right-arrow-bold" aria-hidden="true"></span>
+              </a>
+            <?php endif; ?>
+          </nav>
+        </header>
+      <?php
             // Display archived concerts for $yearquery season
             if (have_posts()) : ?>
-				<section class="concerts <?php if (!$colloquia) {
+        <section class="concerts <?php if (!$colloquia) {
                 echo 'solo';
             } ?>">
-					<h3>Concerts</h3>
-					<ul>
-						<?php while (have_posts()) {
+          <h3>Concerts</h3>
+          <ul>
+            <?php while (have_posts()) {
                 the_post();
                 component('concert_list_item', array( "id" => get_the_ID() ));
             } ?>
-					</ul>
-				</section>
-			<?php else: ?>
-			<?php endif;
+          </ul>
+        </section>
+      <?php else: ?>
+      <?php endif;
             // Display archived colloquia for $yearquery season
             if ($colloquia) : ?>
-				<section class="colloquia <?php if (!have_posts()) {
+        <section class="colloquia <?php if (!have_posts()) {
                 echo 'solo';
             } ?>">
-					<h3>Colloquia</h3>
-					<?php
+          <h3>Colloquia</h3>
+          <?php
                         component('colloquium_list', array("colloquia" => $colloquia))
                     ?>
-				</section>
-			<?php endif;
+        </section>
+      <?php endif;
             // Display archived miscellaneous events for $yearquery season
             if ($miscevents): ?>
-				<section class="miscevents">
-					<h3>Other Events</h3>
-					<ul>
-					<?php foreach ($miscevents as $miscevent): ?>
-						<li class="vevent clearfix">
-							<h4 class="dtstart">
-								<?php
+        <section class="miscevents">
+          <h3>Other Events</h3>
+          <ul>
+          <?php foreach ($miscevents as $miscevent): ?>
+            <li class="vevent clearfix">
+              <h4 class="dtstart">
+                <?php
                                 $dtstart = DateTime::createFromFormat('d/m/Y', get_field('dtstart', $miscevent->ID));
             $dtend = DateTime::createFromFormat('d/m/Y', get_field('dtend', $miscevent->ID));
             echo '<time class="value-title" datetime="' . $dtstart->format('Y-m-d\TH:i:sO') . '" title="' . $dtstart->format('Y-m-d\TH:i:sO') . '">';
@@ -250,17 +250,17 @@ get_header();
                                             echo $dtstart->format('n/j') . '–' . $dtend->format('j'); else :
                                             echo $dtstart->format('n/j') . '–' . $dtend->format('n/j');
             endif; ?>
-									<?php else : ?>
-										<?php echo $dtstart->format('n/j'); ?>
-									<?php endif; ?>
-								</time>
-							</h4>
-							<span class="summary"><a href="<?php echo get_permalink($miscevent->ID) ?>" class="url"><?php echo get_the_title($miscevent->ID); ?></a></span>
-						</li>
-					<?php endforeach; ?>
-					</ul>
-				</section>
-			<?php endif;
+                  <?php else : ?>
+                    <?php echo $dtstart->format('n/j'); ?>
+                  <?php endif; ?>
+                </time>
+              </h4>
+              <span class="summary"><a href="<?php echo get_permalink($miscevent->ID) ?>" class="url"><?php echo get_the_title($miscevent->ID); ?></a></span>
+            </li>
+          <?php endforeach; ?>
+          </ul>
+        </section>
+      <?php endif;
 
             if ($menuitems) {
                 echo '<footer id="years-nav"><h3>Explore Seasons</h3><ul>';

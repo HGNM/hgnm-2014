@@ -53,12 +53,12 @@ get_header();
                         }
                     }
                 } elseif (get_field('dtstart') && $start_time) {
-                        // if start_time is set but not dtend
-                        echo $dtstart->format('l, j F Y, g:ia');
-                    } elseif (get_field('dtstart')) {
-                        // if only dtstart is set
-                        echo $dtstart->format('l, j F Y');
-                    } ?>
+                    // if start_time is set but not dtend
+                    echo $dtstart->format('l, j F Y, g:ia');
+                } elseif (get_field('dtstart')) {
+                    // if only dtstart is set
+                    echo $dtstart->format('l, j F Y');
+                } ?>
 					</time></p>
 
 

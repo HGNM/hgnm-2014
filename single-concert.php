@@ -3,7 +3,7 @@
 get_header();
 
         if (have_posts()) : ?>
-			<?php while (have_posts()) : the_post();
+      <?php while (have_posts()) : the_post();
             $postclass = 'p-section vevent';
             if (get_field('summary')) {
                 $postclass = $postclass . ' has-summary';
@@ -15,9 +15,9 @@ get_header();
                 $postclass = $postclass . ' has-docs';
             }
             ?>
-			<article id="post-<?php the_ID(); ?>" <?php post_class($postclass); ?>>
-				<h2 class="post-title summary"><?php the_title(); ?></h2>
-				<?php if (get_field('support')) {
+      <article id="post-<?php the_ID(); ?>" <?php post_class($postclass); ?>>
+        <h2 class="post-title summary"><?php the_title(); ?></h2>
+        <?php if (get_field('support')) {
                 if (get_field('support') == 'Fromm') {
                     echo '<p class="support">Supported by the Fromm Music Foundation</p>';
                 }
@@ -25,9 +25,9 @@ get_header();
                     echo '<p class="support">The Thelma E. Goldberg Concert</p>';
                 }
             } ?>
-				<?php component('edit_button') ?>
+        <?php component('edit_button') ?>
 
-				<?php
+        <?php
                 // SET START TIME VARIABLE
                 if (get_field('start_time')) {
                     $start_time = get_field('start_time');
@@ -44,23 +44,23 @@ get_header();
 
                 // EVENT META — date, time & location
                 ?>
-				<section class="event-meta">
-					<p class="dtstart"><time class="value" datetime="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>">
-						<?php echo $dtstart->format('l, j F Y, g:ia'); ?>
-					</time></p>
+        <section class="event-meta">
+          <p class="dtstart"><time class="value" datetime="<?php echo $dtstart->format('Y-m-d\TH:i:sO'); ?>">
+            <?php echo $dtstart->format('l, j F Y, g:ia'); ?>
+          </time></p>
 
-					<p class="location"><?php the_field('location') ?></p>
+          <p class="location"><?php the_field('location') ?></p>
 
-					<?php if ($dtstart->format('Ymd') > date('Ymd')) : ?>
-						<p class="tickets"><span class="price">free</span> & open to the public</p>
-					<?php endif; ?>
-				</section>
+          <?php if ($dtstart->format('Ymd') > date('Ymd')) : ?>
+            <p class="tickets"><span class="price">free</span> & open to the public</p>
+          <?php endif; ?>
+        </section>
 
-				<?php
+        <?php
                 // SUMMARY FIELD
                 if (get_field('summary')): ?>
-				<section class="description clearfix">
-					<?php // If the poster custom field is an image, display it with the summary (if present)
+        <section class="description clearfix">
+          <?php // If the poster custom field is an image, display it with the summary (if present)
                     if (get_field('poster_pdf')) {
                         $posterimg = get_field('poster_pdf');
                         // Check poster attachment is an image
@@ -73,16 +73,16 @@ get_header();
                             echo '</aside>';
                         }
                     } ?>
-					<?php the_field('summary'); ?>
-				</section>
-				<?php endif; ?>
+          <?php the_field('summary'); ?>
+        </section>
+        <?php endif; ?>
 
-				<?php
+        <?php
                 // PROGRAMME CONTENT
                 if (have_rows('programme') || have_rows('programme_plus')): ?>
-					<section class="programme">
-						<h3>Program</h3>
-							<?php
+          <section class="programme">
+            <h3>Program</h3>
+              <?php
                             // Get programme data from custom fields
                             $programme = get_field('programme');
                             $programmeplus = get_field('programme_plus');
@@ -142,10 +142,10 @@ get_header();
                             }
 
                             // Output if there is a complete list of work titles
-                            // Format: 	<li>
-                            //				<strong class="composer">COMPOSER-NAME</strong><br />
-                            // 				<em class="work_title">WORK-TITLE</em>
-                            //			</li>
+                            // Format:   <li>
+                            //        <strong class="composer">COMPOSER-NAME</strong><br />
+                            //         <em class="work_title">WORK-TITLE</em>
+                            //      </li>
                             // With a link wrapped around COMPOSER-NAME where present
                             if ($hasworks) {
                                 echo '<ul>';
@@ -197,10 +197,10 @@ get_header();
                                 echo '</p>';
                             } ?>
 
-					</section><!-- .programme -->
-				<?php endif; ?>
+          </section><!-- .programme -->
+        <?php endif; ?>
 
-				<?php
+        <?php
                 // ARCHIVE CONTENT
                 if (get_field('poster_pdf') || get_field('programme_pdf')) {
                     echo '<section class="archive-docs"><h3>Related Files</h3><ul>';
@@ -227,26 +227,26 @@ get_header();
                 }
                 ?>
 
-				<?php if (get_field('performer_url') || get_field('facebook_url')) : ?>
-					<section class="external-links clearfix <?php if (get_field('performer_url') & get_field('facebook_url')) {
+        <?php if (get_field('performer_url') || get_field('facebook_url')) : ?>
+          <section class="external-links clearfix <?php if (get_field('performer_url') & get_field('facebook_url')) {
                     echo 'both';
                 } ?>">
-						<ul>
-							<?php
+            <ul>
+              <?php
                             // PERFORMER LINK
                             if (get_field('performer_url')): ?>
-								<li><a href="<?php esc_url(the_field('performer_url')); ?>">Find out more about <span class="perfname"><?php the_title(); ?><span class="icon icon-link-ext" aria-hidden="true"></span></span></a></li>
-							<?php endif; ?>
-							<?php
+                <li><a href="<?php esc_url(the_field('performer_url')); ?>">Find out more about <span class="perfname"><?php the_title(); ?><span class="icon icon-link-ext" aria-hidden="true"></span></span></a></li>
+              <?php endif; ?>
+              <?php
                             // FACEBOOK LINK
                             if (get_field('facebook_url')): ?>
-								<li><a href="<?php esc_url(the_field('facebook_url')); ?>">See this event on Facebook <span class="icon icon-facebook" aria-hidden="true"></span></a></li>
-							<?php endif; ?>
-						</ul>
-					</section>
-				<?php endif; ?>
+                <li><a href="<?php esc_url(the_field('facebook_url')); ?>">See this event on Facebook <span class="icon icon-facebook" aria-hidden="true"></span></a></li>
+              <?php endif; ?>
+            </ul>
+          </section>
+        <?php endif; ?>
 
-				<?php
+        <?php
                 // A/V CONTENT
                 if (get_field('a_v')) {
                     $audiolist = $fullprogramme;
@@ -282,27 +282,27 @@ get_header();
                 }
                 ?>
 
-				<?php
+        <?php
                 // GALLERY
                 $images = get_field('gallery');
 
                 if ($images): ?>
-				<section class="gallery">
-					<h3>Photos</h3>
-				    <ul class="popup-gallery clearfix">
-				        <?php foreach ($images as $image): ?>
-				            <li>
-				            	<a href="<?php echo $image['sizes']['large']; ?>" title="<?php echo $image['title']; ?>" data-at-333="<?php echo $image['sizes']['medium']; ?>" data-at-1137="<?php echo $image['sizes']['large']; ?>">
-				            		 <img src="<?php echo $image['sizes']['hgnm-thumb']; ?>" alt="<?php echo $image['alt']; ?>" />
-				            	</a>
-				            </li>
-				        <?php endforeach; ?>
-				    </ul>
-			    </section>
-				<?php endif; ?>
+        <section class="gallery">
+          <h3>Photos</h3>
+            <ul class="popup-gallery clearfix">
+                <?php foreach ($images as $image): ?>
+                    <li>
+                      <a href="<?php echo $image['sizes']['large']; ?>" title="<?php echo $image['title']; ?>" data-at-333="<?php echo $image['sizes']['medium']; ?>" data-at-1137="<?php echo $image['sizes']['large']; ?>">
+                         <img src="<?php echo $image['sizes']['hgnm-thumb']; ?>" alt="<?php echo $image['alt']; ?>" />
+                      </a>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+          </section>
+        <?php endif; ?>
 
-				<section class="archive-link">
-				<?php
+        <section class="archive-link">
+        <?php
                 //ARCHIVE LINK - shows link to archive for season that includes this concert
                     if ($dtstart->format('m') > 8) {
                         $yearquery = $dtstart->format('Y');
@@ -316,12 +316,12 @@ get_header();
                     }
                     echo '<a href="' . get_post_type_archive_link('concert') . $yearquery . '/">See all events in the ' . $seasontitle . ' season »</a>';
                 ?>
-				</section>
+        </section>
 
-			</article><!-- #post-ID .vevent -->
-			<?php endwhile; ?>
-		<?php else: ?>
-		<?php endif;
+      </article><!-- #post-ID .vevent -->
+      <?php endwhile; ?>
+    <?php else: ?>
+    <?php endif;
 
 get_footer();
 

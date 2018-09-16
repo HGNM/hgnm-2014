@@ -265,7 +265,7 @@ if (!class_exists('ThemeUpdate')):
 class ThemeUpdate
 {
     public $version;      //Version number.
-    public $homepage;  		//The URL where the user can learn more about this version.
+    public $homepage;      //The URL where the user can learn more about this version.
     public $download_url; //The download URL for this version of the theme. Optional.
 
     /**

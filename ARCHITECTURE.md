@@ -271,7 +271,7 @@ if (!function_exists('pretty_p')) {
     {
         $html = '<p class="pretty">';
         if (array_key_exists('text', $opts)) {
-        	$html .= $opts['text'];
+            $html .= $opts['text'];
         }
         $html .= '</p>';
         return $html;

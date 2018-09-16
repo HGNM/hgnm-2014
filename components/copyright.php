@@ -1,19 +1,21 @@
 <?php
-// Generate a copyright string in the form:
-// “Copyright © <START_YEAR>–<END_YEAR> Harvard Group for New Music”
 if (!function_exists('hgnm_copyright')) {
+    /**
+     * Construct a copyright notice from post dates
+     * @return string A copyright notice
+     */
     function hgnm_copyright()
     {
         global $wpdb;
         $copyright_dates = $wpdb->get_results("
-      SELECT
-      YEAR(min(post_date_gmt)) AS firstdate,
-      YEAR(max(post_date_gmt)) AS lastdate
-      FROM
-      $wpdb->posts
-      WHERE
-      post_status = 'publish'
-    ");
+            SELECT
+            YEAR(min(post_date_gmt)) AS firstdate,
+            YEAR(max(post_date_gmt)) AS lastdate
+            FROM
+            $wpdb->posts
+            WHERE
+            post_status = 'publish'
+        ");
         $rightsholder = get_bloginfo('name');
         $output = '';
         if ($copyright_dates) {
@@ -28,4 +30,4 @@ if (!function_exists('hgnm_copyright')) {
     }
 }
 
-echo hgnm_copyright();
+return hgnm_copyright();

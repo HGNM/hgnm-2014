@@ -169,7 +169,9 @@ if (have_posts()) :
                 echo '<div class="colloquia"><h3>Next Colloquium</h3>';
                 foreach ($upcomingcolloquia as $item) {
                     $dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart', $item->ID) . ' 12:00'));
-                    echo '<h4 class="dtstart">' . $dtstart->format('l, j F — Ga') . '</h4>';
+                    echo '<h4 class="dtstart">' .
+                            $dtstart->format('l, j F — Ga') .
+                         '</h4>';
                     component(
                         'colloquium_location_link',
                         array( "location_only" => true )
@@ -180,37 +182,20 @@ if (have_posts()) :
             }
 
             // Display Next Concerts
-            if ($upcomingconcerts) :
+            if ($upcomingconcerts) {
+                $heading = 'Next Concert';
                 if (count($upcomingconcerts) > 1) {
-                    echo '<div class="concerts"><h3>Upcoming Concerts</h3><ul>';
-                } else {
-                    echo '<div class="concerts"><h3>Next Concert</h3><ul>';
+                    $heading = 'Upcoming Concerts';
                 }
-                foreach ($upcomingconcerts as $item) : ?>
-    <li class="vevent clearfix">
-      <a href="<?= get_permalink($item->ID) ?>" class="url">
-        <?php       $dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart', $item->ID) . ' 20:00')); ?>
-        <h4 class="dtstart">
-          <time class="value-title"
-                datetime="<?= $dtstart->format('Y-m-d\TH:i:sO'); ?>"
-                title="<?= $dtstart->format('Y-m-d\TH:i:sO'); ?>">
-            <span class="month"><?= $dtstart->format('M') ?></span>
-            <span class="day"><?= $dtstart->format('j'); ?></span>
-          </time>
-        </h4>
-        <div class="details">
-          <p class="summary">
-            <?= get_the_title($item->ID); ?>
-          </p>
-          <p class="location vcard">
-            <?php   the_field('location', $item->ID); ?>
-          </p>
-        </div>
-      </a>
-    </li>
-    <?php       endforeach;
-                echo '</div>';
-            endif;
+                echo '<div class="concerts">' .
+                       '<h3>' . $heading . '</h3>' .
+                       '<ul>';
+                foreach ($upcomingconcerts as $concert) {
+                    component('concert_list_item', array("id" => $concert->ID));
+                }
+                echo   '</ul>' .
+                     '</div>';
+            }
     ?>
   </section> <!-- .secondary -->
   <?php endif;

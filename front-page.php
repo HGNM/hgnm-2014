@@ -159,7 +159,11 @@ get_header();
 			)
 		));
 
-		if($posts) { component('member_list', $posts); }
+		if($posts) {
+			component('member_list', array(
+				"members" => $posts
+			));
+		}
 
 		// Display archive link
 		?>

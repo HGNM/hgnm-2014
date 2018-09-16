@@ -4,7 +4,7 @@ get_header();
 
 		// Get composers names, photos and permalinks
 		$today = date('Ymd', strtotime('-1 day'));
-		$posts = get_posts(array(
+		$members = get_posts(array(
 			'numberposts' => -1,
 			'post_type' => 'member',
 			'orderby' => 'title',
@@ -26,12 +26,15 @@ get_header();
 
 		echo '<article>';
 
-		if($posts) { component('member_list', $posts); }
-
+		if ($members) {
+			component('member_list', array(
+				"members" => $members
+			));
+		}
 
 		// Get graduated composers names, photos and permalinks
 		$today = date('Ymd', strtotime('-1 day'));
-		$posts2 = get_posts(array(
+		$past_members = get_posts(array(
 			'numberposts' => -1,
 			'post_type' => 'member',
 			'meta_key' => 'dtend',
@@ -52,25 +55,20 @@ get_header();
 				)
 			)
 		));
-		if($posts2)
-		{
-			echo '<section class="composers p-section"><h2>Past Members</h2><ul class="clearfix">';
-			foreach($posts2 as $post)
-			{
-				$imgsrc = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'hgnm-thumb');
-				echo '<li><a href="' . get_permalink($post->ID) . '">';
-				echo '<span>' . get_the_title($post->ID) . '</span>' . '</a></li>';
-			}
-			echo '</ul></section>';
+
+		if ($past_members) {
+			component('member_list', array(
+				"members" => $past_members,
+				"heading" => 'Past Members',
+				"show_image" => false
+			));
 		}
 
-		if( !$posts && !$posts2 ) {
+		if (!$members && !$past_members) {
 			echo '<section class="composers p-section"><h2>Composers</h2><p>I’m afraid it looks like there aren’t any composers to show you yet.</p>';
 		}
 
 		echo '</article>';
-
-
 
 get_footer();
 

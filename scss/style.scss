@@ -35,25 +35,25 @@ html {
 }
 
 body {
-	background: $off-white;
+  background: $off-white;
 }
 
 *, *:after, *:before {
-	-moz-font-feature-settings:"kern" 1, "liga" 1;
-	-ms-font-feature-settings:"kern" 1, "liga" 1;
-	-o-font-feature-settings:"kern" 1, "liga" 1;
-	-webkit-font-feature-settings:"kern" 1, "liga" 1;
-	font-feature-settings:"kern" 1, "liga" 1;
+  -moz-font-feature-settings:"kern" 1, "liga" 1;
+  -ms-font-feature-settings:"kern" 1, "liga" 1;
+  -o-font-feature-settings:"kern" 1, "liga" 1;
+  -webkit-font-feature-settings:"kern" 1, "liga" 1;
+  font-feature-settings:"kern" 1, "liga" 1;
 }
 
 ::-moz-selection {
-	color:#fff;
+  color:#fff;
     background: $selection-bg;
     text-shadow: none;
 }
 
 ::selection {
-	color:#fff;
+  color:#fff;
     background: $selection-bg;
     text-shadow: none;
 }
@@ -118,7 +118,7 @@ textarea {
   font-family: 'hgnm';
   src: url('font/hgnm.eot');
   src: url('font/hgnm.eot?#iefix') format('embedded-opentype'),
-			 url('font/hgnm.woff2') format('woff2'),
+       url('font/hgnm.woff2') format('woff2'),
        url('font/hgnm.woff') format('woff');
   font-weight: normal;
   font-style: normal;
@@ -167,58 +167,58 @@ textarea {
    General Styles
    ========================================================================== */
 h2 {
-	font-size: 2em;
-	font-family: $display-stack;
-	letter-spacing: 0.2em;
-	text-transform: uppercase;
-	line-height: 1.2;
-	margin: 0 0 0.6em;
-	text-align:center;
-	color: $black;
+  font-size: 2em;
+  font-family: $display-stack;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin: 0 0 0.6em;
+  text-align:center;
+  color: $black;
 }
 
 h3 {
-	font-size: 1.5em;
-	line-height: 1.5;
-	margin: 0 0 1em;
+  font-size: 1.5em;
+  line-height: 1.5;
+  margin: 0 0 1em;
 }
 
 p {
-	margin: 0 0 1.5em;
+  margin: 0 0 1.5em;
 }
 
 blockquote {
-	margin: 0 1.5em 0 0;
-	padding-left: 1em;
-	border-left: solid 0.5em $darken-tint;
+  margin: 0 1.5em 0 0;
+  padding-left: 1em;
+  border-left: solid 0.5em $darken-tint;
 }
 
 /* ==========================================================================
    Embed Styles
    ========================================================================== */
 iframe {
-	max-width:100%;
+  max-width:100%;
 }
 
 /* embedresponsively.com */
 .embed-container {
-	position: relative;
-	padding-bottom: 56.25%;
-	height: 0;
-	overflow: hidden;
-	max-width: 100%;
-	height: auto;
-	margin-bottom:1.5em;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+  margin-bottom:1.5em;
 }
 
 .embed-container iframe,
 .embed-container object,
 .embed-container embed {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 /* ==========================================================================
    Section Background Styles
@@ -229,393 +229,393 @@ iframe {
    Header Styles
    ========================================================================== */
 #page {
-	overflow:hidden;
-	margin: 0 auto;
-	.site-header {
-		height: 3em;
-		color: $reverse-text;
-		background: $black;
-		h1 {
-			font-size: 2.5em;
-			line-height: 1;
-			font-family: $display-stack;
-			margin: .15em 0 0;
-			letter-spacing: 0.2em;
-			float:left;
-			padding-left:5%;
-			.lowercase {
-				display: none;
-			}
-		}
-		a {
-			text-decoration: none;
-			color: $reverse-text;
-			@include transition(all 0.2s ease-out);
-		}
+  overflow:hidden;
+  margin: 0 auto;
+  .site-header {
+    height: 3em;
+    color: $reverse-text;
+    background: $black;
+    h1 {
+      font-size: 2.5em;
+      line-height: 1;
+      font-family: $display-stack;
+      margin: .15em 0 0;
+      letter-spacing: 0.2em;
+      float:left;
+      padding-left:5%;
+      .lowercase {
+        display: none;
+      }
+    }
+    a {
+      text-decoration: none;
+      color: $reverse-text;
+      @include transition(all 0.2s ease-out);
+    }
 
-	// == Accessible Mobile Menu Styling == //
+  // == Accessible Mobile Menu Styling == //
 
-		.menu {
-			font-family: $sans-stack;
-			text-transform: uppercase;
-			letter-spacing: 0.15em;
-			font-weight: 700;
-			line-height: 2;
-			display: none;
-			clear:both;
-			ul {
-				list-style-type: none;
-				margin: 0;
-				padding: 0;
-			}
-			li:nth-child(odd) {
-				background-color: $menu-stripe-odd;
-			}
-			li:nth-child(even) {
-				background-color: $menu-stripe-even;
-			}
-			.current-menu-item a:before {
-				content: '▶ ';
-			}
-			a {
-				color: $reverse-text;
-				display: block;
-				padding: .5em 5%;
-			}
-		}
+    .menu {
+      font-family: $sans-stack;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-weight: 700;
+      line-height: 2;
+      display: none;
+      clear:both;
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      li:nth-child(odd) {
+        background-color: $menu-stripe-odd;
+      }
+      li:nth-child(even) {
+        background-color: $menu-stripe-even;
+      }
+      .current-menu-item a:before {
+        content: '▶ ';
+      }
+      a {
+        color: $reverse-text;
+        display: block;
+        padding: .5em 5%;
+      }
+    }
 
-		.menu.active {
-			display: block;
-		}
+    .menu.active {
+      display: block;
+    }
 
-		.no-js .menu {
-			display: block;
-		}
+    .no-js .menu {
+      display: block;
+    }
 
-		.menu-button {
-			color: $text-color;
-			background-color: $menu-highlight;
-			border: none;
-			font-size: 1.5em;
-			font-weight:700;
-			text-transform:uppercase;
-			font-family: $sans-stack;
-			letter-spacing: 0.1em;
-			line-height: 2;
-			float:right;
-			width: auto;
-			height: 2em;
-			padding:0 0.5em;
-		}
+    .menu-button {
+      color: $text-color;
+      background-color: $menu-highlight;
+      border: none;
+      font-size: 1.5em;
+      font-weight:700;
+      text-transform:uppercase;
+      font-family: $sans-stack;
+      letter-spacing: 0.1em;
+      line-height: 2;
+      float:right;
+      width: auto;
+      height: 2em;
+      padding:0 0.5em;
+    }
 
-		.menu-button.active {
-			color: $reverse-text;
-			background-color: $menu-stripe-odd;
-		}
-	} // </header>
-	header.active {
-		height:auto;
-	}
-	#torso {
-		a,
-		a:visited {
-			color: $link-text;
-			text-decoration: none;
-			border-bottom: 2px solid $link-highlight;
-			@include transition(all 0.2s ease-out);
-		}
+    .menu-button.active {
+      color: $reverse-text;
+      background-color: $menu-stripe-odd;
+    }
+  } // </header>
+  header.active {
+    height:auto;
+  }
+  #torso {
+    a,
+    a:visited {
+      color: $link-text;
+      text-decoration: none;
+      border-bottom: 2px solid $link-highlight;
+      @include transition(all 0.2s ease-out);
+    }
 
-		a:hover {
-			background: $link-highlight;
-			@include transition(all 0.2s ease-in);
-		}
-		/* ==========================================================================
-		   Front Page Styles
-		   ========================================================================== */
+    a:hover {
+      background: $link-highlight;
+      @include transition(all 0.2s ease-in);
+    }
+    /* ==========================================================================
+       Front Page Styles
+       ========================================================================== */
 
-		.fp-section,
-		.p-section {
-			padding:$body-padding;
-			padding-top:1.5em;
-			padding-bottom:1.5em;
-			ul {
-				list-style: none;
-				padding: 0;
-				margin:0;
-			}
-			.description, .primary.entry {
-				ul {
-					list-style: disc;
-					padding-left: 1em;
-					margin-bottom: 1.5em;
-				}
-			}
-		}
+    .fp-section,
+    .p-section {
+      padding:$body-padding;
+      padding-top:1.5em;
+      padding-bottom:1.5em;
+      ul {
+        list-style: none;
+        padding: 0;
+        margin:0;
+      }
+      .description, .primary.entry {
+        ul {
+          list-style: disc;
+          padding-left: 1em;
+          margin-bottom: 1.5em;
+        }
+      }
+    }
 
-		#fp-blurb {
-			.social-link {
-				font-family: $sans-stack;
-				margin-bottom:3em;
-				clear:both;
-				a {
-					padding: 1.2em 5%;
-					display: block;
-					border-bottom: none;
-					text-align: center;
-					background: $link-highlight;
-					font-size: 1.25em;
-					line-height: 1.2;
-					margin-bottom:0;
-				}
-				a:hover {
-					margin-right: 5%;
-					margin-left: 5%;
-					background: $black;
-					color: $link-highlight;
-				}
-			}
-		}
+    #fp-blurb {
+      .social-link {
+        font-family: $sans-stack;
+        margin-bottom:3em;
+        clear:both;
+        a {
+          padding: 1.2em 5%;
+          display: block;
+          border-bottom: none;
+          text-align: center;
+          background: $link-highlight;
+          font-size: 1.25em;
+          line-height: 1.2;
+          margin-bottom:0;
+        }
+        a:hover {
+          margin-right: 5%;
+          margin-left: 5%;
+          background: $black;
+          color: $link-highlight;
+        }
+      }
+    }
 
-		#events {
-			font-family: $sans-stack;
-			h3 {
-				text-align: center;
-				font-size: 0.875em; // 14px
-				line-height:1.714285714; // 1.714… * 14px = 24px
-				text-transform:uppercase;
-				letter-spacing: .3em;
-				font-weight:700;
-				margin:0 0 2.571428571em; // 2.571… * 14px = 36px
-			}
-			.concerts {
-				margin-bottom:4.5em;
-				.vevent {
-					margin-bottom:1.5em;
-					@include transition(all 0.2s ease-out);
-					.dtstart {
-						text-align:center;
-						display:block;
-						float:left;
-						width:25%;
-						margin:0 5% 0 0;
-						background: $bright-green;
-						padding: 0 5%;
-						.month {
-							display:block;
-							text-transform:uppercase;
-							letter-spacing: 0.2em;
-							font-size: 1.25em;
-							line-height:1.4;
-							padding-top:0.4em;
-						}
-						.day {
-							display:block;
-							font-size: 5em;
-							line-height:0.6;
-							padding-bottom:0.3em;
-						}
-					}
-					.details {
-						display:block;
-						float:left;
-						width:60%;
-						font-size:1.25em;
-						line-height:1.8;
-						p {
-							margin: 0;
-						}
-						.summary {
-							font-weight:700;
-						}
-					}
-				} // </a>
-				.vevent:hover {
-					@include transition(all 0.2s ease-in);
-					margin-right: 5%;
-					margin-left: 5%;
-					background: $bright-green;
-					.dtstart {
-						background: $black;
-						color: $bright-green;
-					}
-				}
-			} // </.concerts>
-			.colloquia, .miscevents {
-				margin-bottom:4.5em;
-				text-align:center;
-				ul {
-					font-size:1.25em;
-					line-height:1.8;
-					margin-bottom:1.2em;
-					.dtstart {
-						display: block;
-						float:left;
-						width: 25%;
-						margin:0 5% 0 0;
-						padding: 0 5%;
-						letter-spacing:0.06em;
-					}
-					.summary {
-						display: block;
-						float:left;
-						width: 60%;
-						text-align: left;
-						.icon-link-ext:after {
-							color: $light-text;
-							font-size:80%;
-							padding-left: .1em;
-							@include transition(all 0.2s ease-out);
-						}
-						.icon-link-ext:hover:after {
-							color: $text-color;
-							@include transition(all 0.2s ease-in);
-						}
-					}
-				}
-				.icon-link-ext:after {
-					font-size: 80%;
-					padding-left: 0.3em;
-				}
-				.description {
-					margin-bottom: 2.4em;
-				}
-			} // </.colloquia, .miscevents>
-			.miscevents {
-				clear:both;
-				.vevent {
-					margin-bottom: 1.2em;
-				}
-			}
-			.more-events-link {
-				margin-bottom:3em;
-				clear:both;
-				a {
-					padding: 1.5em 5%;
-					display: block;
-					border-bottom: none;
-					text-align: center;
-					background: $link-highlight;
-					p {
-						font-size: 1.25em;
-						line-height: 1.2;
-						margin-bottom:0;
-					}
-				}
-				a:hover {
-					margin-right: 5%;
-					margin-left: 5%;
-					background: $black;
-					color: $link-highlight;
-				}
-			}
-		} // </#events>
+    #events {
+      font-family: $sans-stack;
+      h3 {
+        text-align: center;
+        font-size: 0.875em; // 14px
+        line-height:1.714285714; // 1.714… * 14px = 24px
+        text-transform:uppercase;
+        letter-spacing: .3em;
+        font-weight:700;
+        margin:0 0 2.571428571em; // 2.571… * 14px = 36px
+      }
+      .concerts {
+        margin-bottom:4.5em;
+        .vevent {
+          margin-bottom:1.5em;
+          @include transition(all 0.2s ease-out);
+          .dtstart {
+            text-align:center;
+            display:block;
+            float:left;
+            width:25%;
+            margin:0 5% 0 0;
+            background: $bright-green;
+            padding: 0 5%;
+            .month {
+              display:block;
+              text-transform:uppercase;
+              letter-spacing: 0.2em;
+              font-size: 1.25em;
+              line-height:1.4;
+              padding-top:0.4em;
+            }
+            .day {
+              display:block;
+              font-size: 5em;
+              line-height:0.6;
+              padding-bottom:0.3em;
+            }
+          }
+          .details {
+            display:block;
+            float:left;
+            width:60%;
+            font-size:1.25em;
+            line-height:1.8;
+            p {
+              margin: 0;
+            }
+            .summary {
+              font-weight:700;
+            }
+          }
+        } // </a>
+        .vevent:hover {
+          @include transition(all 0.2s ease-in);
+          margin-right: 5%;
+          margin-left: 5%;
+          background: $bright-green;
+          .dtstart {
+            background: $black;
+            color: $bright-green;
+          }
+        }
+      } // </.concerts>
+      .colloquia, .miscevents {
+        margin-bottom:4.5em;
+        text-align:center;
+        ul {
+          font-size:1.25em;
+          line-height:1.8;
+          margin-bottom:1.2em;
+          .dtstart {
+            display: block;
+            float:left;
+            width: 25%;
+            margin:0 5% 0 0;
+            padding: 0 5%;
+            letter-spacing:0.06em;
+          }
+          .summary {
+            display: block;
+            float:left;
+            width: 60%;
+            text-align: left;
+            .icon-link-ext:after {
+              color: $light-text;
+              font-size:80%;
+              padding-left: .1em;
+              @include transition(all 0.2s ease-out);
+            }
+            .icon-link-ext:hover:after {
+              color: $text-color;
+              @include transition(all 0.2s ease-in);
+            }
+          }
+        }
+        .icon-link-ext:after {
+          font-size: 80%;
+          padding-left: 0.3em;
+        }
+        .description {
+          margin-bottom: 2.4em;
+        }
+      } // </.colloquia, .miscevents>
+      .miscevents {
+        clear:both;
+        .vevent {
+          margin-bottom: 1.2em;
+        }
+      }
+      .more-events-link {
+        margin-bottom:3em;
+        clear:both;
+        a {
+          padding: 1.5em 5%;
+          display: block;
+          border-bottom: none;
+          text-align: center;
+          background: $link-highlight;
+          p {
+            font-size: 1.25em;
+            line-height: 1.2;
+            margin-bottom:0;
+          }
+        }
+        a:hover {
+          margin-right: 5%;
+          margin-left: 5%;
+          background: $black;
+          color: $link-highlight;
+        }
+      }
+    } // </#events>
 
-		.composers {
-			li {
-					margin-bottom:1em;
-					@include transition(all 0.2s ease-out);
-				a {
-					width: 100%;
-					height:5em;
-					overflow: hidden;
-					background: $bright-green;
-					color: $text-color;
-					text-decoration: none;
-					text-align: center;
-					text-transform: uppercase;
-					font-family: $sans-stack;
-					font-weight:700;
-					letter-spacing:0.15em;
-					display: inline-block;
-					border:none;
-					@include transition(all 0.1s ease-out);
-					img {
-						float:left;
-						max-width: 5em;
-						width: 35%;
-						@include filter(grayscale(1) contrast(125%) brightness(125%) saturate(100%));
-						@include transition(all 0.4s ease-out);
-					}
-					span {
-						font-size:0.85em;
-						display: inline-block;
-						line-height:5.88235294em;
-						max-width:61%;
-						padding: 0 2%;
-						white-space: nowrap;
-						overflow: hidden;
-						text-overflow: ellipsis;
-					}
-				} // </a>
-				a:hover {
-					background: $black;
-					color: $bright-green;
-					font-weight:400;
-					@include transition( all 0.1s ease-in);
-					img {
-						@include filter(grayscale(0) contrast(100%) brightness(100%) saturate(150%));
-						@include transition(all 0.4s ease-in);
-					}
-				}
-			} // </li>
-			li:hover {
-				padding: 0 5%;
-				@include transition( all 0.2s ease-in);
-			}
-			li:last-child {
-				margin-bottom:0;
-			}
-		} // </.composers>
-		.composers:nth-child(2) {
-			background: $overlay;
-		}
-		#fp-archive-link {
-			a {
-				padding: 1.5em 5%;
-				display: block;
-				border-bottom: none;
-				text-align: center;
-				background: $link-highlight;
-				p {
-					font-size: 1.25em;
-					line-height: 1.2;
-					margin-bottom:0;
-				}
-			}
-			a:hover {
-				margin: 0 5%;
-				background: $black;
-				color: $link-highlight;
-				h2 {
-					color: $link-highlight;
-				}
-			}
-		}
+    .composers {
+      li {
+          margin-bottom:1em;
+          @include transition(all 0.2s ease-out);
+        a {
+          width: 100%;
+          height:5em;
+          overflow: hidden;
+          background: $bright-green;
+          color: $text-color;
+          text-decoration: none;
+          text-align: center;
+          text-transform: uppercase;
+          font-family: $sans-stack;
+          font-weight:700;
+          letter-spacing:0.15em;
+          display: inline-block;
+          border:none;
+          @include transition(all 0.1s ease-out);
+          img {
+            float:left;
+            max-width: 5em;
+            width: 35%;
+            @include filter(grayscale(1) contrast(125%) brightness(125%) saturate(100%));
+            @include transition(all 0.4s ease-out);
+          }
+          span {
+            font-size:0.85em;
+            display: inline-block;
+            line-height:5.88235294em;
+            max-width:61%;
+            padding: 0 2%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+        } // </a>
+        a:hover {
+          background: $black;
+          color: $bright-green;
+          font-weight:400;
+          @include transition( all 0.1s ease-in);
+          img {
+            @include filter(grayscale(0) contrast(100%) brightness(100%) saturate(150%));
+            @include transition(all 0.4s ease-in);
+          }
+        }
+      } // </li>
+      li:hover {
+        padding: 0 5%;
+        @include transition( all 0.2s ease-in);
+      }
+      li:last-child {
+        margin-bottom:0;
+      }
+    } // </.composers>
+    .composers:nth-child(2) {
+      background: $overlay;
+    }
+    #fp-archive-link {
+      a {
+        padding: 1.5em 5%;
+        display: block;
+        border-bottom: none;
+        text-align: center;
+        background: $link-highlight;
+        p {
+          font-size: 1.25em;
+          line-height: 1.2;
+          margin-bottom:0;
+        }
+      }
+      a:hover {
+        margin: 0 5%;
+        background: $black;
+        color: $link-highlight;
+        h2 {
+          color: $link-highlight;
+        }
+      }
+    }
 
-	/* ==========================================================================
-	   Meta Styles
-	   ========================================================================== */
-		a.edit-button {
-			padding: 0.75em;
-			background: $secondary-highlight;
-			border-bottom: 0;
-			font-family: $sans-stack;
-			text-transform: uppercase;
-			letter-spacing: 0.15em;
-			font-weight: 700;
-			color: $reverse-text;
-			border-radius: 0.15em;
-			width: 3em;
-			display: block;
-			text-align: center;
-			margin: 1.5em auto;
-		}
-		a.edit-button:hover {
-			color: $black;
-			background: $link-highlight;
-		}
+  /* ==========================================================================
+     Meta Styles
+     ========================================================================== */
+    a.edit-button {
+      padding: 0.75em;
+      background: $secondary-highlight;
+      border-bottom: 0;
+      font-family: $sans-stack;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-weight: 700;
+      color: $reverse-text;
+      border-radius: 0.15em;
+      width: 3em;
+      display: block;
+      text-align: center;
+      margin: 1.5em auto;
+    }
+    a.edit-button:hover {
+      color: $black;
+      background: $link-highlight;
+    }
 
-	} // </#torso>
+  } // </#torso>
 } // </#page>
 
 /* ==========================================================================
@@ -623,566 +623,566 @@ iframe {
    ========================================================================== */
 
 .archive-header {
-	text-align: center;
-	#archive-nav {
-		margin-bottom: 1.5em;
-		.left, .right {
-			.icon {
-				display:none;
-			}
-		}
-	}
+  text-align: center;
+  #archive-nav {
+    margin-bottom: 1.5em;
+    .left, .right {
+      .icon {
+        display:none;
+      }
+    }
+  }
 }
 
 #page {
-	#torso {
-		.archive-header {
-			#archive-nav {
-				font-size: 2em;
-				position: relative;
-				top: -2.1em;
-				height: 0;
-				width: 100%;
-				max-width: 12em;
-				margin: 0 auto;
-				line-height: 1;
-				.left,.right {
-					border-bottom: none;
-					background: $link-highlight;
-					.icon {
-						display:inline-block;
-						padding: 0.2em 0.1em 0.1em;
-					}
-					.text {
-						clip: rect(0 0 0 0);
-						overflow: hidden;
-						position: absolute;
-						height: 1px;
-						width: 1px;
-					}
-				}
-				.left:hover,.right:hover {
-					background: $black;
-					color: $link-highlight;
-				}
-				.left {
-					position:absolute;
-					top: 0;
-					left: 0;
-					.icon {
-						padding-right:0.2em;
-					}
-				}
-				.right {
-					position:absolute;
-					top: 0;
-					right: 0;
-					.icon {
-						padding-left:0.2em;
-					}
-				}
-				.icon-left-arrow-bold:before, .icon-right-arrow-bold:before {
-					margin:0;
-				}
-			}
-		}
+  #torso {
+    .archive-header {
+      #archive-nav {
+        font-size: 2em;
+        position: relative;
+        top: -2.1em;
+        height: 0;
+        width: 100%;
+        max-width: 12em;
+        margin: 0 auto;
+        line-height: 1;
+        .left,.right {
+          border-bottom: none;
+          background: $link-highlight;
+          .icon {
+            display:inline-block;
+            padding: 0.2em 0.1em 0.1em;
+          }
+          .text {
+            clip: rect(0 0 0 0);
+            overflow: hidden;
+            position: absolute;
+            height: 1px;
+            width: 1px;
+          }
+        }
+        .left:hover,.right:hover {
+          background: $black;
+          color: $link-highlight;
+        }
+        .left {
+          position:absolute;
+          top: 0;
+          left: 0;
+          .icon {
+            padding-right:0.2em;
+          }
+        }
+        .right {
+          position:absolute;
+          top: 0;
+          right: 0;
+          .icon {
+            padding-left:0.2em;
+          }
+        }
+        .icon-left-arrow-bold:before, .icon-right-arrow-bold:before {
+          margin:0;
+        }
+      }
+    }
 
     #years-nav {
-			clear:both;
-			margin-top:6em;
-			padding: 1.5em;
-			background: $overlay;
-			h3 {
-				font-family: $serif-stack;
-				text-transform: none;
-				letter-spacing: 0;
-				font-size: 1.5em;
-				line-height: 1;
-				margin-bottom: 1em;
-			}
-			ul {
-				font-size: 1.5em;
-				line-height: 1;
-				text-align:center;
-				letter-spacing: 0.06em;
-				li {
-					margin: 0.25em;
-					display: inline-block;
-					a {
-						display: block;
-						border-bottom: 0;
-						padding: 0.5em;
-						background: $text-color;
-						color: $link-highlight;
-					}
-					a:hover {
-						background: $link-highlight;
-						color: $text-color;
-					}
-				}
-				li.current {
-					a {
-						background: transparent;
-						color: $text-color;
-					}
-				}
-			}
-		}
-	}
+      clear:both;
+      margin-top:6em;
+      padding: 1.5em;
+      background: $overlay;
+      h3 {
+        font-family: $serif-stack;
+        text-transform: none;
+        letter-spacing: 0;
+        font-size: 1.5em;
+        line-height: 1;
+        margin-bottom: 1em;
+      }
+      ul {
+        font-size: 1.5em;
+        line-height: 1;
+        text-align:center;
+        letter-spacing: 0.06em;
+        li {
+          margin: 0.25em;
+          display: inline-block;
+          a {
+            display: block;
+            border-bottom: 0;
+            padding: 0.5em;
+            background: $text-color;
+            color: $link-highlight;
+          }
+          a:hover {
+            background: $link-highlight;
+            color: $text-color;
+          }
+        }
+        li.current {
+          a {
+            background: transparent;
+            color: $text-color;
+          }
+        }
+      }
+    }
+  }
 }
 
 /* ==========================================================================
    Concert Single Styles
    ========================================================================== */
 #page {
-	#torso {
-		.support {
-			text-align: center;
-			text-transform: uppercase;
-			letter-spacing: 0.15em;
-			word-spacing: 0.15em;
-			margin-bottom: 1.3333333333em;
-			line-height: 1.3333333333em;
-			font-size: 1.125em;
-			font-family: 'Alegreya Sans';
-		}
-		.event-meta {
-			text-align:center;
-			font-family: $sans-stack;
-			font-size:1.25em;
-			line-height:1.2;
-			.dtstart {
-				margin-bottom:0;
-				font-weight:700;
-			}
-			.location {
-				margin-bottom:1.2em;
-				.icon-link-ext:after {
-					font-size: 80%;
-					padding-left: 0.3em;
-				}
-			}
-			.tickets {
-				font-size: 0.7em; // 0.7 * 1.25 = 0.875em = 14px
-				line-height: 1.714285714; // 1.714… * 14px = 24px
-				text-transform:uppercase;
-				letter-spacing: .3em;
-				font-weight:700;
-				margin-bottom: 2em;
-			}
-		}
+  #torso {
+    .support {
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      word-spacing: 0.15em;
+      margin-bottom: 1.3333333333em;
+      line-height: 1.3333333333em;
+      font-size: 1.125em;
+      font-family: 'Alegreya Sans';
+    }
+    .event-meta {
+      text-align:center;
+      font-family: $sans-stack;
+      font-size:1.25em;
+      line-height:1.2;
+      .dtstart {
+        margin-bottom:0;
+        font-weight:700;
+      }
+      .location {
+        margin-bottom:1.2em;
+        .icon-link-ext:after {
+          font-size: 80%;
+          padding-left: 0.3em;
+        }
+      }
+      .tickets {
+        font-size: 0.7em; // 0.7 * 1.25 = 0.875em = 14px
+        line-height: 1.714285714; // 1.714… * 14px = 24px
+        text-transform:uppercase;
+        letter-spacing: .3em;
+        font-weight:700;
+        margin-bottom: 2em;
+      }
+    }
 
-		.description {
-			.concert-poster {
-				margin:0 auto 1.5em;
-				max-width:50%;
-				a {
-					display: block;
-					border: 0;
-					cursor: -webkit-zoom-in;
-					cursor: -moz-zoom-in;
-					cursor: zoom-in;
-					img {
-						width:100%;
-					}
-				}
-			}
-		}
+    .description {
+      .concert-poster {
+        margin:0 auto 1.5em;
+        max-width:50%;
+        a {
+          display: block;
+          border: 0;
+          cursor: -webkit-zoom-in;
+          cursor: -moz-zoom-in;
+          cursor: zoom-in;
+          img {
+            width:100%;
+          }
+        }
+      }
+    }
 
-		.external-links {
-			margin-bottom: 1.5em;
-			margin-top: 3em;
-			font-family: $sans-stack;
-			li {
-				margin-bottom:1.5em;
-				a {
-					padding: 1.5em 5%;
-					display: block;
-					border-bottom: none;
-					text-align: center;
-					background: $link-highlight;
-					font-size: 1.25em;
-					line-height: 1.2;
-					margin-bottom:0;
-				}
-				.perfname {
-					white-space: nowrap;
-				}
-				.icon-link-ext:after {
-					font-size:80%;
-					padding-left: .3em;
-				}
-				a:hover {
-					margin-right: 4%;
-					margin-left: 4%;
-					padding-right: 1%;
-					padding-left: 1%;
-					background: $black;
-					color: $link-highlight;
-				}
-			}
-		}
+    .external-links {
+      margin-bottom: 1.5em;
+      margin-top: 3em;
+      font-family: $sans-stack;
+      li {
+        margin-bottom:1.5em;
+        a {
+          padding: 1.5em 5%;
+          display: block;
+          border-bottom: none;
+          text-align: center;
+          background: $link-highlight;
+          font-size: 1.25em;
+          line-height: 1.2;
+          margin-bottom:0;
+        }
+        .perfname {
+          white-space: nowrap;
+        }
+        .icon-link-ext:after {
+          font-size:80%;
+          padding-left: .3em;
+        }
+        a:hover {
+          margin-right: 4%;
+          margin-left: 4%;
+          padding-right: 1%;
+          padding-left: 1%;
+          background: $black;
+          color: $link-highlight;
+        }
+      }
+    }
 
-		.programme {
-			margin-bottom:3em;
-			li {
-				margin-bottom:0.75em;
-				.composer {
+    .programme {
+      margin-bottom:3em;
+      li {
+        margin-bottom:0.75em;
+        .composer {
 
-				}
-				.composer:after {
-					font-weight:400;
-					content: ' . . . ';
-				}
-				.work_title {
-				}
-			}
-		}
+        }
+        .composer:after {
+          font-weight:400;
+          content: ' . . . ';
+        }
+        .work_title {
+        }
+      }
+    }
 
-		.archive-docs {
-			margin-bottom:3em;
-			li {
-				margin-bottom: 0.75em;
-				position: relative;
-				.icon-download {
-					position:absolute;
-					font-size: 165%;
-					line-height: 1;
-				}
-				.icon-download:before {
-					margin-left:0;
-				}
-				a {
-					margin-left: 2em;
-					margin-right: 0.5em;
-				}
-				.docs-meta {
-					display: inline-block;
-					background: $overlay;
-					background-color: rgba(0, 0, 0, 0.01);
-					font-size: 0.75em;
-					letter-spacing: 0.15em;
-					padding: 0.25em 0.66666666em;
-					font-weight: 700;
-					font-family: $sans-stack;
-				}
-			}
-		}
+    .archive-docs {
+      margin-bottom:3em;
+      li {
+        margin-bottom: 0.75em;
+        position: relative;
+        .icon-download {
+          position:absolute;
+          font-size: 165%;
+          line-height: 1;
+        }
+        .icon-download:before {
+          margin-left:0;
+        }
+        a {
+          margin-left: 2em;
+          margin-right: 0.5em;
+        }
+        .docs-meta {
+          display: inline-block;
+          background: $overlay;
+          background-color: rgba(0, 0, 0, 0.01);
+          font-size: 0.75em;
+          letter-spacing: 0.15em;
+          padding: 0.25em 0.66666666em;
+          font-weight: 700;
+          font-family: $sans-stack;
+        }
+      }
+    }
 
-		.multimedia {
-			margin-bottom: 3em;
-			.embed-container {
-				display:block;
-			}
-		}
+    .multimedia {
+      margin-bottom: 3em;
+      .embed-container {
+        display:block;
+      }
+    }
 
-		.gallery {
-			clear:both;
-			margin-bottom: 3em;
-			.popup-gallery {
-				li {
-					float: left;
-					width: 48%;
-					padding-right: 4%;
-					margin-bottom: 1.5em;
-					a {
-						img {
-							width:100%;
-							@include filter(grayscale(1) contrast(125%) brightness(125%) saturate(100%));
-							@include transition(all 0.4s ease-out);
-						}
-					}
-					a:hover {
-						img {
-							@include filter(grayscale(0) contrast(100%) brightness(100%) saturate(150%));
-							@include transition(all 0.4s ease-in);
-						}
-					}
-				}
-				li:nth-child(2n) {
-					padding-right:0;
-				}
-			}
-		}
+    .gallery {
+      clear:both;
+      margin-bottom: 3em;
+      .popup-gallery {
+        li {
+          float: left;
+          width: 48%;
+          padding-right: 4%;
+          margin-bottom: 1.5em;
+          a {
+            img {
+              width:100%;
+              @include filter(grayscale(1) contrast(125%) brightness(125%) saturate(100%));
+              @include transition(all 0.4s ease-out);
+            }
+          }
+          a:hover {
+            img {
+              @include filter(grayscale(0) contrast(100%) brightness(100%) saturate(150%));
+              @include transition(all 0.4s ease-in);
+            }
+          }
+        }
+        li:nth-child(2n) {
+          padding-right:0;
+        }
+      }
+    }
 
-		.archive-link {
-			font-family: $sans-stack;
-				margin-bottom:1.5em;
-				a {
-					padding: 1.5em 5%;
-					display: block;
-					border-bottom: none;
-					text-align: center;
-					background: $link-highlight;
-					font-size: 1.25em;
-					line-height: 1.2;
-					margin-bottom:0;
-				}
-				a:hover {
-					margin-right: 4%;
-					margin-left: 4%;
-					padding-right: 1%;
-					padding-left: 1%;
-					background: $black;
-					color: $link-highlight;
-				}
-		}
-	}
+    .archive-link {
+      font-family: $sans-stack;
+        margin-bottom:1.5em;
+        a {
+          padding: 1.5em 5%;
+          display: block;
+          border-bottom: none;
+          text-align: center;
+          background: $link-highlight;
+          font-size: 1.25em;
+          line-height: 1.2;
+          margin-bottom:0;
+        }
+        a:hover {
+          margin-right: 4%;
+          margin-left: 4%;
+          padding-right: 1%;
+          padding-left: 1%;
+          background: $black;
+          color: $link-highlight;
+        }
+    }
+  }
 }
 
 #page {
-	#torso {
-		.has-docs {
-			.external-links {
-				margin-top: 0;
-			}
-		}
-	}
+  #torso {
+    .has-docs {
+      .external-links {
+        margin-top: 0;
+      }
+    }
+  }
 }
 
 /* ==========================================================================
    Member Single Styles
    ========================================================================== */
 #page {
-	#torso {
-		.member {
-			.primary {
-				.updated {
-					display: inline-block;
-					background: $overlay;
-					background-color: rgba(0, 0, 0, 0.01);
-					font-size: 0.75em;
-					text-transform: uppercase;
-					letter-spacing: 0.15em;
-					padding: 0.25em 0.66666666em;
-					font-weight: 700;
-					font-family: $sans-stack;
-					margin-bottom: 2em;
-				}
-			}
-			.secondary {
-				font-family: $sans-stack;
-				h3 {
-					text-align: center;
-					font-size: 0.875em; // 14px
-					line-height: 1.714285714; // 1.714… * 14px = 24px
-					text-transform:uppercase;
-					letter-spacing: .3em;
-					font-weight:700;
-					margin:0 0 1.714285714em; // 2.571… * 14px = 36px
-				}
-				.featured-img {
-					margin-bottom: 1.5em;
-					img {
-						width:100%;
-						mix-blend-mode: multiply;
-						@include filter(grayscale(1) contrast(125%) brightness(125%) saturate(100%));
-						@include transition(all 0.4s ease-out);
-					}
-				}
-				.url {
-					margin-bottom:1.5em;
-					a {
-						padding: 1.5em 5%;
-						display: block;
-						border-bottom: none;
-						text-align: center;
-						background: $link-highlight;
-						font-size: 1.25em;
-						line-height: 1.2;
-						margin-bottom:0;
-					}
-					a:hover {
-						margin-right: 4%;
-						margin-left: 4%;
-						padding-right: 1%;
-						padding-left: 1%;
-						background: $black;
-						color: $link-highlight;
-					}
-					.icon-link-ext:after {
-						font-size:80%;
-						padding-left: .3em;
-					}
-				}
-				.colloquia {
-					margin-bottom:3em;
-					text-align:center;
-					h4 {
-						font-size:1.25em;
-						line-height:1.8;
-						margin:0;
-					}
-					p {
-						font-family: $serif-stack;
-						text-align:left;
-						.icon-link-ext:after {
-							font-size:80%;
-							padding-left: .3em;
-						}
-					}
-				} // </.colloquia>
-				.concerts {
-					margin-bottom:3em;
-					.vevent {
-						margin-bottom:1.5em;
-						@include transition(all 0.2s ease-out);
-						.dtstart {
-							text-align:center;
-							display:block;
-							float:left;
-							width:25%;
-							margin:0 5% 0 0;
-							background: $bright-green;
-							padding: 0 5%;
-							.month {
-								display:block;
-								text-transform:uppercase;
-								letter-spacing: 0.2em;
-								font-size: 1.25em;
-								line-height:1.4;
-								padding-top:0.4em;
-							}
-							.day {
-								display:block;
-								font-size: 5em;
-								line-height:0.6;
-								padding-bottom:0.3em;
-							}
-						}
-						.details {
-							display:block;
-							float:left;
-							width:60%;
-							font-size:1.25em;
-							line-height:1.8;
-							p {
-								margin: 0;
-							}
-							.summary {
-								font-weight:700;
-							}
-						}
-					} // </a>
-					.vevent:hover {
-						@include transition(all 0.2s ease-in);
-						margin-right: 5%;
-						margin-left: 5%;
-						background: $bright-green;
-						.dtstart {
-							background: $black;
-							color: $bright-green;
-						}
-					}
-				} // </.concerts>
-			} // </.secondary>
-			.composerav {
-				margin-bottom: 3em;
-				margin-top: 1.5em;
-				padding-top: 1.4375em;
-				border-top: 1px solid rgba(0,0,0,0.2);
-				.embed-container {
-					display:block;
-				}
-				.mediadt {
-					font-family: $sans-stack;
-					font-weight: 700;
-					letter-spacing: 0.1em;
-				}
-			} // </.composerav>
-			.composers-link {
-				clear: both;
-				font-family: $sans-stack;
-				margin-bottom:1.5em;
-				a {
-					padding: 1.5em 5%;
-					display: block;
-					border-bottom: none;
-					text-align: center;
-					background: $link-highlight;
-					font-size: 1.25em;
-					line-height: 1.2;
-					margin-bottom:0;
-				}
-				a:hover {
-					margin-right: 4%;
-					margin-left: 4%;
-					padding-right: 1%;
-					padding-left: 1%;
-					background: $black;
-					color: $link-highlight;
-				}
-			}
-		} // </.member>
-	}
+  #torso {
+    .member {
+      .primary {
+        .updated {
+          display: inline-block;
+          background: $overlay;
+          background-color: rgba(0, 0, 0, 0.01);
+          font-size: 0.75em;
+          text-transform: uppercase;
+          letter-spacing: 0.15em;
+          padding: 0.25em 0.66666666em;
+          font-weight: 700;
+          font-family: $sans-stack;
+          margin-bottom: 2em;
+        }
+      }
+      .secondary {
+        font-family: $sans-stack;
+        h3 {
+          text-align: center;
+          font-size: 0.875em; // 14px
+          line-height: 1.714285714; // 1.714… * 14px = 24px
+          text-transform:uppercase;
+          letter-spacing: .3em;
+          font-weight:700;
+          margin:0 0 1.714285714em; // 2.571… * 14px = 36px
+        }
+        .featured-img {
+          margin-bottom: 1.5em;
+          img {
+            width:100%;
+            mix-blend-mode: multiply;
+            @include filter(grayscale(1) contrast(125%) brightness(125%) saturate(100%));
+            @include transition(all 0.4s ease-out);
+          }
+        }
+        .url {
+          margin-bottom:1.5em;
+          a {
+            padding: 1.5em 5%;
+            display: block;
+            border-bottom: none;
+            text-align: center;
+            background: $link-highlight;
+            font-size: 1.25em;
+            line-height: 1.2;
+            margin-bottom:0;
+          }
+          a:hover {
+            margin-right: 4%;
+            margin-left: 4%;
+            padding-right: 1%;
+            padding-left: 1%;
+            background: $black;
+            color: $link-highlight;
+          }
+          .icon-link-ext:after {
+            font-size:80%;
+            padding-left: .3em;
+          }
+        }
+        .colloquia {
+          margin-bottom:3em;
+          text-align:center;
+          h4 {
+            font-size:1.25em;
+            line-height:1.8;
+            margin:0;
+          }
+          p {
+            font-family: $serif-stack;
+            text-align:left;
+            .icon-link-ext:after {
+              font-size:80%;
+              padding-left: .3em;
+            }
+          }
+        } // </.colloquia>
+        .concerts {
+          margin-bottom:3em;
+          .vevent {
+            margin-bottom:1.5em;
+            @include transition(all 0.2s ease-out);
+            .dtstart {
+              text-align:center;
+              display:block;
+              float:left;
+              width:25%;
+              margin:0 5% 0 0;
+              background: $bright-green;
+              padding: 0 5%;
+              .month {
+                display:block;
+                text-transform:uppercase;
+                letter-spacing: 0.2em;
+                font-size: 1.25em;
+                line-height:1.4;
+                padding-top:0.4em;
+              }
+              .day {
+                display:block;
+                font-size: 5em;
+                line-height:0.6;
+                padding-bottom:0.3em;
+              }
+            }
+            .details {
+              display:block;
+              float:left;
+              width:60%;
+              font-size:1.25em;
+              line-height:1.8;
+              p {
+                margin: 0;
+              }
+              .summary {
+                font-weight:700;
+              }
+            }
+          } // </a>
+          .vevent:hover {
+            @include transition(all 0.2s ease-in);
+            margin-right: 5%;
+            margin-left: 5%;
+            background: $bright-green;
+            .dtstart {
+              background: $black;
+              color: $bright-green;
+            }
+          }
+        } // </.concerts>
+      } // </.secondary>
+      .composerav {
+        margin-bottom: 3em;
+        margin-top: 1.5em;
+        padding-top: 1.4375em;
+        border-top: 1px solid rgba(0,0,0,0.2);
+        .embed-container {
+          display:block;
+        }
+        .mediadt {
+          font-family: $sans-stack;
+          font-weight: 700;
+          letter-spacing: 0.1em;
+        }
+      } // </.composerav>
+      .composers-link {
+        clear: both;
+        font-family: $sans-stack;
+        margin-bottom:1.5em;
+        a {
+          padding: 1.5em 5%;
+          display: block;
+          border-bottom: none;
+          text-align: center;
+          background: $link-highlight;
+          font-size: 1.25em;
+          line-height: 1.2;
+          margin-bottom:0;
+        }
+        a:hover {
+          margin-right: 4%;
+          margin-left: 4%;
+          padding-right: 1%;
+          padding-left: 1%;
+          background: $black;
+          color: $link-highlight;
+        }
+      }
+    } // </.member>
+  }
 }
 
 /* ==========================================================================
    Colloquium Single Styles
    ========================================================================== */
 .event-photo {
-	img {
-		width: 100%;
-		mix-blend-mode: multiply;
-	}
+  img {
+    width: 100%;
+    mix-blend-mode: multiply;
+  }
 }
 
 /* ==========================================================================
    Contact Form Styles
    ========================================================================== */
 #torso {
-	.contact-form {
-		div, input.pushbutton-wide {
-			margin-bottom: 1.5em;
-			box-shadow: 0 0 0.75em -0.15em $light-text;
-		}
-		label, input.pushbutton-wide {
-			color: $black;
-			font-family: $sans-stack;
-			text-transform: uppercase;
-			letter-spacing: 0.15em;
-			font-size: 0.875em; // 14px
-			line-height:1.714285714; // 1.714… * 14px = 24px
-			margin:0;
-			font-weight: 700;
-			span {
-				font-weight: 400;
-				color: $dark-bg;
-			}
-		}
-		label {
-			opacity: 0.5;
-			background: $light-shade;
-			padding: 0.85714286em 5%;
-			width: 90%;
-		}
-		input[type='text'], input[type='email'] {
-			width: 90%;
-			padding: 0.75em 5%;
-			line-height: 1.5;
-			margin-bottom: 0;
-			border: 0;
-		}
-	   	textarea {
-	   		width:90%;
-	   		border: 0;
-	   		margin: 0;
-	   		padding: 0.625em 5%;
-	   	}
-	   	input.pushbutton-wide {
-	   		width: 100%;
-	   		background: $link-highlight;
-	   		border: 0;
-	   		padding: 1.71428571em 5% 5%;
-	   	}
-	   	input.pushbutton-wide:hover {
-	   		background: $black;
-	   		color: $link-highlight;
-	   	}
-	}
-	div[id|=contact-form] blockquote {
-		margin: 0;
-	}
+  .contact-form {
+    div, input.pushbutton-wide {
+      margin-bottom: 1.5em;
+      box-shadow: 0 0 0.75em -0.15em $light-text;
+    }
+    label, input.pushbutton-wide {
+      color: $black;
+      font-family: $sans-stack;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-size: 0.875em; // 14px
+      line-height:1.714285714; // 1.714… * 14px = 24px
+      margin:0;
+      font-weight: 700;
+      span {
+        font-weight: 400;
+        color: $dark-bg;
+      }
+    }
+    label {
+      opacity: 0.5;
+      background: $light-shade;
+      padding: 0.85714286em 5%;
+      width: 90%;
+    }
+    input[type='text'], input[type='email'] {
+      width: 90%;
+      padding: 0.75em 5%;
+      line-height: 1.5;
+      margin-bottom: 0;
+      border: 0;
+    }
+       textarea {
+         width:90%;
+         border: 0;
+         margin: 0;
+         padding: 0.625em 5%;
+       }
+       input.pushbutton-wide {
+         width: 100%;
+         background: $link-highlight;
+         border: 0;
+         padding: 1.71428571em 5% 5%;
+       }
+       input.pushbutton-wide:hover {
+         background: $black;
+         color: $link-highlight;
+       }
+  }
+  div[id|=contact-form] blockquote {
+    margin: 0;
+  }
 }
 
 /* ==========================================================================
@@ -1190,18 +1190,18 @@ iframe {
    ========================================================================== */
 
 .mfp-bottom-bar {
-	font-family: $sans-stack;
-	.mfp-counter {
-		-moz-font-feature-settings:normal;
-		-ms-font-feature-settings:normal;
-		-o-font-feature-settings:normal;
-		-webkit-font-feature-settings:normal;
-		font-feature-settings:normal;
-		font-size: 1em;
-	}
-	.mfp-title, .mfp-counter {
-		padding-top: 0.75em;
-	}
+  font-family: $sans-stack;
+  .mfp-counter {
+    -moz-font-feature-settings:normal;
+    -ms-font-feature-settings:normal;
+    -o-font-feature-settings:normal;
+    -webkit-font-feature-settings:normal;
+    font-feature-settings:normal;
+    font-size: 1em;
+  }
+  .mfp-title, .mfp-counter {
+    padding-top: 0.75em;
+  }
 }
 
 
@@ -1210,21 +1210,21 @@ iframe {
    ========================================================================== */
 
 .site-footer {
-	clear:both;
-	color: $light-text;
-	text-align:center;
-	font-family: $sans-stack;
-	padding: $body-padding;
-	background:$dark-bg;
-	padding-top:1.5em;
-	padding-bottom:1.5em;
-	a {
-		text-decoration: none;
-		color: $secondary-highlight;
-	}
-	a:hover {
-		color: $link-highlight;
-	}
+  clear:both;
+  color: $light-text;
+  text-align:center;
+  font-family: $sans-stack;
+  padding: $body-padding;
+  background:$dark-bg;
+  padding-top:1.5em;
+  padding-bottom:1.5em;
+  a {
+    text-decoration: none;
+    color: $secondary-highlight;
+  }
+  a:hover {
+    color: $link-highlight;
+  }
 }
 
 /* ==========================================================================
@@ -1232,399 +1232,399 @@ iframe {
    ========================================================================== */
 
 @media only screen and (min-width: 45em) { // larger screens, > 720px
-	body { background: $halftone; }
-	h2 { font-size: 2.5em; }
-	#page {
-		.site-header {
-			margin: 1.5em 0;
-			text-align: center;
-			height: auto;
-			background: transparent;
-			h1 {
-				margin:0;
-				padding-left:0;
-				font-size: 4.5em;
-				line-height: 1;
-				width: 100%;
-				letter-spacing: 0;
-				.lowercase {
-					display: inline;
-				}
-			}
-			a {
-				color: $black;
-			}
+  body { background: $halftone; }
+  h2 { font-size: 2.5em; }
+  #page {
+    .site-header {
+      margin: 1.5em 0;
+      text-align: center;
+      height: auto;
+      background: transparent;
+      h1 {
+        margin:0;
+        padding-left:0;
+        font-size: 4.5em;
+        line-height: 1;
+        width: 100%;
+        letter-spacing: 0;
+        .lowercase {
+          display: inline;
+        }
+      }
+      a {
+        color: $black;
+      }
 
-			.menu {
-				display: block;
-				font-size:1.125em;
-				line-height:2.6666666666em;
-				ul {
-					list-style-type: none;
-					margin: 0;
-					padding: 0;
-				}
-				li {
-					display: inline-block;
-					margin-right: .5em;
-				}
-				li:nth-child(odd) {
-					background-color: transparent;
-				}
-				li:nth-child(even) {
-					background-color: transparent;
-				}
-				li:last-child {
-					margin-right: 0;
-				}
-				.current-menu-item a:before {
-					content: '';
-				}
-				a {
-					color: $text-color;
-					padding: 0 .5em;
-				}
-				a:hover {
-					background: $bright-green;
-				}
-			}
+      .menu {
+        display: block;
+        font-size:1.125em;
+        line-height:2.6666666666em;
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+        }
+        li {
+          display: inline-block;
+          margin-right: .5em;
+        }
+        li:nth-child(odd) {
+          background-color: transparent;
+        }
+        li:nth-child(even) {
+          background-color: transparent;
+        }
+        li:last-child {
+          margin-right: 0;
+        }
+        .current-menu-item a:before {
+          content: '';
+        }
+        a {
+          color: $text-color;
+          padding: 0 .5em;
+        }
+        a:hover {
+          background: $bright-green;
+        }
+      }
 
-			.menu-button {
-				display:none;
-			}
-		} // </header>
-		#torso {
-			.fp-section,
-			.p-section {
-				padding: $more-padding;
-				padding-top:1.5em;
-				padding-bottom:1.5em;
-			}
-			#fp-blurb {
-				.entry {
-					font-size:1.5em;
-					line-height:1.5;
-				}
-				.social-link {
-					width: 59.4%;
-					margin-right: auto;
-					margin-left: auto;
-				}
-			}
-			#events {
-				.concerts, .colloquia {
-					width: 47%;
-					padding-right:6%;
-					display:block;
-					float:left;
-				}
-				.concerts:nth-child(2n), .colloquia:nth-child(2n) {
-					padding-right:0;
-				}
-				.concerts.solo, .colloquia.solo {
-					width: 49.4%;
-					margin-left: auto;
-					margin-right: auto;
-					float: none;
-				}
-				.more-events-link, .miscevents {
-					width: 59.4%;
-					margin-right: auto;
-					margin-left: auto;
-				}
-			}
-			.composers {
-				li {
-					float: left;
-					margin-bottom:0.375em;
-					width:19%;
-					margin-right: 1.25%;
-					a {
-						height:auto;
-						overflow: hidden;
-						img {
-							float:none;
-							width: 100%;
-							max-width:none;
-						}
-						span {
-							display: table-cell;
-							vertical-align:middle;
-							line-height:1.1em;
-							max-width:100%;
-							width:24em;
-							height:3.52941176em;
-							padding: 0 5%;
-							white-space: normal;
-						}
-					}
-				}
-				li:hover {
-					padding: 0;
-				}
-				li:nth-child(5n) {
-					margin-right:0;
-				}
-				.no-img {
-					a {
-						padding-top:100%;
-						margin-top: 1px;
-					}
-				}
-			} // </#fp-composers>
-			#fp-archive-link {
-				a {
-					width: 49.5%;
-					margin: 0 auto;
-				}
-				a:hover {
-					width: 44.5%;
-					margin: 0 auto;
-				}
-			} // </#fp-archive-link>
+      .menu-button {
+        display:none;
+      }
+    } // </header>
+    #torso {
+      .fp-section,
+      .p-section {
+        padding: $more-padding;
+        padding-top:1.5em;
+        padding-bottom:1.5em;
+      }
+      #fp-blurb {
+        .entry {
+          font-size:1.5em;
+          line-height:1.5;
+        }
+        .social-link {
+          width: 59.4%;
+          margin-right: auto;
+          margin-left: auto;
+        }
+      }
+      #events {
+        .concerts, .colloquia {
+          width: 47%;
+          padding-right:6%;
+          display:block;
+          float:left;
+        }
+        .concerts:nth-child(2n), .colloquia:nth-child(2n) {
+          padding-right:0;
+        }
+        .concerts.solo, .colloquia.solo {
+          width: 49.4%;
+          margin-left: auto;
+          margin-right: auto;
+          float: none;
+        }
+        .more-events-link, .miscevents {
+          width: 59.4%;
+          margin-right: auto;
+          margin-left: auto;
+        }
+      }
+      .composers {
+        li {
+          float: left;
+          margin-bottom:0.375em;
+          width:19%;
+          margin-right: 1.25%;
+          a {
+            height:auto;
+            overflow: hidden;
+            img {
+              float:none;
+              width: 100%;
+              max-width:none;
+            }
+            span {
+              display: table-cell;
+              vertical-align:middle;
+              line-height:1.1em;
+              max-width:100%;
+              width:24em;
+              height:3.52941176em;
+              padding: 0 5%;
+              white-space: normal;
+            }
+          }
+        }
+        li:hover {
+          padding: 0;
+        }
+        li:nth-child(5n) {
+          margin-right:0;
+        }
+        .no-img {
+          a {
+            padding-top:100%;
+            margin-top: 1px;
+          }
+        }
+      } // </#fp-composers>
+      #fp-archive-link {
+        a {
+          width: 49.5%;
+          margin: 0 auto;
+        }
+        a:hover {
+          width: 44.5%;
+          margin: 0 auto;
+        }
+      } // </#fp-archive-link>
 
-			.support {
-				margin-top: -1.3333333333em;
-			}
-			.event-meta {
-				.dtstart {
-				}
-				.location {
-				}
-			}
+      .support {
+        margin-top: -1.3333333333em;
+      }
+      .event-meta {
+        .dtstart {
+        }
+        .location {
+        }
+      }
 
-			.description {
-				font-size:1.25em;
-				line-height: 1.8;
-				margin-bottom: 2.4em;
-				h3 {
-					font-size: 1.2em;
-				}
-				.concert-poster {
-					display: inline-block;
-					float: right;
-					margin-left: 4%;
-					width: 32.5%;
-				}
-			}
+      .description {
+        font-size:1.25em;
+        line-height: 1.8;
+        margin-bottom: 2.4em;
+        h3 {
+          font-size: 1.2em;
+        }
+        .concert-poster {
+          display: inline-block;
+          float: right;
+          margin-left: 4%;
+          width: 32.5%;
+        }
+      }
 
-			.external-links.both {
-				margin-bottom: 3em;
-				li {
-					width:48%;
-					float:left;
-					padding-right:4%;
-					a {
-					}
-					.perfname {
-					}
-					.icon-link-ext:after {
-					}
-					a:hover {
-					}
-				}
-				li:nth-child(2n) {
-					padding-right:0;
-				}
-			}
+      .external-links.both {
+        margin-bottom: 3em;
+        li {
+          width:48%;
+          float:left;
+          padding-right:4%;
+          a {
+          }
+          .perfname {
+          }
+          .icon-link-ext:after {
+          }
+          a:hover {
+          }
+        }
+        li:nth-child(2n) {
+          padding-right:0;
+        }
+      }
 
-			.archive-docs {
-				li {
-					.icon-download {
-					}
-				}
-			}
+      .archive-docs {
+        li {
+          .icon-download {
+          }
+        }
+      }
 
-			.multimedia {
-				.audio, .video {
-					li {
-						width: 32.5%;
-						padding-right: 1.25%;
-						float:left;
-					}
-					li:nth-child(3n) {
-						padding-right: 0;
-					}
-				}
-			}
+      .multimedia {
+        .audio, .video {
+          li {
+            width: 32.5%;
+            padding-right: 1.25%;
+            float:left;
+          }
+          li:nth-child(3n) {
+            padding-right: 0;
+          }
+        }
+      }
 
-			.gallery {
-				.popup-gallery {
-					li {
-						width: 19%;
-						padding-right: 1.25%;
-						margin-bottom: 1.5em;
-						a {
-							cursor: -webkit-zoom-in;
-							cursor: -moz-zoom-in;
-							cursor: zoom-in;
-						}
-						a:hover {
-							img {
-								box-shadow: 0 0 0 0.375em $black;
-								@include transition(all 0.2s ease-in);
-							}
-						}
-					}
-					li:nth-child(2n) {
-						padding-right:1.25%;
-					}
-					li:nth-child(5n) {
-						padding-right:0;
-					}
-				}
-			}
+      .gallery {
+        .popup-gallery {
+          li {
+            width: 19%;
+            padding-right: 1.25%;
+            margin-bottom: 1.5em;
+            a {
+              cursor: -webkit-zoom-in;
+              cursor: -moz-zoom-in;
+              cursor: zoom-in;
+            }
+            a:hover {
+              img {
+                box-shadow: 0 0 0 0.375em $black;
+                @include transition(all 0.2s ease-in);
+              }
+            }
+          }
+          li:nth-child(2n) {
+            padding-right:1.25%;
+          }
+          li:nth-child(5n) {
+            padding-right:0;
+          }
+        }
+      }
 
-			.has-programme {
-				.programme {
-					float: left;
-					width: 48%;
-					padding-right:4%;
-				}
-				.external-links,
-				.archive-docs {
-					float: left;
-					width: 48%;
-				}
-				.external-links {
-					li {
-					float:none;
-					width:100%;
-					padding-right: 0;
-					}
-				}
-				.archive-link, .multimedia {
-					clear:both;
-				}
-			}
+      .has-programme {
+        .programme {
+          float: left;
+          width: 48%;
+          padding-right:4%;
+        }
+        .external-links,
+        .archive-docs {
+          float: left;
+          width: 48%;
+        }
+        .external-links {
+          li {
+          float:none;
+          width:100%;
+          padding-right: 0;
+          }
+        }
+        .archive-link, .multimedia {
+          clear:both;
+        }
+      }
 
-			.member {
-				.primary {
-					width:58.25%;
-					margin-right: 3.75%;
-					float:left;
-					p:first-child {
-						font-size: 1.25em;
-						line-height: 1.8;
-						margin-bottom: 1.2em;
-					}
-					blockquote, ul, li, ol {
-						p:first-child {
-							font-size: 1em;
-							line-height: 1.5;
-							margin-bottom: 1.5em;
-						}
-					}
-				}
-				.secondary {
-					width: 38%;
-					float:right;
-				}
-				.composerav {
-					width:58.25%;
-					margin-right: 3.75%;
-					float:left;
-					.audio {
-						li {
-							width: 49%;
-							padding-right: 2%;
-							float:left;
-						}
-						li:nth-child(2n) {
-							padding-right: 0;
-						}
-					}
-				}
-			}
-			.member.no-primary {
-				.secondary {
-					float:none;
-					margin: 0 auto;
-				}
-				.composerav {
-					width: 38%;
-					float:none;
-					margin: 0 auto;
-					.audio {
-						li {
-							width: 100%;
-							padding-right: 0;
-							float: none;
-						}
-					}
-				}
-			}
+      .member {
+        .primary {
+          width:58.25%;
+          margin-right: 3.75%;
+          float:left;
+          p:first-child {
+            font-size: 1.25em;
+            line-height: 1.8;
+            margin-bottom: 1.2em;
+          }
+          blockquote, ul, li, ol {
+            p:first-child {
+              font-size: 1em;
+              line-height: 1.5;
+              margin-bottom: 1.5em;
+            }
+          }
+        }
+        .secondary {
+          width: 38%;
+          float:right;
+        }
+        .composerav {
+          width:58.25%;
+          margin-right: 3.75%;
+          float:left;
+          .audio {
+            li {
+              width: 49%;
+              padding-right: 2%;
+              float:left;
+            }
+            li:nth-child(2n) {
+              padding-right: 0;
+            }
+          }
+        }
+      }
+      .member.no-primary {
+        .secondary {
+          float:none;
+          margin: 0 auto;
+        }
+        .composerav {
+          width: 38%;
+          float:none;
+          margin: 0 auto;
+          .audio {
+            li {
+              width: 100%;
+              padding-right: 0;
+              float: none;
+            }
+          }
+        }
+      }
 
-			// Colloquium single styles
-			.event-photo {
-				margin-left: auto;
-				margin-right: auto;
-				width: 58.25%;
-				img {
-					width: auto;
-					max-width: 100%;
-				}
-			}
+      // Colloquium single styles
+      .event-photo {
+        margin-left: auto;
+        margin-right: auto;
+        width: 58.25%;
+        img {
+          width: auto;
+          max-width: 100%;
+        }
+      }
 
-			// Contact Form styles
-			div[id|=contact-form] {
-				max-width: 25em;
-				margin-left: auto;
-				margin-right: auto;
-			}
+      // Contact Form styles
+      div[id|=contact-form] {
+        max-width: 25em;
+        margin-left: auto;
+        margin-right: auto;
+      }
 
-		} // </#torso>
-	} // </#page>
-	#page {
-		#torso {
-			.archive-header {
-				margin-bottom: 1.5em;
-				#archive-nav {
-					.left,.right {
-						background: transparent;
-					}
-				}
-			}
-		}
-	}
+    } // </#torso>
+  } // </#page>
+  #page {
+    #torso {
+      .archive-header {
+        margin-bottom: 1.5em;
+        #archive-nav {
+          .left,.right {
+            background: transparent;
+          }
+        }
+      }
+    }
+  }
 } // end media-query
 
 @media only screen and (min-width: 78.75em) { // HUGE screens, > 1260px
-	.fp-section, .p-section {
-		width: 59.0625em;
-		margin: 0 auto;
-	}
+  .fp-section, .p-section {
+    width: 59.0625em;
+    margin: 0 auto;
+  }
 }
 
 @media only screen and (max-width: 15em) { // TINY screens, < 240px
-	html {
-		font-size:0.8em;
-		#page {
-			#torso {
-				#fp-composers {
-					li {
-						a {
-							img {
-								display:none;
-							}
-							span {
-								max-width:90%;
-								padding:0 5%;
-							}
-						}
-					}
-					li:hover {
-						padding:0;
-					}
-				}
-				.description {
-					.concert-poster {
-						max-width:100%;
-					}
-				}
-			}
-		}
-	}
+  html {
+    font-size:0.8em;
+    #page {
+      #torso {
+        #fp-composers {
+          li {
+            a {
+              img {
+                display:none;
+              }
+              span {
+                max-width:90%;
+                padding:0 5%;
+              }
+            }
+          }
+          li:hover {
+            padding:0;
+          }
+        }
+        .description {
+          .concert-poster {
+            max-width:100%;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media print,

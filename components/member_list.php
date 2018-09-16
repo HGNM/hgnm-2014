@@ -11,7 +11,7 @@ if (!function_exists('member_list')) {
             '<ul class="clearfix">';
 
     foreach($posts as $post) {
-      component('member_photo_link', $post->ID);
+      component('member_list_item', $post->ID);
     }
 
     echo    '</ul>' .

@@ -1,7 +1,7 @@
 <?php
 // Show a link to a member with their photo and name
-if (!function_exists('member_function_link')) {
-  function member_function_link($ID)
+if (!function_exists('member_list_item')) {
+  function member_list_item($ID)
   {
     $imgsrc = wp_get_attachment_image_src( get_post_thumbnail_id($ID), 'hgnm-thumb');
     echo '<li><a href="' . get_permalink($ID) . '">';
@@ -15,6 +15,5 @@ if (!function_exists('member_function_link')) {
   }
 }
 
-member_function_link($opts)
-
+member_list_item($opts)
 ?>

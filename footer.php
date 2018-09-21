@@ -5,6 +5,7 @@
     </div><!-- #page -->
 
     <script src="<?php _e(get_stylesheet_directory_uri() . '/js/main.js'); ?>"></script>
+    <?= component('analytics') ?>
     <script src="<?php _e(get_stylesheet_directory_uri() . '/js/vendor/baguetteBox-1.10.0.min.js'); ?>"></script>
 
     <script>

@@ -2,19 +2,21 @@
 $black: #000;
 $text-color: #222;
 $dark-bg: #333;
-$bright-green: #30FF8A;
+$bright-green: #30ff8a;
 $light-text: #999;
 $light-shade: #ddd;
-$off-white: #FDFFF7;
-$secondary-highlight: #FF7091;
+$off-white: #fdfff7;
+$white: #fff;
+$secondary-highlight: #ff7091;
 
 // RGBA color variables
-$darken-tint: rgba(0, 0, 0, 0.15);
-$lighten-tint: rgba(255, 255, 255, 0.15);
+$overlay-grey: rgba(0, 0, 0, .01);
+$darken-tint: rgba(0, 0, 0, .15);
+$lighten-tint: rgba(255, 255, 255, .15);
 
 // Background pattern variables
-$halftone: url('img/halftone.png') center;
-$overlay: url('img/absurdidad.png') center;
+$halftone: url("img/halftone.png") center;
+$overlay: url("img/absurdidad.png") center;
 
 // Secondary color variable definitions
 $reverse-text: $off-white;
@@ -23,13 +25,13 @@ $menu-stripe-even: $black;
 $selection-bg: $bright-green;
 $menu-highlight: $bright-green;
 $link-text: $text-color;
-$link-highlight:$bright-green;
-$inactive:$light-shade;
+$link-highlight: $bright-green;
+$inactive: $light-shade;
 
 // Font stack variables
 $serif-stack: Alegreya, Georgia, serif;
-$sans-stack: 'Alegreya Sans', sans-serif;
-$display-stack: 'Dala Floda Web', Alegreya, Georgia, serif;
+$sans-stack: "Alegreya Sans", sans-serif;
+$display-stack: "Dala Floda Web", Alegreya, Georgia, serif;
 
 // Layout variables
 $body-padding: 0 5%;
@@ -37,15 +39,15 @@ $more-padding: 0 12.5%;
 $max-width: 60em;
 
 @mixin transition($args) {
-	-webkit-transition: $args;
-	-moz-transition: $args;
-	-ms-transition: $args;
-	-o-transition: $args;
-	transition: $args;
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
 }
 
 @mixin filter($args) {
-	-webkit-filter: $args;
-	-moz-filter: $args;
-	filter: $args;
+  -webkit-filter: $args;
+  -moz-filter: $args;
+  filter: $args;
 }

@@ -1596,7 +1596,7 @@ iframe {
   }
 }
 
-@media only screen and (max-width: 15em) { // TINY screens, < 240px
+@media only screen and (max-width: 22em) { // TINY screens, ≤ 352px
   html {
     font-size:0.8em;
     #page {

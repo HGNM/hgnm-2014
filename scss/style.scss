@@ -1638,20 +1638,6 @@ iframe {
    Helper classes
    ========================================================================== */
 
-.ir {
-    background-color: transparent;
-    border: 0;
-    overflow: hidden;
-    *text-indent: -9999px;
-}
-
-.ir:before {
-    content: "";
-    display: block;
-    width: 0;
-    height: 150%;
-}
-
 .hidden {
     display: none !important;
     visibility: hidden;
@@ -1692,10 +1678,6 @@ iframe {
     clear: both;
 }
 
-.clearfix {
-    *zoom: 1;
-}
-
 /* ==========================================================================
    Print styles
    ========================================================================== */
@@ -1721,7 +1703,6 @@ iframe {
         content: " (" attr(title) ")";
     }
 
-    .ir a:after,
     a[href^="javascript:"]:after,
     a[href^="#"]:after {
         content: "";

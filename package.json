@@ -3,10 +3,11 @@
   "version": "1.13.0",
   "description": "Repository for WordPress theme development for hgnm.org",
   "scripts": {
-    "start": "npm run css:build && npm run css:watch",
+    "start": "npm run css:watch",
     "build": "npm run css:build && npm run copy && npm run zip && npm run clean",
     "css:build": "node-sass --include-path scss --output-style compressed scss/style.scss style.css",
-    "css:watch": "node-sass --include-path scss --output-style compressed scss/style.scss style.css -w",
+    "css:watch": "watch 'npm run css:build' scss",
+    "postcss:build": "postcss style.css -o style.css",
     "copy": "cpy '**/*' '!scss/*' '!hgnm-2014/*' '!.gitignore' '!.sass-lint.yml' '!.travis.yml' '!install-dependencies.sh' '!node_modules/**/*' '!hgnm-2014.zip' '!ARCHITECTURE.md' 'hgnm-2014/' --parents --nodir",
     "zip": "bestzip hgnm-2014.zip hgnm-2014/",
     "clean": "rimraf hgnm-2014",
@@ -24,12 +25,25 @@
   },
   "homepage": "https://github.com/HGNM/hgnm-2014#readme",
   "devDependencies": {
+    "autoprefixer": "^9.1.5",
     "bestzip": "^2.1.1",
     "cpy-cli": "git+https://github.com/chimon2000/cpy-cli.git",
     "node-sass": "^4.9.3",
-    "rimraf": "^2.6.2"
+    "postcss-cli": "^6.0.0",
+    "rimraf": "^2.6.2",
+    "watch": "^1.0.2"
   },
   "engines": {
     "node": ">=4.0.0"
-  }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "> 0.2%"
+  ]
 }

@@ -1,5 +1,5 @@
 <?php
-if (!function_exists(analytics)) {
+if (!function_exists('analytics')) {
     /**
      * Add Google Analytics tracking to a page
      * @param  string $tracking_code A Google Analytics ID, i.e. 'UA-XXXXXX-XX'

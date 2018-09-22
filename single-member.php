@@ -159,8 +159,7 @@ if (have_posts()) :
     <div class="url">
       <?= component('button_link', array(
         'href' => get_field('url'),
-        'html' => 'Personal Website',
-        'classes' => array('icon-link-ext')
+        'html' => 'Personal Website ' . component('icon', array('type' => 'link-ext'))
       )) ?>
     </div>
     <?php

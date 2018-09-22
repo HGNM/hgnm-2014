@@ -573,7 +573,7 @@ iframe {
 
             .icon-link-ext {
               &::after {
-                transition: all .2s ease-out;
+                transition: color .2s ease-out;
                 padding-left: .1em;
                 color: $light-text;
                 font-size: 80%;
@@ -581,7 +581,7 @@ iframe {
 
               &:hover {
                 &::after {
-                  transition: all .2s ease-in;
+                  transition: color .2s ease-in;
                   color: $text-color;
                 }
               }
@@ -619,12 +619,11 @@ iframe {
 
     .composers {
       li {
-        transition: all .2s ease-out;
+        transition: padding .2s ease-out;
         margin-bottom: 1em;
 
         a {
           display: inline-block;
-          transition: all .1s ease-out;
           border: 0;
           background: $bright-green;
           width: 100%;
@@ -637,10 +636,13 @@ iframe {
           color: $text-color;
           font-family: $sans-stack;
           font-weight: 700;
+          transition-property: background, color, font-weight;
+          transition-duration: .1s;
+          transition-timing-function: ease-out;
 
           img {
             float: left;
-            transition: all .4s ease-out;
+            transition: filter .4s ease-out;
             width: 35%;
             max-width: 5em;
             filter: grayscale(1) contrast(125%) brightness(125%) saturate(100%);
@@ -658,21 +660,21 @@ iframe {
           }
 
           &:hover {
-            transition: all .1s ease-in;
             background: $black;
             color: $bright-green;
             font-weight: 400;
+            transition-timing-function: ease-in;
 
             img {
-              transition: all .4s ease-in;
+              transition: filter .4s ease-in;
               filter: grayscale(0) contrast(100%) brightness(100%) saturate(150%);
             }
           }
         } // </.composers li a>
 
         &:hover {
-          transition: all .2s ease-in;
           padding: 0 5%;
+          transition-timing-function: ease-in;
         }
 
         &:last-child {
@@ -1020,7 +1022,6 @@ iframe {
           margin-bottom: 1.5em;
 
           img {
-            transition: all .4s ease-out;
             width: 100%;
             filter: grayscale(1) contrast(125%) brightness(125%) saturate(100%);
             mix-blend-mode: multiply;
@@ -1065,8 +1066,10 @@ iframe {
           margin-bottom: 3em;
 
           .vevent {
-            transition: all .2s ease-out;
             margin-bottom: 1.5em;
+            transition-property: margin, background;
+            transition-duration: .2s;
+            transition-timing-function: ease-out;
 
             .dtstart {
               display: block;
@@ -1111,10 +1114,10 @@ iframe {
             }
 
             &:hover {
-              transition: all .2s ease-in;
               margin-right: 5%;
               margin-left: 5%;
               background: $bright-green;
+              transition-timing-function: ease-in;
 
               .dtstart {
                 background: $black;
@@ -1558,7 +1561,7 @@ iframe {
 
               &:hover {
                 img {
-                  transition: all .2s ease-in;
+                  transition: box-shadow .2s ease-in;
                   box-shadow: 0 0 0 .375em $black;
                 }
               }

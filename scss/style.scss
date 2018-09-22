@@ -40,6 +40,10 @@ html {
 
 body {
   background: $off-white;
+
+  @include mq (m) {
+    background: $halftone;
+  }
 }
 
 *,
@@ -191,6 +195,10 @@ h2 {
   letter-spacing: .2em;
   font-family: $display-stack;
   font-size: 2em;
+
+  @include mq (m) {
+    font-size: 2.5em;
+  }
 }
 
 h3 {
@@ -329,22 +337,15 @@ iframe {
   height: 3em;
   color: $reverse-text;
 
-  &.active {
+  @include mq (m) {
+    margin: 1.5em 0;
+    background: transparent;
     height: auto;
+    text-align: center;
   }
 
-  h1 {
-    float: left;
-    margin: .15em 0 0;
-    padding-left: 5%;
-    line-height: 1;
-    letter-spacing: .2em;
-    font-family: $display-stack;
-    font-size: 2.5em;
-
-    .lowercase {
-      display: none;
-    }
+  &.active {
+    height: auto;
   }
 
   a {
@@ -352,11 +353,42 @@ iframe {
     text-decoration: none;
     color: $reverse-text;
 
+    @include mq (m) {
+      color: $black;
+    }
+
     &:hover {
       background: transparent;
     }
   }
 } // </.site-header>
+
+.site-title {
+  float: left;
+  margin: .15em 0 0;
+  padding-left: 5%;
+  line-height: 1;
+  letter-spacing: .2em;
+  font-family: $display-stack;
+  font-size: 2.5em;
+
+  @include mq (m) {
+    margin: 0;
+    padding-left: 0;
+    width: 100%;
+    line-height: 1;
+    letter-spacing: 0;
+    font-size: 4.5em;
+  }
+
+  .lowercase {
+    display: none;
+
+    @include mq (m) {
+      display: inline;
+    }
+  }
+} // </.site-title>
 
 // Accessible Mobile Menu Styling
 .menu {
@@ -368,6 +400,12 @@ iframe {
   font-family: $sans-stack;
   font-weight: 700;
 
+  @include mq (m) {
+    display: block;
+    line-height: 2.6666666666em;
+    font-size: 1.125em;
+  }
+
   ul {
     margin: 0;
     padding: 0;
@@ -375,12 +413,27 @@ iframe {
   }
 
   li {
+    @include mq (m) {
+      display: inline-block;
+      margin-right: .5em;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
     &:nth-child(odd) {
       background-color: $menu-stripe-odd;
+      @include mq (m) {
+        background-color: transparent;
+      }
     }
 
     &:nth-child(even) {
       background-color: $menu-stripe-even;
+      @include mq (m) {
+        background-color: transparent;
+      }
     }
   }
 
@@ -388,6 +441,9 @@ iframe {
     a {
       &::before {
         content: "▶ ";
+        @include mq (m) {
+          content: "";
+        }
       }
     }
   }
@@ -397,6 +453,15 @@ iframe {
     transition: background .2s ease-out;
     padding: .5em 5%;
     color: $reverse-text;
+
+    @include mq (m) {
+      padding: 0 .5em;
+      color: $text-color;
+
+      &:hover {
+        background: $bright-green;
+      }
+    }
   }
 
   &.active {
@@ -422,6 +487,10 @@ iframe {
   font-family: $sans-stack;
   font-size: 1.5em;
   font-weight: 700;
+
+  @include mq (m) {
+    display: none;
+  }
 
   &.active {
     background-color: $menu-stripe-odd;
@@ -497,8 +566,10 @@ iframe {
 .fp-section,
 .p-section {
   padding: $body-padding;
-  padding-top: 1.5em;
-  padding-bottom: 1.5em;
+
+  @include mq (m) {
+    padding: $more-padding;
+  }
 
   @include mq (l) {
     margin: 0 auto;
@@ -528,6 +599,15 @@ iframe {
       }
     }
   }
+
+  &--blurb {
+    .entry {
+      @include mq (m) {
+        line-height: 1.5;
+        font-size: 1.5em;
+      }
+    }
+  }
 }
 
 .social-link {
@@ -548,13 +628,14 @@ iframe {
     font-weight: 700;
   }
 
-  .concerts {
+  .colloquia,
+  .concerts,
+  .miscevents {
     margin-bottom: 4.5em;
-  } // </.concerts>
+  }
 
   .colloquia,
   .miscevents {
-    margin-bottom: 4.5em;
     text-align: center;
 
     ul {
@@ -600,8 +681,28 @@ iframe {
     .description {
       margin-bottom: 2.4em;
     }
+  } // </.colloquia, .miscevents>
+
+  @include mq (m) {
+    .colloquia,
+    .concerts {
+      display: block;
+      float: left;
+      padding-right: 6%;
+      width: 47%;
+
+      &:nth-child(2n) {
+        padding-right: 0;
+      }
+
+      .solo {
+        float: none;
+        margin-right: auto;
+        margin-left: auto;
+        width: 49.4%;
+      }
+    } // </.colloquia, .concerts>
   }
-  // </.colloquia, .miscevents>
 
   .miscevents {
     clear: both;
@@ -615,13 +716,23 @@ iframe {
     clear: both;
     margin-bottom: 3em;
   }
-}
-// </#events>
+} // </.section>
 
 .composers {
   li {
     transition: padding .2s ease-out;
     margin-bottom: 1em;
+
+    @include mq (m) {
+      float: left;
+      margin-right: 1.25%;
+      margin-bottom: .375em;
+      width: 19%;
+
+      &:nth-child(5n) {
+        margin-right: 0;
+      }
+    }
 
     a {
       display: inline-block;
@@ -641,12 +752,23 @@ iframe {
       transition-duration: .1s;
       transition-timing-function: ease-out;
 
+      @include mq (m) {
+        height: auto;
+        overflow: hidden;
+      }
+
       img {
         float: left;
         transition: filter .4s ease-out;
         width: 35%;
         max-width: 5em;
         filter: grayscale(1) contrast(125%) brightness(125%) saturate(100%);
+
+        @include mq (m) {
+          float: none;
+          width: 100%;
+          max-width: none;
+        }
       }
 
       span {
@@ -658,6 +780,17 @@ iframe {
         line-height: 5.88235294em;
         white-space: nowrap;
         font-size: .85em;
+
+        @include mq (m) {
+          display: table-cell;
+          padding: 0 5%;
+          width: 24em;
+          max-width: 100%;
+          height: 3.52941176em;
+          vertical-align: middle;
+          line-height: 1.1em;
+          white-space: normal;
+        }
       }
 
       &:hover {
@@ -691,6 +824,10 @@ iframe {
       @include mq (xs) {
         padding: 0;
       }
+
+      @include mq (m) {
+        padding: 0;
+      }
     }
 
     &:last-child {
@@ -701,6 +838,15 @@ iframe {
   &:nth-child(2) {
     background: $overlay;
   }
+
+  @include mq (m) {
+    .no-img {
+      a {
+        margin-top: 1px;
+        padding-top: 100%;
+      }
+    }
+  }
 } // </.composers>
 
 // ========================================================================
@@ -708,6 +854,9 @@ iframe {
 // ========================================================================
 .archive-header {
   text-align: center;
+  @include mq (m) {
+    margin-bottom: 1.5em;
+  }
 } // </.archive-header>
 
 .archive-nav {
@@ -726,6 +875,9 @@ iframe {
     top: 0;
     border-bottom: 0;
     background: $link-highlight;
+    @include mq (m) {
+      background: transparent;
+    }
 
     .icon {
       display: inline-block;
@@ -823,6 +975,10 @@ iframe {
   letter-spacing: .15em;
   font-family: "Alegreya Sans";
   font-size: 1.125em;
+
+  @include mq (m) {
+    margin-top: -1.3333333333em;
+  }
 }
 
 .event-meta {
@@ -851,12 +1007,29 @@ iframe {
 }
 
 .description {
+  @include mq (m) {
+    margin-bottom: 2.4em;
+    line-height: 1.8;
+    font-size: 1.25em;
+
+    h3 {
+      font-size: 1.2em;
+    }
+  }
+
   .concert-poster {
     margin: 0 auto 1.5em;
     max-width: 50%;
 
     @include mq (xs) {
       max-width: 100%;
+    }
+
+    @include mq (m) {
+      display: inline-block;
+      float: right;
+      margin-left: 4%;
+      width: 32.5%;
     }
 
     a {
@@ -876,6 +1049,19 @@ iframe {
   margin-bottom: 1.5em;
   font-family: $sans-stack;
 
+  .has-programme & {
+    @include mq (m) {
+      float: left;
+      width: 48%;
+
+      li {
+        float: none;
+        padding-right: 0;
+        width: 100%;
+      }
+    }
+  }
+
   li {
     margin-bottom: 1.5em;
 
@@ -883,10 +1069,34 @@ iframe {
       white-space: nowrap;
     }
   }
-}
+
+  @include mq (m) {
+    .both {
+      margin-bottom: 3em;
+
+      li {
+        float: left;
+        padding-right: 4%;
+        width: 48%;
+
+        &:nth-child(2n) {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+} // </.external-links>
 
 .programme {
   margin-bottom: 3em;
+
+  .has-programme & {
+    @include mq (m) {
+      float: left;
+      padding-right: 4%;
+      width: 48%;
+    }
+  }
 
   li {
     margin-bottom: .75em;
@@ -902,6 +1112,13 @@ iframe {
 
 .archive-docs {
   margin-bottom: 3em;
+
+  .has-programme & {
+    @include mq (m) {
+      float: left;
+      width: 48%;
+    }
+  }
 
   li {
     position: relative;
@@ -932,16 +1149,35 @@ iframe {
       font-size: .75em;
       font-weight: 700;
     }
-  }
-}
+  } // </li>
+} // </.archive-docs>
 
 .multimedia {
   margin-bottom: 3em;
 
+  .has-programme & {
+    clear: both;
+  }
+
   .embed-container {
     display: block;
   }
-}
+
+  @include mq (m) {
+    .audio,
+    .video {
+      li {
+        float: left;
+        padding-right: 1.25%;
+        width: 32.5%;
+
+        &:nth-child(3n) {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+} // </.multimedia>
 
 .gallery {
   clear: both;
@@ -954,31 +1190,56 @@ iframe {
     margin-bottom: 1.5em;
     padding-right: 4%;
     width: 48%;
+    @include mq (m) {
+      padding-right: 1.25%;
+      width: 19%;
+    }
+
+    &:nth-child(2n) {
+      padding-right: 0;
+      @include mq (m) {
+        padding-right: 1.25%;
+      }
+    }
+
+    &:nth-child(5n) {
+      @include mq (m) {
+        padding-right: 0;
+      }
+    }
 
     a {
+      @include mq (m) {
+        cursor: zoom-in;
+      }
+
       img {
-        transition: filter .4s ease-out;
+        transition: filter .4s ease-out, box-shadow .2s ease-out;
         width: 100%;
         filter: grayscale(1) contrast(125%) brightness(125%) saturate(100%);
       }
 
       &:hover {
         img {
-          transition: filter .4s ease-in;
+          transition: filter .4s ease-in, box-shadow .2s ease-in;
           filter: grayscale(0) contrast(100%) brightness(100%) saturate(150%);
+
+          @include mq (m) {
+            box-shadow: 0 0 0 .375em $black;
+          }
         }
       }
     }
-
-    &:nth-child(2n) {
-      padding-right: 0;
-    }
   }
-}
+} // </.popup-gallery>
 
 .archive-link {
   margin-bottom: 1.5em;
   font-family: $sans-stack;
+
+  .has-programme & {
+    clear: both;
+  }
 }
 
 .has-docs {
@@ -992,6 +1253,33 @@ iframe {
 // ========================================================================
 .member {
   .primary {
+    @include mq (m) {
+      float: left;
+      margin-right: 3.75%;
+      width: 58.25%;
+
+      p {
+        &:first-child {
+          margin-bottom: 1.2em;
+          line-height: 1.8;
+          font-size: 1.25em;
+        }
+      }
+
+      blockquote,
+      li,
+      ol,
+      ul {
+        p {
+          &:first-child {
+            margin-bottom: 1.5em;
+            line-height: 1.5;
+            font-size: 1em;
+          }
+        }
+      }
+    }
+
     .updated {
       display: inline-block;
       margin-bottom: 2em;
@@ -1008,6 +1296,10 @@ iframe {
 
   .secondary {
     font-family: $sans-stack;
+    @include mq (m) {
+      float: right;
+      width: 38%;
+    }
 
     h3 {
       margin: 0 0 1.714285714em; // 2.571… * 14px = 36px
@@ -1059,6 +1351,23 @@ iframe {
     margin-bottom: 3em;
     border-top: 1px solid $darken-tint;
     padding-top: 1.4375em;
+    @include mq (m) {
+      float: left;
+      margin-right: 3.75%;
+      width: 58.25%;
+
+      .audio {
+        li {
+          float: left;
+          padding-right: 2%;
+          width: 49%;
+
+          &:nth-child(2n) {
+            padding-right: 0;
+          }
+        }
+      }
+    }
 
     .embed-container {
       display: block;
@@ -1076,15 +1385,48 @@ iframe {
     margin-bottom: 1.5em;
     font-family: $sans-stack;
   } // </.composers-link>
+
+  @include mq (m) {
+    &.no-primary {
+      .secondary {
+        float: none;
+        margin: 0 auto;
+      }
+
+      .composerav {
+        float: none;
+        margin: 0 auto;
+        width: 38%;
+
+        .audio {
+          li {
+            float: none;
+            padding-right: 0;
+            width: 100%;
+          }
+        }
+      }
+    } // </.no-primary>
+  }
 } // </.member>
 
 // ==========================================================================
 // Colloquium Single Styles
 // ==========================================================================
 .event-photo {
+  @include mq (m) {
+    margin-right: auto;
+    margin-left: auto;
+    width: 58.25%;
+  }
+
   img {
     width: 100%;
     mix-blend-mode: multiply;
+    @include mq (m) {
+      width: auto;
+      max-width: 100%;
+    }
   }
 }
 
@@ -1095,8 +1437,6 @@ iframe {
   clear: both;
   background: $dark-bg;
   padding: $body-padding;
-  padding-top: 1.5em;
-  padding-bottom: 1.5em;
   text-align: center;
   color: $light-text;
   font-family: $sans-stack;
@@ -1118,385 +1458,14 @@ iframe {
 // ==========================================================================
 // larger screens, > 720px
 @media only screen and (min-width: 45em) {
-  body {
-    background: $halftone;
-  }
-
-  h2 {
-    font-size: 2.5em;
-  }
-
-  .site-header {
-    margin: 1.5em 0;
-    background: transparent;
-    height: auto;
-    text-align: center;
-
-    h1 {
-      margin: 0;
-      padding-left: 0;
-      width: 100%;
-      line-height: 1;
-      letter-spacing: 0;
-      font-size: 4.5em;
-
-      .lowercase {
-        display: inline;
-      }
-    }
-
-    a {
-      color: $black;
-    }
-  } // </.site-header>
-
-  .menu {
-    display: block;
-    line-height: 2.6666666666em;
-    font-size: 1.125em;
-
-    ul {
-      margin: 0;
-      padding: 0;
-      list-style-type: none;
-    }
-
-    li {
-      display: inline-block;
-      margin-right: .5em;
-
-      &:nth-child(odd) {
-        background-color: transparent;
-      }
-
-      &:nth-child(even) {
-        background-color: transparent;
-      }
-
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-
-    .current-menu-item {
-      a {
-        &::before {
-          content: "";
-       }
-      }
-    }
-
-    a {
-      padding: 0 .5em;
-      color: $text-color;
-
-      &:hover {
-        background: $bright-green;
-      }
-    }
-  }
-
-  .menu-button {
-    display: none;
-  }
-
-  .fp-section,
-  .p-section {
-    padding: $more-padding;
-    padding-top: 1.5em;
-    padding-bottom: 1.5em;
-  }
-
-  .fp-section--blurb {
-    .entry {
-      line-height: 1.5;
-      font-size: 1.5em;
-    }
-  }
-
+  // TODO: This repetition should be refactored into a single class for half-width elements
   .fp-archive-link,
-  .social-link {
+  .more-events-link,
+  .social-link,
+  .miscevents {
     margin-right: auto;
     margin-left: auto;
     width: 59.4%;
-  }
-
-  .section--events {
-    .colloquia,
-    .concerts {
-      display: block;
-      float: left;
-      padding-right: 6%;
-      width: 47%;
-
-      &:nth-child(2n) {
-        padding-right: 0;
-      }
-
-      .solo {
-        float: none;
-        margin-right: auto;
-        margin-left: auto;
-        width: 49.4%;
-      }
-    }
-
-    .miscevents,
-    .more-events-link {
-      margin-right: auto;
-      margin-left: auto;
-      width: 59.4%;
-    }
-  } // </.section--events>
-
-  .composers {
-    li {
-      float: left;
-      margin-right: 1.25%;
-      margin-bottom: .375em;
-      width: 19%;
-
-      a {
-        height: auto;
-        overflow: hidden;
-
-        img {
-          float: none;
-          width: 100%;
-          max-width: none;
-        }
-
-        span {
-          display: table-cell;
-          padding: 0 5%;
-          width: 24em;
-          max-width: 100%;
-          height: 3.52941176em;
-          vertical-align: middle;
-          line-height: 1.1em;
-          white-space: normal;
-        }
-      } // </a>
-
-      &:hover {
-        padding: 0;
-      }
-
-      &:nth-child(5n) {
-        margin-right: 0;
-      }
-    } // </li>
-
-    .no-img {
-      a {
-        margin-top: 1px;
-        padding-top: 100%;
-      }
-    }
-  } // </.composers>
-
-  .support {
-    margin-top: -1.3333333333em;
-  }
-
-  .description {
-    margin-bottom: 2.4em;
-    line-height: 1.8;
-    font-size: 1.25em;
-
-    h3 {
-      font-size: 1.2em;
-    }
-
-    .concert-poster {
-      display: inline-block;
-      float: right;
-      margin-left: 4%;
-      width: 32.5%;
-    }
-  }
-
-  .external-links {
-    .both {
-      margin-bottom: 3em;
-
-      li {
-        float: left;
-        padding-right: 4%;
-        width: 48%;
-
-        &:nth-child(2n) {
-          padding-right: 0;
-        }
-      }
-    }
-  }
-
-  .multimedia {
-    .audio,
-    .video {
-      li {
-        float: left;
-        padding-right: 1.25%;
-        width: 32.5%;
-
-        &:nth-child(3n) {
-          padding-right: 0;
-        }
-      }
-    }
-  }
-
-  .gallery {
-    .popup-gallery {
-      li {
-        margin-bottom: 1.5em;
-        padding-right: 1.25%;
-        width: 19%;
-
-        &:nth-child(2n) {
-          padding-right: 1.25%;
-        }
-
-        &:nth-child(5n) {
-          padding-right: 0;
-        }
-      } // </li>
-
-      a {
-        cursor: zoom-in;
-
-        &:hover {
-          img {
-            transition: box-shadow .2s ease-in;
-            box-shadow: 0 0 0 .375em $black;
-          }
-        }
-      }
-    }
-  }
-
-  .has-programme {
-    .programme {
-      float: left;
-      padding-right: 4%;
-      width: 48%;
-    }
-
-    .archive-docs,
-    .external-links {
-      float: left;
-      width: 48%;
-    }
-
-    .external-links {
-      li {
-        float: none;
-        padding-right: 0;
-        width: 100%;
-      }
-    }
-
-    .archive-link,
-    .multimedia {
-      clear: both;
-    }
-  }
-
-  .member {
-    .primary {
-      float: left;
-      margin-right: 3.75%;
-      width: 58.25%;
-
-      p {
-        &:first-child {
-          margin-bottom: 1.2em;
-          line-height: 1.8;
-          font-size: 1.25em;
-        }
-      }
-
-      blockquote,
-      li,
-      ol,
-      ul {
-        p {
-          &:first-child {
-            margin-bottom: 1.5em;
-            line-height: 1.5;
-            font-size: 1em;
-          }
-        }
-      }
-    }
-
-    .secondary {
-      float: right;
-      width: 38%;
-    }
-
-    .composerav {
-      float: left;
-      margin-right: 3.75%;
-      width: 58.25%;
-
-      .audio {
-        li {
-          float: left;
-          padding-right: 2%;
-          width: 49%;
-
-          &:nth-child(2n) {
-            padding-right: 0;
-          }
-        }
-      }
-    } // </.composerav>
-
-    .no-primary {
-      .secondary {
-        float: none;
-        margin: 0 auto;
-      }
-
-      .composerav {
-        float: none;
-        margin: 0 auto;
-        width: 38%;
-
-        .audio {
-          li {
-            float: none;
-            padding-right: 0;
-            width: 100%;
-          }
-        }
-      }
-    } // </.no-primary>
-  } // </.member>
-
-  // Colloquium single styles
-  .event-photo {
-    margin-right: auto;
-    margin-left: auto;
-    width: 58.25%;
-
-    img {
-      width: auto;
-      max-width: 100%;
-    }
-  }
-
-  .archive-header {
-    margin-bottom: 1.5em;
-  }
-
-  .archive-nav {
-    .left,
-    .right {
-      background: transparent;
-    }
   }
 } // end media-query
 

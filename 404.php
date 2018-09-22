@@ -11,7 +11,13 @@ get_header();
     </div>
   </section>
   <section class="composers-link">
-    <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">Back to the home page »</a>
+    <?= component('button_link', array(
+      'href' => esc_url(home_url('/')),
+      'html' => 'Back to the home page »',
+      'attrs' => array(
+        'rel' => 'home'
+      )
+    )) ?>
   </section>
 </article>
 

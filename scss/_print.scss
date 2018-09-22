@@ -1,0 +1,72 @@
+// These styles are only applied when the page is being printed
+@media print {
+  * {
+    box-shadow: none !important;
+    background: transparent !important;
+    text-shadow: none !important;
+    color: $black !important;
+  }
+
+  a {
+    &,
+    &:visited {
+      text-decoration: underline;
+    }
+
+    &[href] {
+      &::after {
+        content: " (" attr(href) ")";
+      }
+    }
+
+    &[href^="javascript:"],
+    &[href^="#"] {
+      &::after {
+        content: "";
+      }
+    }
+  }
+
+  abbr {
+    &[title] {
+      &::after {
+        content: " (" attr(title) ")";
+      }
+    }
+  }
+
+  blockquote,
+  pre {
+    border: 1px solid $light-text;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  img,
+  tr {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: .5cm;
+  }
+
+  h2,
+  h3,
+  p {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}

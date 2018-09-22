@@ -176,10 +176,20 @@ if (have_posts()) {
             } else {
                 // Output if incomplete list of work titles
                 // Format: a list of composer names seperated by commas, final pair joined by ' and '
+                $names_seen = array();
+                $composers = array_reduce($fullprogramme, function ($composers, $item) {
+                  global $names_seen;
+                  if (!in_array($item['composer'], $names_seen)) {
+                    $names_seen[] = $item['composer'];
+                    $composers[] = $item;
+                  }
+                  return $composers;
+                }, array());
+                $list_length = count($composers);
                 $n = 0;
                 echo '<p class="no-works">Works by ';
-                foreach ($fullprogramme as $item) {
-                    if ($n == ($count - 1)) {
+                foreach ($composers as $item) {
+                    if ($n == ($list_length - 1)) {
                         // last item
                         if ($item['url']) {
                             echo '<a href="' . esc_url($item['url']) . '">';
@@ -187,7 +197,7 @@ if (have_posts()) {
                         } else {
                             echo $item['composer'] . '.';
                         }
-                    } elseif ($n == ($count - 2)) {
+                    } elseif ($n == ($list_length - 2)) {
                         // penultimate item
                         if ($item['url']) {
                             echo '<a href="' . esc_url($item['url']) . '">';

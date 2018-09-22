@@ -326,6 +326,10 @@ iframe {
   height: 3em;
   color: $reverse-text;
 
+  &.active {
+    height: auto;
+  }
+
   h1 {
     float: left;
     margin: .15em 0 0;
@@ -349,84 +353,78 @@ iframe {
       background: transparent;
     }
   }
-
-  // Accessible Mobile Menu Styling
-  .menu {
-    display: none;
-    clear: both;
-    text-transform: uppercase;
-    line-height: 2;
-    letter-spacing: .15em;
-    font-family: $sans-stack;
-    font-weight: 700;
-
-    ul {
-      margin: 0;
-      padding: 0;
-      list-style-type: none;
-    }
-
-    li {
-      &:nth-child(odd) {
-        background-color: $menu-stripe-odd;
-      }
-
-      &:nth-child(even) {
-        background-color: $menu-stripe-even;
-      }
-    }
-
-    .current-menu-item {
-      a {
-        &::before {
-          content: "▶ ";
-        }
-      }
-    }
-
-    a {
-      display: block;
-      transition: background .2s ease-out;
-      padding: .5em 5%;
-      color: $reverse-text;
-    }
-
-    &.active {
-      display: block;
-    }
-
-    .no-js & {
-      display: block;
-    }
-  }
-
-  .menu-button {
-    float: right;
-    border: 0;
-    background-color: $menu-highlight;
-    padding: 0 .5em;
-    width: auto;
-    height: 2em;
-    text-transform: uppercase;
-    line-height: 2;
-    letter-spacing: .1em;
-    color: $text-color;
-    font-family: $sans-stack;
-    font-size: 1.5em;
-    font-weight: 700;
-
-    &.active {
-      background-color: $menu-stripe-odd;
-      color: $reverse-text;
-    }
-  }
 } // </.site-header>
 
-header {
-  &.active {
-    height: auto;
+// Accessible Mobile Menu Styling
+.menu {
+  display: none;
+  clear: both;
+  text-transform: uppercase;
+  line-height: 2;
+  letter-spacing: .15em;
+  font-family: $sans-stack;
+  font-weight: 700;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
   }
-} // </header>
+
+  li {
+    &:nth-child(odd) {
+      background-color: $menu-stripe-odd;
+    }
+
+    &:nth-child(even) {
+      background-color: $menu-stripe-even;
+    }
+  }
+
+  .current-menu-item {
+    a {
+      &::before {
+        content: "▶ ";
+      }
+    }
+  }
+
+  a {
+    display: block;
+    transition: background .2s ease-out;
+    padding: .5em 5%;
+    color: $reverse-text;
+  }
+
+  &.active {
+    display: block;
+  }
+
+  .no-js & {
+    display: block;
+  }
+}
+
+.menu-button {
+  float: right;
+  border: 0;
+  background-color: $menu-highlight;
+  padding: 0 .5em;
+  width: auto;
+  height: 2em;
+  text-transform: uppercase;
+  line-height: 2;
+  letter-spacing: .1em;
+  color: $text-color;
+  font-family: $sans-stack;
+  font-size: 1.5em;
+  font-weight: 700;
+
+  &.active {
+    background-color: $menu-stripe-odd;
+    color: $reverse-text;
+  }
+}
 
 // ==========================================================================
 // Concert List Item (Event Links)
@@ -687,67 +685,60 @@ header {
 // ========================================================================
 .archive-header {
   text-align: center;
-
-  .archive-nav {
-    position: relative;
-    top: -2.1em;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 12em;
-    height: 0;
-    line-height: 1;
-    font-size: 2em;
-
-    .left,
-    .right {
-      position: absolute;
-      top: 0;
-      border-bottom: 0;
-      background: $link-highlight;
-
-      .icon {
-        display: inline-block;
-        padding: .2em .1em .1em;
-      }
-
-      .text {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        overflow: hidden;
-        clip: rect(0 0 0 0);
-      }
-
-      &:hover {
-        background: $black;
-        color: $link-highlight;
-      }
-    } // </.left, .right>
-
-    .left {
-      left: 0;
-
-      .icon {
-        padding-right: .2em;
-      }
-    }
-
-    .right {
-      right: 0;
-
-      .icon {
-        padding-left: .2em;
-      }
-    }
-
-    .icon-left-arrow-bold,
-    .icon-right-arrow-bold {
-      &::before {
-        margin: 0;
-      }
-    }
-  } // </.archive-nav>
 } // </.archive-header>
+
+.archive-nav {
+  position: relative;
+  top: -2.1em;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 12em;
+  height: 0;
+  line-height: 1;
+  font-size: 2em;
+
+  .left,
+  .right {
+    position: absolute;
+    top: 0;
+    border-bottom: 0;
+    background: $link-highlight;
+
+    .icon {
+      display: inline-block;
+      padding: .2em .1em .1em;
+    }
+
+    .text {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+    }
+
+    &:hover {
+      background: $black;
+      color: $link-highlight;
+    }
+  } // </.left, .right>
+
+  .left {
+    left: 0;
+
+    .icon {
+      padding-right: .2em;
+    }
+  }
+
+  .right {
+    right: 0;
+
+    .icon {
+      padding-left: .2em;
+    }
+  }
+} // </.archive-nav>
 
 .years-nav {
   clear: both;
@@ -928,32 +919,32 @@ header {
 .gallery {
   clear: both;
   margin-bottom: 3em;
+}
 
-  .popup-gallery {
-    li {
-      float: left;
-      margin-bottom: 1.5em;
-      padding-right: 4%;
-      width: 48%;
+.popup-gallery {
+  li {
+    float: left;
+    margin-bottom: 1.5em;
+    padding-right: 4%;
+    width: 48%;
 
-      a {
+    a {
+      img {
+        transition: filter .4s ease-out;
+        width: 100%;
+        filter: grayscale(1) contrast(125%) brightness(125%) saturate(100%);
+      }
+
+      &:hover {
         img {
-          transition: filter .4s ease-out;
-          width: 100%;
-          filter: grayscale(1) contrast(125%) brightness(125%) saturate(100%);
-        }
-
-        &:hover {
-          img {
-            transition: filter .4s ease-in;
-            filter: grayscale(0) contrast(100%) brightness(100%) saturate(150%);
-          }
+          transition: filter .4s ease-in;
+          filter: grayscale(0) contrast(100%) brightness(100%) saturate(150%);
         }
       }
+    }
 
-      &:nth-child(2n) {
-        padding-right: 0;
-      }
+    &:nth-child(2n) {
+      padding-right: 0;
     }
   }
 }
@@ -1212,57 +1203,57 @@ div {
     a {
       color: $black;
     }
-
-    .menu {
-      display: block;
-      line-height: 2.6666666666em;
-      font-size: 1.125em;
-
-      ul {
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
-      }
-
-      li {
-        display: inline-block;
-        margin-right: .5em;
-
-        &:nth-child(odd) {
-          background-color: transparent;
-        }
-
-        &:nth-child(even) {
-          background-color: transparent;
-        }
-
-        &:last-child {
-          margin-right: 0;
-        }
-      }
-
-      .current-menu-item {
-        a {
-          &::before {
-            content: "";
-         }
-        }
-      }
-
-      a {
-        padding: 0 .5em;
-        color: $text-color;
-
-        &:hover {
-          background: $bright-green;
-        }
-      }
-    }
-
-    .menu-button {
-      display: none;
-    }
   } // </.site-header>
+
+  .menu {
+    display: block;
+    line-height: 2.6666666666em;
+    font-size: 1.125em;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+
+    li {
+      display: inline-block;
+      margin-right: .5em;
+
+      &:nth-child(odd) {
+        background-color: transparent;
+      }
+
+      &:nth-child(even) {
+        background-color: transparent;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .current-menu-item {
+      a {
+        &::before {
+          content: "";
+       }
+      }
+    }
+
+    a {
+      padding: 0 .5em;
+      color: $text-color;
+
+      &:hover {
+        background: $bright-green;
+      }
+    }
+  }
+
+  .menu-button {
+    display: none;
+  }
 
   .fp-section,
   .p-section {
@@ -1563,12 +1554,12 @@ div {
 
   .archive-header {
     margin-bottom: 1.5em;
+  }
 
-    .archive-nav {
-      .left,
-      .right {
-        background: transparent;
-      }
+  .archive-nav {
+    .left,
+    .right {
+      background: transparent;
     }
   }
 } // end media-query

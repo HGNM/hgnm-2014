@@ -270,7 +270,7 @@ iframe {
 // Section Background Styles
 // ==========================================================================
 #events {
-  .fp-section {
+  &.fp-section {
     background: $overlay;
   }
 }

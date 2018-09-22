@@ -115,48 +115,64 @@ textarea {
   src: url("font/hgnm.eot?#iefix") format("embedded-opentype"), url("font/hgnm.woff2") format("woff2"), url("font/hgnm.woff") format("woff");
 }
 
-[class^="icon-"],
-[class*=" icon-"] {
+.icon {
   &::before {
-    @include icon-defaults;
+    display: inline-block;
+    margin-right: .2em;
+    margin-left: .2em; // Animation center compensation
+    width: 1em;
+    text-align: center;
+    text-transform: none; // For safety, reset parent styles
+    text-decoration: inherit;
+    line-height: 1em; // fix buttons height, for twitter bootstrap
+    font-family: "hgnm";
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal; // For safety, reset parent styles
+    speak: none;
   }
-}
 
-.icon-download {
-  &::before {
-    content: "\e800";
+  &--download {
+    &::before {
+      content: "\e800";
+    }
   }
-}
 
-.icon-location {
-  &::after {
-    @include icon-defaults;
-    content: "\e801";
+  &--facebook {
+    &::before {
+      content: "\e805";
+    }
   }
-}
 
-.icon-left-arrow-bold {
-  &::before {
-    content: "\e802";
+  &--left-arrow-bold {
+    &::before {
+      content: "\e802";
+    }
   }
-}
 
-.icon-right-arrow-bold {
-  &::before {
-    content: "\e803";
+  &--link-ext {
+    &::before {
+      font-size: 80%;
+      content: "\e804";
+    }
   }
-}
 
-.icon-link-ext {
-  &::after {
-    @include icon-defaults;
-    content: "\e804";
+  &--location {
+    &::before {
+      content: "\e801";
+    }
   }
-}
 
-.icon-facebook {
-  &::before {
-    content: "\e805";
+  &--right-arrow-bold {
+    &::before {
+      content: "\e803";
+    }
+  }
+
+  &--color {
+    &-light {
+      color: $light-text;
+    }
   }
 }
 
@@ -554,29 +570,24 @@ header {
         float: left;
         width: 60%;
         text-align: left;
-
-        .icon-link-ext {
-          &::after {
-            transition: color .2s ease-out;
-            padding-left: .1em;
-            color: $light-text;
-            font-size: 80%;
-          }
-
-          &:hover {
-            &::after {
-              transition: color .2s ease-in;
-              color: $text-color;
-            }
-          }
-        }
       }
     }
 
-    .icon-link-ext {
-      &::after {
-        padding-left: .3em;
-        font-size: 80%;
+
+    .icon--color-light {
+      &::before {
+        transition: color .2s ease-out;
+      }
+    }
+
+    .url {
+      &:hover {
+        .icon--color-light {
+          &::before {
+            transition: color .2s ease-in;
+            color: $text-color;
+          }
+        }
       }
     }
 
@@ -813,13 +824,6 @@ header {
 
   .location {
     margin-bottom: 1.2em;
-
-    .icon-link-ext {
-      &::after {
-        padding-left: .3em;
-        font-size: 80%;
-      }
-    }
   }
 
   .tickets {
@@ -860,13 +864,6 @@ header {
     .perfname {
       white-space: nowrap;
     }
-
-    .icon-link-ext {
-      &::after {
-        padding-left: .3em;
-        font-size: 80%;
-      }
-    }
   }
 }
 
@@ -892,7 +889,7 @@ header {
     position: relative;
     margin-bottom: .75em;
 
-    .icon-download {
+    .icon--download {
       position: absolute;
       line-height: 1;
       font-size: 165%;
@@ -1016,13 +1013,6 @@ header {
 
     .url {
       margin-bottom: 1.5em;
-
-      .icon-link-ext {
-        &::after {
-          padding-left: .3em;
-          font-size: 80%;
-        }
-      }
     }
 
     .colloquia {
@@ -1038,13 +1028,6 @@ header {
       p {
         text-align: left;
         font-family: $serif-stack;
-
-        .icon-link-ext {
-          &::after {
-            padding-left: .3em;
-            font-size: 80%;
-          }
-        }
       }
     } // </.colloquia>
 

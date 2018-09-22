@@ -133,7 +133,11 @@ get_header();
                                     the_row();
                                     if (get_sub_field('file') && get_sub_field('file_name')) {
                                         $document = get_sub_field('file');
-                                        echo '<li><span class="icon icon-download" aria-hidden="true"></span><a href="' . esc_url($document['url']) . '">' . get_sub_field('file_name') . '</a></li>';
+                                        echo '<li>' .
+                                          component('icon', array('type' => 'download')) .
+                                          '<a href="' . esc_url($document['url']) . '">' .
+                                            get_sub_field('file_name') .
+                                          '</a></li>';
                                     }
                                 }
                                 echo '</ul></section>';

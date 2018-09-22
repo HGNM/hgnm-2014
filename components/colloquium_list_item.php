@@ -30,8 +30,12 @@ if (!function_exists('colloquium_list_item')) {
                     '</a>';
         } elseif ($type == 'Guest Speaker') {
             if (get_field('url', $ID)) {
-                $html .= '<a href="' . esc_url(get_field('url', $ID)) . '" class="url icon-link-ext" target="_blank">' .
+                $html .= '<a href="' . esc_url(get_field('url', $ID)) . '" class="url" target="_blank">' .
                       get_the_title($ID) .
+                      component('icon', array(
+                        'type' => 'link-ext',
+                        'color' => 'light'
+                      )) .
                     '</a>';
             } else {
                 $html .= get_the_title($ID);

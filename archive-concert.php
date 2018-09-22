@@ -194,14 +194,14 @@ get_header();
           <nav id="archive-nav" class="archive-nav clearfix">
             <?php if ($previousyear) : ?>
               <a href="<?php echo get_post_type_archive_link('concert') . $previousyear . '/'; ?>" class="left">
-                <span class="icon icon-left-arrow-bold" aria-hidden="true"></span>
+                <?= component('icon', array('type' => 'left-arrow-bold')) ?>
                 <span class="text">Older Archive</span>
               </a>
             <?php endif; ?>
             <?php if ($nextyear) : ?>
               <a href="<?php echo get_post_type_archive_link('concert') . $nextyear . '/'; ?>" class="right">
                 <span class="text">Newer Archive</span>
-                <span class="icon icon-right-arrow-bold" aria-hidden="true"></span>
+                <?= component('icon', array('type' => 'right-arrow-bold')) ?>
               </a>
             <?php endif; ?>
           </nav>

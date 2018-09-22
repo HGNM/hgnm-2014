@@ -229,19 +229,50 @@ if (have_posts()) {
                 $posterpdf = get_field('poster_pdf');
                 $filesize = size_format(filesize(get_attached_file($posterpdf['ID'])));
                 if ($posterpdf['mime_type'] == 'application/pdf') {
-                    echo '<li><span class="icon icon-download" aria-hidden="true"></span><a href="' . esc_url($posterpdf['url']) . '">Download PDF of concert poster</a> <span class="docs-meta">' . $filesize . '</span></li>';
+                    echo '<li>' .
+                      component('icon', array('type' => 'download')) .
+                      '<a href="' . esc_url($posterpdf['url']) . '">' .
+                        'Download PDF of concert poster' .
+                      '</a> ' .
+                      '<span class="docs-meta">' .
+                        $filesize .
+                      '</span>' .
+                    '</li>';
                 } else {
                     $filetype = wp_check_filetype($posterpdf['url']);
-                    echo '<li><span class="icon icon-download" aria-hidden="true"></span><a href="' . esc_url($posterpdf['url']) . '">Download concert poster</a> <span class="docs-meta">' . strtoupper($filetype['ext']) . ', ' . $filesize . '</span></li>';
+                    echo '<li>' .
+                      component('icon', array('type' => 'download')) .
+                      '<a href="' . esc_url($posterpdf['url']) . '">' .
+                        'Download concert poster' .
+                      '</a> ' .
+                      '<span class="docs-meta">' .
+                        strtoupper($filetype['ext']) . ', ' . $filesize .
+                      '</span>' .
+                    '</li>';
                 }
             }
             if (get_field('programme_pdf')) {
                 $programmepdf = get_field('programme_pdf');
                 $progfilesize = size_format(filesize(get_attached_file($programmepdf['ID'])));
                 if ($programmepdf['mime_type'] == 'application/pdf') {
-                    echo '<li><span class="icon icon-download" aria-hidden="true"></span><a href="' . esc_url($programmepdf['url']) . '">Download PDF of program booklet</a> <span class="docs-meta">' . $progfilesize . '</span></li>';
+                    echo '<li>' .
+                      component('icon', array('type' => 'download')) .
+                      '<a href="' . esc_url($programmepdf['url']) . '">' .
+                        'Download PDF of program booklet' .
+                      '</a> ' .
+                      '<span class="docs-meta">' .
+                        $progfilesize .
+                      '</span>' .
+                    '</li>';
                 } else {
-                    echo '<li><span class="icon icon-download" aria-hidden="true"></span><a href="' . esc_url($programmepdf['url']) . '">Download program booklet</a> <span class="docs-meta">' . $progfilesize . '</span></li>';
+                    echo '<li>' .
+                      component('icon', array('type' => 'download')) .
+                      '<a href="' . esc_url($programmepdf['url']) . '">' .
+                        'Download program booklet' .
+                      '</a> ' .
+                      '<span class="docs-meta">' .
+                        $progfilesize .
+                      '</span></li>';
                 }
             }
             echo '</ul></section>';
@@ -260,7 +291,11 @@ if (have_posts()) {
       <li>
         <?= component('button_link', array(
           'href' => esc_url(get_field('performer_url')),
-          'html' => 'Find out more about <span class="perfname">' . get_the_title() . '<span class="icon icon-link-ext" aria-hidden="true"></span></span>'
+          'html' => 'Find out more about ' .
+            '<span class="perfname">' .
+              get_the_title() .
+              component('icon', array('type' => 'link-ext')) .
+            '</span>'
         )) ?>
       </li>
       <?php
@@ -271,7 +306,8 @@ if (have_posts()) {
       <li>
         <?= component('button_link', array(
           'href' => esc_url(get_field('facebook_url')),
-          'html' => 'See this event on Facebook <span class="icon icon-facebook" aria-hidden="true"></span>'
+          'html' => 'See this event on Facebook' .
+                    component('icon', array('type' => 'facebook'))
         )) ?>
       </li>
       <?php

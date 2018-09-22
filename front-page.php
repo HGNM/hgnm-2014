@@ -15,7 +15,7 @@ get_header();
               'button_link',
               array(
                 'href' => 'https://www.facebook.com/pages/Harvard-Group-for-New-Music/130937206919388',
-                'html' => 'Join us on Facebook <span class="icon icon-facebook" aria-hidden="true"></span>'
+                'html' => 'Join us on Facebook' . component('icon', array('type' => 'facebook'))
               )
             ) ?>
           </p>

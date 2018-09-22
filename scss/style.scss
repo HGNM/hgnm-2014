@@ -236,6 +236,41 @@ a {
       color: $black;
     }
   }
+
+  // ==========================================================================
+  // Buttons
+  // ==========================================================================
+  @at-root .button-link,
+  &.button-link {
+    display: block;
+    border: 0;
+    background: $bright-green;
+    padding: 1.2em 5%;
+    text-align: center;
+    text-decoration: none;
+    line-height: 1.2;
+    color: $text-color;
+    font-size: 1.25rem;
+    transition-property: background, margin, color;
+    transition-duration: .2s;
+    transition-timing-function: ease-out;
+
+    &:hover {
+      margin-right: 5%;
+      margin-left: 5%;
+      background-color: $black;
+      color: $bright-green;
+      transition-timing-function: ease-in;
+    }
+
+    :first-child {
+      margin-top: 0;
+    }
+
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
 // ==========================================================================
@@ -1266,44 +1301,6 @@ iframe {
     &:hover {
       background: transparent;
       color: $link-highlight;
-    }
-  }
-}
-
-// ==========================================================================
-// Buttons
-// ==========================================================================
-
-a {
-  @at-root .button-link,
-  &.button-link {
-    display: block;
-    border: 0;
-    background: $bright-green;
-    padding: 1.2em 5%;
-    text-align: center;
-    text-decoration: none;
-    line-height: 1.2;
-    color: $text-color;
-    font-size: 1.25rem;
-    transition-property: background, margin, color;
-    transition-duration: .2s;
-    transition-timing-function: ease-out;
-
-    &:hover {
-      margin-right: 5%;
-      margin-left: 5%;
-      background-color: $black;
-      color: $bright-green;
-      transition-timing-function: ease-in;
-    }
-
-    :first-child {
-      margin-top: 0;
-    }
-
-    :last-child {
-      margin-bottom: 0;
     }
   }
 }

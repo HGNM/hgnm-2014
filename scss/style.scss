@@ -1356,7 +1356,7 @@ div {
     }
   } // </.site-header>
 
-  fp-section,
+  .fp-section,
   .p-section {
     padding: $more-padding;
     padding-top: 1.5em;
@@ -1368,12 +1368,13 @@ div {
       line-height: 1.5;
       font-size: 1.5em;
     }
+  }
 
-    .social-link {
-      margin-right: auto;
-      margin-left: auto;
-      width: 59.4%;
-    }
+  .fp-archive-link,
+  .social-link {
+    margin-right: auto;
+    margin-left: auto;
+    width: 59.4%;
   }
 
   .section--events {
@@ -1449,12 +1450,6 @@ div {
       }
     }
   } // </.composers>
-
-  .fp-section--archive-link {
-    padding-right: 25%;
-    padding-left: 25%;
-    width: 50%;
-  } // </#fp-archive-link>
 
   .support {
     margin-top: -1.3333333333em;

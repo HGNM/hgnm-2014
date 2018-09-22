@@ -181,10 +181,12 @@ get_header();
         // Display archive link
         ?>
     <section id="fp-archive-link" class="fp-section fp-section--archive-link bg-overlay">
-      <?= component('button_link', array(
-        'href' => get_post_type_archive_link('concert'),
-        'html' => '<h2>Archive</h2><p>Dive into an archive of HGNM’s past events, members, audio and video.</p>'
-      )) ?>
+      <div class="fp-archive-link">
+        <?= component('button_link', array(
+          'href' => get_post_type_archive_link('concert'),
+          'html' => '<h2>Archive</h2><p>Dive into an archive of HGNM’s past events, members, audio and video.</p>'
+        )) ?>
+      </div>
     </section>
 
     </article>

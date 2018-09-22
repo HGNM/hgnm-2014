@@ -40,9 +40,9 @@ $max-width: 60em;
 
 // Media query mixin
 $breakpoints: (
-  s: "max-width: 22em",
-  m: "min-width: 45em",
-  l: "min-width: 78.75em"
+  xs: "max-width: 22em",  // EXTRA SMALL (old mobile) screens, ≤ 352px
+  m: "min-width: 45em",   // MEDIUM (laptop) screens, ≥ 720px
+  l: "min-width: 78.75em" // LARGE screens, ≥ 1260px
 );
 
 @mixin mq ($size) {

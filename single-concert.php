@@ -247,13 +247,23 @@ if (have_posts()) {
                     // PERFORMER LINK
                     if (get_field('performer_url')) {
                         ?>
-      <li><a href="<?php esc_url(the_field('performer_url')); ?>">Find out more about <span class="perfname"><?php the_title(); ?><span class="icon icon-link-ext" aria-hidden="true"></span></span></a></li>
+      <li>
+        <?= component('button_link', array(
+          'href' => esc_url(get_field('performer_url')),
+          'html' => 'Find out more about <span class="perfname">' . get_the_title() . '<span class="icon icon-link-ext" aria-hidden="true"></span></span>'
+        )) ?>
+      </li>
       <?php
                     }
             // FACEBOOK LINK
             if (get_field('facebook_url')) {
                 ?>
-      <li><a href="<?php esc_url(the_field('facebook_url')); ?>">See this event on Facebook <span class="icon icon-facebook" aria-hidden="true"></span></a></li>
+      <li>
+        <?= component('button_link', array(
+          'href' => esc_url(get_field('facebook_url')),
+          'html' => 'See this event on Facebook <span class="icon icon-facebook" aria-hidden="true"></span>'
+        )) ?>
+      </li>
       <?php
             } ?>
     </ul>
@@ -331,7 +341,10 @@ if (have_posts()) {
         } else {
             $seasontitle = $yearquery . '–' . str_pad((($yearquery + 1) % 100), 2, '0', STR_PAD_LEFT);
         }
-        echo '<a href="' . get_post_type_archive_link('concert') . $yearquery . '/">See all events in the ' . $seasontitle . ' season »</a>'; ?>
+        echo component('button_link', array(
+          'href' => get_post_type_archive_link('concert') . $yearquery . '/',
+          'html' => 'See all events in the ' . $seasontitle . ' season »'
+        )); ?>
   </section><!-- .archive-link -->
 
 </article><!-- #post-ID .vevent -->

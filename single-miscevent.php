@@ -116,7 +116,13 @@ get_header();
 
                         // EXTERNAL LINK
                         if (get_row_layout() == 'link') {
-                            echo '<section class="external-links"><ul><li><a href="' . get_sub_field('url') . '" class="url">' . get_sub_field('title') . ' »</a></li></ul></section>';
+                            echo '<section class="external-links"><ul><li>';
+                            echo component('button_link', array(
+                              'href' => get_sub_field('url'),
+                              'html' => get_sub_field('title') . ' »',
+                              'classes' => array('url')
+                            ));
+                            echo '</li></ul></section>';
                         }
 
                         // ARCHIVE CONTENT
@@ -189,7 +195,10 @@ get_header();
                     } else {
                         $seasontitle = $yearquery . '–' . str_pad((($yearquery + 1) % 100), 2, '0', STR_PAD_LEFT);
                     }
-                    echo '<a href="' . get_post_type_archive_link('concert') . $yearquery . '/">See all events in the ' . $seasontitle . ' season »</a>';
+                    echo component('button_link', array(
+                      'href' => get_post_type_archive_link('concert') . $yearquery . '/',
+                      'html' => 'See all events in the ' . $seasontitle . ' season »'
+                    ));
                 ?>
 				</section>
 

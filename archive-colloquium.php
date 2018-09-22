@@ -149,9 +149,10 @@ get_header();
         </section>
       <?php endif; ?>
       <footer class="more-events-link">
-        <a href="<?php echo get_post_type_archive_link('concert') . $yearquery . '/'; ?>">
-          <p>See all events from this season »</p>
-        </a>
+        <?= component('button_link', array(
+          'href' => get_post_type_archive_link('concert') . $yearquery . '/',
+          'html' => '<p>See all events from this season »</p>'
+        )) ?>
       </footer>
       <?php echo '</article>';
 

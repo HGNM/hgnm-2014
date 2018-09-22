@@ -394,45 +394,6 @@ iframe {
   }
 
   #torso {
-    a {
-      &,
-      &:visited {
-        @include transition(all .2s ease-out);
-        border-bottom: 2px solid $link-highlight;
-        text-decoration: none;
-        color: $link-text;
-      }
-
-      &:hover {
-        @include transition(all .2s ease-in);
-        background: $link-highlight;
-      }
-
-      // ======================================================================
-      // Meta Styles
-      // ======================================================================
-      &.edit-button {
-        display: block;
-        margin: 1.5em auto;
-        border-bottom: 0;
-        border-radius: .15em;
-        background: $secondary-highlight;
-        padding: .75em;
-        width: 3em;
-        text-align: center;
-        text-transform: uppercase;
-        letter-spacing: .15em;
-        color: $reverse-text;
-        font-family: $sans-stack;
-        font-weight: 700;
-
-        &:hover {
-          background: $link-highlight;
-          color: $black;
-        }
-      }
-    }
-
     // ========================================================================
     // Front Page Styles
     // ========================================================================
@@ -472,24 +433,6 @@ iframe {
         clear: both;
         margin-bottom: 3em;
         font-family: $sans-stack;
-
-        a {
-          display: block;
-          margin-bottom: 0;
-          border-bottom: 0;
-          background: $link-highlight;
-          padding: 1.2em 5%;
-          text-align: center;
-          line-height: 1.2;
-          font-size: 1.25em;
-
-          &:hover {
-            margin-right: 5%;
-            margin-left: 5%;
-            background: $black;
-            color: $link-highlight;
-          }
-        }
       }
     }
 
@@ -636,27 +579,6 @@ iframe {
       .more-events-link {
         clear: both;
         margin-bottom: 3em;
-
-        a {
-          display: block;
-          border-bottom: 0;
-          background: $link-highlight;
-          padding: 1.5em 5%;
-          text-align: center;
-
-          p {
-            margin-bottom: 0;
-            line-height: 1.2;
-            font-size: 1.25em;
-          }
-
-          &:hover {
-            margin-right: 5%;
-            margin-left: 5%;
-            background: $black;
-            color: $link-highlight;
-          }
-        }
       }
     }
     // </#events>
@@ -728,32 +650,6 @@ iframe {
         background: $overlay;
       }
     } // </.composers>
-
-    #fp-archive-link {
-      a {
-        display: block;
-        border-bottom: 0;
-        background: $link-highlight;
-        padding: 1.5em 5%;
-        text-align: center;
-
-        p {
-          margin-bottom: 0;
-          line-height: 1.2;
-          font-size: 1.25em;
-        }
-
-        &:hover {
-          margin: 0 5%;
-          background: $black;
-          color: $link-highlight;
-
-          h2 {
-            color: $link-highlight;
-          }
-        }
-      }
-    }
 
     // ========================================================================
     // Archive Nav Styles
@@ -939,26 +835,6 @@ iframe {
       li {
         margin-bottom: 1.5em;
 
-        a {
-          display: block;
-          margin-bottom: 0;
-          border-bottom: 0;
-          background: $link-highlight;
-          padding: 1.5em 5%;
-          text-align: center;
-          line-height: 1.2;
-          font-size: 1.25em;
-
-          &:hover {
-            margin-right: 4%;
-            margin-left: 4%;
-            background: $black;
-            padding-right: 1%;
-            padding-left: 1%;
-            color: $link-highlight;
-          }
-        }
-
         .perfname {
           white-space: nowrap;
         }
@@ -1066,26 +942,6 @@ iframe {
     .archive-link {
       margin-bottom: 1.5em;
       font-family: $sans-stack;
-
-      a {
-        display: block;
-        margin-bottom: 0;
-        border-bottom: 0;
-        background: $link-highlight;
-        padding: 1.5em 5%;
-        text-align: center;
-        line-height: 1.2;
-        font-size: 1.25em;
-
-        &:hover {
-          margin-right: 4%;
-          margin-left: 4%;
-          background: $black;
-          padding-right: 1%;
-          padding-left: 1%;
-          color: $link-highlight;
-        }
-      }
     }
 
     .has-docs {
@@ -1139,26 +995,6 @@ iframe {
 
         .url {
           margin-bottom: 1.5em;
-
-          a {
-            display: block;
-            margin-bottom: 0;
-            border-bottom: 0;
-            background: $link-highlight;
-            padding: 1.5em 5%;
-            text-align: center;
-            line-height: 1.2;
-            font-size: 1.25em;
-
-            &:hover {
-              margin-right: 4%;
-              margin-left: 4%;
-              background: $black;
-              padding-right: 1%;
-              padding-left: 1%;
-              color: $link-highlight;
-            }
-          }
 
           .icon-link-ext {
             &::after {
@@ -1276,26 +1112,6 @@ iframe {
         clear: both;
         margin-bottom: 1.5em;
         font-family: $sans-stack;
-
-        a {
-          display: block;
-          margin-bottom: 0;
-          border-bottom: 0;
-          background: $link-highlight;
-          padding: 1.5em 5%;
-          text-align: center;
-          line-height: 1.2;
-          font-size: 1.25em;
-
-          &:hover {
-            margin-right: 4%;
-            margin-left: 4%;
-            background: $black;
-            padding-right: 1%;
-            padding-left: 1%;
-            color: $link-highlight;
-          }
-        }
       } // </.composers-link>
     } // </.member>
   } // </#torso>
@@ -1677,15 +1493,9 @@ a {
       } // </.composers>
 
       #fp-archive-link {
-        a {
-          margin: 0 auto;
-          width: 49.5%;
-
-          &:hover {
-            margin: 0 auto;
-            width: 44.5%;
-          }
-        }
+        padding-right: 25%;
+        padding-left: 25%;
+        width: 50%;
       } // </#fp-archive-link>
 
       .support {

@@ -10,7 +10,15 @@ get_header();
         <?= component('edit_button') ?>
         <section id="fp-blurb" <?php post_class('fp-section'); ?>>
           <div class="entry"><?php the_content(); ?></div>
-          <p class="social-link"><a href="https://www.facebook.com/pages/Harvard-Group-for-New-Music/130937206919388">Join us on Facebook <span class="icon icon-facebook" aria-hidden="true"></span></a></p>
+          <p class="social-link">
+            <?= component(
+              'button_link',
+              array(
+                'href' => 'https://www.facebook.com/pages/Harvard-Group-for-New-Music/130937206919388',
+                'html' => 'Join us on Facebook <span class="icon icon-facebook" aria-hidden="true"></span>'
+              )
+            ) ?>
+          </p>
         </section><!-- #post -->
       <?php endwhile; ?>
     <?php else: ?>
@@ -133,9 +141,10 @@ get_header();
             </li>
           <?php endif; ?>
             <li class="more-events-link">
-              <a href="<?php echo get_post_type_archive_link('colloquium'); ?>">
-                <p>See all upcoming events »</p>
-              </a>
+              <?= component('button_link', array(
+                'href' => get_post_type_archive_link('colloquium'),
+                'html' => '<p>See all upcoming events »</p>'
+              )) ?>
             </li>
         </ul>
       </section> <!-- #fp-events -->
@@ -172,10 +181,10 @@ get_header();
         // Display archive link
         ?>
     <section id="fp-archive-link" class="fp-section">
-      <a href="<?php echo get_post_type_archive_link('concert'); ?>">
-        <h2>Archive</h2>
-        <p>Dive into an archive of HGNM’s past events, members, audio and video.</p>
-      </a>
+      <?= component('button_link', array(
+        'href' => get_post_type_archive_link('concert'),
+        'html' => '<h2>Archive</h2><p>Dive into an archive of HGNM’s past events, members, audio and video.</p>'
+      )) ?>
     </section>
 
     </article>

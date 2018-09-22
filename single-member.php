@@ -157,9 +157,11 @@ if (have_posts()) :
             if (get_field('url')) {
                 ?>
     <div class="url">
-      <a href="<?php the_field('url'); ?>" class="icon-link-ext">
-        Personal Website
-      </a>
+      <?= component('button_link', array(
+        'href' => get_field('url'),
+        'html' => 'Personal Website',
+        'classes' => array('icon-link-ext')
+      )) ?>
     </div>
     <?php
             }
@@ -228,7 +230,10 @@ if (have_posts()) :
   <?php endif; ?>
 
   <section class="composers-link">
-    <?= '<a href="' . get_post_type_archive_link('member') . '">See all composers »</a>'; ?>
+    <?= component('button_link', array(
+      'href' => get_post_type_archive_link('member'),
+      'html' => 'See all composers »'
+    )) ?>
   </section>
 </article><!-- #post -->
 <?php

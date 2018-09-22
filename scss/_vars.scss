@@ -37,3 +37,19 @@ $display-stack: "Dala Floda Web", Alegreya, Georgia, serif;
 $body-padding: 0 5%;
 $more-padding: 0 12.5%;
 $max-width: 60em;
+
+@mixin icon-defaults {
+  display: inline-block;
+  margin-right: .2em;
+  margin-left: .2em; // Animation center compensation
+  width: 1em;
+  text-align: center;
+  text-transform: none; // For safety, reset parent styles
+  text-decoration: inherit;
+  line-height: 1em; // fix buttons height, for twitter bootstrap
+  font-family: "hgnm";
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal; // For safety, reset parent styles
+  speak: none;
+}

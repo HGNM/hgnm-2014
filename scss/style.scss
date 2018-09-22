@@ -115,23 +115,11 @@ textarea {
   src: url("font/hgnm.eot?#iefix") format("embedded-opentype"), url("font/hgnm.woff2") format("woff2"), url("font/hgnm.woff") format("woff");
 }
 
-[class^="icon-"]::before,
-[class*=" icon-"]::before,
-.icon-link-ext::after,
-.icon-location::after {
-  display: inline-block;
-  margin-right: .2em;
-  margin-left: .2em; // Animation center compensation
-  width: 1em;
-  text-align: center;
-  text-transform: none; // For safety, reset parent styles
-  text-decoration: inherit;
-  line-height: 1em; // fix buttons height, for twitter bootstrap
-  font-family: "hgnm";
-  font-weight: normal;
-  font-style: normal;
-  font-variant: normal; // For safety, reset parent styles
-  speak: none;
+[class^="icon-"],
+[class*=" icon-"] {
+  &::before {
+    @include icon-defaults;
+  }
 }
 
 .icon-download {
@@ -142,6 +130,7 @@ textarea {
 
 .icon-location {
   &::after {
+    @include icon-defaults;
     content: "\e801";
   }
 }
@@ -160,6 +149,7 @@ textarea {
 
 .icon-link-ext {
   &::after {
+    @include icon-defaults;
     content: "\e804";
   }
 }

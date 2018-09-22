@@ -10,7 +10,7 @@ if (!function_exists('concert_list_item')) {
         $ID = $opts['id'];
         $EL = array_key_exists('el', $opts) ? $opts['el'] : 'li';
 
-        $html = '<' . $EL . ' class="vevent clearfix">' .
+        $html = '<' . $EL . ' class="vevent concert-list__item clearfix">' .
                   '<a href="' . get_permalink($ID) . '" class="url">';
 
         // SET START TIME VARIABLE

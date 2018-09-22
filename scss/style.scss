@@ -412,6 +412,68 @@ header {
   }
 } // </header>
 
+// ==========================================================================
+// Concert List Item (Event Links)
+// ==========================================================================
+.concert-list__item {
+  transition: margin .2s ease-out;
+  margin-bottom: 1.5em;
+
+  .dtstart {
+    display: block;
+    float: left;
+    margin: 0 5% 0 0;
+    background: $bright-green;
+    padding: 0 5%;
+    width: 25%;
+    text-align: center;
+
+    .month {
+      display: block;
+      padding-top: .4em;
+      text-transform: uppercase;
+      line-height: 1.4;
+      letter-spacing: .2em;
+      font-size: 1.25em;
+    }
+
+    .day {
+      display: block;
+      padding-bottom: .3em;
+      line-height: .6;
+      font-size: 5em;
+    }
+  }
+
+  .details {
+    display: block;
+    float: left;
+    width: 60%;
+    line-height: 1.8;
+    font-size: 1.25em;
+
+    p {
+      margin: 0;
+    }
+
+    .summary {
+      font-weight: 700;
+    }
+  }
+
+  &:hover {
+    transition: margin .2s ease-in;
+    margin-right: 5%;
+    margin-left: 5%;
+    background: $bright-green;
+
+    .dtstart {
+      background: $black;
+      color: $bright-green;
+    }
+  }
+} // </.concert-list__item>
+
 // ========================================================================
 // Front Page Styles
 // ========================================================================
@@ -466,65 +528,6 @@ header {
 
   .concerts {
     margin-bottom: 4.5em;
-
-    .vevent {
-      transition: margin .2s ease-out;
-      margin-bottom: 1.5em;
-
-      .dtstart {
-        display: block;
-        float: left;
-        margin: 0 5% 0 0;
-        background: $bright-green;
-        padding: 0 5%;
-        width: 25%;
-        text-align: center;
-
-        .month {
-          display: block;
-          padding-top: .4em;
-          text-transform: uppercase;
-          line-height: 1.4;
-          letter-spacing: .2em;
-          font-size: 1.25em;
-        }
-
-        .day {
-          display: block;
-          padding-bottom: .3em;
-          line-height: .6;
-          font-size: 5em;
-        }
-      }
-
-      .details {
-        display: block;
-        float: left;
-        width: 60%;
-        line-height: 1.8;
-        font-size: 1.25em;
-
-        p {
-          margin: 0;
-        }
-
-        .summary {
-          font-weight: 700;
-        }
-      }
-
-      &:hover {
-        transition: margin .2s ease-in;
-        margin-right: 5%;
-        margin-left: 5%;
-        background: $bright-green;
-
-        .dtstart {
-          background: $black;
-          color: $bright-green;
-        }
-      }
-    } // </.vevent>
   } // </.concerts>
 
   .colloquia,
@@ -1047,67 +1050,6 @@ header {
 
     .concerts {
       margin-bottom: 3em;
-
-      .vevent {
-        margin-bottom: 1.5em;
-        transition-property: margin, background;
-        transition-duration: .2s;
-        transition-timing-function: ease-out;
-
-        .dtstart {
-          display: block;
-          float: left;
-          margin: 0 5% 0 0;
-          background: $bright-green;
-          padding: 0 5%;
-          width: 25%;
-          text-align: center;
-
-          .month {
-            display: block;
-            padding-top: .4em;
-            text-transform: uppercase;
-            line-height: 1.4;
-            letter-spacing: .2em;
-            font-size: 1.25em;
-          }
-
-          .day {
-            display: block;
-            padding-bottom: .3em;
-            line-height: .6;
-            font-size: 5em;
-          }
-        }
-
-        .details {
-          display: block;
-          float: left;
-          width: 60%;
-          line-height: 1.8;
-          font-size: 1.25em;
-
-          p {
-            margin: 0;
-          }
-
-          .summary {
-            font-weight: 700;
-          }
-        }
-
-        &:hover {
-          margin-right: 5%;
-          margin-left: 5%;
-          background: $bright-green;
-          transition-timing-function: ease-in;
-
-          .dtstart {
-            background: $black;
-            color: $bright-green;
-          }
-        }
-      } // </.vevent>
     } // </.concerts>
   } // </.secondary>
 

@@ -1525,38 +1525,6 @@ iframe {
 // ==========================================================================
 // Helper classes
 // ==========================================================================
-.hidden {
-  display: none !important;
-  visibility: hidden;
-}
-
-.visuallyhidden {
-  position: absolute;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-
-  &.focusable {
-    &:active,
-    &:focus {
-      position: static;
-      margin: 0;
-      width: auto;
-      height: auto;
-      overflow: visible;
-      clip: auto;
-    }
-  }
-}
-
-.invisible {
-  visibility: hidden;
-}
-
 .clearfix {
   &::after,
   &::before {

@@ -385,6 +385,7 @@ iframe {
 
       a {
         display: block;
+        transition: background .2s ease-out;
         padding: .5em 5%;
         color: $reverse-text;
       }

@@ -205,7 +205,9 @@ if (have_posts()) :
   <section class="composerav clearfix">
     <h3>Performances from HGNM concerts</h3>
     <ul class="audio clearfix">
-      <?php foreach ($archivemedia as $post) :
+      <?php
+            $archivemedia = array_reverse($archivemedia);
+            foreach ($archivemedia as $post) :
                 while (have_rows('programme', $post->ID)) :
                     the_row();
                     if (get_sub_field('composer')->ID == $testID && get_sub_field('embed_link')) : ?>

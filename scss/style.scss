@@ -200,6 +200,45 @@ blockquote {
   padding-left: 1em;
 }
 
+a {
+  &,
+  &:visited {
+    transition: background .2s ease-out;
+    border-bottom: 2px solid $link-highlight;
+    text-decoration: none;
+    color: $link-text;
+  }
+
+  &:hover {
+    transition: background .2s ease-in;
+    background: $link-highlight;
+  }
+
+  // ======================================================================
+  // Meta Styles
+  // ======================================================================
+  &.edit-button {
+    display: block;
+    margin: 1.5em auto;
+    border-bottom: 0;
+    border-radius: .15em;
+    background: $secondary-highlight;
+    padding: .75em;
+    width: 3em;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    color: $reverse-text;
+    font-family: $sans-stack;
+    font-weight: 700;
+
+    &:hover {
+      background: $link-highlight;
+      color: $black;
+    }
+  }
+}
+
 // ==========================================================================
 // Embed Styles
 // ==========================================================================
@@ -267,9 +306,13 @@ iframe {
     }
 
     a {
-      @include transition(all .2s ease-out);
+      border-bottom: 0;
       text-decoration: none;
       color: $reverse-text;
+
+      &:hover {
+        background: transparent;
+      }
     }
 
     // Accessible Mobile Menu Styling
@@ -1401,11 +1444,51 @@ iframe {
   font-family: $sans-stack;
 
   a {
+    border-bottom: 0;
     text-decoration: none;
     color: $secondary-highlight;
 
     &:hover {
+      background: transparent;
       color: $link-highlight;
+    }
+  }
+}
+
+// ==========================================================================
+// Buttons
+// ==========================================================================
+
+a {
+  @at-root .button-link,
+  &.button-link {
+    display: block;
+    border: 0;
+    background: $bright-green;
+    padding: 1.2em 5%;
+    text-align: center;
+    text-decoration: none;
+    line-height: 1.2;
+    color: $text-color;
+    font-size: 1.25rem;
+    transition-property: background, margin, color;
+    transition-duration: .2s;
+    transition-timing-function: ease-out;
+
+    &:hover {
+      margin-right: 5%;
+      margin-left: 5%;
+      background-color: $black;
+      color: $bright-green;
+      transition-timing-function: ease-in;
+    }
+
+    :first-child {
+      margin-top: 0;
+    }
+
+    :last-child {
+      margin-bottom: 0;
     }
   }
 }

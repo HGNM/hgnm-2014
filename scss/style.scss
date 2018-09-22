@@ -496,6 +496,11 @@ iframe {
   padding-top: 1.5em;
   padding-bottom: 1.5em;
 
+  @include mq (l) {
+    margin: 0 auto;
+    width: 59.0625em;
+  }
+
   ul {
     margin: 0;
     padding: 0;
@@ -1480,15 +1485,6 @@ iframe {
     }
   }
 } // end media-query
-
-// HUGE screens, > 1260px
-@media only screen and (min-width: 78.75em) {
-  .fp-section,
-  .p-section {
-    margin: 0 auto;
-    width: 59.0625em;
-  }
-}
 
 // TINY screens, ≤ 352px
 @media only screen and (max-width: 22em) {

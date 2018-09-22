@@ -168,7 +168,7 @@ get_header();
         $nextyear = isset($menuitems[($currentindex + 1)]) ? $menuitems[($currentindex + 1)] : null;
 
         // Check queries to see if it is for a season starting more than a year in the future. N.B. The *next* season will return as false.
-        echo '<article id="events" class="p-section clearfix">';
+        echo '<article id="events" class="section--events p-section clearfix">';
         if ($seasonstart > date('Ymd', strtotime(date('Ymd', time()) . ' + 365 day'))) {
             // What should happen if someone wants to see into the future?
             echo '<h2>Archives</h2><p>Welcome to the future! It looks like you’re looking for events in the ' . $seasontitle . ' season, but unfortunately this is neither a time machine nor a crystal ball. Why not <a href="' . get_post_type_archive_link('concert') . '">check out what’s happening right now</a>?</p>';
@@ -191,7 +191,7 @@ get_header();
             ?>
         <header class="archive-header">
           <h2>Archives<br /><?php echo $seasontitle ?></h2>
-          <nav id="archive-nav" class="clearfix">
+          <nav id="archive-nav" class="archive-nav clearfix">
             <?php if ($previousyear) : ?>
               <a href="<?php echo get_post_type_archive_link('concert') . $previousyear . '/'; ?>" class="left">
                 <span class="icon icon-left-arrow-bold" aria-hidden="true"></span>
@@ -261,7 +261,7 @@ get_header();
       <?php endif;
 
             if ($menuitems) {
-                echo '<footer id="years-nav"><h3>Explore Seasons</h3><ul>';
+                echo '<footer id="years-nav" class="years-nav"><h3>Explore Seasons</h3><ul>';
                 foreach ($menuitems as $item) {
                     if (($item % 100) == 99) {
                         $menulabel = $item . '–' . ($item + 1);

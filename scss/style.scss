@@ -293,578 +293,748 @@ iframe {
 // ==========================================================================
 // Section Background Styles
 // ==========================================================================
-#events {
-  &.fp-section {
-    background: $overlay;
-  }
-}
-
-#fp-archive-link {
+.bg-overlay {
   background: $overlay;
 }
 
 // ==========================================================================
 // Header Styles
 // ==========================================================================
-#page {
+.site {
   margin: 0 auto;
   overflow: hidden;
+} // </.site>
 
-  .site-header {
-    background: $black;
-    height: 3em;
+.site-header {
+  background: $black;
+  height: 3em;
+  color: $reverse-text;
+
+  h1 {
+    float: left;
+    margin: .15em 0 0;
+    padding-left: 5%;
+    line-height: 1;
+    letter-spacing: .2em;
+    font-family: $display-stack;
+    font-size: 2.5em;
+
+    .lowercase {
+      display: none;
+    }
+  }
+
+  a {
+    border-bottom: 0;
+    text-decoration: none;
     color: $reverse-text;
 
-    h1 {
-      float: left;
-      margin: .15em 0 0;
-      padding-left: 5%;
-      line-height: 1;
-      letter-spacing: .2em;
-      font-family: $display-stack;
-      font-size: 2.5em;
+    &:hover {
+      background: transparent;
+    }
+  }
 
-      .lowercase {
-        display: none;
+  // Accessible Mobile Menu Styling
+  .menu {
+    display: none;
+    clear: both;
+    text-transform: uppercase;
+    line-height: 2;
+    letter-spacing: .15em;
+    font-family: $sans-stack;
+    font-weight: 700;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+
+    li {
+      &:nth-child(odd) {
+        background-color: $menu-stripe-odd;
+      }
+
+      &:nth-child(even) {
+        background-color: $menu-stripe-even;
+      }
+    }
+
+    .current-menu-item {
+      a {
+        &::before {
+          content: "▶ ";
+        }
       }
     }
 
     a {
-      border-bottom: 0;
-      text-decoration: none;
+      display: block;
+      transition: background .2s ease-out;
+      padding: .5em 5%;
       color: $reverse-text;
+    }
+
+    &.active {
+      display: block;
+    }
+
+    .no-js & {
+      display: block;
+    }
+  }
+
+  .menu-button {
+    float: right;
+    border: 0;
+    background-color: $menu-highlight;
+    padding: 0 .5em;
+    width: auto;
+    height: 2em;
+    text-transform: uppercase;
+    line-height: 2;
+    letter-spacing: .1em;
+    color: $text-color;
+    font-family: $sans-stack;
+    font-size: 1.5em;
+    font-weight: 700;
+
+    &.active {
+      background-color: $menu-stripe-odd;
+      color: $reverse-text;
+    }
+  }
+} // </.site-header>
+
+header {
+  &.active {
+    height: auto;
+  }
+} // </header>
+
+// ========================================================================
+// Front Page Styles
+// ========================================================================
+.fp-section,
+.p-section {
+  padding: $body-padding;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .description {
+    ul {
+      margin-bottom: 1.5em;
+      padding-left: 1em;
+      list-style: disc;
+    }
+  }
+
+  .primary {
+    .entry {
+      ul {
+        margin-bottom: 1.5em;
+        padding-left: 1em;
+        list-style: disc;
+      }
+    }
+  }
+}
+
+.social-link {
+  margin-bottom: 3em;
+  font-family: $sans-stack;
+}
+
+.section--events {
+  font-family: $sans-stack;
+
+  h3 {
+    margin: 0 0 2.571428571em; // 2.571… * 14px = 36px
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.714285714; // 1.714… * 14px = 24px
+    letter-spacing: .3em;
+    font-size: .875em; // 14px
+    font-weight: 700;
+  }
+
+  .concerts {
+    margin-bottom: 4.5em;
+
+    .vevent {
+      transition: margin .2s ease-out;
+      margin-bottom: 1.5em;
+
+      .dtstart {
+        display: block;
+        float: left;
+        margin: 0 5% 0 0;
+        background: $bright-green;
+        padding: 0 5%;
+        width: 25%;
+        text-align: center;
+
+        .month {
+          display: block;
+          padding-top: .4em;
+          text-transform: uppercase;
+          line-height: 1.4;
+          letter-spacing: .2em;
+          font-size: 1.25em;
+        }
+
+        .day {
+          display: block;
+          padding-bottom: .3em;
+          line-height: .6;
+          font-size: 5em;
+        }
+      }
+
+      .details {
+        display: block;
+        float: left;
+        width: 60%;
+        line-height: 1.8;
+        font-size: 1.25em;
+
+        p {
+          margin: 0;
+        }
+
+        .summary {
+          font-weight: 700;
+        }
+      }
 
       &:hover {
-        background: transparent;
-      }
-    }
+        transition: margin .2s ease-in;
+        margin-right: 5%;
+        margin-left: 5%;
+        background: $bright-green;
 
-    // Accessible Mobile Menu Styling
-    .menu {
-      display: none;
-      clear: both;
-      text-transform: uppercase;
-      line-height: 2;
-      letter-spacing: .15em;
-      font-family: $sans-stack;
-      font-weight: 700;
-
-      ul {
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
-      }
-
-      li {
-        &:nth-child(odd) {
-          background-color: $menu-stripe-odd;
-        }
-
-        &:nth-child(even) {
-          background-color: $menu-stripe-even;
+        .dtstart {
+          background: $black;
+          color: $bright-green;
         }
       }
+    } // </.vevent>
+  } // </.concerts>
 
-      .current-menu-item {
-        a {
-          &::before {
-            content: "▶ ";
-          }
-        }
-      }
+  .colloquia,
+  .miscevents {
+    margin-bottom: 4.5em;
+    text-align: center;
 
-      a {
-        display: block;
-        transition: background .2s ease-out;
-        padding: .5em 5%;
-        color: $reverse-text;
-      }
-
-      &.active {
-        display: block;
-      }
-
-      .no-js & {
-        display: block;
-      }
-    }
-
-    .menu-button {
-      float: right;
-      border: 0;
-      background-color: $menu-highlight;
-      padding: 0 .5em;
-      width: auto;
-      height: 2em;
-      text-transform: uppercase;
-      line-height: 2;
-      letter-spacing: .1em;
-      color: $text-color;
-      font-family: $sans-stack;
-      font-size: 1.5em;
-      font-weight: 700;
-
-      &.active {
-        background-color: $menu-stripe-odd;
-        color: $reverse-text;
-      }
-    }
-  }
-  // </header>
-
-  header {
-    &.active {
-      height: auto;
-    }
-  }
-
-  #torso {
-    // ========================================================================
-    // Front Page Styles
-    // ========================================================================
-    .fp-section,
-    .p-section {
-      padding: $body-padding;
-      padding-top: 1.5em;
-      padding-bottom: 1.5em;
-
-      ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-      }
-
-      .description {
-        ul {
-          margin-bottom: 1.5em;
-          padding-left: 1em;
-          list-style: disc;
-        }
-      }
-
-      .primary {
-        .entry {
-          ul {
-            margin-bottom: 1.5em;
-            padding-left: 1em;
-            list-style: disc;
-          }
-        }
-      }
-    }
-
-    #fp-blurb {
-      .social-link {
-        clear: both;
-        margin-bottom: 3em;
-        font-family: $sans-stack;
-      }
-    }
-
-    #events {
-      font-family: $sans-stack;
-
-      h3 {
-        margin: 0 0 2.571428571em; // 2.571… * 14px = 36px
-        text-align: center;
-        text-transform: uppercase;
-        line-height: 1.714285714; // 1.714… * 14px = 24px
-        letter-spacing: .3em;
-        font-size: .875em; // 14px
-        font-weight: 700;
-      }
-
-      .concerts {
-        margin-bottom: 4.5em;
-
-        .vevent {
-          transition: margin .2s ease-out;
-          margin-bottom: 1.5em;
-
-          .dtstart {
-            display: block;
-            float: left;
-            margin: 0 5% 0 0;
-            background: $bright-green;
-            padding: 0 5%;
-            width: 25%;
-            text-align: center;
-
-            .month {
-              display: block;
-              padding-top: .4em;
-              text-transform: uppercase;
-              line-height: 1.4;
-              letter-spacing: .2em;
-              font-size: 1.25em;
-            }
-
-            .day {
-              display: block;
-              padding-bottom: .3em;
-              line-height: .6;
-              font-size: 5em;
-            }
-          }
-
-          .details {
-            display: block;
-            float: left;
-            width: 60%;
-            line-height: 1.8;
-            font-size: 1.25em;
-
-            p {
-              margin: 0;
-            }
-
-            .summary {
-              font-weight: 700;
-            }
-          }
-
-          &:hover {
-            transition: margin .2s ease-in;
-            margin-right: 5%;
-            margin-left: 5%;
-            background: $bright-green;
-
-            .dtstart {
-              background: $black;
-              color: $bright-green;
-            }
-          }
-        } // </.vevent>
-      } // </.concerts>
-
-      .colloquia,
-      .miscevents {
-        margin-bottom: 4.5em;
-        text-align: center;
-
-        ul {
-          margin-bottom: 1.2em;
-          line-height: 1.8;
-          font-size: 1.25em;
-
-          .dtstart {
-            display: block;
-            float: left;
-            margin: 0 5% 0 0;
-            padding: 0 5%;
-            width: 25%;
-            letter-spacing: .06em;
-          }
-
-          .summary {
-            display: block;
-            float: left;
-            width: 60%;
-            text-align: left;
-
-            .icon-link-ext {
-              &::after {
-                transition: color .2s ease-out;
-                padding-left: .1em;
-                color: $light-text;
-                font-size: 80%;
-              }
-
-              &:hover {
-                &::after {
-                  transition: color .2s ease-in;
-                  color: $text-color;
-                }
-              }
-            }
-          }
-        }
-
-        .icon-link-ext {
-          &::after {
-            padding-left: .3em;
-            font-size: 80%;
-          }
-        }
-
-        .description {
-          margin-bottom: 2.4em;
-        }
-      }
-      // </.colloquia, .miscevents>
-
-      .miscevents {
-        clear: both;
-
-        .vevent {
-          margin-bottom: 1.2em;
-        }
-      }
-
-      .more-events-link {
-        clear: both;
-        margin-bottom: 3em;
-      }
-    }
-    // </#events>
-
-    .composers {
-      li {
-        transition: padding .2s ease-out;
-        margin-bottom: 1em;
-
-        a {
-          display: inline-block;
-          border: 0;
-          background: $bright-green;
-          width: 100%;
-          height: 5em;
-          overflow: hidden;
-          text-align: center;
-          text-transform: uppercase;
-          text-decoration: none;
-          letter-spacing: .15em;
-          color: $text-color;
-          font-family: $sans-stack;
-          font-weight: 700;
-          transition-property: background, color, font-weight;
-          transition-duration: .1s;
-          transition-timing-function: ease-out;
-
-          img {
-            float: left;
-            transition: filter .4s ease-out;
-            width: 35%;
-            max-width: 5em;
-            filter: grayscale(1) contrast(125%) brightness(125%) saturate(100%);
-          }
-
-          span {
-            display: inline-block;
-            padding: 0 2%;
-            max-width: 61%;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            line-height: 5.88235294em;
-            white-space: nowrap;
-            font-size: .85em;
-          }
-
-          &:hover {
-            background: $black;
-            color: $bright-green;
-            font-weight: 400;
-            transition-timing-function: ease-in;
-
-            img {
-              transition: filter .4s ease-in;
-              filter: grayscale(0) contrast(100%) brightness(100%) saturate(150%);
-            }
-          }
-        } // </.composers li a>
-
-        &:hover {
-          padding: 0 5%;
-          transition-timing-function: ease-in;
-        }
-
-        &:last-child {
-          margin-bottom: 0;
-        }
-      } // </.composers li>
-
-      &:nth-child(2) {
-        background: $overlay;
-      }
-    } // </.composers>
-
-    // ========================================================================
-    // Archive Nav Styles
-    // ========================================================================
-    .archive-header {
-      #archive-nav {
-        position: relative;
-        top: -2.1em;
-        margin: 0 auto;
-        width: 100%;
-        max-width: 12em;
-        height: 0;
-        line-height: 1;
-        font-size: 2em;
-
-        .left,
-        .right {
-          position: absolute;
-          top: 0;
-          border-bottom: 0;
-          background: $link-highlight;
-
-          .icon {
-            display: inline-block;
-            padding: .2em .1em .1em;
-          }
-
-          .text {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            overflow: hidden;
-            clip: rect(0 0 0 0);
-          }
-
-          &:hover {
-            background: $black;
-            color: $link-highlight;
-          }
-        } // </.left, .right>
-
-        .left {
-          left: 0;
-
-          .icon {
-            padding-right: .2em;
-          }
-        }
-
-        .right {
-          right: 0;
-
-          .icon {
-            padding-left: .2em;
-          }
-        }
-
-        .icon-left-arrow-bold,
-        .icon-right-arrow-bold {
-          &::before {
-            margin: 0;
-          }
-        }
-      } // </#archive-nav>
-    } // </.archive-header>
-
-    #years-nav {
-      clear: both;
-      margin-top: 6em;
-      background: $overlay;
-      padding: 1.5em;
-
-      h3 {
-        margin-bottom: 1em;
-        text-transform: none;
-        line-height: 1;
-        letter-spacing: 0;
-        font-family: $serif-stack;
-        font-size: 1.5em;
-      }
-
-      ul {
-        text-align: center;
-        line-height: 1;
-        letter-spacing: .06em;
-        font-size: 1.5em;
-
-        li {
-          display: inline-block;
-          margin: .25em;
-
-          a {
-            display: block;
-            border-bottom: 0;
-            background: $text-color;
-            padding: .5em;
-            color: $link-highlight;
-
-            &:hover {
-              background: $link-highlight;
-              color: $text-color;
-            }
-          }
-
-          &.current {
-            a {
-              background: transparent;
-              color: $text-color;
-            }
-          }
-        } // </li>
-      } // </ul>
-    } // </#years-nav>
-
-    // ========================================================================
-    // Concert Single Styles
-    // ========================================================================
-    .support {
-      margin-bottom: 1.3333333333em;
-      text-align: center;
-      text-transform: uppercase;
-      line-height: 1.3333333333em;
-      word-spacing: .15em;
-      letter-spacing: .15em;
-      font-family: "Alegreya Sans";
-      font-size: 1.125em;
-    }
-
-    .event-meta {
-      text-align: center;
-      line-height: 1.2;
-      font-family: $sans-stack;
+    ul {
+      margin-bottom: 1.2em;
+      line-height: 1.8;
       font-size: 1.25em;
 
       .dtstart {
-        margin-bottom: 0;
-        font-weight: 700;
+        display: block;
+        float: left;
+        margin: 0 5% 0 0;
+        padding: 0 5%;
+        width: 25%;
+        letter-spacing: .06em;
       }
 
-      .location {
-        margin-bottom: 1.2em;
+      .summary {
+        display: block;
+        float: left;
+        width: 60%;
+        text-align: left;
 
         .icon-link-ext {
           &::after {
-            padding-left: .3em;
+            transition: color .2s ease-out;
+            padding-left: .1em;
+            color: $light-text;
             font-size: 80%;
+          }
+
+          &:hover {
+            &::after {
+              transition: color .2s ease-in;
+              color: $text-color;
+            }
           }
         }
       }
+    }
 
-      .tickets {
-        margin-bottom: 2em;
-        text-transform: uppercase;
-        line-height: 1.714285714; // 1.714… * 14px = 24px
-        letter-spacing: .3em;
-        font-size: .7em; // .7 * 1.25 = .875em = 14px
-        font-weight: 700;
+    .icon-link-ext {
+      &::after {
+        padding-left: .3em;
+        font-size: 80%;
       }
     }
 
     .description {
-      .concert-poster {
-        margin: 0 auto 1.5em;
-        max-width: 50%;
+      margin-bottom: 2.4em;
+    }
+  }
+  // </.colloquia, .miscevents>
 
+  .miscevents {
+    clear: both;
+
+    .vevent {
+      margin-bottom: 1.2em;
+    }
+  }
+
+  .more-events-link {
+    clear: both;
+    margin-bottom: 3em;
+  }
+}
+// </#events>
+
+.composers {
+  li {
+    transition: padding .2s ease-out;
+    margin-bottom: 1em;
+
+    a {
+      display: inline-block;
+      border: 0;
+      background: $bright-green;
+      width: 100%;
+      height: 5em;
+      overflow: hidden;
+      text-align: center;
+      text-transform: uppercase;
+      text-decoration: none;
+      letter-spacing: .15em;
+      color: $text-color;
+      font-family: $sans-stack;
+      font-weight: 700;
+      transition-property: background, color, font-weight;
+      transition-duration: .1s;
+      transition-timing-function: ease-out;
+
+      img {
+        float: left;
+        transition: filter .4s ease-out;
+        width: 35%;
+        max-width: 5em;
+        filter: grayscale(1) contrast(125%) brightness(125%) saturate(100%);
+      }
+
+      span {
+        display: inline-block;
+        padding: 0 2%;
+        max-width: 61%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-height: 5.88235294em;
+        white-space: nowrap;
+        font-size: .85em;
+      }
+
+      &:hover {
+        background: $black;
+        color: $bright-green;
+        font-weight: 400;
+        transition-timing-function: ease-in;
+
+        img {
+          transition: filter .4s ease-in;
+          filter: grayscale(0) contrast(100%) brightness(100%) saturate(150%);
+        }
+      }
+    } // </.composers li a>
+
+    &:hover {
+      padding: 0 5%;
+      transition-timing-function: ease-in;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  } // </.composers li>
+
+  &:nth-child(2) {
+    background: $overlay;
+  }
+} // </.composers>
+
+// ========================================================================
+// Archive Nav Styles
+// ========================================================================
+.archive-header {
+  text-align: center;
+
+  .archive-nav {
+    position: relative;
+    top: -2.1em;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 12em;
+    height: 0;
+    line-height: 1;
+    font-size: 2em;
+
+    .left,
+    .right {
+      position: absolute;
+      top: 0;
+      border-bottom: 0;
+      background: $link-highlight;
+
+      .icon {
+        display: inline-block;
+        padding: .2em .1em .1em;
+      }
+
+      .text {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+      }
+
+      &:hover {
+        background: $black;
+        color: $link-highlight;
+      }
+    } // </.left, .right>
+
+    .left {
+      left: 0;
+
+      .icon {
+        padding-right: .2em;
+      }
+    }
+
+    .right {
+      right: 0;
+
+      .icon {
+        padding-left: .2em;
+      }
+    }
+
+    .icon-left-arrow-bold,
+    .icon-right-arrow-bold {
+      &::before {
+        margin: 0;
+      }
+    }
+  } // </.archive-nav>
+} // </.archive-header>
+
+.years-nav {
+  clear: both;
+  margin-top: 6em;
+  background: $overlay;
+  padding: 1.5em;
+
+  h3 {
+    margin-bottom: 1em;
+    text-transform: none;
+    line-height: 1;
+    letter-spacing: 0;
+    font-family: $serif-stack;
+    font-size: 1.5em;
+  }
+
+  ul {
+    text-align: center;
+    line-height: 1;
+    letter-spacing: .06em;
+    font-size: 1.5em;
+
+    li {
+      display: inline-block;
+      margin: .25em;
+
+      a {
+        display: block;
+        border-bottom: 0;
+        background: $text-color;
+        padding: .5em;
+        color: $link-highlight;
+
+        &:hover {
+          background: $link-highlight;
+          color: $text-color;
+        }
+      }
+
+      &.current {
         a {
-          display: block;
-          border: 0;
-          cursor: zoom-in;
+          background: transparent;
+          color: $text-color;
+        }
+      }
+    } // </li>
+  } // </ul>
+} // </.years-nav>
 
+// ========================================================================
+// Concert Single Styles
+// ========================================================================
+.support {
+  margin-bottom: 1.3333333333em;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.3333333333em;
+  word-spacing: .15em;
+  letter-spacing: .15em;
+  font-family: "Alegreya Sans";
+  font-size: 1.125em;
+}
+
+.event-meta {
+  text-align: center;
+  line-height: 1.2;
+  font-family: $sans-stack;
+  font-size: 1.25em;
+
+  .dtstart {
+    margin-bottom: 0;
+    font-weight: 700;
+  }
+
+  .location {
+    margin-bottom: 1.2em;
+
+    .icon-link-ext {
+      &::after {
+        padding-left: .3em;
+        font-size: 80%;
+      }
+    }
+  }
+
+  .tickets {
+    margin-bottom: 2em;
+    text-transform: uppercase;
+    line-height: 1.714285714; // 1.714… * 14px = 24px
+    letter-spacing: .3em;
+    font-size: .7em; // .7 * 1.25 = .875em = 14px
+    font-weight: 700;
+  }
+}
+
+.description {
+  .concert-poster {
+    margin: 0 auto 1.5em;
+    max-width: 50%;
+
+    a {
+      display: block;
+      border: 0;
+      cursor: zoom-in;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.external-links {
+  margin-top: 3em;
+  margin-bottom: 1.5em;
+  font-family: $sans-stack;
+
+  li {
+    margin-bottom: 1.5em;
+
+    .perfname {
+      white-space: nowrap;
+    }
+
+    .icon-link-ext {
+      &::after {
+        padding-left: .3em;
+        font-size: 80%;
+      }
+    }
+  }
+}
+
+.programme {
+  margin-bottom: 3em;
+
+  li {
+    margin-bottom: .75em;
+
+    .composer {
+      &::after {
+        font-weight: 400;
+        content: " . . . ";
+      }
+    }
+  }
+}
+
+.archive-docs {
+  margin-bottom: 3em;
+
+  li {
+    position: relative;
+    margin-bottom: .75em;
+
+    .icon-download {
+      position: absolute;
+      line-height: 1;
+      font-size: 165%;
+
+      &::before {
+        margin-left: 0;
+      }
+    }
+
+    a {
+      margin-right: .5em;
+      margin-left: 2em;
+    }
+
+    .docs-meta {
+      display: inline-block;
+      background: $overlay;
+      background-color: $overlay-grey;
+      padding: .25em .66666666em;
+      letter-spacing: .15em;
+      font-family: $sans-stack;
+      font-size: .75em;
+      font-weight: 700;
+    }
+  }
+}
+
+.multimedia {
+  margin-bottom: 3em;
+
+  .embed-container {
+    display: block;
+  }
+}
+
+.gallery {
+  clear: both;
+  margin-bottom: 3em;
+
+  .popup-gallery {
+    li {
+      float: left;
+      margin-bottom: 1.5em;
+      padding-right: 4%;
+      width: 48%;
+
+      a {
+        img {
+          transition: filter .4s ease-out;
+          width: 100%;
+          filter: grayscale(1) contrast(125%) brightness(125%) saturate(100%);
+        }
+
+        &:hover {
           img {
-            width: 100%;
+            transition: filter .4s ease-in;
+            filter: grayscale(0) contrast(100%) brightness(100%) saturate(150%);
           }
+        }
+      }
+
+      &:nth-child(2n) {
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+.archive-link {
+  margin-bottom: 1.5em;
+  font-family: $sans-stack;
+}
+
+.has-docs {
+  .external-links {
+    margin-top: 0;
+  }
+}
+
+// ========================================================================
+// Member Single Styles
+// ========================================================================
+.member {
+  .primary {
+    .updated {
+      display: inline-block;
+      margin-bottom: 2em;
+      background: $overlay;
+      background-color: $overlay-grey;
+      padding: .25em .66666666em;
+      text-transform: uppercase;
+      letter-spacing: .15em;
+      font-family: $sans-stack;
+      font-size: .75em;
+      font-weight: 700;
+    }
+  }
+
+  .secondary {
+    font-family: $sans-stack;
+
+    h3 {
+      margin: 0 0 1.714285714em; // 2.571… * 14px = 36px
+      text-align: center;
+      text-transform: uppercase;
+      line-height: 1.714285714; // 1.714… * 14px = 24px
+      letter-spacing: .3em;
+      font-size: .875em; // 14px
+      font-weight: 700;
+    }
+
+    .featured-img {
+      margin-bottom: 1.5em;
+
+      img {
+        width: 100%;
+        filter: grayscale(1) contrast(125%) brightness(125%) saturate(100%);
+        mix-blend-mode: multiply;
+      }
+    }
+
+    .url {
+      margin-bottom: 1.5em;
+
+      .icon-link-ext {
+        &::after {
+          padding-left: .3em;
+          font-size: 80%;
         }
       }
     }
 
-    .external-links {
-      margin-top: 3em;
-      margin-bottom: 1.5em;
-      font-family: $sans-stack;
+    .colloquia {
+      margin-bottom: 3em;
+      text-align: center;
 
-      li {
-        margin-bottom: 1.5em;
+      h4 {
+        margin: 0;
+        line-height: 1.8;
+        font-size: 1.25em;
+      }
 
-        .perfname {
-          white-space: nowrap;
-        }
+      p {
+        text-align: left;
+        font-family: $serif-stack;
 
         .icon-link-ext {
           &::after {
@@ -873,322 +1043,144 @@ iframe {
           }
         }
       }
-    }
+    } // </.colloquia>
 
-    .programme {
+    .concerts {
       margin-bottom: 3em;
 
-      li {
-        margin-bottom: .75em;
+      .vevent {
+        margin-bottom: 1.5em;
+        transition-property: margin, background;
+        transition-duration: .2s;
+        transition-timing-function: ease-out;
 
-        .composer {
-          &::after {
-            font-weight: 400;
-            content: " . . . ";
-          }
-        }
-      }
-    }
-
-    .archive-docs {
-      margin-bottom: 3em;
-
-      li {
-        position: relative;
-        margin-bottom: .75em;
-
-        .icon-download {
-          position: absolute;
-          line-height: 1;
-          font-size: 165%;
-
-          &::before {
-            margin-left: 0;
-          }
-        }
-
-        a {
-          margin-right: .5em;
-          margin-left: 2em;
-        }
-
-        .docs-meta {
-          display: inline-block;
-          background: $overlay;
-          background-color: $overlay-grey;
-          padding: .25em .66666666em;
-          letter-spacing: .15em;
-          font-family: $sans-stack;
-          font-size: .75em;
-          font-weight: 700;
-        }
-      }
-    }
-
-    .multimedia {
-      margin-bottom: 3em;
-
-      .embed-container {
-        display: block;
-      }
-    }
-
-    .gallery {
-      clear: both;
-      margin-bottom: 3em;
-
-      .popup-gallery {
-        li {
+        .dtstart {
+          display: block;
           float: left;
-          margin-bottom: 1.5em;
-          padding-right: 4%;
-          width: 48%;
-
-          a {
-            img {
-              transition: filter .4s ease-out;
-              width: 100%;
-              filter: grayscale(1) contrast(125%) brightness(125%) saturate(100%);
-            }
-
-            &:hover {
-              img {
-                transition: filter .4s ease-in;
-                filter: grayscale(0) contrast(100%) brightness(100%) saturate(150%);
-              }
-            }
-          }
-
-          &:nth-child(2n) {
-            padding-right: 0;
-          }
-        }
-      }
-    }
-
-    .archive-link {
-      margin-bottom: 1.5em;
-      font-family: $sans-stack;
-    }
-
-    .has-docs {
-      .external-links {
-        margin-top: 0;
-      }
-    }
-
-    // ========================================================================
-    // Member Single Styles
-    // ========================================================================
-    .member {
-      .primary {
-        .updated {
-          display: inline-block;
-          margin-bottom: 2em;
-          background: $overlay;
-          background-color: $overlay-grey;
-          padding: .25em .66666666em;
-          text-transform: uppercase;
-          letter-spacing: .15em;
-          font-family: $sans-stack;
-          font-size: .75em;
-          font-weight: 700;
-        }
-      }
-
-      .secondary {
-        font-family: $sans-stack;
-
-        h3 {
-          margin: 0 0 1.714285714em; // 2.571… * 14px = 36px
-          text-align: center;
-          text-transform: uppercase;
-          line-height: 1.714285714; // 1.714… * 14px = 24px
-          letter-spacing: .3em;
-          font-size: .875em; // 14px
-          font-weight: 700;
-        }
-
-        .featured-img {
-          margin-bottom: 1.5em;
-
-          img {
-            width: 100%;
-            filter: grayscale(1) contrast(125%) brightness(125%) saturate(100%);
-            mix-blend-mode: multiply;
-          }
-        }
-
-        .url {
-          margin-bottom: 1.5em;
-
-          .icon-link-ext {
-            &::after {
-              padding-left: .3em;
-              font-size: 80%;
-            }
-          }
-        }
-
-        .colloquia {
-          margin-bottom: 3em;
+          margin: 0 5% 0 0;
+          background: $bright-green;
+          padding: 0 5%;
+          width: 25%;
           text-align: center;
 
-          h4 {
-            margin: 0;
-            line-height: 1.8;
+          .month {
+            display: block;
+            padding-top: .4em;
+            text-transform: uppercase;
+            line-height: 1.4;
+            letter-spacing: .2em;
             font-size: 1.25em;
           }
 
-          p {
-            text-align: left;
-            font-family: $serif-stack;
-
-            .icon-link-ext {
-              &::after {
-                padding-left: .3em;
-                font-size: 80%;
-              }
-            }
+          .day {
+            display: block;
+            padding-bottom: .3em;
+            line-height: .6;
+            font-size: 5em;
           }
-        } // </.colloquia>
+        }
 
-        .concerts {
-          margin-bottom: 3em;
-
-          .vevent {
-            margin-bottom: 1.5em;
-            transition-property: margin, background;
-            transition-duration: .2s;
-            transition-timing-function: ease-out;
-
-            .dtstart {
-              display: block;
-              float: left;
-              margin: 0 5% 0 0;
-              background: $bright-green;
-              padding: 0 5%;
-              width: 25%;
-              text-align: center;
-
-              .month {
-                display: block;
-                padding-top: .4em;
-                text-transform: uppercase;
-                line-height: 1.4;
-                letter-spacing: .2em;
-                font-size: 1.25em;
-              }
-
-              .day {
-                display: block;
-                padding-bottom: .3em;
-                line-height: .6;
-                font-size: 5em;
-              }
-            }
-
-            .details {
-              display: block;
-              float: left;
-              width: 60%;
-              line-height: 1.8;
-              font-size: 1.25em;
-
-              p {
-                margin: 0;
-              }
-
-              .summary {
-                font-weight: 700;
-              }
-            }
-
-            &:hover {
-              margin-right: 5%;
-              margin-left: 5%;
-              background: $bright-green;
-              transition-timing-function: ease-in;
-
-              .dtstart {
-                background: $black;
-                color: $bright-green;
-              }
-            }
-          } // </.vevent>
-        } // </.concerts>
-      } // </.secondary>
-
-      .composerav {
-        margin-top: 1.5em;
-        margin-bottom: 3em;
-        border-top: 1px solid $darken-tint;
-        padding-top: 1.4375em;
-
-        .embed-container {
+        .details {
           display: block;
+          float: left;
+          width: 60%;
+          line-height: 1.8;
+          font-size: 1.25em;
+
+          p {
+            margin: 0;
+          }
+
+          .summary {
+            font-weight: 700;
+          }
         }
 
-        .mediadt {
-          letter-spacing: .1em;
-          font-family: $sans-stack;
-          font-weight: 700;
+        &:hover {
+          margin-right: 5%;
+          margin-left: 5%;
+          background: $bright-green;
+          transition-timing-function: ease-in;
+
+          .dtstart {
+            background: $black;
+            color: $bright-green;
+          }
         }
-      } // </.composerav>
+      } // </.vevent>
+    } // </.concerts>
+  } // </.secondary>
 
-      .composers-link {
-        clear: both;
-        margin-bottom: 1.5em;
-        font-family: $sans-stack;
-      } // </.composers-link>
-    } // </.member>
-  } // </#torso>
-} // </#page>
+  .composerav {
+    margin-top: 1.5em;
+    margin-bottom: 3em;
+    border-top: 1px solid $darken-tint;
+    padding-top: 1.4375em;
 
-// ==========================================================================
-// Archive Nav Styles
-// ==========================================================================
-.archive-header {
-  text-align: center;
-
-  #archive-nav {
-    margin-bottom: 1.5em;
-
-    .left,
-    .right {
-      .icon {
-        display: none;
-      }
+    .embed-container {
+      display: block;
     }
-  }
-}
 
-// ==========================================================================
-// Colloquium Single Styles
-// ==========================================================================
-.event-photo {
-  img {
-    width: 100%;
-    mix-blend-mode: multiply;
-  }
-}
+    .mediadt {
+      letter-spacing: .1em;
+      font-family: $sans-stack;
+      font-weight: 700;
+    }
+  } // </.composerav>
+
+  .composers-link {
+    clear: both;
+    margin-bottom: 1.5em;
+    font-family: $sans-stack;
+  } // </.composers-link>
+} // </.member>
 
 // ==========================================================================
 // Contact Form Styles
 // ==========================================================================
-#torso {
-  .contact-form {
-    div {
-      margin-bottom: 1.5em;
-      box-shadow: 0 0 .75em -.15em $light-text;
+.contact-form {
+  div {
+    margin-bottom: 1.5em;
+    box-shadow: 0 0 .75em -.15em $light-text;
+  }
+
+  label {
+    opacity: .5;
+    margin: 0;
+    background: $light-shade;
+    padding: .85714286em 5%;
+    width: 90%;
+    text-transform: uppercase;
+    line-height: 1.714285714; // 1.714… * 14px = 24px
+    letter-spacing: .15em;
+    color: $black;
+    font-family: $sans-stack;
+    font-size: .875em; // 14px
+    font-weight: 700;
+
+    span {
+      color: $dark-bg;
+      font-weight: 400;
+    }
+  }
+
+  input {
+    &[type="text"],
+    &[type="email"] {
+      margin-bottom: 0;
+      border: 0;
+      padding: .75em 5%;
+      width: 90%;
+      line-height: 1.5;
     }
 
-    label {
-      opacity: .5;
+    &.pushbutton-wide {
       margin: 0;
-      background: $light-shade;
-      padding: .85714286em 5%;
-      width: 90%;
+      border: 0;
+      box-shadow: 0 0 .75em -.15em $light-text;
+      background: $link-highlight;
+      padding: 1.71428571em 5% 5%;
+      width: 100%;
       text-transform: uppercase;
       line-height: 1.714285714; // 1.714… * 14px = 24px
       letter-spacing: .15em;
@@ -1201,59 +1193,37 @@ iframe {
         color: $dark-bg;
         font-weight: 400;
       }
-    }
 
-    input {
-      &[type="text"],
-      &[type="email"] {
-        margin-bottom: 0;
-        border: 0;
-        padding: .75em 5%;
-        width: 90%;
-        line-height: 1.5;
+      &:hover {
+        background: $black;
+        color: $link-highlight;
       }
-
-      &.pushbutton-wide {
-        margin: 0;
-        border: 0;
-        box-shadow: 0 0 .75em -.15em $light-text;
-        background: $link-highlight;
-        padding: 1.71428571em 5% 5%;
-        width: 100%;
-        text-transform: uppercase;
-        line-height: 1.714285714; // 1.714… * 14px = 24px
-        letter-spacing: .15em;
-        color: $black;
-        font-family: $sans-stack;
-        font-size: .875em; // 14px
-        font-weight: 700;
-
-        span {
-          color: $dark-bg;
-          font-weight: 400;
-        }
-
-        &:hover {
-          background: $black;
-          color: $link-highlight;
-        }
-      }
-    }
-
-    textarea {
-      margin: 0;
-      border: 0;
-      padding: .625em 5%;
-      width: 90%;
     }
   }
 
-  div {
-    &[id|="contact-form"] {
-      blockquote {
-        margin: 0;
-      }
+  textarea {
+    margin: 0;
+    border: 0;
+    padding: .625em 5%;
+    width: 90%;
+  }
+}
+
+div {
+  &[id|="contact-form"] {
+    blockquote {
+      margin: 0;
     }
+  }
+}
+
+// ==========================================================================
+// Colloquium Single Styles
+// ==========================================================================
+.event-photo {
+  img {
+    width: 100%;
+    mix-blend-mode: multiply;
   }
 }
 
@@ -1312,396 +1282,392 @@ iframe {
     font-size: 2.5em;
   }
 
-  #page {
-    .site-header {
-      margin: 1.5em 0;
-      background: transparent;
-      height: auto;
-      text-align: center;
+  .site-header {
+    margin: 1.5em 0;
+    background: transparent;
+    height: auto;
+    text-align: center;
 
-      h1 {
+    h1 {
+      margin: 0;
+      padding-left: 0;
+      width: 100%;
+      line-height: 1;
+      letter-spacing: 0;
+      font-size: 4.5em;
+
+      .lowercase {
+        display: inline;
+      }
+    }
+
+    a {
+      color: $black;
+    }
+
+    .menu {
+      display: block;
+      line-height: 2.6666666666em;
+      font-size: 1.125em;
+
+      ul {
         margin: 0;
-        padding-left: 0;
-        width: 100%;
-        line-height: 1;
-        letter-spacing: 0;
-        font-size: 4.5em;
+        padding: 0;
+        list-style-type: none;
+      }
 
-        .lowercase {
-          display: inline;
+      li {
+        display: inline-block;
+        margin-right: .5em;
+
+        &:nth-child(odd) {
+          background-color: transparent;
+        }
+
+        &:nth-child(even) {
+          background-color: transparent;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      .current-menu-item {
+        a {
+          &::before {
+            content: "";
+         }
         }
       }
 
       a {
-        color: $black;
+        padding: 0 .5em;
+        color: $text-color;
+
+        &:hover {
+          background: $bright-green;
+        }
+      }
+    }
+
+    .menu-button {
+      display: none;
+    }
+  } // </.site-header>
+
+  fp-section,
+  .p-section {
+    padding: $more-padding;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+  }
+
+  .fp-section--blurb {
+    .entry {
+      line-height: 1.5;
+      font-size: 1.5em;
+    }
+
+    .social-link {
+      margin-right: auto;
+      margin-left: auto;
+      width: 59.4%;
+    }
+  }
+
+  .section--events {
+    .colloquia,
+    .concerts {
+      display: block;
+      float: left;
+      padding-right: 6%;
+      width: 47%;
+
+      &:nth-child(2n) {
+        padding-right: 0;
       }
 
-      .menu {
-        display: block;
-        line-height: 2.6666666666em;
-        font-size: 1.125em;
+      .solo {
+        float: none;
+        margin-right: auto;
+        margin-left: auto;
+        width: 49.4%;
+      }
+    }
 
-        ul {
-          margin: 0;
-          padding: 0;
-          list-style-type: none;
+    .miscevents,
+    .more-events-link {
+      margin-right: auto;
+      margin-left: auto;
+      width: 59.4%;
+    }
+  } // </.section--events>
+
+  .composers {
+    li {
+      float: left;
+      margin-right: 1.25%;
+      margin-bottom: .375em;
+      width: 19%;
+
+      a {
+        height: auto;
+        overflow: hidden;
+
+        img {
+          float: none;
+          width: 100%;
+          max-width: none;
         }
 
+        span {
+          display: table-cell;
+          padding: 0 5%;
+          width: 24em;
+          max-width: 100%;
+          height: 3.52941176em;
+          vertical-align: middle;
+          line-height: 1.1em;
+          white-space: normal;
+        }
+      } // </a>
+
+      &:hover {
+        padding: 0;
+      }
+
+      &:nth-child(5n) {
+        margin-right: 0;
+      }
+    } // </li>
+
+    .no-img {
+      a {
+        margin-top: 1px;
+        padding-top: 100%;
+      }
+    }
+  } // </.composers>
+
+  .fp-section--archive-link {
+    padding-right: 25%;
+    padding-left: 25%;
+    width: 50%;
+  } // </#fp-archive-link>
+
+  .support {
+    margin-top: -1.3333333333em;
+  }
+
+  .description {
+    margin-bottom: 2.4em;
+    line-height: 1.8;
+    font-size: 1.25em;
+
+    h3 {
+      font-size: 1.2em;
+    }
+
+    .concert-poster {
+      display: inline-block;
+      float: right;
+      margin-left: 4%;
+      width: 32.5%;
+    }
+  }
+
+  .external-links {
+    .both {
+      margin-bottom: 3em;
+
+      li {
+        float: left;
+        padding-right: 4%;
+        width: 48%;
+
+        &:nth-child(2n) {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+
+  .multimedia {
+    .audio,
+    .video {
+      li {
+        float: left;
+        padding-right: 1.25%;
+        width: 32.5%;
+
+        &:nth-child(3n) {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+
+  .gallery {
+    .popup-gallery {
+      li {
+        margin-bottom: 1.5em;
+        padding-right: 1.25%;
+        width: 19%;
+
+        &:nth-child(2n) {
+          padding-right: 1.25%;
+        }
+
+        &:nth-child(5n) {
+          padding-right: 0;
+        }
+      } // </li>
+
+      a {
+        cursor: zoom-in;
+
+        &:hover {
+          img {
+            transition: box-shadow .2s ease-in;
+            box-shadow: 0 0 0 .375em $black;
+          }
+        }
+      }
+    }
+  }
+
+  .has-programme {
+    .programme {
+      float: left;
+      padding-right: 4%;
+      width: 48%;
+    }
+
+    .archive-docs,
+    .external-links {
+      float: left;
+      width: 48%;
+    }
+
+    .external-links {
+      li {
+        float: none;
+        padding-right: 0;
+        width: 100%;
+      }
+    }
+
+    .archive-link,
+    .multimedia {
+      clear: both;
+    }
+  }
+
+  .member {
+    .primary {
+      float: left;
+      margin-right: 3.75%;
+      width: 58.25%;
+
+      p {
+        &:first-child {
+          margin-bottom: 1.2em;
+          line-height: 1.8;
+          font-size: 1.25em;
+        }
+      }
+
+      blockquote,
+      li,
+      ol,
+      ul {
+        p {
+          &:first-child {
+            margin-bottom: 1.5em;
+            line-height: 1.5;
+            font-size: 1em;
+          }
+        }
+      }
+    }
+
+    .secondary {
+      float: right;
+      width: 38%;
+    }
+
+    .composerav {
+      float: left;
+      margin-right: 3.75%;
+      width: 58.25%;
+
+      .audio {
         li {
-          display: inline-block;
-          margin-right: .5em;
-
-          &:nth-child(odd) {
-            background-color: transparent;
-          }
-
-          &:nth-child(even) {
-            background-color: transparent;
-          }
-
-          &:last-child {
-            margin-right: 0;
-          }
-        }
-
-        .current-menu-item {
-          a {
-            &::before {
-              content: "";
-           }
-          }
-        }
-
-        a {
-          padding: 0 .5em;
-          color: $text-color;
-
-          &:hover {
-            background: $bright-green;
-          }
-        }
-      }
-
-      .menu-button {
-        display: none;
-      }
-    } // </.site-header>
-
-    #torso {
-      .fp-section,
-      .p-section {
-        padding: $more-padding;
-        padding-top: 1.5em;
-        padding-bottom: 1.5em;
-      }
-
-      #fp-blurb {
-        .entry {
-          line-height: 1.5;
-          font-size: 1.5em;
-        }
-
-        .social-link {
-          margin-right: auto;
-          margin-left: auto;
-          width: 59.4%;
-        }
-      }
-
-      #events {
-        .colloquia,
-        .concerts {
-          display: block;
           float: left;
-          padding-right: 6%;
-          width: 47%;
+          padding-right: 2%;
+          width: 49%;
 
           &:nth-child(2n) {
             padding-right: 0;
           }
-
-          .solo {
-            float: none;
-            margin-right: auto;
-            margin-left: auto;
-            width: 49.4%;
-          }
-        }
-
-        .miscevents,
-        .more-events-link {
-          margin-right: auto;
-          margin-left: auto;
-          width: 59.4%;
-        }
-      } // </#events>
-
-      .composers {
-        li {
-          float: left;
-          margin-right: 1.25%;
-          margin-bottom: .375em;
-          width: 19%;
-
-          a {
-            height: auto;
-            overflow: hidden;
-
-            img {
-              float: none;
-              width: 100%;
-              max-width: none;
-            }
-
-            span {
-              display: table-cell;
-              padding: 0 5%;
-              width: 24em;
-              max-width: 100%;
-              height: 3.52941176em;
-              vertical-align: middle;
-              line-height: 1.1em;
-              white-space: normal;
-            }
-          } // </a>
-
-          &:hover {
-            padding: 0;
-          }
-
-          &:nth-child(5n) {
-            margin-right: 0;
-          }
-        } // </li>
-
-        .no-img {
-          a {
-            margin-top: 1px;
-            padding-top: 100%;
-          }
-        }
-      } // </.composers>
-
-      #fp-archive-link {
-        padding-right: 25%;
-        padding-left: 25%;
-        width: 50%;
-      } // </#fp-archive-link>
-
-      .support {
-        margin-top: -1.3333333333em;
-      }
-
-      .description {
-        margin-bottom: 2.4em;
-        line-height: 1.8;
-        font-size: 1.25em;
-
-        h3 {
-          font-size: 1.2em;
-        }
-
-        .concert-poster {
-          display: inline-block;
-          float: right;
-          margin-left: 4%;
-          width: 32.5%;
         }
       }
+    } // </.composerav>
 
-      .external-links {
-        .both {
-          margin-bottom: 3em;
-
-          li {
-            float: left;
-            padding-right: 4%;
-            width: 48%;
-
-            &:nth-child(2n) {
-              padding-right: 0;
-            }
-          }
-        }
+    .no-primary {
+      .secondary {
+        float: none;
+        margin: 0 auto;
       }
 
-      .multimedia {
-        .audio,
-        .video {
-          li {
-            float: left;
-            padding-right: 1.25%;
-            width: 32.5%;
+      .composerav {
+        float: none;
+        margin: 0 auto;
+        width: 38%;
 
-            &:nth-child(3n) {
-              padding-right: 0;
-            }
-          }
-        }
-      }
-
-      .gallery {
-        .popup-gallery {
-          li {
-            margin-bottom: 1.5em;
-            padding-right: 1.25%;
-            width: 19%;
-
-            a {
-              cursor: zoom-in;
-
-              &:hover {
-                img {
-                  transition: box-shadow .2s ease-in;
-                  box-shadow: 0 0 0 .375em $black;
-                }
-              }
-            }
-
-            &:nth-child(2n) {
-              padding-right: 1.25%;
-            }
-
-            &:nth-child(5n) {
-              padding-right: 0;
-            }
-          } // </li>
-        }
-      }
-
-      .has-programme {
-        .programme {
-          float: left;
-          padding-right: 4%;
-          width: 48%;
-        }
-
-        .archive-docs,
-        .external-links {
-          float: left;
-          width: 48%;
-        }
-
-        .external-links {
+        .audio {
           li {
             float: none;
             padding-right: 0;
             width: 100%;
           }
         }
-
-        .archive-link,
-        .multimedia {
-          clear: both;
-        }
       }
+    } // </.no-primary>
+  } // </.member>
 
-      .member {
-        .primary {
-          float: left;
-          margin-right: 3.75%;
-          width: 58.25%;
+  // Colloquium single styles
+  .event-photo {
+    margin-right: auto;
+    margin-left: auto;
+    width: 58.25%;
 
-          p {
-            &:first-child {
-              margin-bottom: 1.2em;
-              line-height: 1.8;
-              font-size: 1.25em;
-            }
-          }
+    img {
+      width: auto;
+      max-width: 100%;
+    }
+  }
 
-          blockquote,
-          li,
-          ol,
-          ul {
-            p {
-              &:first-child {
-                margin-bottom: 1.5em;
-                line-height: 1.5;
-                font-size: 1em;
-              }
-            }
-          }
-        }
+  // Contact Form styles
+  div {
+    &[id|="contact-form"] {
+      margin-right: auto;
+      margin-left: auto;
+      max-width: 25em;
+    }
+  }
 
-        .secondary {
-          float: right;
-          width: 38%;
-        }
+  .archive-header {
+    margin-bottom: 1.5em;
 
-        .composerav {
-          float: left;
-          margin-right: 3.75%;
-          width: 58.25%;
-
-          .audio {
-            li {
-              float: left;
-              padding-right: 2%;
-              width: 49%;
-
-              &:nth-child(2n) {
-                padding-right: 0;
-              }
-            }
-          }
-        } // </.composerav>
-
-        .no-primary {
-          .secondary {
-            float: none;
-            margin: 0 auto;
-          }
-
-          .composerav {
-            float: none;
-            margin: 0 auto;
-            width: 38%;
-
-            .audio {
-              li {
-                float: none;
-                padding-right: 0;
-                width: 100%;
-              }
-            }
-          }
-        } // </.no-primary>
-      } // </.member>
-
-      // Colloquium single styles
-      .event-photo {
-        margin-right: auto;
-        margin-left: auto;
-        width: 58.25%;
-
-        img {
-          width: auto;
-          max-width: 100%;
-        }
+    .archive-nav {
+      .left,
+      .right {
+        background: transparent;
       }
-
-      // Contact Form styles
-      div {
-        &[id|="contact-form"] {
-          margin-right: auto;
-          margin-left: auto;
-          max-width: 25em;
-        }
-      }
-
-      .archive-header {
-        margin-bottom: 1.5em;
-
-        #archive-nav {
-          .left,
-          .right {
-            background: transparent;
-          }
-        }
-      }
-    } // </#torso>
-  } // </#page>
+    }
+  }
 } // end media-query
 
 // HUGE screens, > 1260px
@@ -1719,32 +1685,28 @@ iframe {
     font-size: .8em;
   }
 
-  #page {
-    #torso {
-      .composers {
-        li {
-          a {
-            img {
-              display: none;
-            }
+  .composers {
+    li {
+      a {
+        img {
+          display: none;
+        }
 
-            span {
-              padding: 0 5%;
-              max-width: 90%;
-            }
-          }
-
-          &:hover {
-            padding: 0;
-          }
-        } // </li>
-      } // </.composers>
-
-      .description {
-        .concert-poster {
-          max-width: 100%;
+        span {
+          padding: 0 5%;
+          max-width: 90%;
         }
       }
+
+      &:hover {
+        padding: 0;
+      }
+    } // </li>
+  } // </.composers>
+
+  .description {
+    .concert-poster {
+      max-width: 100%;
     }
   }
 }

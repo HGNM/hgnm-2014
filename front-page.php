@@ -8,7 +8,7 @@ get_header();
         if (have_posts()) : ?>
       <?php while (have_posts()) : the_post(); ?>
         <?= component('edit_button') ?>
-        <section id="fp-blurb" <?php post_class('fp-section'); ?>>
+        <section id="fp-blurb" <?php post_class('fp-section fp-section--blurb'); ?>>
           <div class="entry"><?php the_content(); ?></div>
           <p class="social-link">
             <?= component(
@@ -85,7 +85,7 @@ get_header();
 
         // Display upcoming events
         if ($concerts || $colloquia || $miscevents) : ?>
-      <section id="events" class="fp-section clearfix">
+      <section id="events" class="section--events fp-section bg-overlay clearfix">
         <h2>Events</h2>
         <ul>
           <?php if ($concerts) : ?>
@@ -180,7 +180,7 @@ get_header();
 
         // Display archive link
         ?>
-    <section id="fp-archive-link" class="fp-section">
+    <section id="fp-archive-link" class="fp-section fp-section--archive-link bg-overlay">
       <?= component('button_link', array(
         'href' => get_post_type_archive_link('concert'),
         'html' => '<h2>Archive</h2><p>Dive into an archive of HGNM’s past events, members, audio and video.</p>'

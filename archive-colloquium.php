@@ -82,7 +82,7 @@ get_header();
 
             // Display events header and navigation
             ?>
-      <article id="events" class="p-section clearfix">
+      <article id="events" class="section--events p-section clearfix">
         <header class="archive-header">
           <h2>Events</h2>
         </header>

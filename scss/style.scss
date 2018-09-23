@@ -374,11 +374,16 @@ iframe {
 
   @include mq (m) {
     margin: 0;
-    padding-left: 0;
+    padding: 0 14%;
     width: 100%;
     line-height: 1;
     letter-spacing: 0;
     font-size: 4.5em;
+    box-sizing: border-box;
+  }
+
+  @include mq (fw) {
+    padding: 0;
   }
 
   .lowercase {

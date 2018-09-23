@@ -42,6 +42,7 @@ $max-width: 60em;
 $breakpoints: (
   xs: "max-width: 22em",  // EXTRA SMALL (old mobile) screens, ≤ 352px
   m: "min-width: 45em",   // MEDIUM (laptop) screens, ≥ 720px
+  fw: "min-width: 63em",  // FULL-WIDTH, ≥ 1008px
 );
 
 @mixin mq ($size) {

@@ -84,4 +84,3 @@ if (!function_exists('colloquium_list_item')) {
 }
 
 return colloquium_list_item($opts);
-?>

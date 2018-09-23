@@ -178,12 +178,12 @@ if (have_posts()) {
                 // Format: a list of composer names seperated by commas, final pair joined by ' and '
                 $names_seen = array();
                 $composers = array_reduce($fullprogramme, function ($composers, $item) {
-                  global $names_seen;
-                  if (!in_array($item['composer'], $names_seen)) {
-                    $names_seen[] = $item['composer'];
-                    $composers[] = $item;
-                  }
-                  return $composers;
+                    global $names_seen;
+                    if (!in_array($item['composer'], $names_seen)) {
+                        $names_seen[] = $item['composer'];
+                        $composers[] = $item;
+                    }
+                    return $composers;
                 }, array());
                 $list_length = count($composers);
                 $n = 0;

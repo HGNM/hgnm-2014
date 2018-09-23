@@ -10,7 +10,7 @@ if (!function_exists('component')) {
         $template_path = "components/$name.php";
         $template = locate_template($template_path, false, false);
         if (empty($template)) {
-          throw new Exception("Template not found at $template_path");
+            throw new Exception("Template not found at $template_path");
         }
         return include($template);
     }

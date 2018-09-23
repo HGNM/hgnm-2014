@@ -2,6 +2,21 @@
 
 ## v1
 
+### 1.14.0
+
+Although visually the theme appears unchanged, this release marks a substantial overhaul of the codebase, refactoring templating and styling to make it more maintainable going forward.
+
+#### Key changes
+
+* Add `functions/component-loader.php` allowing re-usable templates to be called using `component()` (see [Architecture docs](ARCHITECTURE.md#components))
+* Write component files and use `component()` to refactor templates and make code less repetitive
+* Use `php-cs-fixer` to tidy PHP and make code style consistent
+* Write [`ARCHITECTURE.md`](ARCHITECTURE.md), documenting theme structure and functionality
+* Refactor `style.scss` to be more maintainable, and use `sass-lint` to enfore consistent code style. (Removing unused or repeated style rules has knocked almost 25% off the output file size.)
+* Add PostCSS and Autoprefixer to the build flow to allow CSS vendor prefixes to be handled automatically
+
+For more details [see the commit list on GitHub](https://github.com/HGNM/hgnm-2014/compare/v1.13.0...v1.14.0)
+
 ### 1.13.0
 
 * Refactor `functions.php` into several large chunks to make it a little easier to understand (c3f90f5)

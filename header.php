@@ -87,23 +87,18 @@
       <header id="masthead" class="site-header js-header clearfix">
 
         <h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-          <?php // Finds characters that are not uppercase and wraps them in a
-                // span of class 'site-title__lowercase'
-                // N.B. slightly hacky use of ctype_upper and ctype_lower in
-                // conjunction. This allows us to wrap all non-uppercase
-                // characters, but creates new spans at non-letter characters
-                // such as spaces.
+          <?php // Finds characters that are not uppercase and wraps them in a span of class 'lowercase'
                         $title = get_bloginfo('name');
                         $i = 0;
                         while ($i < strlen($title)) {
                             if (!ctype_upper($title[$i])) {
                                 $startpos = $i;
-                                while ($i < (strlen($title) - 1) && ctype_lower($title[$i+1])) {
+                                while ($i < (strlen($title) - 1) && !ctype_upper($title[$i+1])) {
                                     $i++;
                                 }
                                 $endpos = $i+1;
                                 $j = $startpos;
-                                echo '<span class="site-title__lowercase">';
+                                echo '<span class="lowercase">';
                                 while ($j >= $startpos && $j < $endpos) {
                                     echo $title[$j];
                                     $j++;

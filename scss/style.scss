@@ -380,27 +380,15 @@ iframe {
     letter-spacing: 0;
     font-size: 4.5em;
   }
-} // </.site-title>
 
-.site-title__lowercase {
-  // hide lowercase letters in site title
-  display: none;
+  .lowercase {
+    display: none;
 
-  @include mq (m) {
-    // show lowercase letters on medium-sized screens
-    display: inline;
-  }
-
-  @include mq (nl) {
-    &:nth-child(5) {
-      &::before {
-        // add a line break before “New Music” when there’s not enough room
-        white-space: pre;
-        content: "\A";
-      }
+    @include mq (m) {
+      display: inline;
     }
   }
-}
+} // </.site-title>
 
 // Accessible Mobile Menu Styling
 .menu {

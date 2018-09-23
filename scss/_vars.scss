@@ -42,7 +42,6 @@ $max-width: 60em;
 $breakpoints: (
   xs: "max-width: 22em",  // EXTRA SMALL (old mobile) screens, ≤ 352px
   m: "min-width: 45em",   // MEDIUM (laptop) screens, ≥ 720px
-  nl: "max-width: 63em",  // NOT LARGE, ≤ 1008px
   l: "min-width: 78.75em" // LARGE screens, ≥ 1260px
 );
 

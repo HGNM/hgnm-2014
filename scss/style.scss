@@ -566,15 +566,12 @@ iframe {
 // ========================================================================
 .fp-section,
 .p-section {
+  margin: 0 auto;
   padding: $body-padding;
+  max-width: 59.0625em;
 
   @include mq (m) {
     padding: $more-padding;
-  }
-
-  @include mq (l) {
-    margin: 0 auto;
-    width: 59.0625em;
   }
 
   ul {

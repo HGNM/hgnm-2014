@@ -1,5 +1,10 @@
 <?php
 if (!function_exists('icon')) {
+    /**
+     * Insert a content-less span that will be styled with an icon font
+     * @param  array  $opts Options array
+     * @return string       HTML string for the styled span
+     */
     function icon($opts)
     {
         $classes = array(

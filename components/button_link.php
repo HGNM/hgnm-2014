@@ -1,5 +1,10 @@
 <?php
 if (!function_exists('button_link')) {
+    /**
+     * Generate a large green link button
+     * @param  array $opts  Options array
+     * @return string       HTML string for the link element
+     */
     function button_link($opts)
     {
         $inner = $opts['html'];

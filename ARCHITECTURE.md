@@ -243,10 +243,10 @@ Besides the templates described above, WordPress themes provide much of their cu
 
 To break up the large page templates described above, some layouts that are re-used are stored in the [`components`](components) directory and included in the main templates using the `component()` method declared in [`functions/component-loader.php`](functions/component-loader.php).
 
-For example, `footer.php` includes a copyright string that updates its date range automatically and is defined in `components/copyright.php`. To include a component call `component()` with the component file name as the first argument:
+For example, `footer.php` includes a copyright string that updates its date range automatically and is defined in `components/hgnm_copyright.php`. To include a component call `component()` with the component file name as the first argument:
 
 ```php
-<?= component('copyright') ?>
+<?= component('hgnm_copyright') ?>
 ```
 
 If the component needs to be passed additional data, this can be achieved via the `component` method’s second argument:

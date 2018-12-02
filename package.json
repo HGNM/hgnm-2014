@@ -28,12 +28,16 @@
   },
   "homepage": "https://github.com/HGNM/hgnm-2014#readme",
   "devDependencies": {
+    "@commitlint/cli": "^7.2.1",
+    "@commitlint/config-conventional": "^7.1.2",
+    "@commitlint/travis-cli": "^7.2.1",
     "@masonite/wp-project-version-sync": "^1.0.12",
     "autoprefixer": "^9.3.1",
     "bestzip": "^2.1.2",
     "commitizen": "^3.0.5",
     "cpy-cli": "git+https://github.com/chimon2000/cpy-cli.git",
     "cz-conventional-changelog": "^2.1.0",
+    "husky": "^1.2.0",
     "node-sass": "^4.10.0",
     "postcss-cli": "^6.0.1",
     "rimraf": "^2.6.2",
@@ -57,6 +61,19 @@
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "subject-case": [2, "always", ["sentence-case"]]
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "standard-version": {

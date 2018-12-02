@@ -28,5 +28,3 @@ if (!function_exists('member_list')) {
         return $html;
     }
 }
-
-return member_list($opts);

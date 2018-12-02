@@ -29,5 +29,3 @@ if (!function_exists('hgnm_copyright')) {
         return $output;
     }
 }
-
-return hgnm_copyright();

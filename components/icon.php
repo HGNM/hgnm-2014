@@ -22,5 +22,3 @@ if (!function_exists('icon')) {
         return $html;
     }
 }
-
-return icon($opts);

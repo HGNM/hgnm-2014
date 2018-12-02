@@ -23,5 +23,3 @@ if (!function_exists('member_list_item')) {
         return $html;
     }
 }
-
-return member_list_item($opts);

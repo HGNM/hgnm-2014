@@ -80,5 +80,3 @@ if (!function_exists('concert_list_item')) {
         return $html;
     }
 }
-
-return concert_list_item($opts);

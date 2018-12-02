@@ -12,6 +12,10 @@ if (!function_exists('component')) {
         if (empty($template)) {
             throw new Exception("Template not found at $template_path");
         }
-        return include($template);
+        include_once($template);
+        if (!is_callable($name)) {
+            throw new Exception("$template_path does not declare a function (or function is not named '$name')");
+        }
+        return $name($opts);
     }
 }

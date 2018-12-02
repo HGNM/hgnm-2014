@@ -23,5 +23,3 @@ if (!function_exists('colloquium_location_link')) {
         return $html;
     }
 }
-
-return colloquium_location_link($opts);

@@ -31,5 +31,3 @@ if (!function_exists('button_link')) {
         return "<a $attribute_string>$inner</a>";
     }
 }
-
-return button_link($opts);

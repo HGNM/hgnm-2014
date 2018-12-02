@@ -12,5 +12,3 @@ if (!function_exists('edit_button')) {
         return '';
     }
 }
-
-return edit_button();

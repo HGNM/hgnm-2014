@@ -13,5 +13,3 @@ if (!function_exists('responsive_embed')) {
         return $html;
     }
 }
-
-return responsive_embed($opts);

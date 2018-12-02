@@ -20,5 +20,3 @@ if (!function_exists('colloquium_list')) {
         return $html;
     }
 }
-
-return colloquium_list($opts);

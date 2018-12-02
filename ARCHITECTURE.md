@@ -243,7 +243,7 @@ Besides the templates described above, WordPress themes provide much of their cu
 
 To break up the large page templates described above, some layouts that are re-used are stored in the [`components`](components) directory and included in the main templates using the `component()` method declared in [`functions/component-loader.php`](functions/component-loader.php).
 
-For example, `footer.php` includes a copyright string that updates its date range automatically and is defined in `components/hgnm_copyright.php`. To include a component call `component()` with the component file name as the first argument:
+For example, `footer.php` includes a copyright string that updates its date range automatically and is defined in `components/hgnm_copyright.php`. To include a component, call `component()` with the component file name as the first argument:
 
 ```php
 <?= component('hgnm_copyright') ?>
@@ -258,7 +258,7 @@ If the component needs to be passed additional data, this can be achieved via th
 
 ### Writing a component
 
-A component is a PHP file declaring a function that renders the component and a call to that function. While technically a component is any function, best practice is for a component to return an HTML string. This allows you to pass a component around, for example handing it to another component for use as a child element, only printing its output when needed.
+A component is a PHP file declaring a function that renders the component. While technically a component is any function, best practice is for a component to return an HTML string. This allows you to pass a component around, for example handing it to another component for use as a child element, only printing its output when needed.
 
 The basic skeleton of a component looks like this:
 
@@ -277,18 +277,17 @@ if (!function_exists('pretty_p')) {
         return $html;
     }
 }
-
-// Call the component function and return it
-return pretty_p($opts);
 ```
 
-The second argument passed to `component()` is injected into your component’s scope as `$opts`, so by saving the component as `components/pretty_p.php` we can then use it as follows:
+The function name _must_ match the filename you save the component as, so the above must be saved as `components/pretty_p.php`.
+
+Your component function will be called with the second argument passed to `component()`, so  we can then use the above as follows:
 
 ```php
 <?= component('pretty_p', array( "text" => 'Paragraph text' )); ?>
 ```
 
-**N.B.** the `<?= '...' ?>` PHP tag is shorthand for `<?php echo '...' ?>`
+ℹ️ The `<?= '...' ?>` PHP tag is shorthand for `<?php echo '...' ?>`
 
 
 

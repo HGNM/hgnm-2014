@@ -18,5 +18,3 @@ ga('send', 'pageview');
 <script async src='https://www.google-analytics.com/analytics.js'></script>";
     }
 }
-
-return analytics($opts);

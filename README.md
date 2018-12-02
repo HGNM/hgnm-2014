@@ -32,16 +32,14 @@ Changes to any of the PHP theme files can be seen by refreshing your browser.
 `hgnm-2014`’s stylesheets are written using [SASS](https://sass-lang.com/) and can be found in the `scss` directory. These need to be compiled to a CSS file to be used in the browser. There are two ways to achieve this:
 
 1. Compile to CSS once:
-
-  ```sh
-  npm run css:build
-  ```
+    ```sh
+    npm run css:build
+    ```
   
 2. Watch the `scss` directory and auto-compile to CSS when something changes:
-
-  ```sh
-  npm run css:watch
-  ```
+    ```sh
+    npm run css:watch
+    ```
 
 
 ### Committing changes

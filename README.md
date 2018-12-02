@@ -43,9 +43,7 @@ To change `css` styling, edit `scss/style.scss`, which will auto-compile if `npm
 
 1. Document changes in [`CHANGELOG.md`](CHANGELOG.md).
 
-2. Increment version number in `scss/style.scss` header (and auto-compile a new `style.css`) using [semantic versioning](http://semver.org/).
-
-3. Increment the package version number and tag the commit using `npm version`:
+2. Increment the package version number and tag the commit using `npm version`:
   ```sh
   npm version major # 1.3.2 -> 2.0.0
   npm version minor # 1.3.2 -> 1.4.0
@@ -56,14 +54,14 @@ To change `css` styling, edit `scss/style.scss`, which will auto-compile if `npm
   npm version patch -m "Release %s. Closes #39."
   ```
 
-4. Push your changes including the newly created tag:
+3. Push your changes including the newly created tag:
   ```sh
   git push --follow-tags
   ```
 
   After you have pushed your tag, Travis CI will build `hgnm-2014.zip` and attach it to the GitHub release. This archive is used by automatic theme updates in WordPress.
 
-5. Copy the changes listed in `CHANGELOG.md` to the release notes on GitHub.
+4. Copy the changes listed in `CHANGELOG.md` to the release notes on GitHub.
 
 ## Architecture
 

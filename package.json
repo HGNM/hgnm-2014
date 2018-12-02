@@ -4,6 +4,7 @@
   "description": "Repository for WordPress theme development for hgnm.org",
   "scripts": {
     "test": "sass-lint",
+    "version": "wp-update-project-version -p scss/style.scss && git add scss/style.scss",
     "start": "npm run css:watch",
     "build": "npm run test && npm run css:build && npm run copy && npm run zip && npm run clean",
     "css:build": "node-sass --include-path scss --output-style compressed scss/style.scss style.css",
@@ -26,6 +27,7 @@
   },
   "homepage": "https://github.com/HGNM/hgnm-2014#readme",
   "devDependencies": {
+    "@masonite/wp-project-version-sync": "^1.0.12",
     "autoprefixer": "^9.3.1",
     "bestzip": "^2.1.2",
     "cpy-cli": "git+https://github.com/chimon2000/cpy-cli.git",

@@ -19,6 +19,13 @@ SASS files should follow the conventions specified in [`.sass-lint.yml`][lint].
 Running `npm t` will test whether everything conforms and builds will fail if
 they don’t.
 
+## Autoprefixer
+
+SASS files are compiled and minified using `node-sass`, and are then processed
+using [`postcss`][pcss]. This allows us to leverage its Autoprefixer tool, which
+adds browser vendor prefixes automatically.
+
 [build]: ../README.md#build-css
 [sass]: https://sass-lang.com/guide
 [lint]: ../.sass-lint.yml
+[pcss]: https://postcss.org/

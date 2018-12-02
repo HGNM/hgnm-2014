@@ -31,7 +31,9 @@
     "@masonite/wp-project-version-sync": "^1.0.12",
     "autoprefixer": "^9.3.1",
     "bestzip": "^2.1.2",
+    "commitizen": "^3.0.5",
     "cpy-cli": "git+https://github.com/chimon2000/cpy-cli.git",
+    "cz-conventional-changelog": "^2.1.0",
     "node-sass": "^4.10.0",
     "postcss-cli": "^6.0.1",
     "rimraf": "^2.6.2",
@@ -52,6 +54,11 @@
     "not dead",
     "> 0.2%"
   ],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
   "standard-version": {
     "scripts": {
       "postbump": "wp-update-project-version -p scss/style.scss && git add scss/style.scss"

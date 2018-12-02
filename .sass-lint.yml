@@ -3,6 +3,8 @@ options:
 files:
   include:
     - '**/*.s+(a|c)ss'
+  ignore:
+    - 'node_modules/**/*.*'
 rules:
   # Extends
   extends-before-mixins: 1

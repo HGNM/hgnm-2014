@@ -13,5 +13,12 @@ the `@import` directive.
 `_vars.scss` contains all the variables used by `style.scss`. They can be used
 for example to a change a colour throughout the theme.
 
+## Code style
+
+SASS files should follow the conventions specified in [`.sass-lint.yml`][lint].
+Running `npm t` will test whether everything conforms and builds will fail if
+they don’t.
+
 [build]: ../README.md#build-css
 [sass]: https://sass-lang.com/guide
+[lint]: ../.sass-lint.yml

@@ -3,8 +3,9 @@
   "version": "1.14.0",
   "description": "Repository for WordPress theme development for hgnm.org",
   "scripts": {
+    "test": "sass-lint",
     "start": "npm run css:watch",
-    "build": "npm run css:build && npm run copy && npm run zip && npm run clean",
+    "build": "npm run test && npm run css:build && npm run copy && npm run zip && npm run clean",
     "css:build": "node-sass --include-path scss --output-style compressed scss/style.scss style.css",
     "css:watch": "watch 'npm run css:build' scss",
     "postcss:build": "postcss style.css -o style.css",
@@ -31,6 +32,7 @@
     "node-sass": "^4.10.0",
     "postcss-cli": "^6.0.1",
     "rimraf": "^2.6.2",
+    "sass-lint": "^1.12.1",
     "watch": "^1.0.2"
   },
   "engines": {

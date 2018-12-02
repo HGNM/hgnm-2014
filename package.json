@@ -14,7 +14,7 @@
     "copy": "cpy '**/*' '!scss/*' '!hgnm-2014/*' '!.gitignore' '!.sass-lint.yml' '!.travis.yml' '!install-dependencies.sh' '!node_modules/**/*' '!hgnm-2014.zip' '!ARCHITECTURE.md' '!*/README.md' 'hgnm-2014/' --parents --nodir",
     "zip": "bestzip hgnm-2014.zip hgnm-2014/",
     "clean": "rimraf hgnm-2014",
-    "postinstall": "./install-dependencies.sh"
+    "postinstall": "./install-dependencies.sh && npm run css:build"
   },
   "repository": "HGNM/hgnm-2014",
   "keywords": [

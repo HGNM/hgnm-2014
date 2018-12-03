@@ -58,7 +58,7 @@ npx git-cz
 
 Commitizen will show you a series of prompts to fill out and format your responses into a tidy commit message.
 
-⚠️ _If a commit message does not conform to the standard, `commitlint` will reject it on the command line and on Travis-CI._
+> ⚠️ If a commit message does not conform to the standard, `commitlint` will reject it on the command line and on Travis-CI.
 
 
 ### Releasing a version

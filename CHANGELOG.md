@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.15.0"></a>
+# [1.15.0](https://github.com/hgnm/hgnm-2014/compare/v1.14.0...v1.15.0) (2018-12-03)
+
+
+### Architecture
+* Improve component loading, using `include_once` and calling functions by default ([323493d](https://github.com/hgnm/hgnm-2014/commit/323493d))
+
+
+### Front-end
+
+* **style:** Remove mobile menu button round corners ([3864e56](https://github.com/hgnm/hgnm-2014/commit/3864e56))
+* **style:** Break site title nicely on 720–1008px screens ([993b57a](https://github.com/hgnm/hgnm-2014/commit/993b57a))
+* **style:** Update “off-white” variable to match shade of background pattern ([827e2ee](https://github.com/hgnm/hgnm-2014/commit/827e2ee))
+
+
+### Project management
+
+* Use [`@masonite/wp-project-version-sync`](https://github.com/masonitedoors/wp-project-version-sync) to automatically update theme version number in `scss/style.scss` on `npm version` ([dd60743](https://github.com/hgnm/hgnm-2014/commit/dd60743)), closes [#24](https://github.com/hgnm/hgnm-2014/issues/24)
+* Use `standard-version` to cut new releases ([03ddf63](https://github.com/hgnm/hgnm-2014/commit/03ddf63))
+* Configure package to use `commitizen` and `commitlint` ([d3000c2](https://github.com/hgnm/hgnm-2014/commit/d3000c2), [67b3146](https://github.com/hgnm/hgnm-2014/commit/67b3146))
+* Don’t store `style.css` in repo ([9ee084f](https://github.com/hgnm/hgnm-2014/commit/9ee084f))
+* Use `sass-lint` to enforce SASS code style ([22ad76a](https://github.com/hgnm/hgnm-2014/commit/22ad76a))
+* Improve build scripts ([599ce44](https://github.com/hgnm/hgnm-2014/commit/599ce44), [599ce44](https://github.com/hgnm/hgnm-2014/commit/5f9ca8d))
+* Document project subdirectory structure ([739f61d](https://github.com/hgnm/hgnm-2014/commit/739f61d), [4efa811](https://github.com/hgnm/hgnm-2014/commit/4efa811))
+
+
+
 <a name="1.14.0"></a>
 # [1.14.0](https://github.com/HGNM/hgnm-2014/compare/v1.13.0...v1.14.0) (2018-09-23)
 

@@ -41,6 +41,10 @@ Changes to any of the PHP theme files can be seen by refreshing your browser.
     npm run css:watch
     ```
 
+> ⚠️ If SCSS files do not follow the style rules set in `.sass-lint.yml`, you will see build errors
+
+> 💡 Use [Atom](https://atom.io/) with [`linter`](https://atom.io/packages/linter) and [`linter-sass-lint`](https://atom.io/packages/linter-sass-lint) to see feedback about style errors while you edit
+
 
 ### Committing changes
 

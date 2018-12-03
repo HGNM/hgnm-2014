@@ -287,7 +287,7 @@ Your component function will be called with the second argument passed to `compo
 <?= component('pretty_p', array( "text" => 'Paragraph text' )); ?>
 ```
 
-ℹ️ The `<?= '...' ?>` PHP tag is shorthand for `<?php echo '...' ?>`
+> ℹ️ The `<?= '...' ?>` PHP tag is shorthand for `<?php echo '...' ?>`
 
 
 

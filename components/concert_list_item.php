@@ -45,7 +45,7 @@ if (!function_exists('concert_list_item')) {
                       '</p>' .
                       '<p class="location vcard">' .
                         get_field('location', $ID) .
-                        '<span class="fn org">' .
+                        '<span class="fn org" aria-hidden="true">' .
                           '<span class="value-title" title="Paine Hall, Harvard University Department of Music"></span>' .
                           '<span class="adr">' .
                             '<span class="street-address">' .
@@ -73,7 +73,7 @@ if (!function_exists('concert_list_item')) {
                       '</p>' .
                     '</div>' .
                   '</a>' .
-                  '<span class="category">' .
+                  '<span class="category" aria-hidden="true">' .
                     '<span class="value-title" title="Concert"></span>' .
                   '</span>' .
                 "</$EL>";

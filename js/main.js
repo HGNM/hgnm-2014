@@ -10,6 +10,7 @@
   // Button properties
   menuButton.classList.add('menu-button')
   menuButton.setAttribute('id', 'menu-button')
+  menuButton.setAttribute('type', 'button')
   menuButton.setAttribute('aria-label', 'Menu')
   menuButton.setAttribute('aria-expanded', 'false')
   menuButton.setAttribute('aria-controls', 'menu')

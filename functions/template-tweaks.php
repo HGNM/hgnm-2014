@@ -20,7 +20,7 @@ add_filter('post_class', 'isa_remove_hentry_class');
 // Enqueue Google Fonts
 function load_fonts()
 {
-    wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Alegreya:400italic,400,700|Alegreya+Sans:400,700');
+    wp_register_style('googleFonts', 'https://fonts.googleapis.com/css?family=Alegreya:400italic,400,700|Alegreya+Sans:400,700');
     wp_enqueue_style('googleFonts');
 }
 add_action('wp_print_styles', 'load_fonts');

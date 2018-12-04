@@ -68,7 +68,7 @@
 
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="screen" />
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-    <link rel="shortcut icon" sizes="16x16 32x32 48x48 64x64" href="http://hgnm.org/favicon.ico">
+    <link rel="shortcut icon" sizes="16x16 32x32 48x48 64x64" href="<?php _e(get_site_url() . '/favicon.ico') ?>">
     <link rel="apple-touch-icon-precomposed" href="<?php _e(get_stylesheet_directory_uri() . '/img/favicon-152.png'); ?>">
     <meta name="msapplication-TileColor" content="#30ff8a">
     <meta name="msapplication-TileImage" content="<?php _e(get_stylesheet_directory_uri() . '/img/favicon-144.png'); ?>">

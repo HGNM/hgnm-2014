@@ -283,12 +283,11 @@ if (have_posts()) {
   <section class="external-links clearfix <?php if (get_field('performer_url') & get_field('facebook_url')) {
                 echo 'both';
             } ?>">
-    <ul>
       <?php
                     // PERFORMER LINK
                     if (get_field('performer_url')) {
                         ?>
-      <li>
+      <p>
         <?= component('button_link', array(
           'href' => esc_url(get_field('performer_url')),
           'html' => 'Find out more about ' .
@@ -297,22 +296,21 @@ if (have_posts()) {
               component('icon', array('type' => 'link-ext')) .
             '</span>'
         )) ?>
-      </li>
+      </p>
       <?php
                     }
             // FACEBOOK LINK
             if (get_field('facebook_url')) {
                 ?>
-      <li>
+      <p>
         <?= component('button_link', array(
           'href' => esc_url(get_field('facebook_url')),
           'html' => 'See this event on Facebook' .
                     component('icon', array('type' => 'facebook'))
         )) ?>
-      </li>
+      </p>
       <?php
             } ?>
-    </ul>
   </section><!-- .external-links -->
   <?php
         }
@@ -331,24 +329,24 @@ if (have_posts()) {
                 }
             }
             if ($audiolist || $videolist) {
-                echo '<section class="multimedia"><ul>';
+                echo '<section class="multimedia">';
                 if ($audiolist) {
-                    echo '<li class="audio clearfix"><h3>Audio</h3><ul>';
+                    echo '<section class="audio clearfix"><h3>Audio</h3><ul>';
                     foreach ($audiolist as $item) {
                         echo '<li>';
                         echo component('responsive_embed', $item['embed_link']);
                         echo '</li>';
                     }
-                    echo '</ul></li>';
+                    echo '</ul></section>';
                 }
                 if ($videolist) {
-                    echo '<li class="video clearfix"><h3>Video</h3><ul>';
+                    echo '<section class="video clearfix"><h3>Video</h3><ul>';
                     foreach ($videolist as $item) {
                         echo '<li><span class="embed-container">' . $item['embed_link'] . '</span></li>';
                     }
-                    echo '</ul></li>';
+                    echo '</ul></section>';
                 }
-                echo '</ul></section>';
+                echo '</section>';
             }
         }
 

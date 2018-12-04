@@ -15,7 +15,7 @@ rules:
   mixins-before-declarations:
     - 1
     -
-      exclude: ['mq']
+      exclude: ['mq', 'mq-between']
 
   # Line Spacing
   one-declaration-per-line: 1

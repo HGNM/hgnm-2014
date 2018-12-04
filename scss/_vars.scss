@@ -40,13 +40,19 @@ $max-width: 60em;
 
 // Media query mixin
 $breakpoints: (
-  xs: "max-width: 22em",  // EXTRA SMALL (old mobile) screens, ≤ 352px
-  m: "min-width: 45em",   // MEDIUM (laptop) screens, ≥ 720px
-  fw: "min-width: 63em",  // FULL-WIDTH, ≥ 1008px
+  xs: 22em, // EXTRA SMALL (old mobile) screens, ≤ 352px
+  m: 45em,  // MEDIUM (laptop) screens, ≥ 720px
+  fw: 63em, // FULL-WIDTH, ≥ 1008px
+);
+
+$queries: (
+  xs: "max-width: #{map-get($breakpoints, xs)}",
+  m: "min-width: #{map-get($breakpoints, m)}",
+  fw: "min-width: #{map-get($breakpoints, fw)}",
 );
 
 @mixin mq ($size) {
-  @media only screen and (map-get($breakpoints, $size)) {
+  @media only screen and (map-get($queries, $size)) {
     @content;
   }
 }

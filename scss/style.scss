@@ -726,15 +726,12 @@ iframe {
     transition: padding .2s ease-out;
     margin-bottom: 1em;
 
-    @include mq (m) {
-      float: left;
-      margin-right: 1.25%;
-      margin-bottom: .375em;
-      width: 19%;
+    @include mq-between (m, fw) {
+      @include composers-grid($cols: 4)
+    }
 
-      &:nth-child(5n) {
-        margin-right: 0;
-      }
+    @include mq (fw) {
+      @include composers-grid($cols: 5)
     }
 
     a {

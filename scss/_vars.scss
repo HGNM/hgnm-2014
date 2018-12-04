@@ -62,3 +62,15 @@ $queries: (
     @content;
   }
 }
+
+// Composer List Grid Mixin
+@mixin composers-grid($cols, $gutter: .75em) {
+  float: left;
+  margin-right: $gutter;
+  margin-bottom: $gutter - .375em;
+  width: calc((100% - #{($cols - 1) * $gutter}) / #{$cols});
+
+  &:nth-child(#{$cols}n) {
+    margin-right: 0;
+  }
+}

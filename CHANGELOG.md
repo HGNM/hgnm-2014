@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.16.0"></a>
+# [1.16.0](https://github.com/hgnm/hgnm-2014/compare/v1.15.0...v1.16.0) (2019-02-23)
+
+
+### Bug Fixes
+
+* **concert_list_item:** Add “aria-hidden” attribute to microformat tags ([9653635](https://github.com/hgnm/hgnm-2014/commit/9653635))
+* **functions:** Load Google Fonts over HTTPS ([3512d7b](https://github.com/hgnm/hgnm-2014/commit/3512d7b))
+* **header:** Don’t hardcode favicon URL ([20ddade](https://github.com/hgnm/hgnm-2014/commit/20ddade))
+* **menu:** Add “type” attribute to mobile menu button ([69d518b](https://github.com/hgnm/hgnm-2014/commit/69d518b))
+
+
+### Features
+
+* Add options for colloquium location & front page links ([#28](https://github.com/hgnm/hgnm-2014/issues/28)) ([b06c0fc](https://github.com/hgnm/hgnm-2014/commit/b06c0fc))
+
+
+
 <a name="1.15.0"></a>
 # [1.15.0](https://github.com/hgnm/hgnm-2014/compare/v1.14.0...v1.15.0) (2018-12-03)
 

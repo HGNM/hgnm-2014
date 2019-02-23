@@ -1,6 +1,6 @@
 {
   "name": "hgnm-2014",
-  "version": "1.15.0",
+  "version": "1.16.0",
   "description": "Repository for WordPress theme development for hgnm.org",
   "scripts": {
     "test": "sass-lint",

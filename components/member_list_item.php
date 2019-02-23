@@ -9,17 +9,24 @@ if (!function_exists('member_list_item')) {
     {
         $ID = $opts['ID'];
         $show_image = array_key_exists('show_image', $opts) ? $opts['show_image'] : true;
+        $member_name = get_the_title($ID);
 
         $html = '<li><a href="' . get_permalink($ID) . '">';
         if ($show_image) {
-            $imgsrc = wp_get_attachment_image_src(get_post_thumbnail_id($ID), 'hgnm-thumb');
-            if (!empty($imgsrc)) {
-                $html .= '<img src="' . $imgsrc[0] . '" alt="' . get_the_title($ID) . '">';
-            } else {
-                $html .= '<img src="' . get_stylesheet_directory_uri() . '/img/fallback-200x200.gif" alt="' . get_the_title($ID) . '">';
+            $img_id = get_post_thumbnail_id($ID);
+            $alt_text = get_post_meta($img_id, '_wp_attachment_image_alt', true);
+            $imgsrc = wp_get_attachment_image_src($img_id, 'hgnm-thumb');
+            if (empty($imgsrc)) {
+                $imgsrc = array(
+                    get_stylesheet_directory_uri() . '/img/fallback-200x200.gif'
+                );
             }
+            if (!$alt_text) {
+                $alt_text = $member_name;
+            }
+            $html .= '<img src="' . $imgsrc[0] . '" alt="' . $alt_text . '">';
         }
-        $html .= '<span>' . get_the_title($ID) . '</span>' . '</a></li>';
+        $html .= "<span>$member_name</span></a></li>";
         return $html;
     }
 }

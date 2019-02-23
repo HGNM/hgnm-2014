@@ -15,7 +15,7 @@ get_header();
               'button_link',
               array(
                 'href' => 'https://www.facebook.com/pages/Harvard-Group-for-New-Music/130937206919388',
-                'html' => 'Join us on Facebook' . component('icon', array('type' => 'facebook'))
+                'html' => get_field('front_page_facebook_link_text', 'option') . component('icon', array('type' => 'facebook'))
               )
             ) ?>
           </p>
@@ -184,7 +184,7 @@ get_header();
       <div class="fp-archive-link">
         <?= component('button_link', array(
           'href' => get_post_type_archive_link('concert'),
-          'html' => '<h2>Archive</h2><p>Dive into an archive of HGNM’s past events, members, audio and video.</p>'
+          'html' => '<h2>Archive</h2><p>' . get_field('front_page_archive_link_text', 'option') . '</p>'
         )) ?>
       </div>
     </section>

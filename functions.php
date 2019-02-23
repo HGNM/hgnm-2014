@@ -42,5 +42,8 @@ $example_update_checker = new ThemeUpdateChecker(
 // Set up Advanced Custom Fields field groups
 include('functions/acf-field-groups.php');
 
+// Set up Advanced Custom Fields theme options page
+include('functions/acf-theme-options.php');
+
  // Disable wp-emoji
 include('functions/disable-wp-emoji.php');

@@ -117,4 +117,4 @@
         </nav>
 
       </header>
-      <div id="torso">
+      <main id="torso">

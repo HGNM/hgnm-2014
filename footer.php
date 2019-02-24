@@ -1,4 +1,4 @@
-      </div><!-- #torso -->
+      </main><!-- #torso -->
       <footer id="colophon" class="site-footer">
         <div class="site-info"><?= component('hgnm_copyright'); ?> • <a href="<?php echo admin_url(); ?>">Login</a></div>
       </footer>

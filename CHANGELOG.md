@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.17.0"></a>
+# [1.17.0](https://github.com/hgnm/hgnm-2014/compare/v1.16.1...v1.17.0) (2019-02-24)
+
+
+### Features
+
+* **components:** Lazy load media embeds using `lozad` ([5c3d30d](https://github.com/hgnm/hgnm-2014/commit/5c3d30d))
+* Add page template for `/music` to display all HGNM audio/video ([2715077](https://github.com/hgnm/hgnm-2014/commit/2715077))
+
+
+
 <a name="1.16.1"></a>
 ## [1.16.1](https://github.com/hgnm/hgnm-2014/compare/v1.16.0...v1.16.1) (2019-02-24)
 

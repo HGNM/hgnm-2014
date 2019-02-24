@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.17.1"></a>
+## [1.17.1](https://github.com/hgnm/hgnm-2014/compare/v1.17.0...v1.17.1) (2019-02-24)
+
+
+### Bug Fixes
+
+* Use `var` instead of `const` for maximum compatibility ([0dd0532](https://github.com/hgnm/hgnm-2014/commit/0dd0532))
+* **components:** Display non-oEmbed `iframe`s with a hack ([f4e1553](https://github.com/hgnm/hgnm-2014/commit/f4e1553))
+
+
+
 <a name="1.17.0"></a>
 # [1.17.0](https://github.com/hgnm/hgnm-2014/compare/v1.16.1...v1.17.0) (2019-02-24)
 

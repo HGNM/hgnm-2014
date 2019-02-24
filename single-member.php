@@ -20,11 +20,11 @@ if (have_posts()) :
                 'meta_query' => array(
                     array(
                         'key' => 'fname',
-                'value'  => $testID,
+                        'value'  => $testID,
                     ),
                     array(
                         'key' => 'colloquium_type',
-                'value'  => 'HGNM Member',
+                        'value'  => 'HGNM Member',
                     )
                 )
             )
@@ -106,12 +106,13 @@ if (have_posts()) :
         foreach ($archivemedia as $key => $row) {
             $mediacheck = 0;
             if (have_rows('programme', $row->ID)) {
-                while (have_rows('programme', $row->ID)) : the_row();
-                // Check if there’s a row for this composer with a media embed link
-                if (get_sub_field('composer')->ID == $testID && get_sub_field('embed_link')) {
-                    $mediacheck = 1;
+                while (have_rows('programme', $row->ID)) {
+                    the_row();
+                    // Check if there’s a row for this composer with a media embed link
+                    if (get_sub_field('composer')->ID == $testID && get_sub_field('embed_link')) {
+                        $mediacheck = 1;
+                    }
                 }
-                endwhile;
             }
             // If no media for this composer has been found, remove this post from our array
             if ($mediacheck == 0) {

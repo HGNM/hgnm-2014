@@ -1162,13 +1162,39 @@ iframe {
 
   .embed-container {
     display: block;
+    margin: 0;
   }
 
-  @include mq (m) {
-    .audio,
-    .video {
-      li {
-        float: left;
+  &__year-heading {
+    margin: .75em 0;
+    text-align: center;
+    letter-spacing: .2em;
+    font-family: $display-stack;
+    font-size: 2em;
+    font-feature-settings: "lnum" 1;
+  }
+
+  &__item-heading {
+    margin: .75em 0;
+    font-weight: 400;
+
+    & a {
+      letter-spacing: .01em;
+      font-family: $sans-stack;
+      font-weight: 700;
+    }
+  }
+
+  .audio,
+  .video {
+    li {
+      display: block;
+      margin-bottom: 3em;
+
+      @include mq (m) {
+        display: inline-flex;
+        flex-direction: column-reverse;
+        margin-bottom: 1.5em;
         padding-right: 1.25%;
         width: 32.5%;
 

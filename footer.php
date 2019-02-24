@@ -22,7 +22,7 @@
     <script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
     <script type="text/javascript">
-        const observer = lozad();
+        var observer = lozad();
         observer.observe();
     </script>
 

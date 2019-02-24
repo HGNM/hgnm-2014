@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.16.1"></a>
+## [1.16.1](https://github.com/hgnm/hgnm-2014/compare/v1.16.0...v1.16.1) (2019-02-24)
+
+
+### Bug Fixes
+
+* **components:** Include better alt text for member_list_item images ([6cf30ac](https://github.com/hgnm/hgnm-2014/commit/6cf30ac))
+* **style:** Tweak $light-text to meet colour contrast standards ([ec8b645](https://github.com/hgnm/hgnm-2014/commit/ec8b645))
+* Use <main> instead of <div> for main page content ([80d9d4c](https://github.com/hgnm/hgnm-2014/commit/80d9d4c))
+
+
+
 <a name="1.16.0"></a>
 # [1.16.0](https://github.com/hgnm/hgnm-2014/compare/v1.15.0...v1.16.0) (2019-02-23)
 

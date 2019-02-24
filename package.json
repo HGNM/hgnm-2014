@@ -5,7 +5,7 @@
   "scripts": {
     "test": "sass-lint",
     "prerelease": "npm test",
-    "release": "standard-version",
+    "release": "standard-version -a",
     "build": "npm run css:build && npm run copy && npm run zip && npm run clean",
     "precss:build": "npm test",
     "css:build": "node-sass --include-path scss --output-style compressed scss/style.scss style.css",

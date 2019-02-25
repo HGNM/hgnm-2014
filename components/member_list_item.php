@@ -24,7 +24,7 @@ if (!function_exists('member_list_item')) {
             if (!$alt_text) {
                 $alt_text = $member_name;
             }
-            $html .= '<img src="' . $imgsrc[0] . '" alt="' . $alt_text . '">';
+            $html .= '<img data-src="' . $imgsrc[0] . '" alt="' . $alt_text . '" class="lozad">';
         }
         $html .= "<span>$member_name</span></a></li>";
         return $html;

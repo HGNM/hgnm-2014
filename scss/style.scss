@@ -761,8 +761,10 @@ iframe {
       img {
         float: left;
         transition: filter .4s ease-out;
+        background: $black;
         width: 35%;
         max-width: 5em;
+        height: 100%;
         filter: grayscale(1) contrast(125%) brightness(125%) saturate(100%);
 
         @include mq (m) {

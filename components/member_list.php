@@ -13,7 +13,7 @@ if (!function_exists('member_list')) {
 
         $html = '<section class="' . $classes . '">' .
                   '<h2>' . $heading . '</h2>' .
-                  '<ul class="clearfix">';
+                  '<ul>';
 
         foreach ($members as $post) {
             $html .= component('member_list_item', array(

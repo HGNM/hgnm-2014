@@ -728,11 +728,11 @@ iframe {
     margin-bottom: 1em;
 
     @include mq-between (m, fw) {
-      @include composers-grid($cols: 4)
+      @include composers-grid($cols: 4);
     }
 
     @include mq (fw) {
-      @include composers-grid($cols: 5)
+      @include composers-grid($cols: 5);
     }
 
     a {

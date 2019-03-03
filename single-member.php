@@ -10,52 +10,18 @@ if (have_posts()) :
         $testID = get_the_ID();
 
         // Get archived colloquia
-        $colloquia = get_posts(
-            array(
-                'numberposts' => -1,
-                'post_type' => 'colloquium',
-                'meta_key' => 'dtstart',
-                'orderby' => 'dtstart',
-                'order' => 'ASC',
-                'meta_query' => array(
-                    array(
-                        'key' => 'fname',
-                        'value'  => $testID,
-                    ),
-                    array(
-                        'key' => 'colloquium_type',
-                        'value'  => 'HGNM Member',
-                    )
-                )
-            )
-        );
-
-        // custom filter to replace '=' with 'LIKE'
-        function my_posts_where($where)
-        {
-            $where = str_replace("meta_key = 'programme_$", "meta_key LIKE 'programme_%", $where);
-            return $where;
-        }
-
-        add_filter('posts_where', 'my_posts_where');
+        $colloquia = event_query(array(
+            'order'         => 'ASC',
+            'post_type'     => 'colloquium',
+            'ft_composer'   => $testID,
+        ));
 
         // Get archived concerts
-        $concerts = get_posts(
-            array(
-                'suppress_filters' => false,
-                'numberposts' => -1,
-                'post_type' => 'concert',
-                'meta_key' => 'dtstart',
-                'orderby' => 'dtstart',
-                'order' => 'ASC',
-                'meta_query' => array(
-                    array(
-                        'key' => 'programme_$_composer',
-                'value'  => $testID,
-                    )
-                )
-            )
-        );
+        $concerts = event_query(array(
+            'order'         => 'ASC',
+            'post_type'     => 'concert',
+            'ft_composer'   => $testID
+        ));
 
         $upcomingcolloquia = $colloquia;
         $pastcolloquia = $colloquia;

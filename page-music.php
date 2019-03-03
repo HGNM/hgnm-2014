@@ -9,26 +9,10 @@ get_header();
     <?= component('edit_button') ?>
     <section>
         <?php
-        // custom filter to replace '=' with 'LIKE'
-        function my_posts_where($where)
-        {
-            return str_replace("meta_key = 'programme_$", "meta_key LIKE 'programme_%", $where);
-        }
-        add_filter('posts_where', 'my_posts_where');
-
         // Get concerts with valid embed links in their programmes
-        $concerts = get_posts(array(
-            'suppress_filters' => false,
-            'numberposts' => -1,
+        $concerts = event_query(array(
             'post_type' => 'concert',
-            'meta_key' => 'dtstart',
-            'orderby' => 'dtstart',
-            'order' => 'DSC',
-            'meta_query' => array(array(
-                'key' => 'programme_$_embed_link',
-                'value' => 'http',
-                'compare' => 'LIKE'
-            ))
+            'has_av'    => true
         ));
 
         // access global embed variable for later

@@ -25,63 +25,30 @@ get_header();
     <?php endif;
 
         // Get upcoming concerts
-        $today = date('Ymd', strtotime('-1 day'));
-        $concerts = get_posts(
-            array(
-                'numberposts' => 1,
-                'post_type' => 'concert',
-                'meta_key' => 'dtstart',
-                'orderby' => 'dtstart',
-                'order' => 'ASC',
-                'meta_query' => array(
-                    array(
-                        'key' => 'dtstart',
-            'value'  => $today,
-            'compare'  => '>'
-                    )
-                )
-            )
-        );
+        $today = date('Ymd', strtotime('now'));
+
+        $concerts = event_query(array(
+            'maxposts'  => 1,
+            'post_type' => 'concert',
+            'order'     => 'ASC',
+            'after'     => $today,
+        ));
+
         // Get upcoming colloquia
-        $colloquia = get_posts(
-            array(
-                'numberposts' => 3,
-                'post_type' => 'colloquium',
-                'meta_key' => 'dtstart',
-                'orderby' => 'dtstart',
-                'order' => 'ASC',
-                'meta_query' => array(
-                    array(
-                        'key' => 'dtstart',
-            'value'  => $today,
-            'compare'  => '>'
-                    )
-                )
-            )
-        );
+        $colloquia = event_query(array(
+            'maxposts'  => 3,
+            'post_type' => 'colloquium',
+            'order'     => 'ASC',
+            'after'     => $today,
+        ));
+
         // Get upcoming miscellaneous events
-        $miscevents = get_posts(
-            array(
-                'numberposts' => 1,
-                'post_type' => 'miscevent',
-                'meta_key' => 'dtstart',
-                'orderby' => 'dtstart',
-                'order' => 'ASC',
-                'meta_query' => array(
-                    'relation' => 'OR',
-                    array(
-                        'key' => 'dtstart',
-                        'value' => $today,
-            'compare' => '>'
-                    ),
-                    array(
-                        'key' => 'dtend',
-                        'value' => $today,
-                        'compare' => '>'
-                    )
-                )
-            )
-        );
+        $miscevents = event_query(array(
+            'maxposts'  => 1,
+            'post_type' => 'miscevent',
+            'order'     => 'ASC',
+            'after'     => $today,
+        ));
 
         // Display upcoming events
         if ($concerts || $colloquia || $miscevents) : ?>

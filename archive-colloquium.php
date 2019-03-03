@@ -39,46 +39,18 @@ get_header();
         );
 
         // Get upcoming colloquia
-        $colloquia = get_posts(
-            array(
-                'numberposts' => -1,
-                'post_type' => 'colloquium',
-                'meta_key' => 'dtstart',
-                'orderby' => 'dtstart',
-                'order' => 'ASC',
-                'meta_query' => array(
-                    array(
-                        'key' => 'dtstart',
-            'value'  => $seasonstart,
-            'compare'  => '>='
-                    )
-                )
-            )
-        );
+        $colloquia = event_query(array(
+            'post_type' => 'colloquium',
+            'order'     => 'ASC',
+            'after'     => $seasonstart
+        ));
 
         // Get upcoming miscellaneous events
-        $miscevents = get_posts(
-            array(
-                'numberposts' => -1,
-                'post_type' => 'miscevent',
-                'meta_key' => 'dtstart',
-                'orderby' => 'dtstart',
-                'order' => 'ASC',
-                'meta_query' => array(
-                    'relation' => 'OR',
-                    array(
-                        'key' => 'dtstart',
-            'value'  => $seasonstart,
-            'compare'  => '>='
-                    ),
-                    array(
-                        'key' => 'dtend',
-                        'value' => $seasonstart,
-                        'compare' => '>='
-                    )
-                )
-            )
-        );
+        $miscevents = event_query(array(
+            'post_type' => 'miscevent',
+            'order'     => 'ASC',
+            'after'     => $seasonstart
+        ));
 
             // Display events header and navigation
             ?>

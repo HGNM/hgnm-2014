@@ -48,40 +48,20 @@ get_header();
         );
 
         // Get archived colloquia
-        $colloquia = get_posts(
-            array(
-                'numberposts' => -1,
-                'post_type' => 'colloquium',
-                'meta_key' => 'dtstart',
-                'orderby' => 'dtstart',
-                'order' => 'ASC',
-                'meta_query' => array(
-                    array(
-                        'key' => 'dtstart',
-            'value'  => $season,
-            'compare'  => 'BETWEEN'
-                    )
-                )
-            )
-        );
+        $colloquia = event_query(array(
+            'post_type' => 'colloquium',
+            'order'     => 'ASC',
+            'after'     => $seasonstart,
+            'before'    => $seasonend,
+        ));
 
         // Get archived miscellaneous events
-        $miscevents = get_posts(
-            array(
-                'numberposts' => -1,
-                'post_type' => 'miscevent',
-                'meta_key' => 'dtstart',
-                'orderby' => 'dtstart',
-                'order' => 'ASC',
-                'meta_query' => array(
-                    array(
-                        'key' => 'dtstart',
-            'value'  => $season,
-            'compare'  => 'BETWEEN'
-                    )
-                )
-            )
-        );
+        $miscevents = event_query(array(
+            'post_type' => 'miscevent',
+            'order'     => 'ASC',
+            'after'     => $seasonstart,
+            'before'    => $seasonend,
+        ));
 
         //
         // Let’s start building a select menu
@@ -101,61 +81,33 @@ get_header();
             // Set query variables for each year
             $querystart = $year . '0901';
             $queryend = ($year + 1) . '0831';
-            $query = array($querystart,$queryend);
 
             // Get archived concerts
-            $concertcheck = get_posts(
-                array(
-                    'numberposts' => 1,
-                    'post_type' => 'concert',
-                    'meta_key' => 'dtstart',
-                    'orderby' => 'dtstart',
-                    'order' => 'ASC',
-                    'meta_query' => array(
-                        array(
-                            'key' => 'dtstart',
-                            'value'  => $query,
-                            'compare'  => 'BETWEEN'
-                        )
-                    )
-                )
-            );
+            $concertcheck = event_query(array(
+                'maxposts'  => 1,
+                'post_type' => 'concert',
+                'order'     => 'ASC',
+                'after'     => $querystart,
+                'before'    => $queryend,
+            ));
 
             // Get archived colloquia
-            $colloquiumcheck = get_posts(
-                array(
-                    'numberposts' => 1,
-                    'post_type' => 'colloquium',
-                    'meta_key' => 'dtstart',
-                    'orderby' => 'dtstart',
-                    'order' => 'ASC',
-                    'meta_query' => array(
-                        array(
-                            'key' => 'dtstart',
-                            'value'  => $query,
-                            'compare'  => 'BETWEEN'
-                        )
-                    )
-                )
-            );
+            $colloquiumcheck = event_query(array(
+                'maxposts'  => 1,
+                'post_type' => 'colloquium',
+                'order'     => 'ASC',
+                'after'     => $querystart,
+                'before'    => $queryend,
+            ));
 
             // Get archived miscellaneous events
-            $misceventscheck = get_posts(
-                array(
-                    'numberposts' => 1,
-                    'post_type' => 'miscevent',
-                    'meta_key' => 'dtstart',
-                    'orderby' => 'dtstart',
-                    'order' => 'ASC',
-                    'meta_query' => array(
-                        array(
-                            'key' => 'dtstart',
-                            'value'  => $query,
-                            'compare'  => 'BETWEEN'
-                        )
-                    )
-                )
-            );
+            $misceventscheck = event_query(array(
+                'maxposts'  => 1,
+                'post_type' => 'miscevent',
+                'order'     => 'ASC',
+                'after'     => $querystart,
+                'before'    => $queryend,
+            ));
 
             if ($concertcheck || $colloquiumcheck || $misceventscheck) {
                 $menuitems = array_merge($menuitems, array($year));

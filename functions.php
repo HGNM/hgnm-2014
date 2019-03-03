@@ -5,6 +5,9 @@ include('functions/template-tweaks.php');
 // Register template component loading method
 include('functions/component-loader.php');
 
+// Register event post query function
+include('functions/event-query.php');
+
 // Register custom menu
 include('functions/custom-menu.php');
 

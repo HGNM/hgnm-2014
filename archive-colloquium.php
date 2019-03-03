@@ -31,8 +31,8 @@ get_header();
                 'meta_query' => array(
                     array(
                         'key' => 'dtstart',
-            'value'  => $seasonstart,
-            'compare'  => '>='
+                        'value'  => $seasonstart,
+                        'compare'  => '>='
                     )
                 )
             )

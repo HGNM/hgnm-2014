@@ -40,8 +40,8 @@ get_header();
                 'meta_query' => array(
                     array(
                         'key' => 'dtstart',
-            'value'  => $season,
-            'compare'  => 'BETWEEN'
+                        'value'  => $season,
+                        'compare'  => 'BETWEEN'
                     )
                 )
             )

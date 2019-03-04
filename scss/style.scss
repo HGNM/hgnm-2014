@@ -318,6 +318,25 @@ iframe {
   }
 }
 
+@supports (display: flex) {
+  .embed-card {
+    display: flex;
+    flex-direction: column-reverse;
+
+    &__heading {
+      margin: .75em 0;
+      font-family: $serif-stack;
+      font-weight: 400;
+
+      & a {
+        letter-spacing: .01em;
+        font-family: $sans-stack;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
 // ==========================================================================
 // Responsive Card List
 // ==========================================================================
@@ -1219,17 +1238,6 @@ $item-gutter: 1em;
     font-family: $display-stack;
     font-size: 2em;
     font-feature-settings: "lnum" 1;
-  }
-
-  &__item-heading {
-    margin: .75em 0;
-    font-weight: 400;
-
-    & a {
-      letter-spacing: .01em;
-      font-family: $sans-stack;
-      font-weight: 700;
-    }
   }
 
   .audio,

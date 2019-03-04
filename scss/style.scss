@@ -319,6 +319,51 @@ iframe {
 }
 
 // ==========================================================================
+// Responsive Card List
+// ==========================================================================
+$items-per-row: 3; // for grid display on larger screens
+$item-width: 70vw; // for scrolling display on smaller screens
+$item-gutter: 1em;
+
+.responsive-cards {
+  overflow-x: auto;
+
+  &__list {
+    margin: 0;
+    padding: 1em 0;
+    overflow: auto;
+    white-space: nowrap;
+
+    @include mq(m) {
+      padding: 0;
+      white-space: normal;
+    }
+  }
+
+  &__item {
+    display: inline-block;
+    margin-left: $item-gutter;
+    width: calc(#{$item-width} - #{$item-gutter});
+    overflow: hidden;
+    vertical-align: top;
+    white-space: normal;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    @include mq(m) {
+      margin-bottom: $item-gutter;
+      width: calc(#{100% / $items-per-row} - #{($items-per-row - 1) / $items-per-row * $item-gutter});
+
+      &:nth-child(#{$items-per-row}n + 1) {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+// ==========================================================================
 // Section Background Styles
 // ==========================================================================
 .bg-overlay {

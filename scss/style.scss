@@ -1239,8 +1239,7 @@ $item-gutter: 1em;
       margin-bottom: 3em;
 
       @include mq (m) {
-        display: inline-flex;
-        flex-direction: column-reverse;
+        display: inline-block;
         margin-bottom: 1.5em;
         padding-right: 1.25%;
         width: 32.5%;

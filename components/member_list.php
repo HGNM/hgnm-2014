@@ -9,9 +9,12 @@ if (!function_exists('member_list')) {
         $members = $opts['members'];
         $heading = array_key_exists('heading', $opts) ? $opts['heading'] : 'Composers';
         $show_image = array_key_exists('show_image', $opts) ? $opts['show_image'] : true;
-        $classes = is_front_page() ? 'composers fp-section' : 'composers p-section';
+        $classes = array(is_front_page() ? 'composers fp-section' : 'composers p-section');
+        if (isset($opts['classes'])) {
+            $classes = array_merge($classes, $opts['classes']);
+        }
 
-        $html = '<section class="' . $classes . '">' .
+        $html = '<section class="' . implode(' ', $classes) . '">' .
                   '<h2>' . $heading . '</h2>' .
                   '<ul>';
 

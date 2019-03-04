@@ -331,20 +331,20 @@ if (have_posts()) {
             if ($audiolist || $videolist) {
                 echo '<section class="multimedia">';
                 if ($audiolist) {
-                    echo '<section class="audio clearfix"><h3>Audio</h3><ul>';
+                    echo '<h3>Audio</h3>';
+                    $cards = array();
                     foreach ($audiolist as $item) {
-                        echo '<li>';
-                        echo component('responsive_embed', $item['embed_link']);
-                        echo '</li>';
+                        $cards[] = component('responsive_embed', $item['embed_link']);
                     }
-                    echo '</ul></section>';
+                    echo component('responsive_card_list', array('cards' => $cards));
                 }
                 if ($videolist) {
-                    echo '<section class="video clearfix"><h3>Video</h3><ul>';
+                    echo '<h3>Video</h3>';
+                    $cards = array();
                     foreach ($videolist as $item) {
-                        echo '<li><span class="embed-container">' . $item['embed_link'] . '</span></li>';
+                        $cards[] = component('responsive_embed', $item['embed_link']);
                     }
-                    echo '</ul></section>';
+                    echo component('responsive_card_list', array('cards' => $cards));
                 }
                 echo '</section>';
             }

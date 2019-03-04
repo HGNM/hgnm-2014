@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.18.0"></a>
+# [1.18.0](https://github.com/hgnm/hgnm-2014/compare/v1.17.1...v1.18.0) (2019-03-04)
+
+
+### Bug Fixes
+
+* **style:** Fix display of `.solo` event-listing blocks ([14faa93](https://github.com/hgnm/hgnm-2014/commit/14faa93))
+* Display background overlay on alternating front-page sections ([2966e20](https://github.com/hgnm/hgnm-2014/commit/2966e20))
+* Remove whitespace between concert and colloquia listings in archive ([bd9e12e](https://github.com/hgnm/hgnm-2014/commit/bd9e12e))
+
+
+### Features
+
+* Lazy load image galleries on concert pages ([e73a5ce](https://github.com/hgnm/hgnm-2014/commit/e73a5ce))
+* Lazy load member list images ([43cfc6a](https://github.com/hgnm/hgnm-2014/commit/43cfc6a)), closes [#30](https://github.com/hgnm/hgnm-2014/issues/30)
+* Show latest music on front page ([59fe3db](https://github.com/hgnm/hgnm-2014/commit/59fe3db))
+* Show music on season archive pages ([ad1d3b1](https://github.com/hgnm/hgnm-2014/commit/ad1d3b1))
+* **components:** Allow setting of custom classes on `member_list` ([e634ac6](https://github.com/hgnm/hgnm-2014/commit/e634ac6))
+* **components:** Create `embed_card` to show concert media with heading ([84ff0ba](https://github.com/hgnm/hgnm-2014/commit/84ff0ba))
+* **components:** Create `responsive_card_list` component ([46fd649](https://github.com/hgnm/hgnm-2014/commit/46fd649))
+* **components:** Display 1-item `responsive_card_list` full-width ([f33f5c8](https://github.com/hgnm/hgnm-2014/commit/f33f5c8))
+* **components:** Use fallback as initial image for member list items ([5cb1390](https://github.com/hgnm/hgnm-2014/commit/5cb1390))
+* **style:** Set `.embedcontainer` margin to zero ([2640738](https://github.com/hgnm/hgnm-2014/commit/2640738))
+
+
+
 <a name="1.17.1"></a>
 ## [1.17.1](https://github.com/hgnm/hgnm-2014/compare/v1.17.0...v1.17.1) (2019-02-24)
 

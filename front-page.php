@@ -178,13 +178,14 @@ get_header();
 
         if ($posts) {
             echo component('member_list', array(
-                "members" => $posts
+                "members" => $posts,
+                'classes' => array('bg-overlay')
             ));
         }
 
         // Display archive link
         ?>
-    <section id="fp-archive-link" class="fp-section fp-section--archive-link bg-overlay">
+    <section id="fp-archive-link" class="fp-section fp-section--archive-link">
       <div class="fp-archive-link">
         <?= component('button_link', array(
           'href' => get_post_type_archive_link('concert'),

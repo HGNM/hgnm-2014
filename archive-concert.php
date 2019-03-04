@@ -171,12 +171,10 @@ get_header();
                 echo component('concert_list_item', array( "id" => get_the_ID() ));
             } ?>
           </ul>
-        </section>
-      <?php else: ?>
+        </section><?php else: ?>
       <?php endif;
             // Display archived colloquia for $yearquery season
-            if ($colloquia) : ?>
-        <section class="colloquia <?php if (!have_posts()) {
+            if ($colloquia) : ?><section class="colloquia <?php if (!have_posts()) {
                 echo 'solo';
             } ?>">
           <h3>Colloquia</h3>

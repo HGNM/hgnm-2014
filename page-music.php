@@ -36,7 +36,6 @@ get_header();
                         echo '</ul></li>';
                     }
                     echo '<li>
-                        <h3 class="multimedia__year-heading">' . $concyr . '</h3>
                         <ul class="audio clearfix">';
                 }
 
@@ -82,6 +81,7 @@ get_header();
                 }
 
                 echo $media_items;
+                        <h3 class="h2">' . $concyr . '</h3>';
 
                 $lastyear = $concyr;
             } ?>

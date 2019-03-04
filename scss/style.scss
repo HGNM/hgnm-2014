@@ -187,7 +187,8 @@ textarea {
 // ==========================================================================
 // General Styles
 // ==========================================================================
-h2 {
+h2,
+.h2 {
   margin: 0 0 .6em;
   text-align: center;
   text-transform: uppercase;
@@ -195,6 +196,7 @@ h2 {
   letter-spacing: .2em;
   font-family: $display-stack;
   font-size: 2em;
+  font-feature-settings: "lnum" 1;
 
   @include mq (m) {
     font-size: 2.5em;
@@ -1228,15 +1230,6 @@ $item-gutter: 1em;
 
   .embed-container {
     display: block;
-  }
-
-  &__year-heading {
-    margin: .75em 0;
-    text-align: center;
-    letter-spacing: .2em;
-    font-family: $display-stack;
-    font-size: 2em;
-    font-feature-settings: "lnum" 1;
   }
 
   .audio,

@@ -212,6 +212,33 @@ get_header();
         </section>
       <?php endif;
 
+            $concerts_with_media = event_query(array(
+                'post_type' => 'concert',
+                'has_av'    => true,
+                'after'     => $seasonstart,
+                'before'    => $seasonend
+            ));
+
+            if (!empty($concerts_with_media)) {
+                $media_items = array();
+                foreach ($concerts_with_media as $post) {
+                    while (have_rows('programme')) {
+                        the_row();
+                        $media_item = component('embed_card', array(
+                            'post' => $post
+                        ));
+                        if ($media_item) {
+                            $media_items[] = $media_item;
+                        }
+                    }
+                }
+                if (!empty($media_items)) {
+                    echo '<section><h3>Music</h3>';
+                    echo component('responsive_card_list', array('cards' => $media_items));
+                    echo '</section>';
+                }
+            }
+
             if ($menuitems) {
                 echo '<footer id="years-nav" class="years-nav"><h3>Explore Seasons</h3><ul>';
                 foreach ($menuitems as $item) {

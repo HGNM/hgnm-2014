@@ -14,74 +14,46 @@ get_header();
             'post_type' => 'concert',
             'has_av'    => true
         ));
-
-        // access global embed variable for later
-        global $wp_embed;
         ?>
 
-        <ul class="multimedia">
+        <ul>
             <?php
             $lastyear = INF;
-            foreach ($concerts as $post) {
+            $lastindex = array_keys($concerts)[count($concerts) - 1];
+            $media_items = array();
+            foreach ($concerts as $index => $post) {
                 $concdt = DateTime::createFromFormat('d/m/Y', get_field('dtstart'));
                 $concyr = $concdt->format('Y');
+
+                $next = $index + 1;
+                $nextconc = isset($concerts[$next]) ? $concerts[$next] : NULL;
+                $nextconcdt = $nextconc ? DateTime::createFromFormat('d/m/Y', get_field('dtstart', $nextconc->ID)) : NULL;
+                $nextconcyr = $nextconcdt ? $nextconcdt->format('Y') : NULL;
 
                 $performer_link =
                 '<a href="' . get_the_permalink() . '">' .
                     get_the_title() .
                 '</a>';
 
-                if ($concyr < $lastyear) {
-                    if ($lastyear !== INF) {
-                        echo '</ul></li>';
-                    }
-                    echo '<li>
-                        <ul class="audio clearfix">';
-                }
-
-                $media_items = '';
-
-                while (have_rows('programme', $post->ID)) {
+                while (have_rows('programme')) {
                     the_row();
-                    $embed_link = get_sub_field('embed_link', false);
-
-                    if ($embed_link) {
-                        $composer = get_sub_field('composer');
-
-                        $composer_link =
-                        '<a href="' . get_the_permalink($composer) . '">' .
-                            get_the_title($composer) .
-                        '</a>';
-
-                        $heading =
-                        '<h4 class="multimedia__item-heading">' .
-                            $composer_link .
-                            ' / ' .
-                            $performer_link .
-                            '<br>' .
-                            '<em>' .
-                                get_sub_field('work_title') .
-                            '</em>' .
-                        '</h4>';
-
-                        $iframe = $wp_embed->shortcode(array(
-                            'width' => 640,
-                            'height' => 390,
-                            'src' => $embed_link
-                        ));
-
-                        $media_item =
-                        '<li>' .
-                            $heading .
-                            component('responsive_embed', $iframe) .
-                        '</li>';
-
-                        $media_items .= $media_item;
+                    $media_item = component('embed_card', array(
+                        'post' => $post
+                    ));
+                    if ($media_item) {
+                        $media_items[] = $media_item;
                     }
                 }
 
-                echo $media_items;
+                if ($concyr < $lastyear) {
+                    echo '<li>
                         <h3 class="h2">' . $concyr . '</h3>';
+                }
+                if ($concyr !== $nextconcyr) {
+                    echo component('responsive_card_list', array('cards' => $media_items));
+                    echo '</li>';
+                    $media_items = array();
+                }
 
                 $lastyear = $concyr;
             } ?>

@@ -1,4 +1,11 @@
 <?php
+if (!defined('HGNM_SQUARE_PLACEHOLDER_SRC')) {
+    define(
+        'HGNM_SQUARE_PLACEHOLDER_SRC',
+        get_stylesheet_directory_uri() . '/img/fallback-200x200.gif'
+    );
+}
+
 if (!function_exists('member_list_item')) {
     /**
      * A link to a member with their name and (optionally) photo
@@ -17,14 +24,12 @@ if (!function_exists('member_list_item')) {
             $alt_text = get_post_meta($img_id, '_wp_attachment_image_alt', true);
             $imgsrc = wp_get_attachment_image_src($img_id, 'hgnm-thumb');
             if (empty($imgsrc)) {
-                $imgsrc = array(
-                    get_stylesheet_directory_uri() . '/img/fallback-200x200.gif'
-                );
+                $imgsrc = array(HGNM_SQUARE_PLACEHOLDER_SRC);
             }
             if (!$alt_text) {
                 $alt_text = $member_name;
             }
-            $html .= '<img data-src="' . $imgsrc[0] . '" alt="' . $alt_text . '" class="lozad">';
+            $html .= '<img src="' . HGNM_SQUARE_PLACEHOLDER_SRC . '" data-src="' . $imgsrc[0] . '" alt="' . $alt_text . '" class="lozad">';
         }
         $html .= "<span>$member_name</span></a></li>";
         return $html;

@@ -373,6 +373,14 @@ $item-gutter: 1em;
       margin-left: 0;
     }
 
+    @at-root .responsive-cards--single & {
+      width: 100%;
+
+      @include mq(m) {
+        width: calc(#{100% / $items-per-row} - #{($items-per-row - 1) / $items-per-row * $item-gutter});
+      }
+    }
+
     @include mq(m) {
       margin-bottom: $item-gutter;
       width: calc(#{100% / $items-per-row} - #{($items-per-row - 1) / $items-per-row * $item-gutter});

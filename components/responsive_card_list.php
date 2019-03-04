@@ -11,7 +11,9 @@ if (!function_exists('responsive_card_list')) {
     {
         $cards = isset($opts['cards']) ? $opts['cards'] : array();
         if (!is_array($cards)) return '';
-        $html = '<div class="responsive-cards"><ul class="responsive-cards__list">';
+        $classes = array('responsive-cards');
+        if (count($cards) === 1) $classes[] = 'responsive-cards--single';
+        $html = '<div class="' . implode(' ', $classes) . '"><ul class="responsive-cards__list">';
         foreach ($cards as $card) {
             $html .= '<li class="responsive-cards__item">' . $card . '</li>';
         }

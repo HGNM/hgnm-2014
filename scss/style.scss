@@ -735,17 +735,16 @@ $item-gutter: 1em;
   @include mq (m) {
     .colloquia,
     .concerts {
-      display: block;
-      float: left;
+      display: inline-block;
       padding-right: 6%;
       width: 47%;
 
-      &:nth-child(2n) {
+      &:nth-child(3n) {
         padding-right: 0;
       }
 
-      .solo {
-        float: none;
+      &.solo {
+        display: block;
         margin-right: auto;
         margin-left: auto;
         width: 49.4%;
@@ -1425,14 +1424,21 @@ $item-gutter: 1em;
     margin-bottom: 3em;
     border-top: 1px solid $darken-tint;
     padding-top: 1.4375em;
+
     @include mq (m) {
-      float: left;
+      display: inline-block;
       margin-right: 3.75%;
       width: 58.25%;
+    }
 
-      .audio {
-        li {
-          float: left;
+    .audio {
+      li {
+        margin-bottom: 1.5em;
+        vertical-align: top;
+        box-sizing: border-box;
+
+        @include mq (m) {
+          display: inline-block;
           padding-right: 2%;
           width: 49%;
 

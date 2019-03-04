@@ -300,7 +300,7 @@ iframe {
 // embedresponsively.com
 .embed-container {
   position: relative;
-  margin-bottom: 1.5em;
+  margin-bottom: 0;
   background-color: $darken-tint;
   padding-bottom: 56.25%;
   max-width: 100%;
@@ -1228,7 +1228,6 @@ $item-gutter: 1em;
 
   .embed-container {
     display: block;
-    margin: 0;
   }
 
   &__year-heading {

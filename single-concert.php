@@ -362,7 +362,7 @@ if (have_posts()) {
                 ?>
       <li>
         <a href="<?php echo $image['sizes']['large']; ?>" title="<?php echo $image['title']; ?>" data-at-333="<?php echo $image['sizes']['medium']; ?>" data-at-1137="<?php echo $image['sizes']['large']; ?>">
-                 <img src="<?php echo $image['sizes']['hgnm-thumb']; ?>" alt="<?php echo $image['alt']; ?>" />
+                 <img  class="lozad" data-src="<?php echo $image['sizes']['hgnm-thumb']; ?>" alt="<?php echo $image['alt']; ?>" />
               </a>
       </li>
       <?php

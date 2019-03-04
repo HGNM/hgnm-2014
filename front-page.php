@@ -117,6 +117,43 @@ get_header();
       </section> <!-- #fp-events -->
     <?php endif;
 
+        $concerts_with_media = event_query(array(
+            'maxposts'  => 3,
+            'post_type' => 'concert',
+            'has_av'    => true
+        ));
+
+        if (!empty($concerts_with_media)) {
+            $max_items = 3;
+            $items = 0;
+            foreach ($concerts_with_media as $post) {
+                while ($items < $max_items && have_rows('programme')) {
+                    the_row();
+                    $media_item = component('embed_card', array(
+                        'post' => $post
+                    ));
+                    if ($media_item) {
+                        $media_items[] = $media_item;
+                        $items++;
+                    }
+                }
+            }
+            if (!empty($media_items)) {
+                echo '<section class="fp-section section--events"><h2>Latest Music</h2>';
+                    echo component('responsive_card_list', array('cards' => $media_items));
+                    $music_archive = get_page_by_path('music');
+                    if ($music_archive) {
+                        echo '<div class="more-events-link">';
+                            echo component('button_link', array(
+                                'href' => get_permalink($music_archive->ID),
+                                'html' => '<p>Hear more music »</p>'
+                            ));
+                        echo '</div>';
+                    }
+                echo '</section>';
+            }
+        }
+
         // Get composers names, photos and permalinks
         $today = date('Ymd', strtotime('-1 day'));
         $posts = get_posts(array(

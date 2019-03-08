@@ -52,12 +52,6 @@ body {
   font-feature-settings: "kern" 1, "liga" 1;
 }
 
-::-moz-selection {
-  background: $selection-bg;
-  text-shadow: none;
-  color: $white;
-}
-
 ::selection {
   background: $selection-bg;
   text-shadow: none;

@@ -748,15 +748,7 @@ $item-gutter: 1em;
   @include mq (m) {
     .colloquia,
     .concerts {
-      display: inline-block;
-      padding-right: 6%;
-      width: 47%;
-      vertical-align: top;
-      box-sizing: border-box;
-
-      &:nth-child(3n) {
-        padding-right: 0;
-      }
+      @include grid($cols: 2);
 
       &.solo {
         display: block;
@@ -769,8 +761,6 @@ $item-gutter: 1em;
   }
 
   .miscevents {
-    clear: both;
-
     .vevent {
       margin-bottom: 1.2em;
     }
@@ -1230,14 +1220,7 @@ $item-gutter: 1em;
       margin-bottom: 3em;
 
       @include mq (m) {
-        display: inline-block;
-        margin-bottom: 1.5em;
-        padding-right: 1.25%;
-        width: 32.5%;
-
-        &:nth-child(3n) {
-          padding-right: 0;
-        }
+        @include grid($cols: 3);
       }
     }
   }
@@ -1419,13 +1402,7 @@ $item-gutter: 1em;
         box-sizing: border-box;
 
         @include mq (m) {
-          display: inline-block;
-          padding-right: 2%;
-          width: 49%;
-
-          &:nth-child(2n) {
-            padding-right: 0;
-          }
+          @include grid($cols: 2);
         }
       }
     }

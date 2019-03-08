@@ -75,3 +75,18 @@ $queries: (
     margin-right: 0;
   }
 }
+
+// Generic Grid Mixin
+@mixin grid($cols, $gutter: 1em) {
+  display: inline-block;
+  margin-bottom: $gutter;
+  padding-left: $gutter;
+  width: calc((100% - #{($cols - 1) * $gutter}) / #{$cols});
+  overflow: hidden;
+  vertical-align: top;
+  box-sizing: border-box;
+
+  &:nth-child(#{$cols}n + 1) {
+    padding-left: 0;
+  }
+}

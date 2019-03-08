@@ -134,7 +134,7 @@ if (have_posts()) :
 
             // Display Next Colloquium
             if ($upcomingcolloquia) {
-                echo '<div class="colloquia"><h3>Next Colloquium</h3>';
+                echo '<div class="colloquia"><h3 class="sans-sc-h3">Next Colloquium</h3>';
                 foreach ($upcomingcolloquia as $item) {
                     $dtstart = DateTime::createFromFormat('d/m/Y G:i', (get_field('dtstart', $item->ID) . ' 12:00'));
                     echo '<h4 class="dtstart">' .
@@ -156,7 +156,7 @@ if (have_posts()) :
                     $heading = 'Upcoming Concerts';
                 }
                 echo '<div class="concerts">' .
-                       '<h3>' . $heading . '</h3>' .
+                       '<h3 class="sans-sc-h3">' . $heading . '</h3>' .
                        '<ul>';
                 foreach ($upcomingconcerts as $concert) {
                     echo component('concert_list_item', array("id" => $concert->ID));

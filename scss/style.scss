@@ -690,16 +690,6 @@ $item-gutter: 1em;
 .section--events {
   font-family: $sans-stack;
 
-  h3 {
-    margin: 0 0 2.571428571em; // 2.571… * 14px = 36px
-    text-align: center;
-    text-transform: uppercase;
-    line-height: 1.714285714; // 1.714… * 14px = 24px
-    letter-spacing: .3em;
-    font-size: .875em; // 14px
-    font-weight: 700;
-  }
-
   .colloquia,
   .concerts,
   .miscevents {
@@ -995,12 +985,9 @@ $item-gutter: 1em;
   padding: 1.5em;
 
   h3 {
-    margin-bottom: 1em;
-    text-transform: none;
+    text-align: center;
     line-height: 1;
-    letter-spacing: 0;
     font-family: $serif-stack;
-    font-size: 1.5em;
   }
 
   ul {
@@ -1378,16 +1365,6 @@ $item-gutter: 1em;
       width: 38%;
     }
 
-    h3 {
-      margin: 0 0 1.714285714em; // 2.571… * 14px = 36px
-      text-align: center;
-      text-transform: uppercase;
-      line-height: 1.714285714; // 1.714… * 14px = 24px
-      letter-spacing: .3em;
-      font-size: .875em; // 14px
-      font-weight: 700;
-    }
-
     .featured-img {
       margin-bottom: 1.5em;
 
@@ -1535,6 +1512,20 @@ $item-gutter: 1em;
       color: $link-highlight;
     }
   }
+}
+
+// ==========================================================================
+// Refactor: New Classes
+// ==========================================================================
+.sans-sc-h3 {
+  margin: 0 0 2.571428571em; // 2.571… * 14px = 36px
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.714285714; // 1.714… * 14px = 24px
+  letter-spacing: .3em;
+  font-family: $sans-stack;
+  font-size: .875em; // 14px
+  font-weight: 700;
 }
 
 // ==========================================================================

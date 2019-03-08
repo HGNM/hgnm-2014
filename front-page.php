@@ -59,7 +59,7 @@ get_header();
             <li class="concerts <?php if (!$colloquia) {
             echo 'solo';
         } ?>">
-              <h3>Next Concert</h3>
+              <h3 class="sans-sc-h3">Next Concert</h3>
               <?php foreach ($concerts as $concert) {
             echo component('concert_list_item', array(
                           "id" => $concert->ID,
@@ -72,7 +72,7 @@ get_header();
             <li class="colloquia <?php if (!$concerts) {
             echo 'solo';
         } ?>">
-            <h3>Upcoming Colloquia</h3>
+            <h3 class="sans-sc-h3">Upcoming Colloquia</h3>
             <?= component('colloquium_list', array(
                             "colloquia" => $colloquia,
                             "show_map_link" => true
@@ -81,7 +81,7 @@ get_header();
           <?php endif; ?>
           <?php if ($miscevents) : ?>
             <li class="miscevents">
-              <h3>Other Events</h3>
+              <h3 class="sans-sc-h3">Other Events</h3>
               <ul>
               <?php foreach ($miscevents as $miscevent): ?>
                 <li class="vevent clearfix">

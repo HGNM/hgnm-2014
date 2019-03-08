@@ -164,7 +164,7 @@ get_header();
         <section class="concerts <?php if (!$colloquia) {
                 echo 'solo';
             } ?>">
-          <h3>Concerts</h3>
+          <h3 class="sans-sc-h3">Concerts</h3>
           <ul>
             <?php while (have_posts()) {
                 the_post();
@@ -177,14 +177,14 @@ get_header();
             if ($colloquia) : ?><section class="colloquia <?php if (!have_posts()) {
                 echo 'solo';
             } ?>">
-          <h3>Colloquia</h3>
+          <h3 class="sans-sc-h3">Colloquia</h3>
           <?= component('colloquium_list', array("colloquia" => $colloquia)) ?>
         </section>
       <?php endif;
             // Display archived miscellaneous events for $yearquery season
             if ($miscevents): ?>
         <section class="miscevents">
-          <h3>Other Events</h3>
+          <h3 class="sans-sc-h3">Other Events</h3>
           <ul>
           <?php foreach ($miscevents as $miscevent): ?>
             <li class="vevent clearfix">
@@ -231,7 +231,7 @@ get_header();
                     }
                 }
                 if (!empty($media_items)) {
-                    echo '<section><h3>Music</h3>';
+                    echo '<section><h3 class="sans-sc-h3">Music</h3>';
                     echo component('responsive_card_list', array('cards' => $media_items));
                     echo '</section>';
                 }

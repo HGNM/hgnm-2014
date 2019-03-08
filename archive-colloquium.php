@@ -70,7 +70,7 @@ get_header();
         <section class="concerts <?php if (!$colloquia) {
                 echo 'solo';
             } ?>">
-          <h3>Upcoming Concerts</h3>
+          <h3 class="sans-sc-h3">Upcoming Concerts</h3>
           <ul>
           <?php while (have_posts()) {
                 the_post();
@@ -84,7 +84,7 @@ get_header();
         <section class="colloquia <?php if (!have_posts()) {
                 echo 'solo';
             } ?>">
-          <h3>Upcoming Colloquia</h3>
+          <h3 class="sans-sc-h3">Upcoming Colloquia</h3>
           <?= component('colloquium_list', array(
                         "colloquia" => $colloquia,
                         "show_map_link" => true
@@ -94,7 +94,7 @@ get_header();
             // Display archived miscellaneous events for $yearquery season
             if ($miscevents): ?>
         <section class="miscevents">
-          <h3>Other Events</h3>
+          <h3 class="sans-sc-h3">Other Events</h3>
           <ul>
           <?php foreach ($miscevents as $miscevent): ?>
             <li class="vevent clearfix">

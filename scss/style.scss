@@ -1343,6 +1343,7 @@ $item-gutter: 1em;
 
   .secondary {
     font-family: $sans-stack;
+
     @include mq (m) {
       float: right;
       width: 38%;

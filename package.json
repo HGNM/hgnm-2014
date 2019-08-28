@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/HGNM/hgnm-2014#readme",
   "devDependencies": {
-    "@commitlint/cli": "^8.0.0",
+    "@commitlint/cli": "^8.1.0",
     "@commitlint/config-conventional": "^8.0.0",
     "@commitlint/travis-cli": "^8.0.0",
     "@masonite/wp-project-version-sync": "^1.1.0",

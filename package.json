@@ -33,7 +33,7 @@
     "@commitlint/travis-cli": "^8.3.5",
     "@masonite/wp-project-version-sync": "^1.1.0",
     "autoprefixer": "^9.7.4",
-    "bestzip": "^2.1.5",
+    "bestzip": "^2.1.7",
     "commitizen": "^4.0.3",
     "cpy-cli": "git+https://github.com/chimon2000/cpy-cli.git",
     "cz-conventional-changelog": "^3.0.2",

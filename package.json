@@ -38,7 +38,7 @@
     "cpy-cli": "git+https://github.com/chimon2000/cpy-cli.git",
     "cz-conventional-changelog": "^3.0.2",
     "husky": "^4.0.10",
-    "node-sass": "^4.13.1",
+    "node-sass": "^8.0.0",
     "postcss-cli": "^7.1.0",
     "rimraf": "^3.0.0",
     "sass-lint": "^1.13.1",
